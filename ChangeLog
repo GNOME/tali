@@ -1,3 +1,15 @@
+2003-11-19  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/Makefile.am (SUBDIRS): Removed the danish translation. Any
+	translation was minimal, with all the useful stuff still in
+	English and it's format was interfering with the build process.
+	It will be ressurected when I have more time to perform the
+	required surgery.
+
+	* help/da/Makefile.am (figdir): Update to the modern way of doing
+	these things. Should mean the make uninstall works for these docs
+	now.
+
 2003-11-06  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c: Make the game completely playable from the
