@@ -136,7 +136,7 @@ BuildTable(int player)
 	int j;
 	int k;
 	int d;
-	int d2;
+	int d2 = -1;
 	int overflow;
 
 	for (i = 0; i < NUM_FIELDS; ++i)

@@ -327,7 +327,7 @@ gint
 about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
-        gchar *authors[] = {
+        const gchar *authors[] = {
 		"Scott Heavner",
 		"Orest Zborowski - Curses Version (C) 1992",
 		NULL
@@ -335,7 +335,7 @@ about(GtkWidget *widget, gpointer data)
 
         about = gnome_about_new (appName, VERSION,
 				 "(C) 1998 the Free Software Fundation",
-				 authors,
+				 (const char **)authors,
 				 _("Gnomified Yahtzee"),
 				 NULL);
         gtk_widget_show (about);
@@ -423,6 +423,7 @@ GnomeUIInfo mainmenu[] = {
 	{GNOME_APP_UI_ENDOFINFO}
 };
 
+#ifdef INCLUDE_UNUSED_FUNCS
 /* Show and hide each pixmap once on init, w/o this, see flicker near
  * File entry in menu as pixmaps are shown the first time */
 static void
@@ -444,6 +445,7 @@ ExerciseAllPixmaps()
                 
         }
 }
+#endif /* INCLUDE_UNUSED_FUNCS */
 
 
 void

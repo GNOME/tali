@@ -134,7 +134,7 @@ WarnNumPlayersChanged (void)
 }
 
 
-static gint 
+static void
 do_setup(GtkWidget *widget, gpointer data)
 {
         NumberOfComputers = 

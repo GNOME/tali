@@ -143,7 +143,6 @@ update_scorefile(void)
 	int topscore;
 	int tmptop;
 	long clock;
-	char scall[100];
 
 	sprintf(tmpfile, "%s/y.%x", SCOREDIR, getpid());
 	sprintf(scorefile, "%s/%s", SCOREDIR, SCOREFNAME);

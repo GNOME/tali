@@ -183,6 +183,7 @@ select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
         return FALSE;
 }
 
+#if GY_NEW
 static gint
 select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
@@ -228,11 +229,13 @@ select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 	return FALSE;
 #endif
 }
+#endif /* GY_NEW */
 
 
 /* This won't work.  Can't tell if we're being called to deselect 
    selected row  prior to selection of new row or just to deselect 
    current row and leave nothing selected */
+#if GY_NEW
 static gint
 unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
@@ -252,6 +255,7 @@ unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
         return FALSE;
 #endif
 }
+#endif /* GY_NEW */
 
 
 GtkWidget * create_clist(void)

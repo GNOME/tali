@@ -41,7 +41,14 @@ char *ProgramHeader = "Yahtzee Version 2.00 (c)1998 SDH, (c)1992 by zorst";
 
 /*=== Exported variables ===*/
 DiceInfo DiceValues[5] = { {1,0}, {2,0}, {3,0}, {4,0}, {5,0} };
-Player players[MAX_NUMBER_OF_PLAYERS] = { 0 };
+Player players[MAX_NUMBER_OF_PLAYERS] = {
+  {NULL, {0}, {0}, 0, 0},
+  {NULL, {0}, {0}, 0, 0},
+  {NULL, {0}, {0}, 0, 0},
+  {NULL, {0}, {0}, 0, 0},
+  {NULL, {0}, {0}, 0, 0},
+  {NULL, {0}, {0}, 0, 0}
+};
 int NumberOfPlayers = 0;
 int NumberOfComputers = 0;
 int NumberOfHumans = 1;
@@ -362,8 +369,6 @@ RegisterUndo(int player, int field, int fstate, int oldscore)
 int
 ExecSingleUndo(int screenupdate)
 {
-        int i;
-
         if (gUndoInfo) {
                 UndoInfo *ui = gUndoInfo->prev;
 
@@ -429,7 +434,7 @@ play_score(int player, int field)
                 break;
 
         case 8:
-                if ( i = find_n_of_a_kind(3, 0) ) {
+                if ( (i = find_n_of_a_kind(3, 0)) ) {
                         if (find_n_of_a_kind(2, i))
                                 players[player].score[field] = 25;
                 }

@@ -26,6 +26,7 @@ extern GtkWidget *create_clist(void);
 extern void setup_clist(GtkWidget *clist);
 extern void update_score_cell(GtkCList * clist, gint row, gint col, int val);
 extern void ShowoffPlayerColumn(GtkCList * clist, int player, int so);
+extern void ShowoffPlayer(GtkCList * clist, int player, int so);
 
 /* setup.c */
 extern gint setup_game(GtkWidget *widget, gpointer data);
