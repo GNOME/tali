@@ -386,7 +386,7 @@ setup_game(GtkWidget *widget, gpointer data)
                 gtk_widget_show(label);
 
                 PlayerNames[i] = gtk_entry_new ();
-                ts = g_strdup_printf(_("PlayerName%1d"),i+1);
+                ts = g_strdup_printf("PlayerName%1d",i+1);
                 gtk_object_set_data (GTK_OBJECT(setupdialog), ts, PlayerNames[i]);
                 g_free(ts);
                 gtk_entry_set_text(GTK_ENTRY(PlayerNames[i]),players[i].name);
