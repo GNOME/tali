@@ -1,6 +1,8 @@
 1998-06-26  Raja R Harinath  <harinath@cs.umn.edu>
 
-	* Makefile.am (Pixmap_DATA): Move to ...
+	* Makefile.am (cyahtzee): Disable until Curses is properly
+	autoconfed. 
+	(Pixmap_DATA): Move to ...
 	* pix/Makefile.am: ... here.
 
 1998-06-25  Raja R Harinath  <harinath@cs.umn.edu>
