@@ -28,7 +28,7 @@ gtali_SOURCES =       \
 
 gtali_LDADD =				\
 	$(GNOME_GAMES_LIBS) \
-	$(top_srcdir)/libgames-support/libgames-support.la \
+	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
