@@ -1,3 +1,7 @@
+2001-07-07  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* gyahtzee.c (main): Remove call to gdk_imlib_init().
+
 2001-06-10  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* gyahtzee.c (quit_game): Don't destroy the window here.

@@ -600,8 +600,6 @@ main (int argc, char *argv[])
 
 	  window = gnome_app_new(appID, appName);
 	  
-          gdk_imlib_init ();
-
 	  GyahtzeeCreateMainWindow();
 
 	  /* Need to roll the dice once */
