@@ -216,7 +216,6 @@ ShowPlayer(int num, int field)
 static gint 
 quit_game(GtkWidget *widget, gpointer data)
 {
-        gtk_widget_destroy(window);
         gtk_main_quit();
 	return TRUE;
 }
