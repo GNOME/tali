@@ -5,7 +5,7 @@
     sdh@po.cwru.edu (Scott D Heavner)
    </creator>
      <maintainer>
-    Callum McKenzie <callum.otago.ac.nz>
+    callum.otago.ac.nz (Callum McKenzie)
    </maintainer>
      <title>
      Gtali Manual
@@ -22,7 +22,7 @@
      user's guide
    </type>
      <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-     <identifier url="file://usr/share/gnome/help/gtali/C/gtali.xml"/>
+     <identifier url="gtali.xml"/>
      <language code="C"/>
      <relation seriesid="4f2f826e-6008-11d6-9c7e-99b79109f703"/>
      <rights type="GNU FDL" license.version="1.1" holder="Scott D Heavner"/>
