@@ -387,7 +387,7 @@ GRenamePlayer(gint playerno)
 
   window3 = gtk_window_new (GTK_WINDOW_DIALOG);
   gtk_object_set_data (GTK_OBJECT (window3), "window3", window3);
-  gtk_window_set_title (GTK_WINDOW (window3), "window3");
+  gtk_window_set_title (GTK_WINDOW (window3), "Rename player");
   gtk_window_position (GTK_WINDOW (window3), GTK_WIN_POS_MOUSE);
   gtk_window_set_policy (GTK_WINDOW (window3), FALSE, FALSE, TRUE);
   prinfo->main = window3;
