@@ -1,3 +1,12 @@
+2004-07-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c: 
+	* pix/*.xpm:
+	* pix/*.svg:
+	* pix/*.png:	
+	* pix/Makefile.am: New SVG graphics from Ryan Stutsman. The old
+	xpm and png graphics have been removed.
+
 2004-05-26  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c: Fix compiler warnings.
