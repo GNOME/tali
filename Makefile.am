@@ -4,8 +4,8 @@ scoredir=$(localstatedir)/games
 
 SUBDIRS = pix help
 
-INCLUDES =					\
-	$(GNOME_GAMES_CFLAGS)
+INCLUDES =						\
+	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
 	-I$(includedir)					\
