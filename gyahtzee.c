@@ -450,32 +450,39 @@ static void
 LoadDicePixmaps(void)
 {
 	GtkWidget *tmp;
+	GdkPixbuf *pixbuf;
+	const char **xpm_data[] = {
+		gnome_dice_1_xpm,
+		gnome_dice_2_xpm,
+		gnome_dice_3_xpm,
+		gnome_dice_4_xpm,
+		gnome_dice_5_xpm,
+		gnome_dice_6_xpm,
+		gnome_dice_none_xpm
+	};
 	int i, j;
 
-	/* Read in default dice */
-	dicePixmaps[0][0] = gnome_pixmap_new_from_xpm_d(gnome_dice_1_xpm);
-	dicePixmaps[0][1] = gnome_pixmap_new_from_xpm_d(gnome_dice_2_xpm);
-	dicePixmaps[0][2] = gnome_pixmap_new_from_xpm_d(gnome_dice_3_xpm);
-	dicePixmaps[0][3] = gnome_pixmap_new_from_xpm_d(gnome_dice_4_xpm);
-	dicePixmaps[0][4] = gnome_pixmap_new_from_xpm_d(gnome_dice_5_xpm);
-	dicePixmaps[0][5] = gnome_pixmap_new_from_xpm_d(gnome_dice_6_xpm);
-	dicePixmaps[0][6] = gnome_pixmap_new_from_xpm_d(gnome_dice_none_xpm);
-        
 	for (i=0; i<NUMBER_OF_PIXMAPS; i++) {
+		tmp = NULL;
 
-                /* Check for files w/pixmaps, override compiled defaults */
-                if (g_file_exists(dicefiles[i])) {
-                        tmp = gnome_pixmap_new_from_file(dicefiles[i]);
-                        if (tmp != NULL) { 
-                                gtk_widget_destroy(dicePixmaps[0][i]);
-                                dicePixmaps[0][i] = tmp;
-                        }
-                }
+		/* Check for files w/pixmaps, override compiled defaults */
+		if (g_file_test(dicefiles[i], G_FILE_TEST_EXISTS))
+			tmp = gtk_image_new_from_file(dicefiles[i]);
 
-                for (j=0; j<NUMBER_OF_DICE; j++) 
-                      dicePixmaps[j][i] = gnome_pixmap_new_from_gnome_pixmap
-                                            (GNOME_PIXMAP(dicePixmaps[0][i])); 
-        }
+		if (tmp != NULL) {
+			dicePixmaps[0][i] = tmp;
+		} else { /* Load default dice */
+			pixbuf = gdk_pixbuf_new_from_xpm_data(xpm_data[i]);
+			dicePixmaps[0][i] = gtk_image_new_from_pixbuf (pixbuf);
+			g_object_unref(pixbuf);
+		}
+
+		for (j=0; j<NUMBER_OF_DICE; j++) {
+			pixbuf = gtk_image_get_pixbuf(
+				GTK_IMAGE(dicePixmaps[0][i]));
+			dicePixmaps[j][i] = gtk_image_new_from_pixbuf(pixbuf);
+		}
+	}
 }
 
 

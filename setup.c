@@ -87,14 +87,14 @@ WarnNumPlayersChanged (void)
 {
         GtkWidget *mb;
 
-        mb = gnome_message_box_new (_("Current game will complete" 
-                                      " with original number of players."),
-                                    GNOME_MESSAGE_BOX_INFO,
-                                    GNOME_STOCK_BUTTON_OK,
-                                    NULL);
-        GTK_WINDOW(mb)->position = GTK_WIN_POS_MOUSE;
-        gtk_window_set_modal(GTK_WINDOW(mb), TRUE);
-        gtk_widget_show (mb);
+        mb = gtk_message_dialog_new(NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+                                    GTK_MESSAGE_INFO,
+                                    GTK_BUTTONS_OK,
+                                    _("Current game will complete" 
+                                      " with original number of players."));
+        gtk_window_set_position(GTK_WINDOW(mb), GTK_WIN_POS_MOUSE);
+        gtk_dialog_run(GTK_DIALOG(mb));
+        gtk_widget_destroy(mb);
 }
 
 

@@ -1,3 +1,13 @@
+2002-04-25  Andreas Persenius  <ndap@telia.com>
+
+	* Makefile.am:
+	* gyathzee.c: (LoadDicePixmaps): Use GtkImage instead of GnomePixmap
+	and g_file_test() instead of g_file_exists().
+	* setup.c: (WarnNumPlayersChanged): Use GtkMessageDialog instead of
+	GnomeMessageBox.
+
+	This makes GTali compile with -DGNOME_DISABLE_DEPRECATED.
+
 2002-04-15  Bastien Nocera  <hadess@hadess.net>
 
 	* gyahtzee.c: (about): nice icon, oooh

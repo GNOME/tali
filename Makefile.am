@@ -8,6 +8,7 @@ INCLUDES =						\
 	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
+	-DGNOME_DISABLE_DEPRECATED			\
 	$(CURSES_INCLUDEDIR)
 
 if HAS_CURSES
