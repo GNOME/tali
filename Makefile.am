@@ -1,15 +1,23 @@
-scoredir=$(localstatedir)/games
+
 Gamesdir = $(datadir)/apps/Games
+scoredir=$(localstatedir)/games
 
 SUBDIRS = pix
 
-INCLUDES =						\
+INCLUDES =					\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-DGNOMEPIXMAPDIR=\""${Pixmapdir}"\"		\
+	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
 	-I$(includedir)					\
-	$(GNOME_INCLUDEDIR)
+	$(GNOME_INCLUDEDIR)				\
+	$(CURSES_INCLUDEDIR)
 
-bin_PROGRAMS = gyahtzee #cyahtzee
+if HAS_CURSES
+CYAHTZEE=cyahtzee
+endif
+
+
+bin_PROGRAMS = gyahtzee	$(CYAHTZEE)
+
 
 gyahtzee_SOURCES =       \
         gyahtzee.c       \
@@ -20,23 +28,26 @@ gyahtzee_SOURCES =       \
         computer.c       \
         setup.c
 
-#cyahtzee_SOURCES =       \
-#        cyahtzee.c       \
-#        cyahtzee.h       \
-#        yahtzee.c        \
-#        yahtzee.h        \
-#	scores.c         \
-#	scores.h         \
-#        computer.c 
+cyahtzee_SOURCES =       \
+        cyahtzee.c       \
+        cyahtzee.h       \
+        yahtzee.c        \
+        yahtzee.h        \
+	scores.c         \
+	scores.h         \
+        computer.c 
 
 gyahtzee_LDADD =				\
 	$(GNOME_LIBDIR)				\
 	$(GNOMEUI_LIBS)				\
 	$(INTLLIBS)
 
-#cyahtzee_LDADD = \
-#	-L/usr/local -lncurses \
-#	$(INTLLIBS)
+# Need gnome crap for libintl headers?
+cyahtzee_LDADD = \
+	$(GNOME_LIBDIR)				\
+	$(GNOMEUI_LIBS)				\
+	$(CURSES_LIBS) 				\
+	$(INTLLIBS)
 
 EXTRA_DIST = gyahtzee.desktop README AUTHORS
 

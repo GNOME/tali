@@ -11,6 +11,10 @@
 # GNOME PREFIX
 GNOMEPREFIX=/usr/local
 
+# Sorry, I am special (ignore next two lines, they should be commented)
+# echo "DOH! Forgot to comment out Scott's local config -- *EDIT Build file*"
+# GNOMPREFIX=\""/usr/people/sdh/gnome"\"
+
 # Where is gnomeConf.sh
 GNOMECONFIGSH=${GNOMEPREFIX}/lib/gnomeConf.sh
 
@@ -18,11 +22,6 @@ GNOMECONFIGSH=${GNOMEPREFIX}/lib/gnomeConf.sh
 GNOMELOCALEDIR=\""${GNOMEPREFIX}/share/locale"\"
 LIBINTLDIR=-L../intl
 GNOMEPIXMAPDIR=\""${GNOMEPREFIX}/share/pixmaps"\"
-
-# Sorry, I am special (ignore this stuff, it should be commented)
-# echo "DOH! Forgot to comment out Scott's local config -- *EDIT Build file*"
-# GNOMELOCALEDIR=\""/usr/people/sdh/gnome/share/locale"\"
-# GNOMECONFIGSH=/share/sdh/gnome/lib/gnomeConf.sh 
 
 # Adjust CFLAGS here if desired
 CFLAGS="${CFLAGS} -O2 -DGNOMELOCALEDIR=${GNOMELOCALEDIR}"

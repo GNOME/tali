@@ -87,7 +87,7 @@ dnl Didn't find ncurses, lets try for plain curses
 if $skip_ncurses
 then
     AC_DEFINE(OLD_CURSES)
-    AC_DEFINE(NOCOLORCURSES)
+    AC_DEFINE(NO_COLOR_CURSES)
     AC_CHECK_LIB(curses, initscr, [ LIBS="$LIBS -lcurses"
                                     skip_ncurses=false ] )
     if $skip_ncurses

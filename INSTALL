@@ -5,6 +5,17 @@ Change to the directory NoGnome and do ./configure from there.
 
 
 
+Compiling yahtzee within CVS source tree:
+-----------------------------------------
+
+Top level configure now accepts curses options.  Do ./configure --help
+to see what curses options are available.  The most useful will
+probably be --without-ncurses to disable ncurses support or
+--with-ncurses=/usr/somewhere/ncurses to specify an alternate ncurses
+location.
+
+
+
 Compiling yahtzee obtained outside CVS source tree:
 ---------------------------------------------------
 

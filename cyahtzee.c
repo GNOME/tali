@@ -126,7 +126,7 @@ setup_screen(void)
 		abort_program("Not enough lines on the terminal");
 	numlines = LINES;
 
-#ifndef NOCOLORCURSES
+#ifndef NO_COLOR_CURSES
 	if(has_colors())
 	{
 		start_color();
