@@ -1,3 +1,10 @@
+2003-03-06  Ross Burton  <ross@burtonini.com>
+
+	* Build:
+	* cyahtzee.[ch]:
+	* scores.[ch]:
+	* Makefile.am: Remove the ncurses port.
+
 2002-12-17  Ross Burton  <ross@burtonini.com>
 
 	* Makefile.am (schema_in_files): Fix the GConf schema path.

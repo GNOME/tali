@@ -1,4 +1,3 @@
-
 Gamesdir = $(datadir)/applications
 scoredir=$(localstatedir)/games
 
@@ -10,15 +9,9 @@ INCLUDES =						\
 	-DDATADIR=\""$(datadir)"\"		   \
 	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
 	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED	\
-	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED \
-	$(CURSES_INCLUDEDIR)
+	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED
 
-if HAS_CURSES
-CTALI=ctali
-endif
-
-
-bin_PROGRAMS = gtali	$(CTALI)
+bin_PROGRAMS = gtali
 
 
 gtali_SOURCES =       \
@@ -30,21 +23,8 @@ gtali_SOURCES =       \
         computer.c       \
         setup.c
 
-ctali_SOURCES =       \
-        cyahtzee.c       \
-        cyahtzee.h       \
-        yahtzee.c        \
-        yahtzee.h        \
-	scores.c         \
-	scores.h         \
-        computer.c 
-
 gtali_LDADD =				\
 	$(GNOME_GAMES_LIBS) \
-	$(INTLLIBS)
-
-ctali_LDADD = \
-	$(CURSES_LIBS) 				\
 	$(INTLLIBS)
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
