@@ -1,5 +1,5 @@
 
-Gamesdir = $(datadir)/apps/Games
+Gamesdir = $(datadir)/gnome/apps/Games
 scoredir=$(localstatedir)/games
 
 SUBDIRS = pix
