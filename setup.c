@@ -43,6 +43,7 @@ static int OriginalNumberOfHumans    = -1;
 
 static void
 parse_an_arg (poptContext ctx,
+	      enum poptCallbackReason reason,
 	      const struct poptOption *opt,
 	      const char *arg, void *data)
 {
