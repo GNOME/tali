@@ -59,7 +59,7 @@ Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
-	-GCONF_CONFIG_SOURCE=$(GCONF_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-touch $(DESTDIR)$(scoredir)/gtali.scores
 	-chown games.games $(DESTDIR)$(scoredir)/gtali.scores
