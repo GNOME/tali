@@ -1,5 +1,5 @@
 /* XPM */
-static char * gnome_dice_6_xpm[] = {
+static const char * gnome_dice_6_xpm[] = {
 "64 64 1590 2",
 "  	c None",
 ". 	c #000000",

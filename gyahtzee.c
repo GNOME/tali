@@ -360,7 +360,12 @@ about(GtkWidget *widget, gpointer data)
 		N_("Orest Zborowski - Curses Version (C) 1992"),
 		NULL
 	};
-
+        gchar *documenters[] = {
+                NULL
+        };
+        /* Translator credits */
+        gchar *translator_credits = _("");
+        
 #ifdef ENABLE_NLS
 	{
 		int i=0;
@@ -370,8 +375,10 @@ about(GtkWidget *widget, gpointer data)
 
         about = gnome_about_new (appName, VERSION,
 				 _("(C) 1998 the Free Software Fundation"),
-				 (const char **)authors,
 				 _("Gnome Tali"),
+				 (const char **)authors,
+				 (const char **)documenters,
+                                 (const char *)translator_credits,
 				 NULL);
         gtk_widget_show (about);
 	return FALSE;
@@ -454,9 +461,7 @@ LoadDicePixmaps(void)
                 /* Check for files w/pixmaps, override compiled defaults */
                 if (g_file_exists(dicefiles[i])) {
                         tmp = gnome_pixmap_new_from_file(dicefiles[i]);
-                        if (GNOME_PIXMAP(tmp)->pixmap == NULL) {
-                                gtk_widget_destroy(tmp);
-                        } else { 
+                        if (tmp != NULL) { 
                                 gtk_widget_destroy(dicePixmaps[0][i]);
                                 dicePixmaps[0][i] = tmp;
                         }
@@ -562,10 +567,10 @@ main (int argc, char *argv[])
         gint i;
 
 	gnome_score_init(appID);
-
+#if 0
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
-
+#endif
 	/* Reset all yahtzee variables before parsing args */
         YahtzeeInit();
 

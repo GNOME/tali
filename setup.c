@@ -207,7 +207,7 @@ setup_game(GtkWidget *widget, gpointer data)
                 return FALSE;
         }
 
-	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
+	setupdialog = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
@@ -259,15 +259,17 @@ setup_game(GtkWidget *widget, gpointer data)
                                          0.0, 6.0, 1.0, 6.0, 1.0);
 	ComputerSpinner = gtk_spin_button_new(GTK_ADJUSTMENT(ComputerAdj),
                                               10, 0);
-#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+#if 0
+ ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(ComputerSpinner),
 					  GTK_UPDATE_ALWAYS |
 					  GTK_UPDATE_SNAP_TO_TICKS);
-#else
+ else
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(ComputerSpinner),
 					  GTK_UPDATE_ALWAYS );
 	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(ComputerSpinner),
 					  TRUE);
+ endif
 #endif
 	gtk_signal_connect (GTK_OBJECT(ComputerAdj), 
                             "value_changed", (GtkSignalFunc)MaxPlayersCheck,
@@ -296,15 +298,17 @@ setup_game(GtkWidget *widget, gpointer data)
         HumanAdj = gtk_adjustment_new((gfloat)NumberOfHumans, 0.0,
                                       6.0, 1.0, 6.0, 1.0);
 	HumanSpinner = gtk_spin_button_new(GTK_ADJUSTMENT(HumanAdj), 10, 0);
-#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+#if 0
+ ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(HumanSpinner),
 					  GTK_UPDATE_ALWAYS |
 					  GTK_UPDATE_SNAP_TO_TICKS);
-#else
+ else
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(HumanSpinner),
 					  GTK_UPDATE_ALWAYS );
 	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(HumanSpinner),
 					  TRUE);
+ endif
 #endif
 	gtk_signal_connect (GTK_OBJECT(HumanAdj), 
                             "value_changed", (GtkSignalFunc)MaxPlayersCheck,
@@ -404,12 +408,20 @@ setup_game(GtkWidget *widget, gpointer data)
 	/*--- OK/CANCEL into "box" ---*/
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
+#if 0
         button = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
+#else
+        button = gtk_button_new_with_label (_("OK"));
+#endif
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
 			   GTK_SIGNAL_FUNC(do_setup), NULL);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
+#if 0
         button = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
+#else
+	button = gtk_button_new_with_label (_("Cancel"));
+#endif
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
                            (GtkSignalFunc)setupdialog_destroy,
 			   (gpointer)1);

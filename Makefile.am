@@ -5,10 +5,10 @@ scoredir=$(localstatedir)/games
 SUBDIRS = pix help
 
 INCLUDES =					\
+	$(GNOME_GAMES_CFLAGS)
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
 	-I$(includedir)					\
-	$(GNOME_INCLUDEDIR)				\
 	$(CURSES_INCLUDEDIR)
 
 if HAS_CURSES
@@ -38,8 +38,7 @@ ctali_SOURCES =       \
         computer.c 
 
 gtali_LDADD =				\
-	$(GNOME_LIBDIR)				\
-	$(GNOMEUI_LIBS)				\
+	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS)
 
 ctali_LDADD = \
