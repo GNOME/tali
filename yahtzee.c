@@ -436,7 +436,8 @@ play_score(int player, int field)
 
         case 8:
                 if ( (i = find_n_of_a_kind(3, 0)) ) {
-                        if (find_n_of_a_kind(2, i))
+                        /* We treat a yahtzee as a full house. */
+                        if (find_n_of_a_kind(2, i) || find_n_of_a_kind(5,0))
                                 players[player].score[field] = 25;
                 }
                 break;

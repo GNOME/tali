@@ -1,3 +1,9 @@
+2004-10-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c (play_score): Make the full house slot accept a
+	yahtzee. Very few people should ever need this, but there has been
+	demand (see bug #156237). 
+
 2004-07-20  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c: 
