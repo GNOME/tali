@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gyahtzee
+Comment=Gnome Yahtzee game
+Exec=gyahtzee
+Icon=gnome-gyahtzee.png
+Terminal=0
+Type=Application

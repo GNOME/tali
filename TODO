@@ -1,0 +1,212 @@
+Gyahtzee:
+* add mutex around score selection clicks - is it possible to score
+  off the computer's dice?  YahtzeeIdle() processes clicks which I
+  don't want!
+* more graceful end of game - doesn't really stop.
+* allow multiple human players
+* adjust names of human players
+* update computer code to use global NumberOfRolls??
+
+Gnomelibs:
+* clist - hook before rowselect, add column lines 
+* menu_accelerator_keys:
+	  - should there be standard mappings for quit/new/save...
+	  - should I add NLS translations for the accelerators
+	  - how do I save accel. that have been modified by the user
+
+Other:
+* -Wall -Wstrict-prototypes -Wmissing-prototypes
+
+*INTL
+
+msgid ""
+msgstr ""
+"Date: 1998-06-17 18:46:12-0700\n"
+"From: Scott D. Heavner,pri=0,umask=002 <sdh@fishmonger>\n"
+"Content-Type: text/plain; charset=\n"
+"Xgettext-Options: --default-domain=gnome-games --directory=.. --add-comments --keyword=_ --keyword=N_ --files-from=./POTFILES.in\n"
+"Files: gnomine/gnomine.c same-gnome/same-gnome.c aisleriot/menu.c aisleriot/sol.c mahjongg/mahjongg.c scottfree/GnomeScott.c freecell/src/io-gtk.c freecell/src/menu.c freecell/src/score.c freecell/src/score-dialog.c freecell/src/option-dialog.c gyahtzee/gyahtzee.c gyahtzee/clist.c gyahtzee/setup.c gyahtzee/computer.c gyahtzee/yahtzee.c\n"
+
+#: gyahtzee/gyahtzee.c:58
+msgid "Gyahtzee"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:106
+msgid "wins this game with"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:108
+msgid "points"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:110
+msgid "Game over!"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:124
+msgid "Computer playing role of"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:129
+msgid "You're up."
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:255 gyahtzee/yahtzee.c:160
+msgid "You're only allowed three rolls! Select a score box."
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:292
+msgid "(swiping a little from gnomine)"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:299
+msgid "Gnomified Yahtzee"
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:397
+msgid "Select dice to re-roll, press Roll!, or select score slot."
+msgstr ""
+
+#: gyahtzee/gyahtzee.c:467
+msgid " Roll ! "
+msgstr ""
+
+#: gyahtzee/clist.c:72
+msgid "Already used! Where do you want to put that?"
+msgstr ""
+
+#: gyahtzee/setup.c:46
+msgid "Delay computer moves"
+msgstr ""
+
+#: gyahtzee/setup.c:47
+msgid "Show high scores and exit"
+msgstr ""
+
+#: gyahtzee/setup.c:48
+msgid "Calculate random die throws (debug)"
+msgstr ""
+
+#: gyahtzee/setup.c:49
+msgid "Number of opponents"
+msgstr ""
+
+#: gyahtzee/setup.c:50
+msgid "Display computer thoughts"
+msgstr ""
+
+#: gyahtzee/setup.c:153
+msgid "Gyahtzee setup"
+msgstr ""
+
+#: gyahtzee/setup.c:162
+msgid "Computer Opponents"
+msgstr ""
+
+#. --- Button ---
+#: gyahtzee/setup.c:170
+msgid "Delay between rolls"
+msgstr ""
+
+#. --- Button ---
+#: gyahtzee/setup.c:179
+msgid "Show thoughts during turn"
+msgstr ""
+
+#: gyahtzee/setup.c:191
+msgid "Number of opponents:"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:51
+msgid "Human"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:59
+msgid "1's [total of 1s]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:60
+msgid "2's [total of 2s]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:61
+msgid "3's [total of 3s]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:62
+msgid "4's [total of 4s]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:63
+msgid "5's [total of 5s]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:64
+msgid "6's [total of 6s]"
+msgstr ""
+
+#. End of upper panel
+#: gyahtzee/yahtzee.c:66
+msgid "3 of a Kind [total]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:67
+msgid "4 of a Kind [total]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:68
+msgid "Full House [25]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:69
+msgid "Small Straight [30]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:70
+msgid "Large Straight [40])"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:71
+msgid "Yahtzee [50]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:72
+msgid "Chance [total]"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:74
+msgid "Lower Total"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:75
+msgid "Grand Total"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:77
+msgid "Upper total"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:78
+msgid "Bonus"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:418
+msgid "How many times to you wish to roll? "
+msgstr ""
+
+#: gyahtzee/yahtzee.c:423
+msgid "Generating"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:458
+msgid "Results"
+msgstr ""
+
+# ALLOWED 10 CHARACTERS FOR THIS ONE
+#: gyahtzee/yahtzee.c:458
+msgid "Num Rolls"
+msgstr ""
+
+#: gyahtzee/yahtzee.c:458
+msgid "Total"
+msgstr ""

@@ -1,0 +1,9 @@
+Makefile.in
+Makefile
+.deps
+.directory
+_libs
+.libs
+.scripts
+gyahtzee
+cyahtzee

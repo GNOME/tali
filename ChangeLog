@@ -1,0 +1,54 @@
+Wed Jun 24 22:25:48 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* Commit to CVS.
+
+	* cyahtzee.c: Add color support.  gets->fgets.  Try to maintain
+	backward compatibilty with very old curses if NOCOLORCURSES defined.
+
+	* setup.c (setup_game): GTK_UPDATE_SNAP_TO_TICKS has dissapeared
+	in CVS - noticed & patch by Jaka Mocnik.  Should probably just
+	toss the old way, but leave for now in case anyone is using an old
+	snapshot.
+	
+
+Sun Jun 21 15:06:24 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* gyahtzee.c (ShowPlayer): Add bonus to upper total - that's where
+	zorst had it, but should it just go directly into grand total?
+
+	* Release version 980621a 
+        (980621 had probs w/Build script and missing config.h)
+
+	* add Build script - cleaner than makefile to determine gnome
+	setup on an unknown machine?
+
+	* computer.c:
+	  * remove be_computer()
+	  * Forgot to call RollSelectedDice() for each computer roll
+	  * Remove refs to global CurrentPlayer, each function should use
+	    value passed as parameter player
+
+	* gyahtzee.c / pix dir: update names inside xpm files to reflect
+	new names (gnome-dice-N.xpm), fix check for missing pixmap files -
+	will now use any pixmap files it finds, but fallback to compiled
+	in pixmaps.
+
+	* cyahtzee.c, cyahtzee.h: Add basic curses support - using zorst's
+ 	original version.  Will go back and add color hacks later.
+
+	* scores.c, scores.h: Curses version has own routines for dealing
+	with highscores.
+
+Thu Jun 18 12:53:32 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* gyahtzee.c (GyahtzeeCreateMainWindow): Put eventbox around
+	pixmaps which 1) makes it easier to select the X
+	pixmap, and 2) gets rid of the flicker on the menubar when we
+	unhide each pixmap for the first time.
+
+	* gyahtzee.c: add entries for keyboard accelerators 
+
+Wed Jun 17 23:00:00 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* Release version 980617
+	
