@@ -506,7 +506,7 @@ calc_random(void)
 	fgets(nrollstr,10,stdin);
 	nroll = atoi(nrollstr);
 	
-	printf("%s...\n",_("Generating"));
+	printf("%s\n",_("Generating ..."));
 	
 	for (i = 0; i < NUM_FIELDS; ++i)
                 table[i] = 0;

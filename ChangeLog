@@ -1,3 +1,7 @@
+2003-10-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c (calc_random): i18n fix, see bug #123586.
+
 2003-08-05  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c: GConf return value checks.
