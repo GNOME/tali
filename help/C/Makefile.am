@@ -1,6 +1,4 @@
-figs = \
-	figures/mainwindow.png		\
-	figures/preferences.png
+figdir = figures
 docname = gtali
 lang = C
 omffile = gtali-C.omf
