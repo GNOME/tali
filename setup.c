@@ -263,6 +263,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         /*--- Button ---*/
@@ -325,6 +326,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         /*--- Spinner (number of humans) ---*/
@@ -366,6 +368,7 @@ setup_game(GtkWidget *widget, gpointer data)
  	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
  	
  	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_border_width(GTK_CONTAINER(box), 8);
  	gtk_container_add(GTK_CONTAINER(frame), box);
  
          /*--- Button ---*/
@@ -417,6 +420,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
@@ -447,20 +451,14 @@ setup_game(GtkWidget *widget, gpointer data)
 	/*--- OK/CANCEL into "box" ---*/
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-#if 0
-        button = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
-#else
-        button = gtk_button_new_with_label (_("OK"));
-#endif
+
+	button = gtk_button_new_from_stock (GTK_STOCK_OK);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
 			   GTK_SIGNAL_FUNC(do_setup), NULL);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
-#if 0
-        button = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
-#else
-	button = gtk_button_new_with_label (_("Cancel"));
-#endif
+
+	button = gtk_button_new_from_stock (GTK_STOCK_CANCEL);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
                            (GtkSignalFunc)setupdialog_destroy,
 			   (gpointer)1);

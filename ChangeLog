@@ -1,5 +1,11 @@
 2002-04-15  Bastien Nocera  <hadess@hadess.net>
 
+	* gyahtzee.c: (about): nice icon, oooh
+	* setup.c: (setup_game): use stock buttons, and add more space inside
+	the frames
+
+2002-04-15  Bastien Nocera  <hadess@hadess.net>
+
 	* Makefile.am:
 	* gtali.schemas:
 	* gyahtzee.c: (main):

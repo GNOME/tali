@@ -366,6 +366,7 @@ about(GtkWidget *widget, gpointer data)
         };
         /* Translator credits */
         gchar *translator_credits = _("translator_credits");
+	GdkPixbuf *pixbuf = NULL;
         
 #ifdef ENABLE_NLS
 	{
@@ -374,13 +375,16 @@ about(GtkWidget *widget, gpointer data)
 	}
 #endif
 
+	pixbuf = gdk_pixbuf_new_from_file (GNOMEPIXMAPDIR "/gnome-gtali.png",
+			NULL);
+
         about = gnome_about_new (appName, VERSION,
 				 _("(C) 1998 the Free Software Fundation"),
 				 _("Gnome Tali"),
 				 (const char **)authors,
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
-				 NULL);
+				 pixbuf);
         gtk_widget_show (about);
 	return FALSE;
 }
