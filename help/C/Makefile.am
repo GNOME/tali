@@ -1,7 +1,7 @@
 figs = \
 	figures/mainwindow.png		\
 	figures/preferences.png
-docname = gtali 
+docname = gtali
 lang = C
 omffile = gtali-C.omf
 sgml_ents = 
