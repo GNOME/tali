@@ -52,7 +52,7 @@ schema_in_files = gtali.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
-EXTRA_DIST = gtali.desktop.in README AUTHORS $(schema_DATA)
+EXTRA_DIST = gtali.desktop.in README AUTHORS $(schema_in_files)
 
 Games_in_files = gtali.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
