@@ -594,7 +594,7 @@ GyahtzeeCreateMainWindow(void)
 	GtkWidget *tmp;
 	int i, j;
 
-        gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+        /* gtk_window_set_resizable (GTK_WINDOW (window), FALSE); */
         g_signal_connect (G_OBJECT (window), "delete_event",
                           G_CALLBACK (quit_game), NULL);
         g_signal_connect (G_OBJECT (window), "key_press_event",
