@@ -1,3 +1,11 @@
+1999-01-10  Nat Friedman  <nat@nat.org>
+
+	* gyahtzee.c (GyahtzeeCreateMainWindow): Create a GnomeAppBar, not
+ 	a GtkStatusBar.  Installed menu hints.
+	(say): Use the appbar.
+
+	Standardized the menus.
+
 Mon Nov 23 16:58:42 EST 1998 Gregory McLean <gregm@comstar.net>
 
 	* clist.c : commented out the gtk_clist_set_policy function as

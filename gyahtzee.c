@@ -56,7 +56,6 @@ int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
 static char *appID="gyahtzee";
 static char *appName=N_("Gyahtzee");
-static guint status_id;
 static guint lastHighScore = 0;
 static GtkWidget *ScoreList; 
 
@@ -76,7 +75,7 @@ static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.xpm",
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
-static GtkWidget *window, *status_bar, *diceBox[NUMBER_OF_DICE];
+static GtkWidget *window, *appbar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
 
 static gint gnome_modify_dice( GtkWidget *widget, GdkEventButton *event,
@@ -347,8 +346,8 @@ say(char *fmt, ...)
 	vsprintf(buf, fmt, ap);
 	va_end(ap);
 
-	gtk_statusbar_pop( GTK_STATUSBAR(status_bar), status_id);
-	gtk_statusbar_push( GTK_STATUSBAR(status_bar), status_id, buf);
+	gnome_appbar_pop(GNOME_APPBAR (appbar));
+	gnome_appbar_push(GNOME_APPBAR (appbar), buf);
 }
 
 
@@ -398,60 +397,37 @@ undo_callback(GtkWidget *widget, gpointer data)
 
 
 /* Define menus later so we don't have to proto callbacks? */
-GnomeUIInfo gamemenu[] = {
-	{GNOME_APP_UI_ITEM, N_("_New"), NULL, new_game_callback, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_NEW, 'N', GDK_CONTROL_MASK,
-         NULL},
-
-	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
-
-	{GNOME_APP_UI_ITEM, N_("_Scores"), NULL, score_callback, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
-
-	{GNOME_APP_UI_ITEM, N_("E_xit"), NULL, quit_game, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'Q', GDK_CONTROL_MASK,
-         NULL},
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-         GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+GnomeUIInfo filemenu[] = {
+        GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
+	GNOMEUIINFO_END
 };
 
-GnomeUIInfo editmenu[] = {
-	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
+GnomeUIInfo gamemenu[] = {
+        GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game_callback, NULL),
+	GNOMEUIINFO_SEPARATOR,
+	GNOMEUIINFO_MENU_UNDO_MOVE_ITEM(undo_callback, NULL),
+	GNOMEUIINFO_SEPARATOR,
+	GNOMEUIINFO_MENU_SCORES_ITEM(score_callback, NULL),
+	GNOMEUIINFO_END
+};
 
-	{GNOME_APP_UI_ITEM, N_("_Undo"), NULL, undo_callback, NULL, NULL,
-         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_UNDO, 0, 0, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-         GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+GnomeUIInfo settingsmenu[] = {
+	GNOMEUIINFO_MENU_PREFERENCES_ITEM(setup_game, NULL),
+	GNOMEUIINFO_END
 };
 
 GnomeUIInfo helpmenu[] = {
-	{GNOME_APP_UI_ITEM, N_("_About Gyahtzee"), "Info about this program", about,
-	 NULL, NULL,
-	 GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
-
-#if 0
-	{GNOME_APP_UI_HELP, NULL, NULL, NULL, NULL, NULL,
-	 GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-#endif
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL}
+        GNOMEUIINFO_HELP("gyahtzee"),
+	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
+	GNOMEUIINFO_END
 };
 
 GnomeUIInfo mainmenu[] = {
-	{GNOME_APP_UI_SUBTREE, N_("_Game"), NULL, gamemenu, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_SUBTREE, N_("_Edit"), NULL, editmenu, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_SUBTREE, N_("_Help"), NULL, helpmenu, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO}
+        GNOMEUIINFO_MENU_FILE_TREE(filemenu),
+	GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
+	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
+	GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
+	GNOMEUIINFO_END
 };
 
 #ifdef INCLUDE_UNUSED_FUNCS
@@ -535,14 +511,13 @@ GyahtzeeCreateMainWindow(void)
 
 
 	/*---- Status Bar ----*/
-	status_bar = gtk_statusbar_new();      
-	gtk_widget_show(status_bar);
-	status_id = gtk_statusbar_get_context_id( GTK_STATUSBAR(status_bar),
-				      appName);
-	gnome_app_set_statusbar(GNOME_APP(window),status_bar);
-	gtk_statusbar_push( GTK_STATUSBAR(status_bar), status_id, 
-			    _("Select dice to re-roll, press Roll!,"
+	appbar = gnome_appbar_new(FALSE, TRUE, GNOME_PREFERENCES_USER);
+	gnome_app_set_statusbar(GNOME_APP(window), appbar);
+	gnome_appbar_push( GNOME_APPBAR (appbar),
+			   _("Select dice to re-roll, press Roll!,"
                             " or select score slot."));
+
+	gnome_app_install_menu_hints(GNOME_APP (window), mainmenu);
 
 	/*---- Content ----*/
         all_boxes = gtk_hbox_new(FALSE, 0);
