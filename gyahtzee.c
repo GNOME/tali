@@ -561,10 +561,10 @@ main (int argc, char *argv[])
 {
         gint i;
 
+	gnome_score_init(appID);
+
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
-
-	gnome_score_init(appID);
 
 	/* Reset all yahtzee variables before parsing args */
         YahtzeeInit();
