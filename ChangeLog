@@ -1,3 +1,9 @@
+Mon Nov 23 16:58:42 EST 1998 Gregory McLean <gregm@comstar.net>
+
+	* clist.c : commented out the gtk_clist_set_policy function as
+	gtk 1.1.5 don't have it anymore.
+	This has been 'guarded' by a FIXME :)
+
 1998-10-24  Tuomas Kuosmanen  <tigert@gimp.org>
 
 	* pix/gnome-dice-*.xpm: Got into artistic mood and made some dice pics

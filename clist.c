@@ -310,8 +310,12 @@ GtkWidget * create_clist(void)
                         gtk_clist_set_column_width(GTK_CLIST(clist), i, 
                                gdk_string_width(vals.font, "SomeLongName"));
 	}
+/*	FIXME 
+ * clists no longer get a scrolled window to play in the app has to provide
+ * it. 
 	gtk_clist_set_policy(GTK_CLIST(clist),
                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+ */
 	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row), NULL);
 	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
