@@ -1,3 +1,7 @@
+2001-07-27  Abel Cheung  <maddog@linux.org.hk>
+
+	* gtali.desktop: Added traditional Chinese translation.
+
 2001-07-07  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* gyahtzee.c (main): Remove call to gdk_imlib_init().
