@@ -364,7 +364,7 @@ about(GtkWidget *widget, gpointer data)
                 NULL
         };
         /* Translator credits */
-        gchar *translator_credits = _("");
+        gchar *translator_credits = _("translator_credits");
         
 #ifdef ENABLE_NLS
 	{
@@ -378,7 +378,7 @@ about(GtkWidget *widget, gpointer data)
 				 _("Gnome Tali"),
 				 (const char **)authors,
 				 (const char **)documenters,
-                                 (const char *)translator_credits,
+				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 				 NULL);
         gtk_widget_show (about);
 	return FALSE;
