@@ -43,7 +43,7 @@
       <type>bool</type>
       <default>FALSE</default>
       <locale name="C">
-        <short>Display the computer's thoughs</short>
+        <short>Display the computer's thoughts</short>
         <long>If set to true, a dump of the AI's working will be done to standard output.</long>
       </locale>
     </schema>
@@ -54,8 +54,8 @@
       <owner>gtali</owner>
       <type>list</type>
       <list_type>string</list_type>
-      <default>[Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
       <locale name="C">
+        <default>[Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
         <short></short>
         <long></long>
       </locale>

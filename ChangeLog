@@ -1,6 +1,11 @@
 2003-08-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gtali.schemas.in:
+	Typo in the schema description. Also moved the default names
+	inside the locale tags so that they can be translated to something
+	more suitable for a given area (I know, area != language, but it's
+	as good as it's going to get)..
+
 	* setup.c:
 	* gyahtzee.c:
 	* help/C/gtali.xml:
