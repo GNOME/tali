@@ -300,7 +300,7 @@ setup_game (GtkWidget *widget, gpointer data)
         gtk_size_group_add_widget (group1, label);
 
         ComputerAdj = gtk_adjustment_new ((gfloat)NumberOfComputers, 
-                                          0.0, 6.0, 1.0, 6.0, 1.0);
+                                          0.0, 5.0, 1.0, 5.0, 1.0);
 	ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj),
                                                10, 0);
         gtk_size_group_add_widget (group2, ComputerSpinner);
