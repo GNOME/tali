@@ -381,6 +381,11 @@ ExecSingleUndo(int screenupdate)
         return 1;
 }
 
+int UndoPossible (void)
+{
+        return gUndoInfo != NULL;
+}
+
 /* Test if we can use suggested score slot */
 int 
 play_score(int player, int field)

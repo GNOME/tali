@@ -94,7 +94,7 @@ static gint gnome_modify_dice (GtkWidget *widget, GdkEventButton *event,
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
 void update_score_state (void);
-
+static void undo_set_sensitive (gboolean state);
 
 void
 YahtzeeIdle (void)
@@ -128,6 +128,8 @@ CheerWinner (void)
 		    WinningScore);
 	else
                 say (_("Game over!"));
+
+        undo_set_sensitive (FALSE);
 }
 
 void 
@@ -136,7 +138,10 @@ NextPlayer (void)
         if (GameIsOver ()) {
                 CheerWinner ();
                 return;
-        } 
+        }
+
+        undo_set_sensitive (TRUE);
+        
         NumberOfRolls = 0;
 
 	ShowoffPlayer (ScoreList,CurrentPlayer,0);
@@ -234,6 +239,8 @@ GyahtzeeNewGame (void)
                 CurrentPlayer = NumberOfComputers - 1;
                 NextPlayer ();
         }
+
+        undo_set_sensitive (FALSE);
 }
 
 
@@ -428,6 +435,7 @@ undo_callback(GtkWidget *widget, gpointer data)
                 for (i=0; i < NumberOfPlayers; i++)
                         ExecSingleUndo (SCORE_OK);
                 say (_("Cheater! Any high scores will not be recorded."));
+                undo_set_sensitive (UndoPossible ());
         }
 	return FALSE;
 }
@@ -463,6 +471,10 @@ GnomeUIInfo mainmenu[] = {
 	GNOMEUIINFO_END
 };
 
+static void undo_set_sensitive (gboolean state)
+{
+        gtk_widget_set_sensitive (gamemenu[2].widget, state);
+}
 
 static void
 LoadDicePixmaps(void)

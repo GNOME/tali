@@ -191,7 +191,7 @@ GtkWidget *create_score_list(void)
                                    G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
                                    G_TYPE_STRING, G_TYPE_STRING);
         tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
-        gtk_tree_view_set_rules_hint (tree, TRUE);
+        gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
 
         g_object_unref(store);
 

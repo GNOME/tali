@@ -114,6 +114,7 @@ extern int RollDie(void);
 extern void RollSelectedDice(void);
 extern int GameIsOver(void);
 extern int FindWinner(void);
+int UndoPossible (void);
 
 /* Computer.c */
 extern void ComputerTurn(int player);

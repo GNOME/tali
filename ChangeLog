@@ -1,3 +1,11 @@
+2003-06-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c: 
+	* yahtzee.h:
+	* gyahtzee.c: Undo sensitivity now depends on the game state.
+
+	* clist.c (create_score_list): Fix a compiler warning.
+
 2003-06-20  William Jon McCann  <mccann@jhu.edu>
 
 	* clist.c (create_score_list): Added set_rules_hint to
