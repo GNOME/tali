@@ -1,3 +1,10 @@
+2001-12-19  Seth Nickell  <snickell@stanford.edu>
+
+	* Makefile.am:
+	* gtali.desktop:
+
+	Install into the panel menus correctly.
+	
 2001-12-04  Duarte Loreto <happyguy_pt@hotmail.com>
 
         * gtali.desktop: Added Portuguese (pt) translation.

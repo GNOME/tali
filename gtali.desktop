@@ -41,3 +41,5 @@ Exec=gtali
 Icon=gnome-gtali.png
 Terminal=0
 Type=Application
+Categories=Application;Game;
+
