@@ -85,6 +85,7 @@ static gint gnome_modify_dice( GtkWidget *widget, GdkEventButton *event,
                                gpointer data );
 static gint gnome_roll_dice( GtkWidget *widget, GdkEvent *event,
                              gpointer data );
+void update_score_state ();
 
 
 void
@@ -104,6 +105,7 @@ CheerWinner(void)
         if ( (winner<NumberOfHumans) && !IsCheater ) {
                 lastHighScore = gnome_score_log((guint)WinningScore, 
                                                 NULL, TRUE);
+		update_score_state ();
                 if (lastHighScore)
                         ShowHighScores();
         }
@@ -478,6 +480,23 @@ LoadDicePixmaps(void)
 	}
 }
 
+void update_score_state ()
+{
+        gchar **names = NULL;
+        gfloat *scores = NULL;
+        time_t *scoretimes = NULL;
+	gint top;
+
+	top = gnome_score_get_notable(appID, NULL, &names, &scores, &scoretimes);
+	if (top > 0) {
+		gtk_widget_set_sensitive (gamemenu[4].widget, TRUE);
+		g_strfreev(names);
+		g_free(scores);
+		g_free(scoretimes);
+	} else {
+		gtk_widget_set_sensitive (gamemenu[4].widget, FALSE);
+	}
+}
 
 static void
 GyahtzeeCreateMainWindow(void)
@@ -555,6 +574,8 @@ GyahtzeeCreateMainWindow(void)
 	gtk_widget_show(all_boxes);
 
         gtk_widget_show(window);
+
+	update_score_state ();
 
 }
 
