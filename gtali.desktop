@@ -2,14 +2,16 @@
 Name=GTali
 Name[de]=GTali
 Name[es]=GTali
+Name[et]=GTali
 Name[fi]=GTali
 Name[fr]=GTali
 Name[ja]=GTali
 Name[no]=GTali
 Name[ru]=çÔÁÌÉ
 Comment=Gnome Dice game
-Comment=Das Gnome-Würfelspiel
+Comment[de]=Das Gnome-Würfelspiel
 Comment[es]=Juego de dados tipo yahtzee
+Comment[et]=Yahtzee täringumäng
 Comment[fi]=Gnome-jatsipeli
 Comment[fr]=Jeu de dés de genre yahtzee
 Comment[ja]=GNOMEÈÇ¤µ¤¤¤³¤í¥²¡¼¥à
