@@ -48,7 +48,7 @@ if GCONF_SCHEMAS_INSTALL
 endif
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-touch $(DESTDIR)$(scoredir)/gtali.scores
-	-chown $(scores_user).$(scores_group) $(DESTDIR)$(scoredir)/gtali.scores
+	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ; fi
 
