@@ -191,6 +191,8 @@ GtkWidget *create_score_list(void)
                                    G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
                                    G_TYPE_STRING, G_TYPE_STRING);
         tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
+        gtk_tree_view_set_rules_hint (tree, TRUE);
+
         g_object_unref(store);
 
         g_signal_connect(G_OBJECT(tree), "row-activated",

@@ -1,3 +1,8 @@
+2003-06-20  William Jon McCann  <mccann@jhu.edu>
+
+	* clist.c (create_score_list): Added set_rules_hint to
+	tree view, this gives us alternating color rows.
+
 2003-06-18  William Jon McCann  <mccann@jhu.edu>
 
 	* setup.c: 
