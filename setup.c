@@ -118,7 +118,7 @@ WarnNumPlayersChanged (void)
 {
   GtkWidget *mb;
 
-#if 1   /* Message box crashes my system!!!!!!!!!!!! */
+#if 0   /* Message box crashes my system!!!!!!!!!!!! */
   say(_("Current game will complete" 
 	" with original number of players."));
 #else
@@ -151,8 +151,9 @@ do_setup(GtkWidget *widget, gpointer data)
 
 	gnome_config_sync();
 
-        if ( (NumberOfComputers!=OriginalNumberOfComputers)||
-	     (NumberOfHumans!=OriginalNumberOfHumans) )
+        if ( ( (NumberOfComputers!=OriginalNumberOfComputers)||
+	       (NumberOfHumans!=OriginalNumberOfHumans) ) &&
+	     !GameIsOver() )
                 WarnNumPlayersChanged();
 }
 
