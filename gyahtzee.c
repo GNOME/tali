@@ -48,14 +48,6 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
-#include "pix/gnome-dice-1.xpm"
-#include "pix/gnome-dice-2.xpm"
-#include "pix/gnome-dice-3.xpm"
-#include "pix/gnome-dice-4.xpm"
-#include "pix/gnome-dice-5.xpm"
-#include "pix/gnome-dice-6.xpm"
-#include "pix/gnome-dice-none.xpm"
-
 /* Define a sensible alternative to ngettext if we don't have it. Note that
  * this is only sensible in the context of gtali. */
 #ifndef HAVE_NGETTEXT
@@ -70,18 +62,18 @@ static guint lastHighScore = 0;
 GtkWidget *ScoreList; 
 
 #ifdef GNOMEPIXMAPDIR
-#define PP GNOMEPIXMAPDIR "/" 
+#define PP GNOMEPIXMAPDIR "/gtali/" 
 #else
 #define PP ""
 #endif
 
-static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.xpm",
-                                              PP "gnome-dice-2.xpm",
-                                              PP "gnome-dice-3.xpm",
-                                              PP "gnome-dice-4.xpm",
-                                              PP "gnome-dice-5.xpm",
-                                              PP "gnome-dice-6.xpm",
-                                              PP "gnome-dice-none.xpm" };
+static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
+                                              PP "gnome-dice-2.svg",
+                                              PP "gnome-dice-3.svg",
+                                              PP "gnome-dice-4.svg",
+                                              PP "gnome-dice-5.svg",
+                                              PP "gnome-dice-6.svg",
+                                              PP "gnome-dice-none.svg" };
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
@@ -524,15 +516,6 @@ LoadDicePixmaps(void)
 {
         GtkWidget *tmp;
 	GdkPixbuf *pixbuf;
-	const char **xpm_data[] = {
-		gnome_dice_1_xpm,
-		gnome_dice_2_xpm,
-		gnome_dice_3_xpm,
-		gnome_dice_4_xpm,
-		gnome_dice_5_xpm,
-		gnome_dice_6_xpm,
-		gnome_dice_none_xpm
-	};
 	int i, j;
 
 	for (i=0; i < NUMBER_OF_PIXMAPS; i++) {
@@ -542,13 +525,7 @@ LoadDicePixmaps(void)
 		if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS))
 			tmp = gtk_image_new_from_file (dicefiles[i]);
 
-		if (tmp != NULL) {
-			dicePixmaps[0][i] = tmp;
-		} else { /* Load default dice */
-			pixbuf = gdk_pixbuf_new_from_xpm_data (xpm_data[i]);
-			dicePixmaps[0][i] = gtk_image_new_from_pixbuf (pixbuf);
-			g_object_unref (pixbuf);
-		}
+                dicePixmaps[0][i] = tmp;
 
 		for (j=0; j < NUMBER_OF_DICE; j++) {
 			pixbuf = gtk_image_get_pixbuf 
