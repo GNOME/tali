@@ -1,3 +1,8 @@
+2003-11-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c: Make the game completely playable from the
+	keyboard. Done as per Allan Jensen's suggestions See bug #126284.
+
 2003-11-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
         * NoGnome/*: Removed this directory since it has not been possible

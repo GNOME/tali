@@ -223,6 +223,24 @@ quit_game (GtkWidget *widget, gpointer data)
 }
 
 
+/* This handles the keys 1..5 for the dice. */
+static gint
+key_press (GtkWidget *widget, GdkEventKey * event, gpointer data)
+{
+        gint offset;
+
+        offset = event->keyval - GDK_1;
+
+        if ((offset < 0) || (offset >= NUMBER_OF_DICE)) {
+                return FALSE;
+        }
+
+        /* I hate faking signal calls. */
+        gnome_modify_dice (NULL, NULL, &DiceValues[offset]);
+
+        return FALSE;
+}
+
 static void 
 GyahtzeeNewGame (void)
 {
@@ -546,6 +564,8 @@ GyahtzeeCreateMainWindow(void)
         gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
         g_signal_connect (G_OBJECT (window), "delete_event",
                           G_CALLBACK (quit_game), NULL);
+        g_signal_connect (G_OBJECT (window), "key_press_event",
+                          G_CALLBACK (key_press), NULL);
 
 	/*---- Menus ----*/
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
@@ -584,8 +604,7 @@ GyahtzeeCreateMainWindow(void)
                                             dicePixmaps[i][j],
                                             FALSE, FALSE, 0);
                 
-                gtk_widget_set_events (diceBox[i],
-                                       gtk_widget_get_events (diceBox[i]) |
+                gtk_widget_add_events (diceBox[i],
                                        GDK_BUTTON_PRESS_MASK);
                 
                 g_signal_connect (G_OBJECT (diceBox[i]), "button_press_event",

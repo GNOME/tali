@@ -204,6 +204,19 @@
     <para>There is also a bonus of 35 points if you score a total of
     63 points or more in the top six rows.
     </para>
+
+    <sect2 id="keyboard">
+    <title>Using the keyboard</title> 
+
+      <para>As an alternative to using the mouse, the keys 1 through 5
+    toggle the dice just as if you had clicked them. The key 1
+    corresponds to the first die and so on. Use the usual controls to
+    roll the dice and select a row. i.e. use tab to switch between the
+    roll button and the score area, use the arrow keys to navigate up
+    and down the rows and use space to select.</para>
+    
+    </sect2>
+
   </sect1>
 
   <sect1 id="options">
