@@ -387,7 +387,7 @@ about (GtkWidget *widget, gpointer data)
                 NULL
         };
         /* Translator credits */
-        gchar *translator_credits = _("translator_credits");
+        gchar *translator_credits = _("translator-credits");
 	GdkPixbuf *pixbuf = NULL;
         
 
@@ -412,7 +412,7 @@ about (GtkWidget *widget, gpointer data)
 				 _("A sort of poker with dice and less money."),
 				 (const char **)authors,
 				 (const char **)documenters,
-				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
+				 strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
 				 pixbuf);
 		
 		if (pixbuf != NULL)
