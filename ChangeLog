@@ -1,3 +1,13 @@
+2000-06-07  Scott D. Heavner  <sdh@po.cwru.edu>
+
+	* setup.c: Add additional games rules.
+	
+	Change default value of yahtzee bonus to 100 (per MB rules).
+	
+	Preserve all original options when selecting cancel.
+
+	Raise obstructed settings window when reselect prefs menu.
+
 2000-06-06  Scott D. Heavner  <sdh@po.cwru.edu>
 
 	* setup.c (do_setup): Move player rename into setup dialog and 

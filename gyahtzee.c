@@ -576,6 +576,9 @@ main (int argc, char *argv[])
         gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gtali.png");
 	NumberOfComputers = gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
 	NumberOfHumans = gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
+ 	ExtraYahtzeeBonus = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeBonus=1");
+ 	ExtraYahtzeeBonusVal = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeBonusVal=50");
+ 	ExtraYahtzeeJoker = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeJoker=0");
 
         /* Read in new player names */
 	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {

@@ -35,12 +35,15 @@
 
 static gint setupdialog_destroy(GtkWidget *widget, gint mode);
 static GtkWidget *setupdialog = NULL;
-static GtkWidget *HumanSpinner, *ComputerSpinner;
+static GtkWidget *HumanSpinner, *ComputerSpinner, *BonusEntry;
 static GtkWidget *PlayerNames[MAX_NUMBER_OF_PLAYERS];
 static GtkObject *HumanAdj, *ComputerAdj;
 
 static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans    = -1;
+
+static int tmpExtraYahtzeeBonus, tmpExtraYahtzeeJoker, tmpDoDelay, tmpDisplayComputerThoughts;
+
 
 static void
 parse_an_arg (poptContext ctx,
@@ -80,21 +83,16 @@ const struct poptOption yahtzee_options[] = {
 static void
 WarnNumPlayersChanged (void)
 {
-  GtkWidget *mb;
+        GtkWidget *mb;
 
-#if 0   /* Message box crashes my system!!!!!!!!!!!! */
-  say(_("Current game will complete" 
-	" with original number of players."));
-#else
-  mb = gnome_message_box_new (_("Current game will complete" 
-				" with original number of players."),
-                              GNOME_MESSAGE_BOX_INFO,
-                              GNOME_STOCK_BUTTON_OK,
-                              NULL);
-  GTK_WINDOW(mb)->position = GTK_WIN_POS_MOUSE;
-  gtk_window_set_modal(GTK_WINDOW(mb), TRUE);
-  gtk_widget_show (mb);
-#endif
+        mb = gnome_message_box_new (_("Current game will complete" 
+                                      " with original number of players."),
+                                    GNOME_MESSAGE_BOX_INFO,
+                                    GNOME_STOCK_BUTTON_OK,
+                                    NULL);
+        GTK_WINDOW(mb)->position = GTK_WIN_POS_MOUSE;
+        gtk_window_set_modal(GTK_WINDOW(mb), TRUE);
+        gtk_widget_show (mb);
 }
 
 
@@ -109,6 +107,11 @@ do_setup(GtkWidget *widget, gpointer data)
         NumberOfHumans = 
                 gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(HumanSpinner));
 
+        DoDelay = tmpDoDelay;
+        DisplayComputerThoughts = tmpDisplayComputerThoughts;
+        ExtraYahtzeeBonus = tmpExtraYahtzeeBonus;
+        ExtraYahtzeeJoker = tmpExtraYahtzeeJoker;
+
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
                 if (players[i].name != DefaultPlayerNames[i])
                         g_free(players[i].name);
@@ -119,6 +122,10 @@ do_setup(GtkWidget *widget, gpointer data)
                 gnome_config_set_string(PrefLoc, players[i].name);
                 g_free(PrefLoc);
         }
+
+        if (sscanf(gtk_entry_get_text(GTK_ENTRY(BonusEntry)),"%d",&i)==1) {
+                ExtraYahtzeeBonusVal = i;
+        } 
                 
 	setupdialog_destroy(setupdialog, 1);
 
@@ -126,6 +133,12 @@ do_setup(GtkWidget *widget, gpointer data)
                              NumberOfComputers);
 	gnome_config_set_int("/gtali/Preferences/NumberOfHumanOpponents",
                              NumberOfHumans);
+ 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeBonus",
+                             ExtraYahtzeeBonus);
+ 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeBonusVal",
+                             ExtraYahtzeeBonusVal);
+ 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeJoker",
+                             ExtraYahtzeeJoker);
 
 
 	gnome_config_sync();
@@ -149,17 +162,14 @@ setupdialog_destroy(GtkWidget *widget, gint mode)
 
 
 static gint
-set_delay (GtkWidget *widget, gpointer *data)
+set_as_int (GtkWidget *widget, gpointer *data)
 {
-       DoDelay = GTK_TOGGLE_BUTTON (widget)->active;
-       return FALSE;
-}
-
-static gint
-set_thoughts (GtkWidget *widget, gpointer *data)
-{
-        DisplayComputerThoughts = GTK_TOGGLE_BUTTON (widget)->active;
-	return FALSE;
+        *((int *)data) = GTK_TOGGLE_BUTTON (widget)->active;
+        if (data==(gpointer)&tmpExtraYahtzeeBonus) {
+                gtk_entry_set_editable(GTK_ENTRY(BonusEntry),
+                                       GTK_TOGGLE_BUTTON(widget)->active);
+        }
+        return FALSE;
 }
 
 static gint
@@ -191,8 +201,10 @@ setup_game(GtkWidget *widget, gpointer data)
         gchar *ts;
         int i;
 
-        if (setupdialog) 
+        if (setupdialog) {
+                gdk_window_raise(setupdialog->window);
                 return FALSE;
+        }
 
 	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
 
@@ -219,7 +231,8 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),DoDelay);
 	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_delay, NULL);
+                            "clicked", (GtkSignalFunc)set_as_int,
+                            &tmpDoDelay);
 	gtk_widget_show (button);
 
         /*--- Button ---*/
@@ -229,7 +242,8 @@ setup_game(GtkWidget *widget, gpointer data)
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
                                      DisplayComputerThoughts);
 	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_thoughts, NULL);
+                            "clicked", (GtkSignalFunc)set_as_int,
+                            &tmpDisplayComputerThoughts);
 	gtk_widget_show (button);
 
 
@@ -298,11 +312,62 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(HumanSpinner);
 	gtk_widget_show(box2);
 
-
 	gtk_widget_show(box);
 	gtk_widget_show(frame);
 
 
+
+        /*--- OPTIONAL RULES FRAME ----*/
+ 	frame = gtk_frame_new(_("Optional Rules"));
+ 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
+ 	
+ 	box = gtk_vbox_new(FALSE, 0);
+ 	gtk_container_add(GTK_CONTAINER(frame), box);
+ 
+         /*--- Button ---*/
+ 	box2 = gtk_hbox_new(FALSE, 0);
+ 	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
+ 
+ 	button = gtk_check_button_new_with_label (_("Extra Yahtzee Bonus") );
+ 	//gtk_box_pack_start(GTK_BOX(box2), button, FALSE, FALSE, 0);
+ 	gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
+        tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
+        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),ExtraYahtzeeBonus);
+ 	gtk_signal_connect (GTK_OBJECT(button), 
+                            "clicked", (GtkSignalFunc)set_as_int, 
+                            &tmpExtraYahtzeeBonus);
+ 	gtk_widget_show (button);
+
+        BonusEntry = gtk_entry_new();
+        gtk_entry_set_max_length(GTK_ENTRY(BonusEntry),3);
+        /* Why is it so damn big by default? */
+        gtk_widget_set_usize(BonusEntry, 50, -1);
+        ts = g_strdup_printf("%3d",ExtraYahtzeeBonusVal);
+        gtk_entry_set_text(GTK_ENTRY(BonusEntry),ts);
+        g_free(ts);
+        if (!ExtraYahtzeeBonus) {
+                gtk_entry_set_editable(GTK_ENTRY(BonusEntry),FALSE);
+        }
+        gtk_box_pack_start (GTK_BOX (box2), BonusEntry, TRUE, TRUE, 0);
+        gtk_widget_show (BonusEntry);
+ 	gtk_widget_show(box2);
+        
+        
+        /*--- Button ---*/
+ 	button = gtk_check_button_new_with_label (_("Enforce Joker Rules"));
+        tmpExtraYahtzeeJoker = ExtraYahtzeeJoker;
+ 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
+        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
+                                      ExtraYahtzeeJoker);
+ 	gtk_signal_connect (GTK_OBJECT(button), 
+                            "clicked", (GtkSignalFunc)set_as_int, 
+                            &tmpExtraYahtzeeJoker);
+        gtk_widget_set_sensitive(button,FALSE); /* NOT READY YET */
+ 	gtk_widget_show (button);
+ 	gtk_widget_show(box);
+ 	gtk_widget_show(frame);
+        
+        
         /*--- PLAYER NAMES FRAME ----*/
 	frame = gtk_frame_new(_("Player Names"));
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
@@ -314,7 +379,7 @@ setup_game(GtkWidget *widget, gpointer data)
                 box2 = gtk_hbox_new(FALSE, 3);
 
                 gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-                ts = g_strdup_printf("%1d:",i+1);
+                ts = g_strdup_printf(" %1d:",i+1);
                 label = gtk_label_new(ts);
                 g_free(ts);
                 gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
