@@ -1,3 +1,7 @@
+2003-06-16  William Jon McCann  <mccann@jhu.edu>
+
+	* setup.c (setup_game): More HIG spacing and alignment fixes.
+
 2003-06-11  William Jon McCann  <mccann@jhu.edu>
 
 	* setup.c (setup_game): HIG fixes for preferences dialog.

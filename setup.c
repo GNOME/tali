@@ -105,7 +105,7 @@ WarnNumPlayersChanged (void)
 
 
 static void
-do_setup(GtkWidget *widget, gpointer data)
+do_setup (GtkWidget *widget, gpointer data)
 {
         GConfClient *client;
         GError *err = NULL;
@@ -242,10 +242,11 @@ MaxPlayersCheck (GtkWidget *widget, gpointer *data)
 }
 
 gint 
-setup_game(GtkWidget *widget, gpointer data)
+setup_game (GtkWidget *widget, gpointer data)
 {
         GtkWidget *all_boxes, *box, *box2, *label, *button, *frame;
         GtkWidget *table;
+        GtkSizeGroup *group1, *group2;
         gchar *ts;
         int i;
 
@@ -275,36 +276,42 @@ setup_game(GtkWidget *widget, gpointer data)
         gtk_box_pack_start (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), table, 
                             FALSE, FALSE, 0);
 
-	frame = games_frame_new (_("Human Players"));
+        group1 = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
+        group2 = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
+
+        frame = games_frame_new (_("Human Players"));
         gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 0, 1);
 	
-	box = gtk_vbox_new (FALSE, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
-	gtk_container_add (GTK_CONTAINER (frame), box);
+        box = gtk_vbox_new (FALSE, 6);
+        gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+        gtk_container_add (GTK_CONTAINER (frame), box);
 
         /*--- Spinner (number of humans) ---*/
         OriginalNumberOfHumans = NumberOfHumans;
-	box2 = gtk_hbox_new (FALSE, 0);
-	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new (_("Number of players:"));
+        box2 = gtk_hbox_new (FALSE, 12);
+        gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
+        label = gtk_label_new (_("Number of players:"));
+        gtk_size_group_add_widget (group1, label);
 	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
         HumanAdj = gtk_adjustment_new ((gfloat)NumberOfHumans, 0.0,
-                                      6.0, 1.0, 6.0, 1.0);
+                                       6.0, 1.0, 6.0, 1.0);
 	HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
+        gtk_size_group_add_widget (group2, HumanSpinner);
+
 #if 0
 #ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
-					  GTK_UPDATE_ALWAYS |
-					  GTK_UPDATE_SNAP_TO_TICKS);
+                                           GTK_UPDATE_ALWAYS |
+                                           GTK_UPDATE_SNAP_TO_TICKS);
 #else
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
-					  GTK_UPDATE_ALWAYS );
+                                           GTK_UPDATE_ALWAYS );
 	gtk_spin_button_set_snap_to_ticks (GTK_SPIN_BUTTON (HumanSpinner),
-					  TRUE);
+                                           TRUE);
 #endif
 #endif
         g_signal_connect (G_OBJECT (HumanAdj), "value_changed",
-                         G_CALLBACK (MaxPlayersCheck), HumanAdj);
+                          G_CALLBACK (MaxPlayersCheck), HumanAdj);
  
         gtk_box_pack_start (GTK_BOX (box2), HumanSpinner, FALSE, TRUE, 0);
 
@@ -321,7 +328,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), DoDelay);
         g_signal_connect (G_OBJECT (button), "clicked",
-                         G_CALLBACK (set_as_int), &tmpDoDelay);
+                          G_CALLBACK (set_as_int), &tmpDoDelay);
 
         /*--- Button ---*/
 	button = gtk_check_button_new_with_label (_("Show thoughts during turn") );
@@ -334,15 +341,18 @@ setup_game(GtkWidget *widget, gpointer data)
 
         /*--- Spinner (number of computers) ---*/
         OriginalNumberOfComputers = NumberOfComputers;
-	box2 = gtk_hbox_new (FALSE, 0);
+	box2 = gtk_hbox_new (FALSE, 12);
 	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
 	label = gtk_label_new (_("Number of opponents:"));
 	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
+        gtk_size_group_add_widget (group1, label);
 
         ComputerAdj = gtk_adjustment_new ((gfloat)NumberOfComputers, 
                                           0.0, 6.0, 1.0, 6.0, 1.0);
 	ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj),
                                                10, 0);
+        gtk_size_group_add_widget (group2, ComputerSpinner);
+
 #if 0
 #ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
@@ -356,7 +366,7 @@ setup_game(GtkWidget *widget, gpointer data)
 #endif
 #endif
         g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
-                         G_CALLBACK (MaxPlayersCheck), ComputerAdj);
+                          G_CALLBACK (MaxPlayersCheck), ComputerAdj);
         gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, FALSE, TRUE, 0);
 
 
@@ -368,23 +378,25 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
  	gtk_container_add (GTK_CONTAINER (frame), box);
  
-         /*--- Button ---*/
- 	box2 = gtk_hbox_new (FALSE, 0);
+        /*--- Button ---*/
+ 	box2 = gtk_hbox_new (FALSE, 12);
  	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
  
  	button = gtk_check_button_new_with_label (_("Extra Yahtzee Bonus") );
  	/*gtk_box_pack_start (GTK_BOX (box2), button, FALSE, FALSE, 0);*/
  	gtk_box_pack_start (GTK_BOX (box2), button, TRUE, TRUE, 0);
+        gtk_size_group_add_widget (group1, button);
         tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
-        gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON (button),ExtraYahtzeeBonus);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),ExtraYahtzeeBonus);
         g_signal_connect (G_OBJECT (button), "clicked",
-                         G_CALLBACK (set_as_int), &tmpExtraYahtzeeBonus);
+                          G_CALLBACK (set_as_int), &tmpExtraYahtzeeBonus);
 
         BonusEntry = gtk_entry_new ();
+        gtk_size_group_add_widget (group2, BonusEntry);
         gtk_entry_set_max_length (GTK_ENTRY (BonusEntry),3);
         /* Why is it so damn big by default? */
         gtk_widget_set_usize (BonusEntry, 50, -1);
-        ts = g_strdup_printf ("%3d",ExtraYahtzeeBonusVal);
+        ts = g_strdup_printf ("%3d", ExtraYahtzeeBonusVal);
         gtk_entry_set_text (GTK_ENTRY (BonusEntry),ts);
         g_free (ts);
         if (!ExtraYahtzeeBonus) {
@@ -396,10 +408,10 @@ setup_game(GtkWidget *widget, gpointer data)
  	button = gtk_check_button_new_with_label (_("Enforce Joker Rules"));
         tmpExtraYahtzeeJoker = ExtraYahtzeeJoker;
  	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON (button),
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
                                       ExtraYahtzeeJoker);
         g_signal_connect (G_OBJECT (button), "clicked",
-                         G_CALLBACK (set_as_int), &tmpExtraYahtzeeJoker);
+                          G_CALLBACK (set_as_int), &tmpExtraYahtzeeJoker);
         gtk_widget_set_sensitive (button, FALSE); /* NOT READY YET */
         
         /*--- PLAYER NAMES FRAME ----*/
@@ -411,10 +423,10 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_container_add (GTK_CONTAINER (frame), box);
 
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
-                box2 = gtk_hbox_new (FALSE, 3);
+                box2 = gtk_hbox_new (FALSE, 12);
 
                 gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
-                ts = g_strdup_printf (" %1d:",i+1);
+                ts = g_strdup_printf (" %1d:", i+1);
                 label = gtk_label_new (ts);
                 g_free (ts);
                 gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
