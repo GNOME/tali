@@ -658,27 +658,6 @@ main (int argc, char *argv[])
                 err = NULL;
         }
 
- 	ExtraYahtzeeBonus = gconf_client_get_int (client, "/apps/gtali/ExtraYahtzeeBonus", &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
- 	ExtraYahtzeeBonusVal = gconf_client_get_int (client, "/apps/gtali/ExtraYahtzeeBonusVal", &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
- 	ExtraYahtzeeJoker = gconf_client_get_int (client, "/apps/gtali/ExtraYahtzeeJoker", &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
         /* Read in new player names */
         name_list = gconf_client_get_list (client, "/apps/gtali/PlayerNames",
                                            GCONF_VALUE_STRING, &err);

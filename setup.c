@@ -40,14 +40,14 @@
 
 static gint setupdialog_destroy(GtkWidget *widget, gint mode);
 static GtkWidget *setupdialog = NULL;
-static GtkWidget *HumanSpinner, *ComputerSpinner, *BonusEntry;
+static GtkWidget *HumanSpinner, *ComputerSpinner;
 static GtkWidget *PlayerNames[MAX_NUMBER_OF_PLAYERS];
 static GtkObject *HumanAdj, *ComputerAdj;
 
 static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans    = -1;
 
-static int tmpExtraYahtzeeBonus, tmpExtraYahtzeeJoker, tmpDoDelay, tmpDisplayComputerThoughts;
+static int tmpDoDelay, tmpDisplayComputerThoughts;
 
 extern GtkWidget *window;
 
@@ -119,8 +119,6 @@ do_setup (GtkWidget *widget, gpointer data)
 
         DoDelay = tmpDoDelay;
         DisplayComputerThoughts = tmpDisplayComputerThoughts;
-        ExtraYahtzeeBonus = tmpExtraYahtzeeBonus;
-        ExtraYahtzeeJoker = tmpExtraYahtzeeJoker;
 
         for (i=0; i < MAX_NUMBER_OF_PLAYERS; i++) {
                 if (players[i].name != DefaultPlayerNames[i])
@@ -132,10 +130,6 @@ do_setup (GtkWidget *widget, gpointer data)
                                                      players[i].name);
                 name_list = g_slist_append (name_list, players[i].name);
         }
-
-        if (sscanf (gtk_entry_get_text (GTK_ENTRY (BonusEntry)),"%d",&i)==1) {
-                ExtraYahtzeeBonusVal = i;
-        } 
                 
 	setupdialog_destroy (setupdialog, 1);
 
@@ -165,30 +159,6 @@ do_setup (GtkWidget *widget, gpointer data)
                 err = NULL;
         }
 
-        gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeBonus",
-                              ExtraYahtzeeBonus, &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
-        gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeBonusVal",
-                              ExtraYahtzeeBonusVal, &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
- 	gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeJoker",
-                              ExtraYahtzeeJoker, &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
-
         if ( ( (NumberOfComputers != OriginalNumberOfComputers)
                || (NumberOfHumans != OriginalNumberOfHumans) )
              && !GameIsOver () )
@@ -211,10 +181,7 @@ static gint
 set_as_int (GtkWidget *widget, gpointer *data)
 {
         *((int *)data) = GTK_TOGGLE_BUTTON (widget)->active;
-        if (data == (gpointer)&tmpExtraYahtzeeBonus) {
-                gtk_editable_set_editable (GTK_EDITABLE (BonusEntry),
-                                           GTK_TOGGLE_BUTTON (widget)->active);
-        }
+
         return FALSE;
 }
 
@@ -368,52 +335,6 @@ setup_game (GtkWidget *widget, gpointer data)
                           G_CALLBACK (MaxPlayersCheck), ComputerAdj);
         gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, FALSE, TRUE, 0);
 
-
-        /*--- OPTIONAL RULES FRAME ----*/
- 	frame = games_frame_new (_("Optional Rules"));
-        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 2, 3);
- 	
- 	box = gtk_vbox_new (FALSE, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
- 	gtk_container_add (GTK_CONTAINER (frame), box);
- 
-        /*--- Button ---*/
- 	box2 = gtk_hbox_new (FALSE, 12);
- 	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
- 
- 	button = gtk_check_button_new_with_label (_("Extra Yahtzee Bonus") );
- 	/*gtk_box_pack_start (GTK_BOX (box2), button, FALSE, FALSE, 0);*/
- 	gtk_box_pack_start (GTK_BOX (box2), button, TRUE, TRUE, 0);
-        gtk_size_group_add_widget (group1, button);
-        tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
-                                      ExtraYahtzeeBonus);
-        g_signal_connect (G_OBJECT (button), "clicked",
-                          G_CALLBACK (set_as_int), &tmpExtraYahtzeeBonus);
-
-        BonusEntry = gtk_entry_new ();
-        gtk_size_group_add_widget (group2, BonusEntry);
-        gtk_entry_set_max_length (GTK_ENTRY (BonusEntry),3);
-        /* Why is it so damn big by default? */
-        gtk_widget_set_size_request (BonusEntry, 50, -1);
-        ts = g_strdup_printf ("%3d", ExtraYahtzeeBonusVal);
-        gtk_entry_set_text (GTK_ENTRY (BonusEntry),ts);
-        g_free (ts);
-        if (! ExtraYahtzeeBonus) {
-                gtk_editable_set_editable (GTK_EDITABLE (BonusEntry), FALSE);
-        }
-        gtk_box_pack_start (GTK_BOX (box2), BonusEntry, TRUE, TRUE, 0);
-        
-        /*--- Button ---*/
- 	button = gtk_check_button_new_with_label (_("Enforce Joker Rules"));
-        tmpExtraYahtzeeJoker = ExtraYahtzeeJoker;
- 	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
-                                      ExtraYahtzeeJoker);
-        g_signal_connect (G_OBJECT (button), "clicked",
-                          G_CALLBACK (set_as_int), &tmpExtraYahtzeeJoker);
-        gtk_widget_set_sensitive (button, FALSE); /* NOT READY YET */
-        
         /*--- PLAYER NAMES FRAME ----*/
 	frame = games_frame_new (_("Player Names"));
         gtk_table_attach_defaults (GTK_TABLE (table), frame, 1, 2, 0, 3);

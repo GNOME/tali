@@ -1,3 +1,17 @@
+2003-08-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gtali.xml: 2.4 updates, images not updated yet.
+
+	* setup.c: 
+	* yahtzee.h:
+	* yahtzee.c:
+	* gtali.schemas.in
+	* gyahtzee.c: Removed the "Extra Yahtzee Bonus" and "Enforce Joker
+	Rules" dialogs since while the values where set they were never
+	used anywhere in the actual game. Since I don't know what they are
+	meant to do and no one is complaining about them I have removed
+	the code entirely.
+
 2003-07-09  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gtali.desktop.in: Update name to fit HIG (bug 116916).

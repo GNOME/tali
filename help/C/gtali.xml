@@ -2,12 +2,12 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.3">
-  <!ENTITY manrevision "2.3">
+  <!ENTITY appversion "2.4">
+  <!ENTITY manrevision "2.4">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>GNOME Tali</application>">
   <!ENTITY appname "GNOME Tali">
-  <!ENTITY version "2.3"> 
+  <!ENTITY version "2.4"> 
 ]>
 
 <!-- 
@@ -201,8 +201,8 @@
      you will score.
     </para>
 
-    <para>If you score a total of 63 points or more in the top six
-     rows then you will be given a 35 point bonus.
+    <para>There is also a bonus of 35 points if you score a total of
+    63 points or more in the top six rows.
     </para>
   </sect1>
 
@@ -223,6 +223,17 @@
   </mediaobject>
       </screenshot>
     </figure>
+      <variablelist><title>Human Players</title>
+	<varlistentry>
+	  <term><guimenuitem>Number of players</guimenuitem></term>
+	  <listitem>
+            <para>Selects the number of human players.  As described
+	      above you are only allowed six total
+	      players.
+            </para>
+          </listitem>
+	</varlistentry>
+      </variablelist>  
       
     <variablelist><title>Computer Opponents</title>
       <varlistentry>
@@ -256,24 +267,12 @@
 	</varlistentry>
       </variablelist>
       
-      <variablelist><title>Human Players</title>
-	<varlistentry>
-	  <term><guimenuitem>Number of players</guimenuitem></term>
-	  <listitem>
-            <para>Selects the number of human players.  As described
-	      above you are only allowed six total
-	      players.
-            </para>
-          </listitem>
-	</varlistentry>
-      </variablelist>  
-
       <variablelist><title><guimenuitem>Player Names</guimenuitem></title>
 	<varlistentry>
 	  <term></term>
 	  <listitem>
-	    <para>To change the names of any player, right click on 
-              the name.
+	    <para>To change the names of any player just enter a new
+	    name in these boxes.
 	    </para>
 	  </listitem>
 	</varlistentry>
