@@ -12,14 +12,14 @@ INCLUDES =					\
 	$(CURSES_INCLUDEDIR)
 
 if HAS_CURSES
-CYAHTZEE=cyahtzee
+CTALI=ctali
 endif
 
 
-bin_PROGRAMS = gyahtzee	$(CYAHTZEE)
+bin_PROGRAMS = gtali	$(CTALI)
 
 
-gyahtzee_SOURCES =       \
+gtali_SOURCES =       \
         gyahtzee.c       \
         gyahtzee.h       \
         clist.c          \
@@ -28,7 +28,7 @@ gyahtzee_SOURCES =       \
         computer.c       \
         setup.c
 
-cyahtzee_SOURCES =       \
+ctali_SOURCES =       \
         cyahtzee.c       \
         cyahtzee.h       \
         yahtzee.c        \
@@ -37,22 +37,22 @@ cyahtzee_SOURCES =       \
 	scores.h         \
         computer.c 
 
-gyahtzee_LDADD =				\
+gtali_LDADD =				\
 	$(GNOME_LIBDIR)				\
 	$(GNOMEUI_LIBS)				\
 	$(INTLLIBS)
 
-cyahtzee_LDADD = \
+ctali_LDADD = \
 	$(CURSES_LIBS) 				\
 	$(INTLLIBS)
 
-EXTRA_DIST = gyahtzee.desktop README AUTHORS
+EXTRA_DIST = gtali.desktop README AUTHORS
 
-Games_DATA = gyahtzee.desktop
+Games_DATA = gtali.desktop
 
 install-data-local:
 	-$(mkinstalldirs) $(scoredir)
-	-touch $(scoredir)/gyahtzee.scores
-	-chown games.games $(scoredir)/gyahtzee.scores
-	-chmod 664 $(scoredir)/gyahtzee.scores	
-	-chgrp games $(bindir)/gyahtzee && chmod 2111 $(bindir)/gyahtzee
+	-touch $(scoredir)/gtali.scores
+	-chown games.games $(scoredir)/gtali.scores
+	-chmod 664 $(scoredir)/gtali.scores	
+	-chgrp games $(bindir)/gtali && chmod 2111 $(bindir)/gtali

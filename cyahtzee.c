@@ -563,7 +563,7 @@ show_top_scores(void)
 	int i, j, k, score;
 	char name[32], date[32];
 
-	printf("%s...\n",_("Yahtzee top scores"));
+	printf("%s...\n",_("Tali top scores"));
 
 	sprintf(scorefile, "%s/%s", SCOREDIR, SCOREFNAME);
 
@@ -647,7 +647,7 @@ main(int argc, char **argv)
                                 exit(0);
                                 
                         default:
-                                printf("usage: yahtzee [-s] [-d] [-r]\n");
+                                printf("usage: ctali [-s] [-d] [-r]\n");
                                 printf("\t-s\tonly show scores\n");
                                 printf("\t-d\tcomputer move delay\n");
                                 printf("\t-r\tcalculate random die throws (debug)\n");
@@ -657,7 +657,7 @@ main(int argc, char **argv)
 	}
 
 	if (!onlyshowscores) {
-		printf("\n\n%s...\n\n",_("Welcome to the game of Yahtzee"));
+		printf("\n\n%s...\n\n",_("Welcome to the game of Tali"));
                 
 		init();
                 

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=GTali
+Comment=Gnome Dice game
+Exec=gtali
+Icon=gnome-gtali.png
+Terminal=0
+Type=Application

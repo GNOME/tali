@@ -1,5 +1,5 @@
 /*
- * Gyatzee: Gnomified Yahtzee game.
+ * Gyatzee: Gnomified Dice game.
  * (C) 1998 the Free Software Foundation
  *
  * File:   gyahtzee.c
@@ -54,8 +54,8 @@
 
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
-static char *appID="gyahtzee";
-static char *appName=N_("Gyahtzee");
+static char *appID="gtali";
+static char *appName=N_("Gnome Tali");
 static guint lastHighScore = 0;
 static GtkWidget *ScoreList; 
 
@@ -364,7 +364,7 @@ about(GtkWidget *widget, gpointer data)
         about = gnome_about_new (appName, VERSION,
 				 "(C) 1998 the Free Software Fundation",
 				 (const char **)authors,
-				 _("Gnomified Yahtzee"),
+				 _("Gnome Tali"),
 				 NULL);
         gtk_widget_show (about);
 	return FALSE;
@@ -414,7 +414,7 @@ GnomeUIInfo settingsmenu[] = {
 };
 
 GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP("gyahtzee"),
+        GNOMEUIINFO_HELP("gtali"),
 	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
 	GNOMEUIINFO_END
 };
@@ -589,10 +589,10 @@ main (int argc, char *argv[])
 
 	if (!NumberOfComputers)
 	  NumberOfComputers = 
-	    gnome_config_get_int("/gyahtzee/Preferences/NumberOfComputerOpponents=5");
+	    gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
 	if (!NumberOfHumans)
 	  NumberOfHumans = 
-	    gnome_config_get_int("/gyahtzee/Preferences/NumberOfHumanOpponents=1");
+	    gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
 
 	/* For some options, we don't want to play a game */
 	if (!GyahtzeeAbort) {

@@ -107,9 +107,9 @@ do_setup(GtkWidget *widget, gpointer data)
 
 	setupdialog_destroy(setupdialog, 1);
 
-	gnome_config_set_int("/gyahtzee/Preferences/NumberOfComputerOpponents",
+	gnome_config_set_int("/gtali/Preferences/NumberOfComputerOpponents",
                              NumberOfComputers);
-	gnome_config_set_int("/gyahtzee/Preferences/NumberOfHumanOpponents",
+	gnome_config_set_int("/gtali/Preferences/NumberOfHumanOpponents",
                              NumberOfHumans);
 
 	gnome_config_sync();
@@ -184,7 +184,7 @@ setup_game(GtkWidget *widget, gpointer data)
 
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
-	gtk_window_set_title(GTK_WINDOW(setupdialog), _("Gyahtzee setup"));
+	gtk_window_set_title(GTK_WINDOW(setupdialog), _("GTali setup"));
 	gtk_signal_connect(GTK_OBJECT(setupdialog),
 			   "delete_event",
 			   GTK_SIGNAL_FUNC(setupdialog_destroy),

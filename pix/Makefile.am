@@ -5,7 +5,7 @@ EXTRA_DIST = gnome-dice-1.xpm \
 	gnome-dice-5.xpm \
 	gnome-dice-6.xpm \
 	gnome-dice-none.xpm \
-	gnome-gyahtzee.png
+	gnome-gtali.png
 
 Pixmapdir = $(datadir)/pixmaps
-Pixmap_DATA = gnome-gyahtzee.png
+Pixmap_DATA = gnome-gtali.png
