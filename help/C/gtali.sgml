@@ -1,0 +1,350 @@
+<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+<!ENTITY version "1.2.0"> <!-- replace with application version -->
+]>
+
+
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 1.0.3
+  Template last modified: Nov 16, 2000
+-->
+
+
+<!-- =============Document Header ============================= -->
+
+<article id="index"> <!-- please do not change the id -->
+
+  <artheader>
+    <title>GNOME Tali Documentation</title>
+    <copyright>
+      <year>2001</year>
+      <holder>Scott D. Heavner</holder>
+    </copyright>
+
+  <!-- translators: uncomment this:
+
+  <copyright>
+   <year>2000</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+
+  <!-- do not put authorname in the header except in copyright - use
+  section "authors" below -->
+
+  <!-- Use this legal notice for online documents which depend on -->
+  <!-- core GNOME packages.                                       -->
+  <legalnotice id="legalnotice">
+   <para>
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the <ulink type="help" 
+    url="gnome-help:fdl"><citetitle>GNU Free Documentation
+    License</citetitle></ulink>, Version 1.1 or any later version 
+    published by the Free Software Foundation with no Invariant Sections, 
+    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+    can be found <ulink type="help" url="gnome-help:fdl">here</ulink>.
+   </para>
+   <para>
+    Many of the names used by companies to distinguish their products and
+    services are claimed as trademarks. Where those names appear in any
+    GNOME documentation, and those trademarks are made aware to the members
+    of the GNOME Documentation Project, the names have been printed in caps
+    or initial caps.
+   </para>
+  </legalnotice>
+
+  <!-- Use this legal notice for documents which are placed on  -->
+  <!-- the web, shipped in any way other than online documents  -->
+  <!-- (eg. PS, PDF, or RTF), or which do not depend on the     -->
+  <!-- core GNOME distribution.                                 -->
+  <!--                                                          -->
+  <!-- If you use this version, you must place the following    -->
+  <!-- line in the document declaration at the top of your      -->
+  <!-- document:                                                -->
+  <!--   <!ENTITY FDL SYSTEM "fdl.sgml">                        -->
+  <!-- and the following line at the bottom of your document    -->
+  <!-- after the last </sect1>.                                 -->
+  <!--   &FDL;                                                  -->
+  <!--
+  <legalnotice id="legalnotice">
+   <para>
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the <link linkend="fdl"><citetitle>GNU
+    Free Documentation License</citetitle></link>, Version 1.1 or any later
+    version published by the Free Software Foundation with no Invariant
+    Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the
+    license can be found in <xref linkend="fdl">.
+   </para>
+   <para>
+    Many of the names used by companies to distinguish their products and
+    services are claimed as trademarks. Where those names appear in any
+    GNOME documentation, and those trademarks are made aware to the members
+    of the GNOME Documentation Project, the names have been printed in caps
+    or initial caps.
+   </para>
+  </legalnotice>
+  -->
+
+  <!-- This is the manual version, not application version. --> 
+    <releaseinfo>
+       This is version 1.0 of the Gnome Tali manual.
+    </releaseinfo>
+
+  </artheader>
+
+ <!-- ============= Document Body ============================= -->
+
+  <sect1 id="intro">
+    <title>Introduction</title>
+
+    <para>
+       <application>Gnome Tali</application> is a sort of poker with
+       dice and less money.  You roll five dice three times and try to
+       create the best <quote>hand</quote>. Your two rerolls may include
+       any or all of your dice.
+    </para>
+    <para>
+      <application>Gnome Tali</application> is very similar to the
+      dice game Yahtzee which is a trademark of Hasbro, Inc.
+    </para>
+
+    <para>
+      To run <application>Gnome Tali</application>, select
+      <menuchoice>
+	<guisubmenu>Games</guisubmenu>
+	<guimenuitem>Gnome Tali</guimenuitem>
+      </menuchoice>
+      from the <guimenu>Main Menu</guimenu>, or type
+      <command>gtali</command> on the command line.
+    </para>
+
+    <para>
+      <application>Gnome Tali</application> is included in the
+      <filename>gnome-games</filename> package, which is part of the
+      GNOME desktop environment. This document describes version
+      &version; of <application>Gnome Tali</application>.
+    </para>
+  </sect1>
+
+  <sect1 id="playing">
+    <title>Playing Gnome Tali</title>
+
+    <figure id="shot1">
+      <title>Gnome Tali in action</title>
+      <screenshot>
+        <screeninfo>Gnome Tali main window screenshot</screeninfo>
+	<graphic format="png" fileref="mainwindow.png"
+	srccredit="Trevor Curtis">
+	</graphic>
+      </screenshot>
+    </figure>
+
+    <para>
+      When play starts, you see the results of your first throw of the
+      dice.      
+    </para>
+
+      <orderedlist>
+        <listitem>
+          <para>Click on the dice you wish to roll again and they will
+            turn into pumpkins. Thanks Tigert :)
+	  </para>
+        </listitem>
+        <listitem>
+          <para>When you have selected all the dice you wish to reroll,
+            press the <guibutton>Roll!</guibutton> button.
+	  </para>
+        </listitem>
+        <listitem>
+	  <para>When you have a hand you like or have run out of chances
+          to throw the dice, click on a row corresponding to what you think
+          is your best scoring combination.  It is very possible to have
+          a score of zero and if you click on the wrong row, you
+          will be scored accordingly. (Say for example, you get
+          yahtzee -- 5 of a kind -- and click on the large straight row,
+          you will receive a zero in your large straight score).</para>
+        </listitem>
+      </orderedlist>
+
+    <para>You can only use each combination once, i.e. once you've entered
+      something in a slot, you can't change the score later if you roll a
+      better hand.
+    </para>
+  </sect1>
+
+  <sect1 id="options">
+    <title>Game Options</title>
+
+    <figure id="shot2">
+      <title>Gnome Tali preferences</title>
+      <screenshot>
+        <screeninfo>Gnome Tali preferences dialog box</screeninfo>
+	<graphic format="png" fileref="preferences.png"
+	srccredit="Trevor Curtis">
+	</graphic>
+      </screenshot>
+    </figure>
+      
+    <variablelist><title>Computer Opponents</title>
+      <varlistentry>
+        <term><guimenuitem>Delay between rolls</guimenuitem></term>
+	<listitem>
+	  <para>Make the computer opponents pause between rolls
+	    of the dice so you can see what they are doing.  Slows down
+	    game play some.
+          </para>
+        </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guimenuitem>Show thoughts during turn</guimenuitem></term>
+	  <listitem>
+            <para>Will print the computer's thoughts to the console
+	      window. Can see the computer evaluate each score box and select
+              dice to reroll.
+            </para>
+          </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guimenuitem>Number of opponents</guimenuitem></term>
+	  <listitem>
+            <para>Select the number of computer opponents.  You are allowed a
+	      total of six human and computer players.  If you attempt to
+	      increase this number near the limit, the number of human players
+	      will be decreased to maintain only six total
+	      players.
+            </para>
+          </listitem>
+	</varlistentry>
+      </variablelist>
+      
+      <variablelist><title>Human Players</title>
+	<varlistentry>
+	  <term><guimenuitem>Number of players</guimenuitem></term>
+	  <listitem>
+            <para>Selects the number of human players.  As described
+	      above you are only allowed six total
+	      players.
+            </para>
+          </listitem>
+	</varlistentry>
+      </variablelist>  
+
+      <variablelist><title><guimenuitem>Player Names</guimenuitem></title>
+	<varlistentry>
+	  <term></term>
+	  <listitem>
+	    <para>To change the names of any player, right click on 
+              the name.
+	    </para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect1>
+
+    <sect1 id="strategy">
+      <title>Game Strategy</title>
+      <para>
+        Play to win! ;)
+      </para>
+    </sect1>	
+ <!-- ============= Bugs ================================== -->
+ <!-- This section should describe known bugs and limitations of
+      the program if there are any - please be frank and list all
+      problems you know of. -->
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+  <para>
+   This application has no known bugs.
+  </para>
+ </sect1>
+
+
+<!-- ============= Authors ================================ -->
+
+ <sect1 id="authors">
+  <title>Authors</title>
+  <para>
+   <application>Gnome Tali</application> was written by Scott Heavner
+   (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. Please send 
+   all comments, suggestions, and bug
+   reports to the <ulink url="http://bugzilla.gnome.org" type="http">GNOME
+   bug tracking database</ulink>.  (Instructions for submitting bug
+   reports can be found <ulink
+   url="http://bugs.gnome.org/Reporting.html" type="http">
+   on-line</ulink>.)  You can also use <application>Bug Report
+   Tool</application> (<command>bug-buddy</command>), available in the
+   <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
+   Menu</guimenu>, for submitting bug reports.
+  </para>
+
+  <para>
+   This manual was written by Scott D Heavner
+   (<email>sdh@po.cwru.edu</email>). Please send all comments and
+   suggestions regarding this manual to the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp">GNOME Documentation
+   Project</ulink> by sending an email to
+   <email>docs@gnome.org</email>. You can also add your comments
+   online by using the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp/doctable/">GNOME
+   Documentation Status Table</ulink>.
+  </para>
+
+  <!-- For translations: uncomment this:
+
+  <para>
+   Latin translation was done by ME
+   (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
+   suggestions regarding this translation to SOMEWHERE.
+  </para>
+
+  -->
+
+ </sect1>
+
+
+ <!-- ============= Application License ============================= -->
+
+ <sect1 id="license">
+  <title>License</title>
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the  <ulink type="help" url="gnome-help:gpl">
+    <citetitle>GNU General Public License</citetitle></ulink> as
+   published by the Free Software Foundation; 
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+  <para>
+   A copy of the <citetitle>GNU General Public License</citetitle> is
+   included as an appendix to the <citetitle>GNOME Users
+   Guide</citetitle>.  You may also obtain a copy of the
+   <citetitle>GNU General Public License</citetitle> from the Free
+   Software Foundation by visiting <ulink type="http"
+   url="http://www.fsf.org">their Web site</ulink> or by writing to
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+</article>
+
+
+
+
+
+
+
+
+
