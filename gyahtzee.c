@@ -261,12 +261,8 @@ UpdateDiePixmap(DiceInfo *d)
         
         if (last_val[dicebox]!=new_val) {
                 
-                gtk_container_block_resize(GTK_CONTAINER(diceTable));
-                gtk_container_block_resize(GTK_CONTAINER(diceBox[dicebox]));
                 gtk_widget_hide(dicePixmaps[dicebox][last_val[dicebox]]);
                 gtk_widget_show(dicePixmaps[dicebox][new_val]);
-                gtk_container_unblock_resize(GTK_CONTAINER(diceBox[dicebox]));
-                gtk_container_unblock_resize(GTK_CONTAINER(diceTable));
                 
                 last_val[dicebox] = new_val;
         }
