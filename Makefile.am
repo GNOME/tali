@@ -51,8 +51,8 @@ EXTRA_DIST = gtali.desktop README AUTHORS
 Games_DATA = gtali.desktop
 
 install-data-local:
-	-$(mkinstalldirs) $(scoredir)
-	-touch $(scoredir)/gtali.scores
-	-chown games.games $(scoredir)/gtali.scores
-	-chmod 664 $(scoredir)/gtali.scores	
-	-chgrp games $(bindir)/gtali && chmod 2111 $(bindir)/gtali
+	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
+	-touch $(DESTDIR)$(scoredir)/gtali.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gtali.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
+	-chgrp games $(DESTDIR)$(bindir)/gtali && chmod 2111 $(DESTDIR)$(bindir)/gtali
