@@ -1,3 +1,13 @@
+2004-02-12  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/da/Makefile.am: 
+	* help/da/legal.xml:
+	* help/da/gtali.xml:	
+	* help/Makefile.am: Rework the Danish help document so it works
+	with docbook rather than html. This should pass make distcheck,
+	but is not a complete translation (the original wasn't). My
+	apologies to all Danes.
+
 2004-02-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c (about): translator_credits ->
