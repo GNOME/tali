@@ -1,6 +1,0 @@
-Makefile
-.directory
-configure
-config.h.in
-config.status
-yahtzee

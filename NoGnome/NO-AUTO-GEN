@@ -1,3 +1,0 @@
-Needed only on `gnome' dirs.  The top-level autogen.sh can be fooled
-by the configure.in in this directory.
-

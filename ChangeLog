@@ -1,4 +1,10 @@
-2003-10-29  Callum McKenzie  <callum@localhost.localdomain>
+2003-11-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+        * NoGnome/*: Removed this directory since it has not been possible
+	to compile without gnome support since 2.2. Use the original
+	curses package if you want a curses version.
+	
+2003-10-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am: Removed *_DISABLE_DEPRECATED.
 
