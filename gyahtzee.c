@@ -350,8 +350,10 @@ about(GtkWidget *widget, gpointer data)
 {
 	static GtkWidget *about = NULL;
         const gchar *authors[] = {
-		N_("Scott Heavner"),
-		N_("Orest Zborowski - Curses Version (C) 1992"),
+		"Scott Heavner",
+		"",
+		N_("Curses version (1992):"),
+		"Orest Zborowski",
 		NULL
 	};
         gchar *documenters[] = {
@@ -375,8 +377,9 @@ about(GtkWidget *widget, gpointer data)
 			NULL);
 
         about = gnome_about_new (appName, VERSION,
-				 _("(C) 1998 the Free Software Fundation"),
-				 _("GNOME Tali"),
+				 "Copyright \xc2\xa9 1998-2003 Free Software "
+				 "Foundation, Inc.",
+				 _("A sort of poker with dice and less money."),
 				 (const char **)authors,
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
