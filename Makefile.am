@@ -48,7 +48,9 @@ ctali_LDADD = \
 	$(INTLLIBS)
 
 schemadir   = $(sysconfdir)/gconf/schemas
-schema_DATA = gtali.schemas
+schema_in_files = gtali.schemas.in
+schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+@INTLTOOL_SCHEMAS_RULE@
 
 EXTRA_DIST = gtali.desktop.in README AUTHORS $(schema_DATA)
 
