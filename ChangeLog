@@ -1,3 +1,11 @@
+2002-04-15  Bastien Nocera  <hadess@hadess.net>
+
+	* Makefile.am:
+	* gtali.schemas:
+	* gyahtzee.c: (main):
+	* setup.c: (do_setup): gconf patch by Jörgen Viksell
+	<jorgen.viksell@telia.com>, added gconftool call in Makefile.am
+
 2002-02-17  Chris Lyttle  <chris@wilddev.net>
 
 	* help/C/gtali.xml: updated for new template.

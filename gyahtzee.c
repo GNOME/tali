@@ -40,6 +40,7 @@
 
 #include <config.h>
 #include <gnome.h>
+#include <gconf/gconf-client.h>
 #include <libgnomeui/gnome-window-icon.h>
 
 #include "yahtzee.h"
@@ -563,6 +564,9 @@ GyahtzeeCreateMainWindow(void)
 int
 main (int argc, char *argv[])
 {
+        GConfClient *client;
+        GError *err = NULL;
+        GSList *name_list = NULL;
         gchar *newname, *PrefLoc;
         gint i;
 
@@ -579,27 +583,60 @@ main (int argc, char *argv[])
         gnome_init_with_popt_table(appID, VERSION, argc, argv,
 				   yahtzee_options, 0, NULL);
         gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gtali.png");
-	NumberOfComputers = gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
-	NumberOfHumans = gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
- 	ExtraYahtzeeBonus = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeBonus=1");
- 	ExtraYahtzeeBonusVal = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeBonusVal=50");
- 	ExtraYahtzeeJoker = gnome_config_get_int("/gtali/Preferences/ExtraYahtzeeJoker=0");
+
+        client = gconf_client_get_default ();
+        NumberOfComputers = gconf_client_get_int(client, "/apps/gtali/NumberOfComputerOpponents", &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+	NumberOfHumans = gconf_client_get_int(client, "/apps/gtali/NumberOfHumanOpponents", &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+ 	ExtraYahtzeeBonus = gconf_client_get_int(client, "/apps/gtali/ExtraYahtzeeBonus", &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+ 	ExtraYahtzeeBonusVal = gconf_client_get_int(client, "/apps/gtali/ExtraYahtzeeBonusVal", &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+ 	ExtraYahtzeeJoker = gconf_client_get_int(client, "/apps/gtali/ExtraYahtzeeJoker", &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
 
         /* Read in new player names */
-	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
-                gchar *newname;
+        name_list = gconf_client_get_list(client, "/apps/gtali/PlayerNames",
+                                          GCONF_VALUE_STRING, &err);
 
-                PrefLoc = g_strdup_printf("/gtali/Preferences/PlayerName%1d",i+1);
-                newname = gnome_config_get_string_with_default(PrefLoc, NULL);
-                g_free(PrefLoc);
-
-                if (newname) {
-                        players[i].name = g_malloc(strlen(newname));
-                        if (players[i].name)
-                                strcpy(players[i].name,newname);
-                        g_free(newname);
-                }
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
         }
+
+        for(i = 0; i < MAX_NUMBER_OF_PLAYERS && name_list; i++) {
+                if(name_list->data)
+                        players[i].name = g_strdup(name_list->data);
+                
+                name_list = g_slist_next(name_list);
+        }
+        g_slist_free(name_list);
 
 	/* For some options, we don't want to play a game */
 	if (!GyahtzeeAbort) {

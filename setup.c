@@ -29,6 +29,7 @@
  */
 #include <config.h>
 #include <gnome.h>
+#include <gconf/gconf-client.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -100,6 +101,9 @@ WarnNumPlayersChanged (void)
 static void
 do_setup(GtkWidget *widget, gpointer data)
 {
+        GConfClient *client;
+        GError *err = NULL;
+        GSList *name_list = NULL;
         gchar *PrefLoc;
         int i;
 
@@ -119,9 +123,8 @@ do_setup(GtkWidget *widget, gpointer data)
                 players[i].name = g_strdup(gtk_entry_get_text(GTK_ENTRY(PlayerNames[i])));
                 gtk_clist_set_column_title (GTK_CLIST(ScoreList),i+1,
                                             players[i].name);
-                PrefLoc = g_strdup_printf("/gtali/Preferences/PlayerName%1d",i+1);
-                gnome_config_set_string(PrefLoc, players[i].name);
-                g_free(PrefLoc);
+
+                name_list = g_slist_append(name_list, players[i].name);
         }
 
         if (sscanf(gtk_entry_get_text(GTK_ENTRY(BonusEntry)),"%d",&i)==1) {
@@ -130,19 +133,55 @@ do_setup(GtkWidget *widget, gpointer data)
                 
 	setupdialog_destroy(setupdialog, 1);
 
-	gnome_config_set_int("/gtali/Preferences/NumberOfComputerOpponents",
-                             NumberOfComputers);
-	gnome_config_set_int("/gtali/Preferences/NumberOfHumanOpponents",
-                             NumberOfHumans);
- 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeBonus",
-                             ExtraYahtzeeBonus);
- 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeBonusVal",
-                             ExtraYahtzeeBonusVal);
- 	gnome_config_set_int("/gtali/Preferences/ExtraYahtzeeJoker",
-                             ExtraYahtzeeJoker);
+        client = gconf_client_get_default ();
+        gconf_client_set_list (client, "/apps/gtali/PlayerNames",
+                               GCONF_VALUE_STRING, name_list, &err);
+        g_slist_free(name_list);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
 
+        gconf_client_set_int(client, "/apps/gtali/NumberOfComputerOpponents",
+                             NumberOfComputers, &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
 
-	gnome_config_sync();
+        gconf_client_set_int(client, "/apps/gtali/NumberOfHumanOpponents",
+                             NumberOfHumans, &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+        gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeBonus",
+                             ExtraYahtzeeBonus, &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+        gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeBonusVal",
+                             ExtraYahtzeeBonusVal, &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
+
+ 	gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeJoker",
+                             ExtraYahtzeeJoker, &err);
+        if(err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free(err);
+                err = NULL;
+        }
 
         if ( ( (NumberOfComputers!=OriginalNumberOfComputers)||
 	       (NumberOfHumans!=OriginalNumberOfHumans) ) &&
