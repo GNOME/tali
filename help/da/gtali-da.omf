@@ -1,12 +1,16 @@
 <?xml version="1.0" standalone="no"?>
 <omf>
   <resource>
+    <creator>
+      sdh@po.cwru.edu (Scott D Heavner)
+    </creator>
     <title>
       Gnome tali dokumentation
     </title>
-    <subject>
-      <category>GNOME|Spil</category>
-    </subject>
+    <date>
+      Thu Feb 12 22:53:37 NZDT 2004
+    </date>
+    <subject category="GNOME|Spil"/>
     <format mime="text/html"/>
     <identifier url="index.html"/>
     <language code="da"/>
