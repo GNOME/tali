@@ -1,3 +1,7 @@
+2003-07-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gtali.desktop.in: Update name to fit HIG (bug 116916).
+
 2003-07-06  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* clist.c (update_score_cell): Clear cells with a score of -1,
