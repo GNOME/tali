@@ -41,11 +41,13 @@ clear:	clean
 	@RM@ -rf ../Makefile ../Makefile.in \
 	   `find . -name config.\* -not -name config.h.in -not -name config.status -print`
 
-configure:  configure.in acconfig.h curses.m4
+config.h:	configure
+
+configure:  configure.in config.h.in curses.m4
 	cd . && autoheader
 	cd . && autoconf
 
-Makefile: configure Makefile.in
+Makefile: config.h Makefile.in
 	cd . && sh ./config.status --recheck
 	cd . && sh ./config.status
 
@@ -54,6 +56,7 @@ tar:	clear
 	   --exclude Makefile \
 	   --exclude config.status \
 	   --exclude .cvsignore  \
+	   --exclude config.h \
 	   --exclude .directory  \
 	   --exclude .  \
 	   --exclude .deps -f /tmp/gyahtzee.tgz \

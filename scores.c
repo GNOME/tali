@@ -251,8 +251,11 @@ update_scorefile(void)
 		unlink(tmpfile);
 	}
 #else
-	sprintf(scall, "mv %s %s", tmpfile, scorefile);
-	system(scall);
+        {
+                char scall[300];
+                sprintf(scall, "mv %s %s", tmpfile, scorefile);
+                system(scall);
+        }
 #endif
 
 	lock(scorefile, L_UNLOCK);

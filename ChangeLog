@@ -1,3 +1,12 @@
+1999-04-18  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* NoGnome/Makefile.in: Update to reference config.h.in
+
+	* NoGnome/config.h.in: rename from acconfig.h
+
+	* scores.c (update_scorefile): Make sure to allocate scall if
+	HAVE_RENAME fails.
+
 1999-04-10  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
 
 	* clist.c (ShowoffPlayer): Setting the column heading buttons to
