@@ -65,3 +65,5 @@ install-data-local:
 	-chown games.games $(DESTDIR)$(scoredir)/gtali.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
 	-chgrp games $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali
+
+CLEANFILES = $(Games_DATA) $(schema_DATA)
