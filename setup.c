@@ -59,6 +59,7 @@ parse_an_arg (poptContext ctx,
                 GyahtzeeAbort = 1;
 		break;
 	default:
+		break;
 	}
 
 	return;
@@ -329,7 +330,7 @@ setup_game(GtkWidget *widget, gpointer data)
  	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
  
  	button = gtk_check_button_new_with_label (_("Extra Yahtzee Bonus") );
- 	//gtk_box_pack_start(GTK_BOX(box2), button, FALSE, FALSE, 0);
+ 	/*gtk_box_pack_start(GTK_BOX(box2), button, FALSE, FALSE, 0);*/
  	gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
         tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),ExtraYahtzeeBonus);

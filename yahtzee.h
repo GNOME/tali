@@ -88,7 +88,7 @@ extern int CurrentPlayer;
 extern int IsCheater;
 extern char *ProgramHeader;
 extern char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS];
-char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
+extern char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
 
 extern void YahtzeeInit(void);
 extern void NewGame(void);

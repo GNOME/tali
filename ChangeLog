@@ -1,3 +1,11 @@
+2001-06-07  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	Apply patch from drk@sgi.com. Bug #52645.
+
+	* setup.c (parse_an_arg): Add `break' in default.
+	  (setup_game): Remove c++ style comment.
+	* yahtzee.h: DefaultPlayerNames is extern so declare it extern.
+
 2000-11-17  Martin Norbäck  <d95mback@licia.dtek.chalmers.se>
 
 	* setup.c: removed _() from untranslatable string
