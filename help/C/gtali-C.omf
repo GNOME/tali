@@ -7,8 +7,8 @@
     <subject>
       <category>GNOME|Games</category>
     </subject>
-    <format mime="text/sgml"/>
-    <identifier url="gtali.sgml"/>
+    <format mime="text/xml"/>
+    <identifier url="gtali.xml"/>
     <language code="C"/>
   </resource>
 </omf>
