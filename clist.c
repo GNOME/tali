@@ -47,11 +47,12 @@ update_score_cell(GtkWidget *treeview, gint row, gint col, int val)
         model = gtk_tree_view_get_model(GTK_TREE_VIEW(treeview));
         gtk_tree_model_iter_nth_child(model, &iter, NULL, row);
         if (val < 0)
-                buf = "";
-        else
+                gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, "", -1);
+        else {
                 buf = g_strdup_printf("%i", val);
-        gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, buf, -1);
-        g_free(buf);
+                gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, buf, -1);
+                g_free(buf);
+        }
 }
 
 static void
