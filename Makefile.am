@@ -47,7 +47,7 @@ ctali_LDADD = \
 	$(CURSES_LIBS) 				\
 	$(INTLLIBS)
 
-schemadir   = $(sysconfdir)/gconf/schemas
+schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gtali.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
