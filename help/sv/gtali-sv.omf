@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+  <resource>
+    <creator>
+      sdh@po.cwru.edu (Scott D Heavner)
+    </creator>
+    <maintainer>
+      callum.otago.ac.nz (Callum McKenzie)
+    </maintainer>
+    <title>
+      Gtali Manual
+    </title>
+    <date>
+      2005-03-24
+    </date>
+    <version identifier="2.0" date="2005-03-24" description="New Swedish translation"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Spela ett pokerliknande tärningsspel.
+    </description>
+    <type>
+      user's guide
+    </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="gtali.xml"/>
+    <language code="sv"/>
+    <relation seriesid="4f2f826e-6008-11d6-9c7e-99b79109f703"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Scott D Heavner"/>
+  </resource>
+</omf>

@@ -1,3 +1,7 @@
+2005-03-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/sv/*: Added a Swedish translation from Kenneth Astrand.
+	
 2005-03-23  Dennis Cranston  <dennis_cranston@yahoo.com>
 
 	* setup.c:

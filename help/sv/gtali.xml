@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appversion "2.8">
+  <!ENTITY manrevision "2.8">
+  <!ENTITY date "September 2004">
+  <!ENTITY app "<application>GNOME Tali</application>">
+  <!ENTITY appname "GNOME Tali">
+  <!ENTITY version "2.8"> 
+]>
+
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+
+<!-- =============Document Header ============================= -->
+
+<article id="index" lang="sv">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo>
+    <title>&app; Manual V&manrevision;</title>
+    <copyright>
+      <year>2001</year>
+      <holder>Scott D. Heavner</holder>
+    </copyright>
+
+
+  <copyright>
+   <year>2005</year>
+   <holder>Kenneth Astrand (Swedish translation)</holder>
+  </copyright>
+
+
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername> GNOME Documentation Project </publishername> 
+    </publisher> 
+
+   &legal;
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+	
+    <authorgroup> 
+      <author> 
+	<firstname>Scott D</firstname> 
+	<surname>Heavner</surname> 
+	<affiliation> 
+	  <address> <email>sdh@po.cwru.edu</email> </address> 
+	</affiliation> 
+      </author> 
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Kenneth</firstname> 
+	<surname>Astrand</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>kennethastrand@home.se</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+    
+
+    <revhistory>
+      <revision> 
+	<revnumber>&appname; Manual V&manrevision;</revnumber> 
+	<date>&date;</date> 
+	<revdescription> 
+	  <para role="author">Scott D Heavner
+	    <email>sdh@po.cwru.edu</email>
+	  </para>
+	  <para role="publisher">GNOME Documentation Project</para>
+	</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>This manual describes version &appversion; of &appname;.
+    </releaseinfo>
+    <!-- The following feedback information only applies to appliactions
+    listed in bugzilla.gnome.org and bugzilla.ximian.com. For other
+    applications, please provide your own feedback info or remove thsi
+    section altogether -->
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>To report a bug or make a suggestion regarding the &app; application or
+	this manual, follow the directions in the 
+	<ulink url="ghelp:gnome-feedback"
+	  type="help">GNOME Feedback Page</ulink>. 
+      </para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+
+  </articleinfo>
+
+  <indexterm zone="index"> 
+    <primary>GNOME Tali</primary> 
+  </indexterm>
+
+ <!-- ============= Document Body ============================= -->
+
+  <sect1 id="Översikt">
+    <title>Översikt</title>
+    <para>
+    <application>Gnome tali</application> är ett slags poker med
+    tärningar. Målet är att få den högsta totala poängsumman när spelet är slut. 
+    Varje spelare har tre slag (första slaget sker med automatik).
+      
+    Du ska försöka att, slå tärningarna till en bra &quot;hand.&quot; 
+    Dvs. en hög summa som passar på en ledig plats i poängtabellen. 
+    </para>
+    <para>
+    Varje spelare har två omslag, och dessa kan innehålla valfritt antal markerade tärningar.
+    För att bli en bra spelare måste man, ta hänsyn till vilka poängrutor som man har använt och vilka man har kvar
+    </para>
+  
+    <para>
+    <application>Gnome Tali</application> är väldigt likt tärnings spelet Yahtzee, som är ett varumärke 
+    tillhörande Hasbro, Inc.
+    </para>
+  </sect1>
+  
+  <sect1 id="Play">
+    <title>Kom igång</title>
+      <screenshot>
+	 <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/mainwindow.png" format="PNG"
+	srccredit="Trevor Curtis"/>
+	</imageobject>
+    <textobject> 
+      <phrase>GNOME Tali main window screenshot.</phrase> 
+    </textobject> 
+  </mediaobject>
+      </screenshot>
+
+
+
+    <para>
+    När spelet startar, så ser du resultatet av ditt första slag.
+     </para>
+
+    <para>
+      <orderedlist>
+        <listitem>
+          <para>Klicka på dom tärningar du vill kasta om.
+	  </para>
+        </listitem>
+        <listitem>
+          <para>
+          Efter att du har markerat alla tärningar du vill kasta om, trycker du på &quot;Kasta!&quot; knappen.
+          </para>
+        </listitem>
+        <listitem><para>När du har fått en hand du gillar, eller om du inte har några fler slag.
+	Klicka på den rad, där resultatet passar bäst. Det är möjligt att få noll poäng. Var noga med att inte 
+	klicka på fel rad.  
+	Exempelvis om du får yahtzee (5 lika tärningar) och du väljer stege, får du noll poäng.
+	
+	   .</para>
+        </listitem>
+      </orderedlist>
+    </para>
+
+    <para>
+    Man kan bara använda en ruta en gång och resultatet kan kan ej ändras med en bättre hand.
+    </para>
+  </sect1>
+ 
+  <sect1 id="Options">
+    <title>Funktioner</title>
+
+    <variablelist><title>Datormotståndare</title>
+      <varlistentry>
+        <term><guimenuitem>Pausa mellan kast</guimenuitem></term>
+        <listitem>
+		 <para>Du kan få datorspelarna att pausa mellan varje kast.
+		 Så att du kan se hur dom spelar. Spelet går lite långsammare.
+		 </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><guimenuitem>Antal motståndare</guimenuitem></term>
+        <listitem>
+		 <para>Välj det antal datormotståndare du vill ha. 
+		 Du kan ha upp till sex stycken motspelare och 
+		 det kan vara i form av datormotsåndare eller vanliga spelare. 
+		 </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <variablelist>
+      <title><guimenuitem>Spelarnamn</guimenuitem></title>
+      <varlistentry>
+        <listitem>
+        <para>För att ändra spelarnas namn. 
+	Väljer du inställningar på menyn </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  
+  </sect1>
+
+  <sect1 id="Strategy">
+    <title>Strategi</title>
+
+    <para>
+    Om du få mer än 62 poäng totalt på den övre spelhalvan. Får du en bonus på 35 poäng.
+    Spela för att vinna!
+    </para>
+
+  </sect1>
+ <!-- ============= Bugs ================================== -->
+ <!-- This section should describe known bugs and limitations of
+      the program if there are any - please be frank and list all
+      problems you know of. -->
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+  <para>
+   This application has no known bugs.
+  </para>
+ </sect1>
+
+
+<!-- ============= Authors ================================ -->
+
+ <sect1 id="authors">
+  <title>Authors</title>
+  <para>
+   <application>GNOME Tali</application> was written by Scott Heavner
+   (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. Please send 
+   all comments, suggestions, and bug
+   reports to the <ulink url="http://bugzilla.gnome.org" type="http">GNOME
+   bug tracking database</ulink>.  (Instructions for submitting bug
+   reports can be found <ulink
+   url="http://bugs.gnome.org/Reporting.html" type="http">
+   on-line</ulink>.)  You can also use <application>Bug Report
+   Tool</application> (<command>bug-buddy</command>), available in the
+   <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
+   Menu</guimenu>, for submitting bug reports.
+  </para>
+
+  <para>
+   This manual was written by Scott D Heavner
+   (<email>sdh@po.cwru.edu</email>) with extra material added by
+   Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Please
+   send all comments and suggestions regarding this manual to the
+   <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp">GNOME Documentation
+   Project</ulink> by sending an email to
+   <email>docs@gnome.org</email>. You can also add your comments
+   online by using the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp/doctable/">GNOME
+   Documentation Status Table</ulink>.
+  </para>
+
+  <!-- For translations: uncomment this:
+
+  <para>
+   Latin translation was done by ME
+   (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
+   suggestions regarding this translation to SOMEWHERE.
+  </para>
+
+  -->
+
+ </sect1>
+
+
+ <!-- ============= Application License ============================= -->
+
+ <sect1 id="license">
+  <title>License</title>
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the  <ulink type="help" url="gnome-help:gpl">
+    <citetitle>GNU General Public License</citetitle></ulink> as
+   published by the Free Software Foundation; 
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+  <para>
+   A copy of the <citetitle>GNU General Public License</citetitle> is
+   included as an appendix to the <citetitle>GNOME Users
+   Guide</citetitle>.  You may also obtain a copy of the
+   <citetitle>GNU General Public License</citetitle> from the Free
+   Software Foundation by visiting <ulink type="http"
+   url="http://www.fsf.org">their Web site</ulink> or by writing to
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+
+</article>
+
