@@ -54,8 +54,8 @@
       <owner>gtali</owner>
       <type>list</type>
       <list_type>string</list_type>
+      <default>[Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
       <locale name="C">
-        <default>[Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
         <short></short>
         <long></long>
       </locale>

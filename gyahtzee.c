@@ -57,7 +57,7 @@
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
 static char *appID="gtali";
-static char *appName=N_("Gnome Tali");
+static char *appName=N_("GNOME Tali");
 static guint lastHighScore = 0;
 GtkWidget *ScoreList; 
 
@@ -379,7 +379,7 @@ about(GtkWidget *widget, gpointer data)
 
         about = gnome_about_new (appName, VERSION,
 				 _("(C) 1998 the Free Software Fundation"),
-				 _("Gnome Tali"),
+				 _("GNOME Tali"),
 				 (const char **)authors,
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,

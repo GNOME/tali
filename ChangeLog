@@ -1,3 +1,10 @@
+2002-11-27  Ross Burton  <ross@burtonini.com>
+
+	* gyahtzee.c: s/Gnome/GNOME/, for #99683.
+
+	* gtali.schemas.in: Fix the file, the <default> was in the wrong
+	location.
+
 2002-11-22  Tim Musson  <trmusson@ihug.co.nz>
 
 	* gyahtzee.c: (about), (ShowHighScores): No more multiple About
