@@ -50,4 +50,4 @@ endif
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ; fi
 
-CLEANFILES = $(Games_DATA) $(schema_DATA)
+DISTCLEANFILES = $(Games_DATA) $(schema_DATA)
