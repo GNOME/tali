@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-_Name=GTali
-_Comment=Dice game
+_Name=Tali
+_Comment=Play a poker-style dice game
 Exec=gtali
 Icon=gnome-gtali.png
 Terminal=false
