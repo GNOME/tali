@@ -123,7 +123,7 @@ setup_screen(void)
 
 	initscr();
 	if (LINES < 23)
-		abort_program("Not enough lines on the terminal");
+		abort_program(_("Not enough lines on the terminal"));
 	numlines = LINES;
 
 #ifndef NO_COLOR_CURSES
@@ -326,9 +326,11 @@ setup_board(void)
 
 	TotalsColorOn();
 	move(11, 9);
-	addstr(" Upper Total");
+	addch(' ');
+	addstr(FieldLabels[F_UPPERT]);
 	move(12, 9);
-	addstr(" Bonus");
+	addch(' ');
+	addstr(FieldLabels[F_BONUS]);
 	TotalsColorOff();
 
 
@@ -340,9 +342,11 @@ setup_board(void)
 
 	TotalsColorOn();
 	move(20, 9);
-	addstr(" Lower Total");
+	addch(' ');
+	addstr(FieldLabels[F_LOWERT]);
 	move(21, 9);
-	addstr(" Grand Total");
+	addch(' ');
+	addstr(FieldLabels[F_GRANDT]);
 	TotalsColorOff();
 
 	for (j = 0; j < NumberOfPlayers; ++j) {
@@ -433,7 +437,7 @@ HumanTurn(int player)
 	while ( NumberOfRolls<3 ) {
 
                 cp = query(player, 1, 
-                           "What dice to roll again (<RETURN> for none)? ",
+                           _("What dice to roll again (<RETURN> for none)? "),
                            buf, sizeof(buf));
 
                 if (*cp == '\0') {	 /* Player pressed return */
@@ -456,13 +460,15 @@ HumanTurn(int player)
 		
 	}
 
-	query(player, 2, "Where do you want to put that? ", buf, sizeof(buf));
+	query(player, 2, _("Where do you want to put that? "),
+	      buf, sizeof(buf));
 	done = 0;
 
 	for (;;) {
 
 		if (buf[0] < 'a' || buf[0] > 'm') {
-			query(player, 2, "No good! Where do you want to put that? ",
+			query(player, 2, 
+			      _("No good! Where do you want to put that? "),
                               buf, sizeof(buf));
 			continue;
 		}
@@ -472,7 +478,9 @@ HumanTurn(int player)
                 if (i==SCORE_OK)
                         break;
                 else if (i==SLOT_USED)
-                        query(player, 2, "Already used! Where do you want to put that? ",
+                        query(player, 2, 
+			      _("Already used! Where do you want"
+				" to put that? "),
                               buf, sizeof(buf));
 	}
 
@@ -488,7 +496,7 @@ handle_play(int player)
 
 	showoff(player, 1);
 
-	say("Rolling for %s", players[player].name);
+	say(_("Rolling for %s"), players[player].name);
 
 	NumberOfRolls=0;
 	SelectAllDice();
@@ -527,7 +535,15 @@ PlayNewGame(void)
 
         winner = FindWinner();
 
-	say("The winner is %s", players[winner].name);
+        if (players[winner].name)
+                say("%s %s %d %s",
+                    players[winner].name,
+		    _("wins this game with"),
+		    WinningScore,
+		    _("points"));
+	else
+                say(_("Game over!"));
+
         sleep(5);
 }
 
@@ -541,12 +557,12 @@ show_top_scores(void)
 	char stuff[1024];
 	char name[32], date[32];
 
-	printf("Yahtzee top scores...\n");
+	printf("%s...\n",_("Yahtzee top scores"));
 
 	sprintf(scorefile, "%s/%s", SCOREDIR, SCOREFNAME);
 
 	if ((fp = fopen(scorefile, "r")) == NULL) {
-		printf("Can't get at score file.\n");
+		printf("%s\n",_("Can't get at score file."));
 		return;
 	}
 
@@ -557,7 +573,7 @@ show_top_scores(void)
 			break;
 
 		if (j >= numlines - 4) {
-			printf("<Hit Return>");
+			printf("<%s>",_("Hit Return"));
 			fflush(stdout);
 			getchar();
 			j = 0;
@@ -574,7 +590,7 @@ show_top_scores(void)
 
 	fclose(fp);
 
-	printf("<Hit Return>...");
+	printf("<%s>...",_("Hit Return"));
 	fflush(stdout);
 	getchar();
 }
@@ -610,7 +626,8 @@ main(int argc, char **argv)
                                 break;
                                 
                         case 'n':
-                                printf("obsolete function - delay turned off by default.\n");
+                                printf("%s\n",_("obsolete function - delay"
+						" turned off by default)"));
                                 break;
                                 
                         case 'd':
@@ -632,12 +649,12 @@ main(int argc, char **argv)
 	}
 
 	if (!onlyshowscores) {
-		printf("\n\nWelcome to the game of Yahtzee...\n\n");
+		printf("\n\n%s...\n\n",_("Welcome to the game of Yahtzee"));
                 
 		init();
                 
 		do {
-			printf("How many wish to play (max of %d)? ",
+			printf(_("How many wish to play (max of %d)? "),
 			  MAX_NUMBER_OF_PLAYERS);
 			fflush(stdout);
 
@@ -655,7 +672,7 @@ main(int argc, char **argv)
 
 		for (i = 0; i < NumberOfHumans; ++i) {
 
-			printf("What is the name of player #%d ? ", i + 1);
+			printf(_("What is the name of player #%d ? "), i + 1);
 			fflush(stdout);
 
                         players[i].name = malloc(MAX_NAME_LENGTH);
@@ -670,11 +687,12 @@ main(int argc, char **argv)
 
 		if (NumberOfHumans == MAX_NUMBER_OF_PLAYERS) {
 
-			printf("Boo hoo... I can't play...\n");
+			printf(_("Boo hoo... I can't play...\n"));
 
 		} else {
 			do {
-				printf("How many computers to play (max of %d) ? ",
+				printf(_("How many computers to "
+					 "play (max of %d) ? "),
 				  MAX_NUMBER_OF_PLAYERS - NumberOfComputers);
 				fflush(stdout);
 
@@ -689,7 +707,7 @@ main(int argc, char **argv)
                 NumberOfPlayers = NumberOfHumans + NumberOfComputers;
 
 		if (NumberOfPlayers == 0) {
-			printf("Well, why did you run this anyways???\n\n");
+			printf(_("Well, why did you run this anyways???\n\n"));
 			exit(8);
 		}
 	}

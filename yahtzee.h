@@ -98,6 +98,7 @@ extern int NoDiceSelected(void);
 extern int RollDie(void);
 extern void RollSelectedDice(void);
 extern int GameIsOver(void);
+extern int HumansAreDone(void);
 extern int FindWinner(void);
 
 /* Computer.c */

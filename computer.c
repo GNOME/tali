@@ -32,8 +32,6 @@
 #include "yahtzee.h"
 
 
-static int numrolls = 0;
-
 /*
 **	questions are:
 **		0:	none
@@ -95,7 +93,7 @@ char *RerollString(DiceRank *t)
 
         for (i=0; i<5; i++) {
                 if (t->rerolls[i])
-                        dice_string[i*2] = '0'+i;
+                        dice_string[i*2] = '1'+i;
                 else
                         dice_string[i*2] = ' ';
         }
@@ -139,8 +137,6 @@ BuildTable(int player)
 	int d;
 	int d2;
 	int overflow;
-
-	++numrolls;
 
 	for (i = 0; i < NUM_FIELDS; ++i)
 	{
@@ -210,7 +206,7 @@ BuildTable(int player)
 
 		if (upper_total(player) >= 63)
 		{
-			if (numrolls > 2)
+			if (NumberOfRolls > 2)
 				bc_table[i].value += 10;
 		}
 
@@ -242,7 +238,7 @@ BuildTable(int player)
 **	we also do such thinking only if we're not supposed to be looking just
 **	for the best combinations...
 */
-	if (numrolls < 3)
+	if (NumberOfRolls < 3)
 	{
 /*
 **	searching for large straight... here we chicken out and only look at
@@ -486,7 +482,7 @@ BuildTable(int player)
 		ClearRerolls(&bc_table[H_LS]);
 	}
 
-	if (!players[player].used[H_CH] && numrolls > 2)
+	if (!players[player].used[H_CH] && NumberOfRolls > 2)
 	{
 		bc_table[H_CH].value = add_dice();
 
@@ -617,11 +613,9 @@ ComputerScoring(int player)
 	int best;
 	int bestv;
 
-	numrolls = 2;				/* in case skipped middle */
+	NumberOfRolls = 2;		     /* in case skipped middle */
 
 	BuildTable(player);
-
-	numrolls = 0;				/* for next time */
 
 	best = 0;
 
@@ -663,12 +657,14 @@ ComputerScoring(int player)
 void 
 ComputerTurn(int player)
 {
+  int rerolls=0;
+
         if (players[player].finished)
                 return;
 
         for (;;) {
                 ComputerRolling(player);
-                if ( NoDiceSelected() || (numrolls>NUM_ROLLS) )
+                if ( NoDiceSelected() || (NumberOfRolls>=NUM_ROLLS) )
                         break;
 		RollSelectedDice();
 		YahtzeeDelay();

@@ -137,6 +137,7 @@ NewGame(void)
 	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i)
 	{
 		players[i].finished = 0;
+		players[i].comp = 1;
 
 		for (j = 0; j < NUM_FIELDS; ++j)
 		{
@@ -144,6 +145,10 @@ NewGame(void)
 			players[i].used[j] = 0;
 		}
 	}
+
+        /* Possibly 0 humans? */
+	for (i=0; i < NumberOfHumans; i++)
+                players[i].comp = 0;
 
         SelectAllDice();
         RollSelectedDice();
@@ -185,6 +190,17 @@ GameIsOver(void)
         int i;
 
         for (i=0; i<NumberOfPlayers; i++)
+                if (players[i].finished==0)
+                        return 0;
+        return 1;
+}
+
+int
+HumansAreDone(void)
+{
+        int i;
+
+        for (i=0; i<NumberOfHumans; i++)
                 if (players[i].finished==0)
                         return 0;
         return 1;
@@ -322,11 +338,14 @@ play_score(int player, int field)
 {
 	int i;
         
-        if ( players[player].used[field] ||
-             /* Special case for yahtzee */
-             ((field==11) && players[player].used[11] &&
-              (players[player].score[field] == 0 || !find_yahtzee())) )
+        /* Special case for yahtzee, allow multiple calls if 1st wasn't 0 */
+	if (field==11) {
+                if (players[player].used[11]&&(players[player].score[11]==0)) {
+                        return SLOT_USED;
+                }
+	} else if (players[player].used[field]) {
                 return SLOT_USED;
+	}
 
         players[player].used[field] = 1;
 

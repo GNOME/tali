@@ -14,6 +14,7 @@
 /* Screen row numbers containing totals */
 #define R_UTOTAL NUM_UPPER
 #define R_BONUS  (R_UTOTAL+1)
+#define R_BLANK1 (R_UTOTAL+2)
 #define R_GTOTAL (SCOREROWS-1) 
 #define R_LTOTAL (R_GTOTAL-1)
 
@@ -24,8 +25,7 @@
 extern GtkWidget *create_clist(void);
 extern void setup_clist(GtkWidget *clist);
 extern void update_score_cell(GtkCList * clist, gint row, gint col, int val);
-extern void HiglightPlayerColumn(GtkCList * clist, int player);
-extern void UnHiglightPlayerColumn(GtkCList * clist, int player);
+extern void ShowoffPlayerColumn(GtkCList * clist, int player, int so);
 
 /* setup.c */
 extern gint setup_game(GtkWidget *widget, gpointer data);

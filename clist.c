@@ -46,32 +46,45 @@ update_score_cell(GtkCList * clist, gint row, gint col, int val)
 }
 
 #if 0
+/* This version doesn't do a thing */
 void
-HiglightPlayer(GtkCList * clist, int player)
+ShowoffPlayer(GtkCList * clist, int player, int so)
 {
-        gtk_clist_column_title_active (clist, player+1);
-}
+        gint column;
+        GtkButton *button;
+        
+        g_return_if_fail (clist != NULL);
+        
+        column = player + 1;
+        
+        if (column < 0 || column >= clist->columns)
+                return;
+        
+        button = GTK_BUTTON(clist->column[column].button);
 
-void
-UnHiglightPlayer(GtkCList * clist, int player)
-{
-        gtk_clist_column_title_passive (clist, player-1);
-}
-#elif 1
-void
-HiglightPlayer(GtkCList * clist, int player)
-{
-}
+        if (so)
+                gtk_clist_column_title_active (clist, column);
+        else
+                gtk_clist_column_title_passive (clist, column);
 
+        gtk_widget_draw(GTK_WIDGET(button),NULL);
+}
+#elif 0
+/* This one really does nothing */
 void
-UnHiglightPlayer(GtkCList * clist, int player)
+ShowoffPlayer(GtkCList * clist, int player, int so)
 {
 }
 #else
+/* This version is full of cheats.  Goes into gtk code, access 
+ * structures that would probably be private under C++.  Works now 
+ * because clist*title_pass/active() doesn't do a redraw, may have to be
+ * modified later. */
 void
-HiglightPlayer(GtkCList * clist, int player)
+ShowoffPlayer(GtkCList * clist, int player, int so)
 {
         gint column;
+        GtkButton *button;
         
         g_return_if_fail (clist != NULL);
         
@@ -80,85 +93,97 @@ HiglightPlayer(GtkCList * clist, int player)
         if (column < 0 || column >= clist->columns)
                 return;
         
-        gtk_button_pressed(GTK_BUTTON(clist->column[column].button));
-        
-        gtk_widget_draw (clist->column[column].button,NULL);
-}
-void
-UnHiglightPlayer(GtkCList * clist, int player)
-{
-        gint column;
-        
-        g_return_if_fail (clist != NULL);
-        
-        column = player + 1;
-        
-        if (column < 0 || column >= clist->columns)
-                return;
-        
-        gtk_button_released(GTK_BUTTON(clist->column[column].button));
+        button = GTK_BUTTON(clist->column[column].button);
+
+        gtk_clist_column_title_active(clist, column);
+
+        if (so) {
+                button->button_down = TRUE;
+#if 1
+                /* Press it */
+                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_ACTIVE);
+#else
+                /* Lighten it */
+                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_PRELIGHT);
+#endif
+        } else {
+                button->button_down = FALSE;
+                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_NORMAL);
+        }
+  
+        gtk_widget_draw(GTK_WIDGET(button),NULL);
+        gtk_clist_column_title_passive(clist, column);
 
 }
 #endif
 
+static gint LastScoredRow = -1;
+
 static gint
 select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
-        int deselect = 0;
         int field = row;
 
 	if (!event) 
                 return FALSE;
 
-	/* Can't select total boxes */
+        LastScoredRow = -1;
+
 	switch (row) {
-	case (NUM_UPPER):
-	case (NUM_UPPER+1):
-	case (NUM_UPPER+2):
-	case (SCOREROWS-1):
-	case (SCOREROWS-2):
-                deselect = 1;
-                /* return FALSE; - gtk doesn't seem to care true or false */
+
+	case (R_UTOTAL):	/* Can't select total/blank rows */
+	case (R_BONUS):
+	case (R_BLANK1):
+	case (R_GTOTAL):
+	case (R_LTOTAL):
                 break;
+
 	default:
                 /* Adjust for Upper Total / Bonus entries */
                 if (field >= NUM_UPPER)
                         field -= 3;
         
-                if ( (field < NUM_FIELDS) && (!GameIsOver())  ) {
+                if ( (field < NUM_FIELDS) && 
+		     (!players[CurrentPlayer].finished)  ) {
                         if (play_score(CurrentPlayer,field)==SLOT_USED) {
                                 say(_("Already used! " 
 				      "Where do you want to put that?"));
-                                deselect = 1;
                         } else {
+                                LastScoredRow = row;
                                 NextPlayer();
-                                return;
+                                return TRUE;
                         }
+                } else {
+                        /* Don't want to unselect row? */
+                        return FALSE;
                 }
 	}
         
-        if (deselect)
-                gtk_clist_unselect_row (clist,row,col);
+        gtk_clist_unselect_row (clist,row,col);
+
+        return FALSE;
 }
 
-static void
+
+/* This won't work.  Can't tell if we're being called to deselect 
+   selected row  prior to selection of new row or just to deselect 
+   current row and leave nothing selected */
+static gint
 unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
-	if (!event) return;
+	if (!event) 
+                return FALSE;
 
-	/* g_print("unselect_row, row=%d col=%d button=%d\n", row, col, 
-                event->button); */
+        /* Multiple humans need to sometimes select score rows that are
+         * highlighted */
+        if (row==LastScoredRow) {
+                LastScoredRow = -1;
+                select_row(clist, row, col,event);
+        }
+
+        return FALSE;
 }
 
-static void
-click_column(GtkCList *clist, gint col)
-{
-
-        /* g_print("click_column, col=%d\n ", col); */
-}
-
-
-	
 
 GtkWidget * create_clist(void)
 {
@@ -175,8 +200,6 @@ GtkWidget * create_clist(void)
                 titles[i+1] = players[i].name;
 	clist = gtk_clist_new_with_titles(8,titles);
 	gtk_clist_set_selection_mode(GTK_CLIST(clist), GTK_SELECTION_SINGLE);
-        
-	gtk_clist_column_titles_passive(GTK_CLIST(clist));
         
 	gtk_clist_set_column_justification(GTK_CLIST(clist), 0,
 					   GTK_JUSTIFY_LEFT);
@@ -202,10 +225,8 @@ GtkWidget * create_clist(void)
                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row), NULL);
-	gtk_signal_connect(GTK_OBJECT(clist), "click_column",
-                           GTK_SIGNAL_FUNC(click_column), NULL);
-	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
-                           GTK_SIGNAL_FUNC(unselect_row), NULL);
+/*	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
+                           GTK_SIGNAL_FUNC(unselect_row), NULL); */
 	return clist;
 }
 

@@ -99,12 +99,15 @@ CheerWinner(void)
         int winner;
 
         winner = FindWinner();
-        if (winner==0) {
+        if (winner<NumberOfHumans) {
                 lastHighScore = gnome_score_log((guint)WinningScore, 
                                                 NULL, TRUE);
                 if (lastHighScore)
                         ShowHighScores();
         }
+
+	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,0);
+	ShowoffPlayer(GTK_CLIST(ScoreList),winner,1);
 
         if (players[winner].name)
                 say("%s %s %d %s",
@@ -119,14 +122,19 @@ CheerWinner(void)
 void 
 NextPlayer(void)
 {
+        if (GameIsOver()) {
+                CheerWinner();
+                return;
+        } 
+
         NumberOfRolls = 0;
 
-	UnHiglightPlayer(GTK_CLIST(ScoreList),CurrentPlayer);
+	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,0);
 
         if ( ++CurrentPlayer >= NumberOfPlayers )
                 CurrentPlayer = 0;
 
-	HiglightPlayer(GTK_CLIST(ScoreList),CurrentPlayer);
+	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,1);
 
         if (players[CurrentPlayer].name) {
                 if (players[CurrentPlayer].comp) {
@@ -149,8 +157,8 @@ NextPlayer(void)
                 return;
         }
 
-        if (GameIsOver())
-                CheerWinner();
+	if (HumansAreDone())      /* Because of multiple yahtzees, humans */
+                NextPlayer();     /* may finish before computers */
 }
 
 void
@@ -213,8 +221,20 @@ quit_game(GtkWidget *widget, gpointer data)
 void 
 GyahtzeeNewGame(void)
 {
+        int i;
+
         NewGame();
         setup_clist(ScoreList);
+
+	for (i=0; i<NumberOfPlayers; i++)
+                ShowoffPlayer(GTK_CLIST(ScoreList),i,0);
+	ShowoffPlayer(GTK_CLIST(ScoreList),0,1);
+
+        /* All players are computers, start game immediately */
+        if (players[CurrentPlayer].comp) {
+                CurrentPlayer = NumberOfComputers - 1;
+                NextPlayer();
+        }
 }
 
 
@@ -267,9 +287,13 @@ gnome_modify_dice( GtkWidget *widget, GdkEvent *event, gpointer data )
         /* printf("Pressed die: %d. NumberOfRolls=%d\n",
                tmp - DiceValues + 1, NumberOfRolls); */
 
+        /* Stop play when player is marked finished */
+	if (players[CurrentPlayer].finished)
+                return TRUE;
+
         if (NumberOfRolls >= NUM_ROLLS) {
                 say(_("You're only allowed three rolls! Select a score box."));
-                return;
+                return TRUE;
         }
 
         tmp->sel = 1 - tmp->sel;
@@ -280,10 +304,11 @@ gnome_modify_dice( GtkWidget *widget, GdkEvent *event, gpointer data )
 }
 
 
-/* Callback on dice press */
+/* Callback on Roll! button press */
 gint 
 gnome_roll_dice( GtkWidget *widget, GdkEvent *event, gpointer data ) {
-        RollSelectedDice();
+        if (!players[CurrentPlayer].comp)
+                RollSelectedDice();
 	return FALSE;
 }
 
@@ -308,7 +333,7 @@ about(GtkWidget *widget, gpointer data)
         GtkWidget *about;
         gchar *authors[] = {
 		"Scott Heavner",
-		_("Orest Zborowski - Curses Version (C) 1992"),
+		"Orest Zborowski - Curses Version (C) 1992",
 		NULL
 	};
 

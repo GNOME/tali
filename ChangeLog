@@ -1,3 +1,46 @@
+Sun Jun 28 19:08:55 1998  Scott D. Heavner  <sdh@po.cwru.edu>
+
+	* Summary:
+	1) Allow 0-6 humans to play, limit total players to 6
+	2) Fix scoring of multiple yahtzee's
+	3) Hack that adjusts column header to indicate current player
+	4) Comment call to gnome_message_box_new() until fixed in libs.
+
+	* gyahtzee.c (gnome_modify_dice): don't let player un/select dice
+	after game is over.
+	* (NextPlayer): Make computers keep playing after humans are done.
+	* (GyahtzeeNewGame): Allow 0 humans, when new game is started,
+	computers will play to end of game.
+	* (CheerWinner): Allow any one human to get a recordable high
+ 	score.  Should check all of the scores and see which are high, but
+ 	now, only check the high score.
+	* (play_score): Fix code for multiple yahtzees.  Now have to make
+ 	sure all computers are allowed extra turns, even if human is done.
+	* (HumansAreDone): Add new function to detect when only computers
+ 	are remaining.
+
+	* clist.c (select_row): don't let player select score row if game
+	over.  Use better #define's for row numbers we can't select.
+	Trouble for multiple players if they want to score in the row that
+	is already highlighted.
+	* (create_clist): Remove unused callbacks.
+	* (ShowoffPlayer): Rename Higlight and Unhiglight functions to
+ 	ShowoffPlayer.  Add some hacks that would be illegal under C++ to
+ 	mess with gtk internals to press buttons to indicate current
+ 	player.
+
+	* setup.c (do_setup): Only display player change warning if number
+	of players is changed.  Calling gnome_message_box_new() crashes my
+	machine with a segv.
+	* setup.c (MaxPlayersCheck): Synchronize num players/comp spinners
+	to never exceede max players.
+	* Add options for multiple humans.  High score is scored under the
+ 	login name of the user running gyahtzee.  It's hard to keep track
+ 	of who's up too, pay attention to "* -- you're up" in status box.
+
+	* cyahtzee.c: Add NLS support.
+
+
 Fri Jun 26 17:26:49 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
 
 	* gyahtzee.c (main): Warned gnome_client_new_default is obsolet. 
