@@ -114,6 +114,8 @@ row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
         char *path_str;
         int row;
 
+        if (players[CurrentPlayer].comp)
+                return;
         path_str = gtk_tree_path_to_string(path);
         if (sscanf(path_str, "%i", &row) != 1) {
                 g_warning("%s: could not convert '%s' to integer\n",
@@ -197,6 +199,7 @@ GtkWidget *create_score_list(void)
                                    G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
         tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
         gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
+        gtk_tree_view_set_enable_search (GTK_TREE_VIEW (tree), FALSE);	
 
         g_object_unref(store);
 

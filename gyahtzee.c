@@ -54,12 +54,15 @@
 #define ngettext(one,lots,n) gettext(lots)
 #endif
 
+#define DELAY_MS 600
+
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
 static char *appID="gtali";
 static char *appName=N_("GNOME Tali");
 static guint lastHighScore = 0;
-GtkWidget *ScoreList; 
+static guint last_timeout = 0;
+static gboolean ready_to_advance_player;
 
 #ifdef GNOMEPIXMAPDIR
 #define PP GNOMEPIXMAPDIR "/gtali/" 
@@ -78,9 +81,11 @@ static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
 GtkWidget *window;
+GtkWidget *ScoreList;
 static GtkWidget *appbar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
 static GtkWidget *rollLabel;
+static GtkWidget *mbutton;
 
 static gint gnome_modify_dice (GtkWidget *widget, GdkEventButton *event,
                                gpointer data);
@@ -88,14 +93,8 @@ static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
 void update_score_state (void);
 static void undo_set_sensitive (gboolean state);
+static void roll_set_sensitive (gboolean state);
 static void UpdateRollLabel (void);
-
-void
-YahtzeeIdle (void)
-{
-        while (gtk_events_pending ())
-                gtk_main_iteration ();
-}
 
 
 static void
@@ -126,18 +125,53 @@ CheerWinner (void)
         undo_set_sensitive (FALSE);
 }
 
+static gboolean
+do_computer_turns (void)
+{
+        if (!players[CurrentPlayer].comp) {
+                last_timeout = 0;
+                return FALSE;
+        }
+
+        if (ready_to_advance_player){
+                NextPlayer ();
+                return TRUE;
+        }
+
+        if (players[CurrentPlayer].finished){
+                NextPlayer();
+                return TRUE;
+        }
+
+        ComputerRolling(CurrentPlayer);
+        if ( NoDiceSelected() || (NumberOfRolls>=NUM_ROLLS) ) {
+                ComputerScoring(CurrentPlayer);
+                ready_to_advance_player = TRUE;
+        } else {
+                RollSelectedDice();
+                UpdateRollLabel();
+        }
+
+        if (!DoDelay)
+                do_computer_turns();
+
+        return TRUE;
+}
+
 void 
 NextPlayer (void)
 {
         if (GameIsOver ()) {
+                if (last_timeout){
+                        g_source_remove (last_timeout);
+                        last_timeout = 0;
+                }
                 CheerWinner ();
                 return;
         }
 
-        undo_set_sensitive (TRUE);
-        
         NumberOfRolls = 0;
-
+        ready_to_advance_player = FALSE;
 	ShowoffPlayer (ScoreList,CurrentPlayer,0);
 
         /* Find the next player with rolls left */
@@ -159,11 +193,18 @@ NextPlayer (void)
 
         SelectAllDice ();
         RollSelectedDice ();
+	
+	undo_set_sensitive (!players[CurrentPlayer].comp);
 
         if (players[CurrentPlayer].comp) {
-                ComputerTurn (CurrentPlayer);
-                NextPlayer ();
-                return;
+                if (DoDelay){
+                        if (!last_timeout)
+                                last_timeout = g_timeout_add (DELAY_MS,
+                                                              (GSourceFunc)do_computer_turns,
+                                                              NULL);
+                } else {
+                       do_computer_turns();
+                }
         }
         UpdateRollLabel ();
 }
@@ -252,12 +293,6 @@ GyahtzeeNewGame (void)
                 ShowoffPlayer (ScoreList,i,0);
 	ShowoffPlayer (ScoreList,0,1);
 
-        /* All players are computers, start game immediately */
-        if (players[CurrentPlayer].comp) {
-                CurrentPlayer = NumberOfComputers - 1;
-                NextPlayer ();
-        }
-
         undo_set_sensitive (FALSE);
 }
 
@@ -279,6 +314,8 @@ UpdateRollLabel (void)
         
         g_string_printf(str, "<b>%s %d/3</b>", _("Roll"), NumberOfRolls);
         gtk_label_set_label(GTK_LABEL(rollLabel), str->str);
+	
+        roll_set_sensitive ((NumberOfRolls < 3) && !players[CurrentPlayer].comp);
 }
 
 static void
@@ -326,6 +363,9 @@ gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data)
         /* Stop play when player is marked finished */
 	if (players[CurrentPlayer].finished)
                 return TRUE;
+
+	if (players[CurrentPlayer].comp)
+		return TRUE;
 
         if (NumberOfRolls >= NUM_ROLLS) {
                 say(_("You're only allowed three rolls! Select a score box."));
@@ -511,6 +551,11 @@ static void undo_set_sensitive (gboolean state)
         gtk_widget_set_sensitive (gamemenu[2].widget, state);
 }
 
+static void roll_set_sensitive (gboolean state)
+{
+	gtk_widget_set_sensitive (mbutton, state);
+}
+
 static void
 LoadDicePixmaps(void)
 {
@@ -558,7 +603,6 @@ static void
 GyahtzeeCreateMainWindow(void)
 {
         GtkWidget *all_boxes;
-	GtkWidget *mbutton;
 	GtkWidget *tmp;
 	int i, j;
 
@@ -704,7 +748,6 @@ main (int argc, char *argv[])
         DisplayComputerThoughts = gconf_client_get_bool (client,
                                                          "/apps/gtali/DisplayComputerThoughts",
                                                          NULL);
-        
         /* Read in new player names */
         name_list = gconf_client_get_list (client, "/apps/gtali/PlayerNames",
                                            GCONF_VALUE_STRING, &err);

@@ -1,3 +1,24 @@
+2004-10-26    <rah@rahga.com>
+
+	* clist.c (create_score_list): Disable treeview searching.
+	* gyahtzee.c (do_computer_turns): Fix minor bug from last patch.
+	(GyahtzeeNewGame): Remove obsolete code for CPU-only game support.
+
+2004-10-25  Richard Hoelscher  <rah@rahga.com>
+
+	* clist.c (row_activated_cb): Prevent players from scoring during
+	CPU turns. Fixes bug #135895
+	* computer.c (ComputerTurn): Removed.
+	* gyahtzee.c (YahtzeeIdle): Removed.
+	(do_computer_turns): Replacement for ComputerTurn, usable with or 
+	without a timeout, supports the removal of sleep() in yahtzee.c
+	Added ability to view the CPU dice immediately after it scores.
+	(NextPlayer): add 600ms timeout and do_computer_turn()
+	(gnome_modify_dice): Prevent players from modifying CPU dice.
+	(roll_set_sensitive), (UpdateRollLabel): Unsensitive "Roll" button
+	on third roll and during CPU turns.
+	* yahtzee.c, yahtzee.h (YahtzeeDelay): Removed.
+
 2004-10-25  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* yahtzee.c (play_score): Make the full house slot accept a

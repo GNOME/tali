@@ -90,7 +90,6 @@ extern char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
 
 extern void YahtzeeInit(void);
 extern void NewGame(void);
-extern void YahtzeeDelay(void);
 extern int upper_total(int num);
 extern int lower_total(int num);
 extern int total_score(int num);
@@ -115,15 +114,14 @@ extern int FindWinner(void);
 int UndoPossible (void);
 
 /* Computer.c */
-extern void ComputerTurn(int player);
 extern void ComputerRolling(int player);
+extern void ComputerScoring(int player);
 
 /* Specific to a windowing system: gyahtzee.c/cyahtzee.c */
 extern void NewGame(void);
 extern void UpdateDie(int no);
 extern void ShowPlayer(int num, int field);
 extern void NextPlayer(void);
-extern void YahtzeeIdle(void);
 extern void ShowHighScores(void);
 
 enum { SCORE_OK=0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };

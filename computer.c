@@ -607,7 +607,7 @@ ComputerRolling(int player)
 **	cause higher choices tend to be easier to better
 */
 
-static void
+void
 ComputerScoring(int player)
 {
 	int i;
@@ -653,23 +653,6 @@ ComputerScoring(int player)
 
         play_score(player,best);
 
-}
-
-void 
-ComputerTurn(int player)
-{
-        if (players[player].finished)
-                return;
-
-        for (;;) {
-                ComputerRolling(player);
-                if ( NoDiceSelected() || (NumberOfRolls>=NUM_ROLLS) )
-                        break;
-		RollSelectedDice();
-		YahtzeeDelay();
-        }
-
-        ComputerScoring(player);
 }
 
 /* Arrgh - lets all use the same tabs under emacs: 

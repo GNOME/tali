@@ -90,14 +90,6 @@ char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS] =
 	N_("Bonus if >62"),
 };
 
-void
-YahtzeeDelay(void)
-{
-        YahtzeeIdle();
-        if (DoDelay)
-                sleep(COMPUTER_DELAY);		/* let person read it */
-}
-
 int 
 NoDiceSelected(void)
 {
