@@ -361,12 +361,10 @@ about(GtkWidget *widget, gpointer data)
         gchar *translator_credits = _("translator_credits");
 	GdkPixbuf *pixbuf = NULL;
         
-#ifdef ENABLE_NLS
 	{
 		int i=0;
 		while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
 	}
-#endif
 
 	pixbuf = gdk_pixbuf_new_from_file (GNOMEPIXMAPDIR "/gnome-gtali.png",
 			NULL);
