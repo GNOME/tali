@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=GTali
+Name[da]=GTali
 Name[de]=GTali
 Name[es]=GTali
 Name[et]=GTali
@@ -9,6 +10,7 @@ Name[ja]=GTali
 Name[no]=GTali
 Name[ru]=Á‘¡Ã…
 Comment=Gnome Dice game
+Comment[da]=Yatzy spil for GNOME
 Comment[de]=Das Gnome-W¸rfelspiel
 Comment[es]=Juego de dados tipo yahtzee
 Comment[et]=Yahtzee t‰ringum‰ng
