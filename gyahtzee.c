@@ -576,8 +576,11 @@ main (int argc, char *argv[])
         YahtzeeInit();
 
 	/* Create gnome client */
-        gnome_init_with_popt_table(appID, VERSION, argc, argv,
-				   yahtzee_options, 0, NULL);
+        gnome_program_init (appID, VERSION,
+                             LIBGNOMEUI_MODULE,
+                             argc, argv,
+                             GNOME_PARAM_POPT_TABLE, yahtzee_options,
+                             GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
         gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gtali.png");
 
         client = gconf_client_get_default ();
