@@ -41,7 +41,6 @@
 #include <config.h>
 
 #if defined(USE_NCURSES) && !defined(RENAMED_NCURSES)
-#warning Using Ncurses header -- yay!
 #include <ncurses.h>
 #else
 #include <curses.h>
