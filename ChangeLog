@@ -1,3 +1,9 @@
+2004-02-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gtali.schemas.in: Work around an intltool-merge bug. Insert a
+	space before the default for a list item so that it isn't
+	stripped.
+
 2004-01-20  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c (about): Removed the empty entry in the credits list

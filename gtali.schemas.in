@@ -55,7 +55,7 @@
       <type>list</type>
       <list_type>string</list_type>
       <locale name="C">
-        <default>[Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
+        <default> [Human,Wilber,Bill,Monica,Kenneth,Janet]</default>
         <short></short>
         <long></long>
       </locale>
