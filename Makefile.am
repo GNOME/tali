@@ -1,7 +1,7 @@
 Gamesdir = $(datadir)/applications
-# This is awful but the scores directory is actually kept by libgnome
-# and it may not have the same prefix as us.
-scoredir=`pkg-config libgnome-2.0 --variable=prefix`/var/games
+
+
+
 
 SUBDIRS = pix help
 
