@@ -117,7 +117,7 @@ YahtzeeInit(void)
 	srand(time(NULL));
 
 	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
-		players[i].name = DefaultPlayerNames[i];
+		players[i].name = _(DefaultPlayerNames[i]);
 		players[i].comp = 1;
         }
 
@@ -539,7 +539,7 @@ calc_random(void)
         
 	for (i = 0; i < NUM_FIELDS; ++i) {
                 
-                printf("%-35s", FieldLabels[i]);
+                printf("%-35s", _(FieldLabels[i]));
                 
 		printf(" %10d %20ld\n", table[i],
                        (long) (table[i] * 100) / nroll);

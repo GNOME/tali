@@ -329,14 +329,14 @@ void setup_clist(GtkWidget *clist)
         gtk_clist_column_titles_passive(GTK_CLIST(clist));
         
         for (i=0; i < NUM_UPPER; i++)
-                gyahtzee_append_clist(clist,tmp,FieldLabels[i]);
-        gyahtzee_append_clist(clist,tmp,FieldLabels[F_UPPERT]);
-        gyahtzee_append_clist(clist,tmp,FieldLabels[F_BONUS]);
+                gyahtzee_append_clist(clist,tmp,_(FieldLabels[i]));
+        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_UPPERT]));
+        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_BONUS]));
         gyahtzee_append_clist(clist,tmp,buf1);
         for (i=0; i < NUM_LOWER; i++)
-                gyahtzee_append_clist(clist,tmp,FieldLabels[i+NUM_UPPER]);
-        gyahtzee_append_clist(clist,tmp,FieldLabels[F_LOWERT]);
-        gyahtzee_append_clist(clist,tmp,FieldLabels[F_GRANDT]);
+                gyahtzee_append_clist(clist,tmp,_(FieldLabels[i+NUM_UPPER]));
+        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_LOWERT]));
+        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_GRANDT]));
 
         gtk_clist_thaw(GTK_CLIST(clist));
 

@@ -565,7 +565,7 @@ BuildTable(int player)
 	  for (i = 0; i < NUM_FIELDS; ++i)
 	    {
 	      fprintf(stderr, "%s : VALUE = %d REROLLS='%s'\n", 
-		      FieldLabels[i],
+		      _(FieldLabels[i]),
 		      bc_table[i].value, RerollString(&bc_table[i]));
 	    }
 	}
@@ -593,7 +593,7 @@ ComputerRolling(int player)
 
 	if (DisplayComputerThoughts) {
 	  fprintf(stderr, "<<BEST>> %s : VALUE = %d REROLLS='%s'\n", 
-		  FieldLabels[best],
+		  _(FieldLabels[best]),
 		  bc_table[best].value, RerollString(&bc_table[best]));
 	}
         
@@ -645,7 +645,7 @@ ComputerScoring(int player)
 
 		if (DisplayComputerThoughts) {
 		  fprintf(stderr, "<<BEST>> %s : VALUE = %d REROLLS='%s'\n", 
-			  FieldLabels[best],
+			  _(FieldLabels[best]),
 			  bc_table[best].value, RerollString(&bc_table[best]));
 		}
 		

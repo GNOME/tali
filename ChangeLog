@@ -1,3 +1,9 @@
+1998-07-25  Nuno Ferreira  <nmrf@rnl.ist.utl.pt>
+
+	* gyahtzee.desktop: Added Portuguese translation.
+
+	* yahtzee.c, computer.c, clist.c: Some internationalization work. 
+
 Tue Jul  7 15:52:29 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
 
 	* yahtzee.c: Add RegisterUndo() and ExecSingleUndo() allowing undo
