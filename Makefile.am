@@ -10,9 +10,7 @@ INCLUDES =						\
 	-I$(top_srcdir)/libgames-support           \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DDATADIR=\""$(datadir)"\"		   \
-	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
-	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED	\
-	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED
+	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"
 
 bin_PROGRAMS = gtali
 
