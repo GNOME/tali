@@ -1,3 +1,8 @@
+1998-10-24  Tuomas Kuosmanen  <tigert@gimp.org>
+
+	* pix/gnome-dice-*.xpm: Got into artistic mood and made some dice pics
+	I hope you like them ;)
+
 1998-10-18  Phil Schwan  <pschwan@cmu.edu>
 
 	* clist.c (select_row): This function is now called for both select and
