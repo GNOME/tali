@@ -136,7 +136,7 @@
       <title>Gnome Tali in action</title>
       <screenshot>
         <screeninfo>Gnome Tali main window screenshot</screeninfo>
-	<graphic format="png" fileref="mainwindow.png"
+	<graphic format="png" fileref="figures/mainwindow"
 	srccredit="Trevor Curtis">
 	</graphic>
       </screenshot>
@@ -182,7 +182,7 @@
       <title>Gnome Tali preferences</title>
       <screenshot>
         <screeninfo>Gnome Tali preferences dialog box</screeninfo>
-	<graphic format="png" fileref="preferences.png"
+	<graphic format="png" fileref="figures/preferences"
 	srccredit="Trevor Curtis">
 	</graphic>
       </screenshot>
