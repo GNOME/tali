@@ -1,3 +1,8 @@
+2003-06-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c (GyahtzeeCreateMainWindow): Space before punctuation
+	fixes as per bug #115694.
+
 2003-06-21  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* yahtzee.c: 

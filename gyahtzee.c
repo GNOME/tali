@@ -595,7 +595,7 @@ GyahtzeeCreateMainWindow(void)
                 gtk_widget_show (tmp);
                 gtk_widget_show (diceBox[i]);
 	}
-	mbutton = gtk_button_new_with_label (_(" Roll ! "));
+	mbutton = gtk_button_new_with_label (_("Roll!"));
 	gtk_table_attach (GTK_TABLE (diceTable), mbutton, 0, 1, i, i+1,
                           0, 0, 5, 5);
         g_signal_connect (G_OBJECT (mbutton), "clicked",

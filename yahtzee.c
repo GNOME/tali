@@ -504,7 +504,7 @@ calc_random(void)
 	int i;
 	int j;
 	
-	printf (_("How many times to you wish to roll? "));
+	printf ("%s ",_("How many times do you wish to roll?"));
 	
 	fgets(nrollstr,10,stdin);
 	nroll = atoi(nrollstr);
