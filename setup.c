@@ -211,18 +211,11 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(label);
         adj = gtk_adjustment_new(NumberOfComputers, 1, 5, 1, 5, 1);
 	sentry = gtk_spin_button_new(GTK_ADJUSTMENT(adj), 10, 0);
-	/* FIXME: enums do _not_ result in the members of the
-	   enumeration being #defined, at least on gcc, so the below
-	   test is bogus.  Leaving only the case that works on
-	   gtk+-1.0.4; is it worth supporting earlier gtk's than that?
-
-	   Maciej Stachowiak - June 25, 1998 */
-/* #ifdef GTK_UPDATE_SNAP_TO_TICKS */
+#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(sentry),
 					  GTK_UPDATE_ALWAYS |
 					  GTK_UPDATE_SNAP_TO_TICKS);
-/* #else */
-#if 0
+#else
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(sentry),
 					  GTK_UPDATE_ALWAYS );
 	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(sentry), TRUE);

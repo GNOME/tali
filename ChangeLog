@@ -1,3 +1,8 @@
+1998-06-25  Raja R Harinath  <harinath@cs.umn.edu>
+
+	* setup.c (setup_game): Conditionally use new GtkSpinButton API.
+	Fixes Maciej's FIXME too.
+
 1998-06-25  Maciej Stachowiak  <maciej@roc-ny1-21.ix.netcom.com>
 
 	* setup.c (setup_game): FIXME: enums do _not_ result in the
@@ -5,7 +10,6 @@
 	`#ifdef GTK_UPDATE_SNAP_TO_TICKS' test is bogus.  Leaving only the
 	case that works on gtk+-1.0.4; is it worth supporting earlier
 	gtk's than that?
-
 
 Wed Jun 24 22:25:48 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
 
