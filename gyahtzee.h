@@ -28,7 +28,7 @@ extern void HiglightPlayerColumn(GtkCList * clist, int player);
 extern void UnHiglightPlayerColumn(GtkCList * clist, int player);
 
 /* setup.c */
-extern void setup_game(GtkWidget *widget, gpointer data);
+extern gint setup_game(GtkWidget *widget, gpointer data);
 extern struct argp GyahtzeeParser;
 
 /* gyahtzee.c */

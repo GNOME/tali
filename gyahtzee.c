@@ -79,9 +79,9 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 static GtkWidget *window, *status_bar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
 
-static void gnome_modify_dice( GtkWidget *widget, GdkEvent *event,
+static gint gnome_modify_dice( GtkWidget *widget, GdkEvent *event,
                                gpointer data );
-static void gnome_roll_dice( GtkWidget *widget, GdkEvent *event,
+static gint gnome_roll_dice( GtkWidget *widget, GdkEvent *event,
                              gpointer data );
 
 
@@ -201,11 +201,12 @@ ShowPlayer(int num, int field)
 
 }
 
-void 
+gint 
 quit_game(GtkWidget *widget, gpointer data)
 {
         gtk_widget_destroy(window);
         gtk_main_quit();
+	return TRUE;
 }
 
 
@@ -217,10 +218,11 @@ GyahtzeeNewGame(void)
 }
 
 
-void 
+gint 
 new_game_callback(GtkWidget *widget, gpointer data)
 {
         GyahtzeeNewGame();
+	return FALSE;
 }
 
 void
@@ -257,7 +259,7 @@ UpdateDie(int no)
 }
 
 /* Callback on dice press */
-void 
+gint 
 gnome_modify_dice( GtkWidget *widget, GdkEvent *event, gpointer data ) 
 {
         DiceInfo *tmp = (DiceInfo *) data;
@@ -273,13 +275,16 @@ gnome_modify_dice( GtkWidget *widget, GdkEvent *event, gpointer data )
         tmp->sel = 1 - tmp->sel;
         
         UpdateDiePixmap(tmp);
+
+	return TRUE;
 }
 
 
 /* Callback on dice press */
-void 
+gint 
 gnome_roll_dice( GtkWidget *widget, GdkEvent *event, gpointer data ) {
         RollSelectedDice();
+	return FALSE;
 }
 
 void
@@ -297,7 +302,7 @@ say(char *fmt, ...)
 }
 
 
-void
+gint
 about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
@@ -313,19 +318,7 @@ about(GtkWidget *widget, gpointer data)
 				 _("Gnomified Yahtzee"),
 				 NULL);
         gtk_widget_show (about);
-}
-
-static int
-save_state (GnomeClient        *client,
-	    gint                phase,
-	    GnomeRestartStyle   save_style,
-	    gint                shutdown,
-	    GnomeInteractStyle  interact_style,
-	    gint                fast,
-	    gpointer            client_data)
-{
-
-	return TRUE;
+	return FALSE;
 }
 
 void
@@ -334,10 +327,11 @@ ShowHighScores(void)
         gnome_scores_display (appName, appID, NULL, lastHighScore);
 }
 
-void 
+gint 
 score_callback(GtkWidget *widget, gpointer data)
 {
         ShowHighScores();
+	return FALSE;
 }
 
 
@@ -531,8 +525,6 @@ GyahtzeeCreateMainWindow()
 int
 main (int argc, char *argv[])
 {
-	GnomeClient *client;
-
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
 
@@ -542,10 +534,6 @@ main (int argc, char *argv[])
         YahtzeeInit();
 
 	/* Create gnome client */
-	client = gnome_client_new_default ();
-	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
-			    GTK_SIGNAL_FUNC (save_state), argv[0]);
-
         gnome_init(appID, &GyahtzeeParser, argc, argv, 0, NULL);
 
 	/* For some options, we don't want to play a game */
@@ -563,8 +551,6 @@ main (int argc, char *argv[])
 	  gtk_main();
 
 	}
-        
-	gtk_object_unref(GTK_OBJECT(client));
         
 	return 0;
 }

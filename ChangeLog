@@ -1,3 +1,15 @@
+Fri Jun 26 17:26:49 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* gyahtzee.c (main): Warned gnome_client_new_default is obsolet. 
+ 	Removed all refs to it, just rely on gnome_init() to do all the
+	work.
+
+	* gyahtzee.c/setup.c/clist.c: Update callback functions to return
+ 	gints.  I am still unsure about returning TRUE/FALSE.  I've
+ 	handled the events, so I should return TRUE but maybe some other
+ 	routine will handle button/menu cleanup if I return FALSE.
+	
+
 Fri Jun 26 14:42:22 1998  Scott D. Heavner  <sdh@po.cwru.edu>
 
 	* Makefile.am: Add cyahtzee back in as conditional build

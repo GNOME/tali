@@ -35,7 +35,7 @@
 
 static error_t parse_an_arg (int key, char *arg, struct argp_state *state);
 
-static void setupdialog_destroy(GtkWidget *widget, gint mode);
+static gint setupdialog_destroy(GtkWidget *widget, gint mode);
 static GtkWidget *setupdialog = NULL;
 static GtkWidget *sentry;
 
@@ -118,7 +118,7 @@ WarnNumPlayersChanged (void)
 }
 
 
-static void 
+static gint 
 do_setup(GtkWidget *widget, gpointer data)
 {
         NumberOfComputers = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
@@ -131,29 +131,34 @@ do_setup(GtkWidget *widget, gpointer data)
 	WarnNumPlayersChanged();
 }
 
-static void 
+static gint
 setupdialog_destroy(GtkWidget *widget, gint mode)
 {
 	if (mode == 1) {
 		gtk_widget_destroy(setupdialog);
 	}
 	setupdialog = NULL;
+
+	return FALSE;
 }
 
 
-static void
+static gint
 set_delay (GtkWidget *widget, gpointer *data)
 {
        DoDelay = GTK_TOGGLE_BUTTON (widget)->active;
+       return FALSE;
 }
 
-static void
+static gint
 set_thoughts (GtkWidget *widget, gpointer *data)
 {
         DisplayComputerThoughts = GTK_TOGGLE_BUTTON (widget)->active;
+	return FALSE;
 }
 
-void setup_game(GtkWidget *widget, gpointer data)
+gint 
+setup_game(GtkWidget *widget, gpointer data)
 {
         GtkWidget *all_boxes;
 	GtkWidget *box, *box2;
@@ -162,7 +167,8 @@ void setup_game(GtkWidget *widget, gpointer data)
 	GtkWidget *frame;
         GtkObject *adj;
 
-        if (setupdialog) return;
+        if (setupdialog) 
+                return FALSE;
 
 	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
 
@@ -248,4 +254,9 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(all_boxes);
 
 	gtk_widget_show(setupdialog);
+
+        return FALSE;
 }
+
+
+

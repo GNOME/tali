@@ -39,7 +39,7 @@ void
 update_score_cell(GtkCList * clist, gint row, gint col, int val)
 {
         char buf[5] = "    ";
-
+        
         if (val >= 0)
                 sprintf(buf,"%4d",val);
         gtk_clist_set_text(clist,row,col,buf);
@@ -49,13 +49,13 @@ update_score_cell(GtkCList * clist, gint row, gint col, int val)
 void
 HiglightPlayer(GtkCList * clist, int player)
 {
-     gtk_clist_column_title_active (clist, player+1);
+        gtk_clist_column_title_active (clist, player+1);
 }
 
 void
 UnHiglightPlayer(GtkCList * clist, int player)
 {
-     gtk_clist_column_title_passive (clist, player-1);
+        gtk_clist_column_title_passive (clist, player-1);
 }
 #elif 1
 void
@@ -71,43 +71,44 @@ UnHiglightPlayer(GtkCList * clist, int player)
 void
 HiglightPlayer(GtkCList * clist, int player)
 {
-  gint column;
-
-  g_return_if_fail (clist != NULL);
-
-  column = player + 1;
-
-  if (column < 0 || column >= clist->columns)
-    return;
-
-  gtk_button_pressed(GTK_BUTTON(clist->column[column].button));
-
-  gtk_widget_draw (clist->column[column].button,NULL);
+        gint column;
+        
+        g_return_if_fail (clist != NULL);
+        
+        column = player + 1;
+        
+        if (column < 0 || column >= clist->columns)
+                return;
+        
+        gtk_button_pressed(GTK_BUTTON(clist->column[column].button));
+        
+        gtk_widget_draw (clist->column[column].button,NULL);
 }
 void
 UnHiglightPlayer(GtkCList * clist, int player)
 {
-  gint column;
-
-  g_return_if_fail (clist != NULL);
-
-  column = player + 1;
-
-  if (column < 0 || column >= clist->columns)
-    return;
-
-  gtk_button_released(GTK_BUTTON(clist->column[column].button));
+        gint column;
+        
+        g_return_if_fail (clist != NULL);
+        
+        column = player + 1;
+        
+        if (column < 0 || column >= clist->columns)
+                return;
+        
+        gtk_button_released(GTK_BUTTON(clist->column[column].button));
 
 }
 #endif
 
-static void
+static gint
 select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
         int deselect = 0;
         int field = row;
 
-	if (!event) return;
+	if (!event) 
+                return FALSE;
 
 	/* Can't select total boxes */
 	switch (row) {
@@ -117,6 +118,7 @@ select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 	case (SCOREROWS-1):
 	case (SCOREROWS-2):
                 deselect = 1;
+                /* return FALSE; - gtk doesn't seem to care true or false */
                 break;
 	default:
                 /* Adjust for Upper Total / Bonus entries */
