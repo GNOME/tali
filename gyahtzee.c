@@ -540,6 +540,8 @@ GyahtzeeCreateMainWindow(void)
 
 	/*---- Status Bar ----*/
 	status_bar = gtk_statusbar_new();      
+	gtk_frame_set_shadow_type(GTK_FRAME(GTK_STATUSBAR(status_bar)->frame), GTK_SHADOW_NONE);
+	gtk_container_border_width(GTK_CONTAINER(GTK_FRAME(GTK_STATUSBAR(status_bar)->frame)), 2);
 	gtk_widget_show(status_bar);
 	status_id = gtk_statusbar_get_context_id( GTK_STATUSBAR(status_bar),
 				      appName);
