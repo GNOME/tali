@@ -1,3 +1,8 @@
+2000-06-06  Scott D. Heavner  <sdh@po.cwru.edu>
+
+	* setup.c (do_setup): Move player rename into setup dialog and 
+	remove hook from clist.c
+
 2000-05-12  Andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* gtali.desktop: Added Swedish translation.

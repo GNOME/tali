@@ -36,6 +36,7 @@
 static gint setupdialog_destroy(GtkWidget *widget, gint mode);
 static GtkWidget *setupdialog = NULL;
 static GtkWidget *HumanSpinner, *ComputerSpinner;
+static GtkWidget *PlayerNames[MAX_NUMBER_OF_PLAYERS];
 static GtkObject *HumanAdj, *ComputerAdj;
 
 static int OriginalNumberOfComputers = -1;
@@ -100,17 +101,32 @@ WarnNumPlayersChanged (void)
 static void
 do_setup(GtkWidget *widget, gpointer data)
 {
+        gchar *PrefLoc;
+        int i;
+
         NumberOfComputers = 
                 gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(ComputerSpinner));
         NumberOfHumans = 
                 gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(HumanSpinner));
 
+        for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
+                if (players[i].name != DefaultPlayerNames[i])
+                        g_free(players[i].name);
+                players[i].name = g_strdup(gtk_entry_get_text(GTK_ENTRY(PlayerNames[i])));
+                gtk_clist_set_column_title (GTK_CLIST(ScoreList),i+1,
+                                            players[i].name);
+                PrefLoc = g_strdup_printf("/gtali/Preferences/PlayerName%1d",i+1);
+                gnome_config_set_string(PrefLoc, players[i].name);
+                g_free(PrefLoc);
+        }
+                
 	setupdialog_destroy(setupdialog, 1);
 
 	gnome_config_set_int("/gtali/Preferences/NumberOfComputerOpponents",
                              NumberOfComputers);
 	gnome_config_set_int("/gtali/Preferences/NumberOfHumanOpponents",
                              NumberOfHumans);
+
 
 	gnome_config_sync();
 
@@ -171,11 +187,9 @@ MaxPlayersCheck (GtkWidget *widget, gpointer *data)
 gint 
 setup_game(GtkWidget *widget, gpointer data)
 {
-        GtkWidget *all_boxes;
-	GtkWidget *box, *box2;
-        GtkWidget *label;
-	GtkWidget *button;
-	GtkWidget *frame;
+        GtkWidget *all_boxes, *box, *box2, *label, *button, *frame;
+        gchar *ts;
+        int i;
 
         if (setupdialog) 
                 return FALSE;
@@ -289,6 +303,38 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(frame);
 
 
+        /*--- PLAYER NAMES FRAME ----*/
+	frame = gtk_frame_new(_("Player Names"));
+	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
+	
+	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_add(GTK_CONTAINER(frame), box);
+
+        for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
+                box2 = gtk_hbox_new(FALSE, 3);
+
+                gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
+                ts = g_strdup_printf("%1d:",i+1);
+                label = gtk_label_new(ts);
+                g_free(ts);
+                gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
+                gtk_widget_show(label);
+
+                PlayerNames[i] = gtk_entry_new ();
+                ts = g_strdup_printf(_("PlayerName%1d"),i+1);
+                gtk_object_set_data (GTK_OBJECT(setupdialog), ts, PlayerNames[i]);
+                g_free(ts);
+                gtk_entry_set_text(GTK_ENTRY(PlayerNames[i]),players[i].name);
+                gtk_box_pack_start (GTK_BOX (box2), PlayerNames[i], TRUE, TRUE, 0);
+                gtk_widget_show(PlayerNames[i]);
+
+                gtk_widget_show(box2);
+        }
+
+	gtk_widget_show(box);
+	gtk_widget_show(frame);
+
+
 	/*--- OK/CANCEL into "box" ---*/
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
@@ -310,145 +356,6 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 
         return FALSE;
-}
-
-typedef struct 
-{
-        GtkWidget *main;
-        GtkWidget *name;
-        gint      playerno;
-} PlayerRenameInfo;
-
-static gint
-RenameDialogDestroy(GtkWidget *widget, gpointer data)
-{
-        if (data) {
-                gtk_widget_destroy(((PlayerRenameInfo *)data)->main);
-                g_free(data);
-        }
-	return FALSE;
-}
-
-static gint
-RenameDialogDefault(GtkWidget *widget, gpointer data)
-{
-        if (data) {
-                gtk_entry_set_text(GTK_ENTRY(((PlayerRenameInfo *)data)->name),
-                                   DefaultPlayerNames[((PlayerRenameInfo *)data)->playerno]);
-        }
-	return FALSE;
-}
-
-static gint
-DoRename(GtkWidget *widget, gpointer data)
-{
-        gchar *newname;
-        gchar PrefLoc[] = "/gtali/Preferences/PlayerName1"; /* Careful renaming this */
-        PlayerRenameInfo *prinfo = (PlayerRenameInfo *)data;
-
-        if (data) {
-                newname = gtk_entry_get_text(GTK_ENTRY(prinfo->name));
-                if (players[prinfo->playerno].name != DefaultPlayerNames[prinfo->playerno])
-                        g_free(players[prinfo->playerno].name);
-                players[prinfo->playerno].name = g_malloc(strlen(newname));
-                strcpy(players[prinfo->playerno].name,newname);
-
-                gtk_clist_set_column_title (GTK_CLIST(ScoreList),prinfo->playerno+1,
-                                            players[prinfo->playerno].name);
-
-                /* Save to defaults */
-                PrefLoc[29] += prinfo->playerno;
-                gnome_config_set_string(PrefLoc, newname);
-                gnome_config_sync();
-        }
-
-        return RenameDialogDestroy(widget,data);
-}
-
-
-/* Ain't glade great? */
-void
-GRenamePlayer(gint playerno)
-{
-  GtkWidget *window3;
-  GtkWidget *vbox1;
-  GtkWidget *hbox2;
-  GtkWidget *label13;
-  GtkWidget *entry2;
-  GtkWidget *hbuttonbox1;
-  GtkWidget *button1;
-  GtkWidget *button2;
-  PlayerRenameInfo *prinfo;
-
-  prinfo = g_malloc(sizeof(PlayerRenameInfo));
-  if (!prinfo)
-          return;
-  prinfo->playerno = playerno;
-
-  window3 = gtk_window_new (GTK_WINDOW_DIALOG);
-  gtk_object_set_data (GTK_OBJECT (window3), "window3", window3);
-  gtk_window_set_title (GTK_WINDOW (window3), "Rename player");
-  gtk_window_position (GTK_WINDOW (window3), GTK_WIN_POS_MOUSE);
-  gtk_window_set_policy (GTK_WINDOW (window3), FALSE, FALSE, TRUE);
-  prinfo->main = window3;
-
-  vbox1 = gtk_vbox_new (FALSE, 0);
-  gtk_object_set_data (GTK_OBJECT (window3), "vbox1", vbox1);
-  gtk_widget_show (vbox1);
-  gtk_container_add (GTK_CONTAINER (window3), vbox1);
-
-  hbox2 = gtk_hbox_new (FALSE, 0);
-  gtk_object_set_data (GTK_OBJECT (window3), "hbox2", hbox2);
-  gtk_widget_show (hbox2);
-  gtk_box_pack_start (GTK_BOX (vbox1), hbox2, TRUE, TRUE, 0);
-
-  label13 = gtk_label_new ("New name");
-  gtk_object_set_data (GTK_OBJECT (window3), "label13", label13);
-  gtk_widget_show (label13);
-  gtk_box_pack_start (GTK_BOX (hbox2), label13, TRUE, TRUE, 0);
-
-  entry2 = gtk_entry_new ();
-  gtk_object_set_data (GTK_OBJECT (window3), "entry2", entry2);
-  gtk_entry_set_text(GTK_ENTRY(entry2),players[playerno].name);
-  gtk_widget_show (entry2);
-  gtk_box_pack_start (GTK_BOX (hbox2), entry2, TRUE, TRUE, 0);
-  prinfo->name = entry2;
-
-  hbuttonbox1 = gtk_hbutton_box_new ();
-  gtk_object_set_data (GTK_OBJECT (window3), "hbuttonbox1", hbuttonbox1);
-  gtk_widget_show (hbuttonbox1);
-  gtk_box_pack_start (GTK_BOX (vbox1), hbuttonbox1, TRUE, TRUE, 0);
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox1), GTK_BUTTONBOX_SPREAD);
-  //gtk_button_box_set_child_ipadding (GTK_BUTTON_BOX (hbuttonbox1), 7, 5);
-
-  button1 = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
-  gtk_object_set_data (GTK_OBJECT (window3), "button1", button1);
-  gtk_signal_connect(GTK_OBJECT(button1), "clicked",
-		     GTK_SIGNAL_FUNC(DoRename), (gpointer)prinfo);
-  gtk_widget_show (button1);
-  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button1);
-
-  button1 = gtk_button_new_with_label ("Default");
-  gtk_object_set_data (GTK_OBJECT (window3), "button1", button1);
-  gtk_signal_connect(GTK_OBJECT(button1), "clicked",
-                     GTK_SIGNAL_FUNC(RenameDialogDefault), (gpointer)prinfo);
-  gtk_widget_show (button1);
-  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button1);
-
-  button2 = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
-  gtk_object_set_data (GTK_OBJECT (window3), "button2", button2);
-  gtk_signal_connect(GTK_OBJECT(button2), "clicked",
-		     GTK_SIGNAL_FUNC(RenameDialogDestroy), (gpointer)prinfo);
-  gtk_widget_show (button2);
-  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button2);
-
-  gtk_widget_show (window3);
-
-  //sleep(10);
-
-  //gtk_widget_destroy(window3);
-
-  return;
 }
 
 

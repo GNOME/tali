@@ -133,14 +133,6 @@ select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
         return FALSE;
 }
 
-static gint
-RenamePlayerCallback(GtkWidget *widget, GdkEventButton *event, gpointer func_data)
-{
-        if ((event->type==GDK_BUTTON_RELEASE)&&(event->button==3))
-                GRenamePlayer((gint)func_data-1);
-        
-        return FALSE;
-}
 
 GtkWidget * create_clist(void)
 {
@@ -163,10 +155,6 @@ GtkWidget * create_clist(void)
 	for (i=1; i<8; i++) {
                 gtk_clist_set_column_justification(clist, i,
                                                    GTK_JUSTIFY_RIGHT);
-		gtk_signal_connect(GTK_OBJECT(clist->column[i].button),
-				   "button_release_event",
-				   GTK_SIGNAL_FUNC(RenamePlayerCallback),
-				   (gpointer)i);	
         }
 	style = gtk_widget_get_style(GTK_WIDGET(clist));
 	g_return_val_if_fail(style != NULL, NULL);

@@ -559,6 +559,7 @@ GyahtzeeCreateMainWindow(void)
 int
 main (int argc, char *argv[])
 {
+        gchar *newname, *PrefLoc;
         gint i;
 
 	gnome_score_init(appID);
@@ -579,10 +580,11 @@ main (int argc, char *argv[])
         /* Read in new player names */
 	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
                 gchar *newname;
-                gchar PrefLoc[] = "/gtali/Preferences/PlayerName1"; /* Careful renaming this */
-                
-                PrefLoc[29] = i+'1';
+
+                PrefLoc = g_strdup_printf("/gtali/Preferences/PlayerName%1d",i+1);
                 newname = gnome_config_get_string_with_default(PrefLoc, NULL);
+                g_free(PrefLoc);
+
                 if (newname) {
                         players[i].name = g_malloc(strlen(newname));
                         if (players[i].name)
