@@ -1,3 +1,8 @@
+2003-05-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* pix/gnome-dice-?.xpm: Reduced the colours used by each image to
+	255. This saves 100k on the size of the binary and the tarball.
+
 2003-04-30  Abel Cheung  <maddog@linux.org.hk>
 
 	* ChangeLog: convert to UTF-8.
