@@ -397,17 +397,14 @@ undo_callback(GtkWidget *widget, gpointer data)
 
 
 /* Define menus later so we don't have to proto callbacks? */
-GnomeUIInfo filemenu[] = {
-        GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
-	GNOMEUIINFO_END
-};
-
 GnomeUIInfo gamemenu[] = {
         GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game_callback, NULL),
 	GNOMEUIINFO_SEPARATOR,
 	GNOMEUIINFO_MENU_UNDO_MOVE_ITEM(undo_callback, NULL),
 	GNOMEUIINFO_SEPARATOR,
 	GNOMEUIINFO_MENU_SCORES_ITEM(score_callback, NULL),
+	GNOMEUIINFO_SEPARATOR,
+        GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
 	GNOMEUIINFO_END
 };
 
@@ -423,7 +420,6 @@ GnomeUIInfo helpmenu[] = {
 };
 
 GnomeUIInfo mainmenu[] = {
-        GNOMEUIINFO_MENU_FILE_TREE(filemenu),
 	GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
 	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
 	GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
