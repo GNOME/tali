@@ -71,12 +71,12 @@ char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
 						    "Janet" };
 char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS] =
 {
-        N_("1's [total of 1s]"),
-        N_("2's [total of 2s]"),
-        N_("3's [total of 3s]"),
-        N_("4's [total of 4s]"),
-        N_("5's [total of 5s]"),
-        N_("6's [total of 6s]"),
+        N_("1s [total of 1s]"),
+        N_("2s [total of 2s]"),
+        N_("3s [total of 3s]"),
+        N_("4s [total of 4s]"),
+        N_("5s [total of 5s]"),
+        N_("6s [total of 6s]"),
 	/* End of upper panel */
         N_("3 of a Kind [total]"),
         N_("4 of a Kind [total]"),
@@ -90,7 +90,7 @@ char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS] =
 	N_("Grand Total"),
 	/* Need to squish between upper and lower pannel */
 	N_("Upper total"),
-	N_("Bonus"),
+	N_("Bonus if >62"),
 };
 
 void
@@ -211,21 +211,6 @@ GameIsOver(void)
                         return 0;
         return 1;
 }
-
-#if 0
-/* Don't need this function anymore--it was only ever used in gyahtzee.c, and
- * it's been commented out now. -- pschwan@cmu.edu */
-int
-HumansAreDone(void)
-{
-  int i;
-
-  for (i = 0; i < NumberOfHumans; i++)
-    if (players[i].finished == 0)
-      return 0;
-  return 1;
-}
-#endif
 
 int 
 upper_total(int num)

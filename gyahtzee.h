@@ -12,9 +12,9 @@
 #define SCOREROWS (NUM_FIELDS+5)
 
 /* Screen row numbers containing totals */
-#define R_UTOTAL NUM_UPPER
-#define R_BONUS  (R_UTOTAL+1)
-#define R_BLANK1 (R_UTOTAL+2)
+#define R_UTOTAL (NUM_UPPER+1)
+#define R_BONUS  (R_UTOTAL-1)
+#define R_BLANK1 (R_UTOTAL+1)
 #define R_GTOTAL (SCOREROWS-1) 
 #define R_LTOTAL (R_GTOTAL-1)
 

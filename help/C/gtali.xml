@@ -2,12 +2,12 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.0">
-  <!ENTITY manrevision "2.0">
+  <!ENTITY appversion "2.3">
+  <!ENTITY manrevision "2.3">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>GNOME Tali</application>">
   <!ENTITY appname "GNOME Tali">
-  <!ENTITY version "1.2.0"> 
+  <!ENTITY version "2.3"> 
 ]>
 
 <!-- 
@@ -183,12 +183,26 @@
           will be scored accordingly. (Say for example, you get
           yahtzee -- 5 of a kind -- and click on the large straight row,
           you will receive a zero in your large straight score).</para>
-        </listitem>
-      </orderedlist>
+      </listitem>
+    </orderedlist>
 
     <para>You can only use each combination once, i.e. once you've entered
       something in a slot, you can't change the score later if you roll a
       better hand.
+    </para>
+
+    <para>There is one exception to this rule, if you roll a yahtzee a
+     second time you can put it in the yahtzee row again for an extra
+     fifty points. You can keep doing this each time you get another
+     yahtzee. At the end of the game you will be given extra rolls to
+     fill in the other rows. Be warned that if you score zero in your
+     yahtzee row (i.e. you filled that row with something that wasn't
+     a yahtzee) then you can't put a yahtzee in afterward, zero is all
+     you will score.
+    </para>
+
+    <para>If you score a total of 63 points or more in the top six
+     rows then you will be given a 35 point bonus.
     </para>
   </sect1>
 
@@ -268,8 +282,14 @@
 
     <sect1 id="strategy">
       <title>Game Strategy</title>
-      <para>
-        Play to win! ;)
+      <para>The 63 points needed for the bonus in the upper half
+      corresponds to getting three of each die type in each row. If
+      you score more than three dice in the fives and sixes rows then
+      you can afford to place a bad roll in either the ones row or the
+      twos row and still get the bonus.
+      </para>
+      <para>Don't forget about multiple yahtzees, if you roll a second
+       yahtzee you can also put it in the yahtzee row for even more points.
       </para>
     </sect1>	
  <!-- ============= Bugs ================================== -->
@@ -304,8 +324,10 @@
 
   <para>
    This manual was written by Scott D Heavner
-   (<email>sdh@po.cwru.edu</email>). Please send all comments and
-   suggestions regarding this manual to the <ulink type="http"
+   (<email>sdh@po.cwru.edu</email>) with extra material added by
+   Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Please
+   send all comments and suggestions regarding this manual to the
+   <ulink type="http"
    url="http://developer.gnome.org/projects/gdp">GNOME Documentation
    Project</ulink> by sending an email to
    <email>docs@gnome.org</email>. You can also add your comments

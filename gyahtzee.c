@@ -132,9 +132,11 @@ NextPlayer(void)
 
 	ShowoffPlayer(ScoreList,CurrentPlayer,0);
 
-        if ( ++CurrentPlayer >= NumberOfPlayers )
-                CurrentPlayer = 0;
-
+        /* Find the next player with rolls left */
+        do {
+                CurrentPlayer = (CurrentPlayer + 1) % NumberOfPlayers;
+        } while (players[CurrentPlayer].finished);
+                
 	ShowoffPlayer(ScoreList,CurrentPlayer,1);
 
         if (players[CurrentPlayer].name) {
@@ -146,18 +148,6 @@ NextPlayer(void)
                             players[CurrentPlayer].name);
                 }
         }
-
-#if 0
-	/* This is the old way.  I disapprove. */
-	if (HumansAreDone())      /* Because of multiple yahtzees, humans */
-	       NextPlayer();     /* may finish before computers */
-#else
-	/* If player 2 had more yahtzees than player 1, player 1 would be asked
-	 * to roll when he had no moves left, and player 2 would never get a
-	 * chance to roll, thus the game deadlocked. -- pschwan@cmu.edu */
-	if (players[CurrentPlayer].finished)
-	  NextPlayer();
-#endif
 
         SelectAllDice();
         RollSelectedDice();
@@ -340,7 +330,7 @@ say(char *fmt, ...)
 	char buf[200];
 
 	va_start(ap, fmt);
-	vsprintf(buf, fmt, ap);
+	g_vsnprintf(buf, 200, fmt, ap);
 	va_end(ap);
 
 	gnome_appbar_pop(GNOME_APPBAR (appbar));

@@ -311,9 +311,9 @@ void setup_score_list(GtkWidget *treeview)
         }
 
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), -1);
-        gtk_list_store_append(store, &iter);
         gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_BONUS]), -1);
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), -1);
         gtk_list_store_append(store, &iter);
         gtk_list_store_set(store, &iter, 0, "", -1);
 

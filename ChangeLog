@@ -2,6 +2,45 @@
 
 	* ChangeLog: convert to UTF-8.
 
+2003-04-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gtali.xml: Updated versions.
+
+2003-04-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c (FieldLabels): Removed apostrophes used with
+	plurals. It wasn't even used consistently within a single four
+	word line.
+
+	* help/C/gtali.xml: Cleaned up yesterdays changes.
+
+2003-04-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+        * clist.c:
+	* gyahtzee.c:
+	* gyahtzee.h: Swapped the upper total and bonus row to make the
+	purpose of the bonus clearer. Also reworked the label. Fixes bug
+	#92801.
+
+	* help/C/gtali.xml: Clarified the rules with respect to yahtzees
+	and the upper bonus. Fixes bug #109663 and helps toward bug
+	#92801.
+
+	* gyahtzee.c (say): Fixed buffer overflow possibilities when this
+	function was called with a %s modifier (a long player name would
+	demonstrate this by crashing the program). Fixes bug #74746.
+
+2003-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c: Removed HumansAreDone() function since it was
+	deprecated long ago.
+
+	* yahtzee.h: Removed HumansAreDone() prototype.
+
+	* gyahtzee.c (NextPlayer): Rewrote the code that chooses the
+	next player so it works correctly when there are extra turns due to
+	multiple yahtzees. This fixes bugs #55478 and #91097.
+
 2003-03-06  Ross Burton  <ross@burtonini.com>
 
 	* Build:
