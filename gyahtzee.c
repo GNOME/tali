@@ -88,6 +88,7 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 GtkWidget *window;
 static GtkWidget *appbar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
+static GtkWidget *rollLabel;
 
 static gint gnome_modify_dice (GtkWidget *widget, GdkEventButton *event,
                                gpointer data);
@@ -95,6 +96,7 @@ static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
 void update_score_state (void);
 static void undo_set_sensitive (gboolean state);
+static void UpdateRollLabel (void);
 
 void
 YahtzeeIdle (void)
@@ -124,8 +126,8 @@ CheerWinner (void)
         if (players[winner].name)
                 say (ngettext("%s wins the game with %d point",
                               "%s wins the game with %d points", WinningScore),
-                    players[winner].name,
-		    WinningScore);
+                     players[winner].name,
+                     WinningScore);
 	else
                 say (_("Game over!"));
 
@@ -156,10 +158,10 @@ NextPlayer (void)
         if (players[CurrentPlayer].name) {
                 if (players[CurrentPlayer].comp) {
                         say (_("Computer playing for %s"),
-                            players[CurrentPlayer].name);
+                             players[CurrentPlayer].name);
                 } else {
                         say (_("%s! -- You're up."),
-                            players[CurrentPlayer].name);
+                             players[CurrentPlayer].name);
                 }
         }
 
@@ -171,6 +173,7 @@ NextPlayer (void)
                 NextPlayer ();
                 return;
         }
+        UpdateRollLabel ();
 }
 
 void
@@ -251,6 +254,7 @@ GyahtzeeNewGame (void)
 
         NewGame();
         setup_score_list (ScoreList);
+        UpdateRollLabel();
 
 	for (i=0; i<NumberOfPlayers; i++)
                 ShowoffPlayer (ScoreList,i,0);
@@ -271,6 +275,18 @@ new_game_callback (GtkWidget *widget, gpointer data)
 {
         GyahtzeeNewGame ();
 	return FALSE;
+}
+
+static void
+UpdateRollLabel (void)
+{
+        static GString *str = NULL;
+
+        if (!str)
+                str = g_string_sized_new(22);
+        
+        g_string_printf(str, "<b>%s %d/3</b>", _("Roll"), NumberOfRolls);
+        gtk_label_set_label(rollLabel, str->str);
 }
 
 static void
@@ -313,7 +329,7 @@ gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data)
                 return TRUE;
 
         /* printf("Pressed die: %d. NumberOfRolls=%d\n",
-               tmp - DiceValues + 1, NumberOfRolls); */
+           tmp - DiceValues + 1, NumberOfRolls); */
 
         /* Stop play when player is marked finished */
 	if (players[CurrentPlayer].finished)
@@ -337,20 +353,20 @@ gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data)
         }
 	else
 #endif
-	  {
-	    /* Stop play when player is marked finished */
-	    if (players[CurrentPlayer].finished)
-	      return TRUE;
+        {
+                /* Stop play when player is marked finished */
+                if (players[CurrentPlayer].finished)
+                        return TRUE;
 
-	    if (NumberOfRolls >= NUM_ROLLS) {
-	      say (_("You're only allowed three rolls! Select a score box."));
-	      return TRUE;
-	    }
+                if (NumberOfRolls >= NUM_ROLLS) {
+                        say (_("You're only allowed three rolls! Select a score box."));
+                        return TRUE;
+                }
 	    
-	    tmp->sel = 1 - tmp->sel;
+                tmp->sel = 1 - tmp->sel;
 
-	    UpdateDiePixmap (tmp);
-	  }
+                UpdateDiePixmap (tmp);
+        }
 
 	return TRUE;
 }
@@ -359,8 +375,10 @@ gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data)
 /* Callback on Roll! button press */
 gint 
 gnome_roll_dice (GtkWidget *widget, GdkEvent *event, gpointer data) {
-        if (! players[CurrentPlayer].comp)
+        if (! players[CurrentPlayer].comp) {
                 RollSelectedDice ();
+                UpdateRollLabel ();
+        }
 	return FALSE;
 }
 
@@ -411,7 +429,7 @@ about (GtkWidget *widget, gpointer data)
 	}
 
 	pixbuf = gdk_pixbuf_new_from_file (GNOMEPIXMAPDIR "/gnome-gtali.png",
-			NULL);
+                                           NULL);
 
         about = gnome_about_new (appName, VERSION,
 				 "Copyright \xc2\xa9 1998-2004 Free Software "
@@ -422,11 +440,11 @@ about (GtkWidget *widget, gpointer data)
 				 strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
 				 pixbuf);
 		
-		if (pixbuf != NULL)
-			gdk_pixbuf_unref (pixbuf);
+        if (pixbuf != NULL)
+                gdk_pixbuf_unref (pixbuf);
 		  
-		  gtk_window_set_transient_for (GTK_WINDOW (about),
-                                                GTK_WINDOW (window));
+        gtk_window_set_transient_for (GTK_WINDOW (about),
+                                      GTK_WINDOW (window));
 	g_signal_connect (G_OBJECT (about), "destroy",
                           G_CALLBACK (gtk_widget_destroyed), &about);
         gtk_widget_show (about);
@@ -465,7 +483,6 @@ undo_callback(GtkWidget *widget, gpointer data)
         }
 	return FALSE;
 }
-
 
 /* Define menus later so we don't have to proto callbacks? */
 GnomeUIInfo gamemenu[] = {
@@ -595,13 +612,19 @@ GyahtzeeCreateMainWindow(void)
         LoadDicePixmaps ();
         
 	/* Put all the dice in a vertical column */
-        diceTable = gtk_table_new (NUMBER_OF_DICE + 1, 1, FALSE);
-	gtk_box_pack_start (GTK_BOX (all_boxes), diceTable, FALSE, TRUE, 0);
+        diceTable = gtk_table_new (NUMBER_OF_DICE + 2, 1, FALSE);
+        gtk_box_pack_start(GTK_BOX(all_boxes), diceTable, FALSE, TRUE, 0);
+        rollLabel = gtk_label_new(NULL);
+        gtk_label_set_use_markup(GTK_LABEL(rollLabel), TRUE);
+        gtk_table_attach(GTK_TABLE(diceTable), rollLabel, 0, 1, 0, 1,
+                         0, 0, 5, 10);
+        gtk_widget_show(rollLabel);
+
  	for (i=0; i < NUMBER_OF_DICE; i++) {
 
                 diceBox[i] = gtk_event_box_new ();
                 gtk_table_attach (GTK_TABLE (diceTable), diceBox[i], 0, 1,
-                                  i, i+1, 0, 0, 5, 5);
+                                  i+1, i+2, 0, 0, 5, 5);
                 tmp = gtk_vbox_new(FALSE, 0);
                 gtk_container_add (GTK_CONTAINER (diceBox[i]),
                                    tmp);
@@ -623,13 +646,13 @@ GyahtzeeCreateMainWindow(void)
                 gtk_widget_show (diceBox[i]);
 	}
 	mbutton = gtk_button_new_with_label (_("Roll!"));
-	gtk_table_attach (GTK_TABLE (diceTable), mbutton, 0, 1, i, i+1,
+	gtk_table_attach (GTK_TABLE (diceTable), mbutton, 0, 1, i+1, i+2,
                           0, 0, 5, 5);
         g_signal_connect (G_OBJECT (mbutton), "clicked",
                           G_CALLBACK (gnome_roll_dice), NULL);
 	gtk_widget_show (mbutton);
 	gtk_widget_show (diceTable);
-        
+
 	/* Scores displayed in score list */
         ScoreList = create_score_list ();
         gtk_box_pack_end (GTK_BOX (all_boxes), ScoreList, TRUE, TRUE, 0);
@@ -726,16 +749,24 @@ main (int argc, char *argv[])
 	/* For some options, we don't want to play a game */
 	if (! GyahtzeeAbort) {
 
-	  window = gnome_app_new (appID, appName);
+                window = gnome_app_new (appID, appName);
 	  
-	  GyahtzeeCreateMainWindow ();
+                GyahtzeeCreateMainWindow ();
 
-	  /* Need to roll the dice once */
-	  GyahtzeeNewGame ();
+                /* Need to roll the dice once */
+                GyahtzeeNewGame ();
         
-	  gtk_main ();
+                gtk_main ();
 
 	}
         
 	return 0;
 }
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+c-basic-offset: 8
+indent-tabs-mode: nil
+End:
+*/ 

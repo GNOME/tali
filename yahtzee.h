@@ -26,6 +26,7 @@
 #define NUMBER_OF_DICE       5
 
 #define MAX_NUMBER_OF_PLAYERS 6
+#define LAST_COL (MAX_NUMBER_OF_PLAYERS+2)
 #define MAX_NAME_LENGTH 8
 #define NUM_UPPER 6
 #define NUM_LOWER 7
@@ -136,4 +137,5 @@ Local Variables:
 tab-width: 8
 c-basic-offset: 8
 indent-tabs-mode: nil
+End:
 */   

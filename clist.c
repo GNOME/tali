@@ -161,6 +161,10 @@ activate_selected_row_idle_cb(gpointer data)
                 gtk_tree_view_row_activated(tree, path, column);
         }
         
+        /* Quoted from docs: "The returned GtkTreePath must be freed 
+           with gtk_tree_path_free() when you are done with it." */
+        gtk_tree_path_free(path);
+
         return FALSE;
 }
 
@@ -187,10 +191,10 @@ GtkWidget *create_score_list(void)
         GtkWidget *tree;
         GtkListStore *store;
         
-        store = gtk_list_store_new(MAX_NUMBER_OF_PLAYERS + 2,
+        store = gtk_list_store_new(MAX_NUMBER_OF_PLAYERS + 3,
                                    G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
                                    G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-                                   G_TYPE_STRING, G_TYPE_STRING);
+                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
         tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
         gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
 
@@ -216,7 +220,10 @@ add_columns(GtkTreeView *tree)
         /* Create columns */
         renderer = gtk_cell_renderer_text_new();
         column = gtk_tree_view_column_new_with_attributes("", renderer,
-                                                          "text", 0, NULL);
+                                                          "text", 0, 
+                                                          "weight", LAST_COL,
+                                                          NULL);
+        g_object_set(renderer, "weight-set", TRUE, NULL);
         gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
         for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
                 renderer = gtk_cell_renderer_text_new();
@@ -225,13 +232,16 @@ add_columns(GtkTreeView *tree)
                 g_value_set_float(prop_value, 1.0);
                 g_object_set_property(G_OBJECT(renderer),
                                       "xalign", prop_value);
+                g_object_set(renderer, "weight-set", TRUE, NULL);
                 g_value_unset(prop_value);
                 g_free(prop_value);
 
                 column = gtk_tree_view_column_new();
                 gtk_tree_view_column_pack_start(column, renderer, TRUE);
                 gtk_tree_view_column_set_attributes(column, renderer,
-                                                    "text", i+1, NULL);
+                                                    "text", i+1, 
+                                                    "weight", LAST_COL, 
+                                                    NULL);
                 gtk_tree_view_column_set_min_width(column, 95);
                 gtk_tree_view_column_set_alignment(column, 1.0);
                 label = gtk_label_new(players[i].name);
@@ -310,13 +320,16 @@ void setup_score_list(GtkWidget *treeview)
 
         for (i = 0; i < NUM_UPPER; i++) {
                 gtk_list_store_append(store, &iter);
-                gtk_list_store_set(store, &iter, 0, _(FieldLabels[i]), -1);
+                gtk_list_store_set(store, &iter, 0, _(FieldLabels[i]), 
+                                   LAST_COL, PANGO_WEIGHT_NORMAL, -1);
         }
 
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_BONUS]), -1);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_BONUS]), 
+                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), -1);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), 
+                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
         gtk_list_store_append(store, &iter);
         gtk_list_store_set(store, &iter, 0, "", -1);
 
@@ -324,13 +337,16 @@ void setup_score_list(GtkWidget *treeview)
                 gtk_list_store_append(store, &iter);
                 gtk_list_store_set(store, &iter,
                                    0, _(FieldLabels[i+NUM_UPPER]),
+                                   LAST_COL, PANGO_WEIGHT_NORMAL,
                                    -1);
         }
 
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_LOWERT]), -1);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_LOWERT]), 
+                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_GRANDT]), -1);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_GRANDT]), 
+                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
 }	
 
 /* Arrgh - lets all use the same tabs under emacs: 
@@ -338,4 +354,5 @@ Local Variables:
 tab-width: 8
 c-basic-offset: 8
 indent-tabs-mode: nil
+End:
 */   
