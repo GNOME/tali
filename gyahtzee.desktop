@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Gyahtzee
+Name[es]=Gyahtzee
 Name[pt]=Gyahtzee
 Comment=Gnome Yahtzee game
+Comment[es]=Juego de Yahtzee
 Comment[pt]=Versão Gnome do Yahtzee
 Exec=gyahtzee
 Icon=gnome-gyahtzee.png
