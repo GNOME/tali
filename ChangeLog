@@ -1,3 +1,8 @@
+2003-11-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am: Patch to let schema files be isntalled
+	properly. Thanks to Joe Marcus Clarke (bug #127441).
+
 2003-11-19  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/Makefile.am (SUBDIRS): Removed the danish translation. Any
