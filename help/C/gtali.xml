@@ -104,7 +104,7 @@
   </articleinfo>
 
   <indexterm zone="index"> 
-    <primary>Gnome Tali</primary> 
+    <primary>GNOME Tali</primary> 
   </indexterm>
 
  <!-- ============= Document Body ============================= -->
@@ -113,39 +113,39 @@
     <title>Introduction</title>
 
     <para>
-       <application>Gnome Tali</application> is a sort of poker with
+       <application>GNOME Tali</application> is a sort of poker with
        dice and less money.  You roll five dice three times and try to
        create the best <quote>hand</quote>. Your two rerolls may include
        any or all of your dice.
     </para>
     <para>
-      <application>Gnome Tali</application> is very similar to the
+      <application>GNOME Tali</application> is very similar to the
       dice game Yahtzee which is a trademark of Hasbro, Inc.
     </para>
 
     <para>
-      To run <application>Gnome Tali</application>, select
+      To run <application>GNOME Tali</application>, select
       <menuchoice>
 	<guisubmenu>Games</guisubmenu>
-	<guimenuitem>Gnome Tali</guimenuitem>
+	<guimenuitem>GNOME Tali</guimenuitem>
       </menuchoice>
       from the <guimenu>Main Menu</guimenu>, or type
       <command>gtali</command> on the command line.
     </para>
 
     <para>
-      <application>Gnome Tali</application> is included in the
+      <application>GNOME Tali</application> is included in the
       <filename>gnome-games</filename> package, which is part of the
       GNOME desktop environment. This document describes version
-      &version; of <application>Gnome Tali</application>.
+      &version; of <application>GNOME Tali</application>.
     </para>
   </sect1>
 
   <sect1 id="playing">
-    <title>Playing Gnome Tali</title>
+    <title>Playing GNOME Tali</title>
 
     <figure id="shot1">
-      <title>Gnome Tali in action</title>
+      <title>GNOME Tali in action</title>
       <screenshot>
 	 <mediaobject> 
     <imageobject>
@@ -153,7 +153,7 @@
 	srccredit="Trevor Curtis"/>
 	</imageobject>
     <textobject> 
-      <phrase>Gnome Tali main window screenshot.</phrase> 
+      <phrase>GNOME Tali main window screenshot.</phrase> 
     </textobject> 
   </mediaobject>
       </screenshot>
@@ -196,7 +196,7 @@
     <title>Game Options</title>
 
     <figure id="shot2">
-      <title>Gnome Tali preferences</title>
+      <title>GNOME Tali preferences</title>
       <screenshot>
 	 <mediaobject> 
     <imageobject>
@@ -204,7 +204,7 @@
 	srccredit="Trevor Curtis"/>
 	</imageobject>
     <textobject> 
-      <phrase>Gnome Tali preferences dialog box.</phrase> 
+      <phrase>GNOME Tali preferences dialog box.</phrase> 
     </textobject> 
   </mediaobject>
       </screenshot>
@@ -289,7 +289,7 @@
  <sect1 id="authors">
   <title>Authors</title>
   <para>
-   <application>Gnome Tali</application> was written by Scott Heavner
+   <application>GNOME Tali</application> was written by Scott Heavner
    (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. Please send 
    all comments, suggestions, and bug
    reports to the <ulink url="http://bugzilla.gnome.org" type="http">GNOME
