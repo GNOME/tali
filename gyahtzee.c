@@ -286,7 +286,7 @@ UpdateRollLabel (void)
                 str = g_string_sized_new(22);
         
         g_string_printf(str, "<b>%s %d/3</b>", _("Roll"), NumberOfRolls);
-        gtk_label_set_label(rollLabel, str->str);
+        gtk_label_set_label(GTK_LABEL(rollLabel), str->str);
 }
 
 static void
