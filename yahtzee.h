@@ -61,6 +61,15 @@ typedef struct {
   int sel;
 } DiceInfo;
 
+/* This is a little bigger than it needs to be */
+typedef struct _UndoInfo {
+  int player;
+  int field;
+  int fstate;
+  int oldscore;
+  struct _UndoInfo *prev;
+} UndoInfo;
+
 /* yahtzee.c */
 extern DiceInfo DiceValues[];
 extern Player players[];
@@ -73,6 +82,7 @@ extern int WinningScore;
 extern int DisplayComputerThoughts;
 extern int OnlyShowScores;
 extern int CurrentPlayer;
+extern int IsCheater;
 extern char *ProgramHeader;
 extern char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS];
 char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
@@ -89,6 +99,8 @@ extern int find_straight(int run, int notstart, int notrun);
 extern int find_yahtzee(void);
 extern int add_dice(void);
 extern int play_score(int player, int field);
+extern int RegisterUndo(int player, int field, int fstate, int oldscore);
+extern int ExecSingleUndo(int screenupdate);
 extern void handle_play(int player);
 extern void play(void);
 extern void calc_random(void);
@@ -113,7 +125,7 @@ extern void NextPlayer(void);
 extern void YahtzeeIdle(void);
 extern void ShowHighScores(void);
 
-enum { SCORE_OK=0, SLOT_USED, PLAYER_DONE };
+enum { SCORE_OK=0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 
 
 #endif /* _yahtzee_H_ */

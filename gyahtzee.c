@@ -99,7 +99,7 @@ CheerWinner(void)
         int winner;
 
         winner = FindWinner();
-        if (winner<NumberOfHumans) {
+        if ( (winner<NumberOfHumans) && !IsCheater ) {
                 lastHighScore = gnome_score_log((guint)WinningScore, 
                                                 NULL, TRUE);
                 if (lastHighScore)
@@ -110,11 +110,9 @@ CheerWinner(void)
 	ShowoffPlayer(GTK_CLIST(ScoreList),winner,1);
 
         if (players[winner].name)
-                say("%s %s %d %s",
+                say(_("%s wins the game with %d points"),
                     players[winner].name,
-		    _("wins this game with"),
-		    WinningScore,
-		    _("points"));
+		    WinningScore);
 	else
                 say(_("Game over!"));
 }
@@ -138,13 +136,11 @@ NextPlayer(void)
 
         if (players[CurrentPlayer].name) {
                 if (players[CurrentPlayer].comp) {
-                        say("%s %s.",
-                            _("Computer playing role of"),
+                        say( _("Computer playing for %s"),
                             players[CurrentPlayer].name);
                 } else {
-                        say("%s! -- %s.",
-                            players[CurrentPlayer].name,
-                            _("You're up."));
+                        say(_("%s! -- You're up."),
+                            players[CurrentPlayer].name);
                 }
         }
 
@@ -359,6 +355,18 @@ score_callback(GtkWidget *widget, gpointer data)
 	return FALSE;
 }
 
+gint 
+undo_callback(GtkWidget *widget, gpointer data)
+{
+        int i;
+	if (!GameIsOver()) {
+                for (i=0; i<NumberOfPlayers; i++)
+                        ExecSingleUndo(SCORE_OK);
+                say(_("Cheater! Any high scores will not be recorded."));
+        }
+	return FALSE;
+}
+
 
 /* Define menus later so we don't have to proto callbacks? */
 GnomeUIInfo gamemenu[] = {
@@ -380,6 +388,17 @@ GnomeUIInfo gamemenu[] = {
          GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
 };
 
+GnomeUIInfo editmenu[] = {
+	{GNOME_APP_UI_ITEM, N_("Properties..."), NULL, setup_game, NULL, NULL,
+         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
+
+	{GNOME_APP_UI_ITEM, N_("Undo"), NULL, undo_callback, NULL, NULL,
+         GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_UNDO, 0, 0, NULL},
+
+	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
+         GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+};
+
 GnomeUIInfo helpmenu[] = {
 	{GNOME_APP_UI_HELP, NULL, NULL, NULL, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
@@ -393,6 +412,9 @@ GnomeUIInfo helpmenu[] = {
 
 GnomeUIInfo mainmenu[] = {
 	{GNOME_APP_UI_SUBTREE, N_("Game"), NULL, gamemenu, NULL, NULL,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+
+	{GNOME_APP_UI_SUBTREE, N_("Edit"), NULL, editmenu, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
 	{GNOME_APP_UI_SUBTREE, N_("Help"), NULL, helpmenu, NULL, NULL,
@@ -477,7 +499,7 @@ GyahtzeeCreateMainWindow()
 
 	/*---- Menus ----*/
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-        gtk_menu_item_right_justify(GTK_MENU_ITEM(mainmenu[1].widget));
+        gtk_menu_item_right_justify(GTK_MENU_ITEM(mainmenu[2].widget));
 
 
 	/*---- Status Bar ----*/

@@ -545,11 +545,9 @@ PlayNewGame(void)
         winner = FindWinner();
 
         if (players[winner].name)
-                say("%s %s %d %s",
+                say(_("%s wins the game with %d points"),
                     players[winner].name,
-		    _("wins this game with"),
-		    WinningScore,
-		    _("points"));
+		    WinningScore);
 	else
                 say(_("Game over!"));
 

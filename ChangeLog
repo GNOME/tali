@@ -1,3 +1,9 @@
+Tue Jul  7 15:52:29 1998  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* yahtzee.c: Add RegisterUndo() and ExecSingleUndo() allowing undo
+	of last round.  Cheater flag is activated and high scores will not
+	be saved.  Undo only available in gnome version.
+
 Sun Jun 28 19:08:55 1998  Scott D. Heavner  <sdh@po.cwru.edu>
 
 	* Summary:

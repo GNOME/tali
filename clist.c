@@ -34,6 +34,18 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
+#define GY_NEW 0  /* Just so I can play with stuff w/o breaking the dist */
+
+#if GY_NEW
+guint  gtk_signal_new			  (const gchar	       *name,
+					   GtkSignalRunType	signal_flags,
+					   GtkType		object_type,
+					   guint		function_offset,
+					   GtkSignalMarshaller	marshaller,
+					   GtkType		return_val,
+					   guint		nparams,
+					   ...);
+#endif
 
 void
 update_score_cell(GtkCList * clist, gint row, gint col, int val)
@@ -136,6 +148,11 @@ select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 	case (R_BLANK1):
 	case (R_GTOTAL):
 	case (R_LTOTAL):
+#if GY_NEW
+                g_print("Selection should have been blocked!!!\n");
+                gtk_signal_emit_stop_by_name(GTK_OBJECT(clist), "select_row");
+                return TRUE;
+#endif
                 break;
 
 	default:
@@ -153,15 +170,63 @@ select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
                                 NextPlayer();
                                 return TRUE;
                         }
+#if GY_NEW
                 } else {
                         /* Don't want to unselect row? */
                         return FALSE;
+#endif
                 }
 	}
         
         gtk_clist_unselect_row (clist,row,col);
 
         return FALSE;
+}
+
+static gint
+select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
+{
+#if GY_NEW
+        int field = row;
+
+	if (!event) 
+                return FALSE;
+
+        LastScoredRow = -1;
+
+	switch (row) {
+
+	case (R_UTOTAL):	/* Can't select total/blank rows */
+	case (R_BONUS):
+	case (R_BLANK1):
+	case (R_GTOTAL):
+	case (R_LTOTAL):
+                break;
+
+	default:
+                /* Adjust for Upper Total / Bonus entries */
+                if (field >= NUM_UPPER)
+                        field -= 3;
+        
+                if ( (field < NUM_FIELDS) && 
+		     (!players[CurrentPlayer].finished)  ) {
+                        if (play_score(CurrentPlayer,field)==SLOT_USED) {
+                                say(_("Already used! " 
+				      "Where do you want to put that?"));
+                        } else {
+                                LastScoredRow = row;
+                                NextPlayer();
+                                return FALSE;
+                        }
+                }
+	}
+        
+        g_print("After: Selection should have been blocked!!!\n");
+        gtk_signal_emit_stop_by_name(GTK_OBJECT(clist), "select_row");
+        return TRUE;
+#else
+	return FALSE;
+#endif
 }
 
 
@@ -171,6 +236,7 @@ select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 static gint
 unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 {
+#if GY_NEW
 	if (!event) 
                 return FALSE;
 
@@ -182,6 +248,9 @@ unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
         }
 
         return FALSE;
+#else
+        return FALSE;
+#endif
 }
 
 
@@ -225,8 +294,12 @@ GtkWidget * create_clist(void)
                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row), NULL);
+#if GY_NEW
+/*	gtk_signal_connect_after(GTK_OBJECT(clist), "select_row",
+                           GTK_SIGNAL_FUNC(select_row2), NULL); */
 /*	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
                            GTK_SIGNAL_FUNC(unselect_row), NULL); */
+#endif
 	return clist;
 }
 
