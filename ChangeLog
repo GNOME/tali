@@ -1,3 +1,9 @@
+1999-03-29  Tuomas Kuosmanen  <tigert@gimp.org>
+
+	* pix/gnome-gtali.png: Replaced the icon with one that matches
+	better with the style of the rest of the desktop.. (all respect
+	for the original artist)
+
 1999-02-14  Ian Peters  <ipeters@acm.org>
 
 	* Name changed to GTali
