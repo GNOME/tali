@@ -13,6 +13,12 @@
 
 	* help/C/gtali.xml: Updated version to 2.6.
 
+2004-03-01  Richard Hoelscher  <rah@rahga.com>
+
+        * gyahtzee.c (gnome_modify_dice): Ignore double and triple click
+	events on the dice.
+	(GyahtzeeNewGame): Set status bar when starting a new game.
+
 2004-02-18  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gtali.schemas.in: Removed the space work-around since it

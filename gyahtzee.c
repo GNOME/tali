@@ -246,6 +246,9 @@ GyahtzeeNewGame (void)
 {
         int i;
 
+        say (_("Select dice to re-roll, press Roll!,"
+               " or select score slot."));
+
         NewGame();
         setup_score_list (ScoreList);
 
@@ -304,6 +307,10 @@ gint
 gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data) 
 {
         DiceInfo *tmp = (DiceInfo *) data;
+
+        /* Ignore the 2BUTTON and 3BUTTON events. */
+        if (event && (event->type != GDK_BUTTON_PRESS))
+                return TRUE;
 
         /* printf("Pressed die: %d. NumberOfRolls=%d\n",
                tmp - DiceValues + 1, NumberOfRolls); */
