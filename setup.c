@@ -91,7 +91,7 @@ WarnNumPlayersChanged (void)
                               GNOME_STOCK_BUTTON_OK,
                               NULL);
   GTK_WINDOW(mb)->position = GTK_WIN_POS_MOUSE;
-  gnome_dialog_set_modal(GNOME_DIALOG(mb));
+  gtk_window_set_modal(GTK_WINDOW(mb), TRUE);
   gtk_widget_show (mb);
 #endif
 }
