@@ -403,17 +403,17 @@ undo_callback(GtkWidget *widget, gpointer data)
 
 /* Define menus later so we don't have to proto callbacks? */
 GnomeUIInfo gamemenu[] = {
-	{GNOME_APP_UI_ITEM, N_("New"), NULL, new_game_callback, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_New"), NULL, new_game_callback, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_NEW, 'N', GDK_CONTROL_MASK,
          NULL},
 
-	{GNOME_APP_UI_ITEM, N_("Properties..."), NULL, setup_game, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("Scores..."), NULL, score_callback, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_Scores"), NULL, score_callback, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("Exit"), NULL, quit_game, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("E_xit"), NULL, quit_game, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'Q', GDK_CONTROL_MASK,
          NULL},
 
@@ -422,10 +422,10 @@ GnomeUIInfo gamemenu[] = {
 };
 
 GnomeUIInfo editmenu[] = {
-	{GNOME_APP_UI_ITEM, N_("Properties..."), NULL, setup_game, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("Undo"), NULL, undo_callback, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_Undo"), NULL, undo_callback, NULL, NULL,
          GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_UNDO, 0, 0, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
@@ -433,7 +433,7 @@ GnomeUIInfo editmenu[] = {
 };
 
 GnomeUIInfo helpmenu[] = {
-	{GNOME_APP_UI_ITEM, N_("About..."), "Info about this program", about,
+	{GNOME_APP_UI_ITEM, N_("_About Gyahtzee"), "Info about this program", about,
 	 NULL, NULL,
 	 GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
 
@@ -446,13 +446,13 @@ GnomeUIInfo helpmenu[] = {
 };
 
 GnomeUIInfo mainmenu[] = {
-	{GNOME_APP_UI_SUBTREE, N_("Game"), NULL, gamemenu, NULL, NULL,
+	{GNOME_APP_UI_SUBTREE, N_("_Game"), NULL, gamemenu, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
-	{GNOME_APP_UI_SUBTREE, N_("Edit"), NULL, editmenu, NULL, NULL,
+	{GNOME_APP_UI_SUBTREE, N_("_Edit"), NULL, editmenu, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
-	{GNOME_APP_UI_SUBTREE, N_("Help"), NULL, helpmenu, NULL, NULL,
+	{GNOME_APP_UI_SUBTREE, N_("_Help"), NULL, helpmenu, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO}
@@ -536,7 +536,6 @@ GyahtzeeCreateMainWindow(void)
 
 	/*---- Menus ----*/
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-        gtk_menu_item_right_justify(GTK_MENU_ITEM(mainmenu[2].widget));
 
 
 	/*---- Status Bar ----*/
