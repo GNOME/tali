@@ -249,8 +249,8 @@ setup_game(GtkWidget *widget, gpointer data)
 
 	setupdialog = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
+	gtk_window_set_transient_for (GTK_WINDOW (setupdialog), GTK_WINDOW (data));
 	gtk_container_set_border_width(GTK_CONTAINER(setupdialog), 10);
-	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
 	gtk_window_set_title(GTK_WINDOW(setupdialog), _("GTali setup"));
         g_signal_connect(G_OBJECT(setupdialog), "delete_event",
                          G_CALLBACK(setupdialog_destroy), NULL);

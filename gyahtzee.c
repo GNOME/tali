@@ -376,6 +376,7 @@ about(GtkWidget *widget, gpointer data)
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 				 pixbuf);
+        gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
         gtk_widget_show (about);
 	return FALSE;
 }
@@ -490,7 +491,7 @@ GyahtzeeCreateMainWindow(void)
                          G_CALLBACK(quit_game), NULL);
 
 	/*---- Menus ----*/
-	gnome_app_create_menus(GNOME_APP(window), mainmenu);
+	gnome_app_create_menus_with_data(GNOME_APP(window), mainmenu, window);
 
 
 	/*---- Status Bar ----*/
