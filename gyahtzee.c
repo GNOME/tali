@@ -54,6 +54,12 @@
 #include "pix/gnome-dice-6.xpm"
 #include "pix/gnome-dice-none.xpm"
 
+/* Define a sensible alternative to ngettext if we don't have it. Note that
+ * this is only sensible in the context of gtali. */
+#ifndef HAVE_NGETTEXT
+#define ngettext(one,lots,n) gettext(lots)
+#endif
+
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
 static char *appID="gtali";
