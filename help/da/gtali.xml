@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appversion "2.6">
+  <!ENTITY manrevision "2.6">
+  <!ENTITY date "Feb 2004">
+  <!ENTITY app "<application>GNOME Tali</application>">
+  <!ENTITY appname "GNOME Tali">
+  <!ENTITY version "2.6">
+]>
+
+<article id="index" lang="da">
+  <articleinfo>
+   <title>GNOME Tali Dokumentation</title>
+
+    <publisher> 
+      <publishername>GNOME Documentation Project </publishername>
+    </publisher>
+  
+    &legal;
+  
+    <revhistory>
+      <revision>
+        <revnumber>&appname; Manual V&namrevision;</revnumber>
+        <date>&date;</date>
+        <revdescription>
+          <para>Converted from the original HTML by someone who doesn't speak Danish.</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+  
+    <releaseinfo>This manual describes version &appversion; of &appname;.
+    </releaseinfo>
+    <legalnotice>
+      <title>Feedback</title>
+      <para>To report a bug or make a suggestion regarding this game or
+      this manual, follow the directions in the <ulink
+      url="ghelp:gnome-feedback" type="help">GNOME Feedback Page</ulink>.
+      </para>
+    </legalnotice>
+  </articleinfo>
+
+
+  <indexterm zone="index">
+    <primary>GNOME Tali</primary>
+  </indexterm>
+
+  <sect1 id="Overview">
+    <title>Oversigt</title>
+    <para>
+    <application>Gnome tali</application> er en slags poker med
+    terninger and less money.  You roll five dice three times and try to create
+    the best &quot;hand.&quot;  Your two rerolls may include any or all of your
+    dice.
+    </para>
+  
+    <para>
+    <application>Gnome Tali</application> is very similar to terninge spillet Yahtzee, hvilket er et varemærke
+    tilhørende Hasbro, Inc.
+    </para>
+  </sect1>
+  
+  <sect1 is="Play">
+    <title>Kom igang</title>
+
+
+    <para>
+    When play starts, you see the results of your first throw of the dice.
+    </para>
+
+    <para>
+      <orderedlist>
+        <listitem>
+          <para>Click on the dice you wish to roll again and they will turn into
+	   pumpkins -- thanks Tigert :)</para>
+        </listitem>
+        <listitem>
+          <para>
+          When you have selected all the dice you wish to reroll, press
+	  the &quot;Roll!&quot; button.
+          </para>
+        </listitem>
+        <listitem><para>When you have a hand you like or have run out of chances to
+	   throw the dice, click on a row corresponding to what you think
+	   is your best scoring combination.  It is very possible to have
+	   a score of zero and if you click on the wrong row, you
+	   will be scored accordingly. (Say for example, you get
+	   yahtzee -- 5 of a kind -- and click on the large straight row,
+	   you will receive a zero in your large straigt score).
+        </listitem>
+      </orderedlist>
+    </para>
+
+    <para>
+You can only use each combination once, i.e. once you've entered
+something in a slot, you can't change the score later if you roll a
+better hand.
+    </para>
+  </sect1>
+ 
+  <sect1 id="Options">
+    <title>Funktioner</title>
+
+    <variablelist><title>Computermodstandere</title>
+      <varlistentry>
+        <term><guimenuitem>Pause mellem kast</guimenuitem></term>
+        <listitem>
+		 <para>Make the computer opponents pause between rolls of the
+			  dice so you can see what they are doing.  Slows down game
+			  play some.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Antal modstandere</term>
+        <listitem>
+		 <para>Select the number of computer opponents.  You are allowed a
+			  total of six human and computer players.  If you attempt to
+			  increase this number near the limit, the number of human players
+			  will be decreased to maintain only six total players.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <variablelist>
+      <title><guimenuitem>Spillernavne</guimenuitem></title>
+      <varlistentry>
+        <para>To change the names of the players just enter new
+          names in the boxes.</para>
+      </varlistentry>
+    </variablelist>
+  
+  </sect1>
+
+  <sect1 id="Strategy">
+    <title>Strategi</title>
+
+    <para>
+    Spil for at vinde!  En eller anden kan skrive en yahtzee strategidokument.
+    </para>
+
+  </sect1>
+
+</article>
+
