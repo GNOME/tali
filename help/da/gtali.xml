@@ -22,7 +22,7 @@
   
     <revhistory>
       <revision>
-        <revnumber>&appname; Manual V&namrevision;</revnumber>
+        <revnumber>&appname; Manual V&manrevision;</revnumber>
         <date>&date;</date>
         <revdescription>
           <para>Converted from the original HTML by someone who doesn't speak Danish.</para>
@@ -56,8 +56,8 @@
     </para>
   
     <para>
-    <application>Gnome Tali</application> is very similar to terninge spillet Yahtzee, hvilket er et varemærke
-    tilhørende Hasbro, Inc.
+    <application>Gnome Tali</application> is very similar to terninge spillet Yahtzee, hvilket er et varemÃ¦rke
+    tilhÃ¸rende Hasbro, Inc.
     </para>
   </sect1>
   
@@ -87,7 +87,7 @@
 	   a score of zero and if you click on the wrong row, you
 	   will be scored accordingly. (Say for example, you get
 	   yahtzee -- 5 of a kind -- and click on the large straight row,
-	   you will receive a zero in your large straigt score).
+	   you will receive a zero in your large straigt score).</para>
         </listitem>
       </orderedlist>
     </para>
@@ -112,7 +112,7 @@ better hand.
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Antal modstandere</term>
+        <term><guimenuitem>Antal modstandere</guimenuitem></term>
         <listitem>
 		 <para>Select the number of computer opponents.  You are allowed a
 			  total of six human and computer players.  If you attempt to
@@ -125,8 +125,10 @@ better hand.
     <variablelist>
       <title><guimenuitem>Spillernavne</guimenuitem></title>
       <varlistentry>
+        <listitem>
         <para>To change the names of the players just enter new
           names in the boxes.</para>
+        </listitem>
       </varlistentry>
     </variablelist>
   
