@@ -103,6 +103,7 @@ extern int FindWinner(void);
 
 /* Computer.c */
 extern void ComputerTurn(int player);
+extern void ComputerRolling(int player);
 
 /* Specific to a windowing system: gyahtzee.c/cyahtzee.c */
 extern void NewGame(void);

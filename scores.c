@@ -28,13 +28,24 @@
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
+#include <time.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
 #include <signal.h>
-#include <curses.h>
 #include <stdarg.h>
+
+#include <config.h>
+
+#if defined(USE_NCURSES) && !defined(RENAMED_NCURSES)
+#warning Using Ncurses header -- yay!
+#include <ncurses.h>
+#else
+#include <curses.h>
+#endif
 
 #include "yahtzee.h"
 #include "cyahtzee.h"
@@ -235,7 +246,7 @@ update_scorefile(void)
 	if (fp)
 		fclose(fp);
 
-#ifdef HAS_RENAME
+#ifdef HAVE_RENAME
 	if (rename(tmpfile, scorefile))
 	{
 		say("rename failed!");

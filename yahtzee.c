@@ -33,6 +33,7 @@
 #include <unistd.h>
 #include <time.h>
 
+#include <config.h>
 #include "yahtzee.h"
 
 char *ProgramHeader = "Yahtzee Version 2.00 (c)1998 SDH, (c)1992 by zorst";
@@ -485,7 +486,7 @@ calc_random(void)
                 
                 printf("%-35s", FieldLabels[i]);
                 
-		printf(" %10d %20d\n", table[i],
+		printf(" %10d %20ld\n", table[i],
                        (long) (table[i] * 100) / nroll);
 	}
 

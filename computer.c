@@ -29,6 +29,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <config.h>
 #include "yahtzee.h"
 
 
@@ -47,34 +48,34 @@ typedef struct
 
 static DiceRank bc_table[NUM_FIELDS];
 
-void MarkAllRerolls(DiceRank *t, int val)
+static void MarkAllRerolls(DiceRank *t, int val)
 {
   int i;
   for (i=0; i<5; i++)
     t->rerolls[i] = val;
 }
 
-inline void TagReroll(DiceRank *t, int i)
+static inline void TagReroll(DiceRank *t, int i)
 {
   t->rerolls[i] = 1;
 }
 
-inline void ClearReroll(DiceRank *t, int i)
+static inline void ClearReroll(DiceRank *t, int i)
 {
   t->rerolls[i] = 0;
 }
 
-inline void ClearRerolls(DiceRank *t)
+static inline void ClearRerolls(DiceRank *t)
 {
   MarkAllRerolls(t,0);
 }
 
-inline void TagRerolls(DiceRank *t)
+static inline void TagRerolls(DiceRank *t)
 {
   MarkAllRerolls(t,1);
 }
 
-inline int NeedsReroll(DiceRank *t)
+static inline int NeedsReroll(DiceRank *t)
 {
         int i, j=0;
         for (i=0; i<5; i++)
@@ -84,7 +85,7 @@ inline int NeedsReroll(DiceRank *t)
 }
 
 
-char *RerollString(DiceRank *t)
+static char *RerollString(DiceRank *t)
 {
         static char dice_string[11];
         int i;
@@ -128,7 +129,7 @@ static int throwaway[NUM_FIELDS] =
 	0,      /* Chance */
 };
 
-void
+static void
 BuildTable(int player)
 {
 	int i;
@@ -606,7 +607,7 @@ ComputerRolling(int player)
 **	cause higher choices tend to be easier to better
 */
 
-void
+static void
 ComputerScoring(int player)
 {
 	int i;
@@ -657,8 +658,6 @@ ComputerScoring(int player)
 void 
 ComputerTurn(int player)
 {
-  int rerolls=0;
-
         if (players[player].finished)
                 return;
 

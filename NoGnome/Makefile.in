@@ -1,6 +1,6 @@
-#####################################################################################################
+############################################################################
 # Setup paths & install options
-#####################################################################################################
+############################################################################
 srcdir = @srcdir@
 VPATH = @srcdir@
 prefix=@prefix@
@@ -8,16 +8,16 @@ BINDIR=$(prefix)/bin
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = $(INSTALL) -o root -g games -m @install_setgid@
 
-#####################################################################################################
+############################################################################
 # Setup compiler and flags
-#####################################################################################################
+############################################################################
 CC=@CC@
 CFLAGS=@CFLAGS@ @DEFS@
-CPPFLAGS=@CPPFLAGS@
-LDFLAGS=@LDFLAGS@
-LIBS=@LIBS@
+CPPFLAGS=@CPPFLAGS@ -I./ @CURSES_INCLUDEDIR@
+LDFLAGS=@LDFLAGS@ 
+LIBS=@LIBS@ @CURSES_LIBS@
 
-#####################################################################################################
+############################################################################
 OBJ = ../computer.o ../cyahtzee.o ../scores.o ../yahtzee.o
 
 yahtzee: $(OBJ)
@@ -27,11 +27,35 @@ install:
 	echo "Installing yahtzee binary in $(BINDIR)..."
 	$(INSTALL_PROGRAM) yahtzee $(BINDIR)
 
-clean:
-	@RM@ -rf $(OBJ) yahtzee core *~ config.cache config.log
+clean:	
+	@RM@ -rf ../*.o yahtzee core
 
+# Razzafrazzin SunOS compiles ../*.c into ./*.o 
+.c.o:	../yahtzee.h ../scores.h ../cyahtzee.h
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+
+############################################################################
+# Use these at your own risk.
+############################################################################
 clear:	clean
-	@RM@ -rf config.cache config.log config.status Makefile
+	@RM@ -rf ../Makefile ../Makefile.in \
+	   `find . -name config.\* -not -name config.h.in -not -name config.status -print`
 
-$(OBJ): ../yahtzee.h ../scores.h ../cyahtzee.h
+configure:  configure.in acconfig.h curses.m4
+	cd . && autoheader
+	cd . && autoconf
+
+Makefile: configure Makefile.in
+	cd . && sh ./config.status --recheck
+	cd . && sh ./config.status
+
+tar:	clear
+	cd ../../ && tar -cvz --exclude CVS \
+	   --exclude Makefile \
+	   --exclude config.status \
+	   --exclude .cvsignore  \
+	   --exclude .directory  \
+	   --exclude .  \
+	   --exclude .deps -f /tmp/gyahtzee.tgz \
+	    gyahtzee
 

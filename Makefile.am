@@ -42,10 +42,7 @@ gyahtzee_LDADD =				\
 	$(GNOMEUI_LIBS)				\
 	$(INTLLIBS)
 
-# Need gnome crap for libintl headers?
 cyahtzee_LDADD = \
-	$(GNOME_LIBDIR)				\
-	$(GNOMEUI_LIBS)				\
 	$(CURSES_LIBS) 				\
 	$(INTLLIBS)
 

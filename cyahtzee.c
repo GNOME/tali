@@ -28,14 +28,22 @@
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
 #include <signal.h>
-#include <curses.h>
 #include <stdarg.h>
 
+#if defined(USE_NCURSES) && !defined(RENAMED_NCURSES)
+#include <ncurses.h>
+#else
+#include <curses.h>
+#endif
+
+#include <config.h>
 #include "yahtzee.h"
 #include "cyahtzee.h"
 #include "scores.h"
@@ -43,29 +51,35 @@
 
 static char *DiceImage[6][3] =
 {
-	"     ",
-	"  o  ",
-	"     ",
+	{ "     ",
+	  "  o  ",
+	  "     ",
+	},
 
-	"o    ",
-	"     ",
-	"    o",
+	{ "o    ",
+	  "     ",
+	  "    o"
+	},
 
-	"o    ",
-	"  o  ",
-	"    o",
+	{ "o    ",
+	  "  o  ",
+	  "    o"
+	},
 
-	"o   o",
-	"     ",
-	"o   o",
+	{ "o   o",
+	  "     ",
+	  "o   o"
+	},
 
-	"o   o",
-	"  o  ",
-	"o   o",
+	{ "o   o",
+	  "  o  ",
+	  "o   o"
+	},
 
-	"o   o",
-	"o   o",
-	"o   o"
+	{ "o   o",
+	  "o   o",
+	  "o   o"
+	}
 };
 
 static int longest_header;
@@ -73,7 +87,7 @@ static int numlines;
 
 static void abort_program(char *msg);
 
-void
+static void
 init(void)
 {
 	int i;
@@ -116,7 +130,7 @@ static void fill_box(int x,int y, int h, int w)
 	}
 }
 
-void
+static void
 setup_screen(void)
 {
 	int i;
@@ -147,6 +161,7 @@ setup_screen(void)
 	refresh();
 }
 
+static void
 yend(void)
 {
 	move(2, 0);
@@ -159,9 +174,7 @@ void
 abort_program(char *msg)
 {
 	yend();
-	putchar('\n');
-	printf(msg);
-	putchar('\n');
+	fprintf(stderr,"\n%s\n",msg);
 	exit(1);
 }
 
@@ -174,8 +187,11 @@ say(char *fmt, ...)
 	va_start(ap, fmt);
 	vsprintf(buf, fmt, ap);
 	va_end(ap);
+
+	/* Keep the color scheme going, clrtoeol() fills black */
+	fill_box(2,10,COLS-10,1);
+
 	mvaddstr(2, 10, buf);
-	clrtoeol();
 	refresh();
 }
 
@@ -184,21 +200,22 @@ say(char *fmt, ...)
 **	a human answer.  in that case, we ask the computer for the die to roll
 **	or the place to put it.  then the human can decide what to do.
 */
-char *
+static char *
 query(int player, int question, char *prompt, char *ans, int len)
 {
 	int i;
 	char c;
 	int xpos;
-	char foo[2];
 
 	xpos = 10 + strlen(prompt);
 
         cbreak();
         noecho();
         
+	/* Keep the color scheme going, clrtoeol() fills black */
+	fill_box(2,10,COLS-10,1);
+
         mvaddstr(2, 10, prompt);
-        clrtoeol();
         refresh();
         
         i = 0;
@@ -306,7 +323,7 @@ ShowPlayer(int num, int field)
 	refresh();
 }
 
-void
+static void
 setup_board(void)
 {
         char buf[5] = "( ) ";
@@ -326,10 +343,8 @@ setup_board(void)
 
 	TotalsColorOn();
 	move(11, 9);
-	addch(' ');
 	addstr(FieldLabels[F_UPPERT]);
 	move(12, 9);
-	addch(' ');
 	addstr(FieldLabels[F_BONUS]);
 	TotalsColorOff();
 
@@ -342,10 +357,8 @@ setup_board(void)
 
 	TotalsColorOn();
 	move(20, 9);
-	addch(' ');
 	addstr(FieldLabels[F_LOWERT]);
 	move(21, 9);
-	addch(' ');
 	addstr(FieldLabels[F_GRANDT]);
 	TotalsColorOff();
 
@@ -401,7 +414,7 @@ setup_board(void)
 	refresh();
 }
 
-int
+static void
 showoff(int p, short so)
 {
 	move(4, 10 + longest_header + (p * MAX_NAME_LENGTH));
@@ -422,17 +435,13 @@ showoff(int p, short so)
 }
 
 
-void
+static void
 HumanTurn(int player)
 {
 	int i;
 	char buf[50];
 	char *cp;
-	char *num;
 	int done;
-	int field;
-	int dummy;
-	int numroll;
 
 	while ( NumberOfRolls<3 ) {
 
@@ -512,7 +521,7 @@ handle_play(int player)
 }
 
 
-void
+static void
 PlayNewGame(void)
 {
 	int i;
@@ -548,13 +557,12 @@ PlayNewGame(void)
 }
 
 
-void
+static void
 show_top_scores(void)
 {
 	FILE *fp;
 	char scorefile[200];
 	int i, j, k, score;
-	char stuff[1024];
 	char name[32], date[32];
 
 	printf("%s...\n",_("Yahtzee top scores"));
@@ -595,20 +603,22 @@ show_top_scores(void)
 	getchar();
 }
 
-void
-signal_trap()
+static void
+signal_trap(int ignored)
 {
 	yend();
 	exit(0);
 }
 
-set_signal_traps()
+static void
+set_signal_traps(void)
 {
 	signal(SIGHUP, signal_trap);
 	signal(SIGINT, signal_trap);
 	signal(SIGQUIT, signal_trap);
 }
 
+int
 main(int argc, char **argv)
 {
 	char num[10];
@@ -675,7 +685,7 @@ main(int argc, char **argv)
 			printf(_("What is the name of player #%d ? "), i + 1);
 			fflush(stdout);
 
-                        players[i].name = malloc(MAX_NAME_LENGTH);
+                        players[i].name = (char *)malloc(MAX_NAME_LENGTH);
 
 			fgets(players[i].name, MAX_NAME_LENGTH, stdin);
 
@@ -725,5 +735,5 @@ main(int argc, char **argv)
 	yend();
 	show_top_scores();
 
-	exit(0);
+	return 0;
 }

@@ -1,7 +1,7 @@
 Compiling without gnome:
 ------------------------
 
-Change to the directory NoGnome and do ./configure from there.
+Change to the directory NoGnome and do ./configure and make from there.
 
 
 
