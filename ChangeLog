@@ -1,3 +1,9 @@
+2003-05-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* pix/Makefile.am: Imported gnome-die?.png from the gnome-desktop
+	module as per request. They aren't actually used, but someone may
+	have used them as an icon and they need a new home.
+
 2003-05-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* pix/gnome-dice-?.xpm: Reduced the colours used by each image to
