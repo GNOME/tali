@@ -203,7 +203,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	button = gtk_check_button_new_with_label (
                          _("Delay between rolls") );
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_state( GTK_TOGGLE_BUTTON(button),DoDelay);
+        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),DoDelay);
 	gtk_signal_connect (GTK_OBJECT(button), 
                             "clicked", (GtkSignalFunc)set_delay, NULL);
 	gtk_widget_show (button);
@@ -212,7 +212,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	button = gtk_check_button_new_with_label (
                          _("Show thoughts during turn") );
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_state( GTK_TOGGLE_BUTTON(button),
+        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
                                      DisplayComputerThoughts);
 	gtk_signal_connect (GTK_OBJECT(button), 
                             "clicked", (GtkSignalFunc)set_thoughts, NULL);
