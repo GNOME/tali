@@ -489,7 +489,7 @@ HumanTurn(int player)
                 else if (i==SLOT_USED)
                         query(player, 2, 
 			      _("Already used! Where do you want"
-				" to put that? "),
+				" to put that?"),
                               buf, sizeof(buf));
 	}
 
@@ -694,7 +694,7 @@ main(int argc, char **argv)
 		}
 
 		if (NumberOfHumans == MAX_NUMBER_OF_PLAYERS) {
-
+			/* translator note: when num of computer player = 0 */
 			printf(_("Boo hoo... I can't play...\n"));
 
 		} else {
@@ -715,6 +715,7 @@ main(int argc, char **argv)
                 NumberOfPlayers = NumberOfHumans + NumberOfComputers;
 
 		if (NumberOfPlayers == 0) {
+			/* translator note: warning message when num of players == 0 */
 			printf(_("Well, why did you run this anyways???\n\n"));
 			exit(8);
 		}

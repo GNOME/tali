@@ -1,3 +1,7 @@
+2002-04-30  Abel Cheung  <maddog@linux.org.hk>
+
+	* cyahtzee.c: Add translator note for some strings.
+
 2002-04-28  Andreas Persenius  <ndap@telia.com>
 
 	* setup.c: Replace gtk_signal_connect() with g_signal_connect().
