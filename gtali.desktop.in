@@ -1,6 +1,6 @@
 [Desktop Entry]
 _Name=GTali
-_Comment=Gnome Dice game
+_Comment=Dice game
 Exec=gtali
 Icon=gnome-gtali.png
 Terminal=0
