@@ -34,19 +34,6 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
-#define GY_NEW 0  /* Just so I can play with stuff w/o breaking the dist */
-
-#if GY_NEW
-guint  gtk_signal_new			  (const gchar	       *name,
-					   GtkSignalRunType	signal_flags,
-					   GtkType		object_type,
-					   guint		function_offset,
-					   GtkSignalMarshaller	marshaller,
-					   GtkType		return_val,
-					   guint		nparams,
-					   ...);
-#endif
-
 void
 update_score_cell(GtkCList * clist, gint row, gint col, int val)
 {
@@ -57,38 +44,8 @@ update_score_cell(GtkCList * clist, gint row, gint col, int val)
         gtk_clist_set_text(clist,row,col,buf);
 }
 
-#if 0
-/* This version doesn't do a thing */
-void
-ShowoffPlayer(GtkCList * clist, int player, int so)
-{
-        gint column;
-        GtkButton *button;
-        
-        g_return_if_fail (clist != NULL);
-        
-        column = player + 1;
-        
-        if (column < 0 || column >= clist->columns)
-                return;
-        
-        button = GTK_BUTTON(clist->column[column].button);
 
-        if (so)
-                gtk_clist_column_title_active (clist, column);
-        else
-                gtk_clist_column_title_passive (clist, column);
-
-        gtk_widget_draw(GTK_WIDGET(button),NULL);
-}
-#elif 0
-/* This one really does nothing */
-void
-ShowoffPlayer(GtkCList * clist, int player, int so)
-{
-}
-#else
-/* This version is full of cheats.  Goes into gtk code, access 
+/* This is full of cheats.  Goes into gtk code, access 
  * structures that would probably be private under C++.  Works now 
  * because clist*title_pass/active() doesn't do a redraw, may have to be
  * modified later. */
@@ -107,27 +64,17 @@ ShowoffPlayer(GtkCList * clist, int player, int so)
         
         button = GTK_BUTTON(clist->column[column].button);
 
-        gtk_clist_column_title_active(clist, column);
-
         if (so) {
                 button->button_down = TRUE;
-#if 1
-                /* Press it */
                 gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_ACTIVE);
-#else
-                /* Lighten it */
-                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_PRELIGHT);
-#endif
         } else {
                 button->button_down = FALSE;
                 gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_NORMAL);
         }
   
         gtk_widget_draw(GTK_WIDGET(button),NULL);
-        gtk_clist_column_title_passive(clist, column);
 
 }
-#endif
 
 static gint LastScoredRow = -1;
 
@@ -161,11 +108,6 @@ select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
 	case (R_BLANK1):
 	case (R_GTOTAL):
 	case (R_LTOTAL):
-#if GY_NEW
-                g_print("Selection should have been blocked!!!\n");
-                gtk_signal_emit_stop_by_name(GTK_OBJECT(clist), "select_row");
-                return TRUE;
-#endif
                 break;
 
 	default:
@@ -183,11 +125,6 @@ select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
                                 NextPlayer();
                                 return TRUE;
                         }
-#if GY_NEW
-                } else {
-                        /* Don't want to unselect row? */
-                        return FALSE;
-#endif
                 }
 	}
         
@@ -195,83 +132,6 @@ select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
 
         return FALSE;
 }
-
-#if GY_NEW
-static gint
-select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
-{
-#if GY_NEW
-        int field = row;
-
-	if (!event) 
-                return FALSE;
-
-        LastScoredRow = -1;
-
-	switch (row) {
-
-	case (R_UTOTAL):	/* Can't select total/blank rows */
-	case (R_BONUS):
-	case (R_BLANK1):
-	case (R_GTOTAL):
-	case (R_LTOTAL):
-                break;
-
-	default:
-                /* Adjust for Upper Total / Bonus entries */
-                if (field >= NUM_UPPER)
-                        field -= 3;
-
-                if ( (field < NUM_FIELDS) && 
-		     (!players[CurrentPlayer].finished)  ) {
-                        if (play_score(CurrentPlayer,field)==SLOT_USED) {
-                                say(_("Already used! " 
-				      "Where do you want to put that?"));
-                        } else {
-			        LastScoredRow = row;
-                                NextPlayer();
-                                return FALSE;
-                        }
-                }
-	}
-
-        g_print("After: Selection should have been blocked!!!\n");
-        gtk_signal_emit_stop_by_name(GTK_OBJECT(clist), "select_row");
-        return TRUE;
-#else
-	return FALSE;
-#endif
-}
-#endif /* GY_NEW */
-
-
-/* This won't work.  Can't tell if we're being called to deselect 
-   selected row  prior to selection of new row or just to deselect 
-   current row and leave nothing selected */
-/* There's no real reason to have this function since I've taken care of the
- * problem, but I'll leave it here anyways because ... I dunno, just because.
- * -- pschwan@cmu.edu */
-#if GY_NEW
-static gint
-unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
-{
-#if GY_NEW
-	if (!event) 
-                return FALSE;
-
-        /* Multiple humans need to sometimes select score rows that are
-         * highlighted */
-        if (row==LastScoredRow) {
-                LastScoredRow = -1;
-                select_row(clist, row, col, event);
-        }
-
-        return FALSE;
-#else
-        return FALSE;
-#endif
-}
-#endif /* GY_NEW */
 
 
 GtkWidget * create_clist(void)
@@ -320,10 +180,6 @@ GtkWidget * create_clist(void)
                            GTK_SIGNAL_FUNC(select_row), NULL);
 	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
 			   GTK_SIGNAL_FUNC(select_row), NULL);
-#if GY_NEW
-/*	gtk_signal_connect_after(GTK_OBJECT(clist), "select_row",
-                           GTK_SIGNAL_FUNC(select_row2), NULL); */
-#endif
 	return clist;
 }
 
@@ -365,3 +221,8 @@ void setup_clist(GtkWidget *clist)
         gtk_clist_thaw(GTK_CLIST(clist));
 
 }	
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

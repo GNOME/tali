@@ -257,3 +257,8 @@ update_scorefile(void)
 
 	lock(scorefile, L_UNLOCK);
 }
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

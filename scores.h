@@ -17,3 +17,7 @@ int read_score(FILE *fp, char *name, char *date, int *score);
 
 #endif /* _scores_H_ */
 
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

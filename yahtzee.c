@@ -562,3 +562,8 @@ calc_random(void)
 	}
 
 }
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

@@ -68,4 +68,7 @@
 
 #endif /* _CYAHTZEE_H */
 
-
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

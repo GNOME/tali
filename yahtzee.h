@@ -135,3 +135,7 @@ enum { SCORE_OK=0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 #endif /* _yahtzee_H_ */
 
 
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

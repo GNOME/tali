@@ -735,3 +735,8 @@ main(int argc, char **argv)
 
 	return 0;
 }
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

@@ -1,3 +1,13 @@
+1999-04-10  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
+
+	* clist.c (ShowoffPlayer): Setting the column heading buttons to
+	active/passive seems to force a redraw.  Leave as passive always. 
+
+	* *.c & *.h: Set default emacs tab width to 8 :)
+	             Also clean out unused #if's
+	
+	* Add & populate help directory.
+
 1999-03-29  Tuomas Kuosmanen  <tigert@gimp.org>
 
 	* pix/gnome-gtali.png: Replaced the icon with one that matches

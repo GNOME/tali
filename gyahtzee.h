@@ -36,3 +36,8 @@ extern const struct poptOption yahtzee_options[];
 extern int GyahtzeeAbort;
 
 #endif /* _Gyahtzee_H_ */
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

@@ -312,5 +312,7 @@ setup_game(GtkWidget *widget, gpointer data)
         return FALSE;
 }
 
-
-
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   

@@ -433,30 +433,6 @@ GnomeUIInfo mainmenu[] = {
 	GNOMEUIINFO_END
 };
 
-#ifdef INCLUDE_UNUSED_FUNCS
-/* Show and hide each pixmap once on init, w/o this, see flicker near
- * File entry in menu as pixmaps are shown the first time */
-static void
-ExerciseAllPixmaps()
-{
-        int i,j;
-        
-        for (j=NUMBER_OF_PIXMAPS; j>0; --j) {
-                
-                for (i=0; i<NUMBER_OF_DICE; i++) {
-
-                        DiceValues[i].val = j;
-                        
-                        UpdateDie(i);
-
-                        YahtzeeIdle();
-
-                }
-                
-        }
-}
-#endif /* INCLUDE_UNUSED_FUNCS */
-
 
 static void
 LoadDicePixmaps(void)
@@ -619,3 +595,8 @@ main (int argc, char *argv[])
         
 	return 0;
 }
+
+/* Arrgh - lets all use the same tabs under emacs: 
+Local Variables:
+tab-width: 8
+*/   
