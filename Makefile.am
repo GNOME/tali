@@ -45,9 +45,11 @@ ctali_LDADD = \
 	$(CURSES_LIBS) 				\
 	$(INTLLIBS)
 
-EXTRA_DIST = gtali.desktop README AUTHORS
+EXTRA_DIST = gtali.desktop.in README AUTHORS
 
-Games_DATA = gtali.desktop
+Games_in_files = gtali.desktop.in
+Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
