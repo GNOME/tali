@@ -291,6 +291,15 @@ gnome_modify_dice( GtkWidget *widget, GdkEventButton *event, gpointer data )
         /* printf("Pressed die: %d. NumberOfRolls=%d\n",
                tmp - DiceValues + 1, NumberOfRolls); */
 
+        /* Stop play when player is marked finished */
+	if (players[CurrentPlayer].finished)
+                return TRUE;
+
+        if (NumberOfRolls >= NUM_ROLLS) {
+                say(_("You're only allowed three rolls! Select a score box."));
+                return TRUE;
+        }
+
 #ifdef DEBUG
 	if (event->state & GDK_SHIFT_MASK)
 	  {
@@ -316,7 +325,7 @@ gnome_modify_dice( GtkWidget *widget, GdkEventButton *event, gpointer data )
 	    }
 	    
 	    tmp->sel = 1 - tmp->sel;
-        
+
 	    UpdateDiePixmap(tmp);
 	  }
 
@@ -609,7 +618,15 @@ main (int argc, char *argv[])
         YahtzeeInit();
 
 	/* Create gnome client */
-        gnome_init(appID, &GyahtzeeParser, argc, argv, 0, NULL);
+        gnome_init_with_popt_table(appID, VERSION, argc, argv,
+				   yahtzee_options, 0, NULL);
+
+	if (!NumberOfComputers)
+	  NumberOfComputers = 
+	    gnome_config_get_int("/gyahtzee/Preferences/NumberOfComputerOpponents=5");
+	if (!NumberOfHumans)
+	  NumberOfHumans = 
+	    gnome_config_get_int("/gyahtzee/Preferences/NumberOfHumanOpponents=1");
 
 	/* For some options, we don't want to play a game */
 	if (!GyahtzeeAbort) {

@@ -30,7 +30,7 @@ extern void ShowoffPlayer(GtkCList * clist, int player, int so);
 
 /* setup.c */
 extern gint setup_game(GtkWidget *widget, gpointer data);
-extern struct argp GyahtzeeParser;
+extern const struct poptOption yahtzee_options[];
 
 /* gyahtzee.c */
 extern int GyahtzeeAbort;

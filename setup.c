@@ -33,8 +33,6 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
-static error_t parse_an_arg (int key, char *arg, struct argp_state *state);
-
 static gint setupdialog_destroy(GtkWidget *widget, gint mode);
 static GtkWidget *setupdialog = NULL;
 static GtkWidget *HumanSpinner, *ComputerSpinner;
@@ -43,75 +41,39 @@ static GtkObject *HumanAdj, *ComputerAdj;
 static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans    = -1;
 
-/* This describes all the arguments we understand.  */
-static struct argp_option options[] =
+static void
+parse_an_arg (poptContext ctx,
+	      const struct poptOption *opt,
+	      const char *arg, void *data)
 {
-  { NULL, 'd', NULL, 0, N_("Delay computer moves"), 0 },
-  { NULL, 's', NULL, 0, N_("Show high scores and exit"), 0 },
-  { NULL, 'r', NULL, 0, N_("Calculate random die throws (debug)"), 0 },
-  { NULL, 'n', N_("NUMBER"), 0, N_("Number of computer opponents"), 1 },
-  { NULL, 'p', N_("NUMBER"), 0, N_("Number of human opponents"), 1 },
-  { NULL, 't', NULL, 0, N_("Display computer thoughts"), 0 },
 
-  { NULL, 0, NULL, 0, NULL, 0 }
-};
-
-/* Our parser.  */
-struct argp GyahtzeeParser =
-{
-  options,
-  parse_an_arg,
-  NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL
-};
-
-
-static error_t
-parse_an_arg (int key, char *arg, struct argp_state *state)
-{
-        static int nc_set=0, nh_set=0;
-
-	switch (key)
+	switch (opt->shortName)
 	{
-	case 'd':
-                DoDelay = 1;
-		break;
-	case 's':
-                OnlyShowScores = 1;
-		break;
-	case 'n':
-		nc_set = 1;
-		NumberOfComputers = atoi (arg);
-		break;
-	case 'p':
-		nh_set = 1;
-		NumberOfHumans = atoi (arg);
-		break;
 	case 'r':
                 calc_random();
                 GyahtzeeAbort = 1;
 		break;
-	case 't':
-		DisplayComputerThoughts = 1;
-		break;
-	case ARGP_KEY_SUCCESS:
-		if (!nc_set)
-                        NumberOfComputers = 
-                                gnome_config_get_int("/gyahtzee/Preferences/NumberOfComputerOpponents=5");
-		if (!nh_set)
-                        NumberOfHumans = 
-                                gnome_config_get_int("/gyahtzee/Preferences/NumberOfHumanOpponents=1");
-		break;
-		
 	default:
-		return ARGP_ERR_UNKNOWN;
 	}
-	
-	return 0;
+
+	return;
 }
+
+static struct poptOption cb_options[] = {
+  {NULL, '\0', POPT_ARG_CALLBACK, &parse_an_arg, 0},
+  {NULL, 'r', POPT_ARG_NONE, &GyahtzeeAbort, 0, N_("Calculate random die throws (debug)"), NULL},
+  {NULL, '\0', 0, NULL, 0}
+};
+
+const struct poptOption yahtzee_options[] = {
+  {NULL, '\0', POPT_ARG_INCLUDE_TABLE, cb_options, 0, NULL, NULL},
+  {NULL, 'd', POPT_ARG_NONE, &DoDelay, 0, N_("Delay computer moves"), NULL},
+  {NULL, 's', POPT_ARG_NONE, &OnlyShowScores, 0, N_("Show high scores and exit"), NULL},
+  {NULL, 't', POPT_ARG_NONE, &DisplayComputerThoughts, 0, N_("Display computer thoughts"), NULL},
+  {NULL, 'n', POPT_ARG_INT, &NumberOfComputers, 0, N_("Number of computer opponents"), N_("NUMBER")},
+  {NULL, 'p', POPT_ARG_INT, &NumberOfHumans, 0, N_("Number of human opponents"), N_("NUMBER")},
+  {NULL, '\0', 0, NULL, 0}
+};
 
 static void
 WarnNumPlayersChanged (void)
