@@ -351,7 +351,7 @@ say(char *fmt, ...)
 static gint
 about(GtkWidget *widget, gpointer data)
 {
-        GtkWidget *about;
+	static GtkWidget *about = NULL;
         const gchar *authors[] = {
 		N_("Scott Heavner"),
 		N_("Orest Zborowski - Curses Version (C) 1992"),
@@ -364,7 +364,12 @@ about(GtkWidget *widget, gpointer data)
         gchar *translator_credits = _("translator_credits");
 	GdkPixbuf *pixbuf = NULL;
         
-	{
+
+	if (about != NULL) {
+	  	gtk_window_present (GTK_WINDOW(about));
+		return FALSE;
+	}
+        {
 		int i=0;
 		while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
 	}
@@ -380,6 +385,7 @@ about(GtkWidget *widget, gpointer data)
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 				 pixbuf);
         gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
+	g_signal_connect (G_OBJECT (about), "destroy", G_CALLBACK (gtk_widget_destroyed), &about);
         gtk_widget_show (about);
 	return FALSE;
 }
@@ -387,7 +393,13 @@ about(GtkWidget *widget, gpointer data)
 void
 ShowHighScores(void)
 {
-        gnome_scores_display (appName, appID, NULL, lastHighScore);
+	GtkWidget *dialog;
+
+	dialog = gnome_scores_display (appName, appID, NULL, lastHighScore);
+	if (dialog != NULL) {
+		gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(window));
+		gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+	}
 }
 
 static gint 

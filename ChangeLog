@@ -1,3 +1,9 @@
+2002-11-22  Tim Musson  <trmusson@ihug.co.nz>
+
+	* gyahtzee.c: (about), (ShowHighScores): No more multiple About
+	dialogs, and Score dialog is now modal. (#97320)
+	* setup.c: (setup_game): gtk_window_present existing Prefs dialog.
+
 2002-11-25  Ross Burton  <ross@burtonini.com>
 
 	* Makefile.am: Fixed the GConf install location, thanks to Loz

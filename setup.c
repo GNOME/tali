@@ -244,7 +244,7 @@ setup_game(GtkWidget *widget, gpointer data)
         int i;
 
         if (setupdialog) {
-                gdk_window_raise(setupdialog->window);
+                gtk_window_present (GTK_WINDOW(setupdialog));
                 return FALSE;
         }
 
