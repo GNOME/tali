@@ -1,3 +1,8 @@
+1999-08-09  Robert Brady  <rwb197@ecs.soton.ac.uk
+
+	* clist.c : applied Irix compiling fix from David Kaelbling 
+	  <drk@sgi.com> : [bug #1781].
+
 1999-04-18  Scott D. Heavner  <sdh@fishmonger.dont.mail.me.here.net>
 
 	* NoGnome/Makefile.in: Update to reference config.h.in

@@ -206,10 +206,11 @@ gyahtzee_append_clist(GtkWidget *clist, char *tmp[], char *firstcol)
 void setup_clist(GtkWidget *clist)
 {
         char *buf1 = "";  /* Enough for 6 players */
-        char *tmp[] = { 0, buf1, buf1, buf1, buf1, buf1, buf1, buf1 };
-
+        char *tmp[] = { 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL };
         int i;
         
+       tmp[1] = tmp[2] = tmp[3] = tmp[4] = tmp[5] = tmp[6] = tmp[7] = buf1;
+
         gtk_clist_freeze(GTK_CLIST(clist));
         gtk_clist_clear(GTK_CLIST(clist));
         
