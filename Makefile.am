@@ -64,4 +64,4 @@ install-data-local:
 	-touch $(DESTDIR)$(scoredir)/gtali.scores
 	-chown games.games $(DESTDIR)$(scoredir)/gtali.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
-	-chgrp games $(DESTDIR)$(bindir)/gtali && chmod 2111 $(DESTDIR)$(bindir)/gtali
+	-chgrp games $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali
