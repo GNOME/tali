@@ -1,4 +1,6 @@
-<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 <!ENTITY version "1.2.0"> <!-- replace with application version -->
 ]>
 
@@ -16,7 +18,7 @@
 
 <article id="index"> <!-- please do not change the id -->
 
-  <artheader>
+  <articleinfo>
     <title>GNOME Tali Documentation</title>
     <copyright>
       <year>2001</year>
@@ -93,7 +95,7 @@
        This is version 1.0 of the Gnome Tali manual.
     </releaseinfo>
 
-  </artheader>
+  </articleinfo>
 
  <!-- ============= Document Body ============================= -->
 
@@ -135,10 +137,15 @@
     <figure id="shot1">
       <title>Gnome Tali in action</title>
       <screenshot>
-        <screeninfo>Gnome Tali main window screenshot</screeninfo>
-	<graphic format="png" fileref="figures/mainwindow"
-	srccredit="Trevor Curtis">
-	</graphic>
+	 <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/mainwindow.png" format="PNG"
+	srccredit="Trevor Curtis"/>
+	</imageobject>
+    <textobject> 
+      <phrase>Gnome Tali main window screenshot.</phrase> 
+    </textobject> 
+  </mediaobject>
       </screenshot>
     </figure>
 
@@ -181,10 +188,15 @@
     <figure id="shot2">
       <title>Gnome Tali preferences</title>
       <screenshot>
-        <screeninfo>Gnome Tali preferences dialog box</screeninfo>
-	<graphic format="png" fileref="figures/preferences"
-	srccredit="Trevor Curtis">
-	</graphic>
+	 <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/preferences.png" format="PNG"
+	srccredit="Trevor Curtis"/>
+	</imageobject>
+    <textobject> 
+      <phrase>Gnome Tali preferences dialog box.</phrase> 
+    </textobject> 
+  </mediaobject>
       </screenshot>
     </figure>
       
