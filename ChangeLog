@@ -1,3 +1,8 @@
+2004-01-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c (about): Removed the empty entry in the credits list
+	to keep non-C locale people happy. Fixes bug #131883.
+
 2003-11-20  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am: Patch to let schema files be isntalled

@@ -377,8 +377,8 @@ about (GtkWidget *widget, gpointer data)
 {
 	static GtkWidget *about = NULL;
         const gchar *authors[] = {
+                N_("GNOME version (1998):"),
 		"Scott Heavner",
-		"",
 		N_("Curses version (1992):"),
 		"Orest Zborowski",
 		NULL
