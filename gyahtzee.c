@@ -657,6 +657,17 @@ main (int argc, char *argv[])
                 g_error_free (err);
                 err = NULL;
         }
+
+        if (NumberOfHumans < 0)
+                NumberOfHumans = 0;
+        if (NumberOfComputers < 0)
+                NumberOfComputers = 0;
+        
+        if (NumberOfHumans > MAX_NUMBER_OF_PLAYERS)
+                NumberOfHumans = MAX_NUMBER_OF_PLAYERS;
+        if ((NumberOfHumans + NumberOfComputers) > MAX_NUMBER_OF_PLAYERS)
+                NumberOfComputers = MAX_NUMBER_OF_PLAYERS - NumberOfHumans;
+
         /* We ignore errors for these, they're boolean so it will be valid 
          * data even if not the right data and there's nothing else we
          * can do (if it's a systematic gconf problem, the calls above
