@@ -92,15 +92,15 @@ WarnNumPlayersChanged (void)
 {
         GtkWidget *mb;
 
-        mb = gtk_message_dialog_new(NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
-                                    GTK_MESSAGE_INFO,
-                                    GTK_BUTTONS_OK,
-                                    _("Current game will complete" 
-                                      " with original number of players."));
-        gtk_window_set_position(GTK_WINDOW(mb), GTK_WIN_POS_MOUSE);
+        mb = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+                                     GTK_MESSAGE_INFO,
+                                     GTK_BUTTONS_OK,
+                                     _("Current game will complete" 
+                                       " with original number of players."));
+        gtk_window_set_position (GTK_WINDOW (mb), GTK_WIN_POS_MOUSE);
         gtk_dialog_set_has_separator (GTK_DIALOG (mb), FALSE);
-        gtk_dialog_run(GTK_DIALOG(mb));
-        gtk_widget_destroy(mb);
+        gtk_dialog_run (GTK_DIALOG (mb));
+        gtk_widget_destroy (mb);
 }
 
 
@@ -110,97 +110,96 @@ do_setup (GtkWidget *widget, gpointer data)
         GConfClient *client;
         GError *err = NULL;
         GSList *name_list = NULL;
-        gchar *PrefLoc;
         int i;
 
         NumberOfComputers = 
-                gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(ComputerSpinner));
+                gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ComputerSpinner));
         NumberOfHumans = 
-                gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(HumanSpinner));
+                gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (HumanSpinner));
 
         DoDelay = tmpDoDelay;
         DisplayComputerThoughts = tmpDisplayComputerThoughts;
         ExtraYahtzeeBonus = tmpExtraYahtzeeBonus;
         ExtraYahtzeeJoker = tmpExtraYahtzeeJoker;
 
-        for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
+        for (i=0; i < MAX_NUMBER_OF_PLAYERS; i++) {
                 if (players[i].name != DefaultPlayerNames[i])
-                        g_free(players[i].name);
-                players[i].name = g_strdup(gtk_entry_get_text(GTK_ENTRY(PlayerNames[i])));
+                        g_free (players[i].name);
+                players[i].name = g_strdup (gtk_entry_get_text (GTK_ENTRY (PlayerNames[i])));
 
                 if (i < NumberOfPlayers)
-                        score_list_set_column_title(ScoreList, i+1,
-                                                    players[i].name);
-                name_list = g_slist_append(name_list, players[i].name);
+                        score_list_set_column_title (ScoreList, i+1,
+                                                     players[i].name);
+                name_list = g_slist_append (name_list, players[i].name);
         }
 
-        if (sscanf(gtk_entry_get_text(GTK_ENTRY(BonusEntry)),"%d",&i)==1) {
+        if (sscanf (gtk_entry_get_text (GTK_ENTRY (BonusEntry)),"%d",&i)==1) {
                 ExtraYahtzeeBonusVal = i;
         } 
                 
-	setupdialog_destroy(setupdialog, 1);
+	setupdialog_destroy (setupdialog, 1);
 
         client = gconf_client_get_default ();
         gconf_client_set_list (client, "/apps/gtali/PlayerNames",
                                GCONF_VALUE_STRING, name_list, &err);
-        g_slist_free(name_list);
-        if(err) {
+        g_slist_free (name_list);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
-        gconf_client_set_int(client, "/apps/gtali/NumberOfComputerOpponents",
-                             NumberOfComputers, &err);
-        if(err) {
+        gconf_client_set_int (client, "/apps/gtali/NumberOfComputerOpponents",
+                              NumberOfComputers, &err);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
-        gconf_client_set_int(client, "/apps/gtali/NumberOfHumanOpponents",
-                             NumberOfHumans, &err);
-        if(err) {
+        gconf_client_set_int (client, "/apps/gtali/NumberOfHumanOpponents",
+                              NumberOfHumans, &err);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
-        gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeBonus",
-                             ExtraYahtzeeBonus, &err);
-        if(err) {
+        gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeBonus",
+                              ExtraYahtzeeBonus, &err);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
-        gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeBonusVal",
-                             ExtraYahtzeeBonusVal, &err);
-        if(err) {
+        gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeBonusVal",
+                              ExtraYahtzeeBonusVal, &err);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
- 	gconf_client_set_int(client, "/apps/gtali/ExtraYahtzeeJoker",
-                             ExtraYahtzeeJoker, &err);
-        if(err) {
+ 	gconf_client_set_int (client, "/apps/gtali/ExtraYahtzeeJoker",
+                              ExtraYahtzeeJoker, &err);
+        if (err) {
                 g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free(err);
+                g_error_free (err);
                 err = NULL;
         }
 
-        if ( ( (NumberOfComputers!=OriginalNumberOfComputers)||
-	       (NumberOfHumans!=OriginalNumberOfHumans) ) &&
-	     !GameIsOver() )
-                WarnNumPlayersChanged();
+        if ( ( (NumberOfComputers != OriginalNumberOfComputers)
+               || (NumberOfHumans != OriginalNumberOfHumans) )
+             && !GameIsOver () )
+                WarnNumPlayersChanged ();
 }
 
 static gint
-setupdialog_destroy(GtkWidget *widget, gint mode)
+setupdialog_destroy (GtkWidget *widget, gint mode)
 {
 	if (mode == 1) {
-		gtk_widget_destroy(setupdialog);
+		gtk_widget_destroy (setupdialog);
 	}
 	setupdialog = NULL;
 
@@ -212,9 +211,9 @@ static gint
 set_as_int (GtkWidget *widget, gpointer *data)
 {
         *((int *)data) = GTK_TOGGLE_BUTTON (widget)->active;
-        if (data==(gpointer)&tmpExtraYahtzeeBonus) {
-                gtk_entry_set_editable(GTK_ENTRY(BonusEntry),
-                                       GTK_TOGGLE_BUTTON(widget)->active);
+        if (data == (gpointer)&tmpExtraYahtzeeBonus) {
+                gtk_editable_set_editable (GTK_EDITABLE (BonusEntry),
+                                           GTK_TOGGLE_BUTTON (widget)->active);
         }
         return FALSE;
 }
@@ -224,16 +223,16 @@ MaxPlayersCheck (GtkWidget *widget, gpointer *data)
 {
         int numc, numh;
 
-        numc = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(ComputerSpinner));
-        numh = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(HumanSpinner));
+        numc = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ComputerSpinner));
+        numh = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (HumanSpinner));
 
         if ( (numc+numh) > MAX_NUMBER_OF_PLAYERS) {
-                if (GTK_ADJUSTMENT(data)==GTK_ADJUSTMENT(HumanAdj)) {
-                        gtk_adjustment_set_value(GTK_ADJUSTMENT(ComputerAdj),
-                                                 (gfloat)(numc-1));
+                if (GTK_ADJUSTMENT (data) == GTK_ADJUSTMENT (HumanAdj)) {
+                        gtk_adjustment_set_value (GTK_ADJUSTMENT (ComputerAdj),
+                                                  (gfloat)(numc-1));
                 } else {
-                        gtk_adjustment_set_value(GTK_ADJUSTMENT(HumanAdj),
-                                                 (gfloat)(numh-1));
+                        gtk_adjustment_set_value (GTK_ADJUSTMENT( HumanAdj),
+                                                  (gfloat)(numh-1));
                 }
                         
         }
@@ -244,7 +243,7 @@ MaxPlayersCheck (GtkWidget *widget, gpointer *data)
 gint 
 setup_game (GtkWidget *widget, gpointer data)
 {
-        GtkWidget *all_boxes, *box, *box2, *label, *button, *frame;
+        GtkWidget *box, *box2, *label, *button, *frame;
         GtkWidget *table;
         GtkSizeGroup *group1, *group2;
         gchar *ts;
@@ -301,8 +300,8 @@ setup_game (GtkWidget *widget, gpointer data)
 #if 0
 #ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
-                                           GTK_UPDATE_ALWAYS |
-                                           GTK_UPDATE_SNAP_TO_TICKS);
+                                           GTK_UPDATE_ALWAYS 
+                                           | GTK_UPDATE_SNAP_TO_TICKS);
 #else
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
                                            GTK_UPDATE_ALWAYS );
@@ -356,8 +355,8 @@ setup_game (GtkWidget *widget, gpointer data)
 #if 0
 #ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
-                                           GTK_UPDATE_ALWAYS |
-                                           GTK_UPDATE_SNAP_TO_TICKS);
+                                           GTK_UPDATE_ALWAYS 
+                                           | GTK_UPDATE_SNAP_TO_TICKS);
 #else
         gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
                                            GTK_UPDATE_ALWAYS );
@@ -387,7 +386,8 @@ setup_game (GtkWidget *widget, gpointer data)
  	gtk_box_pack_start (GTK_BOX (box2), button, TRUE, TRUE, 0);
         gtk_size_group_add_widget (group1, button);
         tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),ExtraYahtzeeBonus);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+                                      ExtraYahtzeeBonus);
         g_signal_connect (G_OBJECT (button), "clicked",
                           G_CALLBACK (set_as_int), &tmpExtraYahtzeeBonus);
 
@@ -395,12 +395,12 @@ setup_game (GtkWidget *widget, gpointer data)
         gtk_size_group_add_widget (group2, BonusEntry);
         gtk_entry_set_max_length (GTK_ENTRY (BonusEntry),3);
         /* Why is it so damn big by default? */
-        gtk_widget_set_usize (BonusEntry, 50, -1);
+        gtk_widget_set_size_request (BonusEntry, 50, -1);
         ts = g_strdup_printf ("%3d", ExtraYahtzeeBonusVal);
         gtk_entry_set_text (GTK_ENTRY (BonusEntry),ts);
         g_free (ts);
-        if (!ExtraYahtzeeBonus) {
-                gtk_entry_set_editable (GTK_ENTRY (BonusEntry),FALSE);
+        if (! ExtraYahtzeeBonus) {
+                gtk_editable_set_editable (GTK_EDITABLE (BonusEntry), FALSE);
         }
         gtk_box_pack_start (GTK_BOX (box2), BonusEntry, TRUE, TRUE, 0);
         
@@ -432,11 +432,13 @@ setup_game (GtkWidget *widget, gpointer data)
                 gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
                 PlayerNames[i] = gtk_entry_new ();
-                ts = g_strdup_printf ("PlayerName%1d",i+1);
-                gtk_object_set_data (GTK_OBJECT (setupdialog), ts, PlayerNames[i]);
+                ts = g_strdup_printf ("PlayerName%1d", i+1);
+                gtk_widget_set_name (PlayerNames[i], ts);
                 g_free (ts);
-                gtk_entry_set_text (GTK_ENTRY (PlayerNames[i]),players[i].name);
-                gtk_box_pack_start (GTK_BOX (box2), PlayerNames[i], FALSE, FALSE, 0);
+                gtk_entry_set_text (GTK_ENTRY (PlayerNames[i]),
+                                    players[i].name);
+                gtk_box_pack_start (GTK_BOX (box2), PlayerNames[i],
+                                    FALSE, FALSE, 0);
         }
 
 	gtk_widget_show_all (setupdialog);
