@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=GTali
 Name[es]=GTali
+Name[fi]=GTali
 Name[fr]=GTali
 Name[ru]=Гтали
 Comment=Gnome Dice game
 Comment[es]=Juego de dados tipo yahtzee
+Comment[fi]=Gnome-jatsipeli
 Comment[fr]=Jeu de dИs de genre yahtzee
 Comment[ru]=Игра в кости для Gnome
 Exec=gtali
