@@ -1,9 +1,9 @@
 [Desktop Entry]
+Encoding=UTF-8
 _Name=GTali
 _Comment=Dice game
 Exec=gtali
 Icon=gnome-gtali.png
-Terminal=0
+Terminal=false
 Type=Application
-Categories=Application;Game;
-
+Categories=GNOME;Application;Game;
