@@ -114,7 +114,8 @@ CheerWinner(void)
 	ShowoffPlayer(ScoreList,winner,1);
 
         if (players[winner].name)
-                say(_("%s wins the game with %d points"),
+                say(ngettext("%s wins the game with %d point",
+                             "%s wins the game with %d points", WinningScore),
                     players[winner].name,
 		    WinningScore);
 	else

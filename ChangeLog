@@ -1,3 +1,7 @@
+2003-05-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c (CheerWinner): i18n fix, now using ngettext.
+
 2003-05-14  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* pix/Makefile.am: Imported gnome-die?.png from the gnome-desktop
