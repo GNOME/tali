@@ -7,6 +7,7 @@ SUBDIRS = pix help
 
 INCLUDES =						\
 	$(GNOME_GAMES_CFLAGS)				\
+	-I$(top_srcdir)/libgames-support           \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DDATADIR=\""$(datadir)"\"		   \
 	-DGNOMEPIXMAPDIR=\""$(datadir)/pixmaps"\"	\
@@ -27,6 +28,7 @@ gtali_SOURCES =       \
 
 gtali_LDADD =				\
 	$(GNOME_GAMES_LIBS) \
+	$(top_srcdir)/libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@

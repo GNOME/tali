@@ -1,3 +1,5 @@
+/* -*- mode:C; indent-tabs-mode:nil; tab-width:8; c-basic-offset:8 -*- */
+
 /*
  * Gyatzee: Gnomified Yahtzee game.
  * (C) 1998 the Free Software Foundation
@@ -30,6 +32,8 @@
 #include <config.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
+
+#include <games-frame.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -241,239 +245,189 @@ gint
 setup_game(GtkWidget *widget, gpointer data)
 {
         GtkWidget *all_boxes, *box, *box2, *label, *button, *frame;
+        GtkWidget *table;
         gchar *ts;
         int i;
 
         if (setupdialog) {
-                gtk_window_present (GTK_WINDOW(setupdialog));
+                gtk_window_present (GTK_WINDOW (setupdialog));
                 return FALSE;
         }
 
-	setupdialog = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+        setupdialog = gtk_dialog_new_with_buttons (_("GTali Preferences"),
+                                                   GTK_WINDOW (window),
+                                                   GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                   GTK_STOCK_CLOSE,
+                                                   GTK_RESPONSE_CLOSE,
+                                                   NULL);
+        gtk_dialog_set_has_separator (GTK_DIALOG (setupdialog), FALSE);
+        g_signal_connect (G_OBJECT (setupdialog), "delete_event",
+                          G_CALLBACK (setupdialog_destroy), NULL);
+	button = gtk_button_new_from_stock (GTK_STOCK_OK);
+        g_signal_connect (G_OBJECT (setupdialog), "response",
+                          G_CALLBACK (do_setup), NULL);
 
-	gtk_window_set_transient_for (GTK_WINDOW (setupdialog), GTK_WINDOW (window));
-	gtk_window_set_type_hint (GTK_WINDOW (setupdialog), GDK_WINDOW_TYPE_HINT_DIALOG);
-	gtk_window_set_position (GTK_WINDOW (setupdialog), GTK_WIN_POS_CENTER_ON_PARENT);
-	gtk_container_set_border_width(GTK_CONTAINER(setupdialog), 10);
-	gtk_window_set_title(GTK_WINDOW(setupdialog), _("GTali setup"));
-        g_signal_connect(G_OBJECT(setupdialog), "delete_event",
-                         G_CALLBACK(setupdialog_destroy), NULL);
+        table = gtk_table_new (3, 2, FALSE);
+        gtk_container_set_border_width (GTK_CONTAINER (table), 8);
+        gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+        gtk_table_set_col_spacings (GTK_TABLE (table), 6);
 
-	all_boxes = gtk_vbox_new(FALSE, 5);
-	gtk_container_add(GTK_CONTAINER(setupdialog), all_boxes);
+        gtk_box_pack_start (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), table, 
+                            FALSE, FALSE, 0);
 
-	frame = gtk_frame_new(_("Computer Opponents"));
-	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
+	frame = games_frame_new (_("Human Players"));
+        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 0, 1);
 	
-	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
-	gtk_container_add(GTK_CONTAINER(frame), box);
-
-        /*--- Button ---*/
-	button = gtk_check_button_new_with_label (
-                         _("Delay between rolls") );
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),DoDelay);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(set_as_int), &tmpDoDelay);
-	gtk_widget_show (button);
-
-        /*--- Button ---*/
-	button = gtk_check_button_new_with_label (
-                         _("Show thoughts during turn") );
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
-                                     DisplayComputerThoughts);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(set_as_int), &tmpDisplayComputerThoughts);
-	gtk_widget_show (button);
-
-
-        /*--- Spinner (number of computers) ---*/
-        OriginalNumberOfComputers = NumberOfComputers;
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Number of opponents:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
-        ComputerAdj = gtk_adjustment_new((gfloat)NumberOfComputers, 
-                                         0.0, 6.0, 1.0, 6.0, 1.0);
-	ComputerSpinner = gtk_spin_button_new(GTK_ADJUSTMENT(ComputerAdj),
-                                              10, 0);
-#if 0
- ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
-        gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(ComputerSpinner),
-					  GTK_UPDATE_ALWAYS |
-					  GTK_UPDATE_SNAP_TO_TICKS);
- else
-        gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(ComputerSpinner),
-					  GTK_UPDATE_ALWAYS );
-	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(ComputerSpinner),
-					  TRUE);
- endif
-#endif
-         g_signal_connect(G_OBJECT(ComputerAdj), "value_changed",
-                          G_CALLBACK(MaxPlayersCheck), ComputerAdj);
-         gtk_box_pack_start(GTK_BOX(box2), ComputerSpinner, FALSE, TRUE, 0);
-	gtk_widget_show(ComputerSpinner);
-	gtk_widget_show(box2);
-
-	gtk_widget_show(box);
-	gtk_widget_show(frame);
-
-
-	frame = gtk_frame_new(_("Human Players"));
-	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
-	
-	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
-	gtk_container_add(GTK_CONTAINER(frame), box);
+	box = gtk_vbox_new (FALSE, 6);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+	gtk_container_add (GTK_CONTAINER (frame), box);
 
         /*--- Spinner (number of humans) ---*/
         OriginalNumberOfHumans = NumberOfHumans;
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Number of players:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
-        HumanAdj = gtk_adjustment_new((gfloat)NumberOfHumans, 0.0,
+	box2 = gtk_hbox_new (FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
+	label = gtk_label_new (_("Number of players:"));
+	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
+        HumanAdj = gtk_adjustment_new ((gfloat)NumberOfHumans, 0.0,
                                       6.0, 1.0, 6.0, 1.0);
-	HumanSpinner = gtk_spin_button_new(GTK_ADJUSTMENT(HumanAdj), 10, 0);
+	HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
 #if 0
- ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
-        gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(HumanSpinner),
+#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
 					  GTK_UPDATE_ALWAYS |
 					  GTK_UPDATE_SNAP_TO_TICKS);
- else
-        gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(HumanSpinner),
+#else
+        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
 					  GTK_UPDATE_ALWAYS );
-	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(HumanSpinner),
+	gtk_spin_button_set_snap_to_ticks (GTK_SPIN_BUTTON (HumanSpinner),
 					  TRUE);
- endif
 #endif
-         g_signal_connect(G_OBJECT(HumanAdj), "value_changed",
-                          G_CALLBACK(MaxPlayersCheck), HumanAdj);
+#endif
+        g_signal_connect (G_OBJECT (HumanAdj), "value_changed",
+                         G_CALLBACK (MaxPlayersCheck), HumanAdj);
  
-        gtk_box_pack_start(GTK_BOX(box2), HumanSpinner, FALSE, TRUE, 0);
-	gtk_widget_show(HumanSpinner);
-	gtk_widget_show(box2);
+        gtk_box_pack_start (GTK_BOX (box2), HumanSpinner, FALSE, TRUE, 0);
 
-	gtk_widget_show(box);
-	gtk_widget_show(frame);
 
+	frame = games_frame_new (_("Computer Opponents"));
+        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 1, 2);
+	
+	box = gtk_vbox_new (FALSE, 6);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+	gtk_container_add (GTK_CONTAINER (frame), box);
+
+        /*--- Button ---*/
+	button = gtk_check_button_new_with_label (_("Delay between rolls") );
+	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), DoDelay);
+        g_signal_connect (G_OBJECT (button), "clicked",
+                         G_CALLBACK (set_as_int), &tmpDoDelay);
+
+        /*--- Button ---*/
+	button = gtk_check_button_new_with_label (_("Show thoughts during turn") );
+	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+                                      DisplayComputerThoughts);
+        g_signal_connect (G_OBJECT (button), "clicked",
+                          G_CALLBACK (set_as_int),
+                          &tmpDisplayComputerThoughts);
+
+        /*--- Spinner (number of computers) ---*/
+        OriginalNumberOfComputers = NumberOfComputers;
+	box2 = gtk_hbox_new (FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
+	label = gtk_label_new (_("Number of opponents:"));
+	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
+
+        ComputerAdj = gtk_adjustment_new ((gfloat)NumberOfComputers, 
+                                          0.0, 6.0, 1.0, 6.0, 1.0);
+	ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj),
+                                               10, 0);
+#if 0
+#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
+                                           GTK_UPDATE_ALWAYS |
+                                           GTK_UPDATE_SNAP_TO_TICKS);
+#else
+        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
+                                           GTK_UPDATE_ALWAYS );
+	gtk_spin_button_set_snap_to_ticks (GTK_SPIN_BUTTON (ComputerSpinner),
+                                           TRUE);
+#endif
+#endif
+        g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
+                         G_CALLBACK (MaxPlayersCheck), ComputerAdj);
+        gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, FALSE, TRUE, 0);
 
 
         /*--- OPTIONAL RULES FRAME ----*/
- 	frame = gtk_frame_new(_("Optional Rules"));
- 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
+ 	frame = games_frame_new (_("Optional Rules"));
+        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 2, 3);
  	
- 	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
- 	gtk_container_add(GTK_CONTAINER(frame), box);
+ 	box = gtk_vbox_new (FALSE, 6);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+ 	gtk_container_add (GTK_CONTAINER (frame), box);
  
          /*--- Button ---*/
- 	box2 = gtk_hbox_new(FALSE, 0);
- 	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
+ 	box2 = gtk_hbox_new (FALSE, 0);
+ 	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
  
  	button = gtk_check_button_new_with_label (_("Extra Yahtzee Bonus") );
- 	/*gtk_box_pack_start(GTK_BOX(box2), button, FALSE, FALSE, 0);*/
- 	gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
+ 	/*gtk_box_pack_start (GTK_BOX (box2), button, FALSE, FALSE, 0);*/
+ 	gtk_box_pack_start (GTK_BOX (box2), button, TRUE, TRUE, 0);
         tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
-        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),ExtraYahtzeeBonus);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(set_as_int), &tmpExtraYahtzeeBonus);
- 	gtk_widget_show (button);
+        gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON (button),ExtraYahtzeeBonus);
+        g_signal_connect (G_OBJECT (button), "clicked",
+                         G_CALLBACK (set_as_int), &tmpExtraYahtzeeBonus);
 
-        BonusEntry = gtk_entry_new();
-        gtk_entry_set_max_length(GTK_ENTRY(BonusEntry),3);
+        BonusEntry = gtk_entry_new ();
+        gtk_entry_set_max_length (GTK_ENTRY (BonusEntry),3);
         /* Why is it so damn big by default? */
-        gtk_widget_set_usize(BonusEntry, 50, -1);
-        ts = g_strdup_printf("%3d",ExtraYahtzeeBonusVal);
-        gtk_entry_set_text(GTK_ENTRY(BonusEntry),ts);
-        g_free(ts);
+        gtk_widget_set_usize (BonusEntry, 50, -1);
+        ts = g_strdup_printf ("%3d",ExtraYahtzeeBonusVal);
+        gtk_entry_set_text (GTK_ENTRY (BonusEntry),ts);
+        g_free (ts);
         if (!ExtraYahtzeeBonus) {
-                gtk_entry_set_editable(GTK_ENTRY(BonusEntry),FALSE);
+                gtk_entry_set_editable (GTK_ENTRY (BonusEntry),FALSE);
         }
         gtk_box_pack_start (GTK_BOX (box2), BonusEntry, TRUE, TRUE, 0);
-        gtk_widget_show (BonusEntry);
- 	gtk_widget_show(box2);
-        
         
         /*--- Button ---*/
  	button = gtk_check_button_new_with_label (_("Enforce Joker Rules"));
         tmpExtraYahtzeeJoker = ExtraYahtzeeJoker;
- 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
+ 	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
+        gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON (button),
                                       ExtraYahtzeeJoker);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(set_as_int), &tmpExtraYahtzeeJoker);
-        gtk_widget_set_sensitive(button,FALSE); /* NOT READY YET */
- 	gtk_widget_show (button);
- 	gtk_widget_show(box);
- 	gtk_widget_show(frame);
-        
+        g_signal_connect (G_OBJECT (button), "clicked",
+                         G_CALLBACK (set_as_int), &tmpExtraYahtzeeJoker);
+        gtk_widget_set_sensitive (button, FALSE); /* NOT READY YET */
         
         /*--- PLAYER NAMES FRAME ----*/
-	frame = gtk_frame_new(_("Player Names"));
-	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
+	frame = games_frame_new (_("Player Names"));
+        gtk_table_attach_defaults (GTK_TABLE (table), frame, 1, 2, 0, 3);
 	
-	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
-	gtk_container_add(GTK_CONTAINER(frame), box);
+	box = gtk_vbox_new (FALSE, 6);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+	gtk_container_add (GTK_CONTAINER (frame), box);
 
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
-                box2 = gtk_hbox_new(FALSE, 3);
+                box2 = gtk_hbox_new (FALSE, 3);
 
-                gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-                ts = g_strdup_printf(" %1d:",i+1);
-                label = gtk_label_new(ts);
-                g_free(ts);
-                gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-                gtk_widget_show(label);
+                gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
+                ts = g_strdup_printf (" %1d:",i+1);
+                label = gtk_label_new (ts);
+                g_free (ts);
+                gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
                 PlayerNames[i] = gtk_entry_new ();
-                ts = g_strdup_printf("PlayerName%1d",i+1);
-                gtk_object_set_data (GTK_OBJECT(setupdialog), ts, PlayerNames[i]);
-                g_free(ts);
-                gtk_entry_set_text(GTK_ENTRY(PlayerNames[i]),players[i].name);
-                gtk_box_pack_start (GTK_BOX (box2), PlayerNames[i], TRUE, TRUE, 0);
-                gtk_widget_show(PlayerNames[i]);
-
-                gtk_widget_show(box2);
+                ts = g_strdup_printf ("PlayerName%1d",i+1);
+                gtk_object_set_data (GTK_OBJECT (setupdialog), ts, PlayerNames[i]);
+                g_free (ts);
+                gtk_entry_set_text (GTK_ENTRY (PlayerNames[i]),players[i].name);
+                gtk_box_pack_start (GTK_BOX (box2), PlayerNames[i], FALSE, FALSE, 0);
         }
 
-	gtk_widget_show(box);
-	gtk_widget_show(frame);
-
-
-	/*--- OK/CANCEL into "box" ---*/
-	box = gtk_hbox_new(TRUE, 5);
-	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-
-	button = gtk_button_new_from_stock (GTK_STOCK_OK);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(do_setup), NULL);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
-        gtk_widget_show(button);
-
-	button = gtk_button_new_from_stock (GTK_STOCK_CANCEL);
-        g_signal_connect(G_OBJECT(button), "clicked",
-                         G_CALLBACK(setupdialog_destroy), GINT_TO_POINTER(1));
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
-        gtk_widget_show(button);
-        gtk_widget_show(box);
-	
-	gtk_widget_show(all_boxes);
-
-	gtk_widget_show(setupdialog);
+	gtk_widget_show_all (setupdialog);
 
         return FALSE;
 }
-
-
-/* Arrgh - lets all use the same tabs under emacs: 
-Local Variables:
-tab-width: 8
-c-basic-offset: 8
-indent-tabs-mode: nil
-*/   
