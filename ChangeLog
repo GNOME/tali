@@ -1,3 +1,9 @@
+2004-02-18  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gtali.schemas.in: Removed the space work-around since it
+	survived the old intltool, but broke on gconf itself. You now need
+	CVS intltool for all this to work properly.
+
 2004-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* setup.c: Remove references to _has_separator when dealing with
