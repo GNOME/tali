@@ -92,7 +92,6 @@ static gint gnome_modify_dice (GtkWidget *widget, GdkEventButton *event,
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
 void update_score_state (void);
-static void undo_set_sensitive (gboolean state);
 static void roll_set_sensitive (gboolean state);
 static void UpdateRollLabel (void);
 
@@ -103,7 +102,6 @@ CheerWinner (void)
         int winner;
         int i;
 
-        undo_set_sensitive (FALSE);
 	ShowoffPlayer (ScoreList,CurrentPlayer,0);
 
         winner = FindWinner ();
@@ -121,7 +119,7 @@ CheerWinner (void)
 
 	ShowoffPlayer (ScoreList,winner,1);
 
-        if ( (winner<NumberOfHumans) && !IsCheater ) {
+        if (winner<NumberOfHumans) {
                 lastHighScore = gnome_score_log ((guint)WinningScore, 
                                                  NULL, TRUE);
 		update_score_state ();
@@ -208,8 +206,6 @@ NextPlayer (void)
         SelectAllDice ();
         RollSelectedDice ();
 	
-	undo_set_sensitive (!players[CurrentPlayer].comp);
-
         if (players[CurrentPlayer].comp) {
                 if (DoDelay){
                         if (!last_timeout)
@@ -306,8 +302,6 @@ GyahtzeeNewGame (void)
 	for (i=0; i<NumberOfPlayers; i++)
                 ShowoffPlayer (ScoreList,i,0);
 	ShowoffPlayer (ScoreList,0,1);
-
-        undo_set_sensitive (FALSE);
 }
 
 
@@ -517,24 +511,9 @@ score_callback(GtkWidget *widget, gpointer data)
 	return FALSE;
 }
 
-static gint 
-undo_callback(GtkWidget *widget, gpointer data)
-{
-        int i;
-	if (!GameIsOver ()) {
-                for (i=0; i < NumberOfPlayers; i++)
-                        ExecSingleUndo (SCORE_OK);
-                say (_("Cheater! Any high scores will not be recorded."));
-                undo_set_sensitive (UndoPossible ());
-        }
-	return FALSE;
-}
-
 /* Define menus later so we don't have to proto callbacks? */
 GnomeUIInfo gamemenu[] = {
         GNOMEUIINFO_MENU_NEW_GAME_ITEM (new_game_callback, NULL),
-	GNOMEUIINFO_SEPARATOR,
-	GNOMEUIINFO_MENU_UNDO_MOVE_ITEM (undo_callback, NULL),
 	GNOMEUIINFO_SEPARATOR,
 	GNOMEUIINFO_MENU_SCORES_ITEM (score_callback, NULL),
 	GNOMEUIINFO_SEPARATOR,
@@ -559,11 +538,6 @@ GnomeUIInfo mainmenu[] = {
 	GNOMEUIINFO_MENU_HELP_TREE (helpmenu),
 	GNOMEUIINFO_END
 };
-
-static void undo_set_sensitive (gboolean state)
-{
-        gtk_widget_set_sensitive (gamemenu[2].widget, state);
-}
 
 static void roll_set_sensitive (gboolean state)
 {
@@ -604,12 +578,12 @@ void update_score_state (void)
 	top = gnome_score_get_notable (appID, NULL,
                                        &names, &scores, &scoretimes);
 	if (top > 0) {
-		gtk_widget_set_sensitive (gamemenu[4].widget, TRUE);
+		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
 		g_strfreev (names);
 		g_free (scores);
 		g_free (scoretimes);
 	} else {
-		gtk_widget_set_sensitive (gamemenu[4].widget, FALSE);
+		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
 	}
 }
 

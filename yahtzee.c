@@ -59,7 +59,6 @@ int DisplayComputerThoughts = 0;
 int OnlyShowScores = 0;
 int IsCheater;
 int CurrentPlayer;
-UndoInfo *gUndoInfo = NULL;
 char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
 						    "Wilber",
 						    "Bill",
@@ -147,10 +146,6 @@ NewGame(void)
 			players[i].used[j] = 0;
 		}
 	}
-
-        /* Clean out undo history */
-        while(!ExecSingleUndo(YAHTZEE_NEWGAME));
-        IsCheater = 0;
 
         /* Possibly 0 humans? */
 	for (i=0; i < NumberOfHumans; i++)
@@ -327,54 +322,6 @@ add_dice(void)
 	return (val);
 }
 
-/* Save info for undo */
-int
-RegisterUndo(int player, int field, int fstate, int oldscore)
-{
-        UndoInfo *ui = malloc(sizeof(UndoInfo));
-
-        if (ui) {
-                ui->player = player;
-                ui->field = field;
-                ui->fstate = fstate;
-                ui->oldscore = oldscore;
-                ui->prev = gUndoInfo;
-                gUndoInfo = ui;
-                return 0;
-        }
-
-        return 1;
-}
-
-/* Execute an undo */
-int
-ExecSingleUndo(int screenupdate)
-{
-        if (gUndoInfo) {
-                UndoInfo *ui = gUndoInfo->prev;
-
-                IsCheater = 1;
-                
-                players[gUndoInfo->player].used[gUndoInfo->field] = 
-                        gUndoInfo->fstate;
-                players[gUndoInfo->player].score[gUndoInfo->field] =
-                        gUndoInfo->oldscore;
-                if (screenupdate != YAHTZEE_NEWGAME)
-                        ShowPlayer(gUndoInfo->player, gUndoInfo->field);
-                free(gUndoInfo);
-                gUndoInfo = ui;
-                
-                return 0;
-        }
-
-        return 1;
-}
-
-int UndoPossible (void)
-{
-        return gUndoInfo != NULL;
-}
-
 /* Test if we can use suggested score slot */
 int 
 play_score(int player, int field)
@@ -396,10 +343,6 @@ play_score(int player, int field)
 	  }
 	else if (players[player].used[field])
 	  return SLOT_USED;
-
-        /* Save old score for possible undo */
-        RegisterUndo(player, field, players[player].used[field],
-                      players[player].score[field]);
 
         players[player].used[field] = 1;
 
