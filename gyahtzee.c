@@ -196,6 +196,7 @@ ShowPlayer (int num, int field)
 				score = players[num].score[i];
                         else
                                 score = -1;
+
                         update_score_cell (ScoreList, line, num+1, score);
                 }
 	}

@@ -1,3 +1,8 @@
+2003-07-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* clist.c (update_score_cell): Clear cells with a score of -1,
+	this allows undo to update the display correctly.
+
 2003-07-02  Callum McKenzie <callum@physics.otago.ac.nz>
 	* Makefile.am: Build fixes.
 
