@@ -1,3 +1,7 @@
+2000-05-12  Andreas Hyden  <a.hyden@cyberpoint.se>
+
+	* gtali.desktop: Added Swedish translation.
+
 2000-05-09  Martin Baulig  <baulig@suse.de>
 
 	* gyahtzee.c (main): Move gnome_score_init () in front of
