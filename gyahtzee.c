@@ -40,6 +40,7 @@
 
 #include <config.h>
 #include <gnome.h>
+#include <libgnomeui/gnome-window-icon.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -571,7 +572,7 @@ main (int argc, char *argv[])
 	/* Create gnome client */
         gnome_init_with_popt_table(appID, VERSION, argc, argv,
 				   yahtzee_options, 0, NULL);
-
+        gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gtali.png");
 	NumberOfComputers = gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
 	NumberOfHumans = gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
 
