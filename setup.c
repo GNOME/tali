@@ -45,6 +45,7 @@ static int OriginalNumberOfHumans    = -1;
 
 static int tmpExtraYahtzeeBonus, tmpExtraYahtzeeJoker, tmpDoDelay, tmpDisplayComputerThoughts;
 
+extern GtkWidget *window;
 
 static void
 parse_an_arg (poptContext ctx,
@@ -249,7 +250,9 @@ setup_game(GtkWidget *widget, gpointer data)
 
 	setupdialog = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-	gtk_window_set_transient_for (GTK_WINDOW (setupdialog), GTK_WINDOW (data));
+	gtk_window_set_transient_for (GTK_WINDOW (setupdialog), GTK_WINDOW (window));
+	gtk_window_set_type_hint (GTK_WINDOW (setupdialog), GDK_WINDOW_TYPE_HINT_DIALOG);
+	gtk_window_set_position (GTK_WINDOW (setupdialog), GTK_WIN_POS_CENTER_ON_PARENT);
 	gtk_container_set_border_width(GTK_CONTAINER(setupdialog), 10);
 	gtk_window_set_title(GTK_WINDOW(setupdialog), _("GTali setup"));
         g_signal_connect(G_OBJECT(setupdialog), "delete_event",

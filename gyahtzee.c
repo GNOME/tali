@@ -77,7 +77,8 @@ static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.xpm",
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
-static GtkWidget *window, *appbar, *diceBox[NUMBER_OF_DICE];
+GtkWidget *window;
+static GtkWidget *appbar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
 
 static gint gnome_modify_dice( GtkWidget *widget, GdkEventButton *event,
@@ -491,7 +492,7 @@ GyahtzeeCreateMainWindow(void)
                          G_CALLBACK(quit_game), NULL);
 
 	/*---- Menus ----*/
-	gnome_app_create_menus_with_data(GNOME_APP(window), mainmenu, window);
+	gnome_app_create_menus(GNOME_APP(window), mainmenu);
 
 
 	/*---- Status Bar ----*/

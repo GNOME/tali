@@ -1,3 +1,11 @@
+2002-06-22  Ross Burton  <ross@burtonini.com>
+
+	* gyahtzee.c: Make the window pointer public, instead of
+	static. Also stop passing it around via the menu callbacks.
+
+	* setup.c (setup_game): Set the relevant hints so that the setup
+	dialog actually behaves like a dialog, not a window.
+	
 2002-06-03  Ross Burton  <ross@burtonini.com>
 
 	* gyahtzee.c: Set the about window as a transient for the
