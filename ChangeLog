@@ -1,5 +1,16 @@
 2003-08-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* gtali.schemas.in:
+	* setup.c:
+	* gyahtzee.c:
+	* help/C/gtali.xml:
+	Delay between rolls and show-thoughts have been
+	gconfified. Show-thoughts is now in fact only available via gconf
+	since dumps to standard out should not be accessible to the
+	ignorant users.
+
+	* setup.c (setup_game): Remove old, old, gtk 1.x code.
+
 	* help/C/gtali.xml: 2.4 updates, images not updated yet.
 
 	* setup.c: 

@@ -246,15 +246,6 @@
         </listitem>
 	</varlistentry>
 	<varlistentry>
-	  <term><guimenuitem>Show thoughts during turn</guimenuitem></term>
-	  <listitem>
-            <para>Will print the computer's thoughts to the console
-	      window. Can see the computer evaluate each score box and select
-              dice to reroll.
-            </para>
-          </listitem>
-	</varlistentry>
-	<varlistentry>
 	  <term><guimenuitem>Number of opponents</guimenuitem></term>
 	  <listitem>
             <para>Select the number of computer opponents.  You are allowed a
@@ -269,12 +260,9 @@
       
       <variablelist><title><guimenuitem>Player Names</guimenuitem></title>
 	<varlistentry>
-	  <term></term>
-	  <listitem>
-	    <para>To change the names of any player just enter a new
-	    name in these boxes.
+	    <para>To change the names of the players just enter new
+	    names in the boxes.
 	    </para>
-	  </listitem>
 	</varlistentry>
       </variablelist>
     </sect1>

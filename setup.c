@@ -159,6 +159,14 @@ do_setup (GtkWidget *widget, gpointer data)
                 err = NULL;
         }
 
+        gconf_client_set_bool (client, "/apps/gtali/DelayBetweenRolls",
+                              DoDelay, &err);
+        if (err) {
+                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+                g_error_free (err);
+                err = NULL;
+        }
+        
         if ( ( (NumberOfComputers != OriginalNumberOfComputers)
                || (NumberOfHumans != OriginalNumberOfHumans) )
              && !GameIsOver () )
@@ -264,18 +272,6 @@ setup_game (GtkWidget *widget, gpointer data)
 	HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
         gtk_size_group_add_widget (group2, HumanSpinner);
 
-#if 0
-#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
-        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
-                                           GTK_UPDATE_ALWAYS 
-                                           | GTK_UPDATE_SNAP_TO_TICKS);
-#else
-        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (HumanSpinner),
-                                           GTK_UPDATE_ALWAYS );
-	gtk_spin_button_set_snap_to_ticks (GTK_SPIN_BUTTON (HumanSpinner),
-                                           TRUE);
-#endif
-#endif
         g_signal_connect (G_OBJECT (HumanAdj), "value_changed",
                           G_CALLBACK (MaxPlayersCheck), HumanAdj);
  
@@ -296,15 +292,6 @@ setup_game (GtkWidget *widget, gpointer data)
         g_signal_connect (G_OBJECT (button), "clicked",
                           G_CALLBACK (set_as_int), &tmpDoDelay);
 
-        /*--- Button ---*/
-	button = gtk_check_button_new_with_label (_("Show thoughts during turn") );
-	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
-                                      DisplayComputerThoughts);
-        g_signal_connect (G_OBJECT (button), "clicked",
-                          G_CALLBACK (set_as_int),
-                          &tmpDisplayComputerThoughts);
-
         /*--- Spinner (number of computers) ---*/
         OriginalNumberOfComputers = NumberOfComputers;
 	box2 = gtk_hbox_new (FALSE, 12);
@@ -319,18 +306,6 @@ setup_game (GtkWidget *widget, gpointer data)
                                                10, 0);
         gtk_size_group_add_widget (group2, ComputerSpinner);
 
-#if 0
-#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
-        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
-                                           GTK_UPDATE_ALWAYS 
-                                           | GTK_UPDATE_SNAP_TO_TICKS);
-#else
-        gtk_spin_button_set_update_policy (GTK_SPIN_BUTTON (ComputerSpinner),
-                                           GTK_UPDATE_ALWAYS );
-	gtk_spin_button_set_snap_to_ticks (GTK_SPIN_BUTTON (ComputerSpinner),
-                                           TRUE);
-#endif
-#endif
         g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
                           G_CALLBACK (MaxPlayersCheck), ComputerAdj);
         gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, FALSE, TRUE, 0);

@@ -657,7 +657,17 @@ main (int argc, char *argv[])
                 g_error_free (err);
                 err = NULL;
         }
-
+        /* We ignore errors for these, they're boolean so it will be valid 
+         * data even if not the right data and there's nothing else we
+         * can do (if it's a systematic gconf problem, the calls above
+         * would have caught it. */
+        DoDelay = gconf_client_get_bool (client,
+                                         "/apps/gtali/DelayBetweenRolls",
+                                         NULL);
+        DisplayComputerThoughts = gconf_client_get_bool (client,
+                                                         "/apps/gtali/DisplayComputerThoughts",
+                                                         NULL);
+        
         /* Read in new player names */
         name_list = gconf_client_get_list (client, "/apps/gtali/PlayerNames",
                                            GCONF_VALUE_STRING, &err);
