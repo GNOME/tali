@@ -23,7 +23,7 @@ dist-hook:
 	-mkdir $(distdir)/gtali
 	-mkdir $(distdir)/gtali/stylesheet-images
 	cp $(srcdir)/gtali/*.html $(distdir)/gtali
-	cp -R $(srcdir)/gtali/stylesheet-images/*.png $(distdir)/gtali/stylesheet-images
+	cp -R $(srcdir)/gtali/stylesheet-images/*.gif $(distdir)/gtali/stylesheet-images
 	cp $(srcdir)/gtali/*.css $(distdir)/gtali
 
 # No-op if db2html failed
@@ -37,8 +37,8 @@ install-data-local: index.html
 	  done; \
 	fi
 	-$(mkinstalldirs) $(DESTDIR)$(gtali_helpdir)/stylesheet-images
-	files=`echo $(srcdir)/gtali/stylesheet-images/*.png`; \
-	if test "$$files" != '$(srcdir)/gtali/stylesheet-images/*.png'; then \
+	files=`echo $(srcdir)/gtali/stylesheet-images/*.gif`; \
+	if test "$$files" != '$(srcdir)/gtali/stylesheet-images/*.gif'; then \
 	  for file in $$files; do \
 	    basefile=`echo $$file | sed -e 's,^.*/,,'`; \
 	    $(INSTALL_DATA) $$file $(DESTDIR)$(gtali_helpdir)/stylesheet-images/$$basefile; \
