@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=GTali
+Name[ru]=Гтали
 Comment=Gnome Dice game
+Comment[ru]=Игра в кости для Gnome
 Exec=gtali
 Icon=gnome-gtali.png
 Terminal=0
