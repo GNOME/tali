@@ -1,7 +1,5 @@
 Gyahtzee:
 * adjust names of human players
-* multi-humans players - if want to score in the row that is currently
-  selected, have to deselect it 1st, then select it.
 * get someone to do translations
 
 Gnomelibs:
@@ -13,5 +11,3 @@ Gnomelibs:
 
 Other:
 * -Wall -Wstrict-prototypes -Wmissing-prototypes
-
-

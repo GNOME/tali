@@ -1,3 +1,29 @@
+1998-10-18  Phil Schwan  <pschwan@cmu.edu>
+
+	* clist.c (select_row): This function is now called for both select and
+	unselect events.  It takes care of making sure that the row is actually
+	being selected/unselected, etc.  This takes care of the problem of
+	having to de-select and then re-select rows in multi-player games.
+	* (create_clist): Added unselect_row callback.
+
+	* gyahtzee.c: (NextPlayer): The old way of doing things would cause a
+	deadlock if player 2 had more yahtzees than player 1.
+	* (gnome_modify_dice): Added a DEBUG mode that allows the player to
+	shift-click on dice and change their values.  Was useful in testing the
+	deadlock fix.
+	* Added some "void"s and some "static"s so that it compiles
+	-Wall -Wstrict-prototypes -Wmissing-prototypes clean.
+
+	* yahtzee.c (play_score): The special case for yahtzees was broken,
+	never checking to see if the user actually had a yahtzee before
+	allowing them to use the slot twice--this allowed the user to click on
+	yahtzee any time they didn't like their roll, as long as they'd already
+	rolled a yahtzee earlier in the game.
+	* (HumansAreDone): commented out this function, as it's no longer
+	needed because of the change to gyahtzee.c
+
+	* yahtzee.h: removed HumansAreDone prototype.
+
 1998-07-25  Nuno Ferreira  <nmrf@rnl.ist.utl.pt>
 
 	* gyahtzee.desktop: Added Portuguese translation.

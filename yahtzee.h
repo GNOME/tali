@@ -110,7 +110,11 @@ extern int NoDiceSelected(void);
 extern int RollDie(void);
 extern void RollSelectedDice(void);
 extern int GameIsOver(void);
+#if 0
+/* Don't need this function anymore--it was only ever used in gyahtzee.c, and
+ * it's been commented out now. -- pschwan@cmu.edu */
 extern int HumansAreDone(void);
+#endif
 extern int FindWinner(void);
 
 /* Computer.c */

@@ -131,13 +131,26 @@ ShowoffPlayer(GtkCList * clist, int player, int so)
 
 static gint LastScoredRow = -1;
 
+/* This function is called for both select and unselect events.  If the
+ * unselect event is for an event that the pointer isn't on, it'll be dropped
+ * on the floor.  Otherwise, it will be thought of as a select event and
+ * processed properly.  This takes care of the problem of having to de-select
+ * and then re-select rows in multi-player games. -- pschwan@cmu.edu */
 static gint
-select_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
+select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
 {
-        int field = row;
+        int field = row, actual_row, actual_col;
 
 	if (!event) 
                 return FALSE;
+
+	gtk_clist_get_selection_info(GTK_CLIST(clist), event->x, event->y,
+				     &actual_row, &actual_col);
+
+	if (row != actual_row)
+	  /* this is an unselect event for a row that the mouse pointer isn't
+	   * on.  take evasive maneuvers, commander. */
+	  return FALSE;
 
         LastScoredRow = -1;
 
@@ -208,20 +221,20 @@ select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
                 /* Adjust for Upper Total / Bonus entries */
                 if (field >= NUM_UPPER)
                         field -= 3;
-        
+
                 if ( (field < NUM_FIELDS) && 
 		     (!players[CurrentPlayer].finished)  ) {
                         if (play_score(CurrentPlayer,field)==SLOT_USED) {
                                 say(_("Already used! " 
 				      "Where do you want to put that?"));
                         } else {
-                                LastScoredRow = row;
+			        LastScoredRow = row;
                                 NextPlayer();
                                 return FALSE;
                         }
                 }
 	}
-        
+
         g_print("After: Selection should have been blocked!!!\n");
         gtk_signal_emit_stop_by_name(GTK_OBJECT(clist), "select_row");
         return TRUE;
@@ -235,6 +248,9 @@ select_row2(GtkCList *clist, gint row, gint col, GdkEventButton *event)
 /* This won't work.  Can't tell if we're being called to deselect 
    selected row  prior to selection of new row or just to deselect 
    current row and leave nothing selected */
+/* There's no real reason to have this function since I've taken care of the
+ * problem, but I'll leave it here anyways because ... I dunno, just because.
+ * -- pschwan@cmu.edu */
 #if GY_NEW
 static gint
 unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
@@ -247,7 +263,7 @@ unselect_row(GtkCList *clist, gint row, gint col, GdkEventButton *event)
          * highlighted */
         if (row==LastScoredRow) {
                 LastScoredRow = -1;
-                select_row(clist, row, col,event);
+                select_row(clist, row, col, event);
         }
 
         return FALSE;
@@ -298,11 +314,11 @@ GtkWidget * create_clist(void)
                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row), NULL);
+	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
+			   GTK_SIGNAL_FUNC(select_row), NULL);
 #if GY_NEW
 /*	gtk_signal_connect_after(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row2), NULL); */
-/*	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
-                           GTK_SIGNAL_FUNC(unselect_row), NULL); */
 #endif
 	return clist;
 }

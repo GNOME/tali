@@ -79,7 +79,7 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 static GtkWidget *window, *status_bar, *diceBox[NUMBER_OF_DICE];
 static GtkWidget *diceTable;
 
-static gint gnome_modify_dice( GtkWidget *widget, GdkEvent *event,
+static gint gnome_modify_dice( GtkWidget *widget, GdkEventButton *event,
                                gpointer data );
 static gint gnome_roll_dice( GtkWidget *widget, GdkEvent *event,
                              gpointer data );
@@ -93,7 +93,7 @@ YahtzeeIdle()
 }
 
 
-void
+static void
 CheerWinner(void)
 {
         int winner;
@@ -153,8 +153,17 @@ NextPlayer(void)
                 return;
         }
 
+#if 0
+	/* This is the old way.  I disapprove. */
 	if (HumansAreDone())      /* Because of multiple yahtzees, humans */
-                NextPlayer();     /* may finish before computers */
+	       NextPlayer();     /* may finish before computers */
+#else
+	/* If player 2 had more yahtzees than player 1, player 1 would be asked
+	 * to roll when he had no moves left, and player 2 would never get a
+	 * chance to roll, thus the game deadlocked. -- pschwan@cmu.edu */
+	if (players[CurrentPlayer].finished)
+	  NextPlayer();
+#endif
 }
 
 void
@@ -205,7 +214,7 @@ ShowPlayer(int num, int field)
 
 }
 
-gint 
+static gint 
 quit_game(GtkWidget *widget, gpointer data)
 {
         gtk_widget_destroy(window);
@@ -214,7 +223,7 @@ quit_game(GtkWidget *widget, gpointer data)
 }
 
 
-void 
+static void 
 GyahtzeeNewGame(void)
 {
         int i;
@@ -234,14 +243,14 @@ GyahtzeeNewGame(void)
 }
 
 
-gint 
+static gint 
 new_game_callback(GtkWidget *widget, gpointer data)
 {
         GyahtzeeNewGame();
 	return FALSE;
 }
 
-void
+static void
 UpdateDiePixmap(DiceInfo *d)
 {
         static int last_val[NUMBER_OF_DICE] = { 0 } ;
@@ -276,25 +285,41 @@ UpdateDie(int no)
 
 /* Callback on dice press */
 gint 
-gnome_modify_dice( GtkWidget *widget, GdkEvent *event, gpointer data ) 
+gnome_modify_dice( GtkWidget *widget, GdkEventButton *event, gpointer data ) 
 {
         DiceInfo *tmp = (DiceInfo *) data;
 
         /* printf("Pressed die: %d. NumberOfRolls=%d\n",
                tmp - DiceValues + 1, NumberOfRolls); */
 
-        /* Stop play when player is marked finished */
-	if (players[CurrentPlayer].finished)
-                return TRUE;
+#ifdef DEBUG
+	if (event->state & GDK_SHIFT_MASK)
+	  {
+	    /* If the user is holding down shift, cycle through the dice--very
+	     * useful for debugging. */
+	    tmp->val = (tmp->val + 1)%7;
+	    if (!tmp->val)
+	      tmp->val++;
 
-        if (NumberOfRolls >= NUM_ROLLS) {
-                say(_("You're only allowed three rolls! Select a score box."));
-                return TRUE;
-        }
+	    printf("val before update: %d\n", tmp->val);
+	    UpdateDiePixmap(tmp);
+	  }
+	else
+#endif
+	  {
+	    /* Stop play when player is marked finished */
+	    if (players[CurrentPlayer].finished)
+	      return TRUE;
 
-        tmp->sel = 1 - tmp->sel;
+	    if (NumberOfRolls >= NUM_ROLLS) {
+	      say(_("You're only allowed three rolls! Select a score box."));
+	      return TRUE;
+	    }
+	    
+	    tmp->sel = 1 - tmp->sel;
         
-        UpdateDiePixmap(tmp);
+	    UpdateDiePixmap(tmp);
+	  }
 
 	return TRUE;
 }
@@ -323,7 +348,7 @@ say(char *fmt, ...)
 }
 
 
-gint
+static gint
 about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
@@ -348,14 +373,14 @@ ShowHighScores(void)
         gnome_scores_display (appName, appID, NULL, lastHighScore);
 }
 
-gint 
+static gint 
 score_callback(GtkWidget *widget, gpointer data)
 {
         ShowHighScores();
 	return FALSE;
 }
 
-gint 
+static gint 
 undo_callback(GtkWidget *widget, gpointer data)
 {
         int i;
@@ -400,14 +425,16 @@ GnomeUIInfo editmenu[] = {
 };
 
 GnomeUIInfo helpmenu[] = {
+	{GNOME_APP_UI_ITEM, N_("About..."), "Info about this program", about,
+	 NULL, NULL,
+	 GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
+
+#if 0
 	{GNOME_APP_UI_HELP, NULL, NULL, NULL, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+	 GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+#endif
 
-	{GNOME_APP_UI_ITEM, N_("About..."), NULL, about, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL}
 };
 
 GnomeUIInfo mainmenu[] = {
@@ -448,8 +475,8 @@ ExerciseAllPixmaps()
 #endif /* INCLUDE_UNUSED_FUNCS */
 
 
-void
-LoadDicePixmaps()
+static void
+LoadDicePixmaps(void)
 {
 	GtkWidget *tmp;
 	int i, j;
@@ -484,7 +511,7 @@ LoadDicePixmaps()
 
 
 static void
-GyahtzeeCreateMainWindow()
+GyahtzeeCreateMainWindow(void)
 {
         GtkWidget *all_boxes;
 	GtkWidget *mbutton;

@@ -209,16 +209,20 @@ GameIsOver(void)
         return 1;
 }
 
+#if 0
+/* Don't need this function anymore--it was only ever used in gyahtzee.c, and
+ * it's been commented out now. -- pschwan@cmu.edu */
 int
 HumansAreDone(void)
 {
-        int i;
+  int i;
 
-        for (i=0; i<NumberOfHumans; i++)
-                if (players[i].finished==0)
-                        return 0;
-        return 1;
+  for (i = 0; i < NumberOfHumans; i++)
+    if (players[i].finished == 0)
+      return 0;
+  return 1;
 }
+#endif
 
 int 
 upper_total(int num)
@@ -396,13 +400,18 @@ play_score(int player, int field)
 	int i;
         
         /* Special case for yahtzee, allow multiple calls if 1st wasn't 0 */
-	if (field==11) {
-                if (players[player].used[11]&&(players[player].score[11]==0)) {
-                        return SLOT_USED;
-                }
-	} else if (players[player].used[field]) {
-                return SLOT_USED;
-	}
+
+	/* This, however, was broken: it didn't actually check to see if the
+	 * user had a yahtzee if this wasn't their first time clicking on it.
+	 * Bad. -- pschwan@cmu.edu */
+	if (field == 11)
+	  {
+	    if ((players[player].used[11] && (players[player].score[11] == 0))
+		|| !find_yahtzee())
+	      return SLOT_USED;
+	  }
+	else if (players[player].used[field])
+	  return SLOT_USED;
 
         /* Save old score for possible undo */
         RegisterUndo(player, field, players[player].used[field],
@@ -451,9 +460,9 @@ play_score(int player, int field)
                 break;
 
         case 11:
-                if (find_yahtzee())
-                        players[player].score[field] += 50;
-                break;
+	        if (find_yahtzee())
+		        players[player].score[field] += 50;
+		break;
 
         case 12:
                 players[player].score[field] = add_dice();
