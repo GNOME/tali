@@ -44,8 +44,8 @@ install-data-local:
 	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-touch $(DESTDIR)$(scoredir)/gtali.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gtali.scores
+	-chown $(scores_user).$(scores_group) $(DESTDIR)$(scoredir)/gtali.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
-	-chgrp games $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali
+	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ; fi
 
 CLEANFILES = $(Games_DATA) $(schema_DATA)
