@@ -470,14 +470,26 @@ FindWinner(void)
 {
 	int i;
 	int winner = 0;
+        int total;
 
 	WinningScore = 0;
 
 	for (i = 0; i < NumberOfPlayers; ++i) { 
-		if (total_score(i) > WinningScore) {
+                total = total_score (i);
+                if (total > WinningScore) {
                         WinningScore = total_score(i);
                         winner = i;
                 }
+        }
+
+        /* Detect a drawn game. Returning the negative of the score 
+         * is a bit of a hack, but it allows us to find out who the winners
+         * were without having to pass around a list. */
+        for (i = 0; i< NumberOfPlayers; ++i) {
+                total = total_score (i);
+                if ((total == WinningScore) &&
+                    (i != winner))
+                        return -total;
         }
 
         return winner;

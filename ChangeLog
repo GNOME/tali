@@ -1,3 +1,9 @@
+2004-11-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* yahtzee.c:	
+	* gyahtzee.c: Detect and correctly cheer a tied game. Based very
+	loosely on Richard Hoelscher's patch from bug #135853.
+
 2004-10-26    <rah@rahga.com>
 
 	* clist.c (create_score_list): Disable treeview searching.

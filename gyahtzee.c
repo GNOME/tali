@@ -101,8 +101,26 @@ static void
 CheerWinner (void)
 {
         int winner;
+        int i;
+
+        undo_set_sensitive (FALSE);
+	ShowoffPlayer (ScoreList,CurrentPlayer,0);
 
         winner = FindWinner ();
+
+        if (winner < 0) {
+                for (i = 0; i < NumberOfPlayers; i++) {
+                        if (total_score (i) == -winner) {
+                                ShowoffPlayer (ScoreList, i, 1);
+                        }
+                }
+                
+                say (_("The game is a draw!"));
+                return;
+        }
+
+	ShowoffPlayer (ScoreList,winner,1);
+
         if ( (winner<NumberOfHumans) && !IsCheater ) {
                 lastHighScore = gnome_score_log ((guint)WinningScore, 
                                                  NULL, TRUE);
@@ -110,9 +128,6 @@ CheerWinner (void)
                 if (lastHighScore)
                         ShowHighScores ();
         }
-
-	ShowoffPlayer (ScoreList,CurrentPlayer,0);
-	ShowoffPlayer (ScoreList,winner,1);
 
         if (players[winner].name)
                 say (ngettext("%s wins the game with %d point",
@@ -122,7 +137,6 @@ CheerWinner (void)
 	else
                 say (_("Game over!"));
 
-        undo_set_sensitive (FALSE);
 }
 
 static gboolean
