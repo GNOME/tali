@@ -1,13 +1,5 @@
 Gyahtzee:
-* adjust names of human players
-* get someone to do translations
-
-Gnomelibs:
-* clist - hook before rowselect, add column lines 
-* menu_accelerator_keys:
-	  - should there be standard mappings for quit/new/save...
-	  - should I add NLS translations for the accelerators
-	  - how do I save accel. that have been modified by the user
+* Should prob. force a reroll after undo, but why not we are already cheating.
 
 Other:
 * -Wall -Wstrict-prototypes -Wmissing-prototypes

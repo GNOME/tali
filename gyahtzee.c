@@ -57,7 +57,7 @@ int GyahtzeeAbort = 0;  /* Abort program without playing game */
 static char *appID="gtali";
 static char *appName=N_("Gnome Tali");
 static guint lastHighScore = 0;
-static GtkWidget *ScoreList; 
+GtkWidget *ScoreList; 
 
 #ifdef GNOMEPIXMAPDIR
 #define PP GNOMEPIXMAPDIR "/" 
@@ -558,6 +558,8 @@ GyahtzeeCreateMainWindow(void)
 int
 main (int argc, char *argv[])
 {
+        gint i;
+
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
 
@@ -570,12 +572,23 @@ main (int argc, char *argv[])
         gnome_init_with_popt_table(appID, VERSION, argc, argv,
 				   yahtzee_options, 0, NULL);
 
-	if (!NumberOfComputers)
-	  NumberOfComputers = 
-	    gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
-	if (!NumberOfHumans)
-	  NumberOfHumans = 
-	    gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
+	NumberOfComputers = gnome_config_get_int("/gtali/Preferences/NumberOfComputerOpponents=5");
+	NumberOfHumans = gnome_config_get_int("/gtali/Preferences/NumberOfHumanOpponents=1");
+
+        /* Read in new player names */
+	for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
+                gchar *newname;
+                gchar PrefLoc[] = "/gtali/Preferences/PlayerName1"; /* Careful renaming this */
+                
+                PrefLoc[29] = i+'1';
+                newname = gnome_config_get_string_with_default(PrefLoc, NULL);
+                if (newname) {
+                        players[i].name = g_malloc(strlen(newname));
+                        if (players[i].name)
+                                strcpy(players[i].name,newname);
+                        g_free(newname);
+                }
+        }
 
 	/* For some options, we don't want to play a game */
 	if (!GyahtzeeAbort) {
@@ -599,4 +612,6 @@ main (int argc, char *argv[])
 /* Arrgh - lets all use the same tabs under emacs: 
 Local Variables:
 tab-width: 8
+c-basic-offset: 8
+indent-tabs-mode: nil
 */   

@@ -3,6 +3,8 @@
 	* clist.c (ShowoffPlayer): Setting the column heading buttons to
 	active/passive seems to force a redraw.  Leave as passive always. 
 
+	* Allow change of player names under gnome.
+
 	* *.c & *.h: Set default emacs tab width to 8 :)
 	             Also clean out unused #if's
 	

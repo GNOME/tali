@@ -133,13 +133,21 @@ select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
         return FALSE;
 }
 
+static gint
+RenamePlayerCallback(GtkWidget *widget, GdkEventButton *event, gpointer func_data)
+{
+        if ((event->type==GDK_BUTTON_RELEASE)&&(event->button==3))
+                GRenamePlayer((gint)func_data-1);
+        
+        return FALSE;
+}
 
 GtkWidget * create_clist(void)
 {
 	GtkStyle *style;
 	GdkGCValues vals;
         
-	GtkWidget *clist;
+	GtkCList *clist;
 	char *titles[MAX_NUMBER_OF_PLAYERS+2];
         
 	int i;
@@ -147,40 +155,45 @@ GtkWidget * create_clist(void)
         titles[MAX_NUMBER_OF_PLAYERS+1] = titles[0] = "";
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++)
                 titles[i+1] = players[i].name;
-	clist = gtk_clist_new_with_titles(8,titles);
-	gtk_clist_set_selection_mode(GTK_CLIST(clist), GTK_SELECTION_SINGLE);
+	clist = GTK_CLIST(gtk_clist_new_with_titles(8,titles));
+	gtk_clist_set_selection_mode(clist, GTK_SELECTION_SINGLE);
         
-	gtk_clist_set_column_justification(GTK_CLIST(clist), 0,
+	gtk_clist_set_column_justification(clist, 0,
 					   GTK_JUSTIFY_LEFT);
-	for (i=1; i<8; i++)
-                gtk_clist_set_column_justification(GTK_CLIST(clist), i,
+	for (i=1; i<8; i++) {
+                gtk_clist_set_column_justification(clist, i,
                                                    GTK_JUSTIFY_RIGHT);
-	style = gtk_widget_get_style(clist);
+		gtk_signal_connect(GTK_OBJECT(clist->column[i].button),
+				   "button_release_event",
+				   GTK_SIGNAL_FUNC(RenamePlayerCallback),
+				   (gpointer)i);	
+        }
+	style = gtk_widget_get_style(GTK_WIDGET(clist));
 	g_return_val_if_fail(style != NULL, NULL);
 	if (!style->fg_gc[0]) {
-                gtk_clist_set_column_width(GTK_CLIST(clist), 0, 140);
+                gtk_clist_set_column_width(clist, 0, 140);
                 for (i=1; i<7; i++)
-                        gtk_clist_set_column_width(GTK_CLIST(clist), i, 95);
+                        gtk_clist_set_column_width(clist, i, 95);
 	} else {
                 /* !!!!!!!!! BROKEN !!!!!!!! */
                 gdk_gc_get_values(style->fg_gc[0], &vals);
-                gtk_clist_set_column_width(GTK_CLIST(clist), 0, 
+                gtk_clist_set_column_width(clist, 0, 
                         gdk_string_width(vals.font,"XCLarge Straight [40]XC"));
                 for (i=1; i<7; i++)
-                        gtk_clist_set_column_width(GTK_CLIST(clist), i, 
+                        gtk_clist_set_column_width(clist, i, 
                                gdk_string_width(vals.font, "SomeLongName"));
 	}
 /*	FIXME 
  * clists no longer get a scrolled window to play in the app has to provide
  * it. 
-	gtk_clist_set_policy(GTK_CLIST(clist),
+	gtk_clist_set_policy(clist,
                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
  */
 	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
                            GTK_SIGNAL_FUNC(select_row), NULL);
 	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
 			   GTK_SIGNAL_FUNC(select_row), NULL);
-	return clist;
+	return GTK_WIDGET(clist);
 }
 
 static inline void
@@ -225,4 +238,6 @@ void setup_clist(GtkWidget *clist)
 /* Arrgh - lets all use the same tabs under emacs: 
 Local Variables:
 tab-width: 8
+c-basic-offset: 8
+indent-tabs-mode: nil
 */   

@@ -312,7 +312,149 @@ setup_game(GtkWidget *widget, gpointer data)
         return FALSE;
 }
 
+typedef struct 
+{
+        GtkWidget *main;
+        GtkWidget *name;
+        gint      playerno;
+} PlayerRenameInfo;
+
+static gint
+RenameDialogDestroy(GtkWidget *widget, gpointer data)
+{
+        if (data) {
+                gtk_widget_destroy(((PlayerRenameInfo *)data)->main);
+                g_free(data);
+        }
+	return FALSE;
+}
+
+static gint
+RenameDialogDefault(GtkWidget *widget, gpointer data)
+{
+        if (data) {
+                gtk_entry_set_text(GTK_ENTRY(((PlayerRenameInfo *)data)->name),
+                                   DefaultPlayerNames[((PlayerRenameInfo *)data)->playerno]);
+        }
+	return FALSE;
+}
+
+static gint
+DoRename(GtkWidget *widget, gpointer data)
+{
+        gchar *newname;
+        gchar PrefLoc[] = "/gtali/Preferences/PlayerName1"; /* Careful renaming this */
+        PlayerRenameInfo *prinfo = (PlayerRenameInfo *)data;
+
+        if (data) {
+                newname = gtk_entry_get_text(GTK_ENTRY(prinfo->name));
+                if (players[prinfo->playerno].name != DefaultPlayerNames[prinfo->playerno])
+                        g_free(players[prinfo->playerno].name);
+                players[prinfo->playerno].name = g_malloc(strlen(newname));
+                strcpy(players[prinfo->playerno].name,newname);
+
+                gtk_clist_set_column_title (GTK_CLIST(ScoreList),prinfo->playerno+1,
+                                            players[prinfo->playerno].name);
+
+                /* Save to defaults */
+                PrefLoc[29] += prinfo->playerno;
+                gnome_config_set_string(PrefLoc, newname);
+                gnome_config_sync();
+        }
+
+        return RenameDialogDestroy(widget,data);
+}
+
+
+/* Ain't glade great? */
+void
+GRenamePlayer(gint playerno)
+{
+  GtkWidget *window3;
+  GtkWidget *vbox1;
+  GtkWidget *hbox2;
+  GtkWidget *label13;
+  GtkWidget *entry2;
+  GtkWidget *hbuttonbox1;
+  GtkWidget *button1;
+  GtkWidget *button2;
+  PlayerRenameInfo *prinfo;
+
+  prinfo = g_malloc(sizeof(PlayerRenameInfo));
+  if (!prinfo)
+          return;
+  prinfo->playerno = playerno;
+
+  window3 = gtk_window_new (GTK_WINDOW_DIALOG);
+  gtk_object_set_data (GTK_OBJECT (window3), "window3", window3);
+  gtk_window_set_title (GTK_WINDOW (window3), "window3");
+  gtk_window_position (GTK_WINDOW (window3), GTK_WIN_POS_MOUSE);
+  gtk_window_set_policy (GTK_WINDOW (window3), FALSE, FALSE, TRUE);
+  prinfo->main = window3;
+
+  vbox1 = gtk_vbox_new (FALSE, 0);
+  gtk_object_set_data (GTK_OBJECT (window3), "vbox1", vbox1);
+  gtk_widget_show (vbox1);
+  gtk_container_add (GTK_CONTAINER (window3), vbox1);
+
+  hbox2 = gtk_hbox_new (FALSE, 0);
+  gtk_object_set_data (GTK_OBJECT (window3), "hbox2", hbox2);
+  gtk_widget_show (hbox2);
+  gtk_box_pack_start (GTK_BOX (vbox1), hbox2, TRUE, TRUE, 0);
+
+  label13 = gtk_label_new ("New name");
+  gtk_object_set_data (GTK_OBJECT (window3), "label13", label13);
+  gtk_widget_show (label13);
+  gtk_box_pack_start (GTK_BOX (hbox2), label13, TRUE, TRUE, 0);
+
+  entry2 = gtk_entry_new ();
+  gtk_object_set_data (GTK_OBJECT (window3), "entry2", entry2);
+  gtk_entry_set_text(GTK_ENTRY(entry2),players[playerno].name);
+  gtk_widget_show (entry2);
+  gtk_box_pack_start (GTK_BOX (hbox2), entry2, TRUE, TRUE, 0);
+  prinfo->name = entry2;
+
+  hbuttonbox1 = gtk_hbutton_box_new ();
+  gtk_object_set_data (GTK_OBJECT (window3), "hbuttonbox1", hbuttonbox1);
+  gtk_widget_show (hbuttonbox1);
+  gtk_box_pack_start (GTK_BOX (vbox1), hbuttonbox1, TRUE, TRUE, 0);
+  gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox1), GTK_BUTTONBOX_SPREAD);
+  //gtk_button_box_set_child_ipadding (GTK_BUTTON_BOX (hbuttonbox1), 7, 5);
+
+  button1 = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
+  gtk_object_set_data (GTK_OBJECT (window3), "button1", button1);
+  gtk_signal_connect(GTK_OBJECT(button1), "clicked",
+		     GTK_SIGNAL_FUNC(DoRename), (gpointer)prinfo);
+  gtk_widget_show (button1);
+  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button1);
+
+  button1 = gtk_button_new_with_label ("Default");
+  gtk_object_set_data (GTK_OBJECT (window3), "button1", button1);
+  gtk_signal_connect(GTK_OBJECT(button1), "clicked",
+                     GTK_SIGNAL_FUNC(RenameDialogDefault), (gpointer)prinfo);
+  gtk_widget_show (button1);
+  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button1);
+
+  button2 = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
+  gtk_object_set_data (GTK_OBJECT (window3), "button2", button2);
+  gtk_signal_connect(GTK_OBJECT(button2), "clicked",
+		     GTK_SIGNAL_FUNC(RenameDialogDestroy), (gpointer)prinfo);
+  gtk_widget_show (button2);
+  gtk_container_add (GTK_CONTAINER (hbuttonbox1), button2);
+
+  gtk_widget_show (window3);
+
+  //sleep(10);
+
+  //gtk_widget_destroy(window3);
+
+  return;
+}
+
+
 /* Arrgh - lets all use the same tabs under emacs: 
 Local Variables:
 tab-width: 8
+c-basic-offset: 8
+indent-tabs-mode: nil
 */   

@@ -31,13 +31,17 @@ extern void ShowoffPlayer(GtkCList * clist, int player, int so);
 /* setup.c */
 extern gint setup_game(GtkWidget *widget, gpointer data);
 extern const struct poptOption yahtzee_options[];
+extern void GRenamePlayer(gint playerno);
 
 /* gyahtzee.c */
 extern int GyahtzeeAbort;
+extern GtkWidget *ScoreList; 
 
 #endif /* _Gyahtzee_H_ */
 
 /* Arrgh - lets all use the same tabs under emacs: 
 Local Variables:
 tab-width: 8
+c-basic-offset: 8
+indent-tabs-mode: nil
 */   
