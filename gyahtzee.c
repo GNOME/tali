@@ -356,13 +356,20 @@ about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
         const gchar *authors[] = {
-		"Scott Heavner",
-		"Orest Zborowski - Curses Version (C) 1992",
+		N_("Scott Heavner"),
+		N_("Orest Zborowski - Curses Version (C) 1992"),
 		NULL
 	};
 
+#ifdef ENABLE_NLS
+	{
+		int i=0;
+		while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
+	}
+#endif
+
         about = gnome_about_new (appName, VERSION,
-				 "(C) 1998 the Free Software Fundation",
+				 _("(C) 1998 the Free Software Fundation"),
 				 (const char **)authors,
 				 _("Gnome Tali"),
 				 NULL);
