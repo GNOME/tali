@@ -1,0 +1,37 @@
+#####################################################################################################
+# Setup paths & install options
+#####################################################################################################
+srcdir = @srcdir@
+VPATH = @srcdir@
+prefix=@prefix@
+BINDIR=$(prefix)/bin
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = $(INSTALL) -o root -g games -m @install_setgid@
+
+#####################################################################################################
+# Setup compiler and flags
+#####################################################################################################
+CC=@CC@
+CFLAGS=@CFLAGS@ @DEFS@
+CPPFLAGS=@CPPFLAGS@
+LDFLAGS=@LDFLAGS@
+LIBS=@LIBS@
+
+#####################################################################################################
+OBJ = ../computer.o ../cyahtzee.o ../scores.o ../yahtzee.o
+
+yahtzee: $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LIBS)
+
+install:
+	echo "Installing yahtzee binary in $(BINDIR)..."
+	$(INSTALL_PROGRAM) yahtzee $(BINDIR)
+
+clean:
+	@RM@ -rf $(OBJ) yahtzee core *~ config.cache config.log
+
+clear:	clean
+	@RM@ -rf config.cache config.log config.status Makefile
+
+$(OBJ): ../yahtzee.h ../scores.h ../cyahtzee.h
+

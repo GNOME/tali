@@ -1,0 +1,135 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(../computer.c)
+AC_PREFIX_DEFAULT(/usr/games)
+
+dnl Swiped ncurses detection from old gnu mouseless commander
+search_ncurses=true
+skip_ncurses=false
+search_scoredir=true
+install_setgid=0755
+AC_SUBST(install_setgid)
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PATH_PROG(RM, rm, rm)
+
+dnl ------------------------------------------------------------------
+dnl  Should we install binary setgid?
+dnl ------------------------------------------------------------------
+AC_ARG_ENABLE(setgid,
+        [  --enable-setgid         Install binary with setuid flag set],
+        if test x$enableval = xyes
+        then
+                install_setgid=02755
+        fi
+)
+
+
+dnl ------------------------------------------------------------------
+dnl  Where should we keep the highscores
+dnl ------------------------------------------------------------------
+AC_ARG_WITH(scoredir,
+        [  --with-scoredir=score-dir
+                          Specify directory for scorefiles],
+        if test x$withval = xyes
+        then
+                search_scoredir=true
+        else
+                search_scoredir=false
+        fi
+)
+
+dnl ------------------------------------------------------------------
+dnl  Look for ncurses (checks for plain curses last)
+dnl ------------------------------------------------------------------
+AC_ARG_WITH(ncurses,
+        [  --with-ncurses[=base-dir]
+                          Specify ncurses base dir],
+        if test x$withval = xyes
+        then
+                search_ncurses=true
+        elif test x$withval = xno
+        then
+                skip_ncurses=true
+                search_ncurses=false
+        else
+                LIBS="$LIBS -L$withval/lib -lncurses"
+                CPPFLAGS="$CPPFLAGS -I$withval/include"
+                search_ncurses=false
+        fi
+)
+AC_DEFUN(AC_NCURSES, [
+    if $search_ncurses
+    then
+        if test -f $1/$2
+        then
+            AC_MSG_RESULT(Found $5)
+            LIBS="$LIBS $3"
+            CPPFLAGS="$CPPFLAGS $4"
+            search_ncurses=false
+        fi
+    fi
+])
+dnl Look for ncurses.h or renamed curses.h
+if $search_ncurses
+then
+    AC_CHECKING("Searching for ncurses.h file")
+    AC_NCURSES(/usr/include, ncurses.h, -lncurses, -DNC_HEADER, "ncurses on /usr/include")
+    AC_NCURSES(/usr/include/ncurses, ncurses.h, -lncurses, -I/usr/include/ncurses -DNC_HEADER, "ncurses on /usr/include/ncurses")
+    AC_NCURSES(/usr/local/include, ncurses.h, -lncurses -L/usr/local/lib, -I/usr/local/include -DNC_HEADER, "ncurses on /usr/local")
+    AC_NCURSES(/usr/local/include/ncurses, ncurses.h, -lncurses -L/usr/local/lib -L/usr/local/lib/ncurses, -I/usr/local/include/ncurses -DNC_HEADER, "ncurses on /usr/local/include/ncurses")
+    AC_NCURSES(/usr/local/include/ncurses, curses.h, -lncurses -L/usr/local/lib, -I/usr/local/include/ncurses, "renamed ncurses on /usr/local/.../ncurses")
+    AC_NCURSES(/usr/include/ncurses, curses.h, -lncurses, -I/usr/include/ncurses, "renamed ncurses on /usr/include/ncurses")
+    skip_ncurses=$search_ncurses
+fi
+dnl Didn't find ncurses, lets try for plain curses
+if $skip_ncurses
+then
+    AC_DEFINE(OLD_CURSES)
+    AC_DEFINE(NOCOLORCURSES)
+    AC_CHECK_LIB(curses, initscr, [ LIBS="$LIBS -lcurses"
+                                    skip_ncurses=false ] )
+    if $skip_ncurses
+    then
+       dnl Check a different function this time or will get cached results from above
+       dnl Need to see if curses requires termcap
+       AC_CHECK_LIB(curses, endwin, [ LIBS="$LIBS -lcurses -ltermcap"
+                                      skip_ncurses=false ], , -ltermcap )
+    fi
+fi
+
+dnl ------------------------------------------------------------------
+dnl  Search for appropriate high score directory
+dnl ------------------------------------------------------------------
+AC_DEFUN(AC_SCOREDIR, [
+    if $search_scoredir
+    then
+        if test -d $1
+        then
+            AC_DEFINE(SCOREDIR, "$1")
+            search_scoredir=false
+            AC_MSG_RESULT(Found $1)
+        fi
+    fi
+])
+if $search_scoredir
+then
+    AC_CHECKING(Checking for appropriate scoredir)
+    AC_SCOREDIR(/var/lib/games)
+    AC_SCOREDIR(/usr/games/lib)
+    AC_SCOREDIR(/usr/lib/games)
+    AC_SCOREDIR(/usr/local/games/lib)
+fi
+
+dnl Checks for header files.
+dnl AC_HEADER_STDC
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+
+dnl Checks for library functions.
+dnl AC_TYPE_SIGNAL
+dnl AC_FUNC_VPRINTF
+AC_CHECK_FUNCS(rename)
+
+AC_OUTPUT(Makefile)
