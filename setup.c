@@ -98,7 +98,6 @@ WarnNumPlayersChanged (void)
                                      _("Current game will complete" 
                                        " with original number of players."));
         gtk_window_set_position (GTK_WINDOW (mb), GTK_WIN_POS_MOUSE);
-        gtk_dialog_set_has_separator (GTK_DIALOG (mb), FALSE);
         gtk_dialog_run (GTK_DIALOG (mb));
         gtk_widget_destroy (mb);
 }

@@ -1,3 +1,8 @@
+2004-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* setup.c: Remove references to _has_separator when dealing with
+	message dialogs
+
 2004-02-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/da/Makefile.am: 
