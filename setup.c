@@ -219,7 +219,6 @@ setup_game (GtkWidget *widget, gpointer data)
 {
         GtkWidget *box, *box2, *label, *button, *frame;
         GtkWidget *table;
-        GtkSizeGroup *group1, *group2;
         gchar *ts;
         int i;
 
@@ -234,6 +233,8 @@ setup_game (GtkWidget *widget, gpointer data)
                                                    GTK_STOCK_CLOSE,
                                                    GTK_RESPONSE_CLOSE,
                                                    NULL);
+	gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), 2);
+	gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
         gtk_dialog_set_has_separator (GTK_DIALOG (setupdialog), FALSE);
         g_signal_connect (G_OBJECT (setupdialog), "delete_event",
                           G_CALLBACK (setupdialog_destroy), NULL);
@@ -242,51 +243,46 @@ setup_game (GtkWidget *widget, gpointer data)
                           G_CALLBACK (do_setup), NULL);
 
         table = gtk_table_new (3, 2, FALSE);
-        gtk_container_set_border_width (GTK_CONTAINER (table), 8);
-        gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-        gtk_table_set_col_spacings (GTK_TABLE (table), 6);
+        gtk_container_set_border_width (GTK_CONTAINER (table), 5);
+        gtk_table_set_row_spacings (GTK_TABLE (table), 18);
+        gtk_table_set_col_spacings (GTK_TABLE (table), 18);
 
         gtk_box_pack_start (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), table, 
                             FALSE, FALSE, 0);
 
-        group1 = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
-        group2 = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
-
         frame = games_frame_new (_("Human Players"));
-        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 0, 1);
+        gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_FILL, GTK_FILL, 0, 0);
 	
         box = gtk_vbox_new (FALSE, 6);
-        gtk_container_set_border_width (GTK_CONTAINER (box), 8);
         gtk_container_add (GTK_CONTAINER (frame), box);
 
         /*--- Spinner (number of humans) ---*/
         OriginalNumberOfHumans = NumberOfHumans;
         box2 = gtk_hbox_new (FALSE, 12);
-        gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
-        label = gtk_label_new (_("Number of players:"));
-        gtk_size_group_add_widget (group1, label);
-	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
+        gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
+        label = gtk_label_new_with_mnemonic (_("_Number of players:"));
+
+	gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
         HumanAdj = gtk_adjustment_new ((gfloat)NumberOfHumans, 1.0,
                                        6.0, 1.0, 6.0, 1.0);
 	HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
-        gtk_size_group_add_widget (group2, HumanSpinner);
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label), HumanSpinner);
 
         g_signal_connect (G_OBJECT (HumanAdj), "value_changed",
                           G_CALLBACK (MaxPlayersCheck), HumanAdj);
  
-        gtk_box_pack_start (GTK_BOX (box2), HumanSpinner, FALSE, TRUE, 0);
+        gtk_box_pack_start (GTK_BOX (box2), HumanSpinner, TRUE, TRUE, 0);
 
 
 	frame = games_frame_new (_("Computer Opponents"));
-        gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 1, 2);
+        gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 1, 2, GTK_FILL, GTK_FILL | GTK_EXPAND, 0, 0);
 	
 	box = gtk_vbox_new (FALSE, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
 	gtk_container_add (GTK_CONTAINER (frame), box);
 
         /*--- Button ---*/
-	button = gtk_check_button_new_with_label (_("Delay between rolls") );
-	gtk_box_pack_start (GTK_BOX (box), button, TRUE, TRUE, 0);
+	button = gtk_check_button_new_with_mnemonic (_("_Delay between rolls") );
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), DoDelay);
         g_signal_connect (G_OBJECT (button), "clicked",
                           G_CALLBACK (set_as_int), &tmpDoDelay);
@@ -294,39 +290,38 @@ setup_game (GtkWidget *widget, gpointer data)
         /*--- Spinner (number of computers) ---*/
         OriginalNumberOfComputers = NumberOfComputers;
 	box2 = gtk_hbox_new (FALSE, 12);
-	gtk_box_pack_start (GTK_BOX (box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new (_("Number of opponents:"));
-	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
-        gtk_size_group_add_widget (group1, label);
+	gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
+	label = gtk_label_new_with_mnemonic (_("N_umber of opponents:"));
+	gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
         ComputerAdj = gtk_adjustment_new ((gfloat)NumberOfComputers, 
                                           0.0, 5.0, 1.0, 5.0, 1.0);
 	ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj),
                                                10, 0);
-        gtk_size_group_add_widget (group2, ComputerSpinner);
+        gtk_label_set_mnemonic_widget (GTK_LABEL (label), ComputerSpinner);
 
         g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
                           G_CALLBACK (MaxPlayersCheck), ComputerAdj);
-        gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, FALSE, TRUE, 0);
+        gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
 
         /*--- PLAYER NAMES FRAME ----*/
 	frame = games_frame_new (_("Player Names"));
         gtk_table_attach_defaults (GTK_TABLE (table), frame, 1, 2, 0, 3);
 	
 	box = gtk_vbox_new (FALSE, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
 	gtk_container_add (GTK_CONTAINER (frame), box);
 
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
                 box2 = gtk_hbox_new (FALSE, 12);
 
                 gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
-                ts = g_strdup_printf (" %1d:", i+1);
-                label = gtk_label_new (ts);
+                ts = g_strdup_printf ("_%1d:", i+1);
+                label = gtk_label_new_with_mnemonic (ts);
                 g_free (ts);
                 gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
                 PlayerNames[i] = gtk_entry_new ();
+                gtk_label_set_mnemonic_widget (GTK_LABEL (label), PlayerNames[i]);
                 ts = g_strdup_printf ("PlayerName%1d", i+1);
                 gtk_widget_set_name (PlayerNames[i], ts);
                 g_free (ts);

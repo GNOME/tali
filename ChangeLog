@@ -1,3 +1,8 @@
+2005-03-23  Dennis Cranston  <dennis_cranston@yahoo.com>
+
+	* setup.c:
+	* gyahtzee.c: Make preference and scores dialog more HIG compliant.
+	
 2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/gtali.xml: Bump the app version number. No revisions.
