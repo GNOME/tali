@@ -266,7 +266,7 @@ setup_game (GtkWidget *widget, gpointer data)
         label = gtk_label_new (_("Number of players:"));
         gtk_size_group_add_widget (group1, label);
 	gtk_box_pack_start (GTK_BOX (box2), label, TRUE, TRUE, 0);
-        HumanAdj = gtk_adjustment_new ((gfloat)NumberOfHumans, 0.0,
+        HumanAdj = gtk_adjustment_new ((gfloat)NumberOfHumans, 1.0,
                                        6.0, 1.0, 6.0, 1.0);
 	HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
         gtk_size_group_add_widget (group2, HumanSpinner);

@@ -1,3 +1,9 @@
+2004-03-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* setup.c (setup_game): Make sure we have at least one player by
+	having at least one human player. Anyone who wants to watch the
+	computer play itself is a sad git.
+
 2004-03-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/gtali.xml: Updated version to 2.6.
