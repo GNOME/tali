@@ -124,7 +124,6 @@ NextPlayer(void)
                 CheerWinner();
                 return;
         } 
-
         NumberOfRolls = 0;
 
 	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,0);
@@ -144,15 +143,6 @@ NextPlayer(void)
                 }
         }
 
-        SelectAllDice();
-        RollSelectedDice();
-
-        if (players[CurrentPlayer].comp) {
-                ComputerTurn(CurrentPlayer);
-                NextPlayer();
-                return;
-        }
-
 #if 0
 	/* This is the old way.  I disapprove. */
 	if (HumansAreDone())      /* Because of multiple yahtzees, humans */
@@ -164,6 +154,15 @@ NextPlayer(void)
 	if (players[CurrentPlayer].finished)
 	  NextPlayer();
 #endif
+
+        SelectAllDice();
+        RollSelectedDice();
+
+        if (players[CurrentPlayer].comp) {
+                ComputerTurn(CurrentPlayer);
+                NextPlayer();
+                return;
+        }
 }
 
 void

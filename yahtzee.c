@@ -406,8 +406,10 @@ play_score(int player, int field)
 	 * Bad. -- pschwan@cmu.edu */
 	if (field == 11)
 	  {
-	    if ((players[player].used[11] && (players[player].score[11] == 0))
-		|| !find_yahtzee())
+	    if ((players[player].used[11] && (players[player].score[11] == 0)))
+	      return SLOT_USED;
+
+	    if ((players[player].used[11] && !find_yahtzee()))
 	      return SLOT_USED;
 	  }
 	else if (players[player].used[field])
