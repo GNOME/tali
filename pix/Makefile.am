@@ -10,3 +10,6 @@ Pixmap_DATA = \
 	gnome-dice-5.svg \
 	gnome-dice-6.svg \
 	gnome-dice-none.svg
+
+EXTRA_DIST = $(pixmap_DATA) $(appicon_DATA)
+
