@@ -1,3 +1,19 @@
+2002-04-28  Andreas Persenius  <ndap@telia.com>
+
+	* setup.c: Replace gtk_signal_connect() with g_signal_connect().
+	Replace gtk_container_border_width() with
+	gtk_container_set_border_width().
+	(do_setup): fix bug when renaming players.
+
+	* gyahtzee.c: Replace gtk_signal_connect() with g_signal_connect().
+	Small changes related to move from GtkCList to GtkTreeView.
+	(GyahtzeeCreateMainWindow): gtk_window_set_policy() replaced by
+	gtk_window_set_resizable() and don't allow size changes anymore.
+
+	* gyahtzee.h: Use new prototypes from clist.c.
+	* clist.c: Convert to GtkTreeView/GtkListStore.
+	* Makefile.am (INCLUDES): Add -D{G,GDK,GTK}_DISABLE_DEPRECATED
+
 2002-04-25  Andreas Persenius  <ndap@telia.com>
 
 	* Makefile.am:

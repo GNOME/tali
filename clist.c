@@ -6,7 +6,7 @@
  *
  * Author: Scott Heavner
  *
- *   Scoring is done using a clist and handled in this file.
+ *   Scoring is done using a GtkTreeView and handled in this file.
  *
  *   Variables are exported in gyahtzee.h
  *
@@ -27,6 +27,7 @@
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include <config.h>
+#include <gdk/gdk.h>
 #include <gnome.h>
 
 #include <stdio.h>
@@ -35,193 +36,298 @@
 #include "gyahtzee.h"
 
 void
-update_score_cell(GtkCList * clist, gint row, gint col, int val)
+update_score_cell(GtkWidget *treeview, gint row, gint col, int val)
 {
-        char buf[5] = "    ";
-        
-        if (val >= 0)
-                sprintf(buf,"%4d",val);
-        gtk_clist_set_text(clist,row,col,buf);
-}
+        GtkTreeModel *model;
+        GtkTreeIter iter;
+        char *buf;
 
+        g_assert(treeview != NULL);
 
-/* This is full of cheats.  Goes into gtk code, access 
- * structures that would probably be private under C++.  Works now 
- * because clist*title_pass/active() doesn't do a redraw, may have to be
- * modified later. */
-void
-ShowoffPlayer(GtkCList * clist, int player, int so)
-{
-        gint column;
-        GtkButton *button;
-        
-        g_return_if_fail (clist != NULL);
-        
-        column = player + 1;
-        
-        if (column < 0 || column >= clist->columns)
+        if (val < 0)
                 return;
-        
-        button = GTK_BUTTON(clist->column[column].button);
 
-        if (so) {
-                button->button_down = TRUE;
-                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_ACTIVE);
-        } else {
-                button->button_down = FALSE;
-                gtk_widget_set_state (GTK_WIDGET (button), GTK_STATE_NORMAL);
-        }
-  
-        gtk_widget_draw(GTK_WIDGET(button),NULL);
-
+        model = gtk_tree_view_get_model(GTK_TREE_VIEW(treeview));
+        gtk_tree_model_iter_nth_child(model, &iter, NULL, row);
+        buf = g_strdup_printf("%i", val);
+        gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, buf, -1);
+        g_free(buf);
 }
 
-static gint LastScoredRow = -1;
-
-/* This function is called for both select and unselect events.  If the
- * unselect event is for an event that the pointer isn't on, it'll be dropped
- * on the floor.  Otherwise, it will be thought of as a select event and
- * processed properly.  This takes care of the problem of having to de-select
- * and then re-select rows in multi-player games. -- pschwan@cmu.edu */
-static gint
-select_row(GtkCList * clist, gint row, gint col, GdkEventButton * event)
+static void
+set_label_bold(GtkLabel *label, gboolean make_bold)
 {
-        int field = row, actual_row, actual_col;
-
-	if (!event) 
-                return FALSE;
-
-	gtk_clist_get_selection_info(GTK_CLIST(clist), event->x, event->y,
-				     &actual_row, &actual_col);
-
-	if (row != actual_row)
-	  /* this is an unselect event for a row that the mouse pointer isn't
-	   * on.  take evasive maneuvers, commander. */
-	  return FALSE;
-
-        LastScoredRow = -1;
-
-	switch (row) {
-
-	case (R_UTOTAL):	/* Can't select total/blank rows */
-	case (R_BONUS):
-	case (R_BLANK1):
-	case (R_GTOTAL):
-	case (R_LTOTAL):
-                break;
-
-	default:
-                /* Adjust for Upper Total / Bonus entries */
-                if (field >= NUM_UPPER)
-                        field -= 3;
+        PangoAttrList *attrlist;
+        PangoAttribute *attr;
         
-                if ( (field < NUM_FIELDS) && 
-		     (!players[CurrentPlayer].finished)  ) {
-                        if (play_score(CurrentPlayer,field)==SLOT_USED) {
-                                say(_("Already used! " 
-				      "Where do you want to put that?"));
+        g_assert(label != NULL);
+
+        attrlist = gtk_label_get_attributes(label);
+        if (!attrlist)
+                attrlist = pango_attr_list_new();
+
+        if (make_bold) {
+                attr = pango_attr_weight_new(PANGO_WEIGHT_BOLD);
+                attr->start_index = 0;
+                attr->end_index = -1;
+                pango_attr_list_change(attrlist, attr);
+        } else {
+                attr = pango_attr_weight_new(PANGO_WEIGHT_NORMAL);
+                attr->start_index = 0;
+                attr->end_index = -1;
+                pango_attr_list_change(attrlist, attr);
+        }
+        gtk_label_set_attributes(label, attrlist);
+}
+
+/* Shows the active player by make the player name bold in the TreeView. */
+void
+ShowoffPlayer(GtkWidget *treeview, int player, int so)
+{
+        GtkTreeViewColumn *col;
+        GtkWidget *label;
+        GList *collist;
+        
+        g_return_if_fail(treeview != NULL);
+
+        if (player < 0 || player >= MAX_NUMBER_OF_PLAYERS)
+                return;
+
+        collist = gtk_tree_view_get_columns(GTK_TREE_VIEW(treeview));
+        col = GTK_TREE_VIEW_COLUMN(g_list_nth_data(collist, player+1));
+        g_list_free(collist);
+
+        label = gtk_tree_view_column_get_widget(col);
+        if (!label)
+                return;
+
+        g_assert(GTK_IS_LABEL(label));
+
+        set_label_bold(GTK_LABEL(label), so);
+}
+
+static void
+row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
+                 GtkTreeViewColumn *column, gpointer user_data)
+{
+        char *path_str;
+        int row;
+
+        path_str = gtk_tree_path_to_string(path);
+        if (sscanf(path_str, "%i", &row) != 1) {
+                g_warning("%s: could not convert '%s' to integer\n",
+                          G_GNUC_FUNCTION, path_str);
+                g_free(path_str);
+                return;
+        }
+        g_free(path_str);
+        switch (row) {
+        case (R_UTOTAL):
+        case (R_BONUS):
+        case (R_BLANK1):
+        case (R_GTOTAL):
+        case (R_LTOTAL):
+                break;
+        default:
+                /* Adjust for Uppe Total / Bonus entries */
+                if (row >= NUM_UPPER)
+                        row -= 3;
+
+                if (row < NUM_FIELDS && !players[CurrentPlayer].finished) {
+                        if (play_score(CurrentPlayer, row) == SLOT_USED) {
+                                say(_("Already used! "
+                                      "Where do you want to put that?"));
                         } else {
-                                LastScoredRow = row;
                                 NextPlayer();
-                                return TRUE;
                         }
                 }
-	}
+                break;
+        }
+}
+
+static gboolean
+activate_selected_row_idle_cb(gpointer data)
+{
+        GtkTreeView *tree = GTK_TREE_VIEW(data);
+        GtkTreeViewColumn *column;
+        GtkTreePath *path;
+
+        path = NULL;
+        gtk_tree_view_get_cursor(tree, &path, &column);
+        if (path) {
+                if (!column)
+                        column = gtk_tree_view_get_column(tree, 0);
+                gtk_tree_view_row_activated(tree, path, column);
+        }
         
-        gtk_clist_unselect_row (clist,row,col);
+        return FALSE;
+}
+
+/* Returns: FALSE to let the GtkTreeView focus the selected row */
+static gboolean
+tree_button_press_cb(GtkWidget *widget, GdkEventButton *event, gpointer data)
+{
+        GtkTreeView *tree = GTK_TREE_VIEW(data);
+
+        g_assert(widget != NULL);
+        g_assert(event != NULL);
+
+        if (event->type != GDK_BUTTON_PRESS)
+                return FALSE;
+
+        g_idle_add_full(G_PRIORITY_HIGH, activate_selected_row_idle_cb,
+                        (gpointer) tree, NULL);
 
         return FALSE;
 }
 
-
-GtkWidget * create_clist(void)
+GtkWidget *create_score_list(void)
 {
-	GtkStyle *style;
-	GdkGCValues vals;
+        GtkWidget *tree;
+        GtkListStore *store;
         
-	GtkCList *clist;
-	char *titles[MAX_NUMBER_OF_PLAYERS+2];
-        
-	int i;
-        
-        titles[MAX_NUMBER_OF_PLAYERS+1] = titles[0] = "";
-        for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++)
-                titles[i+1] = players[i].name;
-	clist = GTK_CLIST(gtk_clist_new_with_titles(8,titles));
-	gtk_clist_set_selection_mode(clist, GTK_SELECTION_SINGLE);
-        
-	gtk_clist_set_column_justification(clist, 0,
-					   GTK_JUSTIFY_LEFT);
-	for (i=1; i<8; i++) {
-                gtk_clist_set_column_justification(clist, i,
-                                                   GTK_JUSTIFY_RIGHT);
-        }
-	style = gtk_widget_get_style(GTK_WIDGET(clist));
-	g_return_val_if_fail(style != NULL, NULL);
-	if (!style->fg_gc[0]) {
-                gtk_clist_set_column_width(clist, 0, 140);
-                for (i=1; i<7; i++)
-                        gtk_clist_set_column_width(clist, i, 95);
-	} else {
-                /* !!!!!!!!! BROKEN !!!!!!!! */
-                gdk_gc_get_values(style->fg_gc[0], &vals);
-                gtk_clist_set_column_width(clist, 0, 
-                        gdk_string_width(vals.font,"XCLarge Straight [40]XC"));
-                for (i=1; i<7; i++)
-                        gtk_clist_set_column_width(clist, i, 
-                               gdk_string_width(vals.font, "SomeLongName"));
-	}
-/*	FIXME 
- * clists no longer get a scrolled window to play in the app has to provide
- * it. 
-	gtk_clist_set_policy(clist,
-                             GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
- */
-	gtk_signal_connect(GTK_OBJECT(clist), "select_row",
-                           GTK_SIGNAL_FUNC(select_row), NULL);
-	gtk_signal_connect(GTK_OBJECT(clist), "unselect_row",
-			   GTK_SIGNAL_FUNC(select_row), NULL);
-	return GTK_WIDGET(clist);
+        store = gtk_list_store_new(MAX_NUMBER_OF_PLAYERS + 2,
+                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+                                   G_TYPE_STRING, G_TYPE_STRING);
+        tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
+        g_object_unref(store);
+
+        g_signal_connect(G_OBJECT(tree), "row-activated",
+                         G_CALLBACK(row_activated_cb), NULL);
+        g_signal_connect(G_OBJECT(tree), "button-press-event",
+                         G_CALLBACK(tree_button_press_cb), (gpointer) tree);
+
+        return tree;
 }
 
-static inline void
-gyahtzee_append_clist(GtkWidget *clist, char *tmp[], char *firstcol)
+static void
+add_columns(GtkTreeView *tree)
 {
-        tmp[0] = firstcol;
-        gtk_clist_append(GTK_CLIST(clist), tmp);
-}
-
-void setup_clist(GtkWidget *clist)
-{
-        char *buf1 = "";  /* Enough for 6 players */
-        char *tmp[] = { 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+        GtkTreeViewColumn *column;
+        GtkCellRenderer *renderer;
+        GtkWidget *label;
+        GValue *prop_value;
         int i;
         
-       tmp[1] = tmp[2] = tmp[3] = tmp[4] = tmp[5] = tmp[6] = tmp[7] = buf1;
+        /* Create columns */
+        renderer = gtk_cell_renderer_text_new();
+        column = gtk_tree_view_column_new_with_attributes("", renderer,
+                                                          "text", 0, NULL);
+        gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
+        for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
+                renderer = gtk_cell_renderer_text_new();
+                prop_value = g_new0(GValue, 1);
+                g_value_init(prop_value, G_TYPE_FLOAT);
+                g_value_set_float(prop_value, 1.0);
+                g_object_set_property(G_OBJECT(renderer),
+                                      "xalign", prop_value);
+                g_value_unset(prop_value);
+                g_free(prop_value);
 
-        gtk_clist_freeze(GTK_CLIST(clist));
-        gtk_clist_clear(GTK_CLIST(clist));
-        
-        gtk_clist_column_titles_active(GTK_CLIST(clist));
-        for (i=0; i<NumberOfPlayers; i++)
-                gtk_clist_set_column_title (GTK_CLIST(clist),i+1,
-                                            players[i].name);
-        for (;i<MAX_NUMBER_OF_PLAYERS;i++)
-                gtk_clist_set_column_title (GTK_CLIST(clist),i+1,"");
-        gtk_clist_column_titles_passive(GTK_CLIST(clist));
-        
-        for (i=0; i < NUM_UPPER; i++)
-                gyahtzee_append_clist(clist,tmp,_(FieldLabels[i]));
-        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_UPPERT]));
-        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_BONUS]));
-        gyahtzee_append_clist(clist,tmp,buf1);
-        for (i=0; i < NUM_LOWER; i++)
-                gyahtzee_append_clist(clist,tmp,_(FieldLabels[i+NUM_UPPER]));
-        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_LOWERT]));
-        gyahtzee_append_clist(clist,tmp,_(FieldLabels[F_GRANDT]));
+                column = gtk_tree_view_column_new();
+                gtk_tree_view_column_pack_start(column, renderer, TRUE);
+                gtk_tree_view_column_set_attributes(column, renderer,
+                                                    "text", i+1, NULL);
+                gtk_tree_view_column_set_min_width(column, 95);
+                gtk_tree_view_column_set_alignment(column, 1.0);
+                label = gtk_label_new(players[i].name);
+                gtk_tree_view_column_set_widget(column, label);
+                gtk_widget_show(label);
+                gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
+        }
+        renderer = gtk_cell_renderer_text_new();
+        column = gtk_tree_view_column_new_with_attributes("", renderer, "text",
+                                                          MAX_NUMBER_OF_PLAYERS
+                                                          + 1, NULL);
+        gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
+}
 
-        gtk_clist_thaw(GTK_CLIST(clist));
+void
+score_list_set_column_title(GtkWidget *treeview, int column, const char *str)
+{
+        GtkTreeViewColumn *col;
+        GtkWidget *label;
 
+        g_assert(treeview != NULL);
+
+        col = gtk_tree_view_get_column(GTK_TREE_VIEW(treeview), column);
+        label = gtk_tree_view_column_get_widget(col);
+        if (!label)
+                return;
+
+        gtk_label_set_text(GTK_LABEL(label), str);
+}
+
+static void
+initialize_column_titles(GtkTreeView *treeview)
+{
+        GtkTreeViewColumn *col;
+        GList *collist, *node;
+        GtkWidget *label;
+        int i;
+
+        collist = gtk_tree_view_get_columns(treeview);
+        i = 0;
+        for (node = collist; node != NULL; node = g_list_next(node)) {
+                col = GTK_TREE_VIEW_COLUMN(node->data);
+                label = gtk_tree_view_column_get_widget(col);
+                if (!label)
+                        continue;
+
+                if (i < NumberOfPlayers)
+                        gtk_label_set_text(GTK_LABEL(label), players[i].name);
+                else
+                        gtk_label_set_text(GTK_LABEL(label), "");
+                i++;
+        }
+        g_list_free(collist);
+}
+
+void setup_score_list(GtkWidget *treeview)
+{
+        GtkTreeModel *model;
+        GtkListStore *store;
+        GtkTreeIter iter;
+        GList *columns;
+        int i;
+
+        g_assert(treeview != NULL);
+
+        columns = gtk_tree_view_get_columns(GTK_TREE_VIEW(treeview));
+        if (!columns) {
+                add_columns(GTK_TREE_VIEW(treeview));
+        } else {
+                initialize_column_titles(GTK_TREE_VIEW(treeview));
+        }
+
+        model = gtk_tree_view_get_model(GTK_TREE_VIEW(treeview));
+        store = GTK_LIST_STORE(model);
+        gtk_list_store_clear(store);
+
+        for (i = 0; i < NUM_UPPER; i++) {
+                gtk_list_store_append(store, &iter);
+                gtk_list_store_set(store, &iter, 0, _(FieldLabels[i]), -1);
+        }
+
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), -1);
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_BONUS]), -1);
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, "", -1);
+
+        for (i = 0; i < NUM_LOWER; i++) {
+                gtk_list_store_append(store, &iter);
+                gtk_list_store_set(store, &iter,
+                                   0, _(FieldLabels[i+NUM_UPPER]),
+                                   -1);
+        }
+
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_LOWERT]), -1);
+        gtk_list_store_append(store, &iter);
+        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_GRANDT]), -1);
 }	
 
 /* Arrgh - lets all use the same tabs under emacs: 

@@ -22,11 +22,13 @@
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
 
 /* clist.c */
-extern GtkWidget *create_clist(void);
-extern void setup_clist(GtkWidget *clist);
-extern void update_score_cell(GtkCList * clist, gint row, gint col, int val);
-extern void ShowoffPlayerColumn(GtkCList * clist, int player, int so);
-extern void ShowoffPlayer(GtkCList * clist, int player, int so);
+extern GtkWidget *create_score_list(void);
+extern void setup_score_list(GtkWidget *scorelist);
+extern void update_score_cell(GtkWidget *scorelist, int row, int col, int val);
+extern void ShowoffPlayerColumn(GtkWidget *scorelist, int player, int so);
+extern void ShowoffPlayer(GtkWidget *scorelist, int player, int so);
+extern void score_list_set_column_title(GtkWidget *scorelist, int column,
+                                        const char *str);
 
 /* setup.c */
 extern gint setup_game(GtkWidget *widget, gpointer data);

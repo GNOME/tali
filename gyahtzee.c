@@ -107,8 +107,8 @@ CheerWinner(void)
                         ShowHighScores();
         }
 
-	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,0);
-	ShowoffPlayer(GTK_CLIST(ScoreList),winner,1);
+	ShowoffPlayer(ScoreList,CurrentPlayer,0);
+	ShowoffPlayer(ScoreList,winner,1);
 
         if (players[winner].name)
                 say(_("%s wins the game with %d points"),
@@ -127,12 +127,12 @@ NextPlayer(void)
         } 
         NumberOfRolls = 0;
 
-	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,0);
+	ShowoffPlayer(ScoreList,CurrentPlayer,0);
 
         if ( ++CurrentPlayer >= NumberOfPlayers )
                 CurrentPlayer = 0;
 
-	ShowoffPlayer(GTK_CLIST(ScoreList),CurrentPlayer,1);
+	ShowoffPlayer(ScoreList,CurrentPlayer,1);
 
         if (players[CurrentPlayer].name) {
                 if (players[CurrentPlayer].comp) {
@@ -176,8 +176,6 @@ ShowPlayer(int num, int field)
         int bonus = -1;
         int score;
         
-        gtk_clist_freeze(GTK_CLIST(ScoreList));
-
 	for (i = 0; i < NUM_FIELDS; ++i) {
                 
 		if (i == field || field == -1) {
@@ -191,8 +189,7 @@ ShowPlayer(int num, int field)
 				score = players[num].score[i];
                         else
                                 score = -1;
-                        update_score_cell(GTK_CLIST(ScoreList), 
-                                          line, num+1, score);
+                        update_score_cell(ScoreList, line, num+1, score);
                 }
 	}
         
@@ -204,14 +201,10 @@ ShowPlayer(int num, int field)
 		upper_tot += bonus;
 	}
         
-        update_score_cell(GTK_CLIST(ScoreList), R_BONUS, num+1, bonus);
-        update_score_cell(GTK_CLIST(ScoreList), R_UTOTAL, num+1, upper_tot);
-        update_score_cell(GTK_CLIST(ScoreList), R_LTOTAL, num+1, lower_tot);
-        update_score_cell(GTK_CLIST(ScoreList), R_GTOTAL, num+1, 
-                          upper_tot+lower_tot);
-        
-        gtk_clist_thaw(GTK_CLIST(ScoreList));
-
+        update_score_cell(ScoreList, R_BONUS, num+1, bonus);
+        update_score_cell(ScoreList, R_UTOTAL, num+1, upper_tot);
+        update_score_cell(ScoreList, R_LTOTAL, num+1, lower_tot);
+        update_score_cell(ScoreList, R_GTOTAL, num+1, upper_tot+lower_tot);
 }
 
 static gint 
@@ -228,11 +221,11 @@ GyahtzeeNewGame(void)
         int i;
 
         NewGame();
-        setup_clist(ScoreList);
+        setup_score_list(ScoreList);
 
 	for (i=0; i<NumberOfPlayers; i++)
-                ShowoffPlayer(GTK_CLIST(ScoreList),i,0);
-	ShowoffPlayer(GTK_CLIST(ScoreList),0,1);
+                ShowoffPlayer(ScoreList,i,0);
+	ShowoffPlayer(ScoreList,0,1);
 
         /* All players are computers, start game immediately */
         if (players[CurrentPlayer].comp) {
@@ -449,7 +442,7 @@ GnomeUIInfo mainmenu[] = {
 static void
 LoadDicePixmaps(void)
 {
-	GtkWidget *tmp;
+        GtkWidget *tmp;
 	GdkPixbuf *pixbuf;
 	const char **xpm_data[] = {
 		gnome_dice_1_xpm,
@@ -494,13 +487,9 @@ GyahtzeeCreateMainWindow(void)
 	GtkWidget *tmp;
 	int i, j;
 
-        gtk_window_set_policy(GTK_WINDOW(window), TRUE, TRUE, FALSE);
-        gtk_signal_connect(GTK_OBJECT(window), "delete_event",
-                           GTK_SIGNAL_FUNC(quit_game), NULL);
-
-	/* Want CList to show up w/o scroll bars */
-	gtk_widget_set_usize( GTK_WIDGET (window), 845,462);
-
+        gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
+        g_signal_connect(G_OBJECT(window), "delete_event",
+                         G_CALLBACK(quit_game), NULL);
 
 	/*---- Menus ----*/
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
@@ -542,10 +531,8 @@ GyahtzeeCreateMainWindow(void)
                                        gtk_widget_get_events(diceBox[i]) |
                                        GDK_BUTTON_PRESS_MASK );
                 
-                gtk_signal_connect( GTK_OBJECT(diceBox[i]), 
-                                    "button_press_event",
-                                    GTK_SIGNAL_FUNC(gnome_modify_dice),
-                                    &DiceValues[i] );
+                g_signal_connect(G_OBJECT(diceBox[i]), "button_press_event",
+                                 G_CALLBACK(gnome_modify_dice), &DiceValues[i]);
 
                 gtk_widget_show(dicePixmaps[i][0]);
                 gtk_widget_show(tmp);
@@ -554,15 +541,15 @@ GyahtzeeCreateMainWindow(void)
 	mbutton = gtk_button_new_with_label(_(" Roll ! "));
 	gtk_table_attach(GTK_TABLE(diceTable), mbutton, 0, 1, i, i+1,
 			 0, 0, 5, 5);
-	gtk_signal_connect (GTK_OBJECT (mbutton), "clicked",
-			    GTK_SIGNAL_FUNC (gnome_roll_dice), NULL);
+        g_signal_connect(G_OBJECT(mbutton), "clicked",
+                         G_CALLBACK(gnome_roll_dice), NULL);
 	gtk_widget_show(mbutton);
 	gtk_widget_show(diceTable);
         
-	/* Scores displayed in CList */
-        ScoreList = create_clist();
+	/* Scores displayed in score list */
+        ScoreList = create_score_list();
         gtk_box_pack_end(GTK_BOX(all_boxes), ScoreList, TRUE, TRUE, 0);
-        setup_clist(ScoreList);
+        setup_score_list(ScoreList);
         gtk_widget_show(ScoreList);
         
 	gtk_widget_show(all_boxes);

@@ -121,9 +121,10 @@ do_setup(GtkWidget *widget, gpointer data)
                 if (players[i].name != DefaultPlayerNames[i])
                         g_free(players[i].name);
                 players[i].name = g_strdup(gtk_entry_get_text(GTK_ENTRY(PlayerNames[i])));
-                gtk_clist_set_column_title (GTK_CLIST(ScoreList),i+1,
-                                            players[i].name);
 
+                if (i < NumberOfPlayers)
+                        score_list_set_column_title(ScoreList, i+1,
+                                                    players[i].name);
                 name_list = g_slist_append(name_list, players[i].name);
         }
 
@@ -248,13 +249,11 @@ setup_game(GtkWidget *widget, gpointer data)
 
 	setupdialog = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
+	gtk_container_set_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
 	gtk_window_set_title(GTK_WINDOW(setupdialog), _("GTali setup"));
-	gtk_signal_connect(GTK_OBJECT(setupdialog),
-			   "delete_event",
-			   GTK_SIGNAL_FUNC(setupdialog_destroy),
-			   0);
+        g_signal_connect(G_OBJECT(setupdialog), "delete_event",
+                         G_CALLBACK(setupdialog_destroy), NULL);
 
 	all_boxes = gtk_vbox_new(FALSE, 5);
 	gtk_container_add(GTK_CONTAINER(setupdialog), all_boxes);
@@ -263,7 +262,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_border_width(GTK_CONTAINER(box), 8);
+	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         /*--- Button ---*/
@@ -271,9 +270,8 @@ setup_game(GtkWidget *widget, gpointer data)
                          _("Delay between rolls") );
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),DoDelay);
-	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_as_int,
-                            &tmpDoDelay);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(set_as_int), &tmpDoDelay);
 	gtk_widget_show (button);
 
         /*--- Button ---*/
@@ -282,9 +280,8 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
                                      DisplayComputerThoughts);
-	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_as_int,
-                            &tmpDisplayComputerThoughts);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(set_as_int), &tmpDisplayComputerThoughts);
 	gtk_widget_show (button);
 
 
@@ -311,10 +308,9 @@ setup_game(GtkWidget *widget, gpointer data)
 					  TRUE);
  endif
 #endif
-	gtk_signal_connect (GTK_OBJECT(ComputerAdj), 
-                            "value_changed", (GtkSignalFunc)MaxPlayersCheck,
-			    ComputerAdj);
-        gtk_box_pack_start(GTK_BOX(box2), ComputerSpinner, FALSE, TRUE, 0);
+         g_signal_connect(G_OBJECT(ComputerAdj), "value_changed",
+                          G_CALLBACK(MaxPlayersCheck), ComputerAdj);
+         gtk_box_pack_start(GTK_BOX(box2), ComputerSpinner, FALSE, TRUE, 0);
 	gtk_widget_show(ComputerSpinner);
 	gtk_widget_show(box2);
 
@@ -326,7 +322,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_border_width(GTK_CONTAINER(box), 8);
+	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         /*--- Spinner (number of humans) ---*/
@@ -351,9 +347,9 @@ setup_game(GtkWidget *widget, gpointer data)
 					  TRUE);
  endif
 #endif
-	gtk_signal_connect (GTK_OBJECT(HumanAdj), 
-                            "value_changed", (GtkSignalFunc)MaxPlayersCheck,
-			    HumanAdj);
+         g_signal_connect(G_OBJECT(HumanAdj), "value_changed",
+                          G_CALLBACK(MaxPlayersCheck), HumanAdj);
+ 
         gtk_box_pack_start(GTK_BOX(box2), HumanSpinner, FALSE, TRUE, 0);
 	gtk_widget_show(HumanSpinner);
 	gtk_widget_show(box2);
@@ -368,7 +364,7 @@ setup_game(GtkWidget *widget, gpointer data)
  	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
  	
  	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_border_width(GTK_CONTAINER(box), 8);
+	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
  	gtk_container_add(GTK_CONTAINER(frame), box);
  
          /*--- Button ---*/
@@ -380,9 +376,8 @@ setup_game(GtkWidget *widget, gpointer data)
  	gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
         tmpExtraYahtzeeBonus = ExtraYahtzeeBonus;
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),ExtraYahtzeeBonus);
- 	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_as_int, 
-                            &tmpExtraYahtzeeBonus);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(set_as_int), &tmpExtraYahtzeeBonus);
  	gtk_widget_show (button);
 
         BonusEntry = gtk_entry_new();
@@ -406,9 +401,8 @@ setup_game(GtkWidget *widget, gpointer data)
  	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
         gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON(button),
                                       ExtraYahtzeeJoker);
- 	gtk_signal_connect (GTK_OBJECT(button), 
-                            "clicked", (GtkSignalFunc)set_as_int, 
-                            &tmpExtraYahtzeeJoker);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(set_as_int), &tmpExtraYahtzeeJoker);
         gtk_widget_set_sensitive(button,FALSE); /* NOT READY YET */
  	gtk_widget_show (button);
  	gtk_widget_show(box);
@@ -420,7 +414,7 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_border_width(GTK_CONTAINER(box), 8);
+	gtk_container_set_border_width(GTK_CONTAINER(box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 
         for (i=0; i<MAX_NUMBER_OF_PLAYERS; i++) {
@@ -453,15 +447,14 @@ setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
 
 	button = gtk_button_new_from_stock (GTK_STOCK_OK);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked",
-			   GTK_SIGNAL_FUNC(do_setup), NULL);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(do_setup), NULL);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
 
 	button = gtk_button_new_from_stock (GTK_STOCK_CANCEL);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked",
-                           (GtkSignalFunc)setupdialog_destroy,
-			   (gpointer)1);
+        g_signal_connect(G_OBJECT(button), "clicked",
+                         G_CALLBACK(setupdialog_destroy), GINT_TO_POINTER(1));
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
         gtk_widget_show(box);
