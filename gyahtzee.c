@@ -414,7 +414,7 @@ about (GtkWidget *widget, gpointer data)
 			NULL);
 
         about = gnome_about_new (appName, VERSION,
-				 "Copyright \xc2\xa9 1998-2003 Free Software "
+				 "Copyright \xc2\xa9 1998-2004 Free Software "
 				 "Foundation, Inc.",
 				 _("A sort of poker with dice and less money."),
 				 (const char **)authors,
