@@ -440,54 +440,26 @@ say (char *fmt, ...)
 static gint
 about (GtkWidget *widget, gpointer data)
 {
-	static GtkWidget *about = NULL;
         const gchar *authors[] = {
                 N_("GNOME version (1998):"),
 		"Scott Heavner",
-		N_("Curses version (1992):"),
+		"",
+		N_("Console version (1992):"),
 		"Orest Zborowski",
 		NULL
 	};
-        gchar *documenters[] = {
-                NULL
-        };
-        /* Translator credits */
-        gchar *translator_credits = _("translator-credits");
-	GdkPixbuf *pixbuf = NULL;
         
-
-	if (about != NULL) {
-	  	gtk_window_present (GTK_WINDOW (about));
-		return FALSE;
-	}
-        {
-		int i = 0;
-		while (authors[i] != NULL) {
-                        authors[i]=_(authors[i]); 
-                        i++;
-                }
-	}
-
-	pixbuf = gdk_pixbuf_new_from_file (GNOMEPIXMAPDIR "/gnome-gtali.png",
-                                           NULL);
-
-        about = gnome_about_new (appName, VERSION,
-				 "Copyright \xc2\xa9 1998-2004 Free Software "
-				 "Foundation, Inc.",
-				 _("A sort of poker with dice and less money."),
-				 (const char **)authors,
-				 (const char **)documenters,
-				 strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
-				 pixbuf);
-		
-        if (pixbuf != NULL)
-                gdk_pixbuf_unref (pixbuf);
-		  
-        gtk_window_set_transient_for (GTK_WINDOW (about),
-                                      GTK_WINDOW (window));
-	g_signal_connect (G_OBJECT (about), "destroy",
-                          G_CALLBACK (gtk_widget_destroyed), &about);
-        gtk_widget_show (about);
+	gtk_show_about_dialog (GTK_WINDOW (window),
+			       "name", appName,
+			       "version", VERSION,
+			       "copyright", "Copyright \xc2\xa9 1998-2005 "
+					    "Free Software Foundation, Inc.",
+			       "comments", _("A variation on poker with "
+					     "dice and less money."),
+			       "authors", authors,
+			       "translator_credits", _("translator-credits"),
+			       NULL);
+	
 	return FALSE;
 }
 

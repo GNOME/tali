@@ -1,3 +1,7 @@
+2005-04-14  Richard Hoelscher  <rah@rahga.com>
+
+	* gyahtzee.c (about): Use GtkAboutDialog.
+
 2005-03-24  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/sv/*: Added a Swedish translation from Kenneth Astrand.
