@@ -19,7 +19,7 @@
       Spela ett pokerliknande tärningsspel.
     </description>
     <type>
-      user's guide
+      Användarguide
     </type>
     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
     <identifier url="gtali.xml"/>
