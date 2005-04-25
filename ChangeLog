@@ -1,3 +1,16 @@
+2005-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c (GyahtzeeCreateMainWindow): Make the dice area into a
+	toolbar so that the images receive highlights and the like. See
+	bug #300878.
+
+2005-04-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c (LoadDicePixmaps): Rearrange the code so we can load
+	animated images. The old way was more efficient (didn't involve
+	rereading the file), but could only handle static images. I want
+	to use an animation for the selected dice.
+
 2005-04-14  Richard Hoelscher  <rah@rahga.com>
 
 	* gyahtzee.c (about): Use GtkAboutDialog.

@@ -82,12 +82,12 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
 GtkWidget *window;
 GtkWidget *ScoreList;
-static GtkWidget *appbar, *diceBox[NUMBER_OF_DICE];
-static GtkWidget *diceTable;
+static GtkWidget *appbar;
+static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
 
-static gint gnome_modify_dice (GtkWidget *widget, GdkEventButton *event,
+static gint gnome_modify_dice (GtkWidget *widget,
                                gpointer data);
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
@@ -282,7 +282,7 @@ key_press (GtkWidget *widget, GdkEventKey * event, gpointer data)
         }
 
         /* I hate faking signal calls. */
-        gnome_modify_dice (NULL, NULL, &DiceValues[offset]);
+        gnome_modify_dice (NULL, &DiceValues[offset]);
 
         return FALSE;
 }
@@ -357,16 +357,9 @@ UpdateDie (int no)
 
 /* Callback on dice press */
 gint 
-gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data) 
+gnome_modify_dice (GtkWidget *widget, gpointer data) 
 {
         DiceInfo *tmp = (DiceInfo *) data;
-
-        /* Ignore the 2BUTTON and 3BUTTON events. */
-        if (event && (event->type != GDK_BUTTON_PRESS))
-                return TRUE;
-
-        /* printf("Pressed die: %d. NumberOfRolls=%d\n",
-           tmp - DiceValues + 1, NumberOfRolls); */
 
         /* Stop play when player is marked finished */
 	if (players[CurrentPlayer].finished)
@@ -380,33 +373,18 @@ gnome_modify_dice (GtkWidget *widget, GdkEventButton *event, gpointer data)
                 return TRUE;
         }
 
-#ifdef DEBUG
-	if (event->state & GDK_SHIFT_MASK) {
-                /* If the user is holding down shift, cycle through the dice
-                 * --very useful for debugging. */
-                tmp->val = (tmp->val + 1)%7;
-                if (! tmp->val)
-                        tmp->val++;
-
-                printf ("val before update: %d\n", tmp->val);
-                UpdateDiePixmap (tmp);
+        /* Stop play when player is marked finished */
+        if (players[CurrentPlayer].finished)
+                return TRUE;
+        
+        if (NumberOfRolls >= NUM_ROLLS) {
+                say (_("You're only allowed three rolls! Select a score box."));
+                return TRUE;
         }
-	else
-#endif
-        {
-                /* Stop play when player is marked finished */
-                if (players[CurrentPlayer].finished)
-                        return TRUE;
-
-                if (NumberOfRolls >= NUM_ROLLS) {
-                        say (_("You're only allowed three rolls! Select a score box."));
-                        return TRUE;
-                }
-	    
-                tmp->sel = 1 - tmp->sel;
-
-                UpdateDiePixmap (tmp);
-        }
+        
+        tmp->sel = 1 - tmp->sel;
+        
+        UpdateDiePixmap (tmp);
 
 	return TRUE;
 }
@@ -517,30 +495,22 @@ GnomeUIInfo mainmenu[] = {
 
 static void roll_set_sensitive (gboolean state)
 {
-	gtk_widget_set_sensitive (mbutton, state);
+        gtk_widget_set_sensitive (GTK_WIDGET (mbutton), state);
 }
 
 static void
 LoadDicePixmaps(void)
 {
-        GtkWidget *tmp;
-	GdkPixbuf *pixbuf;
 	int i, j;
 
 	for (i=0; i < NUMBER_OF_PIXMAPS; i++) {
-		tmp = NULL;
-
-		/* Check for files w/pixmaps, override compiled defaults */
-		if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS))
-			tmp = gtk_image_new_from_file (dicefiles[i]);
-
-                dicePixmaps[0][i] = tmp;
-
-		for (j=0; j < NUMBER_OF_DICE; j++) {
-			pixbuf = gtk_image_get_pixbuf 
-                                (GTK_IMAGE (dicePixmaps[0][i]));
-			dicePixmaps[j][i] = gtk_image_new_from_pixbuf (pixbuf);
-		}
+                /* This is not efficient, but it lets us load animated types,
+                 * there is no way for us to copy a general GtkImage (the old 
+                 * code had a way for static images). */
+		if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS)) 
+			for (j=0; j < NUMBER_OF_DICE; j++)
+                                dicePixmaps[j][i] = gtk_image_new_from_file (dicefiles[i]);
+                /* FIXME: What happens if the file isn't found. */
 	}
 }
 
@@ -567,10 +537,12 @@ static void
 GyahtzeeCreateMainWindow(void)
 {
         GtkWidget *all_boxes;
+        GtkWidget *toolbar;
 	GtkWidget *tmp;
+        GtkWidget *vbox;
 	int i, j;
 
-        gtk_window_set_resizable (GTK_WINDOW (window), FALSE); 
+        /*        gtk_window_set_resizable (GTK_WINDOW (window), FALSE);  */
         g_signal_connect (G_OBJECT (window), "delete_event",
                           G_CALLBACK (quit_game), NULL);
         g_signal_connect (G_OBJECT (window), "key_press_event",
@@ -597,46 +569,50 @@ GyahtzeeCreateMainWindow(void)
         LoadDicePixmaps ();
         
 	/* Put all the dice in a vertical column */
-        diceTable = gtk_table_new (NUMBER_OF_DICE + 2, 1, FALSE);
-        gtk_box_pack_start(GTK_BOX(all_boxes), diceTable, FALSE, TRUE, 0);
+        vbox = gtk_vbox_new (FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(all_boxes), vbox, FALSE, TRUE, 0);
+        gtk_widget_show (vbox);
+
         rollLabel = gtk_label_new(NULL);
         gtk_label_set_use_markup(GTK_LABEL(rollLabel), TRUE);
-        gtk_table_attach(GTK_TABLE(diceTable), rollLabel, 0, 1, 0, 1,
-                         0, 0, 5, 10);
         gtk_widget_show(rollLabel);
+        gtk_box_pack_start (GTK_BOX (vbox), rollLabel, FALSE, TRUE, 5);
+
+        mbutton = gtk_button_new_with_label (_("Roll!"));
+        gtk_box_pack_end (GTK_BOX (vbox), mbutton, FALSE, FALSE, 5); 
+        g_signal_connect (G_OBJECT (mbutton), "clicked",
+                          G_CALLBACK (gnome_roll_dice), NULL);
+        gtk_widget_show (GTK_WIDGET (mbutton));
+        
+        toolbar = gtk_toolbar_new ();
+        gtk_toolbar_set_orientation (GTK_TOOLBAR (toolbar), 
+                                     GTK_ORIENTATION_VERTICAL);
+        gtk_toolbar_set_style (GTK_TOOLBAR (toolbar),
+                               GTK_TOOLBAR_ICONS);
+        gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), FALSE);
+        gtk_box_pack_end (GTK_BOX (vbox), toolbar, TRUE, TRUE, 0); 
 
  	for (i=0; i < NUMBER_OF_DICE; i++) {
-
-                diceBox[i] = gtk_event_box_new ();
-                gtk_table_attach (GTK_TABLE (diceTable), diceBox[i], 0, 1,
-                                  i+1, i+2, 0, 0, 5, 5);
                 tmp = gtk_vbox_new(FALSE, 0);
-                gtk_container_add (GTK_CONTAINER (diceBox[i]),
-                                   tmp);
                 
                 for (j=0; j < NUMBER_OF_PIXMAPS; j++)
                         gtk_box_pack_start (GTK_BOX (tmp), 
                                             dicePixmaps[i][j],
                                             FALSE, FALSE, 0);
-                
-                gtk_widget_add_events (diceBox[i],
-                                       GDK_BUTTON_PRESS_MASK);
-                
-                g_signal_connect (G_OBJECT (diceBox[i]), "button_press_event",
+
+                diceBox[i] = gtk_tool_button_new (tmp, NULL);
+                g_signal_connect (G_OBJECT (diceBox[i]), "clicked",
                                   G_CALLBACK (gnome_modify_dice),
                                   &DiceValues[i]);
 
+                gtk_toolbar_insert (GTK_TOOLBAR (toolbar),
+                                    diceBox[i], -1);
+
+                gtk_widget_show (GTK_WIDGET (diceBox[i])); 
+                gtk_widget_show (tmp); 
                 gtk_widget_show (dicePixmaps[i][0]);
-                gtk_widget_show (tmp);
-                gtk_widget_show (diceBox[i]);
 	}
-	mbutton = gtk_button_new_with_label (_("Roll!"));
-	gtk_table_attach (GTK_TABLE (diceTable), mbutton, 0, 1, i+1, i+2,
-                          0, 0, 5, 5);
-        g_signal_connect (G_OBJECT (mbutton), "clicked",
-                          G_CALLBACK (gnome_roll_dice), NULL);
-	gtk_widget_show (mbutton);
-	gtk_widget_show (diceTable);
+        gtk_widget_show (toolbar);
 
 	/* Scores displayed in score list */
         ScoreList = create_score_list ();
