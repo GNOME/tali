@@ -57,7 +57,6 @@ int NumberOfRolls;
 int WinningScore;
 int DisplayComputerThoughts = 0;
 int OnlyShowScores = 0;
-int IsCheater;
 int CurrentPlayer;
 char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
 						    "Wilber",
