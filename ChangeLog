@@ -1,3 +1,7 @@
+2005-06-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c: Debranding.
+
 2005-05-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* yahtzee.c: Remove the unused IsCheater flag.

@@ -59,7 +59,7 @@
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
 
 static char *appID="gtali";
-static char *appName=N_("GNOME Tali");
+static char *appName=N_("Tali");
 static guint lastHighScore = 0;
 static guint last_timeout = 0;
 static gboolean ready_to_advance_player;
