@@ -45,6 +45,8 @@
 #include <gconf/gconf-client.h>
 #include <libgnomeui/gnome-window-icon.h>
 
+#include <libgames-support/games-stock.h>
+
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
@@ -82,11 +84,11 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
 GtkWidget *window;
 GtkWidget *ScoreList;
-static GtkWidget *appbar;
+static GtkWidget *statusbar;
 static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
-
+static GtkAction *scores_action;
 static gint gnome_modify_dice (GtkWidget *widget,
                                gpointer data);
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
@@ -373,15 +375,6 @@ gnome_modify_dice (GtkWidget *widget, gpointer data)
                 return TRUE;
         }
 
-        /* Stop play when player is marked finished */
-        if (players[CurrentPlayer].finished)
-                return TRUE;
-        
-        if (NumberOfRolls >= NUM_ROLLS) {
-                say (_("You're only allowed three rolls! Select a score box."));
-                return TRUE;
-        }
-        
         tmp->sel = 1 - tmp->sel;
         
         UpdateDiePixmap (tmp);
@@ -405,13 +398,15 @@ say (char *fmt, ...)
 {
 	va_list ap;
 	char buf[200];
+	guint context_id;
 
 	va_start (ap, fmt);
 	g_vsnprintf (buf, 200, fmt, ap);
 	va_end (ap);
 
-	gnome_appbar_pop (GNOME_APPBAR (appbar));
-	gnome_appbar_push (GNOME_APPBAR (appbar), buf);
+	context_id = gtk_statusbar_get_context_id (GTK_STATUSBAR (statusbar), "message");
+	gtk_statusbar_pop (GTK_STATUSBAR (statusbar), context_id);
+	gtk_statusbar_push (GTK_STATUSBAR (statusbar), context_id, buf);
 }
 
 
@@ -465,34 +460,6 @@ score_callback(GtkWidget *widget, gpointer data)
 	return FALSE;
 }
 
-/* Define menus later so we don't have to proto callbacks? */
-GnomeUIInfo gamemenu[] = {
-        GNOMEUIINFO_MENU_NEW_GAME_ITEM (new_game_callback, NULL),
-	GNOMEUIINFO_SEPARATOR,
-	GNOMEUIINFO_MENU_SCORES_ITEM (score_callback, NULL),
-	GNOMEUIINFO_SEPARATOR,
-        GNOMEUIINFO_MENU_QUIT_ITEM (quit_game, NULL),
-	GNOMEUIINFO_END
-};
-
-GnomeUIInfo settingsmenu[] = {
-	GNOMEUIINFO_MENU_PREFERENCES_ITEM (setup_game, NULL),
-	GNOMEUIINFO_END
-};
-
-GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP ("gtali"),
-	GNOMEUIINFO_MENU_ABOUT_ITEM (about, NULL),
-	GNOMEUIINFO_END
-};
-
-GnomeUIInfo mainmenu[] = {
-	GNOMEUIINFO_MENU_GAME_TREE (gamemenu),
-	GNOMEUIINFO_MENU_SETTINGS_TREE (settingsmenu),
-	GNOMEUIINFO_MENU_HELP_TREE (helpmenu),
-	GNOMEUIINFO_END
-};
-
 static void roll_set_sensitive (gboolean state)
 {
         gtk_widget_set_sensitive (GTK_WIDGET (mbutton), state);
@@ -524,62 +491,128 @@ void update_score_state (void)
 	top = gnome_score_get_notable (appID, NULL,
                                        &names, &scores, &scoretimes);
 	if (top > 0) {
-		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
+		gtk_action_set_sensitive (scores_action, TRUE);
 		g_strfreev (names);
 		g_free (scores);
 		g_free (scoretimes);
 	} else {
-		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
+		gtk_action_set_sensitive (scores_action, FALSE);
 	}
 }
 
 static void
+help_cb (GtkAction *action, gpointer data)
+{
+        gnome_help_display ("gtali.xml", NULL, NULL);
+}
+
+
+const GtkActionEntry action_entry[] = {
+	{ "GameMenu", NULL, N_("_Game") },
+	{ "SettingsMenu", NULL, N_("_Settings") },
+	{ "HelpMenu", NULL, N_("_Help") },
+	{ "NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL, G_CALLBACK (new_game_callback) },
+	{ "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (score_callback) },
+	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
+	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (setup_game) },
+	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about) }
+};
+
+
+const char *ui_description =
+"<ui>"
+"  <menubar name='MainMenu'>"
+"    <menu action='GameMenu'>"
+"      <menuitem action='NewGame'/>"
+"      <menuitem action='Scores'/>"
+"      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='SettingsMenu'>"
+"      <menuitem action='Preferences'/>"
+"    </menu>"
+"    <menu action='HelpMenu'>"
+"      <menuitem action='Contents'/>"
+"      <menuitem action='About'/>"
+"    </menu>"
+"  </menubar>"
+"</ui>";
+
+
+static void
+create_menus (GtkUIManager *ui_manager)
+{
+	GtkActionGroup *action_group;
+
+	action_group = gtk_action_group_new ("group");
+
+	gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group, action_entry, G_N_ELEMENTS (action_entry), window);
+
+	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
+	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
+	scores_action = gtk_action_group_get_action (action_group, "Scores");
+}
+
+
+static void
 GyahtzeeCreateMainWindow(void)
 {
-        GtkWidget *all_boxes;
+        GtkWidget *hbox, *vbox;
         GtkWidget *toolbar;
 	GtkWidget *tmp;
-        GtkWidget *vbox;
+        GtkWidget *dicebox;
+	GtkWidget *menubar;
+	GtkAccelGroup *accel_group;
+	GtkUIManager *ui_manager;
 	int i, j;
 
-        /*        gtk_window_set_resizable (GTK_WINDOW (window), FALSE);  */
-        g_signal_connect (G_OBJECT (window), "delete_event",
+	games_stock_init();
+        
+	g_signal_connect (G_OBJECT (window), "delete_event",
                           G_CALLBACK (quit_game), NULL);
         g_signal_connect (G_OBJECT (window), "key_press_event",
                           G_CALLBACK (key_press), NULL);
 
+	statusbar = gtk_statusbar_new ();
+	ui_manager = gtk_ui_manager_new ();
+
+	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
+	games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
+
 	/*---- Menus ----*/
-	gnome_app_create_menus (GNOME_APP (window), mainmenu);
-
-
-	/*---- Status Bar ----*/
-	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
-	gnome_app_set_statusbar (GNOME_APP (window), appbar);
-	gnome_appbar_push (GNOME_APPBAR (appbar),
-			   _("Select dice to re-roll, press Roll!,"
-                             " or select score slot."));
-
-	gnome_app_install_menu_hints (GNOME_APP (window), mainmenu);
-
+	create_menus (ui_manager);
+	accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+	gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+	menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
+	
 	/*---- Content ----*/
-        all_boxes = gtk_hbox_new (FALSE, 0);
-	gnome_app_set_contents (GNOME_APP (window), all_boxes);
 
+	hbox = gtk_hbox_new (FALSE, 0);
+	vbox = gtk_vbox_new (FALSE, 0);
+
+	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
+
+	gnome_app_set_contents (GNOME_APP (window), vbox);
+
+	gtk_widget_show (statusbar);
         /* Retreive dice pixmaps from memory or files */
         LoadDicePixmaps ();
         
 	/* Put all the dice in a vertical column */
-        vbox = gtk_vbox_new (FALSE, 0);
-        gtk_box_pack_start (GTK_BOX(all_boxes), vbox, FALSE, TRUE, 0);
-        gtk_widget_show (vbox);
+        dicebox = gtk_vbox_new (FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(hbox), dicebox, FALSE, TRUE, 0);
+        gtk_widget_show (dicebox);
 
         rollLabel = gtk_label_new(NULL);
         gtk_label_set_use_markup(GTK_LABEL(rollLabel), TRUE);
         gtk_widget_show(rollLabel);
-        gtk_box_pack_start (GTK_BOX (vbox), rollLabel, FALSE, TRUE, 5);
+        gtk_box_pack_start (GTK_BOX (dicebox), rollLabel, FALSE, TRUE, 5);
 
         mbutton = gtk_button_new_with_label (_("Roll!"));
-        gtk_box_pack_end (GTK_BOX (vbox), mbutton, FALSE, FALSE, 5); 
+        gtk_box_pack_end (GTK_BOX (dicebox), mbutton, FALSE, FALSE, 5); 
         g_signal_connect (G_OBJECT (mbutton), "clicked",
                           G_CALLBACK (gnome_roll_dice), NULL);
         gtk_widget_show (GTK_WIDGET (mbutton));
@@ -590,7 +623,7 @@ GyahtzeeCreateMainWindow(void)
         gtk_toolbar_set_style (GTK_TOOLBAR (toolbar),
                                GTK_TOOLBAR_ICONS);
         gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), FALSE);
-        gtk_box_pack_end (GTK_BOX (vbox), toolbar, TRUE, TRUE, 0); 
+        gtk_box_pack_end (GTK_BOX (dicebox), toolbar, TRUE, TRUE, 0); 
 
  	for (i=0; i < NUMBER_OF_DICE; i++) {
                 tmp = gtk_vbox_new(FALSE, 0);
@@ -616,11 +649,11 @@ GyahtzeeCreateMainWindow(void)
 
 	/* Scores displayed in score list */
         ScoreList = create_score_list ();
-        gtk_box_pack_end (GTK_BOX (all_boxes), ScoreList, TRUE, TRUE, 0);
+        gtk_box_pack_end (GTK_BOX (hbox), ScoreList, TRUE, TRUE, 0);
         setup_score_list (ScoreList);
         gtk_widget_show (ScoreList);
         
-	gtk_widget_show (all_boxes);
+	gtk_widget_show (hbox);
 
         gtk_widget_show (window);
 
@@ -637,7 +670,6 @@ main (int argc, char *argv[])
         gint i;
 
 	gnome_score_init (appID);
-
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);

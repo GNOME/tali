@@ -1,3 +1,8 @@
+2005-06-27  Richard Hoelscher  <rah@rahga.com>
+
+	* gyahtzee.c: Replace the GnomeAppBar with a GtkStatusBar, and 
+	convert the menus to use GtkUIManager.
+
 2005-06-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/gtali.xml: Added a glossary, removed the reference to
