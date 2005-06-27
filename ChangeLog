@@ -1,3 +1,8 @@
+2005-06-28  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gtali.xml: Added a glossary, removed the reference to
+	pumpkins.
+
 2005-05-09  Alan Horkan <horkana tcd ie>
 
 	* help/C/gtali.xml: Removed Known Bugs sections where not needed.
