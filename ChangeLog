@@ -1,3 +1,8 @@
+2005-06-28  Richard Hoelscher  <rah@rahga.com>
+
+	* setup.c:
+	* gyahtzee.[ch]: Update callbacks to mention GtkAction, not widgets.
+
 2005-06-27  Richard Hoelscher  <rah@rahga.com>
 
 	* gyahtzee.c: Replace the GnomeAppBar with a GtkStatusBar, and 

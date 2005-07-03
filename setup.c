@@ -215,7 +215,7 @@ MaxPlayersCheck (GtkWidget *widget, gpointer *data)
 }
 
 gint 
-setup_game (GtkWidget *widget, gpointer data)
+setup_game (GtkAction *action, gpointer data)
 {
         GtkWidget *box, *box2, *label, *button, *frame;
         GtkWidget *table;

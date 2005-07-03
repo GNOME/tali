@@ -264,7 +264,7 @@ ShowPlayer (int num, int field)
 }
 
 static gint 
-quit_game (GtkWidget *widget, gpointer data)
+quit_game (GObject *object, gpointer data)
 {
         gtk_main_quit ();
 	return TRUE;
@@ -308,7 +308,7 @@ GyahtzeeNewGame (void)
 
 
 static gint 
-new_game_callback (GtkWidget *widget, gpointer data)
+new_game_callback (GtkAction *action, gpointer data)
 {
         GyahtzeeNewGame ();
 	return FALSE;
@@ -411,7 +411,7 @@ say (char *fmt, ...)
 
 
 static gint
-about (GtkWidget *widget, gpointer data)
+about_cb (GtkAction *action, gpointer data)
 {
         const gchar *authors[] = {
                 N_("GNOME version (1998):"),
@@ -454,7 +454,7 @@ ShowHighScores (void)
 }
 
 static gint 
-score_callback(GtkWidget *widget, gpointer data)
+score_callback(GtkAction *action, gpointer data)
 {
         ShowHighScores ();
 	return FALSE;
@@ -507,7 +507,7 @@ help_cb (GtkAction *action, gpointer data)
 }
 
 
-const GtkActionEntry action_entry[] = {
+static const GtkActionEntry action_entry[] = {
 	{ "GameMenu", NULL, N_("_Game") },
 	{ "SettingsMenu", NULL, N_("_Settings") },
 	{ "HelpMenu", NULL, N_("_Help") },
@@ -516,11 +516,11 @@ const GtkActionEntry action_entry[] = {
 	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
 	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (setup_game) },
 	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
-	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about) }
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) }
 };
 
 
-const char *ui_description =
+static const char *ui_description =
 "<ui>"
 "  <menubar name='MainMenu'>"
 "    <menu action='GameMenu'>"
