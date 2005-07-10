@@ -1,3 +1,9 @@
+2005-07-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gtali.xml: 
+	* yahtzee.c: Remove user-visible uses of Yahtzee: its Hasbro's
+	trademark.
+
 2005-06-28  Richard Hoelscher  <rah@rahga.com>
 
 	* setup.c:

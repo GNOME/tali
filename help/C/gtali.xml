@@ -313,16 +313,21 @@
 Remember that the order of the dice is not important.
    </note>
    <glossary>
-       <glossentry id="3ofakind"><glossterm>3 of a kind</glossterm>
+       <glossentry id="3ofakind"><glossterm>3 of a Kind</glossterm>
          <glossdef><para>
 	   Three of the dice have the same number. The score is the
    total of all the dice. e.g. 1, 2, 2, 2, 5.
 	 </para></glossdef>
        </glossentry>
-       <glossentry id="4ofakind"><glossterm>4 of a kind</glossterm>
+       <glossentry id="4ofakind"><glossterm>4 of a Kind</glossterm>
          <glossdef><para>
 	   Four of the dice have the same number. The score is the
    total of all the dice. e.g. 2, 5, 5, 5, 5.
+	 </para></glossdef>
+       </glossentry>
+       <glossentry id="yahtzee"><glossterm>5 of a Kind</glossterm>
+         <glossdef><para>
+	   Five identical dice. e.g. 3, 3, 3, 3, 3.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="fullhouse"><glossterm>Full House</glossterm>
@@ -341,11 +346,6 @@ Remember that the order of the dice is not important.
          <glossdef><para>
 	   Four dice with consecutive numbers. The fifth die can be
    any number. e.g. 2, 3, 4, 5, 5.
-	 </para></glossdef>
-       </glossentry>
-       <glossentry id="yahtzee"><glossterm>Yahtzee</glossterm>
-         <glossdef><para>
-	   Five identical dice. e.g. 3, 3, 3, 3, 3.
 	 </para></glossdef>
        </glossentry>
    </glossary>

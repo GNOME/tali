@@ -78,7 +78,7 @@ char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS] =
         N_("Full House [25]"),
         N_("Small Straight [30]"),
         N_("Large Straight [40]"),
-        N_("Yahtzee [50]"),
+        N_("5 of a Kind [50]"),
         N_("Chance [total]"),
 	/* End of lower panel */
 	N_("Lower Total"),
