@@ -1,3 +1,8 @@
+2005-07-16  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gyahtzee.c: Adjust the #include path for games-stock so that it
+	compiles correctly when building outside the source tree.
+
 2005-07-11  Richard Hoelscher  <rah@rahga.com>
 
 	* gyahtzee.c: Make ui_description readonly.

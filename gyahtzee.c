@@ -45,7 +45,7 @@
 #include <gconf/gconf-client.h>
 #include <libgnomeui/gnome-window-icon.h>
 
-#include <libgames-support/games-stock.h>
+#include <games-stock.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
