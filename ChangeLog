@@ -1,3 +1,9 @@
+2005-07-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/figures/*:
+	* help/C/gtali.xml: Bump the appversion number and update the
+	screenshots.
+
 2005-07-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gyahtzee.c: Adjust the #include path for games-stock so that it
