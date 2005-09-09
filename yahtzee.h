@@ -107,7 +107,8 @@ extern void ComputerScoring(int player);
 
 /* Specific to a windowing system: gyahtzee.c/cyahtzee.c */
 extern void NewGame(void);
-extern void UpdateDie(int no);
+extern void UpdateAllDicePixmaps(void);
+extern void DeselectAllDice(void);
 extern void ShowPlayer(int num, int field);
 extern void NextPlayer(void);
 extern void ShowHighScores(void);

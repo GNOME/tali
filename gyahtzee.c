@@ -10,9 +10,6 @@
  *
  *   Gnome specific yahtzee routines.
  *
- *   Curses routines are located in cyahtzee.c (cyahtzee.c is 
- *   very broken at the moment 980617).
- *
  *   Other gnome specific code is in setup.c and clist.c
  *
  *   Window manager independent routines are in yahtzee.c and computer.c
@@ -50,12 +47,6 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
-/* Define a sensible alternative to ngettext if we don't have it. Note that
- * this is only sensible in the context of gtali. */
-#ifndef HAVE_NGETTEXT
-#define ngettext(one,lots,n) gettext(lots)
-#endif
-
 #define DELAY_MS 600
 
 int GyahtzeeAbort = 0;  /* Abort program without playing game */
@@ -77,8 +68,7 @@ static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
                                               PP "gnome-dice-3.svg",
                                               PP "gnome-dice-4.svg",
                                               PP "gnome-dice-5.svg",
-                                              PP "gnome-dice-6.svg",
-                                              PP "gnome-dice-none.svg" };
+                                              PP "gnome-dice-6.svg" };
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
@@ -94,9 +84,22 @@ static gint gnome_modify_dice (GtkWidget *widget,
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
                              gpointer data);
 void update_score_state (void);
-static void roll_set_sensitive (gboolean state);
 static void UpdateRollLabel (void);
 
+static void
+update_roll_button_sensitivity (void)
+{
+        gboolean state = FALSE;
+        gint i;
+
+        for (i=0; i < NUMBER_OF_DICE; i++)
+                state |= gtk_toggle_tool_button_get_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]));
+
+        state &= NumberOfRolls < 3;
+        state &= !players[CurrentPlayer].comp;
+        
+        gtk_widget_set_sensitive (GTK_WIDGET (mbutton), state);
+}
 
 static void
 CheerWinner (void)
@@ -282,9 +285,8 @@ key_press (GtkWidget *widget, GdkEventKey * event, gpointer data)
         if ((offset < 0) || (offset >= NUMBER_OF_DICE)) {
                 return FALSE;
         }
-
-        /* I hate faking signal calls. */
-        gnome_modify_dice (NULL, &DiceValues[offset]);
+        
+	gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON(diceBox[offset]), !DiceValues[offset].sel);
 
         return FALSE;
 }
@@ -294,8 +296,7 @@ GyahtzeeNewGame (void)
 {
         int i;
 
-        say (_("Select dice to re-roll, press Roll!,"
-               " or select score slot."));
+        say (_("Select dice to roll or choose a score slot."));
 
         NewGame();
         setup_score_list (ScoreList);
@@ -325,36 +326,29 @@ UpdateRollLabel (void)
         g_string_printf(str, "<b>%s %d/3</b>", _("Roll"), NumberOfRolls);
         gtk_label_set_label(GTK_LABEL(rollLabel), str->str);
 	
-        roll_set_sensitive ((NumberOfRolls < 3) && !players[CurrentPlayer].comp);
+        update_roll_button_sensitivity();
 }
-
-static void
-UpdateDiePixmap (DiceInfo *d)
-{
-        static int last_val[NUMBER_OF_DICE] = { 0 } ;
-        int new_val = d->val - 1;
-        int dicebox = d - DiceValues;
-        
-        if (d->sel)
-                new_val = DIE_SELECTED_PIXMAP;
-        
-        if (last_val[dicebox]!=new_val) {
-                
-                gtk_widget_hide (dicePixmaps[dicebox][last_val[dicebox]]);
-                gtk_widget_show (dicePixmaps[dicebox][new_val]);
-                
-                last_val[dicebox] = new_val;
-        }
-        
-}
-
 
 void
-UpdateDie (int no)
+UpdateAllDicePixmaps (void)
 {
-        /* printf("Update die #%d\n",no); */
+        static int last_val[NUMBER_OF_DICE] = { 0 };
+        int i;
+        
+        for (i = 0; i < NUMBER_OF_DICE; i++) {
+                gtk_widget_hide (dicePixmaps[i][last_val[i]]);
+                last_val[i] = DiceValues[i].val - 1;
+                gtk_widget_show (dicePixmaps[i][last_val[i]]);
+        }
+}
 
-        UpdateDiePixmap (&DiceValues[no]);
+void
+DeselectAllDice(void)
+{
+	int i;
+
+	for (i = 0; i < NUMBER_OF_DICE; i++)
+		gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]), FALSE);
 }
 
 /* Callback on dice press */
@@ -362,23 +356,24 @@ gint
 gnome_modify_dice (GtkWidget *widget, gpointer data) 
 {
         DiceInfo *tmp = (DiceInfo *) data;
-
-        /* Stop play when player is marked finished */
-	if (players[CurrentPlayer].finished)
+	GtkToggleToolButton *button = GTK_TOGGLE_TOOL_BUTTON(widget);
+ 
+        /* Don't modify dice if player is marked finished or computer is playing */
+	if (players[CurrentPlayer].finished || players[CurrentPlayer].comp) {
+		if (gtk_toggle_tool_button_get_active (button))
+			gtk_toggle_tool_button_set_active (button, FALSE);
                 return TRUE;
-
-	if (players[CurrentPlayer].comp)
-		return TRUE;
+	}
 
         if (NumberOfRolls >= NUM_ROLLS) {
-                say(_("You're only allowed three rolls! Select a score box."));
+                say(_("You are only allowed three rolls. Choose a score slot."));
+		gtk_toggle_tool_button_set_active (button, FALSE);
                 return TRUE;
         }
 
-        tmp->sel = 1 - tmp->sel;
-        
-        UpdateDiePixmap (tmp);
+        tmp->sel = gtk_toggle_tool_button_get_active (button);
 
+	update_roll_button_sensitivity();
 	return TRUE;
 }
 
@@ -460,11 +455,6 @@ score_callback(GtkAction *action, gpointer data)
 	return FALSE;
 }
 
-static void roll_set_sensitive (gboolean state)
-{
-        gtk_widget_set_sensitive (GTK_WIDGET (mbutton), state);
-}
-
 static void
 LoadDicePixmaps(void)
 {
@@ -516,7 +506,9 @@ static const GtkActionEntry action_entry[] = {
 	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
 	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (setup_game) },
 	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
-	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) }
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) },
+	/* Roll is just an accelerator */
+	{ "Roll", GTK_STOCK_REFRESH, NULL, "r", NULL, G_CALLBACK (gnome_roll_dice) }
 };
 
 
@@ -536,6 +528,7 @@ static const char ui_description[] =
 "      <menuitem action='About'/>"
 "    </menu>"
 "  </menubar>"
+"  <accelerator action='Roll' />"
 "</ui>";
 
 
@@ -633,13 +626,14 @@ GyahtzeeCreateMainWindow(void)
                                             dicePixmaps[i][j],
                                             FALSE, FALSE, 0);
 
-                diceBox[i] = gtk_tool_button_new (tmp, NULL);
+                diceBox[i] = gtk_toggle_tool_button_new ();
+                gtk_tool_button_set_icon_widget (GTK_TOOL_BUTTON(diceBox[i]), tmp);
                 g_signal_connect (G_OBJECT (diceBox[i]), "clicked",
                                   G_CALLBACK (gnome_modify_dice),
                                   &DiceValues[i]);
 
                 gtk_toolbar_insert (GTK_TOOLBAR (toolbar),
-                                    diceBox[i], -1);
+                                    GTK_TOOL_ITEM (diceBox[i]), -1);
 
                 gtk_widget_show (GTK_WIDGET (diceBox[i])); 
                 gtk_widget_show (tmp); 

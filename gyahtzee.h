@@ -18,9 +18,7 @@
 #define R_GTOTAL (SCOREROWS-1) 
 #define R_LTOTAL (R_GTOTAL-1)
 
-#define NUMBER_OF_PIXMAPS    7
-#define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
-
+#define NUMBER_OF_PIXMAPS 6
 /* clist.c */
 extern GtkWidget *create_score_list(void);
 extern void setup_score_list(GtkWidget *scorelist);

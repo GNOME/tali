@@ -167,20 +167,25 @@ RollSelectedDice(void)
   int i, mod=0;
 
   if (NumberOfRolls >= NUM_ROLLS) {
-          say(_("You're only allowed three rolls! Select a score box."));
-          return;
+    return;
   }
 
   for (i=0; i<5; i++) {
     if (DiceValues[i].sel) {
       DiceValues[i].val = RollDie();
       DiceValues[i].sel = 0;
-      UpdateDie(i);
       mod = 1;
     }
   }
-  
+
+  UpdateAllDicePixmaps();
+  DeselectAllDice();
+
   NumberOfRolls += mod;
+
+  if (NumberOfRolls >= NUM_ROLLS ) {
+    say (_("Choose a score slot."));
+  }
 
 }
 

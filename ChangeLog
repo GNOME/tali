@@ -1,3 +1,17 @@
+2005-09-05  Richard Hoelscher  <rah@rahga.com>
+
+	* yahzee.h:
+	* yahtzee.c (RollSelectedDice): Updates related to toggle buttons.
+	* gyahtzee.h: Drop NUMBER_OF_PIXMAPS by one.
+	* gyahtzee.c: Replacing "blank dice" on selection with toggle buttons.
+	Remove curses comment and ngettext alternative support (see #119790).
+	Added a "Roll" keyboard shortcut, "R".
+	(update_roll_button_sensitivity): Insensitive when no dice selected.
+	(UpdateAllDicePixmaps, DeselectAllDice): Replaced older functions that
+	focused on switching to the blank pixmap.
+	(key_press): No more need to fake signal calls. 
+	(gnome_modify_dice): Toggle the buttons.
+
 2005-08-06  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/sv/gtali.xml: 
