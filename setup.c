@@ -227,7 +227,7 @@ setup_game (GtkAction *action, gpointer data)
                 return FALSE;
         }
 
-        setupdialog = gtk_dialog_new_with_buttons (_("GTali Preferences"),
+        setupdialog = gtk_dialog_new_with_buttons (_("Tali Preferences"),
                                                    GTK_WINDOW (window),
                                                    GTK_DIALOG_DESTROY_WITH_PARENT,
                                                    GTK_STOCK_CLOSE,

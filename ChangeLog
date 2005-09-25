@@ -1,3 +1,8 @@
+2005-09-25  Callum McKenzie  <callum@spooky-possum.org>
+
+	* setup.c (setup_game): GTali -> Tali in the preferences dialog
+	name.
+
 2005-09-05  Richard Hoelscher  <rah@rahga.com>
 
 	* yahzee.h:
