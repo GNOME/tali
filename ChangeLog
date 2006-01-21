@@ -1,3 +1,10 @@
+2006-01-21  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gyahtzee.h: 
+	* gyahtzee.c: Restore the "blank die" pixmap for selected
+	dice. The toolbar selection isn't obvious enough in all
+	themes. See bug #327872 for discussion.
+
 2006-01-17  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gyahtzee.c: Patch from Scott Bronson to ensure user-edited

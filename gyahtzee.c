@@ -63,12 +63,16 @@ static gboolean ready_to_advance_player;
 #define PP ""
 #endif
 
+#define NUMBER_OF_PIXMAPS    7
+#define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1) 	 
+ 
 static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
                                               PP "gnome-dice-2.svg",
                                               PP "gnome-dice-3.svg",
                                               PP "gnome-dice-4.svg",
                                               PP "gnome-dice-5.svg",
-                                              PP "gnome-dice-6.svg" };
+                                              PP "gnome-dice-6.svg",
+                                              PP "gnome-dice-none.svg"};
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
 
@@ -329,16 +333,25 @@ UpdateRollLabel (void)
         update_roll_button_sensitivity();
 }
 
+static void 
+UpdateDiePixmap (int n)
+{
+        static int last_val[NUMBER_OF_DICE] = { 0 };
+
+        gtk_widget_hide (dicePixmaps[n][last_val[n]]);
+
+        last_val[n] = DiceValues[n].sel ? DIE_SELECTED_PIXMAP : 
+                                          DiceValues[n].val - 1;
+        gtk_widget_show (dicePixmaps[n][last_val[n]]);
+}
+
 void
 UpdateAllDicePixmaps (void)
 {
-        static int last_val[NUMBER_OF_DICE] = { 0 };
         int i;
         
         for (i = 0; i < NUMBER_OF_DICE; i++) {
-                gtk_widget_hide (dicePixmaps[i][last_val[i]]);
-                last_val[i] = DiceValues[i].val - 1;
-                gtk_widget_show (dicePixmaps[i][last_val[i]]);
+                UpdateDiePixmap (i);
         }
 }
 
@@ -372,6 +385,8 @@ gnome_modify_dice (GtkWidget *widget, gpointer data)
         }
 
         tmp->sel = gtk_toggle_tool_button_get_active (button);
+
+        UpdateAllDicePixmaps ();
 
 	update_roll_button_sensitivity();
 	return TRUE;
