@@ -12,13 +12,7 @@
  * yahtze (c)1992.
  */
 
-
-#ifdef DONT_USE_LIBINTL
-#define  _(s) (s)
-#define N_(s) (s)
-#else
-#include <gnome.h>  /* What else can I use here ? */
-#endif
+#include <glib/gi18n.h>
 
 #define COMPUTER_DELAY 1		/* sec */
 
