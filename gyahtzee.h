@@ -29,7 +29,6 @@ extern void score_list_set_column_title(GtkWidget *scorelist, int column,
 
 /* setup.c */
 extern gint setup_game(GtkAction *action, gpointer data);
-extern const struct poptOption yahtzee_options[];
 extern void GRenamePlayer(gint playerno);
 
 /* gyahtzee.c */

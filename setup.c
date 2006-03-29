@@ -52,42 +52,6 @@ static int tmpDoDelay, tmpDisplayComputerThoughts;
 extern GtkWidget *window;
 
 static void
-parse_an_arg (poptContext ctx,
-	      enum poptCallbackReason reason,
-	      const struct poptOption *opt,
-	      const char *arg, void *data)
-{
-
-	switch (opt->shortName)
-	{
-	case 'r':
-                calc_random();
-                GyahtzeeAbort = 1;
-		break;
-	default:
-		break;
-	}
-
-	return;
-}
-
-static struct poptOption cb_options[] = {
-  {NULL, '\0', POPT_ARG_CALLBACK, &parse_an_arg, 0},
-  {NULL, 'r', POPT_ARG_NONE, &GyahtzeeAbort, 0, N_("Calculate random die throws (debug)"), NULL},
-  {NULL, '\0', 0, NULL, 0}
-};
-
-const struct poptOption yahtzee_options[] = {
-  {NULL, '\0', POPT_ARG_INCLUDE_TABLE, cb_options, 0, NULL, NULL},
-  {NULL, 'd', POPT_ARG_NONE, &DoDelay, 0, N_("Delay computer moves"), NULL},
-  {NULL, 's', POPT_ARG_NONE, &OnlyShowScores, 0, N_("Show high scores and exit"), NULL},
-  {NULL, 't', POPT_ARG_NONE, &DisplayComputerThoughts, 0, N_("Display computer thoughts"), NULL},
-  {NULL, 'n', POPT_ARG_INT, &NumberOfComputers, 0, N_("Number of computer opponents"), N_("NUMBER")},
-  {NULL, 'p', POPT_ARG_INT, &NumberOfHumans, 0, N_("Number of human opponents"), N_("NUMBER")},
-  {NULL, '\0', 0, NULL, 0}
-};
-
-static void
 WarnNumPlayersChanged (void)
 {
         GtkWidget *mb;

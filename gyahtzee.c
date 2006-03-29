@@ -49,8 +49,6 @@
 
 #define DELAY_MS 600
 
-int GyahtzeeAbort = 0;  /* Abort program without playing game */
-
 static char *appID="gtali";
 static char *appName=N_("Tali");
 static guint lastHighScore = 0;
@@ -83,6 +81,19 @@ static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
 static GtkAction *scores_action;
+
+const static GOptionEntry yahtzee_options[] = {
+  {"delay", 'd', 0, G_OPTION_ARG_NONE, &DoDelay, 
+   N_("Delay computer moves"), NULL},
+  {"thoughts", 't', 0, G_OPTION_ARG_NONE, &DisplayComputerThoughts, 
+   N_("Display computer thoughts"), NULL},
+  {"computers", 'n', 0, G_OPTION_ARG_INT, &NumberOfComputers, 
+   N_("Number of computer opponents"), N_("NUMBER")},
+  {"humans", 'p', 0, G_OPTION_ARG_INT, &NumberOfHumans, 
+   N_("Number of human opponents"), N_("NUMBER")},
+  { NULL }
+};
+
 static gint gnome_modify_dice (GtkWidget *widget,
                                gpointer data);
 static gint gnome_roll_dice (GtkWidget *widget, GdkEvent *event,
@@ -677,6 +688,7 @@ main (int argc, char *argv[])
         GError *err = NULL;
         GSList *name_list = NULL;
         gint i;
+        GOptionContext *context;
 
 	gnome_score_init (appID);
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -686,28 +698,30 @@ main (int argc, char *argv[])
 	/* Reset all yahtzee variables before parsing args */
         YahtzeeInit ();
 
+        context = g_option_context_new ("");
+        g_option_context_add_main_entries (context, yahtzee_options, 
+                                           GETTEXT_PACKAGE);
+
 	/* Create gnome client */
         gnome_program_init (appID, VERSION,
                             LIBGNOMEUI_MODULE,
                             argc, argv,
-                            GNOME_PARAM_POPT_TABLE, yahtzee_options,
+                            GNOME_PARAM_GOPTION_CONTEXT, context,
                             GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
-        gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gtali.png");
+
+        gtk_window_set_default_icon_from_file (GNOME_ICONDIR"/gnome-gtali.png",
+                                               NULL);
 
         client = gconf_client_get_default ();
-        NumberOfComputers = gconf_client_get_int (client, "/apps/gtali/NumberOfComputerOpponents", &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
+        if (NumberOfComputers == 0) /* Not set on the command-line. */
+                NumberOfComputers = gconf_client_get_int (client, 
+                                                          "/apps/gtali/NumberOfComputerOpponents", 
+                                                          NULL);
 
-	NumberOfHumans = gconf_client_get_int(client, "/apps/gtali/NumberOfHumanOpponents", &err);
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
+        if (NumberOfHumans == 0) /* Not set on the command-line. */
+                NumberOfHumans = gconf_client_get_int(client, 
+                                                      "/apps/gtali/NumberOfHumanOpponents", 
+                                                      NULL);
 
         if (NumberOfHumans < 0)
                 NumberOfHumans = 0;
@@ -723,21 +737,17 @@ main (int argc, char *argv[])
          * data even if not the right data and there's nothing else we
          * can do (if it's a systematic gconf problem, the calls above
          * would have caught it. */
-        DoDelay = gconf_client_get_bool (client,
-                                         "/apps/gtali/DelayBetweenRolls",
-                                         NULL);
+        if (DoDelay == 0) /* Not set on the command-line */
+                DoDelay = gconf_client_get_bool (client,
+                                                 "/apps/gtali/DelayBetweenRolls",
+                                                 NULL);
+        if (DisplayComputerThoughts == 0) /* Not set on the command-line */
         DisplayComputerThoughts = gconf_client_get_bool (client,
                                                          "/apps/gtali/DisplayComputerThoughts",
                                                          NULL);
         /* Read in new player names */
         name_list = gconf_client_get_list (client, "/apps/gtali/PlayerNames",
-                                           GCONF_VALUE_STRING, &err);
-
-        if (err) {
-                g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-                g_error_free (err);
-                err = NULL;
-        }
+                                           GCONF_VALUE_STRING, NULL);
 
         for (i = 0; i < MAX_NUMBER_OF_PLAYERS && name_list; i++) {
                 if (name_list->data)
@@ -747,20 +757,15 @@ main (int argc, char *argv[])
         }
         g_slist_free (name_list);
 
-	/* For some options, we don't want to play a game */
-	if (! GyahtzeeAbort) {
-
-                window = gnome_app_new (appID, appName);
+        window = gnome_app_new (appID, appName);
 	  
-                GyahtzeeCreateMainWindow ();
+        GyahtzeeCreateMainWindow ();
 
-                /* Need to roll the dice once */
-                GyahtzeeNewGame ();
-        
-                gtk_main ();
-
-	}
-
+        /* Need to roll the dice once */
+        GyahtzeeNewGame ();
+                
+        gtk_main ();
+                
 	gnome_accelerators_sync();
         
 	return 0;

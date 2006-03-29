@@ -1,3 +1,14 @@
+2006-03-29  Callum McKenzie  <callum@spooky-possum.org>
+
+	* yahtzee.c: 
+	* gyahtzee.c:
+	* gyahtzee.h:	
+	* setup.c: popt -> GOption migration. Remove the unimplemented -s
+	option and the almost useless -r option. Make the other options
+	work properly Also changed the gnome_window... icon setting call 
+	to the gtk_window... equivalent. Removed the explicit error
+	reporting on the gconf reads.
+
 2006-03-22  Callum McKenzie  <callum@spooky-possum.org>
 
 	* help/C/gtali.xml: Remove the doctable link, it was broken
