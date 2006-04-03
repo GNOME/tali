@@ -1,5 +1,5 @@
-appicondir = $(datadir)/pixmaps
-appicon_DATA = gnome-gtali.png
+icondir = $(datadir)/icons/hicolor/48x48/apps/
+icon_DATA = gnome-tali.png
 
 Pixmapdir = $(datadir)/pixmaps/gtali
 Pixmap_DATA = \
@@ -11,5 +11,5 @@ Pixmap_DATA = \
 	gnome-dice-6.svg \
 	gnome-dice-none.svg
 
-EXTRA_DIST = $(Pixmap_DATA) $(appicon_DATA)
+EXTRA_DIST = $(Pixmap_DATA) $(icon_DATA)
 

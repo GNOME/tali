@@ -1,3 +1,10 @@
+2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
+
+	* pix/Makefile.am: 
+	* gyahtzee.c:
+	* gtali.desktop.in: Update the icon handling to use icon
+	themes. Rename gnome-gtali.png to gnome-tali.png.
+
 2006-03-29  Callum McKenzie  <callum@spooky-possum.org>
 
 	* yahtzee.c: 

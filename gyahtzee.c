@@ -40,7 +40,6 @@
 #include <config.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
-#include <libgnomeui/gnome-window-icon.h>
 
 #include <games-stock.h>
 
@@ -452,6 +451,7 @@ about_cb (GtkAction *action, gpointer data)
 					     "dice and less money."),
 			       "authors", authors,
 			       "translator_credits", _("translator-credits"),
+                               "logo-icon-name", "gnome-tali",
 			       NULL);
 	
 	return FALSE;
@@ -685,7 +685,6 @@ int
 main (int argc, char *argv[])
 {
         GConfClient *client;
-        GError *err = NULL;
         GSList *name_list = NULL;
         gint i;
         GOptionContext *context;
@@ -709,8 +708,7 @@ main (int argc, char *argv[])
                             GNOME_PARAM_GOPTION_CONTEXT, context,
                             GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
-        gtk_window_set_default_icon_from_file (GNOME_ICONDIR"/gnome-gtali.png",
-                                               NULL);
+        gtk_window_set_default_icon_name ("gnome-tali");
 
         client = gconf_client_get_default ();
         if (NumberOfComputers == 0) /* Not set on the command-line. */
