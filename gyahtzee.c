@@ -685,6 +685,7 @@ int
 main (int argc, char *argv[])
 {
         GConfClient *client;
+        GnomeProgram *program;
         GSList *name_list = NULL;
         gint i;
         GOptionContext *context;
@@ -702,11 +703,11 @@ main (int argc, char *argv[])
                                            GETTEXT_PACKAGE);
 
 	/* Create gnome client */
-        gnome_program_init (appID, VERSION,
-                            LIBGNOMEUI_MODULE,
-                            argc, argv,
-                            GNOME_PARAM_GOPTION_CONTEXT, context,
-                            GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+        program = gnome_program_init (appID, VERSION,
+                                      LIBGNOMEUI_MODULE,
+                                      argc, argv,
+                                      GNOME_PARAM_GOPTION_CONTEXT, context,
+                                      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
         gtk_window_set_default_icon_name ("gnome-tali");
 
@@ -765,6 +766,8 @@ main (int argc, char *argv[])
         gtk_main ();
                 
 	gnome_accelerators_sync();
+
+        g_object_unref (program);
         
 	return 0;
 }
