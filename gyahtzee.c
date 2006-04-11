@@ -442,16 +442,26 @@ about_cb (GtkAction *action, gpointer data)
 		NULL
 	};
         
+        const gchar *documenters[] = {
+		"Scott D Heavner",
+		"Callum McKenzie",
+		NULL
+	};
+        
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "name", appName,
 			       "version", VERSION,
-			       "copyright", "Copyright \xc2\xa9 1998-2005 "
+			       "copyright", "Copyright \xc2\xa9 1998-2006 "
 					    "Free Software Foundation, Inc.",
+			       "license", "GPL 2+",
 			       "comments", _("A variation on poker with "
 					     "dice and less money."),
 			       "authors", authors,
+			       "documenters", documenters,
 			       "translator_credits", _("translator-credits"),
                                "logo-icon-name", "gnome-tali",
+                               "website", "http://www.gnome.org/projects/gnome-games/",
+                               "wrap-license", TRUE,
 			       NULL);
 	
 	return FALSE;
