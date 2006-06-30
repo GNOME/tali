@@ -759,9 +759,23 @@ main (int argc, char *argv[])
                                            GCONF_VALUE_STRING, NULL);
 
         for (i = 0; i < MAX_NUMBER_OF_PLAYERS && name_list; i++) {
-                if (name_list->data)
-                        players[i].name = g_strdup (name_list->data);
-                
+                if (name_list->data) {
+                        if (!i && strcasecmp (name_list->data, _("Human")) == 0) {
+                                char *realname;
+
+                                realname = g_strndup (g_get_real_name (),255);
+                                if (strcasecmp(realname,"Unknown") == 0 ||
+				    strlen(realname) < 1) {
+				        g_free (realname);
+					realname = g_strdup (name_list->data);
+				}
+				g_strdelimit (realname, " ", '\0');
+				players[i].name = realname;
+                        } else {
+                                players[i].name = g_strdup (name_list->data);
+                        }
+                }
+
                 name_list = g_slist_next (name_list);
         }
         g_slist_free (name_list);
