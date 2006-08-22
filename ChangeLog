@@ -1,3 +1,9 @@
+2006-08-21  Jason Clinton <me@jasonclinton.com>
+
+	* pix/Makefile.am:
+	* pix/gnome-tali.png:
+	* pix/gnome-tali.svg: Update GTali icon with bitmap and SVG from Daniel Derozier <dcubed20@gmail.com>
+
 2006-06-29  Richard Hoelscher  <rah@rahga.com>
 
 	* gyahtzee.c: patch from "Iain *" by e-mail to use the user's first 

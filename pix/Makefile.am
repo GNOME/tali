@@ -1,5 +1,7 @@
 icondir = $(datadir)/icons/hicolor/48x48/apps/
 icon_DATA = gnome-tali.png
+svgicondir = $(datadir)/icons/hicolor/scalable/apps/
+svgicon_DATA = gnome-tali.svg
 
 Pixmapdir = $(datadir)/pixmaps/gtali
 Pixmap_DATA = \
