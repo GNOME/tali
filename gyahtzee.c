@@ -447,13 +447,14 @@ about_cb (GtkAction *action, gpointer data)
 		"Callum McKenzie",
 		NULL
 	};
-        
+        gchar *license = games_get_license (appName);
+
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "name", appName,
 			       "version", VERSION,
 			       "copyright", "Copyright \xc2\xa9 1998-2006 "
 					    "Free Software Foundation, Inc.",
-			       "license", "GPL 2+",
+			       "license", license,
 			       "comments", _("A variation on poker with "
 					     "dice and less money."),
 			       "authors", authors,
@@ -463,6 +464,7 @@ about_cb (GtkAction *action, gpointer data)
                                "website", "http://www.gnome.org/projects/gnome-games/",
                                "wrap-license", TRUE,
 			       NULL);
+	g_free (license);
 	
 	return FALSE;
 }
