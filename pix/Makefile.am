@@ -19,4 +19,9 @@ Pixmap_DATA = \
 	gnome-dice-6.svg \
 	gnome-dice-none.svg
 
-EXTRA_DIST = $(Pixmap_DATA) $(icon_DATA) $(svgicon_DATA)
+EXTRA_DIST = $(Pixmap_DATA) \
+	$(icon16_DATA) \
+	$(icon22_DATA) \
+	$(icon32_DATA) \
+	$(icon48_DATA) \
+	$(svgicon_DATA)
