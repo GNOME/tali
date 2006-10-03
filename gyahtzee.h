@@ -15,25 +15,26 @@
 #define R_UTOTAL (NUM_UPPER+1)
 #define R_BONUS  (R_UTOTAL-1)
 #define R_BLANK1 (R_UTOTAL+1)
-#define R_GTOTAL (SCOREROWS-1) 
+#define R_GTOTAL (SCOREROWS-1)
 #define R_LTOTAL (R_GTOTAL-1)
 
 /* clist.c */
-extern GtkWidget *create_score_list(void);
-extern void setup_score_list(GtkWidget *scorelist);
-extern void update_score_cell(GtkWidget *scorelist, int row, int col, int val);
-extern void ShowoffPlayerColumn(GtkWidget *scorelist, int player, int so);
-extern void ShowoffPlayer(GtkWidget *scorelist, int player, int so);
-extern void score_list_set_column_title(GtkWidget *scorelist, int column,
-                                        const char *str);
+extern GtkWidget *create_score_list (void);
+extern void setup_score_list (GtkWidget * scorelist);
+extern void update_score_cell (GtkWidget * scorelist, int row, int col,
+			       int val);
+extern void ShowoffPlayerColumn (GtkWidget * scorelist, int player, int so);
+extern void ShowoffPlayer (GtkWidget * scorelist, int player, int so);
+extern void score_list_set_column_title (GtkWidget * scorelist, int column,
+					 const char *str);
 
 /* setup.c */
-extern gint setup_game(GtkAction *action, gpointer data);
-extern void GRenamePlayer(gint playerno);
+extern gint setup_game (GtkAction * action, gpointer data);
+extern void GRenamePlayer (gint playerno);
 
 /* gyahtzee.c */
 extern int GyahtzeeAbort;
-extern GtkWidget *ScoreList; 
+extern GtkWidget *ScoreList;
 
 #endif /* _Gyahtzee_H_ */
 
@@ -42,4 +43,4 @@ Local Variables:
 tab-width: 8
 c-basic-offset: 8
 indent-tabs-mode: nil
-*/   
+*/

@@ -14,7 +14,7 @@
 
 #include <glib/gi18n.h>
 
-#define COMPUTER_DELAY 1		/* sec */
+#define COMPUTER_DELAY 1	/* sec */
 
 #define NUM_ROLLS 3
 #define NUMBER_OF_DICE       5
@@ -42,13 +42,12 @@
 #define H_YA 11
 #define H_CH 12
 
-typedef struct
-{
-	char *name;
-	short used[NUM_FIELDS];
-	int score[NUM_FIELDS];
-	int finished;
-	int comp;
+typedef struct {
+  char *name;
+  short used[NUM_FIELDS];
+  int score[NUM_FIELDS];
+  int finished;
+  int comp;
 } Player;
 
 typedef struct {
@@ -69,45 +68,45 @@ extern int DisplayComputerThoughts;
 extern int OnlyShowScores;
 extern int CurrentPlayer;
 extern char *ProgramHeader;
-extern char *FieldLabels[NUM_FIELDS+EXTRA_FIELDS];
+extern char *FieldLabels[NUM_FIELDS + EXTRA_FIELDS];
 extern char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
 
-extern void YahtzeeInit(void);
-extern void NewGame(void);
-extern int upper_total(int num);
-extern int lower_total(int num);
-extern int total_score(int num);
-extern int count(int val);
-extern int find_n_of_a_kind(int n, int but_not);
-extern int find_straight(int run, int notstart, int notrun);
-extern int find_yahtzee(void);
-extern int add_dice(void);
-extern int play_score(int player, int field);
-extern void handle_play(int player);
-extern void play(void);
-extern void calc_random(void);
-extern void say(char *fmt, ...);
-extern void SelectAllDice(void);
-extern int NoDiceSelected(void);
-extern int RollDie(void);
-extern void RollSelectedDice(void);
-extern int GameIsOver(void);
-extern int FindWinner(void);
+extern void YahtzeeInit (void);
+extern void NewGame (void);
+extern int upper_total (int num);
+extern int lower_total (int num);
+extern int total_score (int num);
+extern int count (int val);
+extern int find_n_of_a_kind (int n, int but_not);
+extern int find_straight (int run, int notstart, int notrun);
+extern int find_yahtzee (void);
+extern int add_dice (void);
+extern int play_score (int player, int field);
+extern void handle_play (int player);
+extern void play (void);
+extern void calc_random (void);
+extern void say (char *fmt, ...);
+extern void SelectAllDice (void);
+extern int NoDiceSelected (void);
+extern int RollDie (void);
+extern void RollSelectedDice (void);
+extern int GameIsOver (void);
+extern int FindWinner (void);
 int UndoPossible (void);
 
 /* Computer.c */
-extern void ComputerRolling(int player);
-extern void ComputerScoring(int player);
+extern void ComputerRolling (int player);
+extern void ComputerScoring (int player);
 
 /* Specific to a windowing system: gyahtzee.c/cyahtzee.c */
-extern void NewGame(void);
-extern void UpdateAllDicePixmaps(void);
-extern void DeselectAllDice(void);
-extern void ShowPlayer(int num, int field);
-extern void NextPlayer(void);
-extern void ShowHighScores(void);
+extern void NewGame (void);
+extern void UpdateAllDicePixmaps (void);
+extern void DeselectAllDice (void);
+extern void ShowPlayer (int num, int field);
+extern void NextPlayer (void);
+extern void ShowHighScores (void);
 
-enum { SCORE_OK=0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
+enum { SCORE_OK = 0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 
 
 #endif /* _yahtzee_H_ */
@@ -119,4 +118,4 @@ tab-width: 8
 c-basic-offset: 8
 indent-tabs-mode: nil
 End:
-*/   
+*/

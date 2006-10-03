@@ -36,321 +36,321 @@
 #include "gyahtzee.h"
 
 void
-update_score_cell(GtkWidget *treeview, gint row, gint col, int val)
+update_score_cell (GtkWidget * treeview, gint row, gint col, int val)
 {
-        GtkTreeModel *model;
-        GtkTreeIter iter;
-        char *buf;
+  GtkTreeModel *model;
+  GtkTreeIter iter;
+  char *buf;
 
-        g_assert(treeview != NULL);
+  g_assert (treeview != NULL);
 
-        model = gtk_tree_view_get_model(GTK_TREE_VIEW(treeview));
-        gtk_tree_model_iter_nth_child(model, &iter, NULL, row);
-        if (val < 0)
-                gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, "", -1);
-        else {
-                buf = g_strdup_printf("%i", val);
-                gtk_list_store_set(GTK_LIST_STORE(model), &iter, col, buf, -1);
-                g_free(buf);
-        }
+  model = gtk_tree_view_get_model (GTK_TREE_VIEW (treeview));
+  gtk_tree_model_iter_nth_child (model, &iter, NULL, row);
+  if (val < 0)
+    gtk_list_store_set (GTK_LIST_STORE (model), &iter, col, "", -1);
+  else {
+    buf = g_strdup_printf ("%i", val);
+    gtk_list_store_set (GTK_LIST_STORE (model), &iter, col, buf, -1);
+    g_free (buf);
+  }
 }
 
 static void
-set_label_bold(GtkLabel *label, gboolean make_bold)
+set_label_bold (GtkLabel * label, gboolean make_bold)
 {
-        PangoAttrList *attrlist;
-        PangoAttribute *attr;
-        
-        g_assert(label != NULL);
+  PangoAttrList *attrlist;
+  PangoAttribute *attr;
 
-        attrlist = gtk_label_get_attributes(label);
-        if (!attrlist)
-                attrlist = pango_attr_list_new();
+  g_assert (label != NULL);
 
-        if (make_bold) {
-                attr = pango_attr_weight_new(PANGO_WEIGHT_BOLD);
-                attr->start_index = 0;
-                attr->end_index = -1;
-                pango_attr_list_change(attrlist, attr);
-        } else {
-                attr = pango_attr_weight_new(PANGO_WEIGHT_NORMAL);
-                attr->start_index = 0;
-                attr->end_index = -1;
-                pango_attr_list_change(attrlist, attr);
-        }
-        gtk_label_set_attributes(label, attrlist);
+  attrlist = gtk_label_get_attributes (label);
+  if (!attrlist)
+    attrlist = pango_attr_list_new ();
+
+  if (make_bold) {
+    attr = pango_attr_weight_new (PANGO_WEIGHT_BOLD);
+    attr->start_index = 0;
+    attr->end_index = -1;
+    pango_attr_list_change (attrlist, attr);
+  } else {
+    attr = pango_attr_weight_new (PANGO_WEIGHT_NORMAL);
+    attr->start_index = 0;
+    attr->end_index = -1;
+    pango_attr_list_change (attrlist, attr);
+  }
+  gtk_label_set_attributes (label, attrlist);
 }
 
 /* Shows the active player by make the player name bold in the TreeView. */
 void
-ShowoffPlayer(GtkWidget *treeview, int player, int so)
+ShowoffPlayer (GtkWidget * treeview, int player, int so)
 {
-        GtkTreeViewColumn *col;
-        GtkWidget *label;
-        GList *collist;
-        
-        g_return_if_fail(treeview != NULL);
+  GtkTreeViewColumn *col;
+  GtkWidget *label;
+  GList *collist;
 
-        if (player < 0 || player >= MAX_NUMBER_OF_PLAYERS)
-                return;
+  g_return_if_fail (treeview != NULL);
 
-        collist = gtk_tree_view_get_columns(GTK_TREE_VIEW(treeview));
-        col = GTK_TREE_VIEW_COLUMN(g_list_nth_data(collist, player+1));
-        g_list_free(collist);
+  if (player < 0 || player >= MAX_NUMBER_OF_PLAYERS)
+    return;
 
-        label = gtk_tree_view_column_get_widget(col);
-        if (!label)
-                return;
+  collist = gtk_tree_view_get_columns (GTK_TREE_VIEW (treeview));
+  col = GTK_TREE_VIEW_COLUMN (g_list_nth_data (collist, player + 1));
+  g_list_free (collist);
 
-        g_assert(GTK_IS_LABEL(label));
+  label = gtk_tree_view_column_get_widget (col);
+  if (!label)
+    return;
 
-        set_label_bold(GTK_LABEL(label), so);
+  g_assert (GTK_IS_LABEL (label));
+
+  set_label_bold (GTK_LABEL (label), so);
 }
 
 static void
-row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
-                 GtkTreeViewColumn *column, gpointer user_data)
+row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
+		  GtkTreeViewColumn * column, gpointer user_data)
 {
-        char *path_str;
-        int row;
+  char *path_str;
+  int row;
 
-        if (players[CurrentPlayer].comp)
-                return;
-        path_str = gtk_tree_path_to_string(path);
-        if (sscanf(path_str, "%i", &row) != 1) {
-                g_warning("%s: could not convert '%s' to integer\n",
-                          G_GNUC_FUNCTION, path_str);
-                g_free(path_str);
-                return;
-        }
-        g_free(path_str);
-        switch (row) {
-        case (R_UTOTAL):
-        case (R_BONUS):
-        case (R_BLANK1):
-        case (R_GTOTAL):
-        case (R_LTOTAL):
-                break;
-        default:
-                /* Adjust for Upper Total / Bonus entries */
-                if (row >= NUM_UPPER)
-                        row -= 3;
+  if (players[CurrentPlayer].comp)
+    return;
+  path_str = gtk_tree_path_to_string (path);
+  if (sscanf (path_str, "%i", &row) != 1) {
+    g_warning ("%s: could not convert '%s' to integer\n",
+	       G_GNUC_FUNCTION, path_str);
+    g_free (path_str);
+    return;
+  }
+  g_free (path_str);
+  switch (row) {
+  case (R_UTOTAL):
+  case (R_BONUS):
+  case (R_BLANK1):
+  case (R_GTOTAL):
+  case (R_LTOTAL):
+    break;
+  default:
+    /* Adjust for Upper Total / Bonus entries */
+    if (row >= NUM_UPPER)
+      row -= 3;
 
-                if (row < NUM_FIELDS && !players[CurrentPlayer].finished) {
-                        if (play_score(CurrentPlayer, row) == SLOT_USED) {
-                                say(_("Already used! "
-                                      "Where do you want to put that?"));
-                        } else {
-                                NextPlayer();
-                        }
-                }
-                break;
-        }
+    if (row < NUM_FIELDS && !players[CurrentPlayer].finished) {
+      if (play_score (CurrentPlayer, row) == SLOT_USED) {
+	say (_("Already used! " "Where do you want to put that?"));
+      } else {
+	NextPlayer ();
+      }
+    }
+    break;
+  }
 }
 
 static gboolean
-activate_selected_row_idle_cb(gpointer data)
+activate_selected_row_idle_cb (gpointer data)
 {
-        GtkTreeView *tree = GTK_TREE_VIEW(data);
-        GtkTreeViewColumn *column;
-        GtkTreePath *path;
+  GtkTreeView *tree = GTK_TREE_VIEW (data);
+  GtkTreeViewColumn *column;
+  GtkTreePath *path;
 
-        path = NULL;
-        gtk_tree_view_get_cursor(tree, &path, &column);
-        if (path) {
-                if (!column)
-                        column = gtk_tree_view_get_column(tree, 0);
-                gtk_tree_view_row_activated(tree, path, column);
-        }
-        
-        /* Quoted from docs: "The returned GtkTreePath must be freed 
-           with gtk_tree_path_free() when you are done with it." */
-        gtk_tree_path_free(path);
+  path = NULL;
+  gtk_tree_view_get_cursor (tree, &path, &column);
+  if (path) {
+    if (!column)
+      column = gtk_tree_view_get_column (tree, 0);
+    gtk_tree_view_row_activated (tree, path, column);
+  }
 
-        return FALSE;
+  /* Quoted from docs: "The returned GtkTreePath must be freed 
+   * with gtk_tree_path_free() when you are done with it." */
+  gtk_tree_path_free (path);
+
+  return FALSE;
 }
 
 /* Returns: FALSE to let the GtkTreeView focus the selected row */
 static gboolean
-tree_button_press_cb(GtkWidget *widget, GdkEventButton *event, gpointer data)
+tree_button_press_cb (GtkWidget * widget, GdkEventButton * event,
+		      gpointer data)
 {
-        GtkTreeView *tree = GTK_TREE_VIEW(data);
+  GtkTreeView *tree = GTK_TREE_VIEW (data);
 
-        g_assert(widget != NULL);
-        g_assert(event != NULL);
+  g_assert (widget != NULL);
+  g_assert (event != NULL);
 
-        if (event->type != GDK_BUTTON_PRESS)
-                return FALSE;
+  if (event->type != GDK_BUTTON_PRESS)
+    return FALSE;
 
-        g_idle_add_full(G_PRIORITY_HIGH, activate_selected_row_idle_cb,
-                        (gpointer) tree, NULL);
+  g_idle_add_full (G_PRIORITY_HIGH, activate_selected_row_idle_cb,
+		   (gpointer) tree, NULL);
 
-        return FALSE;
+  return FALSE;
 }
 
-GtkWidget *create_score_list(void)
+GtkWidget *
+create_score_list (void)
 {
-        GtkWidget *tree;
-        GtkListStore *store;
-        
-        store = gtk_list_store_new(MAX_NUMBER_OF_PLAYERS + 3,
-                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-                                   G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
-        tree = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
-        gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
-        gtk_tree_view_set_enable_search (GTK_TREE_VIEW (tree), FALSE);	
+  GtkWidget *tree;
+  GtkListStore *store;
 
-        g_object_unref(store);
+  store = gtk_list_store_new (MAX_NUMBER_OF_PLAYERS + 3,
+			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
+  tree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (store));
+  gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
+  gtk_tree_view_set_enable_search (GTK_TREE_VIEW (tree), FALSE);
 
-        g_signal_connect(G_OBJECT(tree), "row-activated",
-                         G_CALLBACK(row_activated_cb), NULL);
-        g_signal_connect(G_OBJECT(tree), "button-press-event",
-                         G_CALLBACK(tree_button_press_cb), (gpointer) tree);
+  g_object_unref (store);
 
-        return tree;
+  g_signal_connect (G_OBJECT (tree), "row-activated",
+		    G_CALLBACK (row_activated_cb), NULL);
+  g_signal_connect (G_OBJECT (tree), "button-press-event",
+		    G_CALLBACK (tree_button_press_cb), (gpointer) tree);
+
+  return tree;
 }
 
 static void
-add_columns(GtkTreeView *tree)
+add_columns (GtkTreeView * tree)
 {
-        GtkTreeViewColumn *column;
-        GtkCellRenderer *renderer;
-        GtkWidget *label;
-        GValue *prop_value;
-        int i;
-        
-        /* Create columns */
-        renderer = gtk_cell_renderer_text_new();
-        column = gtk_tree_view_column_new_with_attributes("", renderer,
-                                                          "text", 0, 
-                                                          "weight", LAST_COL,
-                                                          NULL);
-        g_object_set(renderer, "weight-set", TRUE, NULL);
-        gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
-        for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
-                renderer = gtk_cell_renderer_text_new();
-                prop_value = g_new0(GValue, 1);
-                g_value_init(prop_value, G_TYPE_FLOAT);
-                g_value_set_float(prop_value, 1.0);
-                g_object_set_property(G_OBJECT(renderer),
-                                      "xalign", prop_value);
-                g_object_set(renderer, "weight-set", TRUE, NULL);
-                g_value_unset(prop_value);
-                g_free(prop_value);
+  GtkTreeViewColumn *column;
+  GtkCellRenderer *renderer;
+  GtkWidget *label;
+  GValue *prop_value;
+  int i;
 
-                column = gtk_tree_view_column_new();
-                gtk_tree_view_column_pack_start(column, renderer, TRUE);
-                gtk_tree_view_column_set_attributes(column, renderer,
-                                                    "text", i+1, 
-                                                    "weight", LAST_COL, 
-                                                    NULL);
-                gtk_tree_view_column_set_min_width(column, 95);
-                gtk_tree_view_column_set_alignment(column, 1.0);
-                label = gtk_label_new(players[i].name);
-                gtk_tree_view_column_set_widget(column, label);
-                gtk_widget_show(label);
-                gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
-        }
-        renderer = gtk_cell_renderer_text_new();
-        column = gtk_tree_view_column_new_with_attributes("", renderer, "text",
-                                                          MAX_NUMBER_OF_PLAYERS
-                                                          + 1, NULL);
-        gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
+  /* Create columns */
+  renderer = gtk_cell_renderer_text_new ();
+  column = gtk_tree_view_column_new_with_attributes ("", renderer,
+						     "text", 0,
+						     "weight", LAST_COL,
+						     NULL);
+  g_object_set (renderer, "weight-set", TRUE, NULL);
+  gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+  for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
+    renderer = gtk_cell_renderer_text_new ();
+    prop_value = g_new0 (GValue, 1);
+    g_value_init (prop_value, G_TYPE_FLOAT);
+    g_value_set_float (prop_value, 1.0);
+    g_object_set_property (G_OBJECT (renderer), "xalign", prop_value);
+    g_object_set (renderer, "weight-set", TRUE, NULL);
+    g_value_unset (prop_value);
+    g_free (prop_value);
+
+    column = gtk_tree_view_column_new ();
+    gtk_tree_view_column_pack_start (column, renderer, TRUE);
+    gtk_tree_view_column_set_attributes (column, renderer,
+					 "text", i + 1,
+					 "weight", LAST_COL, NULL);
+    gtk_tree_view_column_set_min_width (column, 95);
+    gtk_tree_view_column_set_alignment (column, 1.0);
+    label = gtk_label_new (players[i].name);
+    gtk_tree_view_column_set_widget (column, label);
+    gtk_widget_show (label);
+    gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+  }
+  renderer = gtk_cell_renderer_text_new ();
+  column = gtk_tree_view_column_new_with_attributes ("", renderer, "text",
+						     MAX_NUMBER_OF_PLAYERS
+						     + 1, NULL);
+  gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 }
 
 void
-score_list_set_column_title(GtkWidget *treeview, int column, const char *str)
+score_list_set_column_title (GtkWidget * treeview, int column,
+			     const char *str)
 {
-        GtkTreeViewColumn *col;
-        GtkWidget *label;
+  GtkTreeViewColumn *col;
+  GtkWidget *label;
 
-        g_assert(treeview != NULL);
+  g_assert (treeview != NULL);
 
-        col = gtk_tree_view_get_column(GTK_TREE_VIEW(treeview), column);
-        label = gtk_tree_view_column_get_widget(col);
-        if (!label)
-                return;
+  col = gtk_tree_view_get_column (GTK_TREE_VIEW (treeview), column);
+  label = gtk_tree_view_column_get_widget (col);
+  if (!label)
+    return;
 
-        gtk_label_set_text(GTK_LABEL(label), str);
+  gtk_label_set_text (GTK_LABEL (label), str);
 }
 
 static void
-initialize_column_titles(GtkTreeView *treeview)
+initialize_column_titles (GtkTreeView * treeview)
 {
-        GtkTreeViewColumn *col;
-        GList *collist, *node;
-        GtkWidget *label;
-        int i;
+  GtkTreeViewColumn *col;
+  GList *collist, *node;
+  GtkWidget *label;
+  int i;
 
-        collist = gtk_tree_view_get_columns(treeview);
-        i = 0;
-        for (node = collist; node != NULL; node = g_list_next(node)) {
-                col = GTK_TREE_VIEW_COLUMN(node->data);
-                label = gtk_tree_view_column_get_widget(col);
-                if (!label)
-                        continue;
+  collist = gtk_tree_view_get_columns (treeview);
+  i = 0;
+  for (node = collist; node != NULL; node = g_list_next (node)) {
+    col = GTK_TREE_VIEW_COLUMN (node->data);
+    label = gtk_tree_view_column_get_widget (col);
+    if (!label)
+      continue;
 
-                if (i < NumberOfPlayers)
-                        gtk_label_set_text(GTK_LABEL(label), players[i].name);
-                else
-                        gtk_label_set_text(GTK_LABEL(label), "");
-                i++;
-        }
-        g_list_free(collist);
+    if (i < NumberOfPlayers)
+      gtk_label_set_text (GTK_LABEL (label), players[i].name);
+    else
+      gtk_label_set_text (GTK_LABEL (label), "");
+    i++;
+  }
+  g_list_free (collist);
 }
 
-void setup_score_list(GtkWidget *treeview)
+void
+setup_score_list (GtkWidget * treeview)
 {
-        GtkTreeModel *model;
-        GtkListStore *store;
-        GtkTreeIter iter;
-        GList *columns;
-        int i;
+  GtkTreeModel *model;
+  GtkListStore *store;
+  GtkTreeIter iter;
+  GList *columns;
+  int i;
 
-        g_assert(treeview != NULL);
+  g_assert (treeview != NULL);
 
-        columns = gtk_tree_view_get_columns(GTK_TREE_VIEW(treeview));
-        if (!columns) {
-                add_columns(GTK_TREE_VIEW(treeview));
-        } else {
-                initialize_column_titles(GTK_TREE_VIEW(treeview));
-        }
+  columns = gtk_tree_view_get_columns (GTK_TREE_VIEW (treeview));
+  if (!columns) {
+    add_columns (GTK_TREE_VIEW (treeview));
+  } else {
+    initialize_column_titles (GTK_TREE_VIEW (treeview));
+  }
 
-        model = gtk_tree_view_get_model(GTK_TREE_VIEW(treeview));
-        store = GTK_LIST_STORE(model);
-        gtk_list_store_clear(store);
+  model = gtk_tree_view_get_model (GTK_TREE_VIEW (treeview));
+  store = GTK_LIST_STORE (model);
+  gtk_list_store_clear (store);
 
-        for (i = 0; i < NUM_UPPER; i++) {
-                gtk_list_store_append(store, &iter);
-                gtk_list_store_set(store, &iter, 0, _(FieldLabels[i]), 
-                                   LAST_COL, PANGO_WEIGHT_NORMAL, -1);
-        }
+  for (i = 0; i < NUM_UPPER; i++) {
+    gtk_list_store_append (store, &iter);
+    gtk_list_store_set (store, &iter, 0, _(FieldLabels[i]),
+			LAST_COL, PANGO_WEIGHT_NORMAL, -1);
+  }
 
-        gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_BONUS]), 
-                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
-        gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_UPPERT]), 
-                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
-        gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, "", -1);
+  gtk_list_store_append (store, &iter);
+  gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_BONUS]),
+		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+  gtk_list_store_append (store, &iter);
+  gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_UPPERT]),
+		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+  gtk_list_store_append (store, &iter);
+  gtk_list_store_set (store, &iter, 0, "", -1);
 
-        for (i = 0; i < NUM_LOWER; i++) {
-                gtk_list_store_append(store, &iter);
-                gtk_list_store_set(store, &iter,
-                                   0, _(FieldLabels[i+NUM_UPPER]),
-                                   LAST_COL, PANGO_WEIGHT_NORMAL,
-                                   -1);
-        }
+  for (i = 0; i < NUM_LOWER; i++) {
+    gtk_list_store_append (store, &iter);
+    gtk_list_store_set (store, &iter,
+			0, _(FieldLabels[i + NUM_UPPER]),
+			LAST_COL, PANGO_WEIGHT_NORMAL, -1);
+  }
 
-        gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_LOWERT]), 
-                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
-        gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, _(FieldLabels[F_GRANDT]), 
-                           LAST_COL, PANGO_WEIGHT_BOLD, -1);
-}	
+  gtk_list_store_append (store, &iter);
+  gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_LOWERT]),
+		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+  gtk_list_store_append (store, &iter);
+  gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_GRANDT]),
+		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+}
 
 /* Arrgh - lets all use the same tabs under emacs: 
 Local Variables:
@@ -358,4 +358,4 @@ tab-width: 8
 c-basic-offset: 8
 indent-tabs-mode: nil
 End:
-*/   
+*/
