@@ -42,6 +42,8 @@
 #include <gconf/gconf-client.h>
 
 #include <games-stock.h>
+#include <games-scores.c>
+#include <games-scores-dialog.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -50,7 +52,6 @@
 
 static char *appID = "gtali";
 static char *appName = N_("Tali");
-static guint lastHighScore = 0;
 static guint last_timeout = 0;
 static gboolean ready_to_advance_player;
 
@@ -94,6 +95,16 @@ const static GOptionEntry yahtzee_options[] = {
   {NULL}
 };
 
+static const GamesScoresDescription scoredesc = { NULL,
+  NULL,
+  "gtali",
+  GAMES_SCORES_STYLE_PLAIN_DESCENDING
+};
+
+GamesScores *highscores;
+
+static GtkWidget *dialog = NULL;
+
 static gint gnome_modify_dice (GtkWidget * widget, gpointer data);
 static gint gnome_roll_dice (GtkWidget * widget, GdkEvent * event,
 			     gpointer data);
@@ -121,11 +132,15 @@ CheerWinner (void)
 {
   int winner;
   int i;
+  GamesScoreValue score;
+  gint pos;
+  gchar *message;
 
   ShowoffPlayer (ScoreList, CurrentPlayer, 0);
 
   winner = FindWinner ();
 
+  /* draw. The score is returned as a negative value */
   if (winner < 0) {
     for (i = 0; i < NumberOfPlayers; i++) {
       if (total_score (i) == -winner) {
@@ -140,10 +155,30 @@ CheerWinner (void)
   ShowoffPlayer (ScoreList, winner, 1);
 
   if (winner < NumberOfHumans) {
-    lastHighScore = gnome_score_log ((guint) WinningScore, NULL, TRUE);
+
+    score.plain = (guint32) WinningScore;  
+
+    pos = games_scores_add_score (highscores, score);
+
+    if (pos > 0) {
+      if (dialog) {
+        gtk_window_present (GTK_WINDOW (dialog));
+      } else {
+        dialog = games_scores_dialog_new (highscores, _("Tali Scores"));
+        message =
+  	  g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
+			 _("Your score has made the top ten."));
+        games_scores_dialog_set_message (GAMES_SCORES_DIALOG (dialog), message);
+        g_free (message);
+      }
+      games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), pos);
+
+      gtk_dialog_run (GTK_DIALOG (dialog));
+      gtk_widget_hide (dialog);
+    }
+
     update_score_state ();
-    if (lastHighScore)
-      ShowHighScores ();
+
   }
 
   if (players[winner].name)
@@ -154,7 +189,6 @@ CheerWinner (void)
     say (_("Game over!"));
 
 }
-
 static gboolean
 do_computer_turns (void)
 {
@@ -472,17 +506,11 @@ about_cb (GtkAction * action, gpointer data)
 void
 ShowHighScores (void)
 {
-  GtkWidget *dialog;
+  if (!dialog)
+    dialog = games_scores_dialog_new (highscores, _("Tali Scores"));
 
-  dialog = gnome_scores_display (appName, appID, NULL, lastHighScore);
-  if (dialog != NULL) {
-    gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
-    gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
-    gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
-    gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-    gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (dialog)->vbox), 2);
-    gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
-  }
+  gtk_dialog_run (GTK_DIALOG (dialog));    
+  gtk_widget_hide (dialog);
 }
 
 static gint
@@ -511,20 +539,11 @@ LoadDicePixmaps (void)
 void
 update_score_state (void)
 {
-  gchar **names = NULL;
-  gfloat *scores = NULL;
-  time_t *scoretimes = NULL;
-  gint top;
+  GList *top;
 
-  top = gnome_score_get_notable (appID, NULL, &names, &scores, &scoretimes);
-  if (top > 0) {
-    gtk_action_set_sensitive (scores_action, TRUE);
-    g_strfreev (names);
-    g_free (scores);
-    g_free (scoretimes);
-  } else {
-    gtk_action_set_sensitive (scores_action, FALSE);
-  }
+  top = games_scores_get (highscores);
+  gtk_action_set_sensitive (scores_action, top != NULL);
+
 }
 
 static void
@@ -698,7 +717,7 @@ main (int argc, char *argv[])
   gint i;
   GOptionContext *context;
 
-  gnome_score_init (appID);
+  setgid_io_init ();
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
@@ -716,6 +735,8 @@ main (int argc, char *argv[])
 				argc, argv,
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+  highscores = games_scores_new (&scoredesc);
 
   gtk_window_set_default_icon_name ("gnome-tali");
 
