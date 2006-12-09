@@ -1,6 +1,12 @@
 2006-12-09  Thomas Andersen  <phomes@gmail.com>
 
 	* gyahtzee.c:
+	* yahtzee.c: Bug #137104: Change the label of the "Roll!" button to 
+	"Roll all!" if no dice is selected. 
+
+2006-12-09  Thomas Andersen  <phomes@gmail.com>
+
+	* gyahtzee.c:
 	* yahtzee.c: Fix Bug #382332 – Gtali does not remember number 
 	of human players.
 

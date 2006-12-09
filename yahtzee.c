@@ -161,7 +161,7 @@ RollDie (void)
 void
 RollSelectedDice (void)
 {
-  int i, mod = 0;
+  int i, cnt = 0;
 
   if (NumberOfRolls >= NUM_ROLLS) {
     return;
@@ -171,14 +171,21 @@ RollSelectedDice (void)
     if (DiceValues[i].sel) {
       DiceValues[i].val = RollDie ();
       DiceValues[i].sel = 0;
-      mod = 1;
+      cnt++;
+    }
+  }
+
+  /* If no dice is selcted roll them all */
+  if(cnt == 0){
+    for (i = 0; i < 5; i++) {
+      DiceValues[i].val = RollDie ();
     }
   }
 
   UpdateAllDicePixmaps ();
   DeselectAllDice ();
 
-  NumberOfRolls += mod;
+  NumberOfRolls++;
 
   if (NumberOfRolls >= NUM_ROLLS) {
     say (_("Choose a score slot."));

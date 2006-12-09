@@ -121,8 +121,20 @@ update_roll_button_sensitivity (void)
     state |=
       gtk_toggle_tool_button_get_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]));
 
+  if(!state){
+    gtk_button_set_label (GTK_BUTTON (mbutton), _("Roll all!"));
+    state = TRUE;
+  } else {
+    gtk_button_set_label (GTK_BUTTON (mbutton), _("Roll!"));
+    state = TRUE;
+  }
+
   state &= NumberOfRolls < 3;
   state &= !players[CurrentPlayer].comp;
+
+  if(GameIsOver ()){
+    state = FALSE;
+  }
 
   gtk_widget_set_sensitive (GTK_WIDGET (mbutton), state);
 }
@@ -230,6 +242,7 @@ NextPlayer (void)
       g_source_remove (last_timeout);
       last_timeout = 0;
     }
+    update_roll_button_sensitivity ();
     CheerWinner ();
     return;
   }
