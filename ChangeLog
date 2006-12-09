@@ -1,3 +1,9 @@
+2006-12-09  Thomas Andersen  <phomes@gmail.com>
+
+	* gyahtzee.c:
+	* yahtzee.c: Fix Bug #382332 – Gtali does not remember number 
+	of human players.
+
 2006-04-06  Thomas Andersen  <phomes@gmail.com>
 
 	* gyahtzee.c: Migrate tali to new high score API v2 (Bug #316360).

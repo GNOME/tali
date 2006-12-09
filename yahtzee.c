@@ -51,7 +51,7 @@ Player players[MAX_NUMBER_OF_PLAYERS] = {
 };
 int NumberOfPlayers = 0;
 int NumberOfComputers = 0;
-int NumberOfHumans = 1;
+int NumberOfHumans = 0;
 int DoDelay = 0;
 int NumberOfRolls;
 int WinningScore;

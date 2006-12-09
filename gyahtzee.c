@@ -751,8 +751,8 @@ main (int argc, char *argv[])
 					   "/apps/gtali/NumberOfHumanOpponents",
 					   NULL);
 
-  if (NumberOfHumans < 0)
-    NumberOfHumans = 0;
+  if (NumberOfHumans < 1)
+    NumberOfHumans = 1;
   if (NumberOfComputers < 0)
     NumberOfComputers = 0;
 
