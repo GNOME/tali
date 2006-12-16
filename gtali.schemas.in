@@ -61,5 +61,17 @@
       </locale>
     </schema>
 
+    <schema>
+      <key>/schemas/apps/gtali/GameType</key>
+      <applyto>/apps/gtali/GameType</applyto>
+      <owner>gtali</owner>
+      <type>string</type>
+      <locale name="C">
+        <default>Regular</default>
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
   </schemalist>
 </gconfschemafile>

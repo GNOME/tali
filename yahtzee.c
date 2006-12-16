@@ -57,6 +57,10 @@ int NumberOfRolls;
 int WinningScore;
 int DisplayComputerThoughts = 0;
 int CurrentPlayer;
+GameType game_type = GAME_YAHTZEE;
+int NUM_FIELDS = NUM_FIELDS_YAHTZEE;
+int NUM_LOWER = NUM_LOWER_YAHTZEE;
+
 char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
   "Wilber",
   "Bill",
@@ -64,7 +68,7 @@ char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
   "Kenneth",
   "Janet"
 };
-char *FieldLabels[NUM_FIELDS + EXTRA_FIELDS] = {
+char *FieldLabelsYahtzee[NUM_FIELDS_YAHTZEE + EXTRA_FIELDS] = {
   N_("1s [total of 1s]"),
   N_("2s [total of 2s]"),
   N_("3s [total of 3s]"),
@@ -86,6 +90,34 @@ char *FieldLabels[NUM_FIELDS + EXTRA_FIELDS] = {
   N_("Upper total"),
   N_("Bonus if >62"),
 };
+
+char *FieldLabelsKismet[NUM_FIELDS_KISMET+EXTRA_FIELDS] =
+{
+  N_("1s [total of 1s]"),
+  N_("2s [total of 2s]"),
+  N_("3s [total of 3s]"),
+  N_("4s [total of 4s]"),
+  N_("5s [total of 5s]"),
+  N_("6s [total of 6s]"),
+  /* End of upper panel */
+  N_("2 pair Same Color [total]"),
+  N_("3 of a Kind [total]"),
+  N_("Full House [15 + total]"),
+  N_("Full House Same Color [20 + total]"),
+  N_("Flush (all same color) [35]"),
+  N_("Large Straight [40]"),
+  N_("4 of a Kind [25 + total]"),
+  N_("5 of a Kind [50 + total]"),
+  N_("Chance [total]"),
+  /* End of lower panel */
+  N_("Lower Total"),
+  N_("Grand Total"),
+  /* Need to squish between upper and lower pannel */
+  N_("Upper total"),
+  N_("Bonus if >62"),
+};
+
+char **FieldLabels = FieldLabelsKismet;
 
 int
 NoDiceSelected (void)
@@ -127,6 +159,17 @@ void
 NewGame (void)
 {
   int i, j;
+
+  if (game_type == GAME_YAHTZEE) {
+    FieldLabels = FieldLabelsYahtzee;
+    NUM_FIELDS = NUM_FIELDS_YAHTZEE;
+    NUM_LOWER = NUM_LOWER_YAHTZEE;
+  }
+  else if (game_type == GAME_KISMET) {
+    FieldLabels = FieldLabelsKismet;
+    NUM_FIELDS = NUM_FIELDS_KISMET;
+    NUM_LOWER = NUM_LOWER_KISMET;
+  }
 
   CurrentPlayer = 0;
   NumberOfRolls = 0;
@@ -244,7 +287,11 @@ total_score (int num)
   lower_tot = lower_total (num);
   upper_tot = upper_total (num);
 
-  if (upper_tot >= 63)
+  if (game_type == GAME_KISMET && upper_tot >= 78)
+    upper_tot += 75;
+  else if (game_type == GAME_KISMET && upper_tot >= 71)
+    upper_tot += 55;
+  else if (upper_tot >= 63)
     upper_tot += 35;
 
   return (upper_tot + lower_tot);
@@ -328,25 +375,9 @@ add_dice (void)
   return (val);
 }
 
-/* Test if we can use suggested score slot */
-int
-play_score (int player, int field)
+static void play_score_kismet(int player, int field)
 {
   int i;
-
-  /* Special case for yahtzee, allow multiple calls if 1st wasn't 0 */
-
-  /* This, however, was broken: it didn't actually check to see if the
-   * user had a yahtzee if this wasn't their first time clicking on it.
-   * Bad. -- pschwan@cmu.edu */
-  if (field == 11) {
-    if ((players[player].used[11] && (players[player].score[11] == 0)))
-      return SLOT_USED;
-
-    if ((players[player].used[11] && !find_yahtzee ()))
-      return SLOT_USED;
-  } else if (players[player].used[field])
-    return SLOT_USED;
 
   players[player].used[field] = 1;
 
@@ -360,17 +391,94 @@ play_score (int player, int field)
     players[player].score[field] = count (field + 1) * (field + 1);
     break;
 
-  case 6:
+  case 6: /* 2 pair same color */
+    if ((i = find_n_of_a_kind(2, 0))) {
+            int j = find_n_of_a_kind(2, i);
+        if (i + j == 7 || find_n_of_a_kind(4, 0))
+            players[player].score[field] = add_dice ();
+    }
+    break;
+
+  case 7: /* 3 of a kind */
     if (find_n_of_a_kind (3, 0))
       players[player].score[field] = add_dice ();
     break;
 
-  case 7:
+  case 8: /* Full house */
+    if ((i = find_n_of_a_kind (3, 0))) {
+      /* We treat a yahtzee as a full house. */
+      if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
+        players[player].score[field] = 15 + add_dice ();
+    }
+    break;
+
+  case 9: /* Full house same color */
+    if ((i = find_n_of_a_kind(3, 0))) {
+      /* We treat a yahtzee as a full house. */
+      if (find_n_of_a_kind(2, i) + i == 7 || find_n_of_a_kind(5,0))
+         players[player].score[field] = 20 + add_dice ();
+    }
+    break;
+
+  case 10: /* Flush - all same color */
+    if (find_n_of_a_kind(5, 0))
+      /* We treat a yahtzee as a flush. */
+      players[player].score[field] = 35;
+    else if ((i = find_n_of_a_kind(4, 0)) ) {
+      if (find_n_of_a_kind(1, i) + i == 7)
+        players[player].score[field] = 35;
+    }
+    else if ((i = find_n_of_a_kind(3, 0)) ) {
+      if (find_n_of_a_kind(2, i) + i == 7)
+        players[player].score[field] = 35;
+    }
+
+  case 11: /* Straight */
+    if (find_straight (5, 0, 0))
+      players[player].score[field] = 40;
+    break;
+
+  case 12: /* 4 of a kind */
+    if (find_n_of_a_kind (4, 0))
+      players[player].score[field] = 25 + add_dice ();
+    break;
+
+  case 13: /* Yahtzee or kismet */
+    if (find_yahtzee ())
+      players[player].score[field] += 50 + add_dice ();
+    break;
+
+  case 14: /* Chance or yarborough */
+    players[player].score[field] = add_dice ();
+    break;
+  }
+}
+
+static void play_score_yahtzee(int player, int field)
+{
+  int i;
+
+  switch (field) {
+  case 0:
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    players[player].score[field] = count (field + 1) * (field + 1);
+    break;
+
+  case 6: /* 3 of a kind */
+    if (find_n_of_a_kind (3, 0))
+      players[player].score[field] = add_dice ();
+    break;
+
+  case 7: /* 4 of a kind */
     if (find_n_of_a_kind (4, 0))
       players[player].score[field] = add_dice ();
     break;
 
-  case 8:
+  case 8: /* Full house */
     if ((i = find_n_of_a_kind (3, 0))) {
       /* We treat a yahtzee as a full house. */
       if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
@@ -378,24 +486,56 @@ play_score (int player, int field)
     }
     break;
 
-  case 9:
+  case 9: /* Small Straight */
     if (find_straight (4, 0, 0))
       players[player].score[field] = 30;
     break;
 
-  case 10:
+  case 10: /* Large Straight */
     if (find_straight (5, 0, 0))
       players[player].score[field] = 40;
     break;
 
-  case 11:
+  case 11: /* Yahtzee */
     if (find_yahtzee ())
       players[player].score[field] += 50;
     break;
 
-  case 12:
+  case 12: /* Chance */
     players[player].score[field] = add_dice ();
     break;
+  }
+}
+
+/* Test if we can use suggested score slot */
+int
+play_score (int player, int field)
+{
+  int i;
+
+  /* Special case for yahtzee, allow multiple calls if 1st wasn't 0 */
+
+  /* This, however, was broken: it didn't actually check to see if the
+   * user had a yahtzee if this wasn't their first time clicking on it.
+   * Bad. -- pschwan@cmu.edu */
+  if (field == 11 && game_type == GAME_YAHTZEE) {
+    if ((players[player].used[11] && (players[player].score[11] == 0)))
+      return SLOT_USED;
+
+    if ((players[player].used[11] && !find_yahtzee ()))
+      return SLOT_USED;
+  } else if (players[player].used[field])
+    return SLOT_USED;
+
+  players[player].used[field] = 1;
+
+  if (game_type == GAME_KISMET)
+    play_score_kismet(player, field);
+  else if (game_type == GAME_YAHTZEE)
+    play_score_yahtzee(player, field);
+  else {
+    fprintf(stderr, "Unexpected game type %d. Aborting...", game_type);
+    exit(1);
   }
 
   ShowPlayer (player, field);

@@ -45,9 +45,13 @@ if GCONF_SCHEMAS_INSTALL
 	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/gtali/$(schema_DATA)
 endif
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-touch $(DESTDIR)$(scoredir)/gtali.scores
-	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gtali.scores	
+	-if test -e $(DESTDIR)$(scoredir)/gtali.scores ; then mv $(DESTDIR)$(scoredir)/gtali.scores $(DESTDIR)$(scoredir)/gtali.Regular.scores ; fi
+	-touch $(DESTDIR)$(scoredir)/gtali.Regular.scores
+	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.Regular.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Regular.scores	
+	-touch $(DESTDIR)$(scoredir)/gtali.Colors.scores
+	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.Colors.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Colors.scores	
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ; fi
 
 DISTCLEANFILES = $(Games_DATA) $(schema_DATA)

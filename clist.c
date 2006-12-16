@@ -124,14 +124,8 @@ row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
     return;
   }
   g_free (path_str);
-  switch (row) {
-  case (R_UTOTAL):
-  case (R_BONUS):
-  case (R_BLANK1):
-  case (R_GTOTAL):
-  case (R_LTOTAL):
-    break;
-  default:
+  if (row != R_UTOTAL && row != R_BONUS && row != R_BLANK1 &&
+      row != R_GTOTAL && row != R_LTOTAL) {
     /* Adjust for Upper Total / Bonus entries */
     if (row >= NUM_UPPER)
       row -= 3;
@@ -143,7 +137,6 @@ row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
 	NextPlayer ();
       }
     }
-    break;
   }
 }
 

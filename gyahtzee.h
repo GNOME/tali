@@ -31,6 +31,9 @@ extern void score_list_set_column_title (GtkWidget * scorelist, int column,
 /* setup.c */
 extern gint setup_game (GtkAction * action, gpointer data);
 extern void GRenamePlayer (gint playerno);
+extern GameType game_type_from_string(const gchar *string);
+extern GameType get_new_game_type(void);
+extern void set_new_game_type(GameType type);
 
 /* gyahtzee.c */
 extern int GyahtzeeAbort;

@@ -46,10 +46,55 @@ static GtkObject *HumanAdj, *ComputerAdj;
 
 static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans = -1;
+static GameType NewGameType  = GAME_YAHTZEE;
 
 static int tmpDoDelay, tmpDisplayComputerThoughts;
 
 extern GtkWidget *window;
+typedef struct game_type_table_t {
+    GameType type;
+    const gchar *name;
+} GameTypeTable;
+
+static GameTypeTable game_type_table[] = {
+    { GAME_YAHTZEE, "Regular" },
+    { GAME_KISMET,  "Colors"  }
+};
+
+#define GAME_TYPE_TABLE_SIZE (sizeof(game_type_table) / sizeof(GameTypeTable))
+
+static const gchar *game_type_name(GameType type)
+{
+    gint ii = 0;
+    for (ii = 0; ii < GAME_TYPE_TABLE_SIZE; ii++) {
+        if (type == game_type_table[ii].type)
+            return game_type_table[ii].name;
+    }
+
+    return NULL;
+}
+
+GameType game_type_from_string(const gchar *string)
+{
+    if (string) {
+        gint ii =0;
+        for (ii = 0; ii < GAME_TYPE_TABLE_SIZE; ii++)
+            if (!strcmp(string, game_type_table[ii].name))
+                return game_type_table[ii].type;
+    }
+
+    return GAME_YAHTZEE;
+}
+
+GameType get_new_game_type(void)
+{
+    return NewGameType;
+}
+
+void set_new_game_type(GameType type)
+{
+    NewGameType = type;
+}
 
 static void
 WarnNumPlayersChanged (void)
@@ -73,6 +118,7 @@ do_setup (GtkWidget * widget, gpointer data)
   GConfClient *client;
   GError *err = NULL;
   GSList *name_list = NULL;
+  const gchar  *type_name = NULL;
   int i;
 
   NumberOfComputers =
@@ -130,8 +176,20 @@ do_setup (GtkWidget * widget, gpointer data)
     err = NULL;
   }
 
+  type_name = game_type_name(NewGameType);
+  if (type_name) {
+    gconf_client_set_string (client, "/apps/gtali/GameType", type_name,
+                             &err);
+    if (err) {
+      g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+      g_error_free (err);
+      err = NULL;
+    }
+  }
+
   if (((NumberOfComputers != OriginalNumberOfComputers)
-       || (NumberOfHumans != OriginalNumberOfHumans))
+       || (NumberOfHumans != OriginalNumberOfHumans) 
+       || (NewGameType != game_type))
       && !GameIsOver ())
     WarnNumPlayersChanged ();
 }
@@ -178,11 +236,19 @@ MaxPlayersCheck (GtkWidget * widget, gpointer * data)
   return FALSE;
 }
 
+static gint
+SetGameType (GtkWidget *widget, gpointer *data)
+{
+    NewGameType = gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
+    return FALSE;
+}
+
 gint
 setup_game (GtkAction * action, gpointer data)
 {
   GtkWidget *box, *box2, *label, *button, *frame;
   GtkWidget *table;
+  GtkWidget *combo;
   gchar *ts;
   int i;
 
@@ -267,6 +333,20 @@ setup_game (GtkAction * action, gpointer data)
   g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
 		    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
   gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
+
+    /*--- Combo (yahtzee or kismet style ----*/
+
+  frame = games_frame_new (_("Game Type"));
+  gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 2, 3, GTK_FILL,
+                    GTK_FILL | GTK_EXPAND, 0, 0);
+  combo = gtk_combo_box_new_text();
+  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), _("Regular"));
+  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), _("Colors"));
+  gtk_combo_box_set_active(GTK_COMBO_BOX(combo), game_type);
+  NewGameType = game_type;
+  g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (SetGameType),
+                    combo);
+  gtk_container_add (GTK_CONTAINER (frame), combo);
 
 	/*--- PLAYER NAMES FRAME ----*/
   frame = games_frame_new (_("Player Names"));

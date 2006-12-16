@@ -270,6 +270,18 @@
 	</varlistentry>
       </variablelist>
       
+    <variablelist><title>Game Type</title>
+      <varlistentry>
+        <term><guimenuitem>Version of the game to play</guimenuitem></term>
+	<listitem>
+	  <para>Play either the regular version (similar to Yahtzee) or the
+	    version with colors (similar to Kismet). When you change game type,
+        you must restart the game to see use the new game type.
+          </para>
+        </listitem>
+	</varlistentry>
+      </variablelist>
+      
       <variablelist><title><guimenuitem>Player Names</guimenuitem></title>
 	<varlistentry>
 	    <para>To change the names of the players just enter new
@@ -286,9 +298,13 @@
       you score more than three dice in the fives and sixes rows then
       you can afford to place a bad roll in either the ones row or the
       twos row and still get the bonus.
+      In the Colors version, you get a bonus of 55 if your upper half total
+      is between 71 and 77, and a bonus of 75 if your upper half total is
+      greater than 77.
       </para>
       <para>Don't forget about multiple yahtzees, if you roll a second
        yahtzee you can also put it in the yahtzee row for even more points.
+       This only applies to the regular game.
       </para>
     </sect1>	
  <!-- ============= Bugs ================================== -->
@@ -297,14 +313,15 @@
       problems you know of. 
       
       Better to leave this section out than to say something unhelpful. 
+-->
 
  <sect1 id="bugs">
   <title>Known Bugs and Limitations</title>
   <para>
-   This application has no known bugs.
+   When you switch game type, the game does not use the new dice images
+   until you restart gtali. It should play correctly with the "wrong" dice.
   </para>
  </sect1>
--->
 
 
  <sect1 id="glossary">
@@ -323,11 +340,13 @@ Remember that the order of the dice is not important.
          <glossdef><para>
 	   Four of the dice have the same number. The score is the
    total of all the dice. e.g. 2, 5, 5, 5, 5.
+   In the Colors game, the score is 25 plus the total of all the dice.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="yahtzee"><glossterm>5 of a Kind</glossterm>
          <glossdef><para>
 	   Five identical dice. e.g. 3, 3, 3, 3, 3.
+   In the Colors game, the score is 50 plus the total of all the dice.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="fullhouse"><glossterm>Full House</glossterm>
@@ -335,17 +354,52 @@ Remember that the order of the dice is not important.
 	   Five dice consisting of two groups: One group of three with
    the same numbers and another group of two with the same
    numbers. e.g. 1, 1, 1, 4, 4.
+   In the Colors game, the score is 15 plus the total of all the dice.
+	 </para></glossdef>
+       </glossentry>
+       <glossentry id="fullhousesamecolor"><glossterm>Full House Same Color</glossterm>
+         <glossdef><para>
+       This category is only used in the Colors game.
+   Five dice consisting of two groups: One group of three with
+   the same numbers and another group of two with the same
+   numbers. The numbers must be all the same color. e.g. 3, 3, 3, 4, 4.
+   Two dice are the same color if their numbers total 7: 1 and 6 are black,
+   2 and 5 are red, and 3 and 4 are green.
+   The score is 20 plus the total of all the dice.
+	 </para></glossdef>
+       </glossentry>
+       <glossentry id="twopairsamecolor"><glossterm>Two Pair Same Color</glossterm>
+         <glossdef><para>
+       This category is only used in the Colors game.
+   Five dice consisting of two groups: One group of two with
+   the same numbers and another group of two with the same
+   numbers. The pairs must be all the same color. e.g. 3, 3, 4, 4.
+   Two dice are the same color if their numbers total 7: 1 and 6 are black,
+   2 and 5 are red, and 3 and 4 are green. The fifth die can be any value.
+   The score is the total of all the dice.
+	 </para></glossdef>
+       </glossentry>
+       <glossentry id="flush"><glossterm>Flush</glossterm>
+         <glossdef><para>
+       This category is only used in the Colors game.
+   Five dice that are all the same "color":
+   Two dice are the same color if their numbers total 7: 1 and 6 are black,
+   2 and 5 are red, and 3 and 4 are green. The fifth die can be any value.
+   The score is 35 points.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="largestraight"><glossterm>Large Straight</glossterm>
          <glossdef><para>
 	   Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6.
+   The score is 40 points.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="smallstraight"><glossterm>Small Straight</glossterm>
          <glossdef><para>
 	   Four dice with consecutive numbers. The fifth die can be
    any number. e.g. 2, 3, 4, 5, 5.
+   This category is only used in the regular game.
+   The score is 30 points.
 	 </para></glossdef>
        </glossentry>
    </glossary>

@@ -42,10 +42,11 @@
 
 typedef struct {
   int value;
+  int score;
   char rerolls[5];
 } DiceRank;
 
-static DiceRank bc_table[NUM_FIELDS];
+static DiceRank bc_table[MAX_FIELDS];
 
 static void
 MarkAllRerolls (DiceRank * t, int val)
@@ -118,7 +119,7 @@ RerollString (DiceRank * t)
 **	ranks can get is 30.
 */
 
-static int throwaway[NUM_FIELDS] = {
+static int yahtzee_throwaway[NUM_FIELDS_YAHTZEE] = {
   4,				/* 1 */
   3,				/* 2 */
   2,				/* 3 */
@@ -134,6 +135,25 @@ static int throwaway[NUM_FIELDS] = {
   0,				/* Chance */
 };
 
+static int kismet_throwaway[NUM_FIELDS_KISMET] =
+{
+      4,      /* 1 */
+      3,      /* 2 */
+      2,      /* 3 */
+      2,      /* 4 */
+      1,      /* 5 */
+      1,      /* 6 */
+      3,      /* 2 pair same color */
+      3,      /* 3 of a kind */
+      4,      /* Full House */
+      4,      /* Full House same color */
+      4,      /* Flush */
+      5,      /* Large straight */
+      3,      /* 4 of a kind */
+      4,      /* Yahtzee */
+      0,      /* Chance */
+};
+
 static void
 BuildTable (int player)
 {
@@ -145,10 +165,13 @@ BuildTable (int player)
   int overflow;
 
   for (i = 0; i < NUM_FIELDS; ++i) {
-    if (players[player].used[i])
+    bc_table[i].score = 0;
+    if (players[player].used[i]) {
       bc_table[i].value = -99;
+      bc_table[i].score = -99;
+    }
     else
-      bc_table[i].value = throwaway[i];
+      bc_table[i].value = game_type == GAME_KISMET ? kismet_throwaway[i] : yahtzee_throwaway[i];
 
     TagRerolls (&bc_table[i]);
   }
@@ -224,6 +247,7 @@ BuildTable (int player)
     else if (count (i + 1) > 3) {
       bc_table[i].value += (count (i + 1) - 3) * 2;
     }
+    bc_table[i].score = (count(i + 1) - 2) * (i + 1) * 4 - (i + 1);
   }
 
 /*
@@ -283,7 +307,7 @@ BuildTable (int player)
 **	searching for small straight... here we chicken out and only look at
 **	runs which might have possibilities
 */
-    if (!players[player].used[H_SS]) {
+    if (H_SS > 0 && !players[player].used[H_SS]) {
       for (i = 3; i > 0; --i) {
 	d2 = find_straight (i, 0, 0 /* SDH 0 or 1? */ );
 
@@ -359,6 +383,11 @@ BuildTable (int player)
 	  continue;
 
 	bc_table[H_4].value = (d * i);
+    if (game_type == GAME_KISMET) {
+        gint num = 5 - count(d);
+        if (num > 0)
+            bc_table[H_4].value += 25 / (num * num);
+    }
 
 	ClearRerolls (&bc_table[H_4]);
 
@@ -387,6 +416,11 @@ BuildTable (int player)
 	  continue;
 
 	bc_table[H_YA].value = (d * i);
+    if (game_type == GAME_KISMET) {
+        gint num = 6 - count(d);
+        if (num > 0)
+            bc_table[H_YA].value += 50 / (num * num);
+    }
 
 	ClearRerolls (&bc_table[H_YA]);
 
@@ -421,10 +455,125 @@ BuildTable (int player)
 	ClearRerolls (&bc_table[H_FH]);
 
 	bc_table[H_FH].value = (i * 24 + j * 36) / 6;
+    if (game_type == GAME_KISMET) {
+        gint inum = 4 - count(d);
+        gint jnum = 3 - count(d);
+        if (inum > 0 && jnum > 0)
+            bc_table[H_FH].value = (15 + 3 * d + 2 * d2) / (inum * jnum);
+    }
 
 	for (i = 0; i < 5; ++i) {
 	  if (DiceValues[i].val != d && DiceValues[i].val != d2)
 	    TagReroll (&bc_table[H_FH], i);
+	}
+
+	break;
+      }
+    }
+
+/*
+**	searching for full house same color
+*/
+    if (H_FS > 0 && !players[player].used[H_FS]) {
+      for (i = 4; i > 0; --i) {
+	d = find_n_of_a_kind (i, 0);
+
+	if (d == 0)
+	  continue;
+
+	for (j = i; j > 0; --j) {
+	  d2 = find_n_of_a_kind (j, d);
+
+	  if (d2 > 0 && d2 + d == 7)
+	    break;
+	}
+
+	if (j == 0)
+	  continue;
+
+	ClearRerolls (&bc_table[H_FS]);
+
+	bc_table[H_FS].value = (i * 24 + j * 36) / 6;
+    if (game_type == GAME_KISMET) {
+        gint inum = 4 - count(d);
+        gint jnum = 3 - count(d);
+        if (inum > 0 && jnum > 0)
+            bc_table[H_FS].value = (20 + 3 * d + 2 * d2) / (inum * jnum);
+    }
+
+
+	for (i = 0; i < 5; ++i) {
+	  if (DiceValues[i].val != d && DiceValues[i].val != d2)
+	    TagReroll (&bc_table[H_FS], i);
+	}
+
+	break;
+      }
+  }
+/*
+**	searching for two pair same color
+*/
+    if (H_2P > 0 && !players[player].used[H_2P]) {
+      for (i = 4; i > 0; --i) {
+	d = find_n_of_a_kind (i, 0);
+
+	if (d == 0)
+	  continue;
+
+	for (j = i; j > 0; --j) {
+	  d2 = find_n_of_a_kind (j, d);
+
+	  if (d2 > 0 && d2 + d == 7)
+	    break;
+	}
+
+	if (j == 0)
+	  continue;
+
+	ClearRerolls (&bc_table[H_2P]);
+
+	bc_table[H_2P].value = i * d + j * d2;
+
+	for (i = 0; i < 5; ++i) {
+	  if (DiceValues[i].val != d && DiceValues[i].val != d2)
+	    TagReroll (&bc_table[H_2P], i);
+	}
+
+	break;
+      }
+    }
+
+/*
+**	searching for flush - All same color
+*/
+    if (H_FL > 0 && !players[player].used[H_FL]) {
+      for (i = 4; i > 0; --i) {
+	d = find_n_of_a_kind (i, 0);
+
+	if (d == 0)
+	  continue;
+
+	for (j = i; j > 0; --j) {
+	  d2 = find_n_of_a_kind (j, d);
+
+	  if (d2 > 0 && d2 + d == 7)
+	    break;
+	}
+
+	if (j == 0)
+	  continue;
+
+	ClearRerolls (&bc_table[H_FL]);
+
+    {
+        gint num = 6 - i - j;
+        if (num > 00)
+            bc_table[H_FL].value = (35) / (num * num);
+    }
+
+	for (i = 0; i < 5; ++i) {
+	  if (DiceValues[i].val != d && DiceValues[i].val != d2)
+	    TagReroll (&bc_table[H_FL], i);
 	}
 
 	break;
@@ -435,7 +584,7 @@ BuildTable (int player)
 /*
 **	now we look hard at what we got
 */
-  if (!players[player].used[H_SS] && find_straight (4, 0, 0)) {
+  if (H_SS > 0 && !players[player].used[H_SS] && find_straight (4, 0, 0)) {
     d = find_straight (4, 0, 0);
 
     for (i = 0; i < 5; ++i)
@@ -445,20 +594,21 @@ BuildTable (int player)
 	break;
       }
 
-    bc_table[H_SS].value = 30;
+    bc_table[H_SS].score = 30;
+    bc_table[H_LS].value = 40;
   }
 
   if (!players[player].used[H_LS] && find_straight (5, 0, 0)) {
-    bc_table[H_LS].value = 40;
+    bc_table[H_LS].score = 40;
 
     ClearRerolls (&bc_table[H_LS]);
   }
 
   if (!players[player].used[H_CH] && NumberOfRolls > 2) {
-    bc_table[H_CH].value = add_dice ();
+    bc_table[H_CH].score = add_dice ();
 
-    if (bc_table[H_CH].value < 20)
-      bc_table[H_CH].value /= 2;
+    if (bc_table[H_CH].score < 20)
+      bc_table[H_CH].score /= 2;
 
     ClearRerolls (&bc_table[H_CH]);
 
@@ -472,18 +622,75 @@ BuildTable (int player)
 
     if (d != 0) {
       if (find_n_of_a_kind (2, d)) {
-	bc_table[H_FH].value = 25;
+	bc_table[H_FH].score = 25;
+    if (game_type == GAME_KISMET) bc_table[H_FH].score += (add_dice () - 10);
 
 	ClearRerolls (&bc_table[H_FH]);
       }
     }
   }
 
+  /* Two pair same color */
+  if (H_2P > 0 && !players[player].used[H_2P]) {
+    d = find_n_of_a_kind (2, 0);
+
+    if (d != 0) {
+      if (find_n_of_a_kind (2, d) + d == 7 ||
+          find_n_of_a_kind (4, d)) {
+	bc_table[H_2P].score = add_dice ();
+
+	ClearRerolls (&bc_table[H_2P]);
+      }
+    }
+  }
+
+  /* Full house same color */
+  if (H_FS > 0 && !players[player].used[H_FS]) {
+    d = find_n_of_a_kind (3, 0);
+
+    if (d != 0) {
+      if (find_n_of_a_kind (2, d) + d == 7 ||
+          find_n_of_a_kind (5, 0)) {
+	bc_table[H_FS].score = 20 + add_dice ();
+
+	ClearRerolls (&bc_table[H_FS]);
+      }
+    }
+  }
+
+  /* Flush - all same color */
+  if (H_FL > 0 && !players[player].used[H_FL]) {
+    d = find_n_of_a_kind (3, 0);
+
+    if (d != 0) {
+      if (find_n_of_a_kind (2, d) + d == 7) {
+	bc_table[H_FL].score = 35;
+
+	ClearRerolls (&bc_table[H_FL]);
+      }
+    }
+
+    d = find_n_of_a_kind (4, 0);
+    if (d != 0) {
+      if (find_n_of_a_kind (1, d) + d == 7) {
+	bc_table[H_FL].score = 35;
+
+	ClearRerolls (&bc_table[H_FL]);
+      }
+    }
+    d = find_n_of_a_kind (5, 0);
+    if (d != 0) {
+	bc_table[H_FL].score = 35;
+
+	ClearRerolls (&bc_table[H_FL]);
+      }
+  }
+
   if (!players[player].used[H_3]) {
     d = find_n_of_a_kind (3, 0);
 
     if (d != 0) {
-      bc_table[H_3].value = add_dice ();
+      bc_table[H_3].score = add_dice ();
 
       ClearRerolls (&bc_table[H_3]);
 
@@ -501,7 +708,8 @@ BuildTable (int player)
 **	there will be a tie between 3 of a kind and 4 of a kind. we add 1
 **	to break the tie in favor of 4 of a kind
 */
-      bc_table[H_4].value = add_dice () + 1;
+      bc_table[H_4].score = add_dice () + 1;
+      if (game_type == GAME_KISMET) bc_table[H_4].score += 24;
 
       ClearRerolls (&bc_table[H_4]);
 
@@ -514,19 +722,19 @@ BuildTable (int player)
   if (find_n_of_a_kind (5, 0)) {
 
     if (players[player].used[H_YA] && players[player].score[H_YA] == 0)
-      bc_table[H_YA].value = -99;	/* scratch */
+      bc_table[H_YA].score = -99;	/* scratch */
 
     else
-      bc_table[H_YA].value = 150;	/* so he will use it! */
+      bc_table[H_YA].score = 150;	/* so he will use it! */
 
   }
 
 
   if (DisplayComputerThoughts) {
     for (i = 0; i < NUM_FIELDS; ++i) {
-      fprintf (stderr, "%s : VALUE = %d REROLLS='%s'\n",
+      fprintf (stderr, "%s : VALUE = %d SCORE = %d REROLLS='%s'\n",
 	       _(FieldLabels[i]),
-	       bc_table[i].value, RerollString (&bc_table[i]));
+	       bc_table[i].value, bc_table[i].score, RerollString (&bc_table[i]));
     }
   }
 }
@@ -584,28 +792,32 @@ ComputerScoring (int player)
 
   for (i = NUM_FIELDS - 1; i >= 0; --i) {
     if (player % 2) {
-      if (bc_table[i].value > bestv) {
+      if (bc_table[i].score > bestv) {
 	best = i;
 
-	bestv = bc_table[i].value;
+	bestv = bc_table[i].score;
       }
     }
 
     else {
-      if (bc_table[i].value >= bestv) {
+      if (bc_table[i].score >= bestv) {
 	best = i;
 
-	bestv = bc_table[i].value;
+	bestv = bc_table[i].score;
       }
     }
 
     if (DisplayComputerThoughts) {
       fprintf (stderr, "<<BEST>> %s : VALUE = %d REROLLS='%s'\n",
 	       _(FieldLabels[best]),
-	       bc_table[best].value, RerollString (&bc_table[best]));
+	       bc_table[best].score, RerollString (&bc_table[best]));
     }
 
   }
+
+  if (DisplayComputerThoughts)
+      fprintf(stderr, "I choose category %d as best %d score name %s\n",
+              best, bc_table[best].score, _(FieldLabels[best]));
 
   play_score (player, best);
 

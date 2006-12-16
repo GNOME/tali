@@ -23,8 +23,11 @@
 #define LAST_COL (MAX_NUMBER_OF_PLAYERS+2)
 #define MAX_NAME_LENGTH 8
 #define NUM_UPPER 6
-#define NUM_LOWER 7
-#define NUM_FIELDS (NUM_UPPER + NUM_LOWER)
+#define NUM_LOWER_YAHTZEE 7
+#define NUM_LOWER_KISMET  9
+#define NUM_FIELDS_YAHTZEE (NUM_UPPER + NUM_LOWER_YAHTZEE)
+#define NUM_FIELDS_KISMET  (NUM_UPPER + NUM_LOWER_KISMET)
+#define MAX_FIELDS (NUM_UPPER + NUM_LOWER_KISMET)
 
 #define EXTRA_FIELDS 4
 
@@ -34,18 +37,21 @@
 #define F_UPPERT (F_GRANDT+1)
 #define F_BONUS  (F_UPPERT+1)
 
-#define H_3 6
-#define H_4 7
-#define H_FH 8
-#define H_SS 9
-#define H_LS 10
-#define H_YA 11
-#define H_CH 12
+#define H_2P (game_type == GAME_YAHTZEE ? -1 : 6)  /* 2 pair same color     */
+#define H_3  (game_type == GAME_YAHTZEE ?  6 : 7)  /* 3 of a kind           */
+#define H_4  (game_type == GAME_YAHTZEE ?  7 : 12) /* 4 of a kind           */
+#define H_FH 8                                     /* Full house            */
+#define H_FS (game_type == GAME_YAHTZEE ? -1 : 9)  /* Full house same color */
+#define H_FL (game_type == GAME_YAHTZEE ? -1 : 10) /* Flush: all came color */
+#define H_SS (game_type == GAME_YAHTZEE ?  9 : -1) /* Small straight        */
+#define H_LS (game_type == GAME_YAHTZEE ? 10 : 11) /* Large straight        */
+#define H_YA (game_type == GAME_YAHTZEE ? 11 : 13) /* 5 of a kind           */
+#define H_CH (game_type == GAME_YAHTZEE ? 12 : 14) /* Chance                */
 
 typedef struct {
   char *name;
-  short used[NUM_FIELDS];
-  int score[NUM_FIELDS];
+  short used[MAX_FIELDS];
+  int score[MAX_FIELDS];
   int finished;
   int comp;
 } Player;
@@ -67,8 +73,10 @@ extern int WinningScore;
 extern int DisplayComputerThoughts;
 extern int OnlyShowScores;
 extern int CurrentPlayer;
+extern int NUM_FIELDS;
+extern int NUM_LOWER;
 extern char *ProgramHeader;
-extern char *FieldLabels[NUM_FIELDS + EXTRA_FIELDS];
+extern char **FieldLabels;
 extern char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS];
 
 extern void YahtzeeInit (void);
@@ -108,6 +116,8 @@ extern void ShowHighScores (void);
 
 enum { SCORE_OK = 0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 
+typedef  enum { GAME_YAHTZEE = 0, GAME_KISMET } GameType;
+extern GameType game_type;
 
 #endif /* _yahtzee_H_ */
 

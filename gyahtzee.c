@@ -42,7 +42,7 @@
 #include <gconf/gconf-client.h>
 
 #include <games-stock.h>
-#include <games-scores.c>
+#include <games-scores.h>
 #include <games-scores-dialog.h>
 
 #include "yahtzee.h"
@@ -62,7 +62,9 @@ static gboolean ready_to_advance_player;
 #endif
 
 #define NUMBER_OF_PIXMAPS    7
+#define GAME_TYPES 2
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
+#define SCORES_CATEGORY (game_type == GAME_KISMET ? "Colors" : NULL)
 
 static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
   PP "gnome-dice-2.svg",
@@ -73,7 +75,16 @@ static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
   PP "gnome-dice-none.svg"
 };
 
-static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS];
+static char *kdicefiles[NUMBER_OF_PIXMAPS] = { PP "kismet1.svg",
+  PP "kismet2.svg",
+  PP "kismet3.svg",
+  PP "kismet4.svg",
+  PP "kismet5.svg",
+  PP "kismet6.svg",
+  PP "kismet-none.svg"
+};
+
+static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS][GAME_TYPES];
 
 GtkWidget *window;
 GtkWidget *ScoreList;
@@ -82,6 +93,7 @@ static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
 static GtkAction *scores_action;
+static gchar *game_type_string = NULL;
 
 const static GOptionEntry yahtzee_options[] = {
   {"delay", 'd', 0, G_OPTION_ARG_NONE, &DoDelay,
@@ -92,11 +104,17 @@ const static GOptionEntry yahtzee_options[] = {
    N_("Number of computer opponents"), N_("NUMBER")},
   {"humans", 'p', 0, G_OPTION_ARG_INT, &NumberOfHumans,
    N_("Number of human opponents"), N_("NUMBER")},
+  {"game", 'g', 0, G_OPTION_ARG_STRING, &game_type_string,
+   N_("Game choice: Regular or Colors"), N_("STRING")},
   {NULL}
 };
 
-static const GamesScoresDescription scoredesc = { NULL,
-  NULL,
+static const GamesScoresCategory category_array[] = {
+    {"Regular", "Regular"}, {"Colors", "Colors"}, GAMES_SCORES_LAST_CATEGORY };
+
+static const GamesScoresDescription scoredesc = { 
+  category_array,
+  "Regular",
   "gtali",
   GAMES_SCORES_STYLE_PLAIN_DESCENDING
 };
@@ -167,7 +185,6 @@ CheerWinner (void)
   ShowoffPlayer (ScoreList, winner, 1);
 
   if (winner < NumberOfHumans) {
-
     score.plain = (guint32) WinningScore;  
 
     pos = games_scores_add_score (highscores, score);
@@ -314,6 +331,12 @@ ShowPlayer (int num, int field)
 
   if (upper_tot >= 63) {
     bonus = 35;
+    if (game_type == GAME_KISMET) {
+      if (upper_tot >= 78)
+        bonus = 75;
+      else if (upper_tot >= 71)
+        bonus = 55;
+    }
     upper_tot += bonus;
   }
 
@@ -356,6 +379,8 @@ GyahtzeeNewGame (void)
 
   say (_("Select dice to roll or choose a score slot."));
 
+  game_type = get_new_game_type();
+  games_scores_set_category(highscores, SCORES_CATEGORY);
   NewGame ();
   setup_score_list (ScoreList);
   UpdateRollLabel ();
@@ -388,25 +413,27 @@ UpdateRollLabel (void)
 }
 
 static void
-UpdateDiePixmap (int n)
+UpdateDiePixmap (int n, int prev_game_type)
 {
   static int last_val[NUMBER_OF_DICE] = { 0 };
 
-  gtk_widget_hide (dicePixmaps[n][last_val[n]]);
+  gtk_widget_hide (dicePixmaps[n][last_val[n]][prev_game_type]);
 
   last_val[n] = DiceValues[n].sel ? DIE_SELECTED_PIXMAP :
     DiceValues[n].val - 1;
-  gtk_widget_show (dicePixmaps[n][last_val[n]]);
+  gtk_widget_show (dicePixmaps[n][last_val[n]][game_type]);
 }
 
 void
 UpdateAllDicePixmaps (void)
 {
   int i;
+  static int prev_game_type = 0;
 
   for (i = 0; i < NUMBER_OF_DICE; i++) {
-    UpdateDiePixmap (i);
+    UpdateDiePixmap (i, prev_game_type);
   }
+  prev_game_type = game_type;
 }
 
 void
@@ -543,8 +570,10 @@ LoadDicePixmaps (void)
      * there is no way for us to copy a general GtkImage (the old 
      * code had a way for static images). */
     if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS))
-      for (j = 0; j < NUMBER_OF_DICE; j++)
-	dicePixmaps[j][i] = gtk_image_new_from_file (dicefiles[i]);
+      for (j = 0; j < NUMBER_OF_DICE; j++) {
+        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file(dicefiles[i]);
+        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file(kdicefiles[i]);
+      }
     /* FIXME: What happens if the file isn't found. */
   }
 }
@@ -556,7 +585,6 @@ update_score_state (void)
 
   top = games_scores_get (highscores);
   gtk_action_set_sensitive (scores_action, top != NULL);
-
 }
 
 static void
@@ -690,8 +718,10 @@ GyahtzeeCreateMainWindow (void)
   for (i = 0; i < NUMBER_OF_DICE; i++) {
     tmp = gtk_vbox_new (FALSE, 0);
 
-    for (j = 0; j < NUMBER_OF_PIXMAPS; j++)
-      gtk_box_pack_start (GTK_BOX (tmp), dicePixmaps[i][j], FALSE, FALSE, 0);
+    for (j = 0; j < NUMBER_OF_PIXMAPS; j++) {
+      gtk_box_pack_start (GTK_BOX (tmp), dicePixmaps[i][j][GAME_YAHTZEE], FALSE, FALSE, 0);
+      gtk_box_pack_start (GTK_BOX (tmp), dicePixmaps[i][j][GAME_KISMET], FALSE, FALSE, 0);
+    }
 
     diceBox[i] = gtk_toggle_tool_button_new ();
     gtk_tool_button_set_icon_widget (GTK_TOOL_BUTTON (diceBox[i]), tmp);
@@ -703,7 +733,7 @@ GyahtzeeCreateMainWindow (void)
 
     gtk_widget_show (GTK_WIDGET (diceBox[i]));
     gtk_widget_show (tmp);
-    gtk_widget_show (dicePixmaps[i][0]);
+  /*gtk_widget_show (dicePixmaps[i][0][game_type]);*/
   }
   gtk_widget_show (toolbar);
 
@@ -773,6 +803,13 @@ main (int argc, char *argv[])
     NumberOfHumans = MAX_NUMBER_OF_PLAYERS;
   if ((NumberOfHumans + NumberOfComputers) > MAX_NUMBER_OF_PLAYERS)
     NumberOfComputers = MAX_NUMBER_OF_PLAYERS - NumberOfHumans;
+
+  if (game_type_string) 
+    game_type = game_type_from_string(game_type_string);
+  else
+    game_type = game_type_from_string(gconf_client_get_string(client,
+                                      "/apps/gtali/GameType", NULL));
+  set_new_game_type(game_type);
 
   /* We ignore errors for these, they're boolean so it will be valid 
    * data even if not the right data and there's nothing else we
