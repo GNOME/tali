@@ -526,7 +526,7 @@ about_cb (GtkAction * action, gpointer data)
   gtk_show_about_dialog (GTK_WINDOW (window),
 			 "name", appName,
 			 "version", VERSION,
-			 "copyright", "Copyright \xc2\xa9 1998-2006 "
+			 "copyright", "Copyright \xc2\xa9 1998-2007 "
 			 "Free Software Foundation, Inc.",
 			 "license", license,
 			 "comments", _("A variation on poker with "
