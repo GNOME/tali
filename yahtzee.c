@@ -432,6 +432,7 @@ static void play_score_kismet(int player, int field)
       if (find_n_of_a_kind(2, i) + i == 7)
         players[player].score[field] = 35;
     }
+    break;
 
   case 11: /* Straight */
     if (find_straight (5, 0, 0))
