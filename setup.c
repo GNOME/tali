@@ -101,7 +101,7 @@ WarnNumPlayersChanged (void)
 {
   GtkWidget *mb;
 
-  mb = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+  mb = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_DESTROY_WITH_PARENT,
 			       GTK_MESSAGE_INFO,
 			       GTK_BUTTONS_OK,
 			       _("Current game will complete"

@@ -193,7 +193,7 @@ CheerWinner (void)
       if (dialog) {
         gtk_window_present (GTK_WINDOW (dialog));
       } else {
-        dialog = games_scores_dialog_new (highscores, _("Tali Scores"));
+        dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
         message =
   	  g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
 			 _("Your score has made the top ten."));
@@ -547,7 +547,7 @@ void
 ShowHighScores (void)
 {
   if (!dialog)
-    dialog = games_scores_dialog_new (highscores, _("Tali Scores"));
+    dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
 
   gtk_dialog_run (GTK_DIALOG (dialog));    
   gtk_widget_hide (dialog);
