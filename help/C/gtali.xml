@@ -25,6 +25,11 @@
 <!-- appropriate code -->
   <articleinfo>
     <title>&app; Manual V&manrevision;</title>
+    <abstract role="description">
+      <para>
+      GNOME Tali is a sort of poker with dice and less money. You roll five dice three times and try to create the best hand. Your two rerolls may include any or all of your dice.
+      </para>
+    </abstract>
     <copyright>
       <year>2001</year>
       <holder>Scott D. Heavner</holder>
@@ -51,7 +56,7 @@
 	any of this. -->
 	
     <authorgroup> 
-      <author> 
+      <author role="maintainer"> 
 	<firstname>Scott D</firstname> 
 	<surname>Heavner</surname> 
 	<affiliation> 
