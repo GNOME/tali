@@ -282,11 +282,14 @@
 	</varlistentry>
       </variablelist>
       
-      <variablelist><title><guimenuitem>Player Names</guimenuitem></title>
+      <variablelist>
 	<varlistentry>
-	    <para>To change the names of the players just enter new
-	    names in the boxes.
-	    </para>
+	    <term><guimenuitem>Player Names</guimenuitem></term>
+	    <listitem>
+	      <para>To change the names of the players just enter new
+	      names in the boxes.
+	      </para>
+	    </listitem>
 	</varlistentry>
       </variablelist>
     </sect1>
@@ -327,16 +330,16 @@
  <sect1 id="glossary">
    <title>Glossary</title>
    <note>
-Remember that the order of the dice is not important.
+     <para>Remember that the order of the dice is not important.</para>
    </note>
    <glossary>
-       <glossentry id="3ofakind"><glossterm>3 of a Kind</glossterm>
+       <glossentry id="threeofakind"><glossterm>3 of a Kind</glossterm>
          <glossdef><para>
 	   Three of the dice have the same number. The score is the
    total of all the dice. e.g. 1, 2, 2, 2, 5.
 	 </para></glossdef>
        </glossentry>
-       <glossentry id="4ofakind"><glossterm>4 of a Kind</glossterm>
+       <glossentry id="fourofakind"><glossterm>4 of a Kind</glossterm>
          <glossdef><para>
 	   Four of the dice have the same number. The score is the
    total of all the dice. e.g. 2, 5, 5, 5, 5.
