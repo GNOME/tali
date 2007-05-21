@@ -48,7 +48,7 @@ static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans = -1;
 static GameType NewGameType  = GAME_YAHTZEE;
 
-static int tmpDoDelay, tmpDisplayComputerThoughts;
+static int tmpDoDelay = -1, tmpDisplayComputerThoughts;
 static int skill_level;
 extern int NUM_TRIALS;
 
@@ -140,8 +140,12 @@ do_setup (GtkWidget * widget, gpointer data)
     gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ComputerSpinner));
   NumberOfHumans =
     gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (HumanSpinner));
+    
+  if (tmpDoDelay == -1)
+    tmpDoDelay = DoDelay;
+  else
+    DoDelay = tmpDoDelay;
 
-  DoDelay = tmpDoDelay;
   DisplayComputerThoughts = tmpDisplayComputerThoughts;
 
   for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {

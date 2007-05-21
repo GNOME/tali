@@ -1,5 +1,10 @@
 2007-05-21  Andreas Røsdal  <andreasr@gnome.org>
 
+	* setup.c: Fix the bug "delay preference is turned off first time preference is closed".
+	Patch from Josselin Mouette in bug #436971.
+
+2007-05-21  Andreas Røsdal  <andreasr@gnome.org>
+
 	* yahtzee.c:
 	* yahtzee.h:
 	* gyahtzee.c:
