@@ -94,6 +94,8 @@ static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
 static GtkAction *scores_action;
 static gchar *game_type_string = NULL;
+static gint   test_computer_play = 0;
+gint NUM_TRIALS = 0;
 
 const static GOptionEntry yahtzee_options[] = {
   {"delay", 'd', 0, G_OPTION_ARG_NONE, &DoDelay,
@@ -106,6 +108,10 @@ const static GOptionEntry yahtzee_options[] = {
    N_("Number of human opponents"), N_("NUMBER")},
   {"game", 'g', 0, G_OPTION_ARG_STRING, &game_type_string,
    N_("Game choice: Regular or Colors"), N_("STRING")},
+  {"computer-test", 'c', 0, G_OPTION_ARG_INT, &test_computer_play,
+   N_("Number of computer-only games to play"), N_("NUMBER")},
+  {"monte-carlo-trials", 'm', 0, G_OPTION_ARG_INT, &NUM_TRIALS,
+   N_("Number of trials for each roll for the computer"), N_("NUMBER")},
   {NULL}
 };
 
@@ -207,7 +213,6 @@ CheerWinner (void)
     }
 
     update_score_state ();
-
   }
 
   if (players[winner].name)
@@ -322,7 +327,7 @@ ShowPlayer (int num, int field)
       else
 	score = -1;
 
-      update_score_cell (ScoreList, line, num + 1, score);
+      if (test_computer_play == 0) update_score_cell (ScoreList, line, num + 1, score);
     }
   }
 
@@ -340,10 +345,12 @@ ShowPlayer (int num, int field)
     upper_tot += bonus;
   }
 
-  update_score_cell (ScoreList, R_BONUS, num + 1, bonus);
-  update_score_cell (ScoreList, R_UTOTAL, num + 1, upper_tot);
-  update_score_cell (ScoreList, R_LTOTAL, num + 1, lower_tot);
-  update_score_cell (ScoreList, R_GTOTAL, num + 1, upper_tot + lower_tot);
+  if (test_computer_play == 0) {
+      update_score_cell (ScoreList, R_BONUS, num + 1, bonus);
+      update_score_cell (ScoreList, R_UTOTAL, num + 1, upper_tot);
+      update_score_cell (ScoreList, R_LTOTAL, num + 1, lower_tot);
+      update_score_cell (ScoreList, R_GTOTAL, num + 1, upper_tot + lower_tot);
+  }
 }
 
 static gint
@@ -430,7 +437,7 @@ UpdateAllDicePixmaps (void)
   int i;
   static int prev_game_type = 0;
 
-  for (i = 0; i < NUMBER_OF_DICE; i++) {
+  for (i = 0; test_computer_play == 0 && i < NUMBER_OF_DICE; i++) {
     UpdateDiePixmap (i, prev_game_type);
   }
   prev_game_type = game_type;
@@ -441,6 +448,7 @@ DeselectAllDice (void)
 {
   int i;
 
+  if (test_computer_play > 0) return;
   for (i = 0; i < NUMBER_OF_DICE; i++)
     gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]),
 				       FALSE);
@@ -493,6 +501,7 @@ say (char *fmt, ...)
   char buf[200];
   guint context_id;
 
+  if (test_computer_play > 0) return;
   va_start (ap, fmt);
   g_vsnprintf (buf, 200, fmt, ap);
   va_end (ap);
@@ -779,6 +788,45 @@ main (int argc, char *argv[])
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
+  /* If we're in computer test mode, just run some tests, no GUI */
+  if (test_computer_play > 0) {
+      gint ii, jj, kk;
+      gdouble sum_scores = 0.0;
+      game_type = GAME_YAHTZEE;
+      if (game_type_string)
+          game_type = game_type_from_string(game_type_string);
+      g_message("In test computer play section - Using %d trials for simulation", NUM_TRIALS);
+      for (ii = 0; ii < test_computer_play; ii++) {
+          NumberOfHumans = 0;
+          NumberOfComputers = 1;
+          NewGame ();
+          int num_rolls = 0;
+
+          while (!GameIsOver() && num_rolls < 100) {
+              ComputerRolling (CurrentPlayer);
+              if (NoDiceSelected () || (NumberOfRolls >= NUM_ROLLS)) {
+                ComputerScoring (CurrentPlayer);
+                NumberOfRolls = 0;
+                SelectAllDice ();
+                RollSelectedDice ();
+              } else {
+                RollSelectedDice ();
+              }
+              num_rolls++;
+          }
+          for (kk = NumberOfHumans; kk < NumberOfPlayers; kk++) {
+              printf("Computer score: %d\n", total_score(kk));
+              sum_scores += total_score(kk);
+              if (num_rolls > 98) {
+                  for (jj = 0; jj < NUM_FIELDS; jj++)
+                      g_message("Category %d is score %d", jj, players[kk].score[jj]);
+              }
+          }
+      }
+      printf("Computer average: %.2f for %d trials\n", sum_scores / test_computer_play, NUM_TRIALS);
+      exit(0);
+  }
+
   highscores = games_scores_new (&scoredesc);
 
   gtk_window_set_default_icon_name ("gnome-tali");
@@ -804,12 +852,17 @@ main (int argc, char *argv[])
   if ((NumberOfHumans + NumberOfComputers) > MAX_NUMBER_OF_PLAYERS)
     NumberOfComputers = MAX_NUMBER_OF_PLAYERS - NumberOfHumans;
 
-  if (game_type_string) 
+  if (game_type_string)
     game_type = game_type_from_string(game_type_string);
   else
     game_type = game_type_from_string(gconf_client_get_string(client,
                                       "/apps/gtali/GameType", NULL));
   set_new_game_type(game_type);
+
+  if (NUM_TRIALS <= 0)
+      NUM_TRIALS = gconf_client_get_int (client,
+					   "/apps/gtali/MonteCarloTrials",
+					   NULL);
 
   /* We ignore errors for these, they're boolean so it will be valid 
    * data even if not the right data and there's nothing else we
@@ -860,7 +913,7 @@ main (int argc, char *argv[])
 
   g_object_unref (program);
 
-  return 0;
+  exit(0);
 }
 
 /* Arrgh - lets all use the same tabs under emacs: 

@@ -49,6 +49,8 @@ static int OriginalNumberOfHumans = -1;
 static GameType NewGameType  = GAME_YAHTZEE;
 
 static int tmpDoDelay, tmpDisplayComputerThoughts;
+static int skill_level;
+extern int NUM_TRIALS;
 
 extern GtkWidget *window;
 typedef struct game_type_table_t {
@@ -62,6 +64,19 @@ static GameTypeTable game_type_table[] = {
 };
 
 #define GAME_TYPE_TABLE_SIZE (sizeof(game_type_table) / sizeof(GameTypeTable))
+
+typedef struct skill_level_table_t {
+    int level;
+    int trials;
+} SkillLevelTable;
+
+static SkillLevelTable skill_level_table[] = {
+    { 0, 10 },
+    { 1, 100 },
+    { 2, 1000 }
+};
+
+#define SKILL_LEVEL_TABLE_SIZE (sizeof(skill_level_table) / sizeof(SkillLevelTable))
 
 static const gchar *game_type_name(GameType type)
 {
@@ -187,6 +202,14 @@ do_setup (GtkWidget * widget, gpointer data)
     }
   }
 
+  gconf_client_set_int (client, "/apps/gtali/MonteCarloTrials",
+			NUM_TRIALS, &err);
+  if (err) {
+    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
+    g_error_free (err);
+    err = NULL;
+  }
+
   if (((NumberOfComputers != OriginalNumberOfComputers)
        || (NumberOfHumans != OriginalNumberOfHumans) 
        || (NewGameType != game_type))
@@ -240,6 +263,16 @@ static gint
 SetGameType (GtkWidget *widget, gpointer *data)
 {
     NewGameType = gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
+    return FALSE;
+}
+
+static gint
+SetSkillLevel (GtkWidget *widget, gpointer *data)
+{
+    skill_level = gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
+    if (skill_level >= 0 && skill_level < SKILL_LEVEL_TABLE_SIZE) {
+        NUM_TRIALS = skill_level_table[skill_level].trials;
+    }
     return FALSE;
 }
 
@@ -333,6 +366,22 @@ setup_game (GtkAction * action, gpointer data)
   g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
 		    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
   gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
+
+  box2 = gtk_hbox_new(FALSE, 2);
+  gtk_box_pack_start(GTK_BOX(box), box2, FALSE, FALSE, 0);
+  label = gtk_label_new_with_mnemonic (_("_Difficulty:"));
+  gtk_box_pack_start(GTK_BOX(box2), label, FALSE, FALSE, 0);
+  combo = gtk_combo_box_new_text();
+  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), _("Easy"));
+  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), _("Medium"));
+  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), _("Hard"));
+  skill_level = 0;
+  while (NUM_TRIALS > skill_level_table[skill_level].trials &&
+         skill_level < (SKILL_LEVEL_TABLE_SIZE - 1)) skill_level++;
+  gtk_combo_box_set_active(GTK_COMBO_BOX(combo), skill_level);
+  g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (SetSkillLevel),
+                    combo);
+  gtk_box_pack_start(GTK_BOX(box2), combo, FALSE, FALSE, 0);
 
     /*--- Combo (yahtzee or kismet style ----*/
 

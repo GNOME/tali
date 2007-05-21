@@ -1,3 +1,14 @@
+2007-05-21  Andreas Røsdal  <andreasr@gnome.org>
+
+	* computer.c:
+	* patching file setup.c:
+	* patching file gyahtzee.c: Add new AI for computer play
+	based on a Monte Carlo simulation: try N random rolls for each
+	possible set of dice rolls, and see what scores result from that.
+	Patch from Geoff Buchan, with changes by me, in bug #401880. 
+	For more background information, see: 
+	http://en.wikipedia.org/wiki/Monte_Carlo_method
+
 2007-04-26  Claude Paroz  <claude@2xlibre.net>
 
 	* help/C/gtali.xml:  Corrected DocBook syntax to make the document
