@@ -69,6 +69,7 @@ extern int NumberOfHumans;
 extern int NumberOfComputers;
 extern int DoDelay;
 extern int NumberOfRolls;
+extern int LastHumanNumberOfRolls;
 extern int WinningScore;
 extern int DisplayComputerThoughts;
 extern int OnlyShowScores;

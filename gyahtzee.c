@@ -264,7 +264,13 @@ NextPlayer (void)
       g_source_remove (last_timeout);
       last_timeout = 0;
     }
-    update_roll_button_sensitivity ();
+    if (DoDelay && NumberOfComputers > 0)
+        NumberOfRolls = NUM_ROLLS;
+    else
+        NumberOfRolls = LastHumanNumberOfRolls;
+    /* update_roll_button_sensitivity() needs to be called in
+       this context however UpdateRollLabel() also calls that method */
+    UpdateRollLabel ();
     CheerWinner ();
     return;
   }
@@ -291,6 +297,11 @@ NextPlayer (void)
   SelectAllDice ();
   RollSelectedDice ();
 
+  /* Remember the roll count if this turn is for a
+     human player for display at the end of the game */
+  if (!players[CurrentPlayer].comp)
+    LastHumanNumberOfRolls = NumberOfRolls;
+
   if (players[CurrentPlayer].comp) {
     if (DoDelay) {
       if (!last_timeout)
@@ -300,7 +311,10 @@ NextPlayer (void)
       do_computer_turns ();
     }
   }
-  UpdateRollLabel ();
+  /* Only update the roll label if we are running in
+    delay mode or if this turn is for a human player */
+  if (DoDelay || (!players[CurrentPlayer].comp))
+    UpdateRollLabel ();
 }
 
 void
@@ -490,6 +504,7 @@ gnome_roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
     UpdateRollLabel ();
+    LastHumanNumberOfRolls = NumberOfRolls;
   }
   return FALSE;
 }

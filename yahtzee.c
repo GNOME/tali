@@ -54,6 +54,7 @@ int NumberOfComputers = 0;
 int NumberOfHumans = 0;
 int DoDelay = 0;
 int NumberOfRolls;
+int LastHumanNumberOfRolls;
 int WinningScore;
 int DisplayComputerThoughts = 0;
 int CurrentPlayer;
@@ -173,6 +174,7 @@ NewGame (void)
 
   CurrentPlayer = 0;
   NumberOfRolls = 0;
+  LastHumanNumberOfRolls = 0;
 
   NumberOfPlayers = NumberOfComputers + NumberOfHumans;
 
