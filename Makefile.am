@@ -1,8 +1,5 @@
 Gamesdir = $(datadir)/applications
 
-
-
-
 SUBDIRS = pix help
 
 INCLUDES =						\
@@ -34,10 +31,10 @@ schema_in_files = gtali.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
-EXTRA_DIST = gtali.desktop.in README AUTHORS $(schema_in_files)
+EXTRA_DIST = README AUTHORS $(schema_in_files)
 
-Games_in_files = gtali.desktop.in
-Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+Games_in_files = gtali.desktop.in.in
+Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
