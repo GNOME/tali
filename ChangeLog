@@ -1,3 +1,7 @@
+2007-06-19  Kim Christensen  <kingudk@gmail.com>
+
+	* gtali.desktop.in.in: Added CardGame to Categories (bug #417014)
+
 2007-05-21  Andreas Røsdal  <andreasr@gnome.org>
 
 	* setup.c: Fix the bug "delay preference is turned off first time preference is closed".
