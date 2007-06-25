@@ -18,6 +18,14 @@
 #define R_GTOTAL (SCOREROWS-1)
 #define R_LTOTAL (R_GTOTAL-1)
 
+#define KEY_NUMBER_OF_COMPUTERS       "NumberOfComputerOpponents"
+#define KEY_NUMBER_OF_HUMANS          "NumberOfHumanOpponents"
+#define KEY_GAME_TYPE                 "GameType"
+#define KEY_NUMTRIALS                 "MonteCarloTrials"
+#define KEY_DELAY_BETWEEN_ROLLS       "DelayBetweenRolls"
+#define KEY_DISPLAY_COMPUTER_THOUGHTS "DisplayComputerThoughts"
+#define KEY_PLAYER_NAMES              "PlayerNames"
+
 /* clist.c */
 extern GtkWidget *create_score_list (void);
 extern void setup_score_list (GtkWidget * scorelist);

@@ -31,9 +31,9 @@
  */
 #include <config.h>
 #include <gnome.h>
-#include <gconf/gconf-client.h>
 
 #include <games-frame.h>
+#include <games-conf.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -130,11 +130,10 @@ WarnNumPlayersChanged (void)
 static void
 do_setup (GtkWidget * widget, gpointer data)
 {
-  GConfClient *client;
-  GError *err = NULL;
-  GSList *name_list = NULL;
   const gchar  *type_name = NULL;
   int i;
+  char **player_names;
+  gsize n_player_names;
 
   NumberOfComputers =
     gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ComputerSpinner));
@@ -156,63 +155,32 @@ do_setup (GtkWidget * widget, gpointer data)
 
     if (i < NumberOfPlayers)
       score_list_set_column_title (ScoreList, i + 1, players[i].name);
-    name_list = g_slist_append (name_list, players[i].name);
   }
 
   setupdialog_destroy (setupdialog, 1);
 
-  client = gconf_client_get_default ();
-  gconf_client_set_list (client, "/apps/gtali/PlayerNames",
-			 GCONF_VALUE_STRING, name_list, &err);
-  g_slist_free (name_list);
-  if (err) {
-    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-    g_error_free (err);
-    err = NULL;
+  n_player_names = MAX_NUMBER_OF_PLAYERS;
+  player_names = g_newa (char *, n_player_names);
+  for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
+    player_names[i] = players[i].name;
   }
 
-  gconf_client_set_int (client, "/apps/gtali/NumberOfComputerOpponents",
-			NumberOfComputers, &err);
-  if (err) {
-    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-    g_error_free (err);
-    err = NULL;
-  }
+  games_conf_set_string_list (NULL, KEY_PLAYER_NAMES,
+                              (const char * const *) player_names,
+                              n_player_names);
 
-  gconf_client_set_int (client, "/apps/gtali/NumberOfHumanOpponents",
-			NumberOfHumans, &err);
-  if (err) {
-    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-    g_error_free (err);
-    err = NULL;
-  }
+  games_conf_set_integer (NULL, KEY_NUMBER_OF_COMPUTERS, NumberOfComputers);
 
-  gconf_client_set_bool (client, "/apps/gtali/DelayBetweenRolls",
-			 DoDelay, &err);
-  if (err) {
-    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-    g_error_free (err);
-    err = NULL;
-  }
+  games_conf_set_integer (NULL, KEY_NUMBER_OF_HUMANS, NumberOfHumans);
+
+  games_conf_set_boolean (NULL, KEY_DELAY_BETWEEN_ROLLS, DoDelay);
 
   type_name = game_type_name(NewGameType);
   if (type_name) {
-    gconf_client_set_string (client, "/apps/gtali/GameType", type_name,
-                             &err);
-    if (err) {
-      g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-      g_error_free (err);
-      err = NULL;
-    }
+    games_conf_set_string (NULL, KEY_GAME_TYPE, type_name);
   }
 
-  gconf_client_set_int (client, "/apps/gtali/MonteCarloTrials",
-			NUM_TRIALS, &err);
-  if (err) {
-    g_warning (G_STRLOC ": gconf error: %s\n", err->message);
-    g_error_free (err);
-    err = NULL;
-  }
+  games_conf_set_integer (NULL, KEY_NUMTRIALS, NUM_TRIALS);
 
   if (((NumberOfComputers != OriginalNumberOfComputers)
        || (NumberOfHumans != OriginalNumberOfHumans) 

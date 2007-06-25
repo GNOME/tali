@@ -39,11 +39,11 @@
 
 #include <config.h>
 #include <gnome.h>
-#include <gconf/gconf-client.h>
 
 #include <games-stock.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
+#include <games-conf.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -65,6 +65,9 @@ static gboolean ready_to_advance_player;
 #define GAME_TYPES 2
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
 #define SCORES_CATEGORY (game_type == GAME_KISMET ? "Colors" : NULL)
+
+#define DEFAULT_WIDTH 640
+#define DEFAULT_HEIGHT 480
 
 static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
   PP "gnome-dice-2.svg",
@@ -682,7 +685,10 @@ GyahtzeeCreateMainWindow (void)
   GtkUIManager *ui_manager;
   int i, j;
 
-  games_stock_init ();
+  window = gnome_app_new (appID, appName);
+
+  gtk_window_set_default_size (GTK_WINDOW (window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
+  games_conf_add_window (GTK_WINDOW (window));
 
   g_signal_connect (G_OBJECT (window), "delete_event",
 		    G_CALLBACK (quit_game), NULL);
@@ -778,11 +784,13 @@ GyahtzeeCreateMainWindow (void)
 int
 main (int argc, char *argv[])
 {
-  GConfClient *client;
   GnomeProgram *program;
-  GSList *name_list = NULL;
-  gint i;
+  char **player_names;
+  gsize n_player_names;
+  guint i;
   GOptionContext *context;
+
+  g_thread_init (NULL);
 
   setgid_io_init ();
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -792,7 +800,7 @@ main (int argc, char *argv[])
   /* Reset all yahtzee variables before parsing args */
   YahtzeeInit ();
 
-  context = g_option_context_new ("");
+  context = g_option_context_new (NULL);
   g_option_context_add_main_entries (context, yahtzee_options,
 				     GETTEXT_PACKAGE);
 
@@ -802,6 +810,10 @@ main (int argc, char *argv[])
 				argc, argv,
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+  games_conf_initialise ("Gtali");
+
+  games_stock_init ();
 
   /* If we're in computer test mode, just run some tests, no GUI */
   if (test_computer_play > 0) {
@@ -846,16 +858,11 @@ main (int argc, char *argv[])
 
   gtk_window_set_default_icon_name ("gnome-tali");
 
-  client = gconf_client_get_default ();
   if (NumberOfComputers == 0)	/* Not set on the command-line. */
-    NumberOfComputers = gconf_client_get_int (client,
-					      "/apps/gtali/NumberOfComputerOpponents",
-					      NULL);
+    NumberOfComputers = games_conf_get_integer (NULL, KEY_NUMBER_OF_COMPUTERS, NULL);
 
   if (NumberOfHumans == 0)	/* Not set on the command-line. */
-    NumberOfHumans = gconf_client_get_int (client,
-					   "/apps/gtali/NumberOfHumanOpponents",
-					   NULL);
+    NumberOfHumans = games_conf_get_integer (NULL, KEY_NUMBER_OF_HUMANS, NULL);
 
   if (NumberOfHumans < 1)
     NumberOfHumans = 1;
@@ -869,53 +876,46 @@ main (int argc, char *argv[])
 
   if (game_type_string)
     game_type = game_type_from_string(game_type_string);
-  else
-    game_type = game_type_from_string(gconf_client_get_string(client,
-                                      "/apps/gtali/GameType", NULL));
+  else {
+    char *type;
+
+    type = games_conf_get_string (NULL, KEY_GAME_TYPE, NULL);
+    game_type = game_type_from_string(type);
+  }
+
   set_new_game_type(game_type);
 
   if (NUM_TRIALS <= 0)
-      NUM_TRIALS = gconf_client_get_int (client,
-					   "/apps/gtali/MonteCarloTrials",
-					   NULL);
+      NUM_TRIALS = games_conf_get_integer (NULL, KEY_NUMTRIALS, NULL);
 
-  /* We ignore errors for these, they're boolean so it will be valid 
-   * data even if not the right data and there's nothing else we
-   * can do (if it's a systematic gconf problem, the calls above
-   * would have caught it. */
   if (DoDelay == 0)		/* Not set on the command-line */
-    DoDelay = gconf_client_get_bool (client,
-				     "/apps/gtali/DelayBetweenRolls", NULL);
+    DoDelay = games_conf_get_boolean (NULL, KEY_DELAY_BETWEEN_ROLLS, NULL);
   if (DisplayComputerThoughts == 0)	/* Not set on the command-line */
-    DisplayComputerThoughts = gconf_client_get_bool (client,
-						     "/apps/gtali/DisplayComputerThoughts",
-						     NULL);
+    DisplayComputerThoughts = games_conf_get_boolean (NULL, KEY_DISPLAY_COMPUTER_THOUGHTS, NULL);
+  
   /* Read in new player names */
-  name_list = gconf_client_get_list (client, "/apps/gtali/PlayerNames",
-				     GCONF_VALUE_STRING, NULL);
+  player_names = games_conf_get_string_list (NULL, KEY_PLAYER_NAMES, &n_player_names, NULL);
+  if (player_names) {
+    n_player_names = MIN (n_player_names, MAX_NUMBER_OF_PLAYERS);
 
-  for (i = 0; i < MAX_NUMBER_OF_PLAYERS && name_list; i++) {
-    if (name_list->data) {
-      if (!i && strcasecmp (name_list->data, _("Human")) == 0) {
-	char *realname;
+    for (i = 0; i < n_player_names; ++i) {
+      if (i == 0 && strcasecmp (player_names[i], _("Human")) == 0) {
+	const char *realname;
 
-	realname = g_strndup (g_get_real_name (), 255);
-	if (strcasecmp (realname, "Unknown") == 0 || strlen (realname) < 1) {
-	  g_free (realname);
-	  realname = g_strdup (name_list->data);
+	realname = g_get_real_name ();
+        if (realname && realname[0] && strcmp (realname, "Unknown") != 0) {
+          players[i].name = g_locale_to_utf8 (realname, -1, NULL, NULL, NULL);
+        }
+        if (!players[i].name) {
+	  players[i].name = g_strdup (player_names[i]);
 	}
-	g_strdelimit (realname, " ", '\0');
-	players[i].name = realname;
       } else {
-	players[i].name = g_strdup (name_list->data);
+        players[i].name = g_strdup (player_names[i]);
       }
     }
 
-    name_list = g_slist_next (name_list);
+    g_strfreev (player_names);
   }
-  g_slist_free (name_list);
-
-  window = gnome_app_new (appID, appName);
 
   GyahtzeeCreateMainWindow ();
 
@@ -924,7 +924,7 @@ main (int argc, char *argv[])
 
   gtk_main ();
 
-  gnome_accelerators_sync ();
+  games_conf_shutdown ();
 
   g_object_unref (program);
 
