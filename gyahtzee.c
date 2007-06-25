@@ -811,7 +811,7 @@ main (int argc, char *argv[])
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
-  games_conf_initialise ("Gtali");
+  games_conf_initialise (appID);
 
   games_stock_init ();
 
