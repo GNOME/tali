@@ -688,7 +688,7 @@ GyahtzeeCreateMainWindow (void)
   window = gnome_app_new (appID, appName);
 
   gtk_window_set_default_size (GTK_WINDOW (window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
-  games_conf_add_window (GTK_WINDOW (window));
+  games_conf_add_window (GTK_WINDOW (window), NULL);
 
   g_signal_connect (G_OBJECT (window), "delete_event",
 		    G_CALLBACK (quit_game), NULL);
