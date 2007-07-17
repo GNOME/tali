@@ -560,7 +560,7 @@ about_cb (GtkAction * action, gpointer data)
 				       "dice and less money."),
 			 "authors", authors,
 			 "documenters", documenters,
-			 "translator_credits", _("translator-credits"),
+			 "translator-credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-tali",
 			 "website",
 			 "http://www.gnome.org/projects/gnome-games/",
