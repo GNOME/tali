@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gtali doc\n"
 "POT-Creation-Date: 2007-04-30 03:22+0100\n"
-"PO-Revision-Date: 2007-08-01 23:04+0100\n"
+"PO-Revision-Date: 2007-08-02 00:20+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Handbok för <application>GNOME Tali</application> v2.8"
 
 #: C/gtali.xml:29(para)
 msgid "GNOME Tali is a sort of poker with dice and less money. You roll five dice three times and try to create the best hand. Your two rerolls may include any or all of your dice."
-msgstr "GNOME Tali är en typ av poker med tärningar och mindre pengar. Du kasta fem tärningar tre gånger och försöker skapa den bästa handen. Dina två omkast kan inkludera någon eller alla av dina tärningar."
+msgstr "GNOME Tali är en typ av poker med tärningar och mindre pengar. Du kastar fem tärningar tre gånger och försöker skapa den bästa handen. Dina två omkast kan inkludera någon eller alla av dina tärningar."
 
 #: C/gtali.xml:34(year)
 msgid "2001"
@@ -112,7 +112,7 @@ msgstr "Introduktion"
 
 #: C/gtali.xml:120(para)
 msgid "<application>GNOME Tali</application> is a sort of poker with dice and less money. You roll five dice three times and try to create the best <quote>hand</quote>. Your two rerolls may include any or all of your dice."
-msgstr ""
+msgstr "<application>GNOME Tali</application> är en typ av poker med tärningar och mindre pengar. Du kastar fem tärningar tre gånger och försöker skapa den bästa <quote>handen</quote>. Dina två omkast kan inkludera någon eller alla av dina tärningar."
 
 #: C/gtali.xml:126(para)
 msgid "<application>GNOME Tali</application> is very similar to the dice game Yahtzee which is a trademark of Hasbro, Inc."
@@ -144,7 +144,7 @@ msgstr ""
 
 #: C/gtali.xml:174(para)
 msgid "Click on the dice you wish to roll again."
-msgstr ""
+msgstr "Klicka på tärningar som du vill kasta igen."
 
 #: C/gtali.xml:178(para)
 msgid "When you have selected all the dice you wish to reroll, press the <guibutton>Roll!</guibutton> button."
