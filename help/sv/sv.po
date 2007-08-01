@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gtali doc\n"
 "POT-Creation-Date: 2007-04-30 03:22+0100\n"
-"PO-Revision-Date: 2007-04-30 13:25+0100\n"
+"PO-Revision-Date: 2007-08-01 23:04+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Handbok för <application>GNOME Tali</application> v2.8"
 
 #: C/gtali.xml:29(para)
 msgid "GNOME Tali is a sort of poker with dice and less money. You roll five dice three times and try to create the best hand. Your two rerolls may include any or all of your dice."
-msgstr ""
+msgstr "GNOME Tali är en typ av poker med tärningar och mindre pengar. Du kasta fem tärningar tre gånger och försöker skapa den bästa handen. Dina två omkast kan inkludera någon eller alla av dina tärningar."
 
 #: C/gtali.xml:34(year)
 msgid "2001"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: C/gtali.xml:150(title)
 msgid "Playing GNOME Tali"
-msgstr ""
+msgstr "Spela GNOME Tali"
 
 #: C/gtali.xml:153(title)
 msgid "GNOME Tali in action"
@@ -176,7 +176,7 @@ msgstr ""
 
 #: C/gtali.xml:227(title)
 msgid "Game Options"
-msgstr ""
+msgstr "Spelalternativ"
 
 #: C/gtali.xml:230(title)
 msgid "GNOME Tali preferences"
@@ -188,11 +188,11 @@ msgstr ""
 
 #: C/gtali.xml:243(title)
 msgid "Human Players"
-msgstr ""
+msgstr "Mänskliga spelare"
 
 #: C/gtali.xml:245(guimenuitem)
 msgid "Number of players"
-msgstr ""
+msgstr "Antal spelare"
 
 #: C/gtali.xml:247(para)
 msgid "Selects the number of human players. As described above you are only allowed six total players."
@@ -200,11 +200,11 @@ msgstr ""
 
 #: C/gtali.xml:255(title)
 msgid "Computer Opponents"
-msgstr ""
+msgstr "Datormotståndare"
 
 #: C/gtali.xml:257(guimenuitem)
 msgid "Delay between rolls"
-msgstr ""
+msgstr "Fördröjning mellan kast"
 
 #: C/gtali.xml:259(para)
 msgid "Make the computer opponents pause between rolls of the dice so you can see what they are doing. Slows down game play some."
@@ -212,7 +212,7 @@ msgstr ""
 
 #: C/gtali.xml:266(guimenuitem)
 msgid "Number of opponents"
-msgstr ""
+msgstr "Antal motståndare"
 
 #: C/gtali.xml:268(para)
 msgid "Select the number of computer opponents. You are allowed a total of six human and computer players. If you attempt to increase this number near the limit, the number of human players will be decreased to maintain only six total players."
@@ -220,7 +220,7 @@ msgstr ""
 
 #: C/gtali.xml:278(title)
 msgid "Game Type"
-msgstr ""
+msgstr "Speltyp"
 
 #: C/gtali.xml:280(guimenuitem)
 msgid "Version of the game to play"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: C/gtali.xml:292(guimenuitem)
 msgid "Player Names"
-msgstr ""
+msgstr "Spelarnamn"
 
 #: C/gtali.xml:294(para)
 msgid "To change the names of the players just enter new names in the boxes."
@@ -240,7 +240,7 @@ msgstr ""
 
 #: C/gtali.xml:303(title)
 msgid "Game Strategy"
-msgstr ""
+msgstr "Spelstrategi"
 
 #: C/gtali.xml:304(para)
 msgid "The 63 points needed for the bonus in the upper half corresponds to getting three of each die type in each row. If you score more than three dice in the fives and sixes rows then you can afford to place a bad roll in either the ones row or the twos row and still get the bonus. In the Colors version, you get a bonus of 55 if your upper half total is between 71 and 77, and a bonus of 75 if your upper half total is greater than 77."
@@ -252,7 +252,7 @@ msgstr ""
 
 #: C/gtali.xml:327(title)
 msgid "Known Bugs and Limitations"
-msgstr ""
+msgstr "Kända fel och begränsningar"
 
 #: C/gtali.xml:328(para)
 msgid "When you switch game type, the game does not use the new dice images until you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -268,7 +268,7 @@ msgstr ""
 
 #: C/gtali.xml:341(glossterm)
 msgid "3 of a Kind"
-msgstr ""
+msgstr "Tretal"
 
 #: C/gtali.xml:342(para)
 msgid "Three of the dice have the same number. The score is the total of all the dice. e.g. 1, 2, 2, 2, 5."
@@ -276,7 +276,7 @@ msgstr ""
 
 #: C/gtali.xml:347(glossterm)
 msgid "4 of a Kind"
-msgstr ""
+msgstr "Fyrtal"
 
 #: C/gtali.xml:348(para)
 msgid "Four of the dice have the same number. The score is the total of all the dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total of all the dice."
@@ -284,7 +284,7 @@ msgstr ""
 
 #: C/gtali.xml:354(glossterm)
 msgid "5 of a Kind"
-msgstr ""
+msgstr "Femtal"
 
 #: C/gtali.xml:355(para)
 msgid "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 plus the total of all the dice."
@@ -292,7 +292,7 @@ msgstr ""
 
 #: C/gtali.xml:360(glossterm)
 msgid "Full House"
-msgstr ""
+msgstr "Kåk"
 
 #: C/gtali.xml:361(para)
 msgid "Five dice consisting of two groups: One group of three with the same numbers and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the Colors game, the score is 15 plus the total of all the dice."
@@ -300,7 +300,7 @@ msgstr ""
 
 #: C/gtali.xml:368(glossterm)
 msgid "Full House Same Color"
-msgstr ""
+msgstr "Färg"
 
 #: C/gtali.xml:369(para)
 msgid "This category is only used in the Colors game. Five dice consisting of two groups: One group of three with the same numbers and another group of two with the same numbers. The numbers must be all the same color. e.g. 3, 3, 3, 4, 4. Two dice are the same color if their numbers total 7: 1 and 6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 20 plus the total of all the dice."
@@ -308,7 +308,7 @@ msgstr ""
 
 #: C/gtali.xml:379(glossterm)
 msgid "Two Pair Same Color"
-msgstr ""
+msgstr "Tvåpar i samma färg"
 
 #: C/gtali.xml:380(para)
 msgid "This category is only used in the Colors game. Five dice consisting of two groups: One group of two with the same numbers and another group of two with the same numbers. The pairs must be all the same color. e.g. 3, 3, 4, 4. Two dice are the same color if their numbers total 7: 1 and 6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be any value. The score is the total of all the dice."
@@ -316,7 +316,7 @@ msgstr ""
 
 #: C/gtali.xml:390(glossterm)
 msgid "Flush"
-msgstr ""
+msgstr "Stege"
 
 #: C/gtali.xml:391(para)
 msgid "This category is only used in the Colors game. Five dice that are all the same \"color\": Two dice are the same color if their numbers total 7: 1 and 6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be any value. The score is 35 points."
@@ -324,7 +324,7 @@ msgstr ""
 
 #: C/gtali.xml:399(glossterm)
 msgid "Large Straight"
-msgstr ""
+msgstr "Stor stege"
 
 #: C/gtali.xml:400(para)
 msgid "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 points."
@@ -332,7 +332,7 @@ msgstr ""
 
 #: C/gtali.xml:405(glossterm)
 msgid "Small Straight"
-msgstr ""
+msgstr "Liten stege"
 
 #: C/gtali.xml:406(para)
 msgid "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, 3, 4, 5, 5. This category is only used in the regular game. The score is 30 points."
@@ -344,7 +344,7 @@ msgstr "Upphovsmän"
 
 #: C/gtali.xml:421(para)
 msgid "<application>GNOME Tali</application> was written by Scott Heavner (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr ""
+msgstr "<application>GNOME Tali</application> skrevs av Scott Heavner (<email>sdh@po.cwru.edu</email>) och Orest Zborowski. Den här handboken skrevs av Scott D Heavner (<email>sdh@po.cwru.edu</email>) med extramaterial från Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
 
 #: C/gtali.xml:448(title)
 msgid "License"
