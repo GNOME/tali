@@ -565,6 +565,7 @@ about_cb (GtkAction * action, gpointer data)
 			 "logo-icon-name", "gnome-tali",
 			 "website",
 			 "http://www.gnome.org/projects/gnome-games/",
+			 "website-label", _("GNOME Games web site"),
 			 "wrap-license", TRUE, NULL);
   g_free (license);
 
