@@ -32,15 +32,19 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <glib.h>
 
 #include <config.h>
 #include "yahtzee.h"
 
 char *ProgramHeader = "Yahtzee Version 2.00 (c)1998 SDH, (c)1992 by zorst";
 
+GList *UndoList = NULL;
+GList *RedoList = NULL;
+UndoScoreElement lastRoll;
 
 /*=== Exported variables ===*/
-DiceInfo DiceValues[5] = { {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} };
+DiceInfo DiceValues[NUMBER_OF_DICE] = { {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} };
 Player players[MAX_NUMBER_OF_PLAYERS] = {
   {NULL, {0}, {0}, 0, 0},
   {NULL, {0}, {0}, 0, 0},
@@ -175,6 +179,7 @@ NewGame (void)
   CurrentPlayer = 0;
   NumberOfRolls = 0;
   LastHumanNumberOfRolls = 0;
+  FreeUndoRedoLists();
 
   NumberOfPlayers = NumberOfComputers + NumberOfHumans;
 
@@ -217,6 +222,7 @@ RollSelectedDice (void)
       DiceValues[i].val = RollDie ();
       DiceValues[i].sel = 0;
       cnt++;
+      lastRoll.DiceValues[i] = DiceValues[i].val;
     }
   }
 
@@ -224,6 +230,7 @@ RollSelectedDice (void)
   if(cnt == 0){
     for (i = 0; i < 5; i++) {
       DiceValues[i].val = RollDie ();
+      lastRoll.DiceValues[i] = DiceValues[i].val;
     }
   }
 
@@ -236,6 +243,8 @@ RollSelectedDice (void)
     say (_("Choose a score slot."));
   }
 
+  lastRoll.roll = NumberOfRolls;
+  lastRoll.player = CurrentPlayer;
 }
 
 int
@@ -377,7 +386,8 @@ add_dice (void)
   return (val);
 }
 
-static void play_score_kismet(int player, int field)
+static void
+play_score_kismet(int player, int field)
 {
   int i;
 
@@ -457,7 +467,8 @@ static void play_score_kismet(int player, int field)
   }
 }
 
-static void play_score_yahtzee(int player, int field)
+static void
+play_score_yahtzee(int player, int field)
 {
   int i;
 
@@ -510,6 +521,123 @@ static void play_score_yahtzee(int player, int field)
   }
 }
 
+void
+PrependUndoList(gint player, gint field, gint score) {
+  UndoScoreElement *elem = g_new0(UndoScoreElement, 1);
+  gint ii;
+  elem->player = player;
+  elem->field  = field;
+  elem->score  = score;
+
+  for (ii = 0; ii < NUMBER_OF_DICE; ii++)
+    elem->DiceValues[ii] = DiceValues[ii].val;
+  elem->roll = NumberOfRolls;
+
+  if (!players[player].comp)
+    FreeUndoList();
+  UndoList = g_list_prepend(UndoList, elem);
+}
+
+void
+ResetDiceState(UndoScoreElement *elem) {
+  gint ii;
+  for (ii = 0; ii < NUMBER_OF_DICE; ii++) {
+    DiceValues[ii].val = elem->DiceValues[ii];
+    DiceValues[ii].sel = 0;
+  }
+  NumberOfRolls = elem->roll;
+  ShowPlayer (elem->player, elem->field);
+}
+
+gint
+UndoLastMove() {
+  if (UndoList) {
+    UndoScoreElement *elem = UndoList->data;
+    players[elem->player].score[elem->field] = 0;
+    players[elem->player].used [elem->field] = 0;
+
+    ResetDiceState(elem);
+    UndoList = g_list_remove(UndoList, elem);
+    RedoList = g_list_prepend(RedoList, elem);
+    return elem->player;
+  }
+
+    return CurrentPlayer;
+}
+
+gint
+RedoLastMove() {
+  gint rval = (CurrentPlayer + 1) % NumberOfPlayers;
+  if (RedoList) {
+    gint ii;
+    UndoScoreElement *elem = RedoList->data;
+
+    for (ii = 0; ii < NUMBER_OF_DICE; ii++) {
+      DiceValues[ii].val = elem->DiceValues[ii];
+      DiceValues[ii].sel = 0;
+    }
+
+    RedoList = g_list_remove(RedoList, elem);
+    play_score(elem->player, elem->field);
+    rval = (elem->player + 1) % NumberOfPlayers;
+    g_free(elem);
+    if (RedoList) {
+      elem = RedoList->data;
+      rval = elem->player;
+    }
+  }
+
+  return rval;
+}
+
+void
+RestoreLastRoll() {
+  ResetDiceState(&lastRoll);
+}
+
+UndoScoreElement
+*RedoHead() {
+  if (RedoList) {
+    UndoScoreElement *elem = RedoList->data;
+    return elem;
+  }
+
+  return NULL;
+}
+
+void
+FreeUndoList() {
+  while (UndoList) {
+    UndoScoreElement *elem = UndoList->data;
+    UndoList = g_list_remove(UndoList, elem);
+    g_free(elem);
+  }
+}
+
+void
+FreeRedoList() {
+  while (RedoList) {
+    UndoScoreElement *elem = RedoList->data;
+    RedoList = g_list_remove(RedoList, elem);
+    g_free(elem);
+  }
+}
+
+void
+FreeUndoRedoLists() {
+  FreeUndoList();
+  FreeRedoList();
+}
+
+void
+FreeRedoListHead() {
+  if (RedoList) {
+    UndoScoreElement *elem = RedoList->data;
+    RedoList = g_list_remove(RedoList, elem);
+    g_free(elem);
+  }
+}
+
 /* Test if we can use suggested score slot */
 int
 play_score (int player, int field)
@@ -540,6 +668,7 @@ play_score (int player, int field)
     fprintf(stderr, "Unexpected game type %d. Aborting...", game_type);
     exit(1);
   }
+  PrependUndoList(player, field, players[player].score[field]);
 
   ShowPlayer (player, field);
 
@@ -560,6 +689,7 @@ FindWinner (void)
   int total;
 
   WinningScore = 0;
+  FreeUndoRedoLists();
 
   for (i = 0; i < NumberOfPlayers; ++i) {
     total = total_score (i);
@@ -581,7 +711,15 @@ FindWinner (void)
   return winner;
 }
 
+int UndoPossible(void)
+{
+    return UndoList != NULL;
+}
 
+int RedoPossible(void)
+{
+    return RedoList != NULL;
+}
 
 void
 calc_random (void)

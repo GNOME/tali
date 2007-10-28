@@ -1,3 +1,11 @@
+2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
+
+	* clist.c:
+	* gyahtzee.c:
+	* gyahtzee.h:
+	* yahtzee.c:
+	* yahtzee.h: Add undo feature. (bug #411360)
+
 2007-06-19  Kim Christensen  <kingudk@gmail.com>
 
 	* gtali.desktop.in.in: Added CardGame to Categories (bug #417014)

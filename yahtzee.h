@@ -61,6 +61,14 @@ typedef struct {
   int sel;
 } DiceInfo;
 
+typedef struct undo_score_element_t {
+  int player;
+  int field;
+  int score;
+  int DiceValues[NUMBER_OF_DICE];
+  int roll;
+} UndoScoreElement;
+
 /* yahtzee.c */
 extern DiceInfo DiceValues[];
 extern Player players[];
@@ -101,8 +109,17 @@ extern int RollDie (void);
 extern void RollSelectedDice (void);
 extern int GameIsOver (void);
 extern int FindWinner (void);
-int UndoPossible (void);
-
+extern int UndoLastMove(void);
+extern int RedoLastMove(void);
+void PrependUndoList(gint player, gint field, gint score);
+void FreeUndoList(void);
+void FreeRedoList(void);
+void FreeUndoRedoLists(void);
+void FreeRedoListHead(void);
+extern int  UndoPossible(void);
+extern int  RedoPossible(void);
+extern void ResetDiceState(UndoScoreElement *elem);
+extern void RestoreLastRoll(void);
 /* Computer.c */
 extern void ComputerRolling (int player);
 extern void ComputerScoring (int player);
@@ -112,8 +129,13 @@ extern void NewGame (void);
 extern void UpdateAllDicePixmaps (void);
 extern void DeselectAllDice (void);
 extern void ShowPlayer (int num, int field);
+extern void DisplayCurrentPlayer(void);
+extern void DisplayCurrentPlayerRefreshDice(void);
 extern void NextPlayer (void);
+extern void PreviousPlayer (void);
+extern void RedoPlayer     (void);
 extern void ShowHighScores (void);
+extern UndoScoreElement *RedoHead(void);
 
 enum { SCORE_OK = 0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 

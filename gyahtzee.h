@@ -46,7 +46,7 @@ extern void set_new_game_type(GameType type);
 /* gyahtzee.c */
 extern int GyahtzeeAbort;
 extern GtkWidget *ScoreList;
-
+extern void update_undo_sensitivity(void);
 #endif /* _Gyahtzee_H_ */
 
 /* Arrgh - lets all use the same tabs under emacs: 

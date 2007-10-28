@@ -96,6 +96,7 @@ static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
 static GtkAction *scores_action;
+static GtkAction *undo_action;
 static gchar *game_type_string = NULL;
 static gint   test_computer_play = 0;
 gint NUM_TRIALS = 0;
@@ -259,6 +260,30 @@ do_computer_turns (void)
   return TRUE;
 }
 
+/* Show the current score and prompt for current player state */
+
+void
+DisplayCurrentPlayer() {
+  ShowoffPlayer (ScoreList, CurrentPlayer, 1);
+
+  if (players[CurrentPlayer].name) {
+    if (players[CurrentPlayer].comp) {
+      say (_("Computer playing for %s"), players[CurrentPlayer].name);
+    } else {
+      say (_("%s! -- You're up."), players[CurrentPlayer].name);
+    }
+  }
+}
+
+/* Display current player and refresh dice/display */
+void
+DisplayCurrentPlayerRefreshDice(void) {
+  DisplayCurrentPlayer();
+  UpdateAllDicePixmaps ();
+  DeselectAllDice ();
+  UpdateRollLabel();
+}
+
 void
 NextPlayer (void)
 {
@@ -287,18 +312,10 @@ NextPlayer (void)
     CurrentPlayer = (CurrentPlayer + 1) % NumberOfPlayers;
   } while (players[CurrentPlayer].finished);
 
-  ShowoffPlayer (ScoreList, CurrentPlayer, 1);
-
-  if (players[CurrentPlayer].name) {
-    if (players[CurrentPlayer].comp) {
-      say (_("Computer playing for %s"), players[CurrentPlayer].name);
-    } else {
-      say (_("%s! -- You're up."), players[CurrentPlayer].name);
-    }
-  }
-
+  DisplayCurrentPlayer();
   SelectAllDice ();
   RollSelectedDice ();
+  FreeRedoList();
 
   /* Remember the roll count if this turn is for a
      human player for display at the end of the game */
@@ -318,6 +335,47 @@ NextPlayer (void)
     delay mode or if this turn is for a human player */
   if (DoDelay || (!players[CurrentPlayer].comp))
     UpdateRollLabel ();
+}
+
+/* Go back to the previous player */
+
+void
+PreviousPlayer(void)
+{
+  if (UndoPossible()) {
+    NumberOfRolls = 1;
+    ready_to_advance_player = FALSE;
+    ShowoffPlayer (ScoreList, CurrentPlayer, 0);
+
+    /* Find the next player with rolls left */
+    do {
+      CurrentPlayer = (UndoLastMove() + NumberOfPlayers) % NumberOfPlayers;
+    } while (players[CurrentPlayer].comp && UndoPossible());
+
+    DisplayCurrentPlayerRefreshDice();
+  }
+}
+
+void
+RedoPlayer(void)
+{
+  if (RedoPossible()) {
+    NumberOfRolls = 1;
+    ready_to_advance_player = FALSE;
+    ShowoffPlayer(ScoreList, CurrentPlayer, 0);
+    /* The first element of the list is the undone turn, so
+     * we need to remove it from the list before redoing other
+     * turns.                                                    */
+    FreeRedoListHead();
+
+    /* Redo all computer players */
+    do {
+      CurrentPlayer = RedoLastMove();
+    } while (players[CurrentPlayer].comp && RedoPossible());
+
+    RestoreLastRoll();
+    DisplayCurrentPlayerRefreshDice();
+  }
 }
 
 void
@@ -434,6 +492,7 @@ UpdateRollLabel (void)
   gtk_label_set_label (GTK_LABEL (rollLabel), str->str);
 
   update_roll_button_sensitivity ();
+  update_undo_sensitivity ();
 }
 
 static void
@@ -506,6 +565,8 @@ gnome_roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
 {
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
+    if (NumberOfRolls > 1)
+        FreeUndoRedoLists();
     UpdateRollLabel ();
     LastHumanNumberOfRolls = NumberOfRolls;
   }
@@ -589,6 +650,12 @@ score_callback (GtkAction * action, gpointer data)
   return FALSE;
 }
 
+static gint undo_callback(GtkAction *action, gpointer data)
+{
+  PreviousPlayer();
+  return FALSE;
+}
+
 static void
 LoadDicePixmaps (void)
 {
@@ -616,6 +683,11 @@ update_score_state (void)
   gtk_action_set_sensitive (scores_action, top != NULL);
 }
 
+void update_undo_sensitivity(void)
+{
+    gtk_action_set_sensitive(undo_action, UndoPossible());
+}
+
 static void
 help_cb (GtkAction * action, gpointer data)
 {
@@ -629,6 +701,8 @@ static const GtkActionEntry action_entry[] = {
   {"HelpMenu", NULL, N_("_Help")},
   {"NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL,
    G_CALLBACK (new_game_callback)},
+  {"Undo", GAMES_STOCK_UNDO_MOVE, NULL, NULL, NULL,
+   G_CALLBACK (undo_callback)},
   {"Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL,
    G_CALLBACK (score_callback)},
   {"Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game)},
@@ -646,6 +720,7 @@ static const char ui_description[] =
   "  <menubar name='MainMenu'>"
   "    <menu action='GameMenu'>"
   "      <menuitem action='NewGame'/>"
+  "      <menuitem action='Undo'/>"
   "      <menuitem action='Scores'/>"
   "      <menuitem action='Quit'/>"
   "    </menu>"
@@ -672,6 +747,8 @@ create_menus (GtkUIManager * ui_manager)
   gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
   gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
   scores_action = gtk_action_group_get_action (action_group, "Scores");
+  undo_action   = gtk_action_group_get_action (action_group, "Undo");
+  update_undo_sensitivity();
 }
 
 

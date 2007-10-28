@@ -132,12 +132,18 @@ row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
 
     if (row < NUM_FIELDS && !players[CurrentPlayer].finished) {
       if (play_score (CurrentPlayer, row) == SLOT_USED) {
-	say (_("Already used! " "Where do you want to put that?"));
+        say (_("Already used! " "Where do you want to put that?"));
       } else {
-	NextPlayer ();
+        UndoScoreElement *elem = RedoHead();
+        if (elem && elem->player == CurrentPlayer) {
+          RedoPlayer();
+        } else {
+          NextPlayer ();
+        }
       }
     }
   }
+  update_undo_sensitivity();
 }
 
 static gboolean
