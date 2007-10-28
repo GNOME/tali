@@ -562,7 +562,7 @@ UndoLastMove() {
     return elem->player;
   }
 
-    return CurrentPlayer;
+  return CurrentPlayer;
 }
 
 gint
@@ -595,8 +595,8 @@ RestoreLastRoll() {
   ResetDiceState(&lastRoll);
 }
 
-UndoScoreElement
-*RedoHead() {
+UndoScoreElement*
+RedoHead() {
   if (RedoList) {
     UndoScoreElement *elem = RedoList->data;
     return elem;
@@ -711,14 +711,24 @@ FindWinner (void)
   return winner;
 }
 
-int UndoPossible(void)
+/* Undo is possible when the Undo List isn't NULL */
+int
+UndoPossible(void)
 {
-    return UndoList != NULL;
+  return UndoList != NULL;
 }
 
-int RedoPossible(void)
+/* Undo option should be visible only when the player is human */
+int
+UndoVisible(void)
 {
-    return RedoList != NULL;
+  return UndoPossible() && !players[CurrentPlayer].comp;
+}
+
+int
+RedoPossible(void)
+{
+  return RedoList != NULL;
 }
 
 void

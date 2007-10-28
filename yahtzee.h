@@ -117,6 +117,7 @@ void FreeRedoList(void);
 void FreeUndoRedoLists(void);
 void FreeRedoListHead(void);
 extern int  UndoPossible(void);
+extern int  UndoVisible(void);
 extern int  RedoPossible(void);
 extern void ResetDiceState(UndoScoreElement *elem);
 extern void RestoreLastRoll(void);

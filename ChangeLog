@@ -1,5 +1,12 @@
 2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
 
+	* gyahtzee.c:
+	* yahtzee.c:
+	* yahtzee.h: Don't allow to undo while it is the computers turn. 
+	(bug #411360)
+
+2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
+
 	* clist.c:
 	* gyahtzee.c:
 	* gyahtzee.h:

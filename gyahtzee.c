@@ -683,9 +683,10 @@ update_score_state (void)
   gtk_action_set_sensitive (scores_action, top != NULL);
 }
 
-void update_undo_sensitivity(void)
+void
+update_undo_sensitivity (void)
 {
-    gtk_action_set_sensitive(undo_action, UndoPossible());
+  gtk_action_set_sensitive(undo_action, UndoVisible());
 }
 
 static void
