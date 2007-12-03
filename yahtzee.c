@@ -73,6 +73,14 @@ char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
   "Kenneth",
   "Janet"
 };
+
+typedef struct field_info_t {
+  char *label;
+  int   yahtzee_row;
+  int   kismet_row;
+  int (*score_func)(int);
+} FieldInfo;
+
 char *FieldLabelsYahtzee[NUM_FIELDS_YAHTZEE + EXTRA_FIELDS] = {
   N_("1s [total of 1s]"),
   N_("2s [total of 2s]"),
@@ -205,7 +213,6 @@ int
 RollDie (void)
 {
   return ((rand () % 6) + 1);
-
 }
 
 void
@@ -386,139 +393,192 @@ add_dice (void)
   return (val);
 }
 
-static void
-play_score_kismet(int player, int field)
-{
-  int i;
-
-  players[player].used[field] = 1;
-
-  switch (field) {
-  case 0:
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-    players[player].score[field] = count (field + 1) * (field + 1);
-    break;
-
-  case 6: /* 2 pair same color */
-    if ((i = find_n_of_a_kind(2, 0))) {
-            int j = find_n_of_a_kind(2, i);
-        if (i + j == 7 || find_n_of_a_kind(4, 0))
-            players[player].score[field] = add_dice ();
-    }
-    break;
-
-  case 7: /* 3 of a kind */
-    if (find_n_of_a_kind (3, 0))
-      players[player].score[field] = add_dice ();
-    break;
-
-  case 8: /* Full house */
-    if ((i = find_n_of_a_kind (3, 0))) {
-      /* We treat a yahtzee as a full house. */
-      if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
-        players[player].score[field] = 15 + add_dice ();
-    }
-    break;
-
-  case 9: /* Full house same color */
-    if ((i = find_n_of_a_kind(3, 0))) {
-      /* We treat a yahtzee as a full house. */
-      if (find_n_of_a_kind(2, i) + i == 7 || find_n_of_a_kind(5,0))
-         players[player].score[field] = 20 + add_dice ();
-    }
-    break;
-
-  case 10: /* Flush - all same color */
-    if (find_n_of_a_kind(5, 0))
-      /* We treat a yahtzee as a flush. */
-      players[player].score[field] = 35;
-    else if ((i = find_n_of_a_kind(4, 0)) ) {
-      if (find_n_of_a_kind(1, i) + i == 7)
-        players[player].score[field] = 35;
-    }
-    else if ((i = find_n_of_a_kind(3, 0)) ) {
-      if (find_n_of_a_kind(2, i) + i == 7)
-        players[player].score[field] = 35;
-    }
-    break;
-
-  case 11: /* Straight */
-    if (find_straight (5, 0, 0))
-      players[player].score[field] = 40;
-    break;
-
-  case 12: /* 4 of a kind */
-    if (find_n_of_a_kind (4, 0))
-      players[player].score[field] = 25 + add_dice ();
-    break;
-
-  case 13: /* Yahtzee or kismet */
-    if (find_yahtzee ())
-      players[player].score[field] += 50 + add_dice ();
-    break;
-
-  case 14: /* Chance or yarborough */
-    players[player].score[field] = add_dice ();
-    break;
-  }
+static int
+score_basic(int field) {
+  field++;
+  return count (field) * field;
 }
 
-static void
-play_score_yahtzee(int player, int field)
-{
-  int i;
+static int
+score_3_of_a_kind(int field) {
+  if (find_n_of_a_kind (3, 0))
+    return add_dice ();
+  return 0;
+}
 
-  switch (field) {
-  case 0:
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-    players[player].score[field] = count (field + 1) * (field + 1);
-    break;
+static int
+score_4_of_a_kind(int field) {
+  if (find_n_of_a_kind (4, 0))
+    return add_dice ();
+  return 0;
+}
 
-  case 6: /* 3 of a kind */
-    if (find_n_of_a_kind (3, 0))
-      players[player].score[field] = add_dice ();
-    break;
-
-  case 7: /* 4 of a kind */
-    if (find_n_of_a_kind (4, 0))
-      players[player].score[field] = add_dice ();
-    break;
-
-  case 8: /* Full house */
-    if ((i = find_n_of_a_kind (3, 0))) {
-      /* We treat a yahtzee as a full house. */
-      if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
-	players[player].score[field] = 25;
-    }
-    break;
-
-  case 9: /* Small Straight */
-    if (find_straight (4, 0, 0))
-      players[player].score[field] = 30;
-    break;
-
-  case 10: /* Large Straight */
-    if (find_straight (5, 0, 0))
-      players[player].score[field] = 40;
-    break;
-
-  case 11: /* Yahtzee */
-    if (find_yahtzee ())
-      players[player].score[field] += 50;
-    break;
-
-  case 12: /* Chance */
-    players[player].score[field] = add_dice ();
-    break;
+static int
+score_full_house(int field) {
+  int i = find_n_of_a_kind (3, 0);
+  if (i) {
+    if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
+      return 25;
   }
+
+  return 0;
+}
+
+static int
+score_small_straight(int field) {
+  if (find_straight (4, 0, 0))
+    return 30;
+
+  return 0;
+}
+
+static int
+score_large_straight(int field) {
+  if (find_straight (5, 0, 0))
+    return 40;
+
+  return 0;
+}
+
+static int
+score_yahtzee(int field) {
+  if (find_n_of_a_kind (5, 0))
+    return 50;
+
+  return 0;
+}
+
+static int
+score_chance(int field) {
+  return add_dice ();
+}
+
+static int
+score_2_pair_same_color(int field) {
+  int i = find_n_of_a_kind (2, 0);
+  if (i) {
+     if (find_n_of_a_kind (2, i) + i == 7 || find_n_of_a_kind (4, 0))
+       return add_dice ();
+  }
+
+  return 0;
+}
+
+static int
+score_full_house_kismet(int field) {
+  int i = find_n_of_a_kind (3, 0);
+  if (i) {
+    if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
+      return 15 + add_dice ();
+  }
+
+  return 0;
+}
+
+static int
+score_full_house_same_color(int field) {
+  int i = find_n_of_a_kind (3, 0);
+  if (i) {
+    if (find_n_of_a_kind (2, i) + i == 7 || find_n_of_a_kind (5, 0))
+      return 20 + add_dice ();
+  }
+
+  return 0;
+}
+
+static int
+score_flush(int field) {
+  int i = find_n_of_a_kind (3, 0);
+
+  if (i && i + find_n_of_a_kind (2, i) == 7) return 35;
+  i = find_n_of_a_kind (4, 0);
+  if (i && i + find_n_of_a_kind (1, i) == 7) return 35;
+  if (find_n_of_a_kind (5, 0)) return 35;
+
+  return 0;
+}
+
+static int
+score_4_of_a_kind_kismet(int field) {
+  if (find_n_of_a_kind (4, 0))
+    return 25 + add_dice ();
+  return 0;
+}
+
+static int
+score_kismet(int field) {
+  if (find_n_of_a_kind (5, 0))
+    return 50 + add_dice ();
+  return 0;
+}
+
+FieldInfo field_table[] = { 
+  { N_("1s [total of 1s]"),                   0,  0, score_basic },
+  { N_("2s [total of 2s]"),                   1,  1, score_basic },
+  { N_("3s [total of 3s]"),                   2,  2, score_basic },
+  { N_("4s [total of 4s]"),                   3,  3, score_basic },
+  { N_("5s [total of 5s]"),                   4,  4, score_basic },
+  { N_("6s [total of 6s]"),                   5,  5, score_basic },
+  { N_("3 of a Kind [total]"),                6,  7, score_3_of_a_kind },
+  { N_("4 of a Kind [total]"),                7, -1, score_4_of_a_kind },
+  { N_("Full House [25]"),                    8, -1, score_full_house },
+  { N_("Small Straight [30]"),                9, -1, score_small_straight },
+  { N_("Large Straight [40]"),               10, 11, score_large_straight },
+  { N_("5 of a Kind [total]"),               11, -1, score_yahtzee },
+  { N_("Chance [total]"),                    12, 14, score_chance },
+  { N_("2 pair Same Color [total]"),         -1,  6, score_2_pair_same_color },
+  { N_("Full House [15 + total"),            -1,  8, score_full_house_kismet },
+  { N_("Full House Same Color [20 + total"), -1,  9, score_full_house_same_color },
+  { N_("Flush (all same color) [35]"),       -1, 10, score_flush },
+  { N_("4 of a Kind [25 + total]"),          -1, 12, score_4_of_a_kind_kismet },
+  { N_("5 of a Kind [50 + total]"),          -1, 13, score_kismet },
+};
+
+#define FIELD_TABLE_SIZE (sizeof(field_table) / sizeof(FieldInfo))
+
+static FieldInfo
+*get_field_info(int field)
+{
+  gint ii;
+
+  for (ii = 0; ii < FIELD_TABLE_SIZE; ii++)
+    if (field == (game_type == GAME_KISMET ? field_table[ii].kismet_row :
+                                             field_table[ii].yahtzee_row))
+      return &field_table[ii];
+
+  return NULL;
+}
+
+gint
+field_score(gint field)
+{
+  FieldInfo *info = get_field_info(field);
+  gint rval = 0;
+
+  if (info) {
+    return info->score_func(field);
+  }
+
+  return rval;
+}
+
+gint
+player_field_score(gint player, gint field)
+{
+  /* A player can still score in H_YA even if it's used in the
+   * regular game, but only if they have a non-zero value there */
+  if (field == H_YA && game_type == GAME_YAHTZEE) {
+    if (players[player].used[field]) {
+      if (field_score(field) > 0 && players[player].score[field] > 0)
+        return field_score(field);
+      else
+        return -1;
+    }
+  }
+  else if (players[player].used[field])
+    return -1;
+
+  return field_score (field);
 }
 
 void
@@ -659,15 +719,7 @@ play_score (int player, int field)
     return SLOT_USED;
 
   players[player].used[field] = 1;
-
-  if (game_type == GAME_KISMET)
-    play_score_kismet(player, field);
-  else if (game_type == GAME_YAHTZEE)
-    play_score_yahtzee(player, field);
-  else {
-    fprintf(stderr, "Unexpected game type %d. Aborting...", game_type);
-    exit(1);
-  }
+  players[player].score[field] = players[player].score[field] + field_score(field);
   PrependUndoList(player, field, players[player].score[field]);
 
   ShowPlayer (player, field);
@@ -729,66 +781,6 @@ int
 RedoPossible(void)
 {
   return RedoList != NULL;
-}
-
-void
-calc_random (void)
-{
-  char nrollstr[10];
-  int nroll;
-  int table[NUM_FIELDS];
-  int i;
-  int j;
-
-  printf ("%s ", _("How many times do you wish to roll?"));
-
-  fgets (nrollstr, 10, stdin);
-  nroll = atoi (nrollstr);
-
-  printf ("%s\n", _("Generating ..."));
-
-  for (i = 0; i < NUM_FIELDS; ++i)
-    table[i] = 0;
-
-  for (i = 0; i < nroll; ++i) {
-
-    for (j = 0; j < 5; ++j)
-      DiceValues[j].val = RollDie ();
-
-    for (j = 1; j <= 6; ++j)
-      if (count (j) > 0)
-	++table[j - 1];
-
-    if (find_n_of_a_kind (3, 0))
-      ++table[6];
-
-    if (find_n_of_a_kind (4, 0))
-      ++table[7];
-
-    j = find_n_of_a_kind (3, 0);
-
-    if (j != 0 && find_n_of_a_kind (2, j))
-      ++table[8];
-
-    if (find_straight (4, 0, 0))
-      ++table[9];
-
-    if (find_straight (5, 0, 0))
-      ++table[10];
-
-    if (find_yahtzee ())
-      ++table[11];
-  }
-
-  printf ("%-35s: %10s %20s\n", _("Results"), _("Num Rolls"), _("Total"));
-
-  for (i = 0; i < NUM_FIELDS; ++i) {
-
-    printf ("%-35s", _(FieldLabels[i]));
-
-    printf (" %10d %20ld\n", table[i], (long) (table[i] * 100) / nroll);
-  }
-
 }
 
 /* Arrgh - lets all use the same tabs under emacs: 

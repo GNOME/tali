@@ -98,6 +98,8 @@ extern int find_n_of_a_kind (int n, int but_not);
 extern int find_straight (int run, int notstart, int notrun);
 extern int find_yahtzee (void);
 extern int add_dice (void);
+extern gint field_score (gint field);
+extern gint player_field_score (gint player, gint field);
 extern int play_score (int player, int field);
 extern void handle_play (int player);
 extern void play (void);

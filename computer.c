@@ -40,11 +40,7 @@
 **		2:	"where do you want to put that?"
 */
 
-typedef struct {
-  int score;        /* Score if we don't roll again */
-} DiceRank;
-
-static DiceRank bc_table[MAX_FIELDS];
+static int bc_table[MAX_FIELDS];
 extern int NUM_TRIALS;
 
 static void
@@ -52,36 +48,17 @@ BuildTable (int player)
 {
   int i;
   int d;
-  int overflow;
 
   for (i = 0; i < NUM_FIELDS; ++i) {
-    bc_table[i].score = 0;
+    bc_table[i] = 0;
     if (players[player].used[i]) {
-      bc_table[i].score = -99;
+      bc_table[i] = -99;
     }
   }
 
 /*
 **	HANDLING UPPER SLOTS
 */
-
-/*
-**	first, we calculate the overflow of the upper ranks. that is, we
-**	count all the points we have left over from our 3-of-all rule
-**	if we get 3 of all in the upper ranks, we get a bonus, so if
-**	we get 4 of something, that means a lower roll may be acceptable,
-**	as long as we remain in the running for a bonus.  overflow can
-**	be negative as well, in which case throwaway rolls are not
-**	encouraged, and a high roll will get a nice boost
-*/
-  overflow = 0;
-
-  for (i = 0; i < NUM_UPPER; ++i) {
-    if (players[player].used[i])
-      continue;
-
-    overflow += (count (i + 1) - 3) * (i + 1);
-  }
 
   for (i = 0; i < NUM_UPPER; ++i) {
     if (players[player].used[i])
@@ -91,7 +68,7 @@ BuildTable (int player)
 **	ok. now we set a base value on the roll based on its count and
 **	how much it is worth to us.
 */
-    bc_table[i].score = (count(i + 1) - 2) * (i + 1) * 4 - (i + 1);
+    bc_table[i] = (count(i + 1) - 2) * (i + 1) * 4 - (i + 1);
   }
 
 /*
@@ -103,126 +80,65 @@ BuildTable (int player)
 */
 
   /* Small straight */
-  if (H_SS > 0 && !players[player].used[H_SS] && find_straight (4, 0, 0)) {
-    d = find_straight (4, 0, 0);
-
-    for (i = 0; i < 5; ++i)
-      if (count (DiceValues[i].val) > 1 ||
-	  DiceValues[i].val < d || DiceValues[i].val > d + 3) {
-	break;
-      }
-
-    bc_table[H_SS].score = 30;
+  if (H_SS > 0 && !players[player].used[H_SS]) {
+    d = field_score (H_SS);
+    if (d) bc_table[H_SS] = d;
   }
 
   /* Large straight */
-  if (!players[player].used[H_LS] && find_straight (5, 0, 0)) {
-    bc_table[H_LS].score = 40;
+  if (!players[player].used[H_LS]) {
+    bc_table[H_LS] = field_score (H_LS);
   }
 
   /* chance - sum of all dice */
+  /* Lower this, because we'd rather score somewhere else when we can */
   if (!players[player].used[H_CH] && NumberOfRolls > 2) {
-    bc_table[H_CH].score = add_dice ();
-
-    if (bc_table[H_CH].score < 20)
-      bc_table[H_CH].score /= 2;
+    bc_table[H_CH] = field_score (H_CH) / 2;
   }
 
   /* Full house */
   if (!players[player].used[H_FH]) {
-    d = find_n_of_a_kind (3, 0);
-
-    if (d != 0) {
-      if (find_n_of_a_kind (2, d)) {
-	bc_table[H_FH].score = 25;
-    if (game_type == GAME_KISMET) bc_table[H_FH].score += (add_dice () - 10);
-      }
-    }
+    bc_table[H_FH]  = field_score (H_FH);
   }
 
   /* Two pair same color */
   if (H_2P > 0 && !players[player].used[H_2P]) {
-    d = find_n_of_a_kind (2, 0);
-
-    if (d != 0) {
-      if (find_n_of_a_kind (2, d) + d == 7 ||
-          find_n_of_a_kind (4, d)) {
-	bc_table[H_2P].score = add_dice ();
-      }
-    }
+    bc_table[H_2P] = field_score (H_2P);
   }
 
   /* Full house same color */
   if (H_FS > 0 && !players[player].used[H_FS]) {
-    d = find_n_of_a_kind (3, 0);
-
-    if (d != 0) {
-      if (find_n_of_a_kind (2, d) + d == 7 ||
-          find_n_of_a_kind (5, 0)) {
-	bc_table[H_FS].score = 20 + add_dice ();
-      }
-    }
+    bc_table[H_FS]  = field_score (H_FS);
   }
 
   /* Flush - all same color */
   if (H_FL > 0 && !players[player].used[H_FL]) {
-    d = find_n_of_a_kind (3, 0);
-
-    if (d != 0) {
-      if (find_n_of_a_kind (2, d) + d == 7) {
-	bc_table[H_FL].score = 35;
-      }
-    }
-
-    d = find_n_of_a_kind (4, 0);
-    if (d != 0) {
-      if (find_n_of_a_kind (1, d) + d == 7) {
-	bc_table[H_FL].score = 35;
-      }
-    }
-    d = find_n_of_a_kind (5, 0);
-    if (d != 0) {
-	bc_table[H_FL].score = 35;
-      }
+    bc_table[H_FL]  = field_score (H_FL);
   }
 
   /* 3 of a kind */
   if (!players[player].used[H_3]) {
-    d = find_n_of_a_kind (3, 0);
-
-    if (d != 0) {
-      bc_table[H_3].score = add_dice ();
-    }
+    bc_table[H_3]  = field_score (H_3);
   }
 
   /* 4 of a kind */
   if (!players[player].used[H_4]) {
-    d = find_n_of_a_kind (4, 0);
-
-    if (d != 0) {
-/*
-**	there will be a tie between 3 of a kind and 4 of a kind. we add 1
-**	to break the tie in favor of 4 of a kind
-*/
-      bc_table[H_4].score = add_dice () + 1;
-      if (game_type == GAME_KISMET) bc_table[H_4].score += 24;
-    }
+    /* Add one to break tie with 3 of a kind */
+    bc_table[H_4] = field_score (H_4) + 1;
   }
 
   /* 5 of a kind */
-  if (find_n_of_a_kind (5, 0)) {
 
-    if (players[player].used[H_YA] && players[player].score[H_YA] == 0)
-      bc_table[H_YA].score = -99;	/* scratch */
-
-    else
-      bc_table[H_YA].score = 150;	/* so he will use it! */
+  if (players[player].used[H_YA] && (players[player].score[H_YA] == 0 || game_type == GAME_KISMET)) {
+      bc_table[H_YA] = -99;
+  }
+  else if (find_n_of_a_kind (5, 0)) {
+      bc_table[H_YA] = 150;	/* so he will use it! */
   }
 
   if (DisplayComputerThoughts) {
     for (i = 0; i < NUM_FIELDS; ++i) {
-      fprintf (stderr, "%s : SCORE = %d\n",
-	       _(FieldLabels[i]), bc_table[i].score);
+      printf ("%s : SCORE = %d\n", _(FieldLabels[i]), bc_table[i]);
     }
   }
 }
@@ -275,9 +191,9 @@ ComputerRolling (int player)
           bestv = -99;
           best  = 0;
           for (i = NUM_FIELDS - 1; i >= 0; i--) {
-              if (bc_table[i].score >= bestv) {
+              if (bc_table[i] >= bestv) {
                   best = i;
-                  bestv = bc_table[i].score;
+                  bestv = bc_table[i];
               }
           }
           avg_score[ii] += bestv;
@@ -324,7 +240,7 @@ ComputerScoring (int player)
   int best;
   int bestv;
 
-  NumberOfRolls = 2;		/* in case skipped middle */
+  NumberOfRolls = 3;		/* in case skipped middle */
 
   BuildTable (player);
 
@@ -334,32 +250,32 @@ ComputerScoring (int player)
 
   for (i = NUM_FIELDS - 1; i >= 0; --i) {
     if (player % 2) {
-      if (bc_table[i].score > bestv) {
+      if (bc_table[i] > bestv) {
 	best = i;
 
-	bestv = bc_table[i].score;
+	bestv = bc_table[i];
       }
     }
 
     else {
-      if (bc_table[i].score >= bestv) {
+      if (bc_table[i] >= bestv) {
 	best = i;
 
-	bestv = bc_table[i].score;
+	bestv = bc_table[i];
       }
     }
 
     if (DisplayComputerThoughts) {
       fprintf (stderr, "<<BEST>> %s : VALUE = %d\n",
 	       _(FieldLabels[best]),
-	       bc_table[best].score);
+	       bc_table[best]);
     }
 
   }
 
   if (DisplayComputerThoughts)
       fprintf(stderr, "I choose category %d as best %d score name %s\n",
-              best, bc_table[best].score, _(FieldLabels[best]));
+              best, bc_table[best], _(FieldLabels[best]));
 
   play_score (player, best);
 

@@ -491,6 +491,7 @@ UpdateRollLabel (void)
   g_string_printf (str, "<b>%s %d/3</b>", _("Roll"), NumberOfRolls);
   gtk_label_set_label (GTK_LABEL (rollLabel), str->str);
 
+  update_score_tooltips ();
   update_roll_button_sensitivity ();
   update_undo_sensitivity ();
 }
@@ -667,8 +668,8 @@ LoadDicePixmaps (void)
      * code had a way for static images). */
     if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS))
       for (j = 0; j < NUMBER_OF_DICE; j++) {
-        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file(dicefiles[i]);
-        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file(kdicefiles[i]);
+        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file (dicefiles[i]);
+        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file (kdicefiles[i]);
       }
     /* FIXME: What happens if the file isn't found. */
   }

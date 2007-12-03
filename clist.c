@@ -35,6 +35,8 @@
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
+static gchar *row_tooltips[MAX_FIELDS];
+
 void
 update_score_cell (GtkWidget * treeview, gint row, gint col, int val)
 {
@@ -107,29 +109,49 @@ ShowoffPlayer (GtkWidget * treeview, int player, int so)
   set_label_bold (GTK_LABEL (label), so);
 }
 
-static void
-row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
-		  GtkTreeViewColumn * column, gpointer user_data)
+static gint gtk_tree_path_to_row (GtkTreePath *path)
 {
-  char *path_str;
-  int row;
-
-  if (players[CurrentPlayer].comp)
-    return;
-  path_str = gtk_tree_path_to_string (path);
+  char *path_str = gtk_tree_path_to_string (path);
+  gint  row;
   if (sscanf (path_str, "%i", &row) != 1) {
     g_warning ("%s: could not convert '%s' to integer\n",
 	       G_GNUC_FUNCTION, path_str);
     g_free (path_str);
-    return;
+    return -1;
   }
   g_free (path_str);
-  if (row != R_UTOTAL && row != R_BONUS && row != R_BLANK1 &&
-      row != R_GTOTAL && row != R_LTOTAL) {
+  return row;
+}
+
+/* Convert the row of a tree into the score row */
+
+static gint score_row(GtkTreePath *path)
+{
+    gint row = gtk_tree_path_to_row (path);
+    if (row == R_UTOTAL || row == R_BONUS || row == R_BLANK1 ||
+        row == R_GTOTAL || row == R_LTOTAL)
+        return -1;
+
     /* Adjust for Upper Total / Bonus entries */
     if (row >= NUM_UPPER)
-      row -= 3;
+        row -= 3;
 
+    if (row < 0 || row >= NUM_FIELDS)
+        return -1;
+
+    return row;
+}
+
+static void
+row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
+		  GtkTreeViewColumn * column, gpointer user_data)
+{
+  int row = score_row (path);
+
+  if (players[CurrentPlayer].comp)
+    return;
+
+  if (row >= 0) {
     if (row < NUM_FIELDS && !players[CurrentPlayer].finished) {
       if (play_score (CurrentPlayer, row) == SLOT_USED) {
         say (_("Already used! " "Where do you want to put that?"));
@@ -187,6 +209,30 @@ tree_button_press_cb (GtkWidget * widget, GdkEventButton * event,
   return FALSE;
 }
 
+/* Returns: TRUE to let GtkTreeView know it can show a tooltip */
+static gboolean
+tree_query_tooltip_cb (GtkWidget * widget, gint x, gint y,
+                       gboolean keyboard_mode, GtkTooltip *tooltip, gpointer data)
+{
+    GtkTreeModel *model_ptr = NULL;
+    GtkTreePath  *path_ptr  = NULL;
+    GtkTreeIter  *iter_ptr  = NULL;
+    gint rval = FALSE;
+
+    if (gtk_tree_view_get_tooltip_context ( GTK_TREE_VIEW (widget), &x, &y,
+                keyboard_mode, &model_ptr, &path_ptr, iter_ptr)) {
+        if (path_ptr) {
+            gint row = score_row(path_ptr);
+            if (row >= 0) {
+                gtk_tooltip_set_text (tooltip, row_tooltips[row]);
+                rval = TRUE;
+            }
+        }
+    }
+
+    return rval;
+}
+
 GtkWidget *
 create_score_list (void)
 {
@@ -200,6 +246,7 @@ create_score_list (void)
   tree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (store));
   gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (tree), FALSE);
+  gtk_widget_set_has_tooltip (GTK_WIDGET (tree), TRUE);
 
   g_object_unref (store);
 
@@ -207,6 +254,8 @@ create_score_list (void)
 		    G_CALLBACK (row_activated_cb), NULL);
   g_signal_connect (G_OBJECT (tree), "button-press-event",
 		    G_CALLBACK (tree_button_press_cb), (gpointer) tree);
+  g_signal_connect (G_OBJECT (tree), "query-tooltip",
+            G_CALLBACK (tree_query_tooltip_cb), (gpointer) tree);
 
   return tree;
 }
@@ -349,6 +398,23 @@ setup_score_list (GtkWidget * treeview)
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_GRANDT]),
 		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+}
+
+void
+update_score_tooltips()
+{
+    gint ii;
+
+    for (ii = 0; ii < NUM_FIELDS; ii++) {
+        gint score = player_field_score (CurrentPlayer, ii);
+        if (!row_tooltips[ii]) row_tooltips[ii] = g_new0(gchar, 100);
+
+
+        if (score >= 0)
+            sprintf(row_tooltips[ii], _("Score: %d"), score);
+        else
+            sprintf(row_tooltips[ii], _("Field used"));
+    }
 }
 
 /* Arrgh - lets all use the same tabs under emacs: 

@@ -35,7 +35,7 @@ extern void ShowoffPlayerColumn (GtkWidget * scorelist, int player, int so);
 extern void ShowoffPlayer (GtkWidget * scorelist, int player, int so);
 extern void score_list_set_column_title (GtkWidget * scorelist, int column,
 					 const char *str);
-
+extern void update_score_tooltips (void);
 /* setup.c */
 extern gint setup_game (GtkAction * action, gpointer data);
 extern void GRenamePlayer (gint playerno);

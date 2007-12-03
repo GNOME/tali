@@ -1,5 +1,15 @@
 2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
 
+	* computer.c:
+	* clist.c:
+	* yahtzee.c:
+	* yahtzee.h: 
+	* gyahtzee.c:
+	* gyahtzee.h: Add tooltips showing what will be scored in a field. 
+	(bug #378194)
+
+2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
+
 	* gyahtzee.c:
 	* yahtzee.c:
 	* yahtzee.h: Don't allow to undo while it is the computers turn. 
