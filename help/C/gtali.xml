@@ -5,8 +5,8 @@
   <!ENTITY appversion "2.12">
   <!ENTITY manrevision "2.8">
   <!ENTITY date "September 2004">
-  <!ENTITY app "<application>GNOME Tali</application>">
-  <!ENTITY appname "GNOME Tali">
+  <!ENTITY app "<application>Tali</application>">
+  <!ENTITY appname "Tali">
   <!ENTITY version "2.8"> 
 ]>
 
@@ -24,10 +24,13 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title>&app; Manual V&manrevision;</title>
+    <title>&app; Manual</title>
     <abstract role="description">
       <para>
-      GNOME Tali is a sort of poker with dice and less money. You roll five dice three times and try to create the best hand. Your two rerolls may include any or all of your dice.
+	Tali is like Yahtzee for GNOME or like poker with dice. The player 
+	rolls dice to try to make the best possible combinations, like 
+	4 of a kind, small straight, and full house. The player is allowed 
+	3 rolls per turn and can hold certain dice with each roll.
       </para>
     </abstract>
     <copyright>
