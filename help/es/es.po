@@ -1,11 +1,12 @@
-# Jorge González <jorgegonz@svn.gnome.org>, 2007.
+# translation of gtali.HEAD.po to Español
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: gtali.HEAD.es\n"
-"POT-Creation-Date: 2007-06-05 03:26+0100\n"
-"PO-Revision-Date: 2007-07-16 11:33+0200\n"
+"Project-Id-Version: gtali.HEAD\n"
+"POT-Creation-Date: 2008-01-03 18:49+0000\n"
+"PO-Revision-Date: 2008-01-04 21:43+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"Language-Team: Español <<gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,39 +15,41 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gtali.xml:158(None)
+#: C/gtali.xml:161(None)
 msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 msgstr "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gtali.xml:235(None)
+#: C/gtali.xml:238(None)
 msgid "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 msgstr "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 
 #: C/gtali.xml:27(title)
-msgid "<application>GNOME Tali</application> Manual V2.8"
-msgstr "Manual de <application>Tali</application> V2.8"
+msgid "<application>Tali</application> Manual"
+msgstr "Manual de <application>Tali</application>"
 
 #: C/gtali.xml:29(para)
 msgid ""
-"GNOME Tali is a sort of poker with dice and less money. You roll five dice "
-"three times and try to create the best hand. Your two rerolls may include "
-"any or all of your dice."
+"Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
+"dice to try to make the best possible combinations, like 4 of a kind, small "
+"straight, and full house. The player is allowed 3 rolls per turn and can "
+"hold certain dice with each roll."
 msgstr ""
-"Tali es un tipo de póquer con dados y menos dinero. Tire 5 dados "
-"tres veces e intente crear la mejor mano. Sus dos tiradas posteriores "
-"pueden incluir todos o cualquiera de sus dados."
+"Tali es como Yahtzee para GNOME o como el póker con dados. El jugador tira "
+"dados para tratar de hacer las mejores combinaciones posibles, como 4 del mismo tipo, "
+"secuencia corta y full house. Al jugador se le permiten 3 tiradas por turno y puede "
+"mantener ciertas tiradas de cada jugada."
 
-#: C/gtali.xml:34(year)
+#: C/gtali.xml:37(year)
 msgid "2001"
 msgstr "2001"
 
-#: C/gtali.xml:35(holder)
+#: C/gtali.xml:38(holder)
 msgid "Scott D. Heavner"
 msgstr "Scott D. Heavner"
 
-#: C/gtali.xml:50(publishername) C/gtali.xml:88(para)
+#: C/gtali.xml:53(publishername) C/gtali.xml:91(para)
 msgid "GNOME Documentation Project"
 msgstr "Proyecto de documentación de GNOME"
 
@@ -157,75 +160,76 @@ msgstr ""
 "LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU "
 "(GFDL) Y TENIENDO EN CUENTA QUE: <placeholder-1/>"
 
-#: C/gtali.xml:60(firstname)
+#: C/gtali.xml:63(firstname)
 msgid "Scott D"
 msgstr "Scott D"
 
-#: C/gtali.xml:61(surname)
+#: C/gtali.xml:64(surname)
 msgid "Heavner"
 msgstr "Heavner"
 
-#: C/gtali.xml:63(email)
+#: C/gtali.xml:66(email)
 msgid "sdh@po.cwru.edu"
 msgstr "sdh@po.cwru.edu"
 
-#: C/gtali.xml:82(revnumber)
-msgid "GNOME Tali Manual V2.8"
+#: C/gtali.xml:85(revnumber)
+msgid "Tali Manual V2.8"
 msgstr "Manual de Tali V2.8"
 
-#: C/gtali.xml:83(date)
+#: C/gtali.xml:86(date)
 msgid "September 2004"
 msgstr "Septiembre de 2004"
 
-#: C/gtali.xml:85(para)
+#: C/gtali.xml:88(para)
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 
-#: C/gtali.xml:93(releaseinfo)
-msgid "This manual describes version 2.12 of GNOME Tali."
+#: C/gtali.xml:96(releaseinfo)
+msgid "This manual describes version 2.12 of Tali."
 msgstr "Este manual describe la versión 2.12 de Tali."
 
-#: C/gtali.xml:100(title)
+#: C/gtali.xml:103(title)
 msgid "Feedback"
 msgstr "Comentarios"
 
-#: C/gtali.xml:101(para)
+#: C/gtali.xml:104(para)
 msgid ""
-"To report a bug or make a suggestion regarding the <application>GNOME Tali</"
+"To report a bug or make a suggestion regarding the <application>Tali</"
 "application> application or this manual, follow the directions in the <ulink "
 "url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
 msgstr ""
-"Para informar de un defecto o hacer alguna sugerencia sobre la aplicación "
-"<application>Tali</application> o sobre este manual, siga las indicaciones en la <ulink url="
-"\"ghelp:user-guide?feedback\" type=\"help\">Página de comentarios de GNOME</ulink>."
+"Para informar de un fallo o hacer alguna sugerencia sobre la aplicación <application>Tali</"
+"application> o sobre este manual, siga las indicaciones en la <ulink "
+"url=\"ghelp:user-guide?feedback\" type=\"help\">Página de comentarios de GNOME</ulink>."
 
-#: C/gtali.xml:112(primary)
+#: C/gtali.xml:115(primary)
 msgid "GNOME Tali"
 msgstr "Tali"
 
-#: C/gtali.xml:118(title)
+#: C/gtali.xml:121(title)
 msgid "Introduction"
 msgstr "Introducción"
 
-#: C/gtali.xml:120(para)
+#: C/gtali.xml:123(para)
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
 "<quote>hand</quote>. Your two rerolls may include any or all of your dice."
 msgstr ""
 "<application>Tali</application> es un tipo de póquer con dados y menos "
-"dinero. Tire 5 dados tres veces e intente crear la mejor "
-"<quote>mano</quote>. Sus dos tiradas posteriores pueden incluir todos o cualquiera de sus dados."
+"dinero. Tire 5 dados tres veces e intente crear la mejor <quote>mano</"
+"quote>. Sus dos tiradas posteriores pueden incluir todos o cualquiera de sus "
+"dados."
 
-#: C/gtali.xml:126(para)
+#: C/gtali.xml:129(para)
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
 msgstr ""
-"<application>Tali</application> es muy similar al juego de dados "
-"Yahtzee, marca registrada de Hasbro, Inc."
+"<application>Tali</application> es muy similar al juego de dados Yahtzee, "
+"marca registrada de Hasbro, Inc."
 
-#: C/gtali.xml:131(para)
+#: C/gtali.xml:134(para)
 msgid ""
 "To run <application>GNOME Tali</application>, select "
 "<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
@@ -233,48 +237,51 @@ msgid ""
 "<command>gtali</command> on the command line."
 msgstr ""
 "Para ejecutar <application>Tali</application>, seleccione "
-"<menuchoice><guisubmenu>Juegos</guisubmenu><guimenuitem>Tali</guimenuitem></menuchoice> del "
-"<guimenu>Menú principal</guimenu> o escriba <command>gtali</command> en la línea de comandos."
+"<menuchoice><guisubmenu>Juegos</guisubmenu><guimenuitem>Tali</guimenuitem></"
+"menuchoice> del <guimenu>Menú principal</guimenu> o escriba <command>gtali</"
+"command> en la línea de comandos."
 
-#: C/gtali.xml:141(para)
+#: C/gtali.xml:144(para)
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
 "This document describes version 2.8 of <application>GNOME Tali</application>."
 msgstr ""
 "<application>Tali</application> está incluido en el paquete <filename>gnome-"
-"games</filename>, que es parte del entorno de escritorio GNOME. "
-"Este documento describe la versión 2.8 de <application>Tali</application>."
+"games</filename>, que es parte del entorno de escritorio GNOME. Este "
+"documento describe la versión 2.8 de <application>Tali</application>."
 
-#: C/gtali.xml:150(title)
+#: C/gtali.xml:153(title)
 msgid "Playing GNOME Tali"
 msgstr "Jugar a Tali"
 
-#: C/gtali.xml:153(title)
+#: C/gtali.xml:156(title)
 msgid "GNOME Tali in action"
 msgstr "Tali en acción"
 
-#: C/gtali.xml:161(phrase)
+#: C/gtali.xml:164(phrase)
 msgid "GNOME Tali main window screenshot."
 msgstr "Captura de pantalla de la ventana principal de Tali."
 
-#: C/gtali.xml:167(para)
+#: C/gtali.xml:170(para)
 msgid "When play starts, you see the results of your first throw of the dice."
-msgstr "Cuando el juego se inicia, verá los resultados de su primera tirada de los dados."
+msgstr ""
+"Cuando el juego se inicia, verá los resultados de su primera tirada de los "
+"dados."
 
-#: C/gtali.xml:174(para)
+#: C/gtali.xml:177(para)
 msgid "Click on the dice you wish to roll again."
 msgstr "Pulse sobre el dado que desearía tirar de nuevo."
 
-#: C/gtali.xml:178(para)
+#: C/gtali.xml:181(para)
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
 msgstr ""
-"Cuando haya seleccionado todos los dados que quiere tirar de nuevo, pulse el botón "
-"<guibutton>Lanzar</guibutton>."
+"Cuando haya seleccionado todos los dados que quiere tirar de nuevo, pulse el "
+"botón <guibutton>Lanzar</guibutton>."
 
-#: C/gtali.xml:183(para)
+#: C/gtali.xml:186(para)
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -283,22 +290,23 @@ msgid ""
 "yahtzee -- 5 of a kind -- and click on the large straight row, you will "
 "receive a zero in your large straight score)."
 msgstr ""
-"Cuando tenga una mano que le guste o ya no pueda tirar más los dados, "
-"pulse sobre una columna que corresponda con lo que piense es su mejor combinación "
-"de puntuación. Es muy posible tener una puntuación de cero y si pulsa en la columna "
-"equivocada se le puntuará en concordancia. (Digamos que obtiene yahtzee &mdash;"
-"5 del mismo tipo&mdash; y pulsa en la columna Secuencia completa, entonces obtendrá "
-"cero puntos para la columna Secuencia completa)."
+"Cuando tenga una mano que le guste o ya no pueda tirar más los dados, pulse "
+"sobre una columna que corresponda con lo que piense es su mejor combinación "
+"de puntuación. Es muy posible tener una puntuación de cero y si pulsa en la "
+"columna equivocada se le puntuará en concordancia. (Digamos que obtiene "
+"yahtzee &mdash;5 del mismo tipo&mdash; y pulsa en la columna Secuencia "
+"completa, entonces obtendrá cero puntos para la columna Secuencia completa)."
 
-#: C/gtali.xml:193(para)
+#: C/gtali.xml:196(para)
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
 msgstr ""
-"Sólo puede usar cada combinación una vez. Una vez que haya introducido "
-"algo en una casilla, no podrá cambiar la puntuación más tarde si obtiene una mano mejor."
+"Sólo puede usar cada combinación una vez. Una vez que haya introducido algo "
+"en una casilla, no podrá cambiar la puntuación más tarde si obtiene una mano "
+"mejor."
 
-#: C/gtali.xml:198(para)
+#: C/gtali.xml:201(para)
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -309,23 +317,26 @@ msgid ""
 "will score."
 msgstr ""
 "Existe una excepción a esta regla, si obtiene un yahtzee una segunda vez "
-"puede ponerlo en la fila yahtzee de nuevo y obtener cincuenta puntos extra. Puede seguir "
-"haciendo esto cada vez que obtenga un nuevo yahtzee. Al final del juego se le "
-"proporcionarán tiradas extra para llenar las otras filas. Sea consciente de que si "
-"puntúa cero en su fila yahtzee (ej: rellena la fila con algo que no era un yahtzee) "
-"entonces no podrá poner un yahtzee más tarde y cero será toda su puntuación."
+"puede ponerlo en la fila yahtzee de nuevo y obtener cincuenta puntos extra. "
+"Puede seguir haciendo esto cada vez que obtenga un nuevo yahtzee. Al final "
+"del juego se le proporcionarán tiradas extra para llenar las otras filas. "
+"Sea consciente de que si puntúa cero en su fila yahtzee (ej: rellena la fila "
+"con algo que no era un yahtzee) entonces no podrá poner un yahtzee más tarde "
+"y cero será toda su puntuación."
 
-#: C/gtali.xml:208(para)
+#: C/gtali.xml:211(para)
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
-msgstr "Además hay una bonificación de 35 puntos si puntúa 63 puntos o más en las seis primeras filas."
+msgstr ""
+"Además hay una bonificación de 35 puntos si puntúa 63 puntos o más en las "
+"seis primeras filas."
 
-#: C/gtali.xml:213(title)
+#: C/gtali.xml:216(title)
 msgid "Using the keyboard"
 msgstr "Usar el teclado"
 
-#: C/gtali.xml:215(para)
+#: C/gtali.xml:218(para)
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -334,103 +345,105 @@ msgid ""
 "to navigate up and down the rows and use space to select."
 msgstr ""
 "Como alternativa al ratón, puede usar las teclas 1 al 5 para conmutar el "
-"estado del dado como si lo pulsase. La tecla 1 corresponde con el primer dado "
-"y así con los demás. Use los controles comunes para tirar los dados y seleccionar "
-"una fila. Ej: use el tabulador para cambiar entre tirar el dado y la zona de puntuaciones, "
-"use las teclas de flechas para navegar arriba y abajo por las columnas, y use la barra "
-"espaciadora para seleccionar."
+"estado del dado como si lo pulsase. La tecla 1 corresponde con el primer "
+"dado y así con los demás. Use los controles comunes para tirar los dados y "
+"seleccionar una fila. Ej: use el tabulador para cambiar entre tirar el dado "
+"y la zona de puntuaciones, use las teclas de flechas para navegar arriba y "
+"abajo por las columnas, y use la barra espaciadora para seleccionar."
 
-#: C/gtali.xml:227(title)
+#: C/gtali.xml:230(title)
 msgid "Game Options"
 msgstr "Opciones del juego"
 
-#: C/gtali.xml:230(title)
+#: C/gtali.xml:233(title)
 msgid "GNOME Tali preferences"
 msgstr "Preferencias de Tali"
 
-#: C/gtali.xml:238(phrase)
+#: C/gtali.xml:241(phrase)
 msgid "GNOME Tali preferences dialog box."
 msgstr "Cuadro de preferencias de Tali."
 
-#: C/gtali.xml:243(title)
+#: C/gtali.xml:246(title)
 msgid "Human Players"
 msgstr "Jugadores humanos"
 
-#: C/gtali.xml:245(guimenuitem)
+#: C/gtali.xml:248(guimenuitem)
 msgid "Number of players"
 msgstr "Número de jugadores"
 
-#: C/gtali.xml:247(para)
+#: C/gtali.xml:250(para)
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
 msgstr ""
-"Seleccione el número de jugadores humanos. Tal y como se describe encima, sólo se permite "
-"un máximo de seis jugadores en total."
+"Seleccione el número de jugadores humanos. Tal y como se describe encima, "
+"sólo se permite un máximo de seis jugadores en total."
 
-#: C/gtali.xml:255(title)
+#: C/gtali.xml:258(title)
 msgid "Computer Opponents"
 msgstr "Oponentes electrónicos"
 
-#: C/gtali.xml:257(guimenuitem)
+#: C/gtali.xml:260(guimenuitem)
 msgid "Delay between rolls"
 msgstr "Demora entre lanzamientos"
 
-#: C/gtali.xml:259(para)
+#: C/gtali.xml:262(para)
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
 msgstr ""
-"Hacer que los oponentes electrónicos se retrasen entre sus tiradas para que pueda ver "
-"lo que están haciendo. Retrasa el juego un poco."
+"Hacer que los oponentes electrónicos se retrasen entre sus tiradas para que "
+"pueda ver lo que están haciendo. Retrasa el juego un poco."
 
-#: C/gtali.xml:266(guimenuitem)
+#: C/gtali.xml:269(guimenuitem)
 msgid "Number of opponents"
 msgstr "Número de oponentes"
 
-#: C/gtali.xml:268(para)
+#: C/gtali.xml:271(para)
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
 "limit, the number of human players will be decreased to maintain only six "
 "total players."
 msgstr ""
-"Seleccione el número de oponentes electrónicos. Está permitido un total de seis "
-"jugadores humanos y electrónicos. Si trata de aumentar el número cerca del "
-"límite, se decrementará el número de jugadores humanos para mantener un "
+"Seleccione el número de oponentes electrónicos. Está permitido un total de "
+"seis jugadores humanos y electrónicos. Si trata de aumentar el número cerca "
+"del límite, se decrementará el número de jugadores humanos para mantener un "
 "total de seis jugadores."
 
-#: C/gtali.xml:278(title)
+#: C/gtali.xml:281(title)
 msgid "Game Type"
 msgstr "Tipo de juego"
 
-#: C/gtali.xml:280(guimenuitem)
+#: C/gtali.xml:283(guimenuitem)
 msgid "Version of the game to play"
 msgstr "Versión del juego a la que jugar"
 
-#: C/gtali.xml:282(para)
+#: C/gtali.xml:285(para)
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
 "game to see use the new game type."
 msgstr ""
 "Juegue a la versión regular (similar a Yahtzee) o a la versión con colores "
-"(similar a Kismet). Cuando cambia el tipo de juego, debe reiniciar la partida "
-"para usar el nuevo tipo de juego."
+"(similar a Kismet). Cuando cambia el tipo de juego, debe reiniciar la "
+"partida para usar el nuevo tipo de juego."
 
-#: C/gtali.xml:292(guimenuitem)
+#: C/gtali.xml:295(guimenuitem)
 msgid "Player Names"
 msgstr "Nombres de los jugadores"
 
-#: C/gtali.xml:294(para)
+#: C/gtali.xml:297(para)
 msgid "To change the names of the players just enter new names in the boxes."
-msgstr "Para cambiar los nombres de los jugadores simplemente introduzca nuevos nombres en las cajas."
+msgstr ""
+"Para cambiar los nombres de los jugadores simplemente introduzca nuevos "
+"nombres en las cajas."
 
-#: C/gtali.xml:303(title)
+#: C/gtali.xml:306(title)
 msgid "Game Strategy"
 msgstr "Estrategia del juego"
 
-#: C/gtali.xml:304(para)
+#: C/gtali.xml:307(para)
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -439,15 +452,15 @@ msgid ""
 "get a bonus of 55 if your upper half total is between 71 and 77, and a bonus "
 "of 75 if your upper half total is greater than 77."
 msgstr ""
-"Los 63 puntos necesarios para obtener la bonificación sobre la mitad superior "
-"corresponde a obtener tres dados de cada tipo para cada fila. Si puntúa más "
-"de tres dados en las filas de cincos y seises entonces puede permitirse unas "
-"malas tiradas en las filas de unos o doses y aún así conseguir la bonificación. "
-"En la versión de Color, obtiene una bonificación de 55 puntos si la mitad superior "
-"de puntuaciones está entre 71 y 77, y una bonificación de 75 puntos si la "
-"mitad superior es mayor de 77 puntos."
+"Los 63 puntos necesarios para obtener la bonificación sobre la mitad "
+"superior corresponde a obtener tres dados de cada tipo para cada fila. Si "
+"puntúa más de tres dados en las filas de cincos y seises entonces puede "
+"permitirse unas malas tiradas en las filas de unos o doses y aún así "
+"conseguir la bonificación. En la versión de Color, obtiene una bonificación "
+"de 55 puntos si la mitad superior de puntuaciones está entre 71 y 77, y una "
+"bonificación de 75 puntos si la mitad superior es mayor de 77 puntos."
 
-#: C/gtali.xml:313(para)
+#: C/gtali.xml:316(para)
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -457,31 +470,32 @@ msgstr ""
 "ponerlo también el la fila de yahtzee para obtener aún más puntos. Sólo es "
 "válido para el juego regular."
 
-#: C/gtali.xml:327(title)
+#: C/gtali.xml:330(title)
 msgid "Known Bugs and Limitations"
 msgstr "Errores conocidos y limitaciones"
 
-#: C/gtali.xml:328(para)
+#: C/gtali.xml:331(para)
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
 msgstr ""
-"Cuando cambie el tipo de juego, el juego no usará las nuevas imágenes para los dados hasta "
-"que reinicie Tai. Podría jugar correctamente con los dados «incorrectos»."
+"Cuando cambie el tipo de juego, el juego no usará las nuevas imágenes para "
+"los dados hasta que reinicie Tai. Podría jugar correctamente con los dados "
+"«incorrectos»."
 
-#: C/gtali.xml:336(title)
+#: C/gtali.xml:339(title)
 msgid "Glossary"
 msgstr "Glosario"
 
-#: C/gtali.xml:338(para)
+#: C/gtali.xml:341(para)
 msgid "Remember that the order of the dice is not important."
 msgstr "Recuerde que el orden de los dados no es importante."
 
-#: C/gtali.xml:341(glossterm)
+#: C/gtali.xml:344(glossterm)
 msgid "3 of a Kind"
 msgstr "3 del mismo tipo"
 
-#: C/gtali.xml:342(para)
+#: C/gtali.xml:345(para)
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -489,51 +503,51 @@ msgstr ""
 "Tres de los dados tienen el mismo número. La puntuación es el total de todos "
 "los dados, ej: 1, 2, 2, 2, 5."
 
-#: C/gtali.xml:347(glossterm)
+#: C/gtali.xml:350(glossterm)
 msgid "4 of a Kind"
 msgstr "4 del mismo tipo"
 
-#: C/gtali.xml:348(para)
+#: C/gtali.xml:351(para)
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
 "of all the dice."
 msgstr ""
 "Cuatro de los dados tienen el mismo número . La puntuación es el total de "
-"todos los dados. Ej: 2, 5, 5, 5, 5. En el juego Color, la puntuación es 25 más "
-"el total de todos los dados."
+"todos los dados. Ej: 2, 5, 5, 5, 5. En el juego Color, la puntuación es 25 "
+"más el total de todos los dados."
 
-#: C/gtali.xml:354(glossterm)
+#: C/gtali.xml:357(glossterm)
 msgid "5 of a Kind"
 msgstr "5 del mismo tipo"
 
-#: C/gtali.xml:355(para)
+#: C/gtali.xml:358(para)
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
 msgstr ""
-"Cinco dados idénticos. Ej: 3, 3, 3, 3, 3. En el juego Color, la puntuación es 50 "
-"más el total de todos los dados."
+"Cinco dados idénticos. Ej: 3, 3, 3, 3, 3. En el juego Color, la puntuación "
+"es 50 más el total de todos los dados."
 
-#: C/gtali.xml:360(glossterm)
+#: C/gtali.xml:363(glossterm)
 msgid "Full House"
 msgstr "Full House"
 
-#: C/gtali.xml:361(para)
+#: C/gtali.xml:364(para)
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
 "Colors game, the score is 15 plus the total of all the dice."
 msgstr ""
 "Cinco dados divididos en dos grupos: un grupo de tres con los mismos números "
-"y otro grupo de dos con los mismos números. Ej: 1, 1, 1, 4, 4. En el juego de Color "
-"la puntuación es 15 más el total de los dados."
+"y otro grupo de dos con los mismos números. Ej: 1, 1, 1, 4, 4. En el juego "
+"de Color la puntuación es 15 más el total de los dados."
 
-#: C/gtali.xml:368(glossterm)
+#: C/gtali.xml:371(glossterm)
 msgid "Full House Same Color"
 msgstr "Full House del mismo color"
 
-#: C/gtali.xml:369(para)
+#: C/gtali.xml:372(para)
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -542,17 +556,18 @@ msgid ""
 "black, 2 and 5 are red, and 3 and 4 are green. The score is 20 plus the "
 "total of all the dice."
 msgstr ""
-"Esta categoría sólo se usa en el juego de Color. Cinco dados divididos en dos "
-"grupos: un grupo de tres dados con los mismos números y otro grupo de dos "
-"con los mismos números. Los números deben ser del mismo color. Ej: 3, 3, 3, "
-"4, 4. Dos dados son del mismo color si sus números suman 7: 1 y 6 son negros, "
-"2 y 5 rojos y 3 y 4 verdes. La puntuación es de 20 puntos más el total de los dados."
+"Esta categoría sólo se usa en el juego de Color. Cinco dados divididos en "
+"dos grupos: un grupo de tres dados con los mismos números y otro grupo de "
+"dos con los mismos números. Los números deben ser del mismo color. Ej: 3, 3, "
+"3, 4, 4. Dos dados son del mismo color si sus números suman 7: 1 y 6 son "
+"negros, 2 y 5 rojos y 3 y 4 verdes. La puntuación es de 20 puntos más el "
+"total de los dados."
 
-#: C/gtali.xml:379(glossterm)
+#: C/gtali.xml:382(glossterm)
 msgid "Two Pair Same Color"
 msgstr "Dos pares del mismo color"
 
-#: C/gtali.xml:380(para)
+#: C/gtali.xml:383(para)
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -562,17 +577,17 @@ msgid ""
 "the total of all the dice."
 msgstr ""
 "Esta categoría sólo se usa en el juego Color. Cinco dados divididos en dos "
-"grupos: un grupo de dos con los mismos números y otro grupo de dos con "
-"los mismos números. Los pares deben ser todos del mismo color. Ej. 3, 3, 4, 4. Dos "
-"dados son del mismo color si sus números suman 7: 1 y 6 son negros, 2 y 5 "
-"rojos y 3 y 4 verdes. El quinto dado puede tener cualquier valor. La puntuación es "
-"el total de todos los dados."
+"grupos: un grupo de dos con los mismos números y otro grupo de dos con los "
+"mismos números. Los pares deben ser todos del mismo color. Ej. 3, 3, 4, 4. "
+"Dos dados son del mismo color si sus números suman 7: 1 y 6 son negros, 2 y "
+"5 rojos y 3 y 4 verdes. El quinto dado puede tener cualquier valor. La "
+"puntuación es el total de todos los dados."
 
-#: C/gtali.xml:390(glossterm)
+#: C/gtali.xml:393(glossterm)
 msgid "Flush"
 msgstr "Descartar"
 
-#: C/gtali.xml:391(para)
+#: C/gtali.xml:394(para)
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -580,38 +595,41 @@ msgid ""
 "any value. The score is 35 points."
 msgstr ""
 "Esta categoría sólo se usa en el juego Color. Cinco dados que tienen el "
-"mismo «color»: dos dados tienen el mismo color si sus números suman 7: "
-"1 y 6 son negros, 2 y 5 rojos y 3 y 4 verdes. El quinto dado puede tener cualquier "
+"mismo «color»: dos dados tienen el mismo color si sus números suman 7: 1 y 6 "
+"son negros, 2 y 5 rojos y 3 y 4 verdes. El quinto dado puede tener cualquier "
 "valor. La puntuación es de 35 puntos."
 
-#: C/gtali.xml:399(glossterm)
+#: C/gtali.xml:402(glossterm)
 msgid "Large Straight"
 msgstr "Secuencia completa"
 
-#: C/gtali.xml:400(para)
+#: C/gtali.xml:403(para)
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
-msgstr "Cinco dados con números consecutivos, ej: 2, 3, 4, 5, 6. La puntuación es 40 puntos."
+msgstr ""
+"Cinco dados con números consecutivos, ej: 2, 3, 4, 5, 6. La puntuación es 40 "
+"puntos."
 
-#: C/gtali.xml:405(glossterm)
+#: C/gtali.xml:408(glossterm)
 msgid "Small Straight"
 msgstr "Secuencia corta"
 
-#: C/gtali.xml:406(para)
+#: C/gtali.xml:409(para)
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
 "points."
 msgstr ""
-"Cuatro dados con números consecutivos. El quinto dado puede ser cualquier número, ej: 2, "
-"3, 4, 5, 5. Esta categoría sólo se usa en el juego regular. La puntuación es de 30 puntos."
+"Cuatro dados con números consecutivos. El quinto dado puede ser cualquier "
+"número, ej: 2, 3, 4, 5, 5. Esta categoría sólo se usa en el juego regular. "
+"La puntuación es de 30 puntos."
 
-#: C/gtali.xml:420(title)
+#: C/gtali.xml:423(title)
 msgid "Authors"
 msgstr "Autores"
 
-#: C/gtali.xml:421(para)
+#: C/gtali.xml:424(para)
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -621,18 +639,18 @@ msgid ""
 "this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback"
 "\" type=\"help\">document</ulink>."
 msgstr ""
-"Scott Heavner (<email>sdh@po.cwru.edu</email>) y Orest Zborowski "
-"escribieron <application>Tali</application>. Scott D Heavner (<email>sdh@po.cwru.edu</email>) "
-"escribió este manual con material adicional de Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). "
-"Para informar sobre un fallo o hacer sugerencias sobre esta aplicación o "
-"este manual, siga las indicaciones en este <ulink url=\"ghelp:gnome-feedback"
-"\" type=\"help\">documento</ulink>."
+"Scott Heavner (<email>sdh@po.cwru.edu</email>) y Orest Zborowski escribieron "
+"<application>Tali</application>. Scott D Heavner (<email>sdh@po.cwru.edu</"
+"email>) escribió este manual con material adicional de Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). Para informar sobre un fallo o "
+"hacer sugerencias sobre esta aplicación o este manual, siga las indicaciones "
+"en este <ulink url=\"ghelp:gnome-feedback\" type=\"help\">documento</ulink>."
 
-#: C/gtali.xml:448(title)
+#: C/gtali.xml:451(title)
 msgid "License"
 msgstr "Licencia"
 
-#: C/gtali.xml:449(para)
+#: C/gtali.xml:452(para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl"
@@ -646,7 +664,7 @@ msgstr ""
 "publica por la Free Software Foundation; ya sea la versión 2 de la Licencia, "
 "o (a su elección) cualquier versión posterior."
 
-#: C/gtali.xml:457(para)
+#: C/gtali.xml:460(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -658,7 +676,7 @@ msgstr ""
 "IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la <citetitle>Licencia Pública "
 "General GNU</citetitle> para más detalles."
 
-#: C/gtali.xml:463(para)
+#: C/gtali.xml:466(para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -681,5 +699,5 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/gtali.xml:0(None)
 msgid "translator-credits"
-msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007"
+msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
