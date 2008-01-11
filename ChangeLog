@@ -1,3 +1,7 @@
+2008-01-11  Stephane Raimbault <stephane.raimbault@gmail.com>
+
+	* yahtzee.c: Add missing ']' (bug #508664)
+
 2007-10-28  Geoffrey Buchan <geoffrey.buchan@gmail.com>
 
 	* computer.c:
