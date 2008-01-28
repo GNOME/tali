@@ -115,7 +115,7 @@ static gint gtk_tree_path_to_row (GtkTreePath *path)
   gint  row;
   if (sscanf (path_str, "%i", &row) != 1) {
     g_warning ("%s: could not convert '%s' to integer\n",
-	       G_GNUC_FUNCTION, path_str);
+	       G_STRFUNC, path_str);
     g_free (path_str);
     return -1;
   }
