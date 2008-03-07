@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2008-01-03 18:49+0000\n"
+"POT-Creation-Date: 2008-02-12 10:56+0000\n"
 "PO-Revision-Date: 2008-02-12 11:36+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
@@ -17,13 +17,16 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:161(None)
 msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-msgstr "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
+msgstr ""
+"@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:238(None)
-msgid "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
-msgstr "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgid ""
+"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgstr ""
+"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 
 #: C/gtali.xml:27(title)
 msgid "<application>Tali</application> Manual"
@@ -37,9 +40,9 @@ msgid ""
 "hold certain dice with each roll."
 msgstr ""
 "Tali es como Yahtzee para GNOME o como el póker con dados. El jugador tira "
-"dados para tratar de hacer las mejores combinaciones posibles, como 4 del mismo tipo, "
-"secuencia corta y full house. Al jugador se le permiten 3 tiradas por turno y puede "
-"mantener ciertas tiradas de cada jugada."
+"dados para tratar de hacer las mejores combinaciones posibles, como 4 del "
+"mismo tipo, secuencia corta y full house. Al jugador se le permiten 3 "
+"tiradas por turno y puede mantener ciertas tiradas de cada jugada."
 
 #: C/gtali.xml:37(year)
 msgid "2001"
@@ -198,9 +201,10 @@ msgid ""
 "application> application or this manual, follow the directions in the <ulink "
 "url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
 msgstr ""
-"Para informar de un fallo o hacer alguna sugerencia sobre la aplicación <application>Tali</"
-"application> o sobre este manual, siga las indicaciones en la <ulink "
-"url=\"ghelp:user-guide?feedback\" type=\"help\">Página de comentarios de GNOME</ulink>."
+"Para informar de un fallo o hacer alguna sugerencia sobre la aplicación "
+"<application>Tali</application> o sobre este manual, siga las indicaciones "
+"en la <ulink url=\"ghelp:user-guide?feedback\" type=\"help\">Página de "
+"comentarios de GNOME</ulink>."
 
 #: C/gtali.xml:115(primary)
 msgid "GNOME Tali"
@@ -692,12 +696,11 @@ msgstr ""
 "citetitle>. También puede obtener una copia de la <citetitle>Licencia "
 "Pública General GNU</citetitle> de la Free Software Foundation visitando "
 "<ulink url=\"http://www.fsf.org\" type=\"http\">su página web</ulink> o "
-"escribiendo a la <address>Free Software Foundation, Inc. <street>59 Temple Place</"
-"street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-"1307</postcode><country>USA</country></address>"
+"escribiendo a la <address>Free Software Foundation, Inc. <street>59 Temple "
+"Place</street> - Suite 330 <city>Boston</city>, <state>MA</"
+"state><postcode>02111-1307</postcode><country>USA</country></address>"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/gtali.xml:0(None)
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
-
