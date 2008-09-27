@@ -44,6 +44,7 @@
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-conf.h>
+#include <games-runtime.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -873,6 +874,9 @@ main (int argc, char *argv[])
 
   g_thread_init (NULL);
 
+  if (!games_runtime_init ("gtali"))
+    return 1;
+
   setgid_io_init ();
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -1008,6 +1012,8 @@ main (int argc, char *argv[])
   games_conf_shutdown ();
 
   g_object_unref (program);
+
+  games_runtime_shutdown ();
 
   exit(0);
 }
