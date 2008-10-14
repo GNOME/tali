@@ -33,12 +33,14 @@
  *   along with this program; if not, write to the Free Software
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+#include <config.h>
+
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
 
-#include <config.h>
-#include <gnome.h>
+#include <glib/gi18n.h>
+#include <gtk/gtk.h>
 
 #include <games-stock.h>
 #include <games-scores.h>
@@ -134,8 +136,8 @@ GamesScores *highscores;
 
 static GtkWidget *dialog = NULL;
 
-static gint gnome_modify_dice (GtkWidget * widget, gpointer data);
-static gint gnome_roll_dice (GtkWidget * widget, GdkEvent * event,
+static gint modify_dice (GtkWidget * widget, gpointer data);
+static gint roll_dice (GtkWidget * widget, GdkEvent * event,
 			     gpointer data);
 void update_score_state (void);
 static void UpdateRollLabel (void);
@@ -534,7 +536,7 @@ DeselectAllDice (void)
 
 /* Callback on dice press */
 gint
-gnome_modify_dice (GtkWidget * widget, gpointer data)
+modify_dice (GtkWidget * widget, gpointer data)
 {
   DiceInfo *tmp = (DiceInfo *) data;
   GtkToggleToolButton *button = GTK_TOGGLE_TOOL_BUTTON (widget);
@@ -563,7 +565,7 @@ gnome_modify_dice (GtkWidget * widget, gpointer data)
 
 /* Callback on Roll! button press */
 gint
-gnome_roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
+roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
 {
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
@@ -733,7 +735,7 @@ static const GtkActionEntry action_entry[] = {
   {"Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb)},
   {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb)},
   /* Roll is just an accelerator */
-  {"Roll", GTK_STOCK_REFRESH, NULL, "r", NULL, G_CALLBACK (gnome_roll_dice)}
+  {"Roll", GTK_STOCK_REFRESH, NULL, "r", NULL, G_CALLBACK (roll_dice)}
 };
 
 
@@ -786,7 +788,8 @@ GyahtzeeCreateMainWindow (void)
   GtkUIManager *ui_manager;
   int i, j;
 
-  window = gnome_app_new (appID, appName);
+  window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window), _(appName));
 
   gtk_window_set_default_size (GTK_WINDOW (window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   games_conf_add_window (GTK_WINDOW (window), NULL);
@@ -813,11 +816,11 @@ GyahtzeeCreateMainWindow (void)
   hbox = gtk_hbox_new (FALSE, 0);
   vbox = gtk_vbox_new (FALSE, 0);
 
+  gtk_container_add (GTK_CONTAINER (window), vbox);
+
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
-
-  gnome_app_set_contents (GNOME_APP (window), vbox);
 
   gtk_widget_show (statusbar);
   /* Retreive dice pixmaps from memory or files */
@@ -836,7 +839,7 @@ GyahtzeeCreateMainWindow (void)
   mbutton = gtk_button_new_with_label (_("Roll!"));
   gtk_box_pack_end (GTK_BOX (dicebox), mbutton, FALSE, FALSE, 5);
   g_signal_connect (G_OBJECT (mbutton), "clicked",
-		    G_CALLBACK (gnome_roll_dice), NULL);
+		    G_CALLBACK (roll_dice), NULL);
   gtk_widget_show (GTK_WIDGET (mbutton));
 
   toolbar = gtk_toolbar_new ();
@@ -857,7 +860,7 @@ GyahtzeeCreateMainWindow (void)
     diceBox[i] = gtk_toggle_tool_button_new ();
     gtk_tool_button_set_icon_widget (GTK_TOOL_BUTTON (diceBox[i]), tmp);
     g_signal_connect (G_OBJECT (diceBox[i]), "clicked",
-		      G_CALLBACK (gnome_modify_dice), &DiceValues[i]);
+		      G_CALLBACK (modify_dice), &DiceValues[i]);
 
     gtk_toolbar_insert (GTK_TOOLBAR (toolbar),
 			GTK_TOOL_ITEM (diceBox[i]), -1);
@@ -875,6 +878,7 @@ GyahtzeeCreateMainWindow (void)
   gtk_widget_show (ScoreList);
 
   gtk_widget_show (hbox);
+  gtk_widget_show (vbox);
 
   gtk_widget_show (window);
 
@@ -885,11 +889,12 @@ GyahtzeeCreateMainWindow (void)
 int
 main (int argc, char *argv[])
 {
-  GnomeProgram *program;
   char **player_names;
   gsize n_player_names;
   guint i;
   GOptionContext *context;
+  gboolean retval;
+  GError *error = NULL;
 
   g_thread_init (NULL);
 
@@ -897,7 +902,8 @@ main (int argc, char *argv[])
     return 1;
 
   setgid_io_init ();
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+
+  bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
@@ -905,15 +911,18 @@ main (int argc, char *argv[])
   YahtzeeInit ();
 
   context = g_option_context_new (NULL);
+  g_option_context_add_group (context, gtk_get_option_group (TRUE));
   g_option_context_add_main_entries (context, yahtzee_options,
 				     GETTEXT_PACKAGE);
+  retval = g_option_context_parse (context, &argc, &argv, &error);
+  g_option_context_free (context);
+  if (!retval) {
+    g_print ("%s", error->message);
+    g_error_free (error);
+    exit (1);
+  }
 
-  /* Create gnome client */
-  program = gnome_program_init (appID, VERSION,
-				LIBGNOMEUI_MODULE,
-				argc, argv,
-				GNOME_PARAM_GOPTION_CONTEXT, context,
-				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+  g_set_application_name (_(appName));
 
   games_conf_initialise (appID);
 
@@ -1029,8 +1038,6 @@ main (int argc, char *argv[])
   gtk_main ();
 
   games_conf_shutdown ();
-
-  g_object_unref (program);
 
   games_runtime_shutdown ();
 
