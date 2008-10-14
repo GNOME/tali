@@ -41,6 +41,7 @@
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 #include <games-stock.h>
 #include <games-scores.h>
