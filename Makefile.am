@@ -13,18 +13,39 @@ bin_PROGRAMS = gtali
 
 
 gtali_SOURCES =       \
-        gyahtzee.c       \
-        gyahtzee.h       \
-        clist.c          \
-        yahtzee.h        \
-        yahtzee.c        \
-        computer.c       \
-        setup.c
+	gyahtzee.c       \
+	gyahtzee.h       \
+	clist.c          \
+	yahtzee.h        \
+	yahtzee.c        \
+	computer.c       \
+	setup.c          \
+	$(NULL)
 
-gtali_LDADD =				\
-	../libgames-support/libgames-support.la \
-	$(GNOME_GAMES_LIBS) \
-	$(INTLLIBS)
+gtali_CFLAGS = \
+	$(GTK_CFLAGS)	\
+	$(AM_CFLAGS)
+		
+gtali_LDADD = \
+	$(top_builddir)/libgames-support/libgames-support.la \
+	$(GTK_LIBS)	\
+	$(INTLLIBS)	\
+	$(NULL)
+
+if HAVE_GNOME
+gtali_CFLAGS += $(GNOME_CFLAGS)
+gtali_LDADD += $(GNOME_LIBS)
+endif
+
+if HAVE_RSVG
+gtali_CFLAGS += $(RSVG_CFLAGS)
+gtali_LDADD += $(RSVG_LIBS)
+endif
+
+if WITH_GTHREAD
+gtali_CFLAGS += $(GHTREAD_CFLAGS)
+gtali_LDADD += $(GTHREAD_LIBS)
+endif
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gtali.schemas.in
