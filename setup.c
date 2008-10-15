@@ -299,7 +299,7 @@ setup_game (GtkAction * action, gpointer data)
 
   gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
   HumanAdj = gtk_adjustment_new ((gfloat) NumberOfHumans, 1.0,
-				 6.0, 1.0, 6.0, 1.0);
+				 6.0, 1.0, 6.0, 0.0);
   HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), HumanSpinner);
 
@@ -331,7 +331,7 @@ setup_game (GtkAction * action, gpointer data)
   gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
   ComputerAdj = gtk_adjustment_new ((gfloat) NumberOfComputers,
-				    0.0, 5.0, 1.0, 5.0, 1.0);
+				    0.0, 5.0, 1.0, 5.0, 0.0);
   ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj), 10, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), ComputerSpinner);
 
