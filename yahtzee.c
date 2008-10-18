@@ -136,7 +136,7 @@ int
 NoDiceSelected (void)
 {
   int i, j = 1;
-  for (i = 0; i < 5; i++)
+  for (i = 0; i < NUMBER_OF_DICE; i++)
     if (DiceValues[i].sel)
       j = 0;
   return j;
@@ -146,7 +146,7 @@ void
 SelectAllDice (void)
 {
   int i;
-  for (i = 0; i < 5; i++)
+  for (i = 0; i < NUMBER_OF_DICE; i++)
     DiceValues[i].sel = 1;
 }
 
@@ -224,7 +224,7 @@ RollSelectedDice (void)
     return;
   }
 
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < NUMBER_OF_DICE; i++) {
     if (DiceValues[i].sel) {
       DiceValues[i].val = RollDie ();
       DiceValues[i].sel = 0;
@@ -235,7 +235,7 @@ RollSelectedDice (void)
 
   /* If no dice is selcted roll them all */
   if(cnt == 0){
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < NUMBER_OF_DICE; i++) {
       DiceValues[i].val = RollDie ();
       lastRoll.DiceValues[i] = DiceValues[i].val;
     }
@@ -323,7 +323,7 @@ count (int val)
 
   num = 0;
 
-  for (i = 0; i < 5; ++i)
+  for (i = 0; i < NUMBER_OF_DICE; ++i)
     if (DiceValues[i].val == val)
       ++num;
 
@@ -335,7 +335,7 @@ find_n_of_a_kind (int n, int but_not)
 {
   int i;
 
-  for (i = 0; i < 5; ++i) {
+  for (i = 0; i < NUMBER_OF_DICE; ++i) {
     if (DiceValues[i].val == but_not)
       continue;
 
@@ -387,7 +387,7 @@ add_dice (void)
 
   val = 0;
 
-  for (i = 0; i < 5; ++i)
+  for (i = 0; i < NUMBER_OF_DICE; ++i)
     val += DiceValues[i].val;
 
   return (val);
@@ -613,8 +613,14 @@ gint
 UndoLastMove() {
   if (UndoList) {
     UndoScoreElement *elem = UndoList->data;
-    players[elem->player].score[elem->field] = 0;
-    players[elem->player].used [elem->field] = 0;
+    if (elem->field == H_YA && game_type == GAME_YAHTZEE) {
+      if (players[elem->player].score[elem->field] != 0)
+        players[elem->player].score[elem->field] -= 50;
+      players[elem->player].used [elem->field] = players[elem->player].score[elem->field] > 0;
+    } else {
+      players[elem->player].score[elem->field] = 0;
+      players[elem->player].used [elem->field] = 0;
+    }
 
     ResetDiceState(elem);
     UndoList = g_list_remove(UndoList, elem);
