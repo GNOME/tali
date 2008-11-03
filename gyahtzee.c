@@ -61,12 +61,6 @@ static char *appName = N_("Tali");
 static guint last_timeout = 0;
 static gboolean ready_to_advance_player;
 
-#ifdef GNOMEPIXMAPDIR
-#define PP GNOMEPIXMAPDIR "/gtali/"
-#else
-#define PP ""
-#endif
-
 #define NUMBER_OF_PIXMAPS    7
 #define GAME_TYPES 2
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
@@ -75,22 +69,22 @@ static gboolean ready_to_advance_player;
 #define DEFAULT_WIDTH 640
 #define DEFAULT_HEIGHT 480
 
-static char *dicefiles[NUMBER_OF_PIXMAPS] = { PP "gnome-dice-1.svg",
-  PP "gnome-dice-2.svg",
-  PP "gnome-dice-3.svg",
-  PP "gnome-dice-4.svg",
-  PP "gnome-dice-5.svg",
-  PP "gnome-dice-6.svg",
-  PP "gnome-dice-none.svg"
+static char *dicefiles[NUMBER_OF_PIXMAPS] = { "gnome-dice-1.svg",
+  "gnome-dice-2.svg",
+  "gnome-dice-3.svg",
+  "gnome-dice-4.svg",
+  "gnome-dice-5.svg",
+  "gnome-dice-6.svg",
+  "gnome-dice-none.svg"
 };
 
-static char *kdicefiles[NUMBER_OF_PIXMAPS] = { PP "kismet1.svg",
-  PP "kismet2.svg",
-  PP "kismet3.svg",
-  PP "kismet4.svg",
-  PP "kismet5.svg",
-  PP "kismet6.svg",
-  PP "kismet-none.svg"
+static char *kdicefiles[NUMBER_OF_PIXMAPS] = { "kismet1.svg",
+  "kismet2.svg",
+  "kismet3.svg",
+  "kismet4.svg",
+  "kismet5.svg",
+  "kismet6.svg",
+  "kismet-none.svg"
 };
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS][GAME_TYPES];
@@ -667,17 +661,29 @@ static void
 LoadDicePixmaps (void)
 {
   int i, j;
+  char *path, *path_kismet;
+  const char *dir;
+
+  dir = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
 
   for (i = 0; i < NUMBER_OF_PIXMAPS; i++) {
     /* This is not efficient, but it lets us load animated types,
      * there is no way for us to copy a general GtkImage (the old 
      * code had a way for static images). */
-    if (g_file_test (dicefiles[i], G_FILE_TEST_EXISTS))
+    path = g_build_filename (dir, dicefiles[i], NULL);
+    path_kismet = g_build_filename (dir, kdicefiles[i], NULL);
+
+    if (g_file_test (path, G_FILE_TEST_EXISTS) && 
+          g_file_test (path_kismet, G_FILE_TEST_EXISTS)) {
+
       for (j = 0; j < NUMBER_OF_DICE; j++) {
-        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file (dicefiles[i]);
-        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file (kdicefiles[i]);
+        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file (path);
+        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file (path_kismet);
       }
-    /* FIXME: What happens if the file isn't found. */
+
+    } /* FIXME: What happens if the file isn't found. */
+    g_free(path);
+    g_free(path_kismet);
   }
 }
 

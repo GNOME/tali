@@ -1,5 +1,5 @@
 
-Pixmapdir = $(datadir)/pixmaps/gtali
+Pixmapdir = $(pkgdatadir)/gtali/pixmaps
 Pixmap_DATA = \
 	gnome-dice-1.svg \
 	gnome-dice-2.svg \
