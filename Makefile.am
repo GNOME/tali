@@ -1,16 +1,6 @@
-Gamesdir = $(datadir)/applications
-
 SUBDIRS = pix help
 
-INCLUDES =						\
-	$(GNOME_GAMES_CFLAGS)				\
-	-I$(top_srcdir)/libgames-support           \
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-DDATADIR=\""$(datadir)"\"		   \
-	-DGNOMEPIXMAPDIR=\""$(pkgdatadir)/pixmaps"\"
-
 bin_PROGRAMS = gtali
-
 
 gtali_SOURCES =       \
 	gyahtzee.c       \
@@ -21,6 +11,10 @@ gtali_SOURCES =       \
 	computer.c       \
 	setup.c          \
 	$(NULL)
+
+gtali_CPPFLAGS = \
+	-I$(top_srcdir) \
+	$(AM_CPPFLAGS)
 
 gtali_CFLAGS = \
 	$(GTK_CFLAGS)	\
@@ -47,13 +41,14 @@ gtali_CFLAGS += $(GHTREAD_CFLAGS)
 gtali_LDADD += $(GTHREAD_LIBS)
 endif
 
-schemadir   = @GCONF_SCHEMA_FILE_DIR@
+schemadir   = $(GCONF_SCHEMA_FILE_DIR)
 schema_in_files = gtali.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
 EXTRA_DIST = README AUTHORS $(schema_in_files)
 
+Gamesdir = $(datadir)/applications
 Games_in_files = gtali.desktop.in.in
 Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@

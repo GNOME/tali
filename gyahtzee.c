@@ -44,12 +44,12 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <games-help.h>
-#include <games-stock.h>
-#include <games-scores.h>
-#include <games-scores-dialog.h>
-#include <games-conf.h>
-#include <games-runtime.h>
+#include <libgames-support/games-help.h>
+#include <libgames-support/games-stock.h>
+#include <libgames-support/games-scores.h>
+#include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-conf.h>
+#include <libgames-support/games-runtime.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"

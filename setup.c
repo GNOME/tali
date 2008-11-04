@@ -33,8 +33,8 @@
 
 #include <gtk/gtk.h>
 
-#include <games-frame.h>
-#include <games-conf.h>
+#include <libgames-support/games-frame.h>
+#include <libgames-support/games-conf.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
