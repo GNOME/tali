@@ -136,7 +136,6 @@ static GtkWidget *dialog = NULL;
 static gint modify_dice (GtkWidget * widget, gpointer data);
 static gint roll_dice (GtkWidget * widget, GdkEvent * event,
 			     gpointer data);
-void update_score_state (void);
 static void UpdateRollLabel (void);
 
 static void
@@ -215,8 +214,6 @@ CheerWinner (void)
       gtk_dialog_run (GTK_DIALOG (dialog));
       gtk_widget_hide (dialog);
     }
-
-    update_score_state ();
   }
 
   if (players[winner].name)
@@ -688,15 +685,6 @@ LoadDicePixmaps (void)
 }
 
 void
-update_score_state (void)
-{
-  GList *top;
-
-  top = games_scores_get (highscores);
-  gtk_action_set_sensitive (scores_action, top != NULL);
-}
-
-void
 update_undo_sensitivity (void)
 {
   gtk_action_set_sensitive(undo_action, UndoVisible());
@@ -871,9 +859,6 @@ GyahtzeeCreateMainWindow (void)
   gtk_widget_show (vbox);
 
   gtk_widget_show (window);
-
-  update_score_state ();
-
 }
 
 int
