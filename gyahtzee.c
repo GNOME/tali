@@ -205,7 +205,8 @@ CheerWinner (void)
         dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
         message =
   	  g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
-			 _("Your score has made the top ten."));
+                           pos == 1 ? _("Your score is the best!") :
+                           _("Your score has made the top ten."));
         games_scores_dialog_set_message (GAMES_SCORES_DIALOG (dialog), message);
         g_free (message);
       }
