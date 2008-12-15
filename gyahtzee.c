@@ -199,6 +199,7 @@ CheerWinner (void)
     pos = games_scores_add_score (highscores, score);
 
     if (pos > 0) {
+      games_scores_update_score (highscores, players[winner].name);
       if (dialog) {
         gtk_window_present (GTK_WINDOW (dialog));
       } else {
@@ -600,6 +601,9 @@ about_cb (GtkAction * action, gpointer data)
     "",
     N_("Console version (1992):"),
     "Orest Zborowski",
+    "",
+    N_("Colors game and multi-level AI (2006):"),
+    "Geoff Buchan",
     NULL
   };
 
