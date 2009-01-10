@@ -120,13 +120,8 @@ const static GOptionEntry yahtzee_options[] = {
 };
 
 static const GamesScoresCategory category_array[] = {
-    {"Regular", "Regular"}, {"Colors", "Colors"}, GAMES_SCORES_LAST_CATEGORY };
-
-static const GamesScoresDescription scoredesc = { 
-  category_array,
-  "Regular",
-  "gtali",
-  GAMES_SCORES_STYLE_PLAIN_DESCENDING
+  {"Regular", "Regular"},
+  {"Colors", "Colors"}
 };
 
 GamesScores *highscores;
@@ -941,7 +936,11 @@ main (int argc, char *argv[])
       exit(0);
   }
 
-  highscores = games_scores_new (&scoredesc);
+  highscores = games_scores_new ("gtali",
+                                 category_array, G_N_ELEMENTS (category_array),
+                                 NULL, NULL,
+                                 0 /* default category */,
+                                 GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
   gtk_window_set_default_icon_name ("gnome-tali");
 
