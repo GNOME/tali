@@ -120,8 +120,8 @@ const static GOptionEntry yahtzee_options[] = {
 };
 
 static const GamesScoresCategory category_array[] = {
-  {"Regular", "Regular"},
-  {"Colors", "Colors"}
+  {"Regular", NC_("game type", "Regular") },
+  {"Colors",  NC_("game type", "Colors")}
 };
 
 GamesScores *highscores;
@@ -938,7 +938,7 @@ main (int argc, char *argv[])
 
   highscores = games_scores_new ("gtali",
                                  category_array, G_N_ELEMENTS (category_array),
-                                 NULL, NULL,
+                                 "game type", NULL,
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
