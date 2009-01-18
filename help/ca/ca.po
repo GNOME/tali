@@ -295,7 +295,7 @@ msgstr ""
 "la fila corresponent en la que creieu que obtindreu la millor combinació de "
 "puntuació. És molt probable que tingueu una puntuació de zero i si premeu en "
 "la fila incorrecte se us puntuarà de forma corresponent. (Per exemple, teniu "
-"un yahtzee &mdash; 5 del mateix tipus &mdash; i premeu en la fila escala "
+"un yahtzee — 5 del mateix tipus — i premeu en la fila escala "
 "llarga, rebreu zero punts en la puntuació d'escala llarga)."
 
 #: C/gtali.xml:196(para)

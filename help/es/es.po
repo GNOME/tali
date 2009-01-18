@@ -298,7 +298,7 @@ msgstr ""
 "sobre una columna que corresponda con lo que piense es su mejor combinación "
 "de puntuación. Es muy posible tener una puntuación de cero y si pulsa en la "
 "columna equivocada se le puntuará en concordancia. (Digamos que obtiene "
-"yahtzee &mdash;5 del mismo tipo&mdash; y pulsa en la columna Secuencia "
+"yahtzee —5 del mismo tipo— y pulsa en la columna Secuencia "
 "completa, entonces obtendrá cero puntos para la columna Secuencia completa)."
 
 #: C/gtali.xml:196(para)
