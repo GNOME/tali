@@ -8,7 +8,7 @@ SUBDIRS = da
 
 include $(top_srcdir)/gnome-doc-utils.make
 
-DOC_LINGUAS = ca de es fr it oc pt_BR sv
+DOC_LINGUAS = ca de el es fr it oc pt_BR sv
 
 DOC_MODULE = gtali
 
