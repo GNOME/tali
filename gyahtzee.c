@@ -906,10 +906,10 @@ main (int argc, char *argv[])
           game_type = game_type_from_string(game_type_string);
       g_message("In test computer play section - Using %d trials for simulation", NUM_TRIALS);
       for (ii = 0; ii < test_computer_play; ii++) {
+          int num_rolls = 0;
           NumberOfHumans = 0;
           NumberOfComputers = 1;
           NewGame ();
-          int num_rolls = 0;
 
           while (!GameIsOver() && num_rolls < 100) {
               ComputerRolling (CurrentPlayer);

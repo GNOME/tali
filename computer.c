@@ -173,8 +173,8 @@ ComputerRolling (int player)
   bestv = -99;
   {
   double avg_score[num_options];
-  memset(avg_score, 0, sizeof(avg_score));
   DiceInfo sav_DiceValues[NUMBER_OF_DICE];
+  memset(avg_score, 0, sizeof(avg_score));
   memcpy(sav_DiceValues, DiceValues, sizeof(sav_DiceValues));
 
   for (ii = 0; ii < num_options; ii++) {
