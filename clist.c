@@ -402,7 +402,7 @@ setup_score_list (GtkWidget * treeview)
 }
 
 void
-update_score_tooltips()
+update_score_tooltips(void)
 {
     gint ii;
 

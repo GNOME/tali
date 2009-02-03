@@ -257,7 +257,7 @@ do_computer_turns (void)
 /* Show the current score and prompt for current player state */
 
 void
-DisplayCurrentPlayer() {
+DisplayCurrentPlayer(void) {
   ShowoffPlayer (ScoreList, CurrentPlayer, 1);
 
   if (players[CurrentPlayer].name) {

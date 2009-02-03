@@ -610,7 +610,7 @@ ResetDiceState(UndoScoreElement *elem) {
 }
 
 gint
-UndoLastMove() {
+UndoLastMove(void) {
   if (UndoList) {
     UndoScoreElement *elem = UndoList->data;
     if (elem->field == H_YA && game_type == GAME_YAHTZEE) {
@@ -632,7 +632,7 @@ UndoLastMove() {
 }
 
 gint
-RedoLastMove() {
+RedoLastMove(void) {
   gint rval = (CurrentPlayer + 1) % NumberOfPlayers;
   if (RedoList) {
     gint ii;
@@ -657,12 +657,12 @@ RedoLastMove() {
 }
 
 void
-RestoreLastRoll() {
+RestoreLastRoll(void) {
   ResetDiceState(&lastRoll);
 }
 
 UndoScoreElement*
-RedoHead() {
+RedoHead(void) {
   if (RedoList) {
     UndoScoreElement *elem = RedoList->data;
     return elem;
@@ -672,7 +672,7 @@ RedoHead() {
 }
 
 void
-FreeUndoList() {
+FreeUndoList(void) {
   while (UndoList) {
     UndoScoreElement *elem = UndoList->data;
     UndoList = g_list_remove(UndoList, elem);
@@ -681,7 +681,7 @@ FreeUndoList() {
 }
 
 void
-FreeRedoList() {
+FreeRedoList(void) {
   while (RedoList) {
     UndoScoreElement *elem = RedoList->data;
     RedoList = g_list_remove(RedoList, elem);
@@ -690,13 +690,13 @@ FreeRedoList() {
 }
 
 void
-FreeUndoRedoLists() {
+FreeUndoRedoLists(void) {
   FreeUndoList();
   FreeRedoList();
 }
 
 void
-FreeRedoListHead() {
+FreeRedoListHead(void) {
   if (RedoList) {
     UndoScoreElement *elem = RedoList->data;
     RedoList = g_list_remove(RedoList, elem);
