@@ -101,7 +101,7 @@ static gchar *game_type_string = NULL;
 static gint   test_computer_play = 0;
 gint NUM_TRIALS = 0;
 
-const static GOptionEntry yahtzee_options[] = {
+static const GOptionEntry yahtzee_options[] = {
   {"delay", 'd', 0, G_OPTION_ARG_NONE, &DoDelay,
    N_("Delay computer moves"), NULL},
   {"thoughts", 't', 0, G_OPTION_ARG_NONE, &DisplayComputerThoughts,
