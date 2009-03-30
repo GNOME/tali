@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2009-01-19 00:50+0000\n"
-"PO-Revision-Date: 2009-01-25 20:32+0100\n"
+"POT-Creation-Date: 2009-03-17 08:12+0000\n"
+"PO-Revision-Date: 2009-03-30 12:31+0200\n"
 "Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
@@ -18,16 +18,13 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:161(None)
 msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-msgstr ""
-"@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
+msgstr "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:238(None)
-msgid ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
-msgstr ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgid "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgstr "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 
 #: C/gtali.xml:27(title)
 msgid "<application>Tali</application> Manual"
@@ -363,7 +360,7 @@ msgstr "Διάλογος προτιμήσεων του Τάλι."
 
 #: C/gtali.xml:246(title)
 msgid "Human Players"
-msgstr "Ζωντανοί παίκτες"
+msgstr "Άνθρωποι παίκτες"
 
 #: C/gtali.xml:248(guimenuitem)
 msgid "Number of players"
@@ -374,7 +371,7 @@ msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
 msgstr ""
-"Επιλογή του αριθμού ζωντανών παικτών. Συνολικά επιτρέπονται μέχρι και έξι "
+"Επιλογή του αριθμού ανθρώπων παικτών. Συνολικά επιτρέπονται μέχρι και έξι "
 "παίκτες."
 
 #: C/gtali.xml:258(title)
@@ -406,8 +403,8 @@ msgid ""
 "total players."
 msgstr ""
 "Επιλογή του αριθμού των παικτών του υπολογιστή. Συνολικά επιτρέπονται έξι "
-"παίκτες (ζωντανοί ή παίκτες υπολογιστή). Αν αυξήσετε υπερβολικά τον αριθμό "
-"των παικτών του υπολογιστή, ο αριθμός των ζωντανών παικτών θα μειωθεί, "
+"παίκτες (άνθρωποι ή παίκτες υπολογιστή). Αν αυξήσετε υπερβολικά τον αριθμό "
+"των παικτών του υπολογιστή, ο αριθμός των ανθρώπων θα μειωθεί, "
 "προκειμένου οι συνολικοί παίκτες να μην υπερβούν τους έξι."
 
 #: C/gtali.xml:281(title)
