@@ -1,10 +1,10 @@
-# translation of gtali.HEAD.po to Greek
+# Greek translation of gtali documentation
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
 #  <>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2009-03-17 08:12+0000\n"
+"POT-Creation-Date: 2009-03-30 13:32+0000\n"
 "PO-Revision-Date: 2009-03-30 12:31+0200\n"
 "Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
@@ -18,17 +18,20 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:161(None)
 msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-msgstr "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
+msgstr ""
+"@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gtali.xml:238(None)
-msgid "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
-msgstr "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgid ""
+"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+msgstr ""
+"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 
 #: C/gtali.xml:27(title)
 msgid "<application>Tali</application> Manual"
-msgstr "Τεκμηρίωση <application>Τάλι</application>"
+msgstr "Εγχειρίδιο του <application>Τάλι</application>"
 
 #: C/gtali.xml:29(para)
 msgid ""
@@ -404,8 +407,8 @@ msgid ""
 msgstr ""
 "Επιλογή του αριθμού των παικτών του υπολογιστή. Συνολικά επιτρέπονται έξι "
 "παίκτες (άνθρωποι ή παίκτες υπολογιστή). Αν αυξήσετε υπερβολικά τον αριθμό "
-"των παικτών του υπολογιστή, ο αριθμός των ανθρώπων θα μειωθεί, "
-"προκειμένου οι συνολικοί παίκτες να μην υπερβούν τους έξι."
+"των παικτών του υπολογιστή, ο αριθμός των ανθρώπων θα μειωθεί, προκειμένου "
+"οι συνολικοί παίκτες να μην υπερβούν τους έξι."
 
 #: C/gtali.xml:281(title)
 msgid "Game Type"
@@ -705,4 +708,3 @@ msgstr ""
 "  Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
 "\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
-
