@@ -821,7 +821,7 @@ GyahtzeeCreateMainWindow (void)
   gtk_widget_show (GTK_WIDGET (mbutton));
 
   toolbar = gtk_toolbar_new ();
-  gtk_toolbar_set_orientation (GTK_TOOLBAR (toolbar),
+  gtk_orientable_set_orientation (GTK_ORIENTABLE (toolbar),
 			       GTK_ORIENTATION_VERTICAL);
   gtk_toolbar_set_style (GTK_TOOLBAR (toolbar), GTK_TOOLBAR_ICONS);
   gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), FALSE);
