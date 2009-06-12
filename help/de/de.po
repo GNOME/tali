@@ -102,8 +102,8 @@ msgid "Feedback"
 msgstr "Rückmeldungen"
 
 #: C/gtali.xml:104(para)
-msgid "To report a bug or make a suggestion regarding the <application>Tali</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Tali</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME-Seite für Rückmeldungen</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Tali</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Tali</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME-Seite für Rückmeldungen</ulink>."
 
 #: C/gtali.xml:115(primary)
 msgid "GNOME Tali"
@@ -346,8 +346,8 @@ msgid "Authors"
 msgstr "Autoren"
 
 #: C/gtali.xml:424(para)
-msgid "<application>GNOME Tali</application> was written by Scott Heavner (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "<application>GNOME Tali</application> wurde von Scott Heavner (<email>sdh@po.cwru.edu</email>) und Orest Zborowski geschrieben. Dieses Handbuch schrieb Scott D Heavner (<email>sdh@po.cwru.edu</email>) unter Hinzufügung von Beiträgen von Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Um einen Fehler zu melden oder einen Vorschlag zu dieser Anwendung oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen in diesem <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Dokument</ulink>."
+msgid "<application>GNOME Tali</application> was written by Scott Heavner (<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "<application>GNOME Tali</application> wurde von Scott Heavner (<email>sdh@po.cwru.edu</email>) und Orest Zborowski geschrieben. Dieses Handbuch schrieb Scott D Heavner (<email>sdh@po.cwru.edu</email>) unter Hinzufügung von Beiträgen von Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Um einen Fehler zu melden oder einen Vorschlag zu dieser Anwendung oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen in diesem <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Dokument</ulink>."
 
 #: C/gtali.xml:451(title)
 msgid "License"

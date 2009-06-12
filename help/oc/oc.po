@@ -151,7 +151,7 @@ msgstr ""
 msgid ""
 "To report a bug or make a suggestion regarding the <application>GNOME Tali</"
 "application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
 msgstr ""
 
 #: C/gtali.xml:112(primary)
@@ -490,7 +490,7 @@ msgid ""
 "written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra "
 "material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</"
 "email>). To report a bug or make a suggestion regarding this application or "
-"this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback"
+"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs"
 "\" type=\"help\">document</ulink>."
 msgstr ""
 
