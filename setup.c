@@ -205,7 +205,7 @@ setupdialog_destroy (GtkWidget * widget, gint mode)
 static gint
 set_as_int (GtkWidget * widget, gpointer * data)
 {
-  *((int *) data) = GTK_TOGGLE_BUTTON (widget)->active;
+  *((int *) data) = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
 
   return FALSE;
 }
@@ -268,7 +268,7 @@ setup_game (GtkAction * action, gpointer data)
 					     GTK_DIALOG_DESTROY_WITH_PARENT,
 					     GTK_STOCK_CLOSE,
 					     GTK_RESPONSE_CLOSE, NULL);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), 2);
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
   gtk_dialog_set_has_separator (GTK_DIALOG (setupdialog), FALSE);
   g_signal_connect (G_OBJECT (setupdialog), "delete_event",
@@ -282,8 +282,8 @@ setup_game (GtkAction * action, gpointer data)
   gtk_table_set_row_spacings (GTK_TABLE (table), 18);
   gtk_table_set_col_spacings (GTK_TABLE (table), 18);
 
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (setupdialog)->vbox), table,
-		      FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 
+                      table, FALSE, FALSE, 0);
 
   frame = games_frame_new (_("Human Players"));
   gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_FILL, GTK_FILL,
