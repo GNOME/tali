@@ -1,4 +1,8 @@
-SUBDIRS = pix help
+SUBDIRS = pix
+
+if BUILD_HELP
+SUBDIRS += help
+endif
 
 bin_PROGRAMS = gtali
 
