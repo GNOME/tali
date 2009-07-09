@@ -71,7 +71,11 @@ endif
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Regular.scores	
 	-touch $(DESTDIR)$(scoredir)/gtali.Colors.scores
 	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.Colors.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Colors.scores	
-	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ; fi
+	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Colors.scores
+
+install-exec-hook:
+	-if test "$(setgid)" = "true"; then \
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ;\
+	fi
 
 DISTCLEANFILES = $(Games_DATA) $(schema_DATA)
