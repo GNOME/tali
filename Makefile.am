@@ -45,9 +45,12 @@ gtali_CFLAGS += $(GHTREAD_CFLAGS)
 gtali_LDADD += $(GTHREAD_LIBS)
 endif
 
-schemadir   = $(GCONF_SCHEMA_FILE_DIR)
 schema_in_files = gtali.schemas.in
+if HAVE_GNOME
+schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+endif
+
 @INTLTOOL_SCHEMAS_RULE@
 
 EXTRA_DIST = README AUTHORS $(schema_in_files)
