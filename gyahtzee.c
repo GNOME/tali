@@ -874,7 +874,9 @@ main (int argc, char *argv[])
   if (!games_runtime_init ("gtali"))
     return 1;
 
+#ifdef ENABLE_SETGID
   setgid_io_init ();
+#endif
 
   /* Reset all yahtzee variables before parsing args */
   YahtzeeInit ();
