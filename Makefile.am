@@ -53,7 +53,9 @@ endif
 
 @INTLTOOL_SCHEMAS_RULE@
 
-EXTRA_DIST = README AUTHORS $(schema_in_files)
+man_MANS = gtali.6
+
+EXTRA_DIST = README AUTHORS $(schema_in_files) $(man_MANS)
 
 Gamesdir = $(datadir)/applications
 Games_in_files = gtali.desktop.in.in
