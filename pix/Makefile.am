@@ -16,3 +16,5 @@ Pixmap_DATA = \
 	kismet-none.svg
 
 EXTRA_DIST = $(Pixmap_DATA)
+
+-include $(top_srcdir)/git.mk
