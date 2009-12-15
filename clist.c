@@ -298,6 +298,7 @@ add_columns (GtkTreeView * tree)
     label = gtk_label_new (players[i].name);
     gtk_tree_view_column_set_widget (column, label);
     gtk_widget_show (label);
+    gtk_tree_view_column_set_visible (column, FALSE);
     gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
   }
   renderer = gtk_cell_renderer_text_new ();
@@ -340,10 +341,8 @@ initialize_column_titles (GtkTreeView * treeview)
     if (!label)
       continue;
 
-    if (i < NumberOfPlayers)
-      gtk_label_set_text (GTK_LABEL (label), players[i].name);
-    else
-      gtk_label_set_text (GTK_LABEL (label), "");
+    gtk_tree_view_column_set_visible (col, i < NumberOfPlayers);
+    gtk_label_set_text (GTK_LABEL (label), players[i].name);
     i++;
   }
   g_list_free (collist);

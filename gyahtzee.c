@@ -66,9 +66,6 @@ static gboolean ready_to_advance_player;
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
 #define SCORES_CATEGORY (game_type == GAME_KISMET ? "Colors" : NULL)
 
-#define DEFAULT_WIDTH 640
-#define DEFAULT_HEIGHT 480
-
 static char *dicefiles[NUMBER_OF_PIXMAPS] = { "gnome-dice-1.svg",
   "gnome-dice-2.svg",
   "gnome-dice-3.svg",
@@ -674,8 +671,15 @@ LoadDicePixmaps (void)
           g_file_test (path_kismet, G_FILE_TEST_EXISTS)) {
 
       for (j = 0; j < NUMBER_OF_DICE; j++) {
-        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_file (path);
-        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_file (path_kismet);
+        GdkPixbuf *pixbuf;
+
+        pixbuf = gdk_pixbuf_new_from_file_at_size (path, 60, 60, NULL);
+        dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_pixbuf (pixbuf);
+        gdk_pixbuf_unref (pixbuf);
+
+        pixbuf = gdk_pixbuf_new_from_file_at_size (path_kismet, 60, 60, NULL);
+        dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_pixbuf (pixbuf);
+        gdk_pixbuf_unref (pixbuf);
       }
 
     } /* FIXME: What happens if the file isn't found. */
@@ -769,7 +773,6 @@ GyahtzeeCreateMainWindow (void)
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
 
-  gtk_window_set_default_size (GTK_WINDOW (window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   games_conf_add_window (GTK_WINDOW (window), NULL);
 
   g_signal_connect (G_OBJECT (window), "delete_event",

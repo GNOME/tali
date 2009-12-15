@@ -5,7 +5,7 @@
       <applyto>/apps/gtali/NumberOfComputerOpponents</applyto>
       <owner>gtali</owner>
       <type>int</type>
-      <default>5</default>
+      <default>3</default>
       <locale name="C">
         <short></short>
         <long></long>
