@@ -675,11 +675,11 @@ LoadDicePixmaps (void)
 
         pixbuf = gdk_pixbuf_new_from_file_at_size (path, 60, 60, NULL);
         dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_pixbuf (pixbuf);
-        gdk_pixbuf_unref (pixbuf);
+        g_object_unref (pixbuf);
 
         pixbuf = gdk_pixbuf_new_from_file_at_size (path_kismet, 60, 60, NULL);
         dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_pixbuf (pixbuf);
-        gdk_pixbuf_unref (pixbuf);
+        g_object_unref (pixbuf);
       }
 
     } /* FIXME: What happens if the file isn't found. */
