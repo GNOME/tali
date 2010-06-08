@@ -149,7 +149,7 @@ do_setup (GtkWidget * widget, gpointer data)
   DisplayComputerThoughts = tmpDisplayComputerThoughts;
 
   for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
-    if (players[i].name != DefaultPlayerNames[i])
+    if (players[i].name != _(DefaultPlayerNames[i]))
       g_free (players[i].name);
     players[i].name =
       g_strdup (gtk_entry_get_text (GTK_ENTRY (PlayerNames[i])));
