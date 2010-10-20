@@ -344,10 +344,10 @@ setup_game (GtkAction * action, gpointer data)
   gtk_box_pack_start(GTK_BOX(box), box2, FALSE, FALSE, 0);
   label = gtk_label_new_with_mnemonic (_("_Difficulty:"));
   gtk_box_pack_start(GTK_BOX(box2), label, FALSE, FALSE, 0);
-  combo = gtk_combo_box_new_text();
-  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), C_("difficulty", "Easy"));
-  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), C_("difficulty", "Medium"));
-  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), C_("difficulty", "Hard"));
+  combo = gtk_combo_box_text_new();
+  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Easy"));
+  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Medium"));
+  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Hard"));
   skill_level = 0;
   while (NUM_TRIALS > skill_level_table[skill_level].trials &&
          skill_level < (SKILL_LEVEL_TABLE_SIZE - 1)) skill_level++;
@@ -361,9 +361,9 @@ setup_game (GtkAction * action, gpointer data)
   frame = games_frame_new (_("Game Type"));
   gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 2, 3, GTK_FILL,
                     GTK_FILL | GTK_EXPAND, 0, 0);
-  combo = gtk_combo_box_new_text();
-  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), C_("game type", "Regular"));
-  gtk_combo_box_append_text(GTK_COMBO_BOX(combo), C_("game type", "Colors"));
+  combo = gtk_combo_box_text_new();
+  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Regular"));
+  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Colors"));
   gtk_combo_box_set_active(GTK_COMBO_BOX(combo), game_type);
   NewGameType = game_type;
   g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (SetGameType),
