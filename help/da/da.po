@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2010-02-04 00:28+0100\n"
-"PO-Revision-Date: 2010-01-29 04:40+0000\n"
+"POT-Creation-Date: 2010-10-29 00:33+0200\n"
+"PO-Revision-Date: 2010-10-21 04:40+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../C/legal.xml:2(para)
+#: ../C/legal.xml:2(para) ../C/gtali.xml:2(para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -33,7 +33,7 @@ msgstr ""
 "kopi af GFDL her <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> eller i "
 "filen COPYING-DOCS som distribueres sammen med denne manual."
 
-#: ../C/legal.xml:12(para)
+#: ../C/legal.xml:12(para) ../C/gtali.xml:12(para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -45,7 +45,7 @@ msgstr ""
 "du gøre dette ved at tilføje en kopi af licensen til manualen, som beskrevet "
 "i afsnit 6 af licensen."
 
-#: ../C/legal.xml:19(para)
+#: ../C/legal.xml:19(para) ../C/gtali.xml:19(para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -59,7 +59,7 @@ msgstr ""
 "dokumentationsprojeket er gjort opmærksom på disse varemærker, så er disse "
 "navne vist med store bogstaver eller stort begyndelsesbogstav."
 
-#: ../C/legal.xml:35(para)
+#: ../C/legal.xml:35(para) ../C/gtali.xml:35(para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -87,7 +87,7 @@ msgstr ""
 "ÆNDRET VERSION AF DOKUMENTET ER AUTORISERET HERUNDER BORTSET FRA DENNE "
 "ANSVARSFRASKRIVELSE OG"
 
-#: ../C/legal.xml:55(para)
+#: ../C/legal.xml:55(para) ../C/gtali.xml:55(para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -111,7 +111,7 @@ msgstr ""
 "BRUG AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER HERAF, SELV HVIS EN "
 "SÅDAN PART HAR VÆRET INFORMERET OM MULIGHEDEN FOR SÅDANNE SKADER."
 
-#: ../C/legal.xml:28(para)
+#: ../C/legal.xml:28(para) ../C/gtali.xml:28(para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -178,6 +178,10 @@ msgstr "sdh@po.cwru.edu"
 #: ../C/gtali.xml:87(revnumber)
 msgid "Tali Manual V2.8"
 msgstr "Yatzymanual version 2.8"
+
+#: ../C/gtali.xml:88(date)
+msgid "September 2004"
+msgstr "September 2004"
 
 #: ../C/gtali.xml:90(para)
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
@@ -280,7 +284,7 @@ msgid ""
 "<guibutton>Roll!</guibutton> button."
 msgstr ""
 "Når du har valgt alle terningerne, du ønsker at kaste igen, så tryk på "
-"knappen <guibutton>Kast!</guibotton>."
+"knappen <guibutton>Kast!</guibutton>."
 
 #: ../C/gtali.xml:188(para)
 msgid ""
@@ -702,6 +706,3 @@ msgstr ""
 "\n"
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
-
-#~ msgid "September 2004"
-#~ msgstr "September 2004"
