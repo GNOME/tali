@@ -43,7 +43,7 @@ static gint setupdialog_destroy (GtkWidget * widget, gint mode);
 static GtkWidget *setupdialog = NULL;
 static GtkWidget *HumanSpinner, *ComputerSpinner;
 static GtkWidget *PlayerNames[MAX_NUMBER_OF_PLAYERS];
-static GtkObject *HumanAdj, *ComputerAdj;
+static GtkAdjustment *HumanAdj, *ComputerAdj;
 
 static int OriginalNumberOfComputers = -1;
 static int OriginalNumberOfHumans = -1;
@@ -270,7 +270,6 @@ setup_game (GtkAction * action, gpointer data)
 					     GTK_RESPONSE_CLOSE, NULL);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
-  gtk_dialog_set_has_separator (GTK_DIALOG (setupdialog), FALSE);
   g_signal_connect (G_OBJECT (setupdialog), "delete_event",
 		    G_CALLBACK (setupdialog_destroy), NULL);
   button = gtk_button_new_from_stock (GTK_STOCK_OK);

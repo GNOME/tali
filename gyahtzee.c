@@ -433,7 +433,7 @@ key_press (GtkWidget * widget, GdkEventKey * event, gpointer data)
 {
   gint offset;
 
-  offset = event->keyval - GDK_1;
+  offset = event->keyval - GDK_KEY_1;
 
   if ((offset < 0) || (offset >= NUMBER_OF_DICE)) {
     return FALSE;
@@ -783,7 +783,6 @@ GyahtzeeCreateMainWindow (void)
   statusbar = gtk_statusbar_new ();
   ui_manager = gtk_ui_manager_new ();
 
-  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
   games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
 
 	/*---- Menus ----*/
