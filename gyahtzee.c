@@ -163,7 +163,6 @@ CheerWinner (void)
 {
   int winner;
   int i;
-  GamesScoreValue score;
   gint pos;
   gchar *message;
 
@@ -186,9 +185,7 @@ CheerWinner (void)
   ShowoffPlayer (ScoreList, winner, 1);
 
   if (winner < NumberOfHumans) {
-    score.plain = (guint32) WinningScore;  
-
-    pos = games_scores_add_score (highscores, score);
+    pos = games_scores_add_plain_score (highscores, (guint32) WinningScore);
 
     if (pos > 0) {
       games_scores_update_score (highscores, players[winner].name);
