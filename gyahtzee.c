@@ -654,6 +654,7 @@ LoadDicePixmaps (void)
   int i, j;
   char *path, *path_kismet;
   const char *dir;
+  GError *error = NULL;
 
   dir = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
 
@@ -670,12 +671,20 @@ LoadDicePixmaps (void)
       for (j = 0; j < NUMBER_OF_DICE; j++) {
         GdkPixbuf *pixbuf;
 
-        pixbuf = gdk_pixbuf_new_from_file_at_size (path, 60, 60, NULL);
+        pixbuf = gdk_pixbuf_new_from_file_at_size (path, 60, 60, &error);
         dicePixmaps[j][i][GAME_YAHTZEE] = gtk_image_new_from_pixbuf (pixbuf);
+        if (error) {
+          g_warning ("Loading dice image %s: %s", path, error->message);
+          g_clear_error (&error);
+        }
         g_object_unref (pixbuf);
 
-        pixbuf = gdk_pixbuf_new_from_file_at_size (path_kismet, 60, 60, NULL);
+        pixbuf = gdk_pixbuf_new_from_file_at_size (path_kismet, 60, 60, &error);
         dicePixmaps[j][i][GAME_KISMET] = gtk_image_new_from_pixbuf (pixbuf);
+        if (error) {
+          g_warning ("Loading dice image %s: %s", path_kismet, error->message);
+          g_clear_error (&error);
+        }
         g_object_unref (pixbuf);
       }
 
