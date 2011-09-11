@@ -799,8 +799,8 @@ GyahtzeeCreateMainWindow (void)
 
 	/*---- Content ----*/
 
-  hbox = gtk_hbox_new (FALSE, 0);
-  vbox = gtk_vbox_new (FALSE, 0);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
@@ -813,7 +813,7 @@ GyahtzeeCreateMainWindow (void)
   LoadDicePixmaps ();
 
   /* Put all the dice in a vertical column */
-  dicebox = gtk_vbox_new (FALSE, 0);
+  dicebox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_box_pack_start (GTK_BOX (hbox), dicebox, FALSE, TRUE, 0);
   gtk_widget_show (dicebox);
 
@@ -836,7 +836,7 @@ GyahtzeeCreateMainWindow (void)
   gtk_box_pack_end (GTK_BOX (dicebox), toolbar, TRUE, TRUE, 0);
 
   for (i = 0; i < NUMBER_OF_DICE; i++) {
-    tmp = gtk_vbox_new (FALSE, 0);
+    tmp = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
     for (j = 0; j < NUMBER_OF_PIXMAPS; j++) {
       gtk_box_pack_start (GTK_BOX (tmp), dicePixmaps[i][j][GAME_YAHTZEE], FALSE, FALSE, 0);

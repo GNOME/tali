@@ -288,12 +288,12 @@ setup_game (GtkAction * action, gpointer data)
   gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_FILL, GTK_FILL,
 		    0, 0);
 
-  box = gtk_vbox_new (FALSE, 6);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
 
 	/*--- Spinner (number of humans) ---*/
   OriginalNumberOfHumans = NumberOfHumans;
-  box2 = gtk_hbox_new (FALSE, 12);
+  box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
   label = gtk_label_new_with_mnemonic (_("_Number of players:"));
 
@@ -313,7 +313,7 @@ setup_game (GtkAction * action, gpointer data)
   gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 1, 2, GTK_FILL,
 		    GTK_FILL | GTK_EXPAND, 0, 0);
 
-  box = gtk_vbox_new (FALSE, 6);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
 
 	/*--- Button ---*/
@@ -325,7 +325,7 @@ setup_game (GtkAction * action, gpointer data)
 
 	/*--- Spinner (number of computers) ---*/
   OriginalNumberOfComputers = NumberOfComputers;
-  box2 = gtk_hbox_new (FALSE, 12);
+  box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
   label = gtk_label_new_with_mnemonic (_("N_umber of opponents:"));
   gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
@@ -339,7 +339,7 @@ setup_game (GtkAction * action, gpointer data)
 		    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
   gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
 
-  box2 = gtk_hbox_new(FALSE, 2);
+  box2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
   gtk_box_pack_start(GTK_BOX(box), box2, FALSE, FALSE, 0);
   label = gtk_label_new_with_mnemonic (_("_Difficulty:"));
   gtk_box_pack_start(GTK_BOX(box2), label, FALSE, FALSE, 0);
@@ -373,11 +373,11 @@ setup_game (GtkAction * action, gpointer data)
   frame = games_frame_new (_("Player Names"));
   gtk_table_attach_defaults (GTK_TABLE (table), frame, 1, 2, 0, 3);
 
-  box = gtk_vbox_new (FALSE, 6);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
 
   for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
-    box2 = gtk_hbox_new (FALSE, 12);
+    box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
 
     gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
     ts = g_strdup_printf ("_%1d:", i + 1);
