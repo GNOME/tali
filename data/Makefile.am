@@ -25,7 +25,7 @@ endif
 
 man_MANS = gtali.6
 
-EXTRA_DIST = README AUTHORS $(schema_in_files) $(man_MANS) $(pixmap_DATA)
+EXTRA_DIST = $(schema_in_files) $(man_MANS) $(pixmap_DATA)
 
 gamesdir = $(datadir)/applications
 games_in_files = gtali.desktop.in.in
