@@ -253,7 +253,7 @@ gint
 setup_game (GtkAction * action, gpointer data)
 {
   GtkWidget *box, *box2, *label, *button, *frame;
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkWidget *combo;
   gchar *ts;
   int i;
@@ -276,17 +276,16 @@ setup_game (GtkAction * action, gpointer data)
   g_signal_connect (G_OBJECT (setupdialog), "response",
 		    G_CALLBACK (do_setup), NULL);
 
-  table = gtk_table_new (3, 2, FALSE);
-  gtk_container_set_border_width (GTK_CONTAINER (table), 5);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 18);
-  gtk_table_set_col_spacings (GTK_TABLE (table), 18);
+  grid = gtk_grid_new ();
+  gtk_container_set_border_width (GTK_CONTAINER (grid), 5);
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 18);
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 18);
 
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 
-                      table, FALSE, FALSE, 0);
+                      grid, FALSE, FALSE, 0);
 
   frame = games_frame_new (_("Human Players"));
-  gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_FILL, GTK_FILL,
-		    0, 0);
+  gtk_grid_attach (GTK_GRID (grid), frame, 0, 0, 1, 1);
 
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
@@ -310,8 +309,7 @@ setup_game (GtkAction * action, gpointer data)
 
 
   frame = games_frame_new (_("Computer Opponents"));
-  gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 1, 2, GTK_FILL,
-		    GTK_FILL | GTK_EXPAND, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), frame, 0, 1, 1, 1);
 
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
@@ -358,8 +356,7 @@ setup_game (GtkAction * action, gpointer data)
     /*--- Combo (yahtzee or kismet style ----*/
 
   frame = games_frame_new (_("Game Type"));
-  gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 2, 3, GTK_FILL,
-                    GTK_FILL | GTK_EXPAND, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), frame, 0, 2, 1, 1);
   combo = gtk_combo_box_text_new();
   gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Regular"));
   gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Colors"));
@@ -371,7 +368,7 @@ setup_game (GtkAction * action, gpointer data)
 
 	/*--- PLAYER NAMES FRAME ----*/
   frame = games_frame_new (_("Player Names"));
-  gtk_table_attach_defaults (GTK_TABLE (table), frame, 1, 2, 0, 3);
+  gtk_grid_attach (GTK_GRID (grid), frame, 1, 0, 1, 3);
 
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
