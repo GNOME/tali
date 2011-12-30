@@ -2,7 +2,7 @@
 _Name=Tali
 _Comment=Beat the odds in a poker-style dice game
 Exec=gtali
-Icon=gnome-tali
+Icon=gtali
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Game;CardGame;

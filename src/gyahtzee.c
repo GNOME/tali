@@ -615,7 +615,7 @@ about_cb (GtkAction * action, gpointer data)
 			 "authors", authors,
 			 "documenters", documenters,
 			 "translator-credits", _("translator-credits"),
-			 "logo-icon-name", "gnome-tali",
+			 "logo-icon-name", "gtali",
 			 "website",
 			 "http://www.gnome.org/projects/gnome-games/",
 			 "website-label", _("GNOME Games web site"),
@@ -952,7 +952,7 @@ main (int argc, char *argv[])
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
-  gtk_window_set_default_icon_name ("gnome-tali");
+  gtk_window_set_default_icon_name ("gtali");
 
   if (NumberOfComputers == 0)	/* Not set on the command-line. */
     NumberOfComputers = games_conf_get_integer (NULL, KEY_NUMBER_OF_COMPUTERS, NULL);
