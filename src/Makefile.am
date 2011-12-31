@@ -7,8 +7,7 @@ gtali_SOURCES =       \
 	yahtzee.h        \
 	yahtzee.c        \
 	computer.c       \
-	setup.c          \
-	$(NULL)
+	setup.c
 
 gtali_CPPFLAGS = \
 	-I$(top_srcdir) \
@@ -21,8 +20,7 @@ gtali_CFLAGS = \
 gtali_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
-	$(INTLLIBS)	\
-	$(NULL)
+	$(INTLLIBS)
 
 if HAVE_GNOME
 gtali_CFLAGS += $(GNOME_CFLAGS)
