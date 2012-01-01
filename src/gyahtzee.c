@@ -652,17 +652,14 @@ LoadDicePixmaps (void)
 {
   int i, j;
   char *path, *path_kismet;
-  const char *dir;
   GError *error = NULL;
-
-  dir = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
 
   for (i = 0; i < NUMBER_OF_PIXMAPS; i++) {
     /* This is not efficient, but it lets us load animated types,
      * there is no way for us to copy a general GtkImage (the old 
      * code had a way for static images). */
-    path = g_build_filename (dir, dicefiles[i], NULL);
-    path_kismet = g_build_filename (dir, kdicefiles[i], NULL);
+    path = g_build_filename (DATA_DIRECTORY, dicefiles[i], NULL);
+    path_kismet = g_build_filename (DATA_DIRECTORY, kdicefiles[i], NULL);
 
     if (g_file_test (path, G_FILE_TEST_EXISTS) && 
           g_file_test (path_kismet, G_FILE_TEST_EXISTS)) {

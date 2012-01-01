@@ -1,6 +1,6 @@
 SUBDIRS = icons
 
-pixmapdir = $(pkgdatadir)/gtali/pixmaps
+pixmapdir = $(datadir)/gtali
 pixmap_DATA = \
 	gnome-dice-1.svg \
 	gnome-dice-2.svg \

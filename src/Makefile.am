@@ -14,6 +14,7 @@ gtali_CPPFLAGS = \
 	$(AM_CPPFLAGS)
 
 gtali_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/gtali\" \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
 		
