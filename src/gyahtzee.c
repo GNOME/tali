@@ -48,7 +48,6 @@
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-conf.h>
-#include <libgames-support/games-runtime.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -880,9 +879,6 @@ main (int argc, char *argv[])
   gboolean retval;
   GError *error = NULL;
 
-  if (!games_runtime_init ("gtali"))
-    return 1;
-
 #ifdef ENABLE_SETGID
   setgid_io_init ();
 #endif
@@ -1022,8 +1018,6 @@ main (int argc, char *argv[])
   gtk_main ();
 
   games_conf_shutdown ();
-
-  games_runtime_shutdown ();
 
   exit(0);
 }
