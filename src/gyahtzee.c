@@ -44,7 +44,6 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-help.h>
 #include <libgames-support/games-stock.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
@@ -703,7 +702,12 @@ update_undo_sensitivity (void)
 static void
 help_cb (GtkAction * action, gpointer data)
 {
-  games_help_display (window, "gtali", NULL);
+  GError *error = NULL;
+
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "ghelp:gtali", gtk_get_current_event_time (), &error);
+  if (error)
+    g_warning ("Failed to show help: %s", error->message);
+  g_clear_error (&error);
 }
 
 
