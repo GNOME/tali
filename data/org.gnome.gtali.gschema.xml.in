@@ -1,0 +1,29 @@
+<schemalist gettext-domain="gnome-games">
+  <schema id="org.gnome.gtali" path="/org/gnome/gtali/">
+    <key name="number-of-computer-opponents" type="i">
+      <default>3</default>
+    </key>
+    <key name="number-of-human-opponents" type="i">
+      <default>1</default>
+    </key>
+    <key name="delay-between-rolls" type="b">
+      <default>false</default>
+      <_summary>Delay between rolls</_summary>
+      <_description>Choose whether or not to insert a delay between the computer's dice rolls so the player can follow what it is doing.</_description>
+    </key>
+    <key name="display-computer-thoughts" type="b">
+      <default>false</default>
+      <_summary>Display the computer's thoughts</_summary>
+      <_description>If set to true, a dump of the AI's working will be done to standard output.</_description>
+    </key>
+    <key name="player-names" type="as">
+      <default l10n="messages" context="PlayerNames">[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]</default>
+    </key>
+    <key name="game-type" type="s">
+      <default l10n="messages" context="GameType">'Regular'</default>
+    </key>
+    <key name="monte-carlo-trials" type="i">
+      <default>0</default>
+    </key>
+  </schema>
+</schemalist>

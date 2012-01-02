@@ -17,28 +17,20 @@ pixmap_DATA = \
 	kismet6.svg \
 	kismet-none.svg
 
-schema_in_files = gtali.schemas.in
-if HAVE_GNOME
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-endif
-
-@INTLTOOL_SCHEMAS_RULE@
+gsettings_in_file = org.gnome.gtali.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
 
 man_MANS = gtali.6
 
-EXTRA_DIST = $(schema_in_files) $(man_MANS) $(pixmap_DATA)
+EXTRA_DIST = $(gsettings_in_file) $(man_MANS) $(pixmap_DATA)
 
 gamesdir = $(datadir)/applications
 games_in_files = gtali.desktop.in.in
 games_DATA = $(games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-install-data-local:
-if GCONF_SCHEMAS_INSTALL
-	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/gtali/$(schema_DATA)
-endif
-
-DISTCLEANFILES = $(games_DATA) $(schema_DATA)
+DISTCLEANFILES = $(games_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

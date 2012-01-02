@@ -47,14 +47,12 @@
 #include <libgames-support/games-stock.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
-#include <libgames-support/games-conf.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
 
 #define DELAY_MS 600
 
-static char *appID = "gtali";
 static char *appName = N_("Tali");
 static guint last_timeout = 0;
 static gboolean ready_to_advance_player;
@@ -84,6 +82,7 @@ static char *kdicefiles[NUMBER_OF_PIXMAPS] = { "kismet1.svg",
 
 static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS][GAME_TYPES];
 
+GSettings *settings;
 GtkWidget *window;
 GtkWidget *ScoreList;
 static GtkWidget *statusbar;
@@ -779,7 +778,7 @@ GyahtzeeCreateMainWindow (void)
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
 
-  games_conf_add_window (GTK_WINDOW (window), NULL);
+  //games_conf_add_window (GTK_WINDOW (window), NULL);
 
   g_signal_connect (G_OBJECT (window), "delete_event",
 		    G_CALLBACK (quit_game), NULL);
@@ -894,9 +893,9 @@ main (int argc, char *argv[])
     exit (1);
   }
 
-  g_set_application_name (_(appName));
+  settings = g_settings_new ("org.gnome.gtali");
 
-  games_conf_initialise (appID);
+  g_set_application_name (_(appName));
 
   games_stock_init ();
 
@@ -948,10 +947,10 @@ main (int argc, char *argv[])
   gtk_window_set_default_icon_name ("gtali");
 
   if (NumberOfComputers == 0)	/* Not set on the command-line. */
-    NumberOfComputers = games_conf_get_integer (NULL, KEY_NUMBER_OF_COMPUTERS, NULL);
+    NumberOfComputers = g_settings_get_int (settings, "number-of-computer-opponents");
 
   if (NumberOfHumans == 0)	/* Not set on the command-line. */
-    NumberOfHumans = games_conf_get_integer (NULL, KEY_NUMBER_OF_HUMANS, NULL);
+    NumberOfHumans = g_settings_get_int (settings, "number-of-human-opponents");
 
   if (NumberOfHumans < 1)
     NumberOfHumans = 1;
@@ -968,22 +967,23 @@ main (int argc, char *argv[])
   else {
     char *type;
 
-    type = games_conf_get_string (NULL, KEY_GAME_TYPE, NULL);
+    type = g_settings_get_string (settings, "game-type");
     game_type = game_type_from_string(type);
   }
 
   set_new_game_type(game_type);
 
   if (NUM_TRIALS <= 0)
-      NUM_TRIALS = games_conf_get_integer (NULL, KEY_NUMTRIALS, NULL);
+      NUM_TRIALS = g_settings_get_int (settings, "monte-carlo-trials");
 
   if (DoDelay == 0)		/* Not set on the command-line */
-    DoDelay = games_conf_get_boolean (NULL, KEY_DELAY_BETWEEN_ROLLS, NULL);
+    DoDelay = g_settings_get_boolean (settings, "delay-between-rolls");
   if (DisplayComputerThoughts == 0)	/* Not set on the command-line */
-    DisplayComputerThoughts = games_conf_get_boolean (NULL, KEY_DISPLAY_COMPUTER_THOUGHTS, NULL);
+    DisplayComputerThoughts = g_settings_get_boolean (settings, "display-computer-thoughts");
   
   /* Read in new player names */
-  player_names = games_conf_get_string_list (NULL, KEY_PLAYER_NAMES, &n_player_names, NULL);
+  player_names = g_settings_get_strv (settings, "player-names");
+  n_player_names = g_strv_length (player_names);
   if (player_names) {
     n_player_names = MIN (n_player_names, MAX_NUMBER_OF_PLAYERS);
 
@@ -1012,8 +1012,6 @@ main (int argc, char *argv[])
   GyahtzeeNewGame ();
 
   gtk_main ();
-
-  games_conf_shutdown ();
 
   exit(0);
 }

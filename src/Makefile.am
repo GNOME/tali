@@ -23,11 +23,6 @@ gtali_LDADD = \
 	$(GTK_LIBS)	\
 	$(INTLLIBS)
 
-if HAVE_GNOME
-gtali_CFLAGS += $(GNOME_CFLAGS)
-gtali_LDADD += $(GNOME_LIBS)
-endif
-
 if HAVE_RSVG
 gtali_CFLAGS += $(RSVG_CFLAGS)
 gtali_LDADD += $(RSVG_LIBS)

@@ -34,7 +34,6 @@
 #include <gtk/gtk.h>
 
 #include <libgames-support/games-frame.h>
-#include <libgames-support/games-conf.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
@@ -53,6 +52,7 @@ static int tmpDoDelay = -1, tmpDisplayComputerThoughts;
 static int skill_level;
 extern int NUM_TRIALS;
 
+extern GSettings *settings;
 extern GtkWidget *window;
 typedef struct game_type_table_t {
     GameType type;
@@ -161,27 +161,26 @@ do_setup (GtkWidget * widget, gpointer data)
   setupdialog_destroy (setupdialog, 1);
 
   n_player_names = MAX_NUMBER_OF_PLAYERS;
-  player_names = g_newa (char *, n_player_names);
+  player_names = g_newa (char *, n_player_names + 1);
   for (i = 0; i < MAX_NUMBER_OF_PLAYERS; ++i) {
     player_names[i] = players[i].name;
   }
+  player_names[i] = NULL;
 
-  games_conf_set_string_list (NULL, KEY_PLAYER_NAMES,
-                              (const char * const *) player_names,
-                              n_player_names);
+  g_settings_set_strv (settings, "player-names", (const gchar *const *) player_names);
 
-  games_conf_set_integer (NULL, KEY_NUMBER_OF_COMPUTERS, NumberOfComputers);
+  g_settings_set_int (settings, "number-of-computer-opponents", NumberOfComputers);
 
-  games_conf_set_integer (NULL, KEY_NUMBER_OF_HUMANS, NumberOfHumans);
+  g_settings_set_int (settings, "number-of-human-opponents", NumberOfHumans);
 
-  games_conf_set_boolean (NULL, KEY_DELAY_BETWEEN_ROLLS, DoDelay);
+  g_settings_set_boolean (settings, "delay-between-rolls", DoDelay);
 
   type_name = game_type_name(NewGameType);
   if (type_name) {
-    games_conf_set_string (NULL, KEY_GAME_TYPE, type_name);
+    g_settings_set_string (settings, "game-type", type_name);
   }
 
-  games_conf_set_integer (NULL, KEY_NUMTRIALS, NUM_TRIALS);
+  g_settings_set_int (settings, "monte-carlo-trials", NUM_TRIALS);
 
   if (((NumberOfComputers != OriginalNumberOfComputers)
        || (NumberOfHumans != OriginalNumberOfHumans) 
