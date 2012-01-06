@@ -31,6 +31,7 @@ games_in_files = gtali.desktop.in.in
 games_DATA = $(games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+CLEANFILES = $(games_DATA) $(gsettings_SCHEMAS)
 DISTCLEANFILES = $(games_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk
