@@ -878,6 +878,8 @@ main (int argc, char *argv[])
   gboolean retval;
   GError *error = NULL;
 
+  games_scores_startup ();
+
   /* Reset all yahtzee variables before parsing args */
   YahtzeeInit ();
 
