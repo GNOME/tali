@@ -1,16 +1,14 @@
-include $(top_srcdir)/gnome-doc-utils.make
+@YELP_HELP_RULES@
+HELP_ID = gtali
 
-DOC_LINGUAS = ca cs da de el en_GB es eu fr gl it oc pt_BR sl sr sr@latin sv zh_CN
-
-DOC_MODULE = gtali
-
-DOC_ENTITIES = \
-	legal.xml
-
-DOC_FIGURES = \
+HELP_MEDIA = \
 	figures/mainwindow.png \
 	figures/preferences.png
 
-dist-hook: doc-dist-hook
+HELP_FILES = \
+	gtali.xml \
+	legal.xml
+
+HELP_LINGUAS = ca cs da de el en_GB es eu fr gl it oc pt_BR sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk
