@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-01-23 14:42+0100\n"
+"POT-Creation-Date: 2012-01-23 13:45+0000\n"
+"PO-Revision-Date: 2012-01-25 16:33+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2007-2008\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2007-2012\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
 #. This is a reference to an external file such as an image or video. When
@@ -33,8 +32,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gtali.xml:163(imagedata)
-#| msgid ""
-#| "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
@@ -51,8 +48,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gtali.xml:240(imagedata)
-#| msgid ""
-#| "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
@@ -181,10 +176,6 @@ msgstr ""
 "DAÑOS."
 
 #: C/gtali.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
-#| msgid ""
-#| "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
-#| "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
-#| "UNDERSTANDING THAT: <placeholder-1/>"
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -262,11 +253,6 @@ msgstr ""
 "marca registrada de Hasbro, Inc."
 
 #: C/gtali.xml:136(sect1/para)
-#| msgid ""
-#| "To run <application>GNOME Tali</application>, select "
-#| "<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
-#| "guimenuitem></menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
-#| "<command>gtali</command> on the command line."
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -302,6 +288,9 @@ msgid ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
 "main window screenshot.</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Captura de "
+"pantalla de la ventana principal de Tali.</phrase> </textobject>"
 
 #: C/gtali.xml:172(sect1/para)
 msgid "When play starts, you see the results of your first throw of the dice."
@@ -405,6 +394,9 @@ msgid ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
 "preferences dialog box.</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Cuadro de "
+"diálogo de preferencias de Tali.</phrase> </textobject>"
 
 #: C/gtali.xml:248(variablelist/title)
 msgid "Human Players"
@@ -428,7 +420,7 @@ msgstr "Oponentes electrónicos"
 
 #: C/gtali.xml:262(varlistentry/term)
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
-msgstr ""
+msgstr "<guimenuitem>Demora entre lanzamientos</guimenuitem>"
 
 #: C/gtali.xml:264(listitem/para)
 msgid ""
@@ -459,7 +451,6 @@ msgid "Game Type"
 msgstr "Tipo de juego"
 
 #: C/gtali.xml:285(varlistentry/term)
-#| msgid "Version of the game to play"
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Versión del juego a la que jugar</guimenuitem>"
 
@@ -475,7 +466,7 @@ msgstr ""
 
 #: C/gtali.xml:297(varlistentry/term)
 msgid "<guimenuitem>Player Names</guimenuitem>"
-msgstr ""
+msgstr "<guimenuitem>Nombres de los jugadores</guimenuitem>"
 
 #: C/gtali.xml:299(listitem/para)
 msgid "To change the names of the players just enter new names in the boxes."
@@ -696,12 +687,6 @@ msgid "License"
 msgstr "Licencia"
 
 #: C/gtali.xml:454(sect1/para)
-#| msgid ""
-#| "This program is free software; you can redistribute it and/or modify it "
-#| "under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl"
-#| "\"><citetitle>GNU General Public License</citetitle></ulink> as published "
-#| "by the Free Software Foundation; either version 2 of the License, or (at "
-#| "your option) any later version."
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\"> "
@@ -745,15 +730,6 @@ msgstr ""
 "   "
 
 #: C/gtali.xml:468(sect1/para)
-#| msgid ""
-#| "A copy of the <citetitle>GNU General Public License</citetitle> is "
-#| "included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. "
-#| "You may also obtain a copy of the <citetitle>GNU General Public License</"
-#| "citetitle> from the Free Software Foundation by visiting <ulink type="
-#| "\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing "
-#| "to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-#| "street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-#| "1307</postcode><country>USA</country></address>"
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -773,13 +749,6 @@ msgid "link"
 msgstr "enlace"
 
 #: C/legal.xml:2(legalnotice/para)
-#| msgid ""
-#| "Permission is granted to copy, distribute and/or modify this document "
-#| "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
-#| "or any later version published by the Free Software Foundation with no "
-#| "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#| "can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl"
-#| "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
