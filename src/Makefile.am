@@ -15,6 +15,7 @@ gtali_CPPFLAGS = \
 
 gtali_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gtali\" \
+	-DLOCALEDIR=\"$(datadir)/locale\" \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
 		
