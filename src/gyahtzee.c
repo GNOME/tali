@@ -39,6 +39,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
+#include <locale.h>
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
