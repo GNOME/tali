@@ -16,18 +16,15 @@ gtali_CPPFLAGS = \
 gtali_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gtali\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GTK_CFLAGS)	\
+	$(GTK_CFLAGS) \
+	$(RSVG_CFLAGS) \
 	$(AM_CFLAGS)
 		
 gtali_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
+	$(RSVG_LIBS) \
 	$(INTLLIBS)
-
-if HAVE_RSVG
-gtali_CFLAGS += $(RSVG_CFLAGS)
-gtali_LDADD += $(RSVG_LIBS)
-endif
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
