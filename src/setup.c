@@ -33,10 +33,9 @@
 
 #include <gtk/gtk.h>
 
-#include <libgames-support/games-frame.h>
-
 #include "yahtzee.h"
 #include "gyahtzee.h"
+#include "games-frame.h"
 
 static gint setupdialog_destroy (GtkWidget * widget, gint mode);
 static GtkWidget *setupdialog = NULL;

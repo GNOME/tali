@@ -7,7 +7,9 @@ gtali_SOURCES =       \
 	yahtzee.h        \
 	yahtzee.c        \
 	computer.c       \
-	setup.c
+	setup.c          \
+	games-frame.c    \
+	games-frame.h
 
 gtali_CPPFLAGS = \
 	-I$(top_srcdir) \
