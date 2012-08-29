@@ -9,7 +9,9 @@ gtali_SOURCES =       \
 	computer.c       \
 	setup.c          \
 	games-frame.c    \
-	games-frame.h
+	games-frame.h    \
+	games-stock.c    \
+	games-stock.h
 
 gtali_CPPFLAGS = \
 	-I$(top_srcdir) \
@@ -18,6 +20,7 @@ gtali_CPPFLAGS = \
 gtali_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gtali\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	$(GTK_CFLAGS) \
 	$(RSVG_CFLAGS) \
 	$(AM_CFLAGS)
