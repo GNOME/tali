@@ -125,8 +125,6 @@ GamesScores *highscores;
 static GtkWidget *dialog = NULL;
 
 static gint modify_dice (GtkWidget * widget, gpointer data);
-static gint roll_dice (GtkWidget * widget, GdkEvent * event,
-			     gpointer data);
 static void UpdateRollLabel (void);
 
 static void
@@ -415,13 +413,17 @@ ShowPlayer (int num, int field)
   }
 }
 
-static gint
-quit_game (GObject * object, gpointer data)
+static void
+quit_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
-  g_application_quit (G_APPLICATION (application));
-  return TRUE;
+  gtk_widget_destroy (window);
 }
 
+static void
+preferences_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
+{
+  setup_game ();
+}
 
 /* This handles the keys 1..5 for the dice. */
 static gint
@@ -460,11 +462,10 @@ GyahtzeeNewGame (void)
 }
 
 
-static gint
-new_game_callback (GtkAction * action, gpointer data)
+static void
+new_game_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   GyahtzeeNewGame ();
-  return FALSE;
 }
 
 static void
@@ -548,8 +549,8 @@ modify_dice (GtkWidget * widget, gpointer data)
 
 
 /* Callback on Roll! button press */
-gint
-roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
+static void
+roll_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
@@ -558,7 +559,6 @@ roll_dice (GtkWidget * widget, GdkEvent * event, gpointer data)
     UpdateRollLabel ();
     LastHumanNumberOfRolls = NumberOfRolls;
   }
-  return FALSE;
 }
 
 void
@@ -580,8 +580,8 @@ say (char *fmt, ...)
 }
 
 
-static gint
-about_cb (GtkAction * action, gpointer data)
+static void
+about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   const gchar *authors[] = {
     N_("GNOME version (1998):"),
@@ -620,8 +620,6 @@ about_cb (GtkAction * action, gpointer data)
 			 "website-label", _("GNOME Games web site"),
 			 "wrap-license", TRUE, NULL);
   g_free (license);
-
-  return FALSE;
 }
 
 void
@@ -634,17 +632,16 @@ ShowHighScores (void)
   gtk_widget_hide (dialog);
 }
 
-static gint
-score_callback (GtkAction * action, gpointer data)
+static void
+score_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   ShowHighScores ();
-  return FALSE;
 }
 
-static gint undo_callback(GtkAction *action, gpointer data)
+static void
+undo_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   PreviousPlayer();
-  return FALSE;
 }
 
 static void
@@ -695,11 +692,11 @@ update_undo_sensitivity (void)
 {
   /* Unfortunately, this does not change the state of undo button in app menu :( */
   gboolean enable = UndoVisible ();
-  gboolean result = g_action_group_query_action (G_ACTION_GROUP (application), "Undo", &enable, NULL, NULL, NULL, NULL);
+  g_action_group_query_action (G_ACTION_GROUP (application), "undo", &enable, NULL, NULL, NULL, NULL);
 }
 
 static void
-help_cb (GtkAction * action, gpointer data)
+help_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   GError *error = NULL;
 
@@ -710,86 +707,15 @@ help_cb (GtkAction * action, gpointer data)
 }
 
 static const GActionEntry app_entries[] = {
-  {"NewGame", new_game_callback, NULL, NULL, NULL},
-  {"Undo", undo_callback, NULL, NULL, NULL},
-  {"Scores", score_callback, NULL, NULL, NULL},
-  {"Quit", quit_game, NULL, NULL, NULL},
-  {"Preferences", setup_game, NULL, NULL, NULL},
-  {"Contents", help_cb, NULL, NULL, NULL},
-  {"About", about_cb, NULL, NULL, NULL},
-  {"Roll", roll_dice, NULL, NULL, NULL}
+  {"new-game", new_game_cb, NULL, NULL, NULL},
+  {"undo", undo_cb, NULL, NULL, NULL},
+  {"scores", score_cb, NULL, NULL, NULL},
+  {"quit", quit_cb, NULL, NULL, NULL},
+  {"preferences", preferences_cb, NULL, NULL, NULL},
+  {"help", help_cb, NULL, NULL, NULL},
+  {"about", about_cb, NULL, NULL, NULL},
+  {"roll", roll_cb, NULL, NULL, NULL}
 };
-
-static const GtkActionEntry action_entry[] = {
-  /* Roll is just an accelerator */
-  {"Roll", GTK_STOCK_REFRESH, NULL, "r", NULL, G_CALLBACK (roll_dice)}
-};
-
-static const char builder_description[] =
-  " <interface>"
-  "  <menu id = 'app-menu'>"
-  "  <section>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_New Game</attribute>"
-  "   <attribute name='action'>app.NewGame</attribute>"
-  "   </item>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_Undo Move</attribute>"
-  "   <attribute name='action'>app.Undo</attribute>"
-  "   <attribute name='accel'>&lt;Primary&gt;z</attribute>"
-  "   </item>"    
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_Preferences</attribute>"
-  "   <attribute name='action'>app.Preferences</attribute>"
-  "   </item>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_Scores</attribute>"
-  "   <attribute name='action'>app.Scores</attribute>"
-  "   </item>"
-  "  </section>"
-  "  <section>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_Help</attribute>"
-  "   <attribute name='action'>app.Contents</attribute>"
-  "   <attribute name='accel'>F1</attribute>"
-  "   </item>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_About</attribute>"
-  "   <attribute name='action'>app.About</attribute>"
-  "   </item>"
-  "  </section>"
-  "  <section>"
-  "   <item>"
-  "   <attribute name='label' translatable='yes'>_Quit</attribute>"
-  "   <attribute name='action'>app.Quit</attribute>"
-  "   <attribute name='accel'>&lt;Primary&gt;q</attribute>"
-  "   </item>"
-  "  </section>"
-  "  </menu>"
-  " </interface>";
-
-static const char ui_description[] =
-  "<ui>"
-  "  <accelerator action='Roll' />" "</ui>";
-
-
-static void
-create_menus (GtkUIManager * ui_manager)
-{
-  GtkActionGroup *action_group;
-
-  action_group = gtk_action_group_new ("group");
-
-  gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
-  gtk_action_group_add_actions (action_group, action_entry,
-				G_N_ELEMENTS (action_entry), window);
-
-  gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
-  gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
-  scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "Scores");
-  undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "Undo");
-  update_undo_sensitivity();
-}
 
 
 static void
@@ -799,9 +725,7 @@ GyahtzeeCreateMainWindow (void)
   GtkWidget *toolbar;
   GtkWidget *tmp;
   GtkWidget *dicebox;
-  GtkAccelGroup *accel_group;
-  GtkBuilder *builder;
-  GtkUIManager *ui_manager;
+  GMenu *app_menu, *section;
   int i, j;
 
   window = gtk_application_window_new (application);
@@ -811,24 +735,34 @@ GyahtzeeCreateMainWindow (void)
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
-  g_signal_connect (G_OBJECT (window), "delete_event",
-		    G_CALLBACK (quit_game), NULL);
   g_signal_connect (G_OBJECT (window), "key_press_event",
 		    G_CALLBACK (key_press), NULL);
 
   statusbar = gtk_statusbar_new ();
-  ui_manager = gtk_ui_manager_new ();
-  builder = gtk_builder_new ();
-  gtk_builder_add_from_string (builder, builder_description, -1, NULL);
 
-  games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
+  g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
+  gtk_application_add_accelerator (application, "<Primary>z", "app.undo", NULL);
+  gtk_application_add_accelerator (application, "<Primary>q", "app.quit", NULL);
+  gtk_application_add_accelerator (application, "<Primary>r", "app.roll", NULL);
+  gtk_application_add_accelerator (application, "F1", "app.help", NULL);
 
 	/*---- Menus ----*/
-  create_menus (ui_manager);
-  accel_group = gtk_ui_manager_get_accel_group (ui_manager);
-  gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
-  g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
-  gtk_application_set_app_menu (GTK_APPLICATION (application), G_MENU_MODEL (gtk_builder_get_object (builder, "app-menu")));
+  app_menu = g_menu_new ();
+  section = g_menu_new ();
+  g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
+  g_menu_append (section, _("_New Game"), "app.new-game");
+  g_menu_append (section, _("_Undo Move"), "app.undo");
+  g_menu_append (section, _("_Preferences"), "app.preferences");
+  g_menu_append (section, _("_Scores"), "app.scores");
+  section = g_menu_new ();
+  g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
+  g_menu_append (section, _("_Help"), "app.help");
+  g_menu_append (section, _("_About"), "app.about");
+  g_menu_append (section, _("_Quit"), "app.quit");
+  scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "scores");
+  undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
+  update_undo_sensitivity();
+  gtk_application_set_app_menu (GTK_APPLICATION (application), G_MENU_MODEL (app_menu));
 
 	/*---- Content ----*/
 
@@ -857,7 +791,7 @@ GyahtzeeCreateMainWindow (void)
   mbutton = gtk_button_new_with_label (_("Roll!"));
   gtk_box_pack_end (GTK_BOX (dicebox), mbutton, FALSE, FALSE, 5);
   g_signal_connect (G_OBJECT (mbutton), "clicked",
-		    G_CALLBACK (roll_dice), NULL);
+		    G_CALLBACK (roll_cb), NULL);
   gtk_widget_show (GTK_WIDGET (mbutton));
 
   toolbar = gtk_toolbar_new ();

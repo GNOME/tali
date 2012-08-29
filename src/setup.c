@@ -247,8 +247,8 @@ SetSkillLevel (GtkWidget *widget, gpointer *data)
     return FALSE;
 }
 
-gint
-setup_game (GtkAction * action, gpointer data)
+void
+setup_game (void)
 {
   GtkWidget *box, *box2, *label, *button, *frame;
   GtkWidget *grid;
@@ -258,7 +258,7 @@ setup_game (GtkAction * action, gpointer data)
 
   if (setupdialog) {
     gtk_window_present (GTK_WINDOW (setupdialog));
-    return FALSE;
+    return;
   }
 
   setupdialog = gtk_dialog_new_with_buttons (_("Tali Preferences"),
@@ -390,6 +390,4 @@ setup_game (GtkAction * action, gpointer data)
   }
 
   gtk_widget_show_all (setupdialog);
-
-  return FALSE;
 }

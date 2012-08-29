@@ -29,7 +29,7 @@ extern void score_list_set_column_title (GtkWidget * scorelist, int column,
 					 const char *str);
 extern void update_score_tooltips (void);
 /* setup.c */
-extern gint setup_game (GtkAction * action, gpointer data);
+extern void setup_game (void);
 extern void GRenamePlayer (gint playerno);
 extern GameType game_type_from_string(const gchar *string);
 extern GameType get_new_game_type(void);
