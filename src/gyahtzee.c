@@ -45,11 +45,10 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-scores.h>
-#include <libgames-support/games-scores-dialog.h>
-
 #include "yahtzee.h"
 #include "gyahtzee.h"
+#include "games-scores.h"
+#include "games-scores-dialog.h"
 #include "games-stock.h"
 
 #define DELAY_MS 600
