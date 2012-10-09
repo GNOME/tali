@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
-data/gtali.desktop.in.in
-data/org.gnome.gtali.gschema.xml.in
+data/org.gnome.tali.gschema.xml.in
+data/tali.desktop.in.in
 src/clist.c
 src/games-scores-dialog.c
 src/games-stock.c
