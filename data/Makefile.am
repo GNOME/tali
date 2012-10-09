@@ -1,6 +1,6 @@
 SUBDIRS = icons
 
-pixmapdir = $(datadir)/gtali
+pixmapdir = $(datadir)/tali
 pixmap_DATA = \
 	gnome-dice-1.svg \
 	gnome-dice-2.svg \
@@ -17,17 +17,17 @@ pixmap_DATA = \
 	kismet6.svg \
 	kismet-none.svg
 
-gsettings_in_file = org.gnome.gtali.gschema.xml.in
+gsettings_in_file = org.gnome.tali.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-man_MANS = gtali.6
+man_MANS = tali.6
 
 EXTRA_DIST = $(gsettings_in_file) $(man_MANS) $(pixmap_DATA)
 
 gamesdir = $(datadir)/applications
-games_in_files = gtali.desktop.in.in
+games_in_files = tali.desktop.in.in
 games_DATA = $(games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 

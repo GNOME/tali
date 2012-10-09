@@ -1,4 +1,4 @@
-SUBDIRS = src data help
+SUBDIRS = data help po src
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)

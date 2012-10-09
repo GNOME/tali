@@ -5,11 +5,11 @@ icon32dir=$(datadir)/icons/hicolor/32x32/apps
 icon48dir=$(datadir)/icons/hicolor/48x48/apps
 iconscalabledir=$(datadir)/icons/hicolor/scalable/apps
 
-icon16_DATA = 16x16/gtali.png
-icon22_DATA = 22x22/gtali.png
-icon24_DATA = 24x24/gtali.png
-icon32_DATA = 32x32/gtali.png
-icon48_DATA = 48x48/gtali.png
-iconscalable_DATA = scalable/gtali.svg
+icon16_DATA = 16x16/tali.png
+icon22_DATA = 22x22/tali.png
+icon24_DATA = 24x24/tali.png
+icon32_DATA = 32x32/tali.png
+icon48_DATA = 48x48/tali.png
+iconscalable_DATA = scalable/tali.svg
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(icon256_DATA) $(iconscalable_DATA)

@@ -1,5 +1,5 @@
 <schemalist gettext-domain="gnome-games">
-  <schema id="org.gnome.gtali" path="/org/gnome/gtali/">
+  <schema id="org.gnome.tali" path="/org/gnome/tali/">
     <key name="number-of-computer-opponents" type="i">
       <default>3</default>
     </key>

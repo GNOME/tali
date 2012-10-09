@@ -1,6 +1,6 @@
-bin_PROGRAMS = gtali
+bin_PROGRAMS = tali
 
-gtali_SOURCES =       \
+tali_SOURCES =       \
 	gyahtzee.c       \
 	gyahtzee.h       \
 	clist.c          \
@@ -22,32 +22,28 @@ gtali_SOURCES =       \
 	games-stock.h
 
 if ENABLE_SETGID
-gtali_SOURCES +=		\
+tali_SOURCES +=		\
 	games-setgid-io.c		\
 	games-setgid-io.h
 endif # ENABLE_SETGID
 
-gtali_CPPFLAGS = \
+tali_CPPFLAGS = \
 	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
 
-gtali_CFLAGS = \
-	-DDATA_DIRECTORY=\"$(datadir)/gtali\" \
+tali_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/tali\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	-DSCORESDIR="\"$(scoredir)\""				\
-	$(GTK_CFLAGS) \
-	$(RSVG_CFLAGS) \
-	$(AM_CFLAGS)
+	$(TALI_CFLAGS)
 		
-gtali_LDADD = \
-	$(GTK_LIBS)	\
-	$(RSVG_LIBS) \
-	$(INTLLIBS)
+tali_LDADD = \
+	$(TALI_LIBS)
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
-	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gtali && chmod 2555 $(DESTDIR)$(bindir)/gtali ;\
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/tali && chmod 2555 $(DESTDIR)$(bindir)/tali ;\
 	fi
 
 -include $(top_srcdir)/git.mk

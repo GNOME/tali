@@ -613,7 +613,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 			 "authors", authors,
 			 "documenters", documenters,
 			 "translator-credits", _("translator-credits"),
-			 "logo-icon-name", "gtali",
+			 "logo-icon-name", "tali",
 			 "website",
 			 "http://www.gnome.org/projects/gnome-games/",
 			 "website-label", _("GNOME Games web site"),
@@ -699,7 +699,7 @@ help_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
   GError *error = NULL;
 
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "help:gtali", gtk_get_current_event_time (), &error);
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "help:tali", gtk_get_current_event_time (), &error);
   if (error)
     g_warning ("Failed to show help: %s", error->message);
   g_clear_error (&error);
@@ -851,7 +851,7 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  application = gtk_application_new ("org.gnome.gtali", 0);
+  application = gtk_application_new ("org.gnome.tali", 0);
   g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
 
   games_scores_startup ();
@@ -871,7 +871,7 @@ main (int argc, char *argv[])
     exit (1);
   }
 
-  settings = g_settings_new ("org.gnome.gtali");
+  settings = g_settings_new ("org.gnome.tali");
 
   g_set_application_name (_(appName));
 
@@ -916,13 +916,13 @@ main (int argc, char *argv[])
       exit(0);
   }
 
-  highscores = games_scores_new ("gtali",
+  highscores = games_scores_new ("tali",
                                  category_array, G_N_ELEMENTS (category_array),
                                  "game type", NULL,
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
-  gtk_window_set_default_icon_name ("gtali");
+  gtk_window_set_default_icon_name ("tali");
 
   if (NumberOfComputers == 0)	/* Not set on the command-line. */
     NumberOfComputers = g_settings_get_int (settings, "number-of-computer-opponents");
