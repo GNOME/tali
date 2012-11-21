@@ -10,4 +10,8 @@ install-data-local:
 	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.Colors.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gtali.Colors.scores
 
+uninstall-local:
+	rm -f $(DESTDIR)$(scoredir)/gtali.Regular.scores
+	rm -f $(DESTDIR)$(scoredir)/gtali.Colors.scores
+
 -include $(top_srcdir)/git.mk
