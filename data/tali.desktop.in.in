@@ -1,14 +1,14 @@
 [Desktop Entry]
 _Name=Tali
 _Comment=Beat the odds in a poker-style dice game
+_Keywords=yahtzee;
 Exec=tali
 Icon=tali
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Game;CardGame;
-_Keywords=yahtzee;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=gnome-games
+X-GNOME-Bugzilla-Product=tali
 X-GNOME-Bugzilla-Component=BugBuddyBugs
 X-GNOME-Bugzilla-Version=@VERSION@
 StartupNotify=true
