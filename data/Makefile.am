@@ -27,7 +27,7 @@ man_MANS = tali.6
 EXTRA_DIST = $(gsettings_in_file) $(man_MANS) $(pixmap_DATA)
 
 gamesdir = $(datadir)/applications
-games_in_files = tali.desktop.in.in
+games_in_files = gtali.desktop.in.in
 games_DATA = $(games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
