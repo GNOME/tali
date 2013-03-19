@@ -89,7 +89,7 @@ Makefile
 po/Makefile.in
 data/Makefile
 data/icons/Makefile
-data/tali.desktop.in
+data/gtali.desktop.in
 help/Makefile
 src/Makefile
 ])
