@@ -1,41 +1,67 @@
 # Brazilian Portuguese translation of gtali
-# This file is distributed under the same license as the glchess package
-# Copyright (C) 2007 Free Sotware Foundation, Inc.
+# This file is distributed under the same license as the gtali package
+# Copyright (C) 2007-2013 Free Sotware Foundation, Inc.
 # Vladimir Melo <vladimirmelo.psi@gmail.com>, 2008.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Tali Manual V2.8\n"
-"POT-Creation-Date: 2008-07-12 03:46+0000\n"
-"PO-Revision-Date: 2008-07-15 12:43-0300\n"
-"Last-Translator: Vladimir Melo <vladimirmelo.psi@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"POT-Creation-Date: 2013-03-27 16:48+0000\n"
+"PO-Revision-Date: 2013-05-01 23:09-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gtali.xml:161(None)
-msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
 msgstr ""
-"@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
+"Vladimir Melo <vladimirmelo.psi@gmail.com>, 2008\n"
+"Rafael Ferreira <rafael.f.f1@gmail.com>, 2013"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gtali.xml:238(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:163(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
 msgstr ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+"external ref='figures/mainwindow.png' md5='7b97503b7b0035ae8abb448a5a17ab7e'"
 
-#: C/gtali.xml:27(title)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:240(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+msgstr ""
+"external ref='figures/preferences.png' md5='83d673a85ea1bdfeddb5ab500b9df49b'"
+
+#: C/index.docbook:27(articleinfo/title)
 msgid "<application>Tali</application> Manual"
 msgstr "Manual do <application>Tali</application>"
 
-#: C/gtali.xml:29(para)
+#: C/index.docbook:29(abstract/para)
 msgid ""
 "Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
 "dice to try to make the best possible combinations, like 4 of a kind, small "
@@ -44,38 +70,36 @@ msgid ""
 msgstr ""
 "Tali é como o Yahtzee para GNOME ou como pôquer com dados. O jogador lança "
 "os dados para tentar fazer as melhores combinações possíveis, como quadra, "
-"seqüência menor, e full house. O jogador tem direito a 3 lançamentos por vez "
+"sequência menor, e full house. O jogador tem direito a 3 lançamentos por vez "
 "e pode manter alguns dados a cada lançamento."
 
-#: C/gtali.xml:37(year)
-msgid "2001"
-msgstr "2001"
+#: C/index.docbook:36(articleinfo/copyright)
+msgid "<year>2001</year> <holder>Scott D. Heavner</holder>"
+msgstr "<year>2001</year> <holder>Scott D. Heavner</holder>"
 
-#: C/gtali.xml:38(holder)
-msgid "Scott D. Heavner"
-msgstr "Scott D. Heavner"
-
-#: C/gtali.xml:53(publishername) C/gtali.xml:91(para)
+#: C/index.docbook:53(publisher/publishername)
+#: C/index.docbook:93(revdescription/para)
 msgid "GNOME Documentation Project"
 msgstr "Projeto de Documentação do GNOME"
 
-#: C/gtali.xml:2(para)
+#: C/index.docbook:2(legalnotice/para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Permissão concedida para copiar, distribuir e/ou modificar este documento "
-"dentro dos termos da GNU Free Documentation License (GFDL), Versão 1.1 ou "
-"qualquer versão superior publicada pela Free Software Foundation sem nenhuma "
-"Seção Imutável, Textos de Capa e Contra-Capa. Você pode achar uma cópia do "
-"GFDL neste <ulink type=\"help\" url=\"help:fdl\">link</ulink> ou no arquivo "
-"COPYING-DOCS distribuído com este manual."
+"sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation "
+"License), Versão 1.1 ou qualquer versão mais recente publicada pela Free "
+"Software Foundation; sem Seções Invariantes, Textos de Capa Frontal, e sem "
+"Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL neste "
+"<ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> ou no arquivo COPYING-"
+"DOCS distribuído com este manual."
 
-#: C/gtali.xml:12(para)
+#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -87,7 +111,7 @@ msgstr ""
 "pode fazê-lo adicionando uma cópia da licença ao manual, como descrito na "
 "seção 6 da licença."
 
-#: C/gtali.xml:19(para)
+#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -101,7 +125,7 @@ msgstr ""
 "estiverem cientes daquelas marcas registradas, os nomes aparecerão em letras "
 "maiúsculas ou com iniciais em maiúsculas."
 
-#: C/gtali.xml:35(para)
+#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -115,19 +139,20 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DOCUMENTO É FORNECIDO \"NO ESTADO\", SEM GARANTIA DE QUALQUER TIPO, TANTO "
-"EXPRESSA QUANTO IMPLÍCITA, INCLUINDO, SEM LIMITAÇÕES, GARANTIAS DE QUE O "
-"DOCUMENTO OU VERSÃO MODIFICADA DO MESMO É COMERCIALIZADO LIVRE DE DEFEITOS, "
-"PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU QUE NÃO HÁ INFRAÇÕES. TODO RISCO DE "
-"QUALIDADE, PRECISÃO E PERFORMANCE DO DOCUMENTO OU VERSÃO MODIFICADA É COM "
-"VOCÊ. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA É PROVADO DEFEITUOSO EM "
-"QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER "
-"COLABORADOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU "
-"CORREÇÃO. ESTE AVISO DE GARANTIA CONSTITUI UMA PARTE ESSENCIAL DA LICENÇA. "
-"NENHUM USO DE QUALQUER DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO É "
-"AUTORIZADO EXCETO SOB ESTA CONDIÇÃO; E"
+"O DOCUMENTO É FORNECIDO NA BASE \"COMO ESTÁ\", SEM GARANTIAS DE QUALQUER "
+"TIPO, TANTO EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO LIMITADO A, GARANTIAS "
+"DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO SEJA COMERCIALIZÁVEL, "
+"LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU SEM INFRAÇÕES. "
+"TODO O RISCO A RESPEITO DA QUALIDADE, EXATIDÃO, E DESEMPENHO DO DOCUMENTO OU "
+"VERSÕES MODIFICADAS DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE ALGUM "
+"DOCUMENTO OU VERSÃO MODIFICADA SE PROVAR DEFEITUOSO EM QUALQUER ASPECTO, "
+"VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO "
+"DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESSA RENÚNCIA DE "
+"GARANTIAS CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DESTE "
+"DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB "
+"ESSA RENÚNCIA; E"
 
-#: C/gtali.xml:55(para)
+#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -140,79 +165,77 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANOS "
-"(INCLUINDO POR NEGLIGÊNCIA), CONTRATO OU OUTROS, DEVE O AUTOR, ESCRITOR "
-"INICIAL OU COLABORADOR OU QUALQUER DISTRIBUIDOR DO DOCUMENTO, VERSÃO "
-"MODIFICADA OU QUALQUER FORNECEDOR DE QUALQUER DESSES GRUPOS, SER CONSIDERADO "
-"RESPONSÁVEL A QUALQUER PESSOA POR QUALQUER DANO DIRETO, INDIRETO, ESPECIAL, "
-"INCIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, SEM "
-"LIMITAÇÕES, DANOS POR PERDA DE BOA VONTADE, PARADA DE TRABALHO, FALHA DE "
-"COMPUTADOR, MAL FUNCIONAMENTO OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS "
-"RESULTANTES OU RELACIONADAS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO "
-"QUE ESSE GRUPO TENHA SIDO INFORMADO DA POSSIBILIDADE DE TAIS DANOS."
+"SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANO "
+"(INCLUINDO NEGLIGÊNCIA), CONTRATO, OU OUTROS, DEVEM O AUTOR, ESCRITOR "
+"INICIAL, QUALQUER CONTRIBUIDOR, OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU "
+"VERSÃO MODIFICADA DO DOCUMENTO, OU QUALQUER FORNECEDOR DE ALGUMA DESSAS "
+"PARTES, SEREM CONSIDERADOS RESPONSÁVEIS A QUALQUER PESSOA POR QUALQUER DANO, "
+"SEJA DIRETO, INDIRETO, ESPECIAL, ACIDENTAL OU DANOS DECORRENTES DE QUALQUER "
+"NATUREZA, INCLUINDO, MAS NÃO LIMITADO A, DANOS POR PERDA DE BOA VONTADE, "
+"TRABALHO PARADO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR, OU QUALQUER E "
+"TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADOS AO USO DO "
+"DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA "
+"POSSIBILIDADE DE TAIS DANOS."
 
-#: C/gtali.xml:28(para)
+#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
 "DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDAS PELOS TERMOS DA "
-"GNU FREE DOCUMENTATION LICENSE COM O CONHECIMENTO ADICIONAL DE QUE: "
-"<placeholder-1/>"
+"GNU FREE DOCUMENTATION LICENSE COM O CONHECIMENTO ADICIONAL DE QUE: <_:"
+"orderedlist-1/>"
 
-#: C/gtali.xml:63(firstname)
-msgid "Scott D"
-msgstr "Scott D"
+#: C/index.docbook:62(authorgroup/author)
+msgid ""
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
 
-#: C/gtali.xml:64(surname)
-msgid "Heavner"
-msgstr "Heavner"
-
-#: C/gtali.xml:66(email)
-msgid "sdh@po.cwru.edu"
-msgstr "sdh@po.cwru.edu"
-
-#: C/gtali.xml:85(revnumber)
-msgid "Tali Manual V2.8"
-msgstr "Manual do Tali V2.8"
-
-#: C/gtali.xml:86(date)
-msgid "September 2004"
-msgstr "Setembro de 2004"
-
-#: C/gtali.xml:88(para)
+#: C/index.docbook:90(revdescription/para)
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 
-#: C/gtali.xml:96(releaseinfo)
+#: C/index.docbook:86(revhistory/revision)
+msgid ""
+"<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Manual do Tali V2.8</revnumber> <date>Setembro 2004</date> <_:"
+"revdescription-1/>"
+
+#: C/index.docbook:98(articleinfo/releaseinfo)
 msgid "This manual describes version 2.12 of Tali."
 msgstr "Este manual descreve a versão 2.12 do Tali."
 
-#: C/gtali.xml:103(title)
+#: C/index.docbook:105(legalnotice/title)
 msgid "Feedback"
 msgstr "Feedback"
 
-#: C/gtali.xml:104(para)
+#: C/index.docbook:106(legalnotice/para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
 "application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
 msgstr ""
 "Para relatar um erro ou dar uma sugestão sobre o aplicativo "
 "<application>Tali</application> ou sobre este manual, siga as orientações na "
-"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Página de Feedback do "
-"GNOME</ulink>."
+"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Página de "
+"Feedback do GNOME</ulink>."
 
-#: C/gtali.xml:115(primary)
-msgid "GNOME Tali"
-msgstr "GNOME Tali"
+#: C/index.docbook:116(article/indexterm)
+msgid "<primary>GNOME Tali</primary>"
+msgstr "<primary>GNOME Tali</primary>"
 
-#: C/gtali.xml:121(title)
+#: C/index.docbook:123(sect1/title)
 msgid "Introduction"
 msgstr "Introdução"
 
-#: C/gtali.xml:123(para)
+#: C/index.docbook:125(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -223,7 +246,7 @@ msgstr ""
 "<quote>mão</quote>. Seus dois lançamentos seguintes podem incluir alguns ou "
 "todos os dados."
 
-#: C/gtali.xml:129(para)
+#: C/index.docbook:131(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -231,19 +254,19 @@ msgstr ""
 "<application>GNOME Tali</application> é muito similar ao jogo de dados "
 "Yahtzee que é uma marca registrada de Hasbro, Inc."
 
-#: C/gtali.xml:134(para)
+#: C/index.docbook:136(sect1/para)
 msgid ""
-"To run <application>GNOME Tali</application>, select "
-"<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
-"guimenuitem></menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
-"<command>gtali</command> on the command line."
+"To run <application>GNOME Tali</application>, select <menuchoice> "
+"<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
+"menuchoice> from the <guimenu>Main Menu</guimenu>, or type <command>gtali</"
+"command> on the command line."
 msgstr ""
 "Para executar o <application>GNOME Tali</application>, selecione "
 "<menuchoice><guisubmenu>Jogos</guisubmenu><guimenuitem>GNOME Tali</"
-"guimenuitem></menuchoice> do <guimenu>Menu principal</guimenu>, ou digite "
+"guimenuitem></menuchoice> do <guimenu>Menu principal</guimenu> ou digite "
 "<command>gtali</command> na linha de comando."
 
-#: C/gtali.xml:144(para)
+#: C/index.docbook:146(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -254,29 +277,35 @@ msgstr ""
 "Este documento descreve a versão 2.8 do <application>GNOME Tali</"
 "application>."
 
-#: C/gtali.xml:153(title)
+#: C/index.docbook:155(sect1/title)
 msgid "Playing GNOME Tali"
 msgstr "Jogando GNOME Tali"
 
-#: C/gtali.xml:156(title)
+#: C/index.docbook:158(figure/title)
 msgid "GNOME Tali in action"
 msgstr "GNOME Tali em ação"
 
-#: C/gtali.xml:164(phrase)
-msgid "GNOME Tali main window screenshot."
-msgstr "Tela da janela principal do GNOME Tali."
+#: C/index.docbook:160(screenshot/mediaobject)
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"main window screenshot.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Imagem da "
+"janela principal do GNOME Tali.</phrase> </textobject>"
 
-#: C/gtali.xml:170(para)
+#: C/index.docbook:172(sect1/para)
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr ""
 "Quando o jogo inicia, você vê os resultados do seu primeiro lançamento de "
 "dados."
 
-#: C/gtali.xml:177(para)
+#: C/index.docbook:179(listitem/para)
 msgid "Click on the dice you wish to roll again."
 msgstr "Clique nos dados que você deseja lançar novamente."
 
-#: C/gtali.xml:181(para)
+#: C/index.docbook:183(listitem/para)
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -284,7 +313,7 @@ msgstr ""
 "Quando você tiver selecionado todos os dados que deseja lançar novamente, "
 "pressione o botão <guibutton>Lançar!</guibutton>."
 
-#: C/gtali.xml:186(para)
+#: C/index.docbook:188(listitem/para)
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -298,10 +327,10 @@ msgstr ""
 "combinação de pontos. É bem possível que tenha um zero na pontuação e se "
 "você clicar na linha errada, você vai receber a pontuação equivalente "
 "(Digamos que por exemplo, você consegue um yahtzee -- uma quina -- e clica "
-"na linha de seqüência máxima, você vai receber um zero na sua pontuação de "
-"seqüência máxima)."
+"na linha de sequência máxima, você vai receber um zero na sua pontuação de "
+"sequência máxima)."
 
-#: C/gtali.xml:196(para)
+#: C/index.docbook:198(sect1/para)
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -310,7 +339,7 @@ msgstr ""
 "colocado algo em uma posição, você não pode alterar a pontuação mais tarde "
 "se lançar uma mão melhor."
 
-#: C/gtali.xml:201(para)
+#: C/index.docbook:203(sect1/para)
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -321,7 +350,7 @@ msgid ""
 "will score."
 msgstr ""
 "Existe uma exceção para esta regra, se você lançar um yahtzee uma segunda "
-"vez você pode colocá-lo na linha de yahtzee novamente para cinqüenta pontos "
+"vez você pode colocá-lo na linha de yahtzee novamente para cinquenta pontos "
 "adicionais. Você pode continuar fazendo isso cada vez que conseguir outro "
 "yahtzee. No fim do jogo você terá direito a lançamentos adicionais para "
 "preencher as outras linhas. Fique atento que se você não pontuar na sua "
@@ -329,7 +358,7 @@ msgstr ""
 "yahtzee) então você não poderá colocar um yahtzee mais tarde, zero será a "
 "sua pontuação."
 
-#: C/gtali.xml:211(para)
+#: C/index.docbook:213(sect1/para)
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -337,11 +366,11 @@ msgstr ""
 "Existe também um bônus de 35 pontos se você atingir um total de 63 pontos ou "
 "mais nas seis linhas superiores."
 
-#: C/gtali.xml:216(title)
+#: C/index.docbook:218(sect2/title)
 msgid "Using the keyboard"
 msgstr "Usando o teclado"
 
-#: C/gtali.xml:218(para)
+#: C/index.docbook:220(sect2/para)
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -356,27 +385,33 @@ msgstr ""
 "lançamento e a área de pontuação, use as setas para navegar para cima e para "
 "baixo nas linhas e use a barra de espaço para selecionar."
 
-#: C/gtali.xml:230(title)
+#: C/index.docbook:232(sect1/title)
 msgid "Game Options"
 msgstr "Opções do jogo"
 
-#: C/gtali.xml:233(title)
+#: C/index.docbook:235(figure/title)
 msgid "GNOME Tali preferences"
 msgstr "Preferências do GNOME Tali"
 
-#: C/gtali.xml:241(phrase)
-msgid "GNOME Tali preferences dialog box."
-msgstr "Caixa de diálogo das preferências do GNOME Tali."
+#: C/index.docbook:237(screenshot/mediaobject)
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"preferences dialog box.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Caixa de "
+"diálogo das preferências do GNOME Tali.</phrase> </textobject>"
 
-#: C/gtali.xml:246(title)
+#: C/index.docbook:248(variablelist/title)
 msgid "Human Players"
 msgstr "Jogadores humanos"
 
-#: C/gtali.xml:248(guimenuitem)
-msgid "Number of players"
-msgstr "Número de jogadores"
+#: C/index.docbook:250(varlistentry/term)
+msgid "<guimenuitem>Number of players</guimenuitem>"
+msgstr "<guimenuitem>Número de jogadores</guimenuitem>"
 
-#: C/gtali.xml:250(para)
+#: C/index.docbook:252(listitem/para)
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -384,15 +419,15 @@ msgstr ""
 "Selecione o número de jogadores humanos. Como descrito acima, é permitido um "
 "total de seis jogadores."
 
-#: C/gtali.xml:258(title)
+#: C/index.docbook:260(variablelist/title)
 msgid "Computer Opponents"
 msgstr "Oponentes do computador"
 
-#: C/gtali.xml:260(guimenuitem)
-msgid "Delay between rolls"
-msgstr "Espera entre lançamentos"
+#: C/index.docbook:262(varlistentry/term)
+msgid "<guimenuitem>Delay between rolls</guimenuitem>"
+msgstr "<guimenuitem>Espera entre jogadas</guimenuitem>"
 
-#: C/gtali.xml:262(para)
+#: C/index.docbook:264(listitem/para)
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -401,11 +436,11 @@ msgstr ""
 "forma que possa ver o que eles estão fazendo. Torna o jogo um pouco mais "
 "lento."
 
-#: C/gtali.xml:269(guimenuitem)
-msgid "Number of opponents"
-msgstr "Número de oponentes"
+#: C/index.docbook:271(varlistentry/term)
+msgid "<guimenuitem>Number of opponents</guimenuitem>"
+msgstr "<guimenuitem>Número de oponentes</guimenuitem>"
 
-#: C/gtali.xml:271(para)
+#: C/index.docbook:273(listitem/para)
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -417,15 +452,15 @@ msgstr ""
 "próximo ao limite, o número de jogadores humanos será diminuído para manter "
 "o total de apenas seis jogadores."
 
-#: C/gtali.xml:281(title)
+#: C/index.docbook:283(variablelist/title)
 msgid "Game Type"
 msgstr "Tipo de jogo"
 
-#: C/gtali.xml:283(guimenuitem)
-msgid "Version of the game to play"
-msgstr "Versão do jogo"
+#: C/index.docbook:285(varlistentry/term)
+msgid "<guimenuitem>Version of the game to play</guimenuitem>"
+msgstr "<guimenuitem>Versão do jogo</guimenuitem>"
 
-#: C/gtali.xml:285(para)
+#: C/index.docbook:287(listitem/para)
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
@@ -435,20 +470,20 @@ msgstr ""
 "Kismet). Quando você alterar o tipo do jogo, você deve reiniciar o jogo para "
 "ver o novo tipo."
 
-#: C/gtali.xml:295(guimenuitem)
-msgid "Player Names"
-msgstr "Nomes dos jogadores"
+#: C/index.docbook:297(varlistentry/term)
+msgid "<guimenuitem>Player Names</guimenuitem>"
+msgstr "<guimenuitem>Nomes dos jogadores</guimenuitem>"
 
-#: C/gtali.xml:297(para)
+#: C/index.docbook:299(listitem/para)
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr ""
 "Para alterar o nome dos jogadores, apenas digite novos nomes nas caixas."
 
-#: C/gtali.xml:306(title)
+#: C/index.docbook:308(sect1/title)
 msgid "Game Strategy"
 msgstr "Estratégia do jogo"
 
-#: C/gtali.xml:307(para)
+#: C/index.docbook:309(sect1/para)
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -464,7 +499,7 @@ msgstr ""
 "Cores, você consegue um bônus de 55 se sua metade superior totalizar entre "
 "71 e 77, e um bônus de 75 se o total de sua metade superior for maior que 77."
 
-#: C/gtali.xml:316(para)
+#: C/index.docbook:318(sect1/para)
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -474,11 +509,11 @@ msgstr ""
 "pode também colocá-lo na linha de yahtzee para obter mais pontos. Isto se "
 "aplica apenas ao jogo normal."
 
-#: C/gtali.xml:330(title)
+#: C/index.docbook:332(sect1/title)
 msgid "Known Bugs and Limitations"
 msgstr "Erros conhecidos e limitações"
 
-#: C/gtali.xml:331(para)
+#: C/index.docbook:333(sect1/para)
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -487,19 +522,19 @@ msgstr ""
 "até que reinicie o gtali. O jogo deve funcionar corretamente com os dados "
 "\"errados\"."
 
-#: C/gtali.xml:339(title)
+#: C/index.docbook:341(sect1/title)
 msgid "Glossary"
 msgstr "Glossário"
 
-#: C/gtali.xml:341(para)
+#: C/index.docbook:343(note/para)
 msgid "Remember that the order of the dice is not important."
 msgstr "Lembre-se que a ordem dos dados não é importante."
 
-#: C/gtali.xml:344(glossterm)
+#: C/index.docbook:346(glossentry/glossterm)
 msgid "3 of a Kind"
 msgstr "Trinca"
 
-#: C/gtali.xml:345(para)
+#: C/index.docbook:347(glossdef/para)
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -507,11 +542,11 @@ msgstr ""
 "Três dos dados têm o mesmo número. A pontuação é o total de todos os dados. "
 "Ex.: 1, 2, 2, 2, 5."
 
-#: C/gtali.xml:350(glossterm)
+#: C/index.docbook:352(glossentry/glossterm)
 msgid "4 of a Kind"
 msgstr "Quadra"
 
-#: C/gtali.xml:351(para)
+#: C/index.docbook:353(glossdef/para)
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -521,11 +556,11 @@ msgstr ""
 "dados. Ex.: 2, 5, 5, 5, 5. No jogo de Cores, a pontuação é 25 mais o total "
 "de todos os dados."
 
-#: C/gtali.xml:357(glossterm)
+#: C/index.docbook:359(glossentry/glossterm)
 msgid "5 of a Kind"
 msgstr "Quina"
 
-#: C/gtali.xml:358(para)
+#: C/index.docbook:360(glossdef/para)
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -533,11 +568,11 @@ msgstr ""
 "Cinco dados idênticos, ex.: 3, 3, 3, 3, 3. No jogo de Cores, a pontuação é "
 "50 mais o total de todos os dados."
 
-#: C/gtali.xml:363(glossterm)
+#: C/index.docbook:365(glossentry/glossterm)
 msgid "Full House"
 msgstr "Full House"
 
-#: C/gtali.xml:364(para)
+#: C/index.docbook:366(glossdef/para)
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -547,11 +582,11 @@ msgstr ""
 "e outro grupo de dois com os mesmos números. Ex.: 1, 1, 1, 4, 4. No jogo de "
 "Cores, a pontuação é 15 mais o total de todos os dados."
 
-#: C/gtali.xml:371(glossterm)
+#: C/index.docbook:373(glossentry/glossterm)
 msgid "Full House Same Color"
 msgstr "Full House da mesma cor"
 
-#: C/gtali.xml:372(para)
+#: C/index.docbook:374(glossdef/para)
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -567,11 +602,11 @@ msgstr ""
 "pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. A pontuação é 20 mais o "
 "total de todos os dados."
 
-#: C/gtali.xml:382(glossterm)
+#: C/index.docbook:384(glossentry/glossterm)
 msgid "Two Pair Same Color"
 msgstr "Dois pares da mesma cor"
 
-#: C/gtali.xml:383(para)
+#: C/index.docbook:385(glossdef/para)
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -587,11 +622,11 @@ msgstr ""
 "pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. O quinto dados pode ser de "
 "qualquer valor. A pontuação é o total de todos os dados. "
 
-#: C/gtali.xml:393(glossterm)
+#: C/index.docbook:395(glossentry/glossterm)
 msgid "Flush"
 msgstr "Flush"
 
-#: C/gtali.xml:394(para)
+#: C/index.docbook:396(glossdef/para)
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -603,22 +638,22 @@ msgstr ""
 "e 6 são pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. O quinto dado pode "
 "ser de qualquer valor. Vale 35 pontos."
 
-#: C/gtali.xml:402(glossterm)
+#: C/index.docbook:404(glossentry/glossterm)
 msgid "Large Straight"
-msgstr "Seqüência maior"
+msgstr "Sequência maior"
 
-#: C/gtali.xml:403(para)
+#: C/index.docbook:405(glossdef/para)
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
 "Cinco dados com números consecutivos. Ex.: 2, 3, 4, 5, 6. Vale 40 pontos."
 
-#: C/gtali.xml:408(glossterm)
+#: C/index.docbook:410(glossentry/glossterm)
 msgid "Small Straight"
-msgstr "Seqüência menor"
+msgstr "Sequência menor"
 
-#: C/gtali.xml:409(para)
+#: C/index.docbook:411(glossdef/para)
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -628,79 +663,148 @@ msgstr ""
 "número. Ex.: 2, 3, 4, 5, 5. Esta categoria é usada apenas no jogo normal. "
 "Vale 30 pontos."
 
-#: C/gtali.xml:423(title)
+#: C/index.docbook:425(sect1/title)
 msgid "Authors"
 msgstr "Autores"
 
-#: C/gtali.xml:424(para)
+#: C/index.docbook:426(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
 "written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra "
 "material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</"
 "email>). To report a bug or make a suggestion regarding this application or "
-"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs"
-"\" type=\"help\">document</ulink>."
+"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">document</ulink>."
 msgstr ""
 "<application>GNOME Tali</application> foi escrito por Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) e Orest Zborowski. Este manual foi escrito "
 "por Scott D Heavner (<email>sdh@po.cwru.edu</email>) com material extra "
 "adicionado por Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). "
 "Para relatar um erro ou dar uma sugestão sobre este aplicativo ou sobre este "
-"manual, siga as orientações neste <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
-"\"help\">documento</ulink>."
+"manual, siga as orientações neste <ulink url=\"ghelp:user-guide?feedback-bugs"
+"\" type=\"help\">documento</ulink>."
 
-#: C/gtali.xml:451(title)
+#: C/index.docbook:453(sect1/title)
 msgid "License"
 msgstr "Licença"
 
-#: C/gtali.xml:452(para)
+#: C/index.docbook:454(sect1/para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
-"under the terms of the <ulink type=\"help\" url=\"help:gpl"
-"\"><citetitle>GNU General Public License</citetitle></ulink> as published by "
-"the Free Software Foundation; either version 2 of the License, or (at your "
-"option) any later version."
+"under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
+"General Public License</citetitle></ulink> as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
 msgstr ""
 "Este programa é um software livre; você pode redistribuí-lo e/ou modificá-lo "
-"sob os termos da <ulink type=\"help\" url=\"help:gpl\"><citetitle>GNU "
-"General Public License</citetitle></ulink> numa publicação da Free Software "
-"Foundation; em sua versão 2 da Licença, ou (em sua opção) sua versão "
-"superior."
+"sob os termos da <ulink type=\"help\" url=\"help:gpl\"><citetitle>Licença "
+"Pública Geral GNU</citetitle></ulink> publicada pela Free Software "
+"Foundation; qualquer versão 2 da Licença, ou (a seu critério) outra versão "
+"posterior."
 
-#: C/gtali.xml:460(para)
+#: C/index.docbook:462(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
 "License</citetitle> for more details."
 msgstr ""
-"Este programa é distribuído na esperança que será útil, mas SEM GARANTIA "
-"ALGUMA; nem mesmo a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A "
-"UMA FINALIDADE ESPECIFICA. Consulte a <citetitle>GNU General Public License</"
-"citetitle> para mais detalhes."
+"Este programa é distribuído na expectativa de que seja útil, mas SEM NENHUMA "
+"GARANTIA; sem mesmo implicar garantias de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM "
+"FIM ESPECÍFICO. Veja a <citetitle>Licença Pública Geral GNU (GPL)</"
+"citetitle> para mais detalhes"
 
-#: C/gtali.xml:466(para)
+#: C/index.docbook:475(para/address)
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#: C/index.docbook:468(sect1/para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
 "obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
 "the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
-"www.fsf.org\">their Web site</ulink> or by writing to <address> Free "
-"Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "Uma cópia da <citetitle>Licença Pública Geral GNU</citetitle> é incluída "
-"como um apêndice do <citetitle>Guia do Usuário do GNOME</citetitle>. Você "
+"como um apêndice do <citetitle>guia do usuário do GNOME</citetitle>. Você "
 "também pode obter uma cópia da <citetitle>Licença Pública Geral GNU</"
 "citetitle> na Free Software Foundation ao visitar <ulink type=\"http\" url="
-"\"http://www.fsf.org\">o site deles</ulink> ou ao escrever para <address> "
-"Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"\"http://www.fsf.org\">o site deles</ulink> ou ao escrever para <_:address-1/"
+">"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/gtali.xml:0(None)
-msgid "translator-credits"
-msgstr "Vladimir Melo <vladimirmelo.psi@gmail.com>, 2008."
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "link"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Permissão concedida para copiar, distribuir e/ou modificar este documento "
+"sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation "
+"License), Versão 1.1 ou qualquer versão mais recente publicada pela Free "
+"Software Foundation; sem Seções Invariantes, Textos de Capa Frontal, e sem "
+"Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL neste <_:"
+"ulink-1/> ou no arquivo COPYING-DOCS distribuído com este manual."
+
+#~ msgid "2001"
+#~ msgstr "2001"
+
+#~ msgid "Scott D. Heavner"
+#~ msgstr "Scott D. Heavner"
+
+#~ msgid "Scott D"
+#~ msgstr "Scott D"
+
+#~ msgid "Heavner"
+#~ msgstr "Heavner"
+
+#~ msgid "sdh@po.cwru.edu"
+#~ msgstr "sdh@po.cwru.edu"
+
+#~ msgid "Tali Manual V2.8"
+#~ msgstr "Manual do Tali V2.8"
+
+#~ msgid "September 2004"
+#~ msgstr "Setembro de 2004"
+
+#~ msgid "GNOME Tali"
+#~ msgstr "GNOME Tali"
+
+#~ msgid "GNOME Tali main window screenshot."
+#~ msgstr "Tela da janela principal do GNOME Tali."
+
+#~ msgid "GNOME Tali preferences dialog box."
+#~ msgstr "Caixa de diálogo das preferências do GNOME Tali."
+
+#~ msgid "Number of players"
+#~ msgstr "Número de jogadores"
+
+#~ msgid "Delay between rolls"
+#~ msgstr "Espera entre lançamentos"
+
+#~ msgid "Number of opponents"
+#~ msgstr "Número de oponentes"
+
+#~ msgid "Player Names"
+#~ msgstr "Nomes dos jogadores"
