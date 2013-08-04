@@ -397,8 +397,7 @@
        This category is only used in the Colors game.
    Five dice that are all the same "color":
    Two dice are the same color if their numbers total 7: 1 and 6 are black,
-   2 and 5 are red, and 3 and 4 are green. The fifth die can be any value.
-   The score is 35 points.
+   2 and 5 are red, and 3 and 4 are green. The score is 35 points.
 	 </para></glossdef>
        </glossentry>
        <glossentry id="largestraight"><glossterm>Large Straight</glossterm>
