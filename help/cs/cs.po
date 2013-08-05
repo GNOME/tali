@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-26\n"
-"POT-Creation-Date: 2012-12-02 22:35+0000\n"
-"PO-Revision-Date: 2013-07-11 11:03+0200\n"
+"POT-Creation-Date: 2013-08-04 09:45+0000\n"
+"PO-Revision-Date: 2013-08-05 21:23+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -249,11 +249,6 @@ msgstr ""
 "Yahtzee, což je ochranná známka firmy Hasbro, Inc."
 
 #: C/index.docbook:136(sect1/para)
-#| msgid ""
-#| "To run <application>GNOME Tali</application>, select "
-#| "<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
-#| "guimenuitem></menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
-#| "<command>gtali</command> on the command line."
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -621,30 +616,28 @@ msgstr "Flush"
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
-"6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be "
-"any value. The score is 35 points."
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Tato kategorie se používá pouze v barevné hře. Pět kostek, které mají "
 "stejnou „barvu“. Dvě kostky jsou stejné barvy, pokud je jejich součet 7, "
-"např. 1 a 6 jsou černé, 2 a 5 jsou červené, 3 a 4 jsou zelené. Zbylé kostky "
-"mohou mít libovolné hodnoty. Hodnoceno 35 body."
+"např. 1 a 6 jsou černé, 2 a 5 jsou červené, 3 a 4 jsou zelené. Hodnoceno 35 body."
 
-#: C/index.docbook:404(glossentry/glossterm)
+#: C/index.docbook:403(glossentry/glossterm)
 msgid "Large Straight"
 msgstr "Velká postupka"
 
-#: C/index.docbook:405(glossdef/para)
+#: C/index.docbook:404(glossdef/para)
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
 "Pět kostek s po sobě jdoucími čísly, např. 2, 3, 4, 5, 6. Hodnoceno 40 body."
 
-#: C/index.docbook:410(glossentry/glossterm)
+#: C/index.docbook:409(glossentry/glossterm)
 msgid "Small Straight"
 msgstr "Malá postupka"
 
-#: C/index.docbook:411(glossdef/para)
+#: C/index.docbook:410(glossdef/para)
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -654,11 +647,11 @@ msgstr ""
 "číslo, např. 2, 3, 4, 5, 5. Tato kategorie je pouze v normální hře. "
 "Hodnoceno 30 body."
 
-#: C/index.docbook:425(sect1/title)
+#: C/index.docbook:424(sect1/title)
 msgid "Authors"
 msgstr "Autoři"
 
-#: C/index.docbook:426(sect1/para)
+#: C/index.docbook:425(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -676,11 +669,11 @@ msgstr ""
 "instrukcemi v tomto <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">dokumentu</ulink>."
 
-#: C/index.docbook:453(sect1/title)
+#: C/index.docbook:452(sect1/title)
 msgid "License"
 msgstr "Licence"
 
-#: C/index.docbook:454(sect1/para)
+#: C/index.docbook:453(sect1/para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -693,7 +686,7 @@ msgstr ""
 "General Public License</citetitle></ulink>, tak jak ji vydala Free Software "
 "Foundation ve verzi 2 nebo (dle vaší volby) novější."
 
-#: C/index.docbook:462(sect1/para)
+#: C/index.docbook:461(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -705,7 +698,7 @@ msgstr ""
 "VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
 "Public License</citetitle>."
 
-#: C/index.docbook:475(para/address)
+#: C/index.docbook:474(para/address)
 #, no-wrap
 msgid ""
 "\n"
@@ -722,7 +715,7 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/index.docbook:468(sect1/para)
+#: C/index.docbook:467(sect1/para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
