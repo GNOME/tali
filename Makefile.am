@@ -14,4 +14,8 @@ uninstall-local:
 	rm -f $(DESTDIR)$(scoredir)/gtali.Regular.scores
 	rm -f $(DESTDIR)$(scoredir)/gtali.Colors.scores
 
+MAINTAINERCLEANFILES = \
+	$(GITIGNORE_MAINTAINERCLEANFILES_TOPLEVEL) \
+	$(GITIGNORE_MAINTAINERCLEANFILES_MAKEFILE_IN)
+
 -include $(top_srcdir)/git.mk
