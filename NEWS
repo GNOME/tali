@@ -1,3 +1,9 @@
+tali 3.9.90
+===========
+
+* Set prgname so WM_CLASS matches the desktop file
+* Translations
+
 tali 3.8.0
 ==========
 
