@@ -1,12 +1,12 @@
 # translation of gtali.HEAD.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2012-09-06 15:58+0000\n"
-"PO-Revision-Date: 2012-01-25 16:33+0100\n"
+"POT-Creation-Date: 2013-08-04 09:45+0000\n"
+"PO-Revision-Date: 2013-09-02 17:02+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -625,22 +625,26 @@ msgid "Flush"
 msgstr "Descartar"
 
 #: C/index.docbook:396(glossdef/para)
+#| msgid ""
+#| "This category is only used in the Colors game. Five dice that are all the "
+#| "same \"color\": Two dice are the same color if their numbers total 7: 1 "
+#| "and 6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die "
+#| "can be any value. The score is 35 points."
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
-"6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be "
-"any value. The score is 35 points."
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Esta categoría sólo se usa en el juego Color. Cinco dados que tienen el "
 "mismo «color»: dos dados tienen el mismo color si sus números suman 7: 1 y 6 "
 "son negros, 2 y 5 rojos y 3 y 4 verdes. El quinto dado puede tener cualquier "
 "valor. La puntuación es de 35 puntos."
 
-#: C/index.docbook:404(glossentry/glossterm)
+#: C/index.docbook:403(glossentry/glossterm)
 msgid "Large Straight"
 msgstr "Secuencia completa"
 
-#: C/index.docbook:405(glossdef/para)
+#: C/index.docbook:404(glossdef/para)
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -648,11 +652,11 @@ msgstr ""
 "Cinco dados con números consecutivos, ej: 2, 3, 4, 5, 6. La puntuación es 40 "
 "puntos."
 
-#: C/index.docbook:410(glossentry/glossterm)
+#: C/index.docbook:409(glossentry/glossterm)
 msgid "Small Straight"
 msgstr "Secuencia corta"
 
-#: C/index.docbook:411(glossdef/para)
+#: C/index.docbook:410(glossdef/para)
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -662,11 +666,11 @@ msgstr ""
 "número, ej: 2, 3, 4, 5, 5. Esta categoría sólo se usa en el juego regular. "
 "La puntuación es de 30 puntos."
 
-#: C/index.docbook:425(sect1/title)
+#: C/index.docbook:424(sect1/title)
 msgid "Authors"
 msgstr "Autores"
 
-#: C/index.docbook:426(sect1/para)
+#: C/index.docbook:425(sect1/para)
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -684,11 +688,11 @@ msgstr ""
 "en este <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">documento</ulink>."
 
-#: C/index.docbook:453(sect1/title)
+#: C/index.docbook:452(sect1/title)
 msgid "License"
 msgstr "Licencia"
 
-#: C/index.docbook:454(sect1/para)
+#: C/index.docbook:453(sect1/para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -702,7 +706,7 @@ msgstr ""
 "Software Foundation; ya sea la versión 2 de la Licencia, o (a su elección) "
 "cualquier versión posterior."
 
-#: C/index.docbook:462(sect1/para)
+#: C/index.docbook:461(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -714,7 +718,7 @@ msgstr ""
 "IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la <citetitle>Licencia Pública "
 "General GNU</citetitle> para más detalles."
 
-#: C/index.docbook:475(para/address)
+#: C/index.docbook:474(para/address)
 #, no-wrap
 msgid ""
 "\n"
@@ -731,7 +735,7 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/index.docbook:468(sect1/para)
+#: C/index.docbook:467(sect1/para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
