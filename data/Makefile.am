@@ -24,12 +24,19 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 man_MANS = tali.6
 
-EXTRA_DIST = $(gsettings_in_file) $(man_MANS) $(pixmap_DATA)
-
 gamesdir = $(datadir)/applications
 games_in_files = gtali.desktop.in.in
 games_DATA = $(games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
+
+appdatadir = $(datadir)/appdata
+appdata_DATA = tali.appdata.xml
+
+EXTRA_DIST = \
+	$(appdata_DATA) \
+	$(gsettings_in_file) \
+	$(man_MANS) \
+	$(pixmap_DATA)
 
 CLEANFILES = $(games_DATA) $(gsettings_SCHEMAS)
 DISTCLEANFILES = $(games_DATA) $(gsettings_SCHEMAS)
