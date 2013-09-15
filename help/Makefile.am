@@ -1,5 +1,5 @@
 @YELP_HELP_RULES@
-HELP_ID = gtali
+HELP_ID = tali
 
 HELP_MEDIA = \
 	figures/mainwindow.png \
