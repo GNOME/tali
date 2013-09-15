@@ -1,3 +1,10 @@
+tali 3.8.1
+==========
+
+* Fix sensitivity of undo move action
+* Fix missing user help
+* Translations
+
 tali 3.8.0
 ==========
 
