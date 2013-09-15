@@ -7,16 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tali Manual V2.8\n"
-"POT-Creation-Date: 2013-03-27 16:48+0000\n"
-"PO-Revision-Date: 2013-05-01 23:09-0300\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"POT-Creation-Date: 2013-09-10 02:30+0000\n"
+"PO-Revision-Date: 2013-09-13 21:24-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -25,43 +25,37 @@ msgstr ""
 "Vladimir Melo <vladimirmelo.psi@gmail.com>, 2008\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>, 2013"
 
+#. (itstool) path: imagedata
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163(imagedata)
+#: C/index.docbook:163
 msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
 msgstr ""
 "external ref='figures/mainwindow.png' md5='7b97503b7b0035ae8abb448a5a17ab7e'"
 
+#. (itstool) path: imagedata
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240(imagedata)
+#: C/index.docbook:240
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
 msgstr ""
 "external ref='figures/preferences.png' md5='83d673a85ea1bdfeddb5ab500b9df49b'"
 
-#: C/index.docbook:27(articleinfo/title)
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:27
 msgid "<application>Tali</application> Manual"
 msgstr "Manual do <application>Tali</application>"
 
-#: C/index.docbook:29(abstract/para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:29
 msgid ""
 "Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
 "dice to try to make the best possible combinations, like 4 of a kind, small "
@@ -73,16 +67,19 @@ msgstr ""
 "sequência menor, e full house. O jogador tem direito a 3 lançamentos por vez "
 "e pode manter alguns dados a cada lançamento."
 
-#: C/index.docbook:36(articleinfo/copyright)
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
 msgid "<year>2001</year> <holder>Scott D. Heavner</holder>"
 msgstr "<year>2001</year> <holder>Scott D. Heavner</holder>"
 
-#: C/index.docbook:53(publisher/publishername)
-#: C/index.docbook:93(revdescription/para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:93
 msgid "GNOME Documentation Project"
 msgstr "Projeto de Documentação do GNOME"
 
-#: C/index.docbook:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -99,7 +96,8 @@ msgstr ""
 "<ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> ou no arquivo COPYING-"
 "DOCS distribuído com este manual."
 
-#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -111,7 +109,8 @@ msgstr ""
 "pode fazê-lo adicionando uma cópia da licença ao manual, como descrito na "
 "seção 6 da licença."
 
-#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -125,7 +124,8 @@ msgstr ""
 "estiverem cientes daquelas marcas registradas, os nomes aparecerão em letras "
 "maiúsculas ou com iniciais em maiúsculas."
 
-#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -152,7 +152,8 @@ msgstr ""
 "DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB "
 "ESSA RENÚNCIA; E"
 
-#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -177,7 +178,8 @@ msgstr ""
 "DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA "
 "POSSIBILIDADE DE TAIS DANOS."
 
-#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -187,7 +189,8 @@ msgstr ""
 "GNU FREE DOCUMENTATION LICENSE COM O CONHECIMENTO ADICIONAL DE QUE: <_:"
 "orderedlist-1/>"
 
-#: C/index.docbook:62(authorgroup/author)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:62
 msgid ""
 "<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
 "<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
@@ -195,11 +198,13 @@ msgstr ""
 "<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
 "<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
 
-#: C/index.docbook:90(revdescription/para)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:90
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 
-#: C/index.docbook:86(revhistory/revision)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:86
 msgid ""
 "<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> <_:"
 "revdescription-1/>"
@@ -207,15 +212,18 @@ msgstr ""
 "<revnumber>Manual do Tali V2.8</revnumber> <date>Setembro 2004</date> <_:"
 "revdescription-1/>"
 
-#: C/index.docbook:98(articleinfo/releaseinfo)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:98
 msgid "This manual describes version 2.12 of Tali."
 msgstr "Este manual descreve a versão 2.12 do Tali."
 
-#: C/index.docbook:105(legalnotice/title)
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:105
 msgid "Feedback"
 msgstr "Feedback"
 
-#: C/index.docbook:106(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:106
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -227,15 +235,18 @@ msgstr ""
 "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Página de "
 "Feedback do GNOME</ulink>."
 
-#: C/index.docbook:116(article/indexterm)
+#. (itstool) path: article/indexterm
+#: C/index.docbook:116
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>GNOME Tali</primary>"
 
-#: C/index.docbook:123(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:123
 msgid "Introduction"
 msgstr "Introdução"
 
-#: C/index.docbook:125(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:125
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -246,7 +257,8 @@ msgstr ""
 "<quote>mão</quote>. Seus dois lançamentos seguintes podem incluir alguns ou "
 "todos os dados."
 
-#: C/index.docbook:131(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:131
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -254,7 +266,8 @@ msgstr ""
 "<application>GNOME Tali</application> é muito similar ao jogo de dados "
 "Yahtzee que é uma marca registrada de Hasbro, Inc."
 
-#: C/index.docbook:136(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:136
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -266,7 +279,8 @@ msgstr ""
 "guimenuitem></menuchoice> do <guimenu>Menu principal</guimenu> ou digite "
 "<command>gtali</command> na linha de comando."
 
-#: C/index.docbook:146(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:146
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -277,15 +291,18 @@ msgstr ""
 "Este documento descreve a versão 2.8 do <application>GNOME Tali</"
 "application>."
 
-#: C/index.docbook:155(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:155
 msgid "Playing GNOME Tali"
 msgstr "Jogando GNOME Tali"
 
-#: C/index.docbook:158(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:158
 msgid "GNOME Tali in action"
 msgstr "GNOME Tali em ação"
 
-#: C/index.docbook:160(screenshot/mediaobject)
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:160
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -295,17 +312,20 @@ msgstr ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Imagem da "
 "janela principal do GNOME Tali.</phrase> </textobject>"
 
-#: C/index.docbook:172(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:172
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr ""
 "Quando o jogo inicia, você vê os resultados do seu primeiro lançamento de "
 "dados."
 
-#: C/index.docbook:179(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:179
 msgid "Click on the dice you wish to roll again."
 msgstr "Clique nos dados que você deseja lançar novamente."
 
-#: C/index.docbook:183(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:183
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -313,7 +333,8 @@ msgstr ""
 "Quando você tiver selecionado todos os dados que deseja lançar novamente, "
 "pressione o botão <guibutton>Lançar!</guibutton>."
 
-#: C/index.docbook:188(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:188
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -330,7 +351,8 @@ msgstr ""
 "na linha de sequência máxima, você vai receber um zero na sua pontuação de "
 "sequência máxima)."
 
-#: C/index.docbook:198(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:198
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -339,7 +361,8 @@ msgstr ""
 "colocado algo em uma posição, você não pode alterar a pontuação mais tarde "
 "se lançar uma mão melhor."
 
-#: C/index.docbook:203(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:203
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -358,7 +381,8 @@ msgstr ""
 "yahtzee) então você não poderá colocar um yahtzee mais tarde, zero será a "
 "sua pontuação."
 
-#: C/index.docbook:213(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:213
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -366,11 +390,13 @@ msgstr ""
 "Existe também um bônus de 35 pontos se você atingir um total de 63 pontos ou "
 "mais nas seis linhas superiores."
 
-#: C/index.docbook:218(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:218
 msgid "Using the keyboard"
 msgstr "Usando o teclado"
 
-#: C/index.docbook:220(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:220
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -385,15 +411,18 @@ msgstr ""
 "lançamento e a área de pontuação, use as setas para navegar para cima e para "
 "baixo nas linhas e use a barra de espaço para selecionar."
 
-#: C/index.docbook:232(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:232
 msgid "Game Options"
 msgstr "Opções do jogo"
 
-#: C/index.docbook:235(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:235
 msgid "GNOME Tali preferences"
 msgstr "Preferências do GNOME Tali"
 
-#: C/index.docbook:237(screenshot/mediaobject)
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:237
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -403,15 +432,18 @@ msgstr ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Caixa de "
 "diálogo das preferências do GNOME Tali.</phrase> </textobject>"
 
-#: C/index.docbook:248(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:248
 msgid "Human Players"
 msgstr "Jogadores humanos"
 
-#: C/index.docbook:250(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:250
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Número de jogadores</guimenuitem>"
 
-#: C/index.docbook:252(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:252
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -419,15 +451,18 @@ msgstr ""
 "Selecione o número de jogadores humanos. Como descrito acima, é permitido um "
 "total de seis jogadores."
 
-#: C/index.docbook:260(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:260
 msgid "Computer Opponents"
 msgstr "Oponentes do computador"
 
-#: C/index.docbook:262(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:262
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>Espera entre jogadas</guimenuitem>"
 
-#: C/index.docbook:264(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -436,11 +471,13 @@ msgstr ""
 "forma que possa ver o que eles estão fazendo. Torna o jogo um pouco mais "
 "lento."
 
-#: C/index.docbook:271(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:271
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>Número de oponentes</guimenuitem>"
 
-#: C/index.docbook:273(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -452,15 +489,18 @@ msgstr ""
 "próximo ao limite, o número de jogadores humanos será diminuído para manter "
 "o total de apenas seis jogadores."
 
-#: C/index.docbook:283(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:283
 msgid "Game Type"
 msgstr "Tipo de jogo"
 
-#: C/index.docbook:285(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:285
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Versão do jogo</guimenuitem>"
 
-#: C/index.docbook:287(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:287
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
@@ -470,20 +510,24 @@ msgstr ""
 "Kismet). Quando você alterar o tipo do jogo, você deve reiniciar o jogo para "
 "ver o novo tipo."
 
-#: C/index.docbook:297(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:297
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Nomes dos jogadores</guimenuitem>"
 
-#: C/index.docbook:299(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr ""
 "Para alterar o nome dos jogadores, apenas digite novos nomes nas caixas."
 
-#: C/index.docbook:308(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:308
 msgid "Game Strategy"
 msgstr "Estratégia do jogo"
 
-#: C/index.docbook:309(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:309
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -499,7 +543,8 @@ msgstr ""
 "Cores, você consegue um bônus de 55 se sua metade superior totalizar entre "
 "71 e 77, e um bônus de 75 se o total de sua metade superior for maior que 77."
 
-#: C/index.docbook:318(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:318
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -509,11 +554,13 @@ msgstr ""
 "pode também colocá-lo na linha de yahtzee para obter mais pontos. Isto se "
 "aplica apenas ao jogo normal."
 
-#: C/index.docbook:332(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:332
 msgid "Known Bugs and Limitations"
 msgstr "Erros conhecidos e limitações"
 
-#: C/index.docbook:333(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:333
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -522,19 +569,23 @@ msgstr ""
 "até que reinicie o gtali. O jogo deve funcionar corretamente com os dados "
 "\"errados\"."
 
-#: C/index.docbook:341(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:341
 msgid "Glossary"
 msgstr "Glossário"
 
-#: C/index.docbook:343(note/para)
+#. (itstool) path: note/para
+#: C/index.docbook:343
 msgid "Remember that the order of the dice is not important."
 msgstr "Lembre-se que a ordem dos dados não é importante."
 
-#: C/index.docbook:346(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:346
 msgid "3 of a Kind"
 msgstr "Trinca"
 
-#: C/index.docbook:347(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:347
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -542,11 +593,13 @@ msgstr ""
 "Três dos dados têm o mesmo número. A pontuação é o total de todos os dados. "
 "Ex.: 1, 2, 2, 2, 5."
 
-#: C/index.docbook:352(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:352
 msgid "4 of a Kind"
 msgstr "Quadra"
 
-#: C/index.docbook:353(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:353
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -556,11 +609,13 @@ msgstr ""
 "dados. Ex.: 2, 5, 5, 5, 5. No jogo de Cores, a pontuação é 25 mais o total "
 "de todos os dados."
 
-#: C/index.docbook:359(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:359
 msgid "5 of a Kind"
 msgstr "Quina"
 
-#: C/index.docbook:360(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:360
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -568,11 +623,13 @@ msgstr ""
 "Cinco dados idênticos, ex.: 3, 3, 3, 3, 3. No jogo de Cores, a pontuação é "
 "50 mais o total de todos os dados."
 
-#: C/index.docbook:365(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:365
 msgid "Full House"
 msgstr "Full House"
 
-#: C/index.docbook:366(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:366
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -582,11 +639,13 @@ msgstr ""
 "e outro grupo de dois com os mesmos números. Ex.: 1, 1, 1, 4, 4. No jogo de "
 "Cores, a pontuação é 15 mais o total de todos os dados."
 
-#: C/index.docbook:373(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:373
 msgid "Full House Same Color"
 msgstr "Full House da mesma cor"
 
-#: C/index.docbook:374(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:374
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -602,11 +661,13 @@ msgstr ""
 "pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. A pontuação é 20 mais o "
 "total de todos os dados."
 
-#: C/index.docbook:384(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:384
 msgid "Two Pair Same Color"
 msgstr "Dois pares da mesma cor"
 
-#: C/index.docbook:385(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:385
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -622,38 +683,43 @@ msgstr ""
 "pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. O quinto dados pode ser de "
 "qualquer valor. A pontuação é o total de todos os dados. "
 
-#: C/index.docbook:395(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:395
 msgid "Flush"
 msgstr "Flush"
 
-#: C/index.docbook:396(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:396
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
-"6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be "
-"any value. The score is 35 points."
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Esta categoria é usada apenas no jogo de Cores. Cinco dados que são todos da "
 "mesma \"cor\": Dois dados são da mesma cor se seus números totalizarem 7: 1 "
-"e 6 são pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. O quinto dado pode "
-"ser de qualquer valor. Vale 35 pontos."
+"e 6 são pretos, 2 e 5 são vermelhos, e 3 e 4 são verdes. A pontuação é de 35 "
+"pontos."
 
-#: C/index.docbook:404(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:403
 msgid "Large Straight"
 msgstr "Sequência maior"
 
-#: C/index.docbook:405(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:404
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
 "Cinco dados com números consecutivos. Ex.: 2, 3, 4, 5, 6. Vale 40 pontos."
 
-#: C/index.docbook:410(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:409
 msgid "Small Straight"
 msgstr "Sequência menor"
 
-#: C/index.docbook:411(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:410
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -663,11 +729,13 @@ msgstr ""
 "número. Ex.: 2, 3, 4, 5, 5. Esta categoria é usada apenas no jogo normal. "
 "Vale 30 pontos."
 
-#: C/index.docbook:425(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:424
 msgid "Authors"
 msgstr "Autores"
 
-#: C/index.docbook:426(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:425
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -685,11 +753,13 @@ msgstr ""
 "manual, siga as orientações neste <ulink url=\"ghelp:user-guide?feedback-bugs"
 "\" type=\"help\">documento</ulink>."
 
-#: C/index.docbook:453(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:452
 msgid "License"
 msgstr "Licença"
 
-#: C/index.docbook:454(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:453
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -703,7 +773,8 @@ msgstr ""
 "Foundation; qualquer versão 2 da Licença, ou (a seu critério) outra versão "
 "posterior."
 
-#: C/index.docbook:462(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:461
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -715,7 +786,8 @@ msgstr ""
 "FIM ESPECÍFICO. Veja a <citetitle>Licença Pública Geral GNU (GPL)</"
 "citetitle> para mais detalhes"
 
-#: C/index.docbook:475(para/address)
+#. (itstool) path: para/address
+#: C/index.docbook:474
 #, no-wrap
 msgid ""
 "\n"
@@ -732,7 +804,8 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/index.docbook:468(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:467
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -747,11 +820,13 @@ msgstr ""
 "\"http://www.fsf.org\">o site deles</ulink> ou ao escrever para <_:address-1/"
 ">"
 
-#: C/legal.xml:9(para/ulink)
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
 msgid "link"
 msgstr "link"
 
-#: C/legal.xml:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
