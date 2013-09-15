@@ -689,9 +689,7 @@ LoadDicePixmaps (void)
 void
 update_undo_sensitivity (void)
 {
-  /* Unfortunately, this does not change the state of undo button in app menu :( */
-  gboolean enable = UndoVisible ();
-  g_action_group_query_action (G_ACTION_GROUP (application), "undo", &enable, NULL, NULL, NULL, NULL);
+  g_simple_action_set_enabled (((GSimpleAction *) undo_action), UndoVisible ());
 }
 
 static void
