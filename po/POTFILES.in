@@ -2,7 +2,7 @@
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
 data/gtali.desktop.in
-data/org.gnome.tali.gschema.xml.in
+data/org.gnome.tali.gschema.xml
 src/clist.c
 src/games-scores-dialog.c
 src/games-stock.c
