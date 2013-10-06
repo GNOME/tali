@@ -3,6 +3,7 @@
 [encoding: UTF-8]
 data/gtali.desktop.in
 data/org.gnome.tali.gschema.xml
+data/tali.appdata.xml.in
 src/clist.c
 src/games-scores-dialog.c
 src/games-stock.c
