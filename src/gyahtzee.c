@@ -184,7 +184,6 @@ CheerWinner (void)
     pos = games_scores_add_plain_score (highscores, (guint32) WinningScore);
 
     if (pos > 0) {
-      games_scores_update_score (highscores, players[winner].name);
       if (dialog) {
         gtk_window_present (GTK_WINDOW (dialog));
       } else {

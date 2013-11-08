@@ -21,12 +21,6 @@ tali_SOURCES =       \
 	games-stock.c    \
 	games-stock.h
 
-if ENABLE_SETGID
-tali_SOURCES +=		\
-	games-setgid-io.c		\
-	games-setgid-io.h
-endif # ENABLE_SETGID
-
 tali_CPPFLAGS = \
 	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
@@ -35,15 +29,9 @@ tali_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/tali\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
-	-DSCORESDIR="\"$(scoredir)\""				\
 	$(TALI_CFLAGS)
 		
 tali_LDADD = \
 	$(TALI_LIBS)
-
-install-exec-hook:
-	-if test "$(setgid)" = "true"; then \
-	  chgrp $(scores_group) $(DESTDIR)$(bindir)/tali && chmod 2555 $(DESTDIR)$(bindir)/tali ;\
-	fi
 
 -include $(top_srcdir)/git.mk
