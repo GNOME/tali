@@ -33,25 +33,37 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=tali&k"
-"eywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-02 22:31+0000\n"
-"PO-Revision-Date: 2013-03-09 06:24+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-11-07 00:50+0000\n"
+"PO-Revision-Date: 2013-11-15 21:45+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
-"Language-Team: team@gnome.gr\n"
+"Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Virtaal 0.7.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:1
+#: ../data/gtali.desktop.in.h:1 ../src/gyahtzee.c:56
+msgid "Tali"
+msgstr "Τάλι"
+
+#: ../data/gtali.desktop.in.h:2
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Παίξτε ένα παιχνίδι με ζάρια, αντίστοιχο του πόκερ"
+
+#: ../data/gtali.desktop.in.h:3
+msgid "yahtzee;"
+msgstr "yahtzee;"
+
+#: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
 msgstr "Καθυστέρηση μεταξύ ζαριών"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:2
+#: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
 "Choose whether or not to insert a delay between the computer's dice rolls so "
 "the player can follow what it is doing."
@@ -59,28 +71,42 @@ msgstr ""
 "Επιλέξτε αν επιθυμείτε να υπάρχει καθυστέρηση μεταξύ των ζαριών του "
 "υπολογιστή, ώστε ο παίκτης να παρακολουθεί τις κινήσεις του υπολογιστή."
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:3
+#: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Προβολή των σκέψεων του υπολογιστή"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:4
+#: ../data/org.gnome.tali.gschema.xml.h:4
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
 "Αν έχει οριστεί ως αληθής, θα καταγραφούν οι ενέργειες της τεχνητής "
 "νοημοσύνης στη συνήθη μορφή."
 
-#: ../data/tali.desktop.in.in.h:1 ../src/gyahtzee.c:56
-msgid "Tali"
-msgstr "Τάλι"
+#: ../data/org.gnome.tali.gschema.xml.h:5
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgstr "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 
-#: ../data/tali.desktop.in.in.h:2
-msgid "Beat the odds in a poker-style dice game"
-msgstr "Παίξτε ένα παιχνίδι με ζάρια, αντίστοιχο του πόκερ"
+#: ../data/org.gnome.tali.gschema.xml.h:6
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Κανονικό'"
 
-#: ../data/tali.desktop.in.in.h:3
-msgid "yahtzee;"
-msgstr "yahtzee;"
+#: ../data/tali.appdata.xml.in.h:1
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Μια παραλλαγή σε πόκερ με ζάρια και λιγότερα χρήματα, αυτό το παιχνίδι είναι "
+"κλασικό οικογενειακό. Ρίξτε τη ζαριά τρεις φορές στη σειρά, κρατώντας αυτές "
+"που θέλετε, για να κάνετε τις καλύτερες δυνατές. Μπορείτε επίσης να παίξετε "
+"μια λιγότερο γνωστή παραλλαγή με χρωματιστά ζάρια."
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -226,7 +252,7 @@ msgid "_New"
 msgstr "_Νέο"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:752
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:750
 msgid "_New Game"
 msgstr "_Νέο παιχνίδι"
 
@@ -244,7 +270,7 @@ msgstr "Επανα_φορά"
 msgid "_Restart"
 msgstr "_Επανεκκίνηση"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:753
+#: ../src/games-stock.c:259 ../src/gyahtzee.c:751
 msgid "_Undo Move"
 msgstr "_Αναίρεση κίνησης"
 
@@ -276,7 +302,7 @@ msgstr "Π_αύση"
 msgid "Res_ume"
 msgstr "_Συνέχιση"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:755
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:753
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
@@ -295,8 +321,8 @@ msgid ""
 msgstr ""
 "Το %s είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή ή/και τροποποίησή "
 "του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU -GPL- όπως αυτή "
-"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού -FSF- είτε της έκδοσης %"
-"d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
+"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού -FSF- είτε της έκδοσης "
+"%d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
 #: ../src/games-stock.c:322
 #, c-format
@@ -328,8 +354,8 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης "
-"GNU -GPL- μαζί με το πρόγραμμα. Εάν όχι, επισκεφθείτε το "
-"<http://www.gnu.org/licenses/>."
+"GNU -GPL- μαζί με το πρόγραμμα. Εάν όχι, επισκεφθείτε το <http://www.gnu.org/"
+"licenses/>."
 
 #: ../src/gyahtzee.c:101
 msgid "Delay computer moves"
@@ -382,7 +408,7 @@ msgstr "Χρώματα"
 msgid "Roll all!"
 msgstr "Ρίξτε τα ζάρια!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:790
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:788
 msgid "Roll!"
 msgstr "Ζαριά!"
 
@@ -474,23 +500,23 @@ msgstr ""
 msgid "GNOME Games web site"
 msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_Περί"
 
-#: ../src/gyahtzee.c:760
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: ../src/gyahtzee.c:969 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:973 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Άνθρωπος"
 
