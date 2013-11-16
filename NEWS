@@ -1,3 +1,8 @@
+tali 3.8.2
+==========
+
+* Fix scores system (requires setgid and greater score than all opponents)
+
 tali 3.8.1
 ==========
 
