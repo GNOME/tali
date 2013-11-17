@@ -1,3 +1,10 @@
+Tali 3.11.2
+===========
+
+* Check for *-validate before using it, run autoupdate
+* Fix scores
+* Translation updates (Greek, Galician, Spanish)
+
 Tali 3.11.1
 ===========
 
