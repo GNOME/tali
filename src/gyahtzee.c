@@ -607,7 +607,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 			 "Free Software Foundation, Inc.",
 			 "license-type", GTK_LICENSE_GPL_2_0,
 			 "comments", _("A variation on poker with "
-				       "dice and less money.\n\n"
+				       "dice and less money\n\n"
 				       "Tali is a part of GNOME Games."),
 			 "authors", authors,
 			 "documenters", documenters,
