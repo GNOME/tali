@@ -599,14 +599,13 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
     "Callum McKenzie",
     NULL
   };
-  gchar *license = games_get_license (appName);
 
   gtk_show_about_dialog (GTK_WINDOW (window),
 			 "name", appName,
 			 "version", VERSION,
 			 "copyright", "Copyright \xc2\xa9 1998-2008 "
 			 "Free Software Foundation, Inc.",
-			 "license", license,
+			 "license-type", GTK_LICENSE_GPL_2_0,
 			 "comments", _("A variation on poker with "
 				       "dice and less money.\n\n"
 				       "Tali is a part of GNOME Games."),
@@ -617,8 +616,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 			 "website",
 			 "http://www.gnome.org/projects/gnome-games/",
 			 "website-label", _("GNOME Games web site"),
-			 "wrap-license", TRUE, NULL);
-  g_free (license);
+			 NULL);
 }
 
 void
