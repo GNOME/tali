@@ -17,6 +17,6 @@
  <screenshots>
   <screenshot type="default" width="1200" height="675">https://people.gnome.org/~mcatanzaro/tali.png</screenshot>
  </screenshots>
- <url type="homepage">https://wiki.gnome.org/Tali</url>
+ <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
  <updatecontact>games_list_at_gnome.org</updatecontact>
 </application>
