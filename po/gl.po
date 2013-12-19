@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 16:32+0100\n"
-"PO-Revision-Date: 2013-11-01 16:35+0200\n"
+"POT-Creation-Date: 2013-12-19 01:06+0100\n"
+"PO-Revision-Date: 2013-12-19 01:08+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -230,7 +230,7 @@ msgid "_New"
 msgstr "_Novo"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:750
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:748
 msgid "_New Game"
 msgstr "Xogo _novo"
 
@@ -248,7 +248,7 @@ msgstr "_Restabelecer"
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:751
+#: ../src/games-stock.c:259 ../src/gyahtzee.c:749
 msgid "_Undo Move"
 msgstr "_Desfacer movemento"
 
@@ -280,7 +280,7 @@ msgstr "_Pausa"
 msgid "Res_ume"
 msgstr "C_ontinuar"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:753
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:751
 msgid "_Scores"
 msgstr "_Puntuacións"
 
@@ -384,7 +384,7 @@ msgstr "Cores"
 msgid "Roll all!"
 msgstr "Lanzar!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:788
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:786
 msgid "Roll!"
 msgstr "Lanza!"
 
@@ -392,7 +392,7 @@ msgstr "Lanza!"
 msgid "The game is a draw!"
 msgstr "A partida rematou en empate!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:628
+#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:626
 msgid "Tali Scores"
 msgstr "Puntuacións do Tali"
 
@@ -455,17 +455,17 @@ msgstr "Versión da consola (1992):"
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Xogo de cores e IA multinivel (2006):"
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:609
 msgid ""
-"A variation on poker with dice and less money.\n"
+"A variation on poker with dice and less money\n"
 "\n"
 "Tali is a part of GNOME Games."
 msgstr ""
-"Unha variante do póker con dados e menos diñeiro.\n"
+"Unha variante do póker con dados e menos diñeiro\n"
 "\n"
 "O Tali forma parte do GNOME Games."
 
-#: ../src/gyahtzee.c:615
+#: ../src/gyahtzee.c:614
 msgid "translator-credits"
 msgstr ""
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
@@ -481,27 +481,27 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "GNOME Games web site"
 msgstr "Sitio web do GNOME Games"
 
-#: ../src/gyahtzee.c:752
+#: ../src/gyahtzee.c:750
 msgid "_Preferences"
 msgstr "_Preferencias"
 
-#: ../src/gyahtzee.c:756
+#: ../src/gyahtzee.c:754
 msgid "_Help"
 msgstr "_Axuda"
 
-#: ../src/gyahtzee.c:757
+#: ../src/gyahtzee.c:755
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:756
 msgid "_Quit"
 msgstr "_Saír"
 
-#: ../src/gyahtzee.c:973 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:971 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humano"
 
