@@ -614,8 +614,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 			 "translator-credits", _("translator-credits"),
 			 "logo-icon-name", "tali",
 			 "website",
-			 "http://www.gnome.org/projects/gnome-games/",
-			 "website-label", _("GNOME Games web site"),
+			 "https://wiki.gnome.org/Apps/Tali",
 			 NULL);
 }
 
