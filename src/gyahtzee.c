@@ -762,8 +762,8 @@ GyahtzeeCreateMainWindow (void)
 
         /*--- Headerbar ---*/
   hbar = gtk_header_bar_new ();
-  gtk_header_bar_set_show_close_button (hbar, TRUE);
-  gtk_header_bar_set_title (hbar, _(appName));
+  gtk_header_bar_set_show_close_button (GTK_HEADER_BAR (hbar), TRUE);
+  gtk_header_bar_set_title (GTK_HEADER_BAR (hbar), _(appName));
   gtk_widget_show (hbar);
   gtk_window_set_titlebar (GTK_WINDOW (window), hbar);
 
