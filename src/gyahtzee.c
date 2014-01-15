@@ -722,7 +722,7 @@ GyahtzeeCreateMainWindow (void)
   window = gtk_application_window_new (application);
   gtk_window_set_application (GTK_WINDOW (window), application);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
-  gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), TRUE);
+  gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), FALSE);
   gtk_window_set_icon_name(GTK_WINDOW (window), "tali");
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
