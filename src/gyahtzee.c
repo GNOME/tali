@@ -719,6 +719,7 @@ GyahtzeeCreateMainWindow (void)
   GtkWidget *toolbar;
   GtkWidget *tmp;
   GtkWidget *dicebox;
+  GtkWidget *hbar;
   GMenu *app_menu, *section;
   int i, j;
 
@@ -726,6 +727,7 @@ GyahtzeeCreateMainWindow (void)
   gtk_window_set_application (GTK_WINDOW (window), application);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
   gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), TRUE);
+  gtk_window_set_icon_name(GTK_WINDOW (window), "tali");
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
@@ -757,6 +759,13 @@ GyahtzeeCreateMainWindow (void)
   undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
   update_undo_sensitivity();
   gtk_application_set_app_menu (GTK_APPLICATION (application), G_MENU_MODEL (app_menu));
+
+        /*--- Headerbar ---*/
+  hbar = gtk_header_bar_new ();
+  gtk_header_bar_set_show_close_button (hbar, TRUE);
+  gtk_header_bar_set_title (hbar, _(appName));
+  gtk_widget_show (hbar);
+  gtk_window_set_titlebar (GTK_WINDOW (window), hbar);
 
 	/*---- Content ----*/
 
