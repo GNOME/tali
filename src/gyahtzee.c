@@ -86,10 +86,10 @@ static GtkWidget *dicePixmaps[NUMBER_OF_DICE][NUMBER_OF_PIXMAPS][GAME_TYPES];
 GSettings *settings;
 GtkWidget *window;
 GtkWidget *ScoreList;
-static GtkWidget *statusbar;
 static GtkToolItem *diceBox[NUMBER_OF_DICE];
 static GtkWidget *rollLabel;
 static GtkWidget *mbutton;
+static GtkWidget *hbar;
 static GAction *scores_action;
 static GAction *undo_action;
 static gchar *game_type_string = NULL;
@@ -565,17 +565,14 @@ say (char *fmt, ...)
 {
   va_list ap;
   char buf[200];
-  guint context_id;
 
   if (test_computer_play > 0) return;
   va_start (ap, fmt);
   g_vsnprintf (buf, 200, fmt, ap);
   va_end (ap);
 
-  context_id =
-    gtk_statusbar_get_context_id (GTK_STATUSBAR (statusbar), "message");
-  gtk_statusbar_pop (GTK_STATUSBAR (statusbar), context_id);
-  gtk_statusbar_push (GTK_STATUSBAR (statusbar), context_id, buf);
+  gtk_header_bar_set_subtitle (GTK_HEADER_BAR (hbar), buf);
+
 }
 
 
@@ -719,7 +716,6 @@ GyahtzeeCreateMainWindow (void)
   GtkWidget *toolbar;
   GtkWidget *tmp;
   GtkWidget *dicebox;
-  GtkWidget *hbar;
   GMenu *app_menu, *section;
   int i, j;
 
@@ -733,8 +729,6 @@ GyahtzeeCreateMainWindow (void)
 
   g_signal_connect (G_OBJECT (window), "key_press_event",
 		    G_CALLBACK (key_press), NULL);
-
-  statusbar = gtk_statusbar_new ();
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
   gtk_application_add_accelerator (application, "<Primary>z", "app.undo", NULL);
@@ -775,9 +769,7 @@ GyahtzeeCreateMainWindow (void)
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
-  gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
 
-  gtk_widget_show (statusbar);
   /* Retreive dice pixmaps from memory or files */
   LoadDicePixmaps ();
 
