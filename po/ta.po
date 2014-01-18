@@ -61,6 +61,7 @@ msgid "Beat the odds in a poker-style dice game"
 msgstr "போக்கர்-பாணி தாய விளையாட்டை விளையாடவும்"
 
 #: ../data/tali.desktop.in.in.h:3
+#, fuzzy
 msgid "yahtzee;"
 msgstr "யாட்ஃசீ;"
 
