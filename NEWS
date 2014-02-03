@@ -1,3 +1,10 @@
+Tali 3.11.5
+===========
+
+* Use a GtkHeaderBar, pushed GTK requirement to 3.10, fixed layout issues
+* Move scores from /var/games to home directory
+* Translation updates (Traditional Chinese, Czech, Chinese simplified)
+
 Tali 3.11.4
 ===========
 
