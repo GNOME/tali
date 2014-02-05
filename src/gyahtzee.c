@@ -911,7 +911,7 @@ main (int argc, char *argv[])
       exit(0);
   }
 
-  highscores = games_scores_new ("gtali",
+  highscores = games_scores_new ("tali",
                                  category_array, G_N_ELEMENTS (category_array),
                                  "game type", NULL,
                                  0 /* default category */,
