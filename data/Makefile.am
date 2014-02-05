@@ -23,7 +23,7 @@ gsettings_SCHEMAS = org.gnome.tali.gschema.xml
 man_MANS = tali.6
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gtali.desktop.in
+desktop_in_files = tali.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 

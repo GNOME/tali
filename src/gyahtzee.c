@@ -846,12 +846,6 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  /*
-   * Required because the binary doesn't match the desktop file.
-   * Has to be before the call to g_option_context_parse.
-   */
-  g_set_prgname ("gtali");
-
   application = gtk_application_new ("org.gnome.tali", 0);
   g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
 
