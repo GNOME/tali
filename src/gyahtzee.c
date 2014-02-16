@@ -715,6 +715,7 @@ GyahtzeeCreateMainWindow (void)
   GtkWidget *toolbar;
   GtkWidget *tmp;
   GtkWidget *dicebox;
+  GtkWidget *undo_button;
   GMenu *app_menu, *section;
   int i, j;
 
@@ -740,7 +741,6 @@ GyahtzeeCreateMainWindow (void)
   section = g_menu_new ();
   g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
   g_menu_append (section, _("_New Game"), "app.new-game");
-  g_menu_append (section, _("_Undo Move"), "app.undo");
   g_menu_append (section, _("_Preferences"), "app.preferences");
   g_menu_append (section, _("_Scores"), "app.scores");
   section = g_menu_new ();
@@ -759,6 +759,16 @@ GyahtzeeCreateMainWindow (void)
   gtk_header_bar_set_title (GTK_HEADER_BAR (hbar), _(appName));
   gtk_widget_show (hbar);
   gtk_window_set_titlebar (GTK_WINDOW (window), hbar);
+
+  if (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
+    undo_button = gtk_button_new_from_icon_name ("edit-undo-rtl-symbolic", GTK_ICON_SIZE_BUTTON);
+  else
+    undo_button = gtk_button_new_from_icon_name ("edit-undo-symbolic", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_set_valign (undo_button, GTK_ALIGN_CENTER);
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (undo_button), "app.undo");
+  gtk_widget_set_tooltip_text (undo_button, _("Undo your most recent move"));
+  gtk_widget_show (undo_button);
+  gtk_header_bar_pack_start (GTK_HEADER_BAR (hbar), undo_button);
 
 	/*---- Content ----*/
 
