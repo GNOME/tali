@@ -253,7 +253,7 @@ DisplayCurrentPlayer(void) {
     if (players[CurrentPlayer].comp) {
       say (_("Computer playing for %s"), players[CurrentPlayer].name);
     } else {
-      say (_("%s! -- You're up."), players[CurrentPlayer].name);
+      say (_("%s! – You’re up."), players[CurrentPlayer].name);
     }
   }
 }
