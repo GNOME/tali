@@ -1,3 +1,10 @@
+Tali 3.11.90
+===========
+
+* Rename desktop file so tali appears in GNOME Software
+* Change scores to be saved in ~/.local/share/tali
+* Move undo move from the app menu to the header bar
+
 Tali 3.11.5
 ===========
 
