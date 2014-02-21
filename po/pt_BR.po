@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-19 00:08+0000\n"
-"PO-Revision-Date: 2014-01-02 06:43-0300\n"
+"POT-Creation-Date: 2014-02-21 11:32+0000\n"
+"PO-Revision-Date: 2014-02-21 10:39-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -37,18 +37,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gtali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/gtali.desktop.in.h:2
+#: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Vença as probabilidades em um jogo de dados parecido com pôquer"
 
-#: ../data/gtali.desktop.in.h:3
+#: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
@@ -114,36 +114,30 @@ msgid "Field used"
 msgstr "Campo usado"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tempo"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Pontuação"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
+#: ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Novo jogo"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Nome"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -241,7 +235,7 @@ msgid "_New"
 msgstr "_Novo"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:748
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "_Novo jogo"
 
@@ -259,7 +253,7 @@ msgstr "_Restaurar"
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:749
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "_Desfazer movimento"
 
@@ -291,7 +285,7 @@ msgstr "_Pausar"
 msgid "Res_ume"
 msgstr "Contin_uar"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:751
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
 msgid "_Scores"
 msgstr "_Pontuações"
 
@@ -395,7 +389,7 @@ msgstr "Colorido"
 msgid "Roll all!"
 msgstr "Lançar todos!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:786
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "Lançar!"
 
@@ -403,69 +397,70 @@ msgstr "Lançar!"
 msgid "The game is a draw!"
 msgstr "O jogo está empatado!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:626
+#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
 msgstr "Pontuação do Tali"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Congratulations!"
 msgstr "Parabéns!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
 msgstr "A sua pontuação é a melhor!"
 
-#: ../src/gyahtzee.c:195
+#: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
 msgstr "Sua pontuação está entre as dez melhores."
 
-#: ../src/gyahtzee.c:207
+#: ../src/gyahtzee.c:206
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s vence o jogo com %d ponto"
 msgstr[1] "%s vence o jogo com %d pontos"
 
-#: ../src/gyahtzee.c:211
+#: ../src/gyahtzee.c:210
 msgid "Game over!"
 msgstr "Fim do jogo!"
 
-#: ../src/gyahtzee.c:255
+#: ../src/gyahtzee.c:254
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Computador jogando por %s"
 
-#: ../src/gyahtzee.c:257
+#: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s! -- É a sua vez."
+#| msgid "%s! -- You're up."
+msgid "%s! – You’re up."
+msgstr "%s! – É a sua vez."
 
-#: ../src/gyahtzee.c:450
+#: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
 msgstr "Selecione os dados para jogar ou selecione uma caixa de pontuação."
 
-#: ../src/gyahtzee.c:478
+#: ../src/gyahtzee.c:477
 msgid "Roll"
 msgstr "Lançar"
 
-#: ../src/gyahtzee.c:536
+#: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr ""
 "São permitidos apenas três lançamentos. Selecione uma caixa de pontuação."
 
-#: ../src/gyahtzee.c:586
+#: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
 msgstr "Versão para GNOME (1998):"
 
-#: ../src/gyahtzee.c:589
+#: ../src/gyahtzee.c:585
 msgid "Console version (1992):"
 msgstr "Versão para console (1992):"
 
-#: ../src/gyahtzee.c:592
+#: ../src/gyahtzee.c:588
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Jogo colorido e IA de níveis múltiplos (2006):"
 
-#: ../src/gyahtzee.c:609
+#: ../src/gyahtzee.c:605
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -475,7 +470,7 @@ msgstr ""
 "\n"
 "Tali faz parte do GNOME Games."
 
-#: ../src/gyahtzee.c:614
+#: ../src/gyahtzee.c:610
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -494,27 +489,28 @@ msgstr ""
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>"
 
-#: ../src/gyahtzee.c:618
-msgid "GNOME Games web site"
-msgstr "Site do GNOME Games"
-
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:744
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:748
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: ../src/gyahtzee.c:755
+#: ../src/gyahtzee.c:749
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/gyahtzee.c:756
+#: ../src/gyahtzee.c:750
 msgid "_Quit"
 msgstr "Sai_r"
 
-#: ../src/gyahtzee.c:971 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+#| msgid "The users's most recent level."
+msgid "Undo your most recent move"
+msgstr "Desfaz seu movimento mais recente"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humano"
 
@@ -679,6 +675,13 @@ msgstr "Escolha uma caixa de pontuação."
 #: ../src/yahtzee.c:528
 msgid "5 of a Kind [total]"
 msgstr "Quina [total]"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Site do GNOME Games"
 
 #~ msgid "Chess"
 #~ msgstr "Xadrez"
@@ -3064,9 +3067,6 @@ msgstr "Quina [total]"
 
 #~ msgid "The current level"
 #~ msgstr "O nível atual"
-
-#~ msgid "The users's most recent level."
-#~ msgstr "Os nível mais recente dos usuários."
 
 #~ msgid ""
 #~ "Turn off all the lights\n"
