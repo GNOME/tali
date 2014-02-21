@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-12 18:14+0000\n"
-"PO-Revision-Date: 2014-01-18 21:12+0100\n"
+"POT-Creation-Date: 2014-02-21 11:32+0000\n"
+"PO-Revision-Date: 2014-02-21 21:27+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -35,15 +35,15 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gtali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/gtali.desktop.in.h:2
+#: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Hrajte hru s kostkami ve stylu pokeru"
 
-#: ../data/gtali.desktop.in.h:3
+#: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
@@ -75,8 +75,6 @@ msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ 'Člověk', 'Honza', 'Pepa', 'Monika', 'Karel', 'Jana' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgctxt "game type"
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Normální'"
@@ -112,36 +110,30 @@ msgid "Field used"
 msgstr "Pole používáno"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d min %2$d sec"
 
-#: ../src/games-scores-dialog.c:470
+#: ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nová hra"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Jméno"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
 
@@ -239,7 +231,7 @@ msgid "_New"
 msgstr "_Nová"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:747
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "_Nová hra"
 
@@ -257,7 +249,7 @@ msgstr "_Vynulovat"
 msgid "_Restart"
 msgstr "_Restartovat"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:748
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "Tah _zpět"
 
@@ -289,7 +281,7 @@ msgstr "_Pozastavit"
 msgid "Res_ume"
 msgstr "_Pokračovat"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:750
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
 msgid "_Scores"
 msgstr "_Skóre"
 
@@ -394,7 +386,7 @@ msgstr "Barevná"
 msgid "Roll all!"
 msgstr "Házet všemi!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:785
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "Házet!"
 
@@ -402,23 +394,23 @@ msgstr "Házet!"
 msgid "The game is a draw!"
 msgstr "Hra skončila nerozhodně!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:625
+#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
 msgstr "Skóre hry Tali"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Congratulations!"
 msgstr "Blahopřejeme!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
 msgstr "Vaše skóre je nejlepší!"
 
-#: ../src/gyahtzee.c:195
+#: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
 msgstr "Vaše skóre se dostalo mezi deset nejlepších."
 
-#: ../src/gyahtzee.c:207
+#: ../src/gyahtzee.c:206
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -426,49 +418,45 @@ msgstr[0] "%s vyhrává hru s %d bodem"
 msgstr[1] "%s vyhrává hru s %d body"
 msgstr[2] "%s vyhrává hru s %d body"
 
-#: ../src/gyahtzee.c:211
+#: ../src/gyahtzee.c:210
 msgid "Game over!"
 msgstr "Konec hry!"
 
-#: ../src/gyahtzee.c:255
+#: ../src/gyahtzee.c:254
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Počítač hraje pro %s"
 
-#: ../src/gyahtzee.c:257
+#: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s! -- Jste na řadě."
+msgid "%s! – You’re up."
+msgstr "%s! – Jste na řadě."
 
-#: ../src/gyahtzee.c:450
+#: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
 msgstr "Vyberte kostku, kterou chcete házet, nebo vyberte místo s body."
 
-#: ../src/gyahtzee.c:478
+#: ../src/gyahtzee.c:477
 msgid "Roll"
 msgstr "Házet"
 
-#: ../src/gyahtzee.c:536
+#: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Máte povoleny pouze tři hody. Vyberte oddíl s body."
 
-#: ../src/gyahtzee.c:586
+#: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
 msgstr "Verze pro GNOME (1998):"
 
-#: ../src/gyahtzee.c:589
+#: ../src/gyahtzee.c:585
 msgid "Console version (1992):"
 msgstr "Verze pro konzolu (1992):"
 
-#: ../src/gyahtzee.c:592
+#: ../src/gyahtzee.c:588
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Barevná hra a víceúrovňová AI (2006):"
 
-#: ../src/gyahtzee.c:609
-#| msgid ""
-#| "A variation on poker with dice and less money.\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
+#: ../src/gyahtzee.c:605
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -478,7 +466,7 @@ msgstr ""
 "\n"
 "Tali je součástí her GNOME."
 
-#: ../src/gyahtzee.c:614
+#: ../src/gyahtzee.c:610
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -495,23 +483,27 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:744
 msgid "_Preferences"
 msgstr "_Předvolby"
 
-#: ../src/gyahtzee.c:753
+#: ../src/gyahtzee.c:748
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:749
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../src/gyahtzee.c:755
+#: ../src/gyahtzee.c:750
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../src/gyahtzee.c:970 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+msgid "Undo your most recent move"
+msgstr "Vrátit zpět váš poslední tah"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Člověk"
 
