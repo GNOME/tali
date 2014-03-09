@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-21 00:01+0000\n"
+"POT-Creation-Date: 2014-03-08 23:36+0000\n"
 "PO-Revision-Date: 2012-03-23 17:59+0800\n"
-"Last-Translator: tuhaihe <wangdianjin@linuxdeepin.com>\n"
+"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gtali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
 msgstr "掷骰子"
 
-#: ../data/gtali.desktop.in.h:2
+#: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
 msgstr "一种类似扑克的的骰子游戏"
 
-#: ../data/gtali.desktop.in.h:3
+#: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;骰子;快艇;"
 
@@ -50,13 +50,11 @@ msgid ""
 msgstr "如果设为真，AI的思考将被输出到标准输出。"
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
-#| msgid "[Human,Wilber,Bill,Monica,Kenneth,Janet]"
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ '自己', '张三', '李四', '小明', '小强', '小花' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "常规"
@@ -67,11 +65,12 @@ msgid ""
 "classic. Throw the dice three times in a row, holding back the ones you "
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
-msgstr ""
+msgstr "一种用骰子和零钱玩的扑克游戏，家中常备。掷一行骰子三次，留下自己想要的点，"
+"使自己的花色尽量好。还可以玩一种不太常见的彩色骰子。"
 
 #: ../data/tali.appdata.xml.in.h:2
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
+msgstr "和一到五个对手玩，有三种难度级别。"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -209,7 +208,7 @@ msgid "_New"
 msgstr "新建(_N)"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:742
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
@@ -227,7 +226,7 @@ msgstr "重置(_R)"
 msgid "_Restart"
 msgstr "重新开始(_R)"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:743
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "撤消移动(_U)"
 
@@ -360,7 +359,7 @@ msgstr "多色"
 msgid "Roll all!"
 msgstr "全部重掷！"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:785
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "掷！"
 
@@ -401,8 +400,9 @@ msgstr "计算机玩 %s"
 
 #: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s！——该您了。"
+#| msgid "%s! -- You're up."
+msgid "%s! – You’re up."
+msgstr "%s！－该您了。"
 
 #: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
@@ -429,10 +429,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "多色游戏和多等级 AI(2006)："
 
 #: ../src/gyahtzee.c:605
-#| msgid ""
-#| "A variation on poker with dice and less money.\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -465,7 +461,12 @@ msgstr "关于(_A)"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../src/gyahtzee.c:970 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+#| msgid "The users's most recent level."
+msgid "Undo your most recent move"
+msgstr "撤销上一步"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "人"
 
@@ -2879,9 +2880,6 @@ msgstr "5个相同 [合计]"
 
 #~ msgid "The current level"
 #~ msgstr "当前级别"
-
-#~ msgid "The users's most recent level."
-#~ msgstr "用户最近的级别。"
 
 #~ msgid ""
 #~ "Turn off all the lights\n"
