@@ -1,31 +1,44 @@
 # Slovak translation for gnome-games.
-# Copyright (C) 2003, 2005, 2008, 2010, 2011, 2013 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2005, 2008, 2010, 2011, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2003.
 # Marcel Telka <marcel@telka.sk>, 2005, 2008.
 # Peter Mráz <etkinator@gmail.com>, 2010, 2011.
-# Ján Kyselica <kyselica.jan@gmail.com>, 2013.
+# Ján Kyselica <kyselica.jan@gmail.com>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-14 19:57+0000\n"
-"PO-Revision-Date: 2013-01-19 11:49+0100\n"
-"Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
+"POT-Creation-Date: 2014-02-16 17:18+0000\n"
+"PO-Revision-Date: 2014-03-22 20:15+0100\n"
+"Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:1
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+msgid "Tali"
+msgstr "Tali"
+
+#: ../data/tali.desktop.in.h:2
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Pokúšajte šťastie v pokrovej hre s kockami"
+
+#: ../data/tali.desktop.in.h:3
+msgid "yahtzee;"
+msgstr "yahtzee;"
+
+#: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
 msgstr "Pauza medzi hodmi"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:2
+#: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
 "Choose whether or not to insert a delay between the computer's dice rolls so "
 "the player can follow what it is doing."
@@ -33,27 +46,43 @@ msgstr ""
 "Zvoľte si, či sa má alebo nemá vložiť prestávka medzi hody počítača, aby "
 "hráč mohol sledovať, čo počítač robí."
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:3
+#: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Zobraziť myšlienky počítača"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:4
+#: ../data/org.gnome.tali.gschema.xml.h:4
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
 "Ak je nastavené na true, práca UI hráčov bude vypísaná na štandardný výstup."
 
-#: ../data/tali.desktop.in.in.h:1 ../src/gyahtzee.c:56
-msgid "Tali"
-msgstr "Tali"
+#: ../data/org.gnome.tali.gschema.xml.h:5
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgstr "[ 'Hráč', 'Michal', 'Juraj', 'Monika', 'Karol', 'Jana' ]"
 
-#: ../data/tali.desktop.in.in.h:2
-msgid "Beat the odds in a poker-style dice game"
-msgstr "Pokúšajte šťastie v pokrovej hre s kockami"
+#: ../data/org.gnome.tali.gschema.xml.h:6
+#| msgctxt "game type"
+#| msgid "Regular"
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "Regulárna"
 
-#: ../data/tali.desktop.in.in.h:3
-msgid "yahtzee;"
-msgstr "yahtzee;"
+#: ../data/tali.appdata.xml.in.h:1
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Druh pokru, ktorý sa hrá s kockami a bez peňazí. Ide o klasickú rodinnú hru. "
+"Hoďte kockou trikrát za sebou a vyberte si pokus s najlepšou hodnotou na "
+"ruke. Tiež si môžete zahrať menej známu variantu s farebnou kockou."
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr ""
+"Hrajte proti jednému alebo až piatim protivníkom s troma úrovňami náročnosti."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -70,38 +99,30 @@ msgid "Field used"
 msgstr "Použité pole"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
+#: ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nová hra"
 
-# PK: je to nezivotne?
-# PM:  ide o meno hráča (bol to pôvodný preklad)
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Meno"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Dátum"
 
@@ -200,7 +221,7 @@ msgid "_New"
 msgstr "_Nová"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:752
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "_Nová hra"
 
@@ -218,7 +239,7 @@ msgstr "_Vynulovať"
 msgid "_Restart"
 msgstr "Hrať _odznova"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:753
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "_Vrátiť ťah"
 
@@ -250,7 +271,7 @@ msgstr "_Pozastaviť"
 msgid "Res_ume"
 msgstr "Po_kračovať"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:755
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
 msgid "_Scores"
 msgstr "_Skóre"
 
@@ -356,7 +377,7 @@ msgstr "Farby"
 msgid "Roll all!"
 msgstr "Hodiť so všetkými!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:790
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "Hodiť!"
 
@@ -364,23 +385,23 @@ msgstr "Hodiť!"
 msgid "The game is a draw!"
 msgstr "Hra skončila remízou!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:628
+#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
 msgstr "Najlepší v hre Tali"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Congratulations!"
 msgstr "Gratulujem!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
 msgstr "Vaše skóre je najlepšie!"
 
-#: ../src/gyahtzee.c:195
+#: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
 msgstr "Vaše skóre sa nachádza v prvej desiatke."
 
-#: ../src/gyahtzee.c:207
+#: ../src/gyahtzee.c:206
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -388,57 +409,58 @@ msgstr[0] "Hráč %s vyhral hru s %d bodmi"
 msgstr[1] "Hráč %s vyhral hru s %d bodom"
 msgstr[2] "Hráč %s vyhral hru s %d bodmi"
 
-#: ../src/gyahtzee.c:211
+#: ../src/gyahtzee.c:210
 msgid "Game over!"
 msgstr "Koniec hry!"
 
-#: ../src/gyahtzee.c:255
+#: ../src/gyahtzee.c:254
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Počítač hrá za hráča %s"
 
-#: ../src/gyahtzee.c:257
+#: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s! -- Ste na rade."
+#| msgid "%s! -- You're up."
+msgid "%s! – You’re up."
+msgstr "%s! – Ste na rade."
 
-#: ../src/gyahtzee.c:450
+#: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
 msgstr ""
 "Vyberte kocky, ktoré chcete znovu hodiť, stlačte Hodiť!, alebo vyberte "
 "riadok, kam sa zapíšu body."
 
-#: ../src/gyahtzee.c:478
+#: ../src/gyahtzee.c:477
 msgid "Roll"
 msgstr "Hod"
 
-#: ../src/gyahtzee.c:536
+#: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Môžete hádzať iba trikrát. Vyberte si riadok, kam sa zapíšu body."
 
-#: ../src/gyahtzee.c:586
+#: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
 msgstr "GNOME verzia (1998):"
 
-#: ../src/gyahtzee.c:589
+#: ../src/gyahtzee.c:585
 msgid "Console version (1992):"
 msgstr "Konzolová verzia (1992):"
 
-#: ../src/gyahtzee.c:592
+#: ../src/gyahtzee.c:588
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Hra s použitím farieb a viacúrovňovej UI (2006):"
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:605
 msgid ""
-"A variation on poker with dice and less money.\n"
+"A variation on poker with dice and less money\n"
 "\n"
 "Tali is a part of GNOME Games."
 msgstr ""
-"Druh pokru, ktorý sa hrá s kockami a bez peňazí.\n"
+"Druh pokru, ktorý sa hrá s kockami a bez peňazí\n"
 "\n"
 "Hra Tali je súčasťou Hier GNOME."
 
-#: ../src/gyahtzee.c:615
+#: ../src/gyahtzee.c:610
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -446,27 +468,27 @@ msgstr ""
 "Peter Mráz <etkinator@gmail.com>\n"
 "Ján Kyselica <kyselica.jan@gmail.com"
 
-#: ../src/gyahtzee.c:619
-msgid "GNOME Games web site"
-msgstr "Webové stránky Hier GNOME"
-
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:744
 msgid "_Preferences"
 msgstr "_Nastavenia"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:748
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:749
 msgid "_About"
 msgstr "_O tejto hre"
 
-#: ../src/gyahtzee.c:760
+#: ../src/gyahtzee.c:750
 msgid "_Quit"
 msgstr "_Ukončiť"
 
-#: ../src/gyahtzee.c:969 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+msgid "Undo your most recent move"
+msgstr "Vrátiť posledný ťah"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Človek"
 
@@ -631,133 +653,3 @@ msgstr "Vyberte, kam sa majú zapísať body."
 #: ../src/yahtzee.c:528
 msgid "5 of a Kind [total]"
 msgstr "Pätica [súčet]"
-
-#~ msgid "Chess"
-#~ msgstr "Šach"
-
-#~ msgid "Play the classic two-player boardgame of chess"
-#~ msgstr "Hrajte klasický stolný šach pre dvoch hráčov"
-
-#~ msgid "_Game"
-#~ msgstr "_Hra"
-
-#~ msgid "_Resign"
-#~ msgstr "V_zdať sa"
-
-#~ msgid "Claim _Draw"
-#~ msgstr "Navrhnúť _remízu"
-
-#~ msgid "_Settings"
-#~ msgstr "_Nastavenia"
-
-#~ msgid "Undo Move"
-#~ msgstr "Vrátiť ťah"
-
-#~ msgid "Resign"
-#~ msgstr "Vzdať sa"
-
-#~ msgid "Rewind to the game start"
-#~ msgstr "Presunie hru na začiatok"
-
-#~ msgid "Show the previous move"
-#~ msgstr "Ukáže predchádzajúci ťah"
-
-#~ msgid "Show the next move"
-#~ msgstr "Ukáže ďalší ťah"
-
-#~ msgid "Show the current move"
-#~ msgstr "Ukáže aktuálny stav hry"
-
-#~ msgid "The width of the window"
-#~ msgstr "Šírka okna"
-
-#~ msgid "The width of the main window in pixels."
-#~ msgstr "Šírka hlavného okna v pixeloch."
-
-#~ msgid "The height of the window"
-#~ msgstr "Výška okna"
-
-#~ msgid "The height of the main window in pixels."
-#~ msgstr "Výška hlavného okna v pixeloch."
-
-#~ msgid "A flag to enable maximized mode"
-#~ msgstr "Príznak povoľujúci režim maximalizovaného okna"
-
-#~ msgid "A flag to enable fullscreen mode"
-#~ msgstr "Príznak povoľujúci režim zobrazenia na celú obrazovku"
-
-#~ msgid "The piece to promote pawns to"
-#~ msgstr "Figúrka, na ktorú premieňať pešiakov"
-
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
-#~ msgstr ""
-#~ "Figúrka, na ktorú sa premení pešiak, keď ho hráč posunie na posledné pole"
-
-#~ msgid "A flag to enable 3D mode"
-#~ msgstr "Príznak povoľujúci 3D režim"
-
-#~ msgid "A flag to smooth (anti-alias) the 3D display"
-#~ msgstr "Príznak vyhladzujúci (anti-alias) 3D zobrazenie"
-
-#~ msgid "The piece theme to use"
-#~ msgstr "Téma figúrok, ktorá sa má použiť"
-
-#~ msgid "A flag to enable move hints"
-#~ msgstr "Príznak povoľujúci zobrazenie možných ťahov"
-
-#~ msgid "A flag to enable board numbering"
-#~ msgstr "Príznak povoľujúci číslovanie šachovnice"
-
-#~ msgid "A flag to enable the move history browser"
-#~ msgstr "Príznak povoľujúci prechádzať históriou ťahov"
-
-#~ msgid "A flag to enable the toolbar"
-#~ msgstr "Príznak povoľujúci lištu nástrojov"
-
-#~ msgid "The directory to open the save game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na uloženie hry"
-
-#~ msgid "The directory to open the load game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na nahranie hry"
-
-#~ msgid "The format to display moves in"
-#~ msgstr "Formát zobrazenia ťahov"
-
-#~ msgid "The side of the board that is in the foreground"
-#~ msgstr "Strana šachovnice, ktorá je vpredu"
-
-#~ msgid "The duration of a game in seconds (0 for no limit)"
-#~ msgstr "Trvanie hry v sekundách (0 znamená bez obmedzenia)"
-
-#~ msgid "true if the human player is playing white"
-#~ msgstr "true, ak človek hrá bielymi figúrkami"
-
-#~ msgid "The opponent player"
-#~ msgstr "Protihráč"
-
-#~ msgid ""
-#~ "Can be 'human' (play against another human player), '' (use the first "
-#~ "available chess engine) or the name of a specific engine to play against"
-#~ msgstr ""
-#~ "Môže byť 'human' (hra proti druhému človeku v úlohe protihráča), "
-#~ "'' (použije prvý dostupný šachový stroj) alebo názov konkrétneho "
-#~ "šachového stroja, proti ktorému sa bude hrať"
-
-#~ msgid "Difficulty of the opponent chess engine"
-#~ msgstr "Obtiažnosť šachového stroja v úlohe protihráča"
-
-#~ msgid "Preferences"
-#~ msgstr "Nastavenia"
-
-#~ msgid "Play as:"
-#~ msgstr "Hrá ako:"
-
-#~ msgid "Opposing Player:"
-#~ msgstr "Protihráč:"
-
-#~ msgid "Difficulty:"
-#~ msgstr "Obtiažnosť:"
-
-#~ msgid "Game Duration:"
-#~ msgstr "Trvanie hry:"
