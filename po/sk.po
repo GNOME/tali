@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-02-16 17:18+0000\n"
-"PO-Revision-Date: 2014-03-22 20:15+0100\n"
+"PO-Revision-Date: 2014-03-23 01:21+0100\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
-msgstr "Tali"
+msgstr "Kockopoker"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -387,7 +387,7 @@ msgstr "Hra skončila remízou!"
 
 #: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
-msgstr "Najlepší v hre Tali"
+msgstr "Najlepší v hre Kockopoker"
 
 #: ../src/gyahtzee.c:192
 msgid "Congratulations!"
@@ -458,7 +458,7 @@ msgid ""
 msgstr ""
 "Druh pokru, ktorý sa hrá s kockami a bez peňazí\n"
 "\n"
-"Hra Tali je súčasťou Hier GNOME."
+"Hra Kockopoker je súčasťou Hier GNOME."
 
 #: ../src/gyahtzee.c:610
 msgid "translator-credits"
@@ -498,7 +498,7 @@ msgstr "Aktuálna hra bude dokončená s pôvodným počtom hráčov."
 
 #: ../src/setup.c:264
 msgid "Tali Preferences"
-msgstr "Nastavenia Tali"
+msgstr "Nastavenia Kockopokru"
 
 #: ../src/setup.c:285
 msgid "Human Players"
