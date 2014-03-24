@@ -1,14 +1,15 @@
-# translation of eu.po to Basque
+# Basque translation of tali.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009, 2010, 2011, 2012, 2013.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 11:31+0100\n"
-"PO-Revision-Date: 2013-03-11 23:07+0100\n"
+"Project-Id-Version: tali master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-24 21:14+0100\n"
+"PO-Revision-Date: 2014-03-24 21:24+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "Language: eu\n"
@@ -16,13 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:1
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+msgid "Tali"
+msgstr "Tali"
+
+#: ../data/tali.desktop.in.h:2
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Jokatu pokerraren antzeko dado-jokoan"
+
+#: ../data/tali.desktop.in.h:3
+msgid "yahtzee;"
+msgstr "yahtzee;"
+
+#: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
 msgstr "Jaurtialdien arteko atzerapena"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:2
+#: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
 "Choose whether or not to insert a delay between the computer's dice rolls so "
 "the player can follow what it is doing."
@@ -30,28 +43,43 @@ msgstr ""
 "Aukeratu ordenagailuaren dado-jaurtialdien artean atzerapena sartu behar "
 "den, zer egiten ari den jarraitu ahal izan dezan jokalariak."
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:3
+#: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Bistaratu ordenagailuaren pentsamenduak"
 
-#: ../data/org.gnome.tali.gschema.xml.in.h:4
+#: ../data/org.gnome.tali.gschema.xml.h:4
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
 "Egia ezartzen bada, AAren funtzionamenduaren iraulketa egingo da irteera "
 "estandarrean."
 
-#: ../data/gtali.desktop.in.in.h:1 ../src/gyahtzee.c:56
-msgid "Tali"
-msgstr "Tali"
+#: ../data/org.gnome.tali.gschema.xml.h:5
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgstr "['Gizakia','Izaro','Enbata','Gor','Eneritz','Urko']"
 
-#: ../data/gtali.desktop.in.in.h:2
-msgid "Beat the odds in a poker-style dice game"
-msgstr "Jokatu pokerraren antzeko dado-jokoan"
+#: ../data/org.gnome.tali.gschema.xml.h:6
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Arrunta'"
 
-#: ../data/gtali.desktop.in.in.h:3
-msgid "yahtzee;"
-msgstr "yahtzee;"
+#: ../data/tali.appdata.xml.in.h:1
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin. Jaurti dadoa hiru "
+"aldiz "
+"aldiko, nahi dituzunak gorde esku hobeagoa edukitzeko. Hain ezaguna ez den "
+"aldaera batera ere joka dezakezu: "
+"koloreztatutako dadoekin."
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Jokatu aurkari bat edo bosten aurka zailtasuneko hiru mailatan."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -68,36 +96,30 @@ msgid "Field used"
 msgstr "Erabilitako eremua"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Denbora"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuazioa"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%dm %ds"
 
-#: ../src/games-scores-dialog.c:470
+#: ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Joko berria"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Izena"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -195,7 +217,7 @@ msgid "_New"
 msgstr "_Berria"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:752
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "_Joko berria"
 
@@ -213,7 +235,7 @@ msgstr "_Berrezarri"
 msgid "_Restart"
 msgstr "_Hasi berriro"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:753
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "_Desegin mugimendua"
 
@@ -245,7 +267,7 @@ msgstr "_Pausarazi"
 msgid "Res_ume"
 msgstr "_Berrekin"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:755
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
 msgid "_Scores"
 msgstr "_Puntuazioak"
 
@@ -350,7 +372,7 @@ msgstr "Koloreak"
 msgid "Roll all!"
 msgstr "Jaurti denak!!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:790
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "Jaurti!"
 
@@ -358,102 +380,102 @@ msgstr "Jaurti!"
 msgid "The game is a draw!"
 msgstr "Berdinketa izan da!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:628
+#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
 msgstr "Tali-ko puntuazioak"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Congratulations!"
 msgstr "Zorionak!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
 msgstr "Zure puntuazioa onena da!"
 
-#: ../src/gyahtzee.c:195
+#: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
 msgstr "Zure puntuazioa hamar onenen artean dago."
 
-#: ../src/gyahtzee.c:207
+#: ../src/gyahtzee.c:206
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s(e)k irabazi du jokoa puntu %d(r)ekin"
 msgstr[1] "%s(e)k irabazi du jokoa %d punturekin"
 
-#: ../src/gyahtzee.c:211
+#: ../src/gyahtzee.c:210
 msgid "Game over!"
 msgstr "Jokoa amaitu da!"
 
-#: ../src/gyahtzee.c:255
+#: ../src/gyahtzee.c:254
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Ordenagailua %s(r)en partez jokatzen"
 
-#: ../src/gyahtzee.c:257
+#: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s! -- Zure txanda."
+msgid "%s! – You’re up."
+msgstr "%s!  – Zure txanda."
 
-#: ../src/gyahtzee.c:450
+#: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
 msgstr "Hautatu zein dado jaurti edo aukeratu konbinazio bat."
 
-#: ../src/gyahtzee.c:478
+#: ../src/gyahtzee.c:477
 msgid "Roll"
 msgstr "Jaurti"
 
-#: ../src/gyahtzee.c:536
+#: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Hiru jaurtialdi baino ez zenituen. Hautatu konbinazio bat."
 
-#: ../src/gyahtzee.c:586
+#: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
 msgstr "GNOME bertsioa (1998):"
 
-#: ../src/gyahtzee.c:589
+#: ../src/gyahtzee.c:585
 msgid "Console version (1992):"
 msgstr "Kontsolaren bertsioa (1992):"
 
-#: ../src/gyahtzee.c:592
+#: ../src/gyahtzee.c:588
 msgid "Colors game and multi-level AI (2006):"
 msgstr "AA maila anitzetako kolore-jokoa (2006):"
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:605
 msgid ""
-"A variation on poker with dice and less money.\n"
+"A variation on poker with dice and less money\n"
 "\n"
 "Tali is a part of GNOME Games."
 msgstr ""
-"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin jokatzen dena.\n"
+"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin\n"
 "\n"
 "GNOME Games-ekoa da Tali."
 
-#: ../src/gyahtzee.c:615
+#: ../src/gyahtzee.c:610
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/gyahtzee.c:619
-msgid "GNOME Games web site"
-msgstr "GNOME Games webgunea"
-
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:744
 msgid "_Preferences"
 msgstr "_Hobespenak"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:748
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:749
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/gyahtzee.c:760
+#: ../src/gyahtzee.c:750
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../src/gyahtzee.c:969 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+msgid "Undo your most recent move"
+msgstr "Desegin zure azken mugimendua"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Gizakia"
 
@@ -618,6 +640,13 @@ msgstr "Hautatu konbinazio bat."
 #: ../src/yahtzee.c:528
 msgid "5 of a Kind [total]"
 msgstr "5 mota berdinekoak [guztira]"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Izena"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME Games webgunea"
 
 #~ msgid "Chess"
 #~ msgstr "Xakea"
@@ -2907,9 +2936,6 @@ msgstr "5 mota berdinekoak [guztira]"
 #~ msgid "The current level"
 #~ msgstr "Uneko maila"
 
-#~ msgid "The users's most recent level."
-#~ msgstr "Erabiltzailearen azken maila."
-
 #~ msgid ""
 #~ "Turn off all the lights\n"
 #~ "\n"
@@ -3560,12 +3586,6 @@ msgstr "5 mota berdinekoak [guztira]"
 #~ msgstr ""
 #~ "Hautatu fitxak arrastatu behar diren, ala lehenik jatorrian eta ondoren "
 #~ "helburuan klik egin behar den."
-
-#~ msgid "Regular"
-#~ msgstr "Normala"
-
-#~ msgid "[Human,Wilber,Bill,Monica,Kenneth,Janet]"
-#~ msgstr "[Gizakia,Wilber,Bill,Monica,Kenneth,Janet]"
 
 #~ msgid "Dark's move"
 #~ msgstr "Beltzaren txanda"
