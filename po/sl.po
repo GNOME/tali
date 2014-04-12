@@ -4,16 +4,16 @@
 #
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
-# Matic Žgur <mr.zgur@gmail.com>, 2006 - 2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2013.
+# Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007-2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-20 03:25+0000\n"
-"PO-Revision-Date: 2013-10-24 21:05+0100\n"
+"POT-Creation-Date: 2014-04-12 11:16+0000\n"
+"PO-Revision-Date: 2014-04-12 19:38+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -25,15 +25,15 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/gtali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/gtali.desktop.in.h:2
+#: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Premagaj verjetnost v poker igri s kockami"
 
-#: ../data/gtali.desktop.in.h:3
+#: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "jamb;"
 
@@ -66,8 +66,6 @@ msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ 'Človek', 'Jaka', 'Bojan', 'Špela', 'Jana', 'Polona' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgctxt "game type"
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Običajna'"
@@ -83,6 +81,8 @@ msgstr ""
 #: ../data/tali.appdata.xml.in.h:2
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
+"Igro je mogoče igrati od enega do petih nasprotnikov na treh različnih "
+"ravneh težavnosti."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -99,36 +99,30 @@ msgid "Field used"
 msgstr "Uporabljeno polje"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Rezultat"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
+#: ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nova igra"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Ime"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
 
@@ -226,7 +220,7 @@ msgid "_New"
 msgstr "_Nova"
 
 #. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:750
+#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
 msgid "_New Game"
 msgstr "_Nova Igra"
 
@@ -244,7 +238,7 @@ msgstr "_Ponastavi"
 msgid "_Restart"
 msgstr "_Ponoven zagon"
 
-#: ../src/games-stock.c:259 ../src/gyahtzee.c:751
+#: ../src/games-stock.c:259
 msgid "_Undo Move"
 msgstr "_Razveljavi potezo"
 
@@ -276,7 +270,7 @@ msgstr "_Premor"
 msgid "Res_ume"
 msgstr "Na_daljuj"
 
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:753
+#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
 msgid "_Scores"
 msgstr "_Točke"
 
@@ -380,7 +374,7 @@ msgstr "Barve"
 msgid "Roll all!"
 msgstr "Vrzi vse kocke! "
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:788
+#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
 msgstr "Vrzi kocko! "
 
@@ -388,23 +382,23 @@ msgstr "Vrzi kocko! "
 msgid "The game is a draw!"
 msgstr "Igra je neodločena!"
 
-#: ../src/gyahtzee.c:191 ../src/gyahtzee.c:628
+#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
 msgstr "Rezultati Tali"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Congratulations!"
 msgstr "Čestitke!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
 msgstr "Vaše rezultat je najboljši!"
 
-#: ../src/gyahtzee.c:195
+#: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
 msgstr "Vaš rezultat se uvršča med najboljših deset."
 
-#: ../src/gyahtzee.c:207
+#: ../src/gyahtzee.c:206
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -413,47 +407,47 @@ msgstr[1] "%s je zmagal igro za %d točko"
 msgstr[2] "%s je zmagal igro za %d točki"
 msgstr[3] "%s je zmagal igro za %d točke"
 
-#: ../src/gyahtzee.c:211
+#: ../src/gyahtzee.c:210
 msgid "Game over!"
 msgstr "Igra je končana!"
 
-#: ../src/gyahtzee.c:255
+#: ../src/gyahtzee.c:254
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Računalnik igra za %s"
 
-#: ../src/gyahtzee.c:257
+#: ../src/gyahtzee.c:256
 #, c-format
-msgid "%s! -- You're up."
-msgstr "%s! -- Na vrsti ste."
+msgid "%s! – You’re up."
+msgstr "%s! – Na vrsti ste."
 
-#: ../src/gyahtzee.c:450
+#: ../src/gyahtzee.c:449
 msgid "Select dice to roll or choose a score slot."
 msgstr "Izberite kocko za met ali pa izberite režo s točkami."
 
-#: ../src/gyahtzee.c:478
+#: ../src/gyahtzee.c:477
 msgid "Roll"
 msgstr "Vrzi kocke! "
 
-#: ../src/gyahtzee.c:536
+#: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Dovoljeni so le trije meti! Označite polje s točkami."
 
-#: ../src/gyahtzee.c:586
+#: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
 msgstr "Različica za GNOME (1998):"
 
-#: ../src/gyahtzee.c:589
+#: ../src/gyahtzee.c:585
 msgid "Console version (1992):"
 msgstr "Različica za konzolo (1992):"
 
-#: ../src/gyahtzee.c:592
+#: ../src/gyahtzee.c:588
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Barve igre in večstopenjski AI (2006):"
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:605
 msgid ""
-"A variation on poker with dice and less money.\n"
+"A variation on poker with dice and less money\n"
 "\n"
 "Tali is a part of GNOME Games."
 msgstr ""
@@ -461,7 +455,7 @@ msgstr ""
 "\n"
 "Igra Tali je del iger GNOME."
 
-#: ../src/gyahtzee.c:615
+#: ../src/gyahtzee.c:610
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -469,27 +463,27 @@ msgstr ""
 "Tadej Janež <tadej_janez@email.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/gyahtzee.c:619
-msgid "GNOME Games web site"
-msgstr "Spletna stran GNOME iger"
-
-#: ../src/gyahtzee.c:752
+#: ../src/gyahtzee.c:744
 msgid "_Preferences"
 msgstr "_Možnosti"
 
-#: ../src/gyahtzee.c:756
+#: ../src/gyahtzee.c:748
 msgid "_Help"
 msgstr "Pomo_č"
 
-#: ../src/gyahtzee.c:757
+#: ../src/gyahtzee.c:749
 msgid "_About"
 msgstr "_O Programu"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:750
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: ../src/gyahtzee.c:973 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:769
+msgid "Undo your most recent move"
+msgstr "Razveljavi zadnjo potezo"
+
+#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Človek"
 
@@ -654,6 +648,13 @@ msgstr "Izbor polja točkovanja."
 #: ../src/yahtzee.c:528
 msgid "5 of a Kind [total]"
 msgstr "5 kart v barvi [skupno]"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Spletna stran GNOME iger"
 
 #~ msgid "Chess"
 #~ msgstr "Šah"
@@ -3064,9 +3065,6 @@ msgstr "5 kart v barvi [skupno]"
 
 #~ msgid "The current level"
 #~ msgstr "Trenutna raven"
-
-#~ msgid "The users's most recent level."
-#~ msgstr "Uporabnikov najnovejši rezultat."
 
 #~ msgid ""
 #~ "Turn off all the lights\n"
