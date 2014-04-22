@@ -4,15 +4,15 @@
 #
 # Andika Triwidada <andika@gmail.com>, 2010, 2012, 2014.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
-# Dirgita <dirgitadevina@yahoo.co.id>, 2012.
+# Dirgita <dirgitadevina@yahoo.co.id>, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-16 17:18+0000\n"
-"PO-Revision-Date: 2014-03-23 15:53+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"POT-Creation-Date: 2014-04-05 11:11+0000\n"
+"PO-Revision-Date: 2014-04-08 11:56+0700\n"
+"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
@@ -63,8 +63,6 @@ msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ 'Orang', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgctxt "game type"
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Reguler'"
@@ -416,7 +414,6 @@ msgstr "Komputer bermain untuk %s"
 
 #: ../src/gyahtzee.c:256
 #, c-format
-#| msgid "%s! -- You're up."
 msgid "%s! – You’re up."
 msgstr "%s! -- Giliran Anda."
 
@@ -430,7 +427,7 @@ msgstr "Jalankan"
 
 #: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "Anda hanya diijinkan melempar tiga kali. Pilih sebuat slot nilai."
+msgstr "Anda hanya diizinkan melempar tiga kali. Pilih sebuat slot nilai."
 
 #: ../src/gyahtzee.c:582
 msgid "GNOME version (1998):"
@@ -445,10 +442,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Permainan warna dan AI bermacam tingkat (2006):"
 
 #: ../src/gyahtzee.c:605
-#| msgid ""
-#| "A variation on poker with dice and less money.\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -484,7 +477,6 @@ msgid "_Quit"
 msgstr "_Keluar"
 
 #: ../src/gyahtzee.c:769
-#| msgid "The users's most recent level."
 msgid "Undo your most recent move"
 msgstr "Batalkan langkah terakhir Anda"
 
@@ -653,3 +645,4 @@ msgstr "Pilih sebuah slot nilai."
 #: ../src/yahtzee.c:528
 msgid "5 of a Kind [total]"
 msgstr "5 sejenis [jumlah]"
+
