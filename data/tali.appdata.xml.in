@@ -2,7 +2,8 @@
 <!-- Copyright 2013 Michael Catanzaro -->
 <application>
  <id type="desktop">tali.desktop</id>
- <licence>CC0</licence>
+ <metadata_licence>CC0-1.0</metadata_licence>
+ <project_license>GPL-2.0+ and GFDL-1.1</project_license>
  <description>
   <_p>
    A variation on poker with dice and less money, this game is a family classic.
