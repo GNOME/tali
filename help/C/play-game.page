@@ -1,0 +1,45 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="play-game">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.12" date="2014-06-13" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Play</title>
+
+  <p>You have to roll the five dice three times and try to create a best
+  hand. When the game starts, you see the results of the first throw of the
+  dice.</p>
+
+  <steps>
+    <item><p>Click on the dice you wish to roll. You can select all the dice to
+    roll in the second or third roll by clicking <gui>Roll all!</gui> on the
+    bottom left.</p></item>
+    <item><p>Click on <gui>Roll!</gui> to roll the selected dice.</p></item>
+    <item><p>When you have a hand you like or have run out of chances to throw
+    the dice, click on a row corresponding to what you think is your best
+    scoring combination. It is possible to have a score of zero and if you
+    click on the wrong row, you will be scored accordingly.</p></item>
+  </steps>
+  <note>
+    <p>You can only use each combination once, if you have chosen a scoring
+    combination once, you can not choose the same again.</p>
+  </note>
+  <note style="important">
+    <p>There is one exception to this rule, if you roll a <gui>5 of a
+    kind</gui> a second time, you can place it in the <gui>5 of a kind</gui>
+    row again for fifty points.You can keep doing this each time you get
+    another <gui>5 of a  kind</gui>.</p>
+  </note>
+</page>

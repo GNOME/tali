@@ -1,0 +1,29 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="keyboard-shortcuts">
+  <info>
+    <link type="guide" xref="index#tips" />
+    <revision version="3.12" date="2014-06-09" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Keyboard shortcuts</title>
+  <p>You can play <app>tali</app> using the keyboard keys as well.</p>
+  <list>
+    <item><p>You can choose the dice to roll using keys 1 through 5, the key 1
+    corresponds to the first die and so on.</p></item>
+    <item><p>Switch to the <gui>Roll!</gui> button using <key>Tab</key>, press
+    <key>Enter</key>to roll.</p></item>
+    <item><p>You can switch to the score slots using <key>Tab</key>, navigate
+    among the score slots using the arrow keys, press <key>Enter</key> or
+    <key>spacebar</key> key to select the score slot.</p></item>
+  </list>
+</page>

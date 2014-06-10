@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="game-setting">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.12" date="2014-06-17" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Game settings</title>
+
+  <p>You can play the regular version of the game which is similar to Yahtzee
+  or the game with colors, similar to Kismet. To switch over to another version
+  of the game:</p> 
+    <list>
+      <item><p>Select <guiseq><gui style="menu">Tali</gui>
+      <gui style="menuitem">Preferences</gui></guiseq> from the application
+      menu.</p></item>
+      <item><p>You can select the game version you want to play from the drop
+      down menu next to <gui>Game Type</gui>.</p></item>
+      <item><p>To start playing the newly selected version of the game, you
+      need to <link xref="start-game">Start a new game</link>.</p></item>
+    </list>
+</page>
+
