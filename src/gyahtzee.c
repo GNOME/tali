@@ -49,7 +49,6 @@
 #include "gyahtzee.h"
 #include "games-scores.h"
 #include "games-scores-dialog.h"
-#include "games-stock.h"
 
 #define DELAY_MS 600
 
@@ -879,8 +878,6 @@ main (int argc, char *argv[])
   settings = g_settings_new ("org.gnome.tali");
 
   g_set_application_name (_(appName));
-
-  games_stock_init ();
 
   /* If we're in computer test mode, just run some tests, no GUI */
   if (test_computer_play > 0) {

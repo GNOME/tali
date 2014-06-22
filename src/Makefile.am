@@ -17,9 +17,7 @@ tali_SOURCES =       \
 	games-scores-dialog.c	\
 	games-scores-dialog.h	\
 	games-scores-backend.c	\
-	games-scores-backend.h	\
-	games-stock.c    \
-	games-stock.h
+	games-scores-backend.h
 
 tali_CPPFLAGS = \
 	-I$(top_srcdir) \
