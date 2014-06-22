@@ -268,7 +268,6 @@ setup_game (void)
   gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
   g_signal_connect (G_OBJECT (setupdialog), "delete_event",
 		    G_CALLBACK (setupdialog_destroy), NULL);
-  button = gtk_button_new_from_stock (GTK_STOCK_OK);
   g_signal_connect (G_OBJECT (setupdialog), "response",
 		    G_CALLBACK (do_setup), NULL);
 

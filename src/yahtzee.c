@@ -300,9 +300,6 @@ total_score (int num)
   int upper_tot;
   int lower_tot;
 
-  upper_tot = 0;
-  lower_tot = 0;
-
   lower_tot = lower_total (num);
   upper_tot = upper_total (num);
 

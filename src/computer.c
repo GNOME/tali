@@ -169,8 +169,6 @@ ComputerRolling (int player)
       num_options *= 2;
   }
 
-  best = 0;
-  bestv = -99;
   {
   double avg_score[num_options];
   DiceInfo sav_DiceValues[NUMBER_OF_DICE];
@@ -189,10 +187,8 @@ ComputerRolling (int player)
           memcpy(DiceValues, loc_info, sizeof(sav_DiceValues));
           BuildTable(player);
           bestv = -99;
-          best  = 0;
           for (i = NUM_FIELDS - 1; i >= 0; i--) {
               if (bc_table[i] >= bestv) {
-                  best = i;
                   bestv = bc_table[i];
               }
           }
