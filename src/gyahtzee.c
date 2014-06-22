@@ -122,7 +122,7 @@ GamesScores *highscores;
 
 static GtkWidget *dialog = NULL;
 
-static gint modify_dice (GtkWidget * widget, gpointer data);
+static void modify_dice (GtkToolButton * widget, gpointer data);
 static void UpdateRollLabel (void);
 
 static void
@@ -517,8 +517,8 @@ DeselectAllDice (void)
 }
 
 /* Callback on dice press */
-gint
-modify_dice (GtkWidget * widget, gpointer data)
+static void
+modify_dice (GtkToolButton * widget, gpointer data)
 {
   DiceInfo *tmp = (DiceInfo *) data;
   GtkToggleToolButton *button = GTK_TOGGLE_TOOL_BUTTON (widget);
@@ -527,13 +527,13 @@ modify_dice (GtkWidget * widget, gpointer data)
   if (players[CurrentPlayer].finished || players[CurrentPlayer].comp) {
     if (gtk_toggle_tool_button_get_active (button))
       gtk_toggle_tool_button_set_active (button, FALSE);
-    return TRUE;
+    return;
   }
 
   if (NumberOfRolls >= NUM_ROLLS) {
     say (_("You are only allowed three rolls. Choose a score slot."));
     gtk_toggle_tool_button_set_active (button, FALSE);
-    return TRUE;
+    return;
   }
 
   tmp->sel = gtk_toggle_tool_button_get_active (button);
@@ -541,13 +541,11 @@ modify_dice (GtkWidget * widget, gpointer data)
   UpdateAllDicePixmaps ();
 
   update_roll_button_sensitivity ();
-  return TRUE;
+  return;
 }
 
-
-/* Callback on Roll! button press */
 static void
-roll_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
+roll (void)
 {
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
@@ -556,6 +554,18 @@ roll_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
     UpdateRollLabel ();
     LastHumanNumberOfRolls = NumberOfRolls;
   }
+}
+
+static void
+roll_button_pressed_cb (GtkButton * button, gpointer data)
+{
+  roll ();
+}
+
+static void
+roll_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
+{
+  roll ();
 }
 
 void
@@ -708,7 +718,7 @@ static const GActionEntry app_entries[] = {
 
 
 static void
-GyahtzeeCreateMainWindow (void)
+GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 {
   GtkWidget *hbox, *vbox;
   GtkWidget *toolbar;
@@ -726,7 +736,7 @@ GyahtzeeCreateMainWindow (void)
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
-  g_signal_connect (G_OBJECT (window), "key_press_event",
+  g_signal_connect (GTK_WIDGET (window), "key_press_event",
 		    G_CALLBACK (key_press), NULL);
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
@@ -793,8 +803,8 @@ GyahtzeeCreateMainWindow (void)
 
   mbutton = gtk_button_new_with_label (_("Roll!"));
   gtk_box_pack_end (GTK_BOX (dicebox), mbutton, FALSE, FALSE, 5);
-  g_signal_connect (G_OBJECT (mbutton), "clicked",
-		    G_CALLBACK (roll_cb), NULL);
+  g_signal_connect (GTK_BUTTON (mbutton), "clicked",
+		    G_CALLBACK (roll_button_pressed_cb), NULL);
   gtk_widget_show (GTK_WIDGET (mbutton));
 
   toolbar = gtk_toolbar_new ();
@@ -814,7 +824,7 @@ GyahtzeeCreateMainWindow (void)
 
     diceBox[i] = gtk_toggle_tool_button_new ();
     gtk_tool_button_set_icon_widget (GTK_TOOL_BUTTON (diceBox[i]), tmp);
-    g_signal_connect (G_OBJECT (diceBox[i]), "clicked",
+    g_signal_connect (GTK_TOOL_BUTTON (diceBox[i]), "clicked",
 		      G_CALLBACK (modify_dice), &DiceValues[i]);
 
     gtk_toolbar_insert (GTK_TOOLBAR (toolbar),
