@@ -6,7 +6,6 @@ data/org.gnome.tali.gschema.xml
 data/tali.appdata.xml.in
 src/clist.c
 src/games-scores-dialog.c
-src/games-stock.c
 src/gyahtzee.c
 src/setup.c
 src/yahtzee.c
