@@ -19,8 +19,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-02-16 17:18+0000\n"
-"PO-Revision-Date: 2014-03-10 16:16+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"PO-Revision-Date: 2014-07-04 22:51+0400\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 
 #: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
 msgid "Tali"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
-msgstr "Показать размышления компьютера"
+msgstr "Показывать ход размышлений компьютера"
 
 #: ../data/org.gnome.tali.gschema.xml.h:4
 msgid ""
@@ -94,12 +94,12 @@ msgstr "Играйте с оппонентами (от одного до пят�
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
-msgstr "Уже занято! Куда поместить эту деталь?"
+msgstr "Уже занято! Куда это поместить?"
 
 #: ../src/clist.c:414
 #, c-format
 msgid "Score: %d"
-msgstr "Результат: %d"
+msgstr "Счёт: %d"
 
 #: ../src/clist.c:416
 #, c-format
@@ -116,7 +116,7 @@ msgstr "Время"
 #: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
-msgstr "Очки"
+msgstr "Счёт"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
 #: ../src/games-scores-dialog.c:225
@@ -148,7 +148,7 @@ msgstr "Переключиться в полноэкранный режим"
 
 #: ../src/games-stock.c:44
 msgid "Get a hint for your next move"
-msgstr "Получить подсказку на следующий ход"
+msgstr "Получить подсказку для следующего хода"
 
 #: ../src/games-stock.c:45
 msgid "Leave fullscreen mode"
@@ -156,11 +156,11 @@ msgstr "Выйти из полноэкранного режима"
 
 #: ../src/games-stock.c:46
 msgid "Start a new multiplayer network game"
-msgstr "Начать новую сетевую игру с несколькими участниками"
+msgstr "Начать новую многопользовательскую сетевую игру"
 
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
-msgstr "Закончить сетевую игру и вернуться к игровому серверу"
+msgstr "Закончить текущую сетевую игру и вернуться к сетевому серверу"
 
 #: ../src/games-stock.c:48
 msgid "Start a new game"
@@ -180,15 +180,15 @@ msgstr "Вернуть отменённый ход"
 
 #: ../src/games-stock.c:52
 msgid "Restart the game"
-msgstr "Начать игру заново"
+msgstr "Возобновить игру"
 
 #: ../src/games-stock.c:53
 msgid "Resume the paused game"
-msgstr "Продолжить остановленную игру"
+msgstr "Возобновить приостановленную игру"
 
 #: ../src/games-stock.c:54
 msgid "View the scores"
-msgstr "Просмотреть результаты"
+msgstr "Показать результаты"
 
 #: ../src/games-stock.c:55
 msgid "Undo the last move"
@@ -196,7 +196,7 @@ msgstr "Отменить последний ход"
 
 #: ../src/games-stock.c:56
 msgid "About this game"
-msgstr "Об игре"
+msgstr "Об этой игре"
 
 #: ../src/games-stock.c:57
 msgid "Close this window"
@@ -234,7 +234,7 @@ msgstr "_Новая игра"
 
 #: ../src/games-stock.c:254
 msgid "_Redo Move"
-msgstr "_Возвратить"
+msgstr "_Возвратить ход"
 
 #. Translators: this is the "Reset" scores button in a scores dialogue
 #: ../src/games-stock.c:256
@@ -248,7 +248,7 @@ msgstr "_Начать заново"
 
 #: ../src/games-stock.c:259
 msgid "_Undo Move"
-msgstr "_Отменить"
+msgstr "_Отменить ход"
 
 #: ../src/games-stock.c:260
 msgid "_Deal"
@@ -260,7 +260,7 @@ msgstr "Выйти из _полноэкранного режима"
 
 #: ../src/games-stock.c:262
 msgid "Network _Game"
-msgstr "Новая _сетевая игра"
+msgstr "_Сетевая игра"
 
 #: ../src/games-stock.c:263
 msgid "L_eave Game"
@@ -284,7 +284,7 @@ msgstr "_Результаты"
 
 #: ../src/games-stock.c:268
 msgid "_End Game"
-msgstr "_Закончить игру"
+msgstr "_Завершить игру"
 
 #. %s is replaced with the name of the game in gnome-games.
 #: ../src/games-stock.c:317
@@ -343,7 +343,7 @@ msgstr "Показать мысли компьютера"
 
 #: ../src/gyahtzee.c:105
 msgid "Number of computer opponents"
-msgstr "Число компьютерных соперников"
+msgstr "Количество компьютерных соперников"
 
 #: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
 #: ../src/gyahtzee.c:113
@@ -352,7 +352,7 @@ msgstr "ЧИСЛО"
 
 #: ../src/gyahtzee.c:107
 msgid "Number of human opponents"
-msgstr "Число соперников-людей"
+msgstr "Количество соперников-людей"
 
 #: ../src/gyahtzee.c:109
 msgid "Game choice: Regular or Colors"
@@ -364,11 +364,11 @@ msgstr "СТРОКА"
 
 #: ../src/gyahtzee.c:111
 msgid "Number of computer-only games to play"
-msgstr "Число игр только для компьютеров"
+msgstr "Количество игр только для компьютеров"
 
 #: ../src/gyahtzee.c:113
 msgid "Number of trials for each roll for the computer"
-msgstr "Число попыток для каждого броска компьютера"
+msgstr "Количество попыток для каждого броска компьютера"
 
 #: ../src/gyahtzee.c:118 ../src/setup.c:359
 msgctxt "game type"
@@ -382,7 +382,7 @@ msgstr "Цветная"
 
 #: ../src/gyahtzee.c:140
 msgid "Roll all!"
-msgstr "Бросок всех!"
+msgstr "Бросить все!"
 
 #: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
 msgid "Roll!"
@@ -390,7 +390,7 @@ msgstr "Бросок!"
 
 #: ../src/gyahtzee.c:177
 msgid "The game is a draw!"
-msgstr "Игра закончилась ничьёй."
+msgstr "Игра закончилась ничьей!"
 
 #: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
 msgid "Tali Scores"
@@ -402,11 +402,11 @@ msgstr "Поздравляем!"
 
 #: ../src/gyahtzee.c:193
 msgid "Your score is the best!"
-msgstr "Ваш результат - лучший!"
+msgstr "У вас наилучший результат!"
 
 #: ../src/gyahtzee.c:194
 msgid "Your score has made the top ten."
-msgstr "Ваш результат попал в десятку лучших."
+msgstr "Ваш результат в десятке лучших."
 
 #: ../src/gyahtzee.c:206
 #, c-format
@@ -437,7 +437,7 @@ msgstr "Выберите кости для перебрасывания или �
 
 #: ../src/gyahtzee.c:477
 msgid "Roll"
-msgstr "Бросок"
+msgstr "Бросить"
 
 #: ../src/gyahtzee.c:535
 msgid "You are only allowed three rolls. Choose a score slot."
@@ -488,7 +488,7 @@ msgstr "_Справка"
 
 #: ../src/gyahtzee.c:749
 msgid "_About"
-msgstr "_О программе"
+msgstr "_О приложении"
 
 #: ../src/gyahtzee.c:750
 msgid "_Quit"
@@ -505,7 +505,7 @@ msgstr "Человек"
 
 #: ../src/setup.c:122
 msgid "Current game will complete with original number of players."
-msgstr "Текущая игра завершится с исходным числом игроков."
+msgstr "Текущая игра завершится с исходным количеством игроков."
 
 #: ../src/setup.c:264
 msgid "Tali Preferences"
@@ -517,7 +517,7 @@ msgstr "Игроки-люди"
 
 #: ../src/setup.c:295
 msgid "_Number of players:"
-msgstr "_Число игроков:"
+msgstr "_Количество игроков:"
 
 #: ../src/setup.c:309
 msgid "Computer Opponents"
@@ -530,7 +530,7 @@ msgstr "_Задержка между бросками"
 
 #: ../src/setup.c:326
 msgid "N_umber of opponents:"
-msgstr "Число _соперников:"
+msgstr "Количество _соперников:"
 
 #: ../src/setup.c:340
 msgid "_Difficulty:"
@@ -539,7 +539,7 @@ msgstr "С_ложность:"
 #: ../src/setup.c:343
 msgctxt "difficulty"
 msgid "Easy"
-msgstr "Лёгкий"
+msgstr "Простой"
 
 #: ../src/setup.c:344
 msgctxt "difficulty"
