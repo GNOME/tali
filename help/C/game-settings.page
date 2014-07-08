@@ -21,6 +21,9 @@
   <p>You can play the regular version of the game which is similar to Yahtzee
   or the game with colors, similar to Kismet. To switch over to another version
   of the game:</p> 
+  <!-- check for trailing spaces -->
+  <!--The first sentence must be reworded to say "blah blah is the default game, to switch over to another gamae:" -->
+  <!-- Why is this in list!!! argh...rewrite using steps! -->
     <list>
       <item><p>Select <guiseq><gui style="menu">Tali</gui>
       <gui style="menuitem">Preferences</gui></guiseq> from the application

@@ -1,6 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
       id="players-setting">
+      <!-- just settings is fine, this page must go in advanced section on index -->
 
   <info>
     <link type="guide" xref="index#play"/>
@@ -20,7 +21,7 @@
   
   <p>You can change the number of <gui>Human Players</gui> and <gui>Computer
   Opponents</gui>.</p>
-
+<!-- use steps!! -->
   <list>
     <item><p>Select <guiseq><gui style="menu">Tali</gui>
     <gui style="menuitem">Preferences</gui></guiseq> from the application menu.
