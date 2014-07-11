@@ -1,10 +1,9 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
       id="players-setting">
-      <!-- just settings is fine, this page must go in advanced section on index -->
 
   <info>
-    <link type="guide" xref="index#play"/>
+    <link type="guide" xref="index#advanced"/>
     <revision version="3.12" date="2014-06-14" status="review"/>
 
     <credit type="author">
@@ -21,11 +20,9 @@
   
   <p>You can change the number of <gui>Human Players</gui> and <gui>Computer
   Opponents</gui>.</p>
-<!-- use steps!! -->
-  <list>
+  <steps>
     <item><p>Select <guiseq><gui style="menu">Tali</gui>
-    <gui style="menuitem">Preferences</gui></guiseq> from the application menu.
-    </p></item>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
     <item><p>You can increase or decrease the number of <gui>Human
     Players</gui> from <gui>Number of players</gui>. The maximum number of
     players can be six. You can change their names as well from
@@ -33,9 +30,13 @@
     <item><p>You can change the number of <gui>Computer Opponents</gui> from
     <gui>Number of opponents</gui> and set the difficulty level of the opponent
     from the drop down menu next to <gui>Difficulty</gui>.</p></item>
-    <item><p>You can also enable the delay between the rolls by checking the
-    <gui style="checkbox">Delay between rolls</gui>.</p></item>
-  </list>
+  </steps>
+
+  <section id="enable-delay-between-rolls">
+    <title>Enable delay between the rolls</title>
+    <p>You can enable the delay between the rolls by checking the
+    <gui style="checkbox">Delay between rolls</gui>.</p>
+  </section>
 
 </page>
 
