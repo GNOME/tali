@@ -1,7 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
       id="play-game">
-<!-- be consistent!! in klotski you have different arrangement of pages...like you say in klotski "start a new game" and here you say "play" -->
+
   <info>
     <link type="guide" xref="index#play"/>
     <revision version="3.12" date="2014-06-13" status="review"/>
@@ -14,10 +14,21 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
+    <desc>How to play?</desc>
+
   </info>
 
-  <title>Play</title>
+  <title>Start a new game</title>
 
+  <p>You can start a new game anytime in between the game. To start a new
+  game:</p>
+    <steps>
+      <item><p>Select <guiseq><gui style="menu">Tali</gui>
+      <gui style="menuitem">New Game</gui></guiseq>.</p></item>
+    </steps>
+
+  <section id="play">
+  <title>Play <app>Tali</app></title>
   <p>You have to roll the five dice three times and try to create a best
   hand. When the game starts, you see the results of the first throw of the
   dice.</p>
@@ -32,14 +43,22 @@
     scoring combination. It is possible to have a score of zero and if you
     click on the wrong row, you will be scored accordingly.</p></item>
   </steps>
+
   <note>
     <p>You can only use each combination once, if you have chosen a scoring
     combination once, you can not choose the same again.</p>
   </note>
+
   <note style="important">
     <p>There is one exception to this rule, if you roll a <gui>5 of a
     kind</gui> a second time, you can place it in the <gui>5 of a kind</gui>
     row again for fifty points.You can keep doing this each time you get
     another <gui>5 of a  kind</gui>.</p>
   </note>
+
+  <note style="tip">
+    <p>There is also a bonus of 35 points if you score a total of
+    63 points or more in the top six rows.</p>
+  </note>
+  </section>
 </page>
