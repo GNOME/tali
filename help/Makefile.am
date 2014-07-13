@@ -6,13 +6,13 @@ HELP_MEDIA = \
 	figures/logo.png
 
 HELP_FILES = \
-        legal.xml \
-	index.page \
-	play-game.page \
-	setting.page \
 	game-settings.page \
+	index.page \
+	keyboard-shortcuts.page \
+        legal.xml \
+	play-game.page \
 	scores.page \
-	keyboard-shortcuts.page
+	settings.page
 
 HELP_LINGUAS =
 
