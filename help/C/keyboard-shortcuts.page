@@ -13,6 +13,8 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
+    <desc>Play the game through keyboard.</desc>
+
   </info>
 
   <title>Keyboard shortcuts</title>
