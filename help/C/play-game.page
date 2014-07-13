@@ -4,6 +4,10 @@
 
   <info>
     <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="keyboard-shortcuts"/>
+    <link type="seealso" xref="game-settings"/>
+    <link type="seealso" xref="settings"/>
+    <link type="seealso" xref="scores"/>
     <revision version="3.12" date="2014-06-13" status="review"/>
 
     <credit type="author">
