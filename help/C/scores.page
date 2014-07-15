@@ -27,6 +27,7 @@
       <item><p> The dialog will display the <gui>Regular</gui> version by
       default, to view scores obtained in <gui>Colors</gui>, select it from the
       drop down menu at the top of the dialog.</p></item>
+      <!-- whats with you describing the UI! the gui tag is to markup the UI visually so dont say things like "dialog" or point out where in the UI it is like "bottom left" and stuff. rewrite this sentence -->
     </steps>
 
   <section id="score-slots">

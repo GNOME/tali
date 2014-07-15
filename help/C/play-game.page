@@ -1,6 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
       id="play-game">
+<!--The page says start a new game, your id is play-game, can we have a little consistency here please? change page id to start-game or something -->
 
   <info>
     <link type="guide" xref="index#play"/>
@@ -41,6 +42,7 @@
     <item><p>Click on the dice you wish to roll. You can select all the dice to
     roll in the second or third roll by clicking <gui>Roll all!</gui> on the
     bottom left.</p></item>
+    <!-- you dont have to indicate the areas in the screen!! remove "on the bottom left" -->
     <item><p>Click on <gui>Roll!</gui> to roll the selected dice.</p></item>
     <item><p>When you have a hand you like or have run out of chances to throw
     the dice, click on a row corresponding to what you think is your best
@@ -58,11 +60,13 @@
     Kind</gui> a second time, you can place it in the <gui>5 of a Kind</gui>
     row again for fifty points.You can keep doing this each time you get
     another <gui>5 of a  Kind</gui>.</p>
+    <!--to which rule is the exception?? dont split notes! -->
   </note>
 
   <note style="tip">
     <p>There is also a bonus of 35 points if you score a total of
     63 points or more in the top six rows.</p>
+    <!-- Avoid the word "also", rewrite this sentence -->
   </note>
   </section>
 </page>

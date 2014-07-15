@@ -20,6 +20,7 @@
   <title>Keyboard shortcuts</title>
   <p>You can play <app>tali</app> using the keyboard keys as well.</p>
   <list>
+    <!--this needs to be in a table -->
     <item><p>You can choose the dice to roll using keys 1 through 5, the key 1
     corresponds to the first die and so on.</p></item>
     <item><p>Switch to the <gui>Roll!</gui> button using <key>Tab</key>, press
