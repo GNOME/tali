@@ -26,12 +26,10 @@
     <steps>
       <item><p>Select <guiseq><gui style="menu">Tali</gui>
       <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
-      <item><p>You can select the game version you want to play from the drop
-      down menu next to <gui>Game Type</gui>.</p></item>
-      <!-- Not digging the language, avoid "You can blah blah", just start with "Select the desired version of the game from <gui>..." -->
-      <item><p>To start playing the newly selected version of the game, you
-      need to <link xref="play-game">Start a new game</link>.</p></item>
-      <!-- language, language! Just say "Now, you may <link> Start a new.. " -->
+      <item><p>Select the desired version of the game from
+      <gui>Game Type</gui>.</p></item>
+      <item><p>Now, you may <link xref="start-game">Start a new game</link>.
+      </p></item>
     </steps>
 </page>
 
