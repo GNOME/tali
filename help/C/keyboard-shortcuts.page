@@ -19,14 +19,27 @@
 
   <title>Keyboard shortcuts</title>
   <p>You can play <app>tali</app> using the keyboard keys as well.</p>
-  <list>
-    <!--this needs to be in a table -->
-    <item><p>You can choose the dice to roll using keys 1 through 5, the key 1
-    corresponds to the first die and so on.</p></item>
-    <item><p>Switch to the <gui>Roll!</gui> button using <key>Tab</key>, press
-    <key>Enter</key>to roll.</p></item>
-    <item><p>You can switch to the score slots using <key>Tab</key>, navigate
-    among the score slots using the arrow keys, press <key>Enter</key> or
-    <key>spacebar</key> key to select the score slot.</p></item>
-  </list>
+  <table frame="all" rules="cols" shade="rows">
+    <tr>
+      <td><p>Choose the dice to roll.</p></td>
+      <td><p>Use Keys 1 through 5, the key 1 corresponds to the first die and so
+      on.</p></td>
+    </tr>
+    <tr>
+      <td><p>Switch to the <gui>Roll!</gui> button.</p></td>
+      <td><p>Use <key>Tab</key>, press <key>Enter</key> to roll.</p></td>
+    </tr>
+    <tr>
+      <td><p>Switch to the score slots.</p></td>
+      <td><p>Use <key>Tab</key>.</p></td>
+    </tr>
+    <tr>
+      <td><p>Navigate among the score slots.</p></td>
+      <td><p>Use arrow keys.</p></td>
+    </tr>
+    <tr>
+      <td><p>Select the score slot.</p></td>
+      <td><p>Press <key>Enter</key> or <key>spacebar</key>.</p></td>
+    </tr>
+  </table>
 </page>
