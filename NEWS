@@ -1,3 +1,10 @@
+Tali 3.13.4
+===========
+
+* Translation updates (Swedish, Lithuanian, Catalan (Valencian), Czech, Catalan, Russian)
+* i18n fixes (Piotr Drąg)
+* Appdata fixes, changed dependencies (GTL 3.12), added header bar for preferences (Michael Catanzaro)
+
 Tali 3.13.1
 ===========
 
