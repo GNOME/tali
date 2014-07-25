@@ -1,7 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
       id="settings">
-<!-- there are two pages on players settings, fix this! -->
+
   <info>
     <link type="guide" xref="index#advanced"/>
     <revision version="3.12" date="2014-06-14" status="review"/>
@@ -19,7 +19,7 @@
   </info>
 
   <title>Players settings</title>
-  
+
   <p>You can change the number of <gui>Human Players</gui> and <gui>Computer
   Opponents</gui>.</p>
   <steps>
@@ -41,4 +41,3 @@
   </section>
 
 </page>
-
