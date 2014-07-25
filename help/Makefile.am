@@ -9,16 +9,10 @@ HELP_FILES = \
 	game-settings.page \
 	index.page \
 	keyboard-shortcuts.page \
-	play-game.page \
+	legal.xml \
 	scores.page \
-	settings.page
+	settings.page \
 	start-game.page
-	score-slot.page \
-	players-setting.page \
-	game-settings.page \
-	scores.page \
-	keyboard-shortcuts.page \
-	legal.xml
 
 HELP_LINGUAS =
 
