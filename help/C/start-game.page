@@ -8,7 +8,7 @@
     <link type="seealso" xref="game-settings"/>
     <link type="seealso" xref="settings"/>
     <link type="seealso" xref="scores"/>
-    <revision version="3.12" date="2014-06-13" status="review"/>
+    <revision pkgversion="3.14" date="2014-06-13" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>

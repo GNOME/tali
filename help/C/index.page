@@ -10,7 +10,12 @@
     <title type="link">Tali</title>
     <title type="text">Tali</title>
     <desc>Tali help.</desc>
-    <revision version="3.12" date="2014-06-10" status="draft"/>
+    <revision pkgversion="3.14" date="2014-06-10" status="draft"/>
+  <section id="move-block">
+    <title>Move a block</title>
+    <p>Click and drag the desired block to a location of your choice on the
+    board.</p>
+  </section>
     <credit type="author">
       <name>Rashi Aswani</name>
       <email>aswanirashi19@gmail.com</email>
