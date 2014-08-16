@@ -6,7 +6,7 @@
 # Xavier Conde Rueda <xavi.conde@gmail.com>, 2004.
 # Jesús Corrius <jesus@softcatala.org>, 2005.
 # Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
-# Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012, 2014.
 # Carles Ferrando <carles.ferrando@gmail.com>, 2010.
 # Jordi Serratosa <jordis@softcatala.cat>, 2012.
 #
@@ -15,17 +15,17 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-23 15:27+0000\n"
-"PO-Revision-Date: 2014-03-20 07:32+0100\n"
-"Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
+"POT-Creation-Date: 2014-08-16 22:34+0000\n"
+"PO-Revision-Date: 2014-08-17 01:26+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -128,329 +128,128 @@ msgstr "Partida nova"
 msgid "Date"
 msgstr "Data"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Visualitza l'ajuda del joc"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Acaba la partida actual"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Commuta el mode a pantalla completa"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Obtingueu un suggeriment per al vostre proper moviment"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Surt de pantalla completa"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Comença una partida nova per a diversos jugador en xarxa"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Finalitza la partida de xarxa actual i torna al servidor de xarxa"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Comença una partida nova"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Fes una pausa de la partida"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Mostra una llista de jugadors de la partida en xarxa"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Torna a fer el moviment desfet"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Reinicia la partida"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Reprèn la partida en pausa"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Visualitza les puntuacions"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Desfés el darrer moviment"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Quant a aquest joc"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Tanca aquesta finestra"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Configura el joc"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Surt d'aquest joc"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Continguts"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Pantalla completa"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Pista"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nova"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "Partida _nova"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "To_rna a moure"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Reinicia"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Reinicia"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "Desfés el mo_viment"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Reparteix"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "Surt de la panta_lla completa"
-
-#
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Partida en _xarxa"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Surt de la _partida"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Llista de jugadors"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "Fes una _pausa"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Contin_ua"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "Puntuacion_s"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "Acaba _el joc"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"El %s és programari lliure; el podeu redistribuir i/o modificar sota els "
-"termes de la Llicència Publica General GNU com està publicada per la Free "
-"Software Foundation; ja en sigui la versió %d, o bé (si voleu) qualsevol "
-"versió posterior."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"El %s es distribueix amb l'esperança que sigui útil, però SENSE CAP MENA DE "
-"GARANTIA; ni tan sols la garantia implícita de COMERCIALITZACIÓ o ADEQUACIÓ "
-"PER A CAP PROPÒSIT PARTICULAR. Vegeu la Llicència Publica General de la GNU "
-"per a més detalls."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
-"juntament amb el %s; en cas contrari, escriviu a la Free Software "
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
-"USA."
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
-"juntament amb aquest programa; en cas contrari, consulteu la pàgina <http://"
-"www.gnu.org/licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Retarda els moviments de l'ordinador"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Mostra les jugades possibles de l'ordinador"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Nombre d'adversaris controlats per l'ordinador"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "NOMBRE"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Nombre d'adversaris humans"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Opcions de la partida: regular o colors"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "CADENA"
 
 # FIXME
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Nombre de partides de només ordinador als que jugar"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Nombre de proves per a cada tirada per l'ordinador"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Regular"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Colors"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Tira-ho tot!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
 msgid "Roll!"
 msgstr "Tira!"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "El joc ha acabat en taules."
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
 msgid "Tali Scores"
 msgstr "Puntuacions del Tali"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Felicitats!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Heu fet la millor puntuació!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "La vostra puntuació és entre les deu primeres."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s guanya amb %d punt"
 msgstr[1] "%s guanya amb %d punts"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Final de la partida!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "L'ordinador juga per a %s"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Estigueu atent."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Seleccioneu el dau per tirar o seleccioneu una casella de puntuació."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Tira"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Només podeu tirar tres vegades. Seleccioneu un marcador."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "Versió del GNOME (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Versió per a consola (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Joc de colors i intel·ligència artificial de diversos nivells (2006):"
 
-#: ../src/gyahtzee.c:605
+#: ../src/gyahtzee.c:614
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -460,7 +259,7 @@ msgstr ""
 "\n"
 "El Tali forma part dels jocs del GNOME."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:619
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -470,27 +269,35 @@ msgstr ""
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "David Planella <david.planella@gmail.com>"
 
-#: ../src/gyahtzee.c:744
+#: ../src/gyahtzee.c:752
+msgid "_New Game"
+msgstr "Partida _nova"
+
+#: ../src/gyahtzee.c:753
 msgid "_Preferences"
 msgstr "_Preferències"
 
-#: ../src/gyahtzee.c:748
+#: ../src/gyahtzee.c:754
+msgid "_Scores"
+msgstr "Puntuacion_s"
+
+#: ../src/gyahtzee.c:757
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:758
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:759
 msgid "_Quit"
 msgstr "S_urt"
 
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:778
 msgid "Undo your most recent move"
 msgstr "Desfés el moviment més recent"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humà"
 
@@ -499,101 +306,101 @@ msgid "Current game will complete with original number of players."
 msgstr "El joc en curs s'ha d'acabar amb el nombre de jugadors original."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "Preferències del Tali"
+msgid "Preferences"
+msgstr "Preferències"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Jugadors humans"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "_Nombre de jugadors:"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Ordinadors adversaris"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "Retar_d entre tirades"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "Nombre d'ad_versaris:"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Dificultat:"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Fàcil"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Mitjà"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Difícil"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Tipus de joc"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Noms dels jugadors"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1s [1s totals]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2s [2s totals]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3s [3s totals]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4s [4s totals]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5s [5s totals]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6s [6s totals]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "3 d'iguals [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "4 d'iguals [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Escala curta [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Escala llarga [40]"
 
@@ -601,7 +408,7 @@ msgstr "Escala llarga [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 d'iguals [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Atzar [total]"
 
@@ -624,27 +431,27 @@ msgid "Bonus if >62"
 msgstr "Bonificació si >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 parelles del mateix color [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Full [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Full del mateix color [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Flush (totes del mateix color) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "4 d'iguals [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5 d'iguals [50 + total]"
 
@@ -652,6 +459,6 @@ msgstr "5 d'iguals [50 + total]"
 msgid "Choose a score slot."
 msgstr "Casella de puntuació."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 d'iguals [total]"
