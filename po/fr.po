@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-15 11:34+0000\n"
+"POT-Creation-Date: 2014-08-25 10:35+0000\n"
 "PO-Revision-Date: 2014-03-15 21:15+0100\n"
 "Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -38,7 +38,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -143,329 +143,130 @@ msgstr "Nouvelle partie"
 msgid "Date"
 msgstr "Date"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Affiche l'aide pour ce jeu"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Termine la partie en cours"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Bascule le mode plein écran"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Affiche une astuce pour votre prochain coup"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Quitte le mode plein écran"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Commencer une nouvelle partie multi-joueurs en réseau"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Termine le jeu en réseau et retourne sur le serveur du réseau"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Commence une nouvelle partie"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Suspend la partie"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Affiche une liste de joueurs dans le jeu en réseau"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Rétablit le mouvement annulé"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Recommence la partie"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Reprend la partie"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Affiche les scores"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Annule le dernier mouvement"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "À propos de ce jeu"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Ferme cette fenêtre"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Configure le jeu"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Quitte ce jeu"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Sommaire"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Plein écran"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Astuce"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nouveau"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "_Nouvelle partie"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Rétablir le déplacement"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Réinitialiser"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Recommencer"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "A_nnuler le déplacement"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Distribuer"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Quitter le plein écran"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Partie en réseau"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Quitter la partie"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Liste des joueurs"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pause"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Continuer"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Scores"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Fin du jeu"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s est un logiciel libre ; vous pouvez le distribuer et/ou le modifier sous "
-"les termes de la Licence Publique Générale GNU telle que publiée par la Free "
-"Software Foundation ; soit la version %d de la licence, ou (à votre "
-"discrétion), toute version suivante."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s est distribué dans l'espoir qu'il puisse être utile mais SANS AUCUNE "
-"GARANTIE ; sans même une garantie implicite de VALEUR MARCHANDE ou "
-"d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence Publique Générale GNU "
-"pour plus d'informations."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Vous devriez avoir reçu une copie de la Licence Publique Générale GNU avec "
-"%s ; si ce n'est pas le cas, écrivez à la Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Vous devriez avoir reçu une copie de la Licence Publique Générale GNU avec "
-"ce programme ; si ce n'est pas le cas, consultez <http://www.gnu.org/"
-"licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Retarder les mouvements de l'ordinateur"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Afficher la réflexion de l'ordinateur"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Nombre d'adversaires joués par l'ordinateur"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "NOMBRE"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Nombre d'adversaires humains"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Choix du jeu : normal ou couleurs"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "CHAÎNE"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Nombre de parties à jouer uniquement par l'ordinateur"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Nombre de tentatives pour chaque lancer de l'ordinateur"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Normal"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Couleurs"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Tout relancer !"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
 msgid "Roll!"
 msgstr "Lancer !"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "La partie est nulle !"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
 msgid "Tali Scores"
 msgstr "Scores Tali"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Félicitations !"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Votre score est le meilleur !"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Votre score est entré au top 10."
 
 # , c-format
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s gagne cette partie avec %d point"
 msgstr[1] "%s gagne cette partie avec %d points"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Fin de la partie !"
 
 # , c-format
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "L'ordinateur joue pour %s"
 
 # , c-format
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s ! — Vous êtes prêt."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Sélectionnez les dés à relancer ou sélectionnez une combinaison."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Lancer"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Vous n'avez droit qu'à trois jets de dés. Choisissez une combinaison."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "Version GNOME (1998) :"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Version de la console (1992) :"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Jeu en couleurs et intelligence artificielle multi-niveaux (2006) :"
 
-#: ../src/gyahtzee.c:605
+#: ../src/gyahtzee.c:614
 msgid ""
 "A variation on poker with dice and less money\n"
 "\n"
@@ -475,7 +276,7 @@ msgstr ""
 "\n"
 "Tali fait partie des jeux GNOME."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:619
 msgid "translator-credits"
 msgstr ""
 "Christophe Merlet <redfox@redfoxcenter.org>\n"
@@ -490,27 +291,35 @@ msgstr ""
 "Didier Vidal <didier-devel@melix.net>\n"
 "Pierre Lemaire <pierre.lemaire@kamick.org>"
 
-#: ../src/gyahtzee.c:744
+#: ../src/gyahtzee.c:752
+msgid "_New Game"
+msgstr "_Nouvelle partie"
+
+#: ../src/gyahtzee.c:753
 msgid "_Preferences"
 msgstr "_Préférences"
 
-#: ../src/gyahtzee.c:748
+#: ../src/gyahtzee.c:754
+msgid "_Scores"
+msgstr "_Scores"
+
+#: ../src/gyahtzee.c:757
 msgid "_Help"
 msgstr "Aid_e"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:758
 msgid "_About"
 msgstr "À _propos"
 
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:759
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:778
 msgid "Undo your most recent move"
 msgstr "Annule votre dernier coup"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humain"
 
@@ -519,101 +328,101 @@ msgid "Current game will complete with original number of players."
 msgstr "Le jeu en cours va terminer avec le nombre initial de joueurs."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "Préférences de Tali"
+msgid "Preferences"
+msgstr "Préférences"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Joueurs humains"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "_Nombre de joueurs :"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Adversaires informatiques"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Attente entre les lancers"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "N_ombre d'adversaires :"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Difficulté :"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Facile"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Moyenne"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Difficile"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Type de jeu"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Noms des joueurs"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1 [total de 1]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2 [total de 2]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3 [total de 3]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4 [total de 4]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5 [total de 5]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6 [total de 6]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "Brelan (3 id.) [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "Carré (4 id.) [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Main pleine [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Petite suite [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Grande suite [40]"
 
@@ -621,7 +430,7 @@ msgstr "Grande suite [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 identiques [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Chance [total]"
 
@@ -644,27 +453,27 @@ msgid "Bonus if >62"
 msgstr "Bonus si > 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 paires de la même couleur [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Main pleine [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Main pleine de la même couleur [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Couleur [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "Carré [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5 identiques [50 + total]"
 
@@ -672,6 +481,153 @@ msgstr "5 identiques [50 + total]"
 msgid "Choose a score slot."
 msgstr "Choisissez une combinaison."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 identiques [total]"
+
+#~ msgid "View help for this game"
+#~ msgstr "Affiche l'aide pour ce jeu"
+
+#~ msgid "End the current game"
+#~ msgstr "Termine la partie en cours"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Bascule le mode plein écran"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Affiche une astuce pour votre prochain coup"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Quitte le mode plein écran"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Commencer une nouvelle partie multi-joueurs en réseau"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Termine le jeu en réseau et retourne sur le serveur du réseau"
+
+#~ msgid "Start a new game"
+#~ msgstr "Commence une nouvelle partie"
+
+#~ msgid "Pause the game"
+#~ msgstr "Suspend la partie"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Affiche une liste de joueurs dans le jeu en réseau"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Rétablit le mouvement annulé"
+
+#~ msgid "Restart the game"
+#~ msgstr "Recommence la partie"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Reprend la partie"
+
+#~ msgid "View the scores"
+#~ msgstr "Affiche les scores"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Annule le dernier mouvement"
+
+#~ msgid "About this game"
+#~ msgstr "À propos de ce jeu"
+
+#~ msgid "Close this window"
+#~ msgstr "Ferme cette fenêtre"
+
+#~ msgid "Configure the game"
+#~ msgstr "Configure le jeu"
+
+#~ msgid "Quit this game"
+#~ msgstr "Quitte ce jeu"
+
+#~ msgid "_Contents"
+#~ msgstr "_Sommaire"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Plein écran"
+
+#~ msgid "_Hint"
+#~ msgstr "_Astuce"
+
+#~ msgid "_New"
+#~ msgstr "_Nouveau"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Rétablir le déplacement"
+
+#~ msgid "_Reset"
+#~ msgstr "_Réinitialiser"
+
+#~ msgid "_Restart"
+#~ msgstr "_Recommencer"
+
+#~ msgid "_Undo Move"
+#~ msgstr "A_nnuler le déplacement"
+
+#~ msgid "_Deal"
+#~ msgstr "_Distribuer"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Quitter le plein écran"
+
+#~ msgid "Network _Game"
+#~ msgstr "_Partie en réseau"
+
+#~ msgid "L_eave Game"
+#~ msgstr "_Quitter la partie"
+
+#~ msgid "Player _List"
+#~ msgstr "_Liste des joueurs"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pause"
+
+#~ msgid "Res_ume"
+#~ msgstr "_Continuer"
+
+#~ msgid "_End Game"
+#~ msgstr "_Fin du jeu"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s est un logiciel libre ; vous pouvez le distribuer et/ou le modifier "
+#~ "sous les termes de la Licence Publique Générale GNU telle que publiée par "
+#~ "la Free Software Foundation ; soit la version %d de la licence, ou (à "
+#~ "votre discrétion), toute version suivante."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s est distribué dans l'espoir qu'il puisse être utile mais SANS AUCUNE "
+#~ "GARANTIE ; sans même une garantie implicite de VALEUR MARCHANDE ou "
+#~ "d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence Publique Générale "
+#~ "GNU pour plus d'informations."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Vous devriez avoir reçu une copie de la Licence Publique Générale GNU "
+#~ "avec %s ; si ce n'est pas le cas, écrivez à la Free Software Foundation, "
+#~ "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Vous devriez avoir reçu une copie de la Licence Publique Générale GNU "
+#~ "avec ce programme ; si ce n'est pas le cas, consultez <http://www.gnu.org/"
+#~ "licenses/>."
+
+#~ msgid "Tali Preferences"
+#~ msgstr "Préférences de Tali"
