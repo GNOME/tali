@@ -119,8 +119,8 @@ WarnNumPlayersChanged (void)
   mb = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_DESTROY_WITH_PARENT,
 			       GTK_MESSAGE_INFO,
 			       GTK_BUTTONS_OK,
-			       _("Current game will complete"
-				 " with original number of players."));
+			       _("Preferences will be updated"
+				 " in the next game."));
   gtk_window_set_position (GTK_WINDOW (mb), GTK_WIN_POS_MOUSE);
   gtk_dialog_run (GTK_DIALOG (mb));
   gtk_widget_destroy (mb);
