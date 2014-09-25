@@ -843,10 +843,15 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 
   gtk_widget_show (hbox);
   gtk_widget_show (vbox);
+}
 
-  gtk_widget_show (window);
-
-  GyahtzeeNewGame ();
+static void
+GyahtzeeActivateGame (GApplication *app, gpointer user_data)
+{
+  if (!gtk_widget_is_visible (window)) {
+    gtk_widget_show (window);
+    GyahtzeeNewGame ();
+  }
 }
 
 int
@@ -865,7 +870,8 @@ main (int argc, char *argv[])
   textdomain (GETTEXT_PACKAGE);
 
   application = gtk_application_new ("org.gnome.tali", 0);
-  g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
+  g_signal_connect (application, "startup", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
+  g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeActivateGame), NULL);
 
   games_scores_startup ();
 
