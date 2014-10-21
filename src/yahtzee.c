@@ -78,7 +78,7 @@ typedef struct field_info_t {
   char *label;
   int   yahtzee_row;
   int   kismet_row;
-  int (*score_func)(int);
+  int (*score_func) (int);
 } FieldInfo;
 
 char *FieldLabelsYahtzee[NUM_FIELDS_YAHTZEE + EXTRA_FIELDS] = {
@@ -187,7 +187,7 @@ NewGame (void)
   CurrentPlayer = 0;
   NumberOfRolls = 0;
   LastHumanNumberOfRolls = 0;
-  FreeUndoRedoLists();
+  FreeUndoRedoLists ();
 
   NumberOfPlayers = NumberOfComputers + NumberOfHumans;
 
@@ -212,8 +212,8 @@ NewGame (void)
 int
 RollDie (void)
 {
-  double r = (double) rand() / RAND_MAX;
-  return (int)(r * 6.0) + 1;
+  double r = (double) rand () / RAND_MAX;
+  return (int) (r * 6.0) + 1;
 }
 
 void
@@ -235,7 +235,7 @@ RollSelectedDice (void)
   }
 
   /* If no dice is selcted roll them all */
-  if(cnt == 0){
+  if (cnt == 0) {
     for (i = 0; i < NUMBER_OF_DICE; i++) {
       DiceValues[i].val = RollDie ();
       lastRoll.DiceValues[i] = DiceValues[i].val;
@@ -392,27 +392,27 @@ add_dice (void)
 }
 
 static int
-score_basic(int field) {
+score_basic (int field) {
   field++;
   return count (field) * field;
 }
 
 static int
-score_3_of_a_kind(int field) {
+score_3_of_a_kind (int field) {
   if (find_n_of_a_kind (3, 0))
     return add_dice ();
   return 0;
 }
 
 static int
-score_4_of_a_kind(int field) {
+score_4_of_a_kind (int field) {
   if (find_n_of_a_kind (4, 0))
     return add_dice ();
   return 0;
 }
 
 static int
-score_full_house(int field) {
+score_full_house (int field) {
   int i = find_n_of_a_kind (3, 0);
   if (i) {
     if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
@@ -423,7 +423,7 @@ score_full_house(int field) {
 }
 
 static int
-score_small_straight(int field) {
+score_small_straight (int field) {
   if (find_straight (4, 0, 0))
     return 30;
 
@@ -431,7 +431,7 @@ score_small_straight(int field) {
 }
 
 static int
-score_large_straight(int field) {
+score_large_straight (int field) {
   if (find_straight (5, 0, 0))
     return 40;
 
@@ -439,7 +439,7 @@ score_large_straight(int field) {
 }
 
 static int
-score_yahtzee(int field) {
+score_yahtzee (int field) {
   if (find_n_of_a_kind (5, 0))
     return 50;
 
@@ -447,12 +447,12 @@ score_yahtzee(int field) {
 }
 
 static int
-score_chance(int field) {
+score_chance (int field) {
   return add_dice ();
 }
 
 static int
-score_2_pair_same_color(int field) {
+score_2_pair_same_color (int field) {
   int i = find_n_of_a_kind (2, 0);
   if (i) {
      if (find_n_of_a_kind (2, i) + i == 7 || find_n_of_a_kind (4, 0))
@@ -463,7 +463,7 @@ score_2_pair_same_color(int field) {
 }
 
 static int
-score_full_house_kismet(int field) {
+score_full_house_kismet (int field) {
   int i = find_n_of_a_kind (3, 0);
   if (i) {
     if (find_n_of_a_kind (2, i) || find_n_of_a_kind (5, 0))
@@ -474,7 +474,7 @@ score_full_house_kismet(int field) {
 }
 
 static int
-score_full_house_same_color(int field) {
+score_full_house_same_color (int field) {
   int i = find_n_of_a_kind (3, 0);
   if (i) {
     if (find_n_of_a_kind (2, i) + i == 7 || find_n_of_a_kind (5, 0))
@@ -485,7 +485,7 @@ score_full_house_same_color(int field) {
 }
 
 static int
-score_flush(int field) {
+score_flush (int field) {
   int i = find_n_of_a_kind (3, 0);
 
   if (i && i + find_n_of_a_kind (2, i) == 7) return 35;
@@ -497,14 +497,14 @@ score_flush(int field) {
 }
 
 static int
-score_4_of_a_kind_kismet(int field) {
+score_4_of_a_kind_kismet (int field) {
   if (find_n_of_a_kind (4, 0))
     return 25 + add_dice ();
   return 0;
 }
 
 static int
-score_kismet(int field) {
+score_kismet (int field) {
   if (find_n_of_a_kind (5, 0))
     return 50 + add_dice ();
   return 0;
@@ -532,10 +532,10 @@ FieldInfo field_table[] = {
   { N_("5 of a Kind [50 + total]"),          -1, 13, score_kismet },
 };
 
-#define FIELD_TABLE_SIZE (sizeof(field_table) / sizeof(FieldInfo))
+#define FIELD_TABLE_SIZE (sizeof (field_table) / sizeof (FieldInfo))
 
 static FieldInfo
-*get_field_info(int field)
+*get_field_info (int field)
 {
   gint ii;
 
@@ -548,27 +548,27 @@ static FieldInfo
 }
 
 gint
-field_score(gint field)
+field_score (gint field)
 {
-  FieldInfo *info = get_field_info(field);
+  FieldInfo *info = get_field_info (field);
   gint rval = 0;
 
   if (info) {
-    return info->score_func(field);
+    return info->score_func (field);
   }
 
   return rval;
 }
 
 gint
-player_field_score(gint player, gint field)
+player_field_score (gint player, gint field)
 {
   /* A player can still score in H_YA even if it's used in the
    * regular game, but only if they have a non-zero value there */
   if (field == H_YA && game_type == GAME_YAHTZEE) {
     if (players[player].used[field]) {
-      if (field_score(field) > 0 && players[player].score[field] > 0)
-        return field_score(field);
+      if (field_score (field) > 0 && players[player].score[field] > 0)
+        return field_score (field);
       else
         return -1;
     }
@@ -580,8 +580,8 @@ player_field_score(gint player, gint field)
 }
 
 void
-PrependUndoList(gint player, gint field, gint score) {
-  UndoScoreElement *elem = g_new0(UndoScoreElement, 1);
+PrependUndoList (gint player, gint field, gint score) {
+  UndoScoreElement *elem = g_new0 (UndoScoreElement, 1);
   gint ii;
   elem->player = player;
   elem->field  = field;
@@ -592,12 +592,12 @@ PrependUndoList(gint player, gint field, gint score) {
   elem->roll = NumberOfRolls;
 
   if (!players[player].comp)
-    FreeUndoList();
-  UndoList = g_list_prepend(UndoList, elem);
+    FreeUndoList ();
+  UndoList = g_list_prepend (UndoList, elem);
 }
 
 void
-ResetDiceState(UndoScoreElement *elem) {
+ResetDiceState (UndoScoreElement *elem) {
   gint ii;
   for (ii = 0; ii < NUMBER_OF_DICE; ii++) {
     DiceValues[ii].val = elem->DiceValues[ii];
@@ -608,7 +608,7 @@ ResetDiceState(UndoScoreElement *elem) {
 }
 
 gint
-UndoLastMove(void) {
+UndoLastMove (void) {
   if (UndoList) {
     UndoScoreElement *elem = UndoList->data;
     if (elem->field == H_YA && game_type == GAME_YAHTZEE) {
@@ -620,9 +620,9 @@ UndoLastMove(void) {
       players[elem->player].used [elem->field] = 0;
     }
 
-    ResetDiceState(elem);
-    UndoList = g_list_remove(UndoList, elem);
-    RedoList = g_list_prepend(RedoList, elem);
+    ResetDiceState (elem);
+    UndoList = g_list_remove (UndoList, elem);
+    RedoList = g_list_prepend (RedoList, elem);
     return elem->player;
   }
 
@@ -630,7 +630,7 @@ UndoLastMove(void) {
 }
 
 gint
-RedoLastMove(void) {
+RedoLastMove (void) {
   gint rval = (CurrentPlayer + 1) % NumberOfPlayers;
   if (RedoList) {
     gint ii;
@@ -641,10 +641,10 @@ RedoLastMove(void) {
       DiceValues[ii].sel = 0;
     }
 
-    RedoList = g_list_remove(RedoList, elem);
-    play_score(elem->player, elem->field);
+    RedoList = g_list_remove (RedoList, elem);
+    play_score (elem->player, elem->field);
     rval = (elem->player + 1) % NumberOfPlayers;
-    g_free(elem);
+    g_free (elem);
     if (RedoList) {
       elem = RedoList->data;
       rval = elem->player;
@@ -655,12 +655,12 @@ RedoLastMove(void) {
 }
 
 void
-RestoreLastRoll(void) {
-  ResetDiceState(&lastRoll);
+RestoreLastRoll (void) {
+  ResetDiceState (&lastRoll);
 }
 
 UndoScoreElement*
-RedoHead(void) {
+RedoHead (void) {
   if (RedoList) {
     UndoScoreElement *elem = RedoList->data;
     return elem;
@@ -670,35 +670,35 @@ RedoHead(void) {
 }
 
 void
-FreeUndoList(void) {
+FreeUndoList (void) {
   while (UndoList) {
     UndoScoreElement *elem = UndoList->data;
-    UndoList = g_list_remove(UndoList, elem);
-    g_free(elem);
+    UndoList = g_list_remove (UndoList, elem);
+    g_free (elem);
   }
 }
 
 void
-FreeRedoList(void) {
+FreeRedoList (void) {
   while (RedoList) {
     UndoScoreElement *elem = RedoList->data;
-    RedoList = g_list_remove(RedoList, elem);
-    g_free(elem);
+    RedoList = g_list_remove (RedoList, elem);
+    g_free (elem);
   }
 }
 
 void
-FreeUndoRedoLists(void) {
-  FreeUndoList();
-  FreeRedoList();
+FreeUndoRedoLists (void) {
+  FreeUndoList ();
+  FreeRedoList ();
 }
 
 void
-FreeRedoListHead(void) {
+FreeRedoListHead (void) {
   if (RedoList) {
     UndoScoreElement *elem = RedoList->data;
-    RedoList = g_list_remove(RedoList, elem);
-    g_free(elem);
+    RedoList = g_list_remove (RedoList, elem);
+    g_free (elem);
   }
 }
 
@@ -723,8 +723,8 @@ play_score (int player, int field)
     return SLOT_USED;
 
   players[player].used[field] = 1;
-  players[player].score[field] = players[player].score[field] + field_score(field);
-  PrependUndoList(player, field, players[player].score[field]);
+  players[player].score[field] = players[player].score[field] + field_score (field);
+  PrependUndoList (player, field, players[player].score[field]);
 
   ShowPlayer (player, field);
 
@@ -745,7 +745,7 @@ FindWinner (void)
   int total;
 
   WinningScore = 0;
-  FreeUndoRedoLists();
+  FreeUndoRedoLists ();
 
   for (i = 0; i < NumberOfPlayers; ++i) {
     total = total_score (i);
@@ -769,20 +769,20 @@ FindWinner (void)
 
 /* Undo is possible when the Undo List isn't NULL */
 int
-UndoPossible(void)
+UndoPossible (void)
 {
   return UndoList != NULL;
 }
 
 /* Undo option should be visible only when the player is human */
 int
-UndoVisible(void)
+UndoVisible (void)
 {
-  return UndoPossible() && !players[CurrentPlayer].comp;
+  return UndoPossible () && !players[CurrentPlayer].comp;
 }
 
 int
-RedoPossible(void)
+RedoPossible (void)
 {
   return RedoList != NULL;
 }

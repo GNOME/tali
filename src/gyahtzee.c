@@ -58,9 +58,9 @@ static guint last_timeout = 0;
 static gboolean ready_to_advance_player;
 
 #define NUMBER_OF_PIXMAPS    7
-#define GAME_TYPES 2
+#define GAME_TYPES           2
 #define DIE_SELECTED_PIXMAP  (NUMBER_OF_PIXMAPS-1)
-#define SCORES_CATEGORY (game_type == GAME_KISMET ? "Colors" : NULL)
+#define SCORES_CATEGORY      (game_type == GAME_KISMET ? "Colors" : NULL)
 
 static char *dicefiles[NUMBER_OF_PIXMAPS] = { "gnome-dice-1.svg",
   "gnome-dice-2.svg",
@@ -135,7 +135,7 @@ update_roll_button_sensitivity (void)
     state |=
       gtk_toggle_tool_button_get_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]));
 
-  if(!state){
+  if (!state) {
     gtk_button_set_label (GTK_BUTTON (mbutton), _("Roll all!"));
     state = TRUE;
   } else {
@@ -146,7 +146,7 @@ update_roll_button_sensitivity (void)
   state &= NumberOfRolls < 3;
   state &= !players[CurrentPlayer].comp;
 
-  if(GameIsOver ()){
+  if (GameIsOver ()) {
     state = FALSE;
   }
 
@@ -245,7 +245,7 @@ do_computer_turns (void)
 /* Show the current score and prompt for current player state */
 
 void
-DisplayCurrentPlayer(void) {
+DisplayCurrentPlayer (void) {
   ShowoffPlayer (ScoreList, CurrentPlayer, 1);
 
   if (players[CurrentPlayer].name) {
@@ -259,11 +259,11 @@ DisplayCurrentPlayer(void) {
 
 /* Display current player and refresh dice/display */
 void
-DisplayCurrentPlayerRefreshDice(void) {
-  DisplayCurrentPlayer();
+DisplayCurrentPlayerRefreshDice (void) {
+  DisplayCurrentPlayer ();
   UpdateAllDicePixmaps ();
   DeselectAllDice ();
-  UpdateRollLabel();
+  UpdateRollLabel ();
 }
 
 void
@@ -278,8 +278,8 @@ NextPlayer (void)
         NumberOfRolls = NUM_ROLLS;
     else
         NumberOfRolls = LastHumanNumberOfRolls;
-    /* update_roll_button_sensitivity() needs to be called in
-       this context however UpdateRollLabel() also calls that method */
+    /* update_roll_button_sensitivity () needs to be called in
+       this context however UpdateRollLabel () also calls that method */
     UpdateRollLabel ();
     CheerWinner ();
     return;
@@ -294,10 +294,10 @@ NextPlayer (void)
     CurrentPlayer = (CurrentPlayer + 1) % NumberOfPlayers;
   } while (players[CurrentPlayer].finished);
 
-  DisplayCurrentPlayer();
+  DisplayCurrentPlayer ();
   SelectAllDice ();
   RollSelectedDice ();
-  FreeRedoList();
+  FreeRedoList ();
 
   /* Remember the roll count if this turn is for a
      human player for display at the end of the game */
@@ -322,41 +322,41 @@ NextPlayer (void)
 /* Go back to the previous player */
 
 void
-PreviousPlayer(void)
+PreviousPlayer (void)
 {
-  if (UndoPossible()) {
+  if (UndoPossible ()) {
     NumberOfRolls = 1;
     ready_to_advance_player = FALSE;
     ShowoffPlayer (ScoreList, CurrentPlayer, 0);
 
     /* Find the next player with rolls left */
     do {
-      CurrentPlayer = (UndoLastMove() + NumberOfPlayers) % NumberOfPlayers;
-    } while (players[CurrentPlayer].comp && UndoPossible());
+      CurrentPlayer = (UndoLastMove () + NumberOfPlayers) % NumberOfPlayers;
+    } while (players[CurrentPlayer].comp && UndoPossible ());
 
-    DisplayCurrentPlayerRefreshDice();
+    DisplayCurrentPlayerRefreshDice ();
   }
 }
 
 void
-RedoPlayer(void)
+RedoPlayer (void)
 {
-  if (RedoPossible()) {
+  if (RedoPossible ()) {
     NumberOfRolls = 1;
     ready_to_advance_player = FALSE;
-    ShowoffPlayer(ScoreList, CurrentPlayer, 0);
+    ShowoffPlayer (ScoreList, CurrentPlayer, 0);
     /* The first element of the list is the undone turn, so
      * we need to remove it from the list before redoing other
      * turns.                                                    */
-    FreeRedoListHead();
+    FreeRedoListHead ();
 
     /* Redo all computer players */
     do {
-      CurrentPlayer = RedoLastMove();
-    } while (players[CurrentPlayer].comp && RedoPossible());
+      CurrentPlayer = RedoLastMove ();
+    } while (players[CurrentPlayer].comp && RedoPossible ());
 
-    RestoreLastRoll();
-    DisplayCurrentPlayerRefreshDice();
+    RestoreLastRoll ();
+    DisplayCurrentPlayerRefreshDice ();
   }
 }
 
@@ -447,8 +447,8 @@ GyahtzeeNewGame (void)
 
   say (_("Select dice to roll or choose a score slot."));
 
-  game_type = get_new_game_type();
-  games_scores_set_category(highscores, SCORES_CATEGORY);
+  game_type = get_new_game_type ();
+  games_scores_set_category (highscores, SCORES_CATEGORY);
   NewGame ();
   setup_score_list (ScoreList);
   UpdateRollLabel ();
@@ -550,7 +550,7 @@ roll (void)
   if (!players[CurrentPlayer].comp) {
     RollSelectedDice ();
     if (NumberOfRolls > 1)
-        FreeUndoRedoLists();
+        FreeUndoRedoLists ();
     UpdateRollLabel ();
     LastHumanNumberOfRolls = NumberOfRolls;
   }
@@ -641,7 +641,7 @@ score_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 static void
 undo_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 {
-  PreviousPlayer();
+  PreviousPlayer ();
 }
 
 static void
@@ -682,8 +682,8 @@ LoadDicePixmaps (void)
       }
 
     } /* FIXME: What happens if the file isn't found. */
-    g_free(path);
-    g_free(path_kismet);
+    g_free (path);
+    g_free (path_kismet);
   }
 }
 
@@ -731,7 +731,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_window_set_application (GTK_WINDOW (window), application);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
   gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), FALSE);
-  gtk_window_set_icon_name(GTK_WINDOW (window), "tali");
+  gtk_window_set_icon_name (GTK_WINDOW (window), "tali");
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
@@ -744,7 +744,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_application_add_accelerator (application, "<Primary>r", "app.roll", NULL);
   gtk_application_add_accelerator (application, "F1", "app.help", NULL);
 
-	/*---- Menus ----*/
+  /*---- Menus ----*/
   app_menu = g_menu_new ();
   section = g_menu_new ();
   g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
@@ -758,7 +758,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   g_menu_append (section, _("_Quit"), "app.quit");
   scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "scores");
   undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
-  update_undo_sensitivity();
+  update_undo_sensitivity ();
   gtk_application_set_app_menu (GTK_APPLICATION (application), G_MENU_MODEL (app_menu));
 
         /*--- Headerbar ---*/
@@ -900,15 +900,15 @@ main (int argc, char *argv[])
       gdouble sum_scores = 0.0;
       game_type = GAME_YAHTZEE;
       if (game_type_string)
-          game_type = game_type_from_string(game_type_string);
-      g_message("In test computer play section - Using %d trials for simulation", NUM_TRIALS);
+          game_type = game_type_from_string (game_type_string);
+      g_message ("In test computer play section - Using %d trials for simulation", NUM_TRIALS);
       for (ii = 0; ii < test_computer_play; ii++) {
           int num_rolls = 0;
           NumberOfHumans = 0;
           NumberOfComputers = 1;
           NewGame ();
 
-          while (!GameIsOver() && num_rolls < 100) {
+          while (!GameIsOver () && num_rolls < 100) {
               ComputerRolling (CurrentPlayer);
               if (NoDiceSelected () || (NumberOfRolls >= NUM_ROLLS)) {
                 ComputerScoring (CurrentPlayer);
@@ -921,16 +921,16 @@ main (int argc, char *argv[])
               num_rolls++;
           }
           for (kk = NumberOfHumans; kk < NumberOfPlayers; kk++) {
-              printf("Computer score: %d\n", total_score(kk));
-              sum_scores += total_score(kk);
+              printf ("Computer score: %d\n", total_score (kk));
+              sum_scores += total_score (kk);
               if (num_rolls > 98) {
                   for (jj = 0; jj < NUM_FIELDS; jj++)
-                      g_message("Category %d is score %d", jj, players[kk].score[jj]);
+                      g_message ("Category %d is score %d", jj, players[kk].score[jj]);
               }
           }
       }
-      printf("Computer average: %.2f for %d trials\n", sum_scores / test_computer_play, NUM_TRIALS);
-      exit(0);
+      printf ("Computer average: %.2f for %d trials\n", sum_scores / test_computer_play, NUM_TRIALS);
+      exit (0);
   }
 
   highscores = games_scores_new ("tali",
@@ -958,15 +958,15 @@ main (int argc, char *argv[])
     NumberOfComputers = MAX_NUMBER_OF_PLAYERS - NumberOfHumans;
 
   if (game_type_string)
-    game_type = game_type_from_string(game_type_string);
+    game_type = game_type_from_string (game_type_string);
   else {
     char *type;
 
     type = g_settings_get_string (settings, "game-type");
-    game_type = game_type_from_string(type);
+    game_type = game_type_from_string (type);
   }
 
-  set_new_game_type(game_type);
+  set_new_game_type (game_type);
 
   if (NUM_TRIALS <= 0)
       NUM_TRIALS = g_settings_get_int (settings, "monte-carlo-trials");
@@ -1003,7 +1003,7 @@ main (int argc, char *argv[])
 
   g_application_run (G_APPLICATION (application), argc, argv);
 
-  exit(0);
+  exit (0);
 }
 
 /* Arrgh - lets all use the same tabs under emacs: 

@@ -221,7 +221,8 @@ static void games_scores_dialog_redraw (GamesScoresDialog *self) {
     case GAMES_SCORES_STYLE_TIME_DESCENDING:
       dscore = games_score_get_value_as_time ((GamesScore *)scorelist->data);
       score = (int) (100.0 * dscore + 0.5);
-      ss = g_strdup_printf (/* Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds */
+      ss = g_strdup_printf (/* Score format for time based scores.
+			       %1$d is the time in minutes, %2$d is the time in seconds */
                             C_("score-dialog", "%1$dm %2$ds"),
                             score/100, score%100);
       break; 
@@ -306,7 +307,7 @@ void games_scores_dialog_set_category_description (GamesScoresDialog *self,
   lstr = g_strdup_printf ("<b>%s</b>", description);
   gtk_label_set_markup (GTK_LABEL (self->priv->label), lstr);
   gtk_label_set_use_underline (GTK_LABEL (self->priv->label), TRUE);
-  g_free(lstr);
+  g_free (lstr);
 }
 
 /**
@@ -474,7 +475,8 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   self->priv->treeview = GTK_TREE_VIEW (listview);
 
   timerenderer = gtk_cell_renderer_text_new ();
-  timecolumn = gtk_tree_view_column_new_with_attributes (/* Score dialog column header for the date the score was recorded */
+  timecolumn = gtk_tree_view_column_new_with_attributes (/* Score dialog column header for the date
+							    the score was recorded */
                                                          _("Date"),
                                                          timerenderer,
                                                          "text", 0,

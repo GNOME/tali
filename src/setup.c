@@ -63,7 +63,7 @@ static GameTypeTable game_type_table[] = {
     { GAME_KISMET,  "Colors"  }
 };
 
-#define GAME_TYPE_TABLE_SIZE (sizeof(game_type_table) / sizeof(GameTypeTable))
+#define GAME_TYPE_TABLE_SIZE (sizeof (game_type_table) / sizeof (GameTypeTable))
 
 typedef struct skill_level_table_t {
     int level;
@@ -76,9 +76,9 @@ static SkillLevelTable skill_level_table[] = {
     { 2, 1000 }
 };
 
-#define SKILL_LEVEL_TABLE_SIZE (sizeof(skill_level_table) / sizeof(SkillLevelTable))
+#define SKILL_LEVEL_TABLE_SIZE (sizeof (skill_level_table) / sizeof (SkillLevelTable))
 
-static const gchar *game_type_name(GameType type)
+static const gchar *game_type_name (GameType type)
 {
     gint ii = 0;
     for (ii = 0; ii < GAME_TYPE_TABLE_SIZE; ii++) {
@@ -89,24 +89,24 @@ static const gchar *game_type_name(GameType type)
     return NULL;
 }
 
-GameType game_type_from_string(const gchar *string)
+GameType game_type_from_string (const gchar *string)
 {
     if (string) {
         gint ii =0;
         for (ii = 0; ii < GAME_TYPE_TABLE_SIZE; ii++)
-            if (!strcmp(string, game_type_table[ii].name))
+            if (!strcmp (string, game_type_table[ii].name))
                 return game_type_table[ii].type;
     }
 
     return GAME_YAHTZEE;
 }
 
-GameType get_new_game_type(void)
+GameType get_new_game_type (void)
 {
     return NewGameType;
 }
 
-void set_new_game_type(GameType type)
+void set_new_game_type (GameType type)
 {
     NewGameType = type;
 }
@@ -174,7 +174,7 @@ do_setup (GtkWidget * widget, gpointer data)
 
   g_settings_set_boolean (settings, "delay-between-rolls", DoDelay);
 
-  type_name = game_type_name(NewGameType);
+  type_name = game_type_name (NewGameType);
   if (type_name) {
     g_settings_set_string (settings, "game-type", type_name);
   }
@@ -233,14 +233,14 @@ MaxPlayersCheck (GtkWidget * widget, gpointer * data)
 static gint
 SetGameType (GtkWidget *widget, gpointer *data)
 {
-    NewGameType = gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
+    NewGameType = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
     return FALSE;
 }
 
 static gint
 SetSkillLevel (GtkWidget *widget, gpointer *data)
 {
-    skill_level = gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
+    skill_level = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
     if (skill_level >= 0 && skill_level < SKILL_LEVEL_TABLE_SIZE) {
         NUM_TRIALS = skill_level_table[skill_level].trials;
     }
@@ -332,30 +332,30 @@ setup_game (void)
 		    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
   gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
 
-  box2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
-  gtk_box_pack_start(GTK_BOX(box), box2, FALSE, FALSE, 0);
+  box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
+  gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
   label = gtk_label_new_with_mnemonic (_("_Difficulty:"));
-  gtk_box_pack_start(GTK_BOX(box2), label, FALSE, FALSE, 0);
-  combo = gtk_combo_box_text_new();
-  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Easy"));
-  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Medium"));
-  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("difficulty", "Hard"));
+  gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
+  combo = gtk_combo_box_text_new ();
+  gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), C_("difficulty", "Easy"));
+  gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), C_("difficulty", "Medium"));
+  gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), C_("difficulty", "Hard"));
   skill_level = 0;
   while (NUM_TRIALS > skill_level_table[skill_level].trials &&
          skill_level < (SKILL_LEVEL_TABLE_SIZE - 1)) skill_level++;
-  gtk_combo_box_set_active(GTK_COMBO_BOX(combo), skill_level);
+  gtk_combo_box_set_active (GTK_COMBO_BOX (combo), skill_level);
   g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (SetSkillLevel),
                     combo);
-  gtk_box_pack_start(GTK_BOX(box2), combo, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (box2), combo, FALSE, FALSE, 0);
 
     /*--- Combo (yahtzee or kismet style ----*/
 
   frame = games_frame_new (_("Game Type"));
   gtk_grid_attach (GTK_GRID (grid), frame, 0, 2, 1, 1);
-  combo = gtk_combo_box_text_new();
-  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Regular"));
-  gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), C_("game type", "Colors"));
-  gtk_combo_box_set_active(GTK_COMBO_BOX(combo), game_type);
+  combo = gtk_combo_box_text_new ();
+  gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), C_("game type", "Regular"));
+  gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), C_("game type", "Colors"));
+  gtk_combo_box_set_active (GTK_COMBO_BOX (combo), game_type);
   NewGameType = game_type;
   g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (SetGameType),
                     combo);

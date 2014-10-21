@@ -126,7 +126,7 @@ static gint gtk_tree_path_to_row (GtkTreePath *path)
 
 /* Convert the row of a tree into the score row */
 
-static gint score_row(GtkTreePath *path)
+static gint score_row (GtkTreePath *path)
 {
     gint row = gtk_tree_path_to_row (path);
     if (row == R_UTOTAL || row == R_BONUS || row == R_BLANK1 ||
@@ -157,16 +157,16 @@ row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
       if (play_score (CurrentPlayer, row) == SLOT_USED) {
         say (_("Already used! " "Where do you want to put that?"));
       } else {
-        UndoScoreElement *elem = RedoHead();
+        UndoScoreElement *elem = RedoHead ();
         if (elem && elem->player == CurrentPlayer) {
-          RedoPlayer();
+          RedoPlayer ();
         } else {
           NextPlayer ();
         }
       }
     }
   }
-  update_undo_sensitivity();
+  update_undo_sensitivity ();
 }
 
 static gboolean
@@ -220,10 +220,10 @@ tree_query_tooltip_cb (GtkWidget * widget, gint x, gint y,
     GtkTreeIter  *iter_ptr  = NULL;
     gint rval = FALSE;
 
-    if (gtk_tree_view_get_tooltip_context ( GTK_TREE_VIEW (widget), &x, &y,
+    if (gtk_tree_view_get_tooltip_context (GTK_TREE_VIEW (widget), &x, &y,
                 keyboard_mode, &model_ptr, &path_ptr, iter_ptr)) {
         if (path_ptr) {
-            gint row = score_row(path_ptr);
+            gint row = score_row (path_ptr);
             if (row >= 0) {
                 gtk_tooltip_set_text (tooltip, row_tooltips[row]);
                 rval = TRUE;
@@ -401,19 +401,19 @@ setup_score_list (GtkWidget * treeview)
 }
 
 void
-update_score_tooltips(void)
+update_score_tooltips (void)
 {
     gint ii;
 
     for (ii = 0; ii < NUM_FIELDS; ii++) {
         gint score = player_field_score (CurrentPlayer, ii);
-        if (!row_tooltips[ii]) row_tooltips[ii] = g_new0(gchar, 100);
+        if (!row_tooltips[ii]) row_tooltips[ii] = g_new0 (gchar, 100);
 
 
         if (score >= 0)
-            sprintf(row_tooltips[ii], _("Score: %d"), score);
+            sprintf (row_tooltips[ii], _("Score: %d"), score);
         else
-            sprintf(row_tooltips[ii], _("Field used"));
+            sprintf (row_tooltips[ii], _("Field used"));
     }
 }
 

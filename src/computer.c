@@ -68,7 +68,7 @@ BuildTable (int player)
 **	ok. now we set a base value on the roll based on its count and
 **	how much it is worth to us.
 */
-    bc_table[i] = (count(i + 1) - 2) * (i + 1) * 4 - (i + 1);
+    bc_table[i] = (count (i + 1) - 2) * (i + 1) * 4 - (i + 1);
   }
 
 /*
@@ -169,23 +169,22 @@ ComputerRolling (int player)
       num_options *= 2;
   }
 
-  {
   double avg_score[num_options];
   DiceInfo sav_DiceValues[NUMBER_OF_DICE];
-  memset(avg_score, 0, sizeof(avg_score));
-  memcpy(sav_DiceValues, DiceValues, sizeof(sav_DiceValues));
+  memset (avg_score, 0, sizeof (avg_score));
+  memcpy (sav_DiceValues, DiceValues, sizeof (sav_DiceValues));
 
   for (ii = 0; ii < num_options; ii++) {
       for (jj = 0; jj < NUM_TRIALS; jj++) {
           DiceInfo loc_info[NUMBER_OF_DICE];
-          memcpy(loc_info, sav_DiceValues, sizeof(loc_info));
+          memcpy (loc_info, sav_DiceValues, sizeof (loc_info));
           for (kk = 0; kk < NUMBER_OF_DICE; kk++) {
               if (die_comp[kk] & ii) {
-                  loc_info[kk].val = RollDie();
+                  loc_info[kk].val = RollDie ();
               }
           }
-          memcpy(DiceValues, loc_info, sizeof(sav_DiceValues));
-          BuildTable(player);
+          memcpy (DiceValues, loc_info, sizeof (sav_DiceValues));
+          BuildTable (player);
           bestv = -99;
           for (i = NUM_FIELDS - 1; i >= 0; i--) {
               if (bc_table[i] >= bestv) {
@@ -206,20 +205,22 @@ ComputerRolling (int player)
           best_score = avg_score[ii];
       }
   }
-  if (DisplayComputerThoughts) printf("Best choice is %d val %f for dice ", best, best_score);
+  if (DisplayComputerThoughts) printf ("Best choice is %d val %f for dice ", best, best_score);
 
   /* Restore DiceValues */
-  memcpy(DiceValues, sav_DiceValues, sizeof(sav_DiceValues));
+  memcpy (DiceValues, sav_DiceValues, sizeof (sav_DiceValues));
   for (ii = 0; ii < NUMBER_OF_DICE; ii++) {
       if (die_comp[ii] & best) {
           DiceValues[ii].sel = 1;
-          if (DisplayComputerThoughts) printf("Reset to roll die %d value %d bit %d comp %d test %d\n", ii, DiceValues[ii].val, ii, best, ii & best);
+          if (DisplayComputerThoughts)
+	      printf ("Reset to roll die %d value %d bit %d comp %d test %d\n", ii, DiceValues[ii].val, ii, best, ii & best);
       }
       else {
           DiceValues[ii].sel = 0;
-          if (DisplayComputerThoughts) printf("Reset NOT to roll die %d value %d bit %d comp %d test %d\n", ii, DiceValues[ii].val, ii, best, ii & best);
+          if (DisplayComputerThoughts)
+	      printf ("Reset NOT to roll die %d value %d bit %d comp %d test %d\n",
+		      ii, DiceValues[ii].val, ii, best, ii & best);
       }
-  }
   }
 }
 
@@ -270,8 +271,8 @@ ComputerScoring (int player)
   }
 
   if (DisplayComputerThoughts)
-      fprintf(stderr, "I choose category %d as best %d score name %s\n",
-              best, bc_table[best], _(FieldLabels[best]));
+      fprintf (stderr, "I choose category %d as best %d score name %s\n",
+               best, bc_table[best], _(FieldLabels[best]));
 
   play_score (player, best);
 
