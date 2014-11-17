@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: tali 3.13.x\n"
+"Project-Id-Version: tali 3.15.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-23 14:31+0200\n"
-"PO-Revision-Date: 2014-07-23 14:31+0200\n"
+"POT-Creation-Date: 2014-11-17 17:17+0100\n"
+"PO-Revision-Date: 2014-11-17 17:18+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -99,19 +99,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Poeng"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nytt spill"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Dato"
 
@@ -166,7 +168,7 @@ msgstr "Farger"
 msgid "Roll all!"
 msgstr "Kast alle!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr "Kast!"
 
@@ -174,7 +176,7 @@ msgstr "Kast!"
 msgid "The game is a draw!"
 msgstr "Spillet er uavgjort!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Poeng for Tali"
 
@@ -236,57 +238,51 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Fargespill og flernivå AI (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"En variasjon av poker med terninger og mindre penger\n"
-"\n"
-"Tali er en del av GNOME-spillene."
+msgid "A variation on poker with dice and less money."
+msgstr "En variasjon av poker med terninger og færre penger."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/gyahtzee.c:752
+#: ../src/gyahtzee.c:751
 msgid "_New Game"
 msgstr "_Nytt spill"
 
-#: ../src/gyahtzee.c:753
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Brukervalg"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:753
 msgid "_Scores"
 msgstr "_Poeng"
 
-#: ../src/gyahtzee.c:757
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "A_vslutt"
 
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "Angre siste trekk"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Menneske"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Aktivt spill vil spilles ferdig med opprinnelig antall spillere."
+msgid "Preferences will be updated in the next game."
+msgstr "Brukervalg vil bli oppdatert i neste spill."
 
 #: ../src/setup.c:264
 msgid "Preferences"
