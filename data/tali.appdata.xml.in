@@ -4,6 +4,8 @@
  <id type="desktop">tali.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+ and GFDL-1.1</project_license>
+ <_name>Tali</_name>
+ <_summary>Roll dice and score points</_summary>
  <description>
   <_p>
    A variation on poker with dice and less money, this game is a family classic.
