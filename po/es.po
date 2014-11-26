@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-10-14 21:27+0000\n"
-"PO-Revision-Date: 2014-10-20 13:53+0200\n"
+"POT-Creation-Date: 2014-11-25 23:37+0000\n"
+"PO-Revision-Date: 2014-11-26 12:20+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -24,7 +24,8 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -69,7 +70,11 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regular'"
 
-#: ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tirar el dado y acumular puntos"
+
+#: ../data/tali.appdata.xml.in.h:3
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -81,7 +86,7 @@ msgstr ""
 "la mejor mano posible. También puede jugar una variante menos conocida, con "
 "dados de colores."
 
-#: ../data/tali.appdata.xml.in.h:2
+#: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Juegue contra 1-5 oponentes y en tres niveles de dificultad"
 
@@ -111,19 +116,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuación"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Partida nueva"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Fecha"
 
@@ -249,10 +256,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Juego de colores multinivel IA (2006):"
 
 #: ../src/gyahtzee.c:614
-#| msgid ""
-#| "A variation on poker with dice and less money\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid "A variation on poker with dice and less money."
 msgstr "Un variación del póquer con dados y menos dinero."
 
@@ -298,7 +301,6 @@ msgid "Human"
 msgstr "Humano"
 
 #: ../src/setup.c:122
-#| msgid "Changes will take effect for the next game."
 msgid "Preferences will be updated in the next game."
 msgstr "Las preferencias se actualizarán en la siguiente partida."
 
