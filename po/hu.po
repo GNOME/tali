@@ -11,23 +11,25 @@
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-16 17:18+0000\n"
-"PO-Revision-Date: 2014-03-21 12:47+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2014-12-02 11:39+0000\n"
+"PO-Revision-Date: 2014-12-02 18:39+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -68,13 +70,15 @@ msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ 'Ember', 'Vilmos', 'Béla', 'Mónika', 'Károly', 'Zsanett' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgctxt "game type"
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regular'"
 
-#: ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Dobjon a kockával és szerezzen pontokat"
+
+#: ../data/tali.appdata.xml.in.h:3
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -86,7 +90,7 @@ msgstr ""
 "eléréséhez tartsa vissza, amelyiket kedveli. Játszhat egy kevésbé ismert "
 "változatot is színes kockákkal."
 
-#: ../data/tali.appdata.xml.in.h:2
+#: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Játsszon egy és öt közti számú ellenféllel, három nehézségi szinten."
 
@@ -116,359 +120,153 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Pontszám"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dp %2$dmp"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Új játék"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Dátum"
 
-# aisleriot/menu.c:125
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Súgó megjelenítése ehhez a játékhoz"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "A jelenlegi játék befejezése"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Teljes képernyős üzemmód"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Javaslat a következő lépéshez"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Teljes képernyős mód elhagyása"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Új többjátékosos hálózati játék indítása"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr ""
-"A jelenlegi hálózati játék befejezése és visszatérés a hálózati kiszolgálóhoz"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Új játék indítása"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "A játék szüneteltetése"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "A játékosok listájának megjelenítése a hálózati játékban"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "A visszavont lépés végrehajtása mégis"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "A játék újraindítása"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "A szüneteltetett játék folytatása"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "A pontok megtekintése"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Az utolsó lépés visszavonása"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "A játék névjegye"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "A jelenlegi ablak bezárása"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "A játék beállítása"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Kilépés a játékból"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Tartalom"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Teljes képernyő"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Javaslat"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "Ú_j"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "Ú_j játék"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Mégis a lépést"
-
-# aisleriot/dialog.c:112
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Visszaállítás"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "Ú_jraindítás"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "Mozgatás _visszavonása"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Osztás"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "T_eljes képernyő elhagyása"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Hálózati játék"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Játék _elhagyása"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Játékoslista"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Szünet"
-
-# aisleriot/dialog.c:112
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Folytatás"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Pontszámok"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "Játék be_fejezése"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"A(z) %s szabad szoftver, terjesztheti és/vagy módosíthatja a Free Software "
-"Foundation által kiadott GNU General Public License %d. (vagy bármely "
-"későbbi) változatában foglaltak alapján."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"A(z) %s programot abban a reményben terjesztjük, hogy hasznos lesz, de nem "
-"vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program "
-"alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. További "
-"részletekért tanulmányozza a GNU GPL licencet."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"A(z) %s programhoz a GNU General Public License egy példánya is jár, ha nem "
-"kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 51 "
-"Franklin St, Fifth Floor, Boston, MA 02110-1301, USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"A(z) %s programhoz a GNU General Public License egy példánya is jár, ha nem "
-"kapta meg, a <http://www.gnu.org/licenses/> oldalon elolvashatja."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "A számítógép lépéseinek késleltetése"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "A számítógép gondolatainak megjelenítése"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Számítógépes ellenfelek száma"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "SZÁM"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Élő ellenfelek száma"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Játék választása: Regular (Normál) vagy Colors (színes)"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "KARAKTERLÁNC"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "A lejátszandó, csak számítógépes játékok száma"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "A számítógép próbálkozásainak száma minden dobáshoz"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Normál"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Színes"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Dobás minddel!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr " Dobás!"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Az eredmény döntetlen!"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Pontszámok"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Gratulálok!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Pontszáma a legjobb!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Pontszáma benne van az első tízben."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s nyerte a játékot %d ponttal"
 msgstr[1] "%s nyerte a játékot %d ponttal"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Vége a játéknak!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "A számítógép %s helyett játszik"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
-#| msgid "%s! -- You're up."
 msgid "%s! – You’re up."
 msgstr "%s! – Ön jön!"
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Válasszon kockát a dobáshoz, vagy válasszon egy pontszámmezőt."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Dobás"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Csak három dobása van! Válasszon pontszámmezőt."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME verzió (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Konzol verzió (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Színes játék és többszintű mesterséges intelligencia (2006):"
 
-#: ../src/gyahtzee.c:605
+#: ../src/gyahtzee.c:614
 #| msgid ""
-#| "A variation on poker with dice and less money.\n"
+#| "A variation on poker with dice and less money\n"
 #| "\n"
 #| "Tali is a part of GNOME Games."
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Egy pókerváltozat dobókockával és kevesebb pénzzel\n"
-"\n"
-"A Tali a GNOME játékok része."
+msgid "A variation on poker with dice and less money."
+msgstr "Egy pókerváltozat dobókockával és kevesebb pénzzel."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -479,131 +277,139 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
-#: ../src/gyahtzee.c:744
+#: ../src/gyahtzee.c:751
+msgid "_New Game"
+msgstr "Ú_j játék"
+
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Beállítások"
 
-#: ../src/gyahtzee.c:748
+#: ../src/gyahtzee.c:753
+msgid "_Scores"
+msgstr "_Pontszámok"
+
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "_Kilépés"
 
-#: ../src/gyahtzee.c:769
-#| msgid "The users's most recent level."
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "A legutóbbi lépés visszavonása"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Ember"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "A mostani játék az eredeti számú játékossal fog befejeződni."
+#| msgid "Changes will take effect for the next game."
+msgid "Preferences will be updated in the next game."
+msgstr "A beállítások a következő játékban lépnek életbe."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "A Tali beállításai"
+msgid "Preferences"
+msgstr "Beállítások"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Élő játékosok"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "_Játékosok száma:"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Számítógépes ellenfelek"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Dobások közötti késleltetés"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "_Ellenfelek száma:"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Nehézség:"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Könnyű"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Közepes"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Nehéz"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Játéktípus"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Játékosok neve"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "egyesek [összes egyes]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "kettesek [összes kettes]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "hármasok [összes hármas]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "négyesek [összes négyes]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "ötösök [összes ötös]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "hatosok [összes hatos]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "három egyforma [összes]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "négy egyforma [összes]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Kis sor [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Nagy sor [40]"
 
@@ -611,7 +417,7 @@ msgstr "Nagy sor [40]"
 msgid "5 of a Kind [50]"
 msgstr "öt egyforma [ötven]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Esély [összes]"
 
@@ -634,27 +440,27 @@ msgid "Bonus if >62"
 msgstr "Bónusz, ha nagyobb, mint 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 pár azonos szín [összes]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Full house [15 + összes]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Azonos színű full house [20 + összes]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Flush (mind azonos szín) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "Négy egyforma [25 + összes]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "Öt egyforma [50 + összes]"
 
@@ -662,9 +468,162 @@ msgstr "Öt egyforma [50 + összes]"
 msgid "Choose a score slot."
 msgstr "Válasszon egy pontszámmezőt."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "öt egyforma [összes]"
+
+# aisleriot/menu.c:125
+#~ msgid "View help for this game"
+#~ msgstr "Súgó megjelenítése ehhez a játékhoz"
+
+#~ msgid "End the current game"
+#~ msgstr "A jelenlegi játék befejezése"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Teljes képernyős üzemmód"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Javaslat a következő lépéshez"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Teljes képernyős mód elhagyása"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Új többjátékosos hálózati játék indítása"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr ""
+#~ "A jelenlegi hálózati játék befejezése és visszatérés a hálózati "
+#~ "kiszolgálóhoz"
+
+#~ msgid "Start a new game"
+#~ msgstr "Új játék indítása"
+
+#~ msgid "Pause the game"
+#~ msgstr "A játék szüneteltetése"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "A játékosok listájának megjelenítése a hálózati játékban"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "A visszavont lépés végrehajtása mégis"
+
+#~ msgid "Restart the game"
+#~ msgstr "A játék újraindítása"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "A szüneteltetett játék folytatása"
+
+#~ msgid "View the scores"
+#~ msgstr "A pontok megtekintése"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Az utolsó lépés visszavonása"
+
+#~ msgid "About this game"
+#~ msgstr "A játék névjegye"
+
+#~ msgid "Close this window"
+#~ msgstr "A jelenlegi ablak bezárása"
+
+#~ msgid "Configure the game"
+#~ msgstr "A játék beállítása"
+
+#~ msgid "Quit this game"
+#~ msgstr "Kilépés a játékból"
+
+#~ msgid "_Contents"
+#~ msgstr "_Tartalom"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Teljes képernyő"
+
+#~ msgid "_Hint"
+#~ msgstr "_Javaslat"
+
+#~ msgid "_New"
+#~ msgstr "Ú_j"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Mégis a lépést"
+
+# aisleriot/dialog.c:112
+#~ msgid "_Reset"
+#~ msgstr "_Visszaállítás"
+
+#~ msgid "_Restart"
+#~ msgstr "Ú_jraindítás"
+
+#~ msgid "_Undo Move"
+#~ msgstr "Mozgatás _visszavonása"
+
+#~ msgid "_Deal"
+#~ msgstr "_Osztás"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "T_eljes képernyő elhagyása"
+
+#~ msgid "Network _Game"
+#~ msgstr "_Hálózati játék"
+
+#~ msgid "L_eave Game"
+#~ msgstr "Játék _elhagyása"
+
+#~ msgid "Player _List"
+#~ msgstr "_Játékoslista"
+
+#~ msgid "_Pause"
+#~ msgstr "_Szünet"
+
+# aisleriot/dialog.c:112
+#~ msgid "Res_ume"
+#~ msgstr "_Folytatás"
+
+#~ msgid "_End Game"
+#~ msgstr "Játék be_fejezése"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "A(z) %s szabad szoftver, terjesztheti és/vagy módosíthatja a Free "
+#~ "Software Foundation által kiadott GNU General Public License %d. (vagy "
+#~ "bármely későbbi) változatában foglaltak alapján."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "A(z) %s programot abban a reményben terjesztjük, hogy hasznos lesz, de "
+#~ "nem vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a "
+#~ "program alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. "
+#~ "További részletekért tanulmányozza a GNU GPL licencet."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "A(z) %s programhoz a GNU General Public License egy példánya is jár, ha "
+#~ "nem kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 51 "
+#~ "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "A(z) %s programhoz a GNU General Public License egy példánya is jár, ha "
+#~ "nem kapta meg, a <http://www.gnu.org/licenses/> oldalon elolvashatja."
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "A mostani játék az eredeti számú játékossal fog befejeződni."
+
+#~ msgid "Tali Preferences"
+#~ msgstr "A Tali beállításai"
 
 #~ msgid "Chess"
 #~ msgstr "Sakk"
@@ -782,9 +741,6 @@ msgstr "öt egyforma [összes]"
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Az ellenfél sakkmotor nehézsége"
 
-#~ msgid "Preferences"
-#~ msgstr "Beállítások"
-
 #~ msgid "Play as:"
 #~ msgstr "Játék mint:"
 
@@ -799,9 +755,6 @@ msgstr "öt egyforma [összes]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Előléptetés típusa:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "A módosítások a következő játékban lépnek életbe."
 
 #~ msgid "Game"
 #~ msgstr "Játék"
