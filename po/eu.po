@@ -3,23 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-24 21:14+0100\n"
-"PO-Revision-Date: 2014-03-24 21:24+0100\n"
+"POT-Creation-Date: 2015-01-08 15:23+0100\n"
+"PO-Revision-Date: 2014-12-06 17:43+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -64,7 +66,11 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Arrunta'"
 
-#: ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tiratu dadoak eta lortu puntuak"
+
+#: ../data/tali.appdata.xml.in.h:3
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -72,12 +78,10 @@ msgid ""
 "known variant with colored dice."
 msgstr ""
 "Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin. Jaurti dadoa hiru "
-"aldiz "
-"aldiko, nahi dituzunak gorde esku hobeagoa edukitzeko. Hain ezaguna ez den "
-"aldaera batera ere joka dezakezu: "
-"koloreztatutako dadoekin."
+"aldiz aldiko, nahi dituzunak gorde esku hobeagoa edukitzeko. Hain ezaguna ez "
+"den aldaera batera ere joka dezakezu: koloreztatutako dadoekin."
 
-#: ../data/tali.appdata.xml.in.h:2
+#: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Jokatu aurkari bat edo bosten aurka zailtasuneko hiru mailatan."
 
@@ -107,478 +111,284 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuazioa"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%dm %ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Joko berria"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Data"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Ikusi joko honen laguntza"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Uneko jokoa amaitzen du"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Txandakatu pantaila osoaren modua"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Hurrengo mugimendua iradokitzen du"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Kendu pantaila osoko modua"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Hasi jokalari askorentzako joko berri bat sarean"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Amaitu uneko sareko jokoa eta itzuli sareko zerbitzarira"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Beste joko bat hasten du"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Jokoa pausarazten du"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Sareko jokoko jokalarien zerrenda erakusten du"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Desegindako mugimendua berregiten du"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Jokoa berrabiarazten du"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Pausarazitako jokoari berrekiten dio"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Puntuazioak erakusten ditu"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Azken mugimendua desegiten du"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Joko honi buruz"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Leiho hau ixten du"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Jokoa konfiguratzen du"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Jokotik irteten da"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Edukia"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Pantaila osoa"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Iradokizuna"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Berria"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "_Joko berria"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "B_erregin mugimendua"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Berrezarri"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Hasi berriro"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Desegin mugimendua"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Banatu"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Kendu pantaila osoa"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Sareko _jokoa"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Bertan behera utzi jokoa"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Jokalari-zerrenda"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pausarazi"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Berrekin"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Puntuazioak"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Amaitu jokoa"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s software librea da; birbanatu eta/edo alda dezakezu Free Software "
-"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren %d. "
-"bertsioan, edo (nahiago baduzu) bertsio berriago batean, jasotako baldintzak "
-"betez gero."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"Baliagarria izateko asmoz banatzen da %s, baina INOLAKO BERMERIK GABE; era "
-"berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo HELBURU "
-"PARTIKULARRETARAKO ERABILTZEKO.  Argibide gehiago nahi izanez gero, ikus GNU "
-"Lizentzia Publiko Orokorra."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin batera; "
-"halakorik jaso ez baduzu, idatzi hona: Free Software Foundation, Inc., 51 "
-"Franklin street, Fifth floor, Boston, MA 02110-1301 USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin batera; "
-"halakorik jaso ez baduzu, ikusi <http://www.gnu.org/licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Atzeratu ordenagailuaren mugimenduak"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Erakutsi ordenagailuaren asmoak"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Ordenagailu-aurkarien kopurua"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "KOPURUA"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Giza aurkarien kopurua"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Joko-aukera: normala edo koloreak"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "KATEA"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Soilik ordenagailuz jokatzeko jokoen kopurua"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Ordenagailuaren jaurtialdi bakoitzeko saio kopurua"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Arrunta"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Koloreak"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Jaurti denak!!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr "Jaurti!"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Berdinketa izan da!"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Tali-ko puntuazioak"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Zorionak!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Zure puntuazioa onena da!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Zure puntuazioa hamar onenen artean dago."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s(e)k irabazi du jokoa puntu %d(r)ekin"
 msgstr[1] "%s(e)k irabazi du jokoa %d punturekin"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Jokoa amaitu da!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Ordenagailua %s(r)en partez jokatzen"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s!  – Zure txanda."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Hautatu zein dado jaurti edo aukeratu konbinazio bat."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Jaurti"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Hiru jaurtialdi baino ez zenituen. Hautatu konbinazio bat."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME bertsioa (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Kontsolaren bertsioa (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "AA maila anitzetako kolore-jokoa (2006):"
 
-#: ../src/gyahtzee.c:605
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin\n"
-"\n"
-"GNOME Games-ekoa da Tali."
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/gyahtzee.c:744
+#: ../src/gyahtzee.c:751
+msgid "_New Game"
+msgstr "_Joko berria"
+
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Hobespenak"
 
-#: ../src/gyahtzee.c:748
+#: ../src/gyahtzee.c:753
+msgid "_Scores"
+msgstr "_Puntuazioak"
+
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "Desegin zure azken mugimendua"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Gizakia"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Uneko jokoa jatorrizko jokalari-kopuruarekin amaituko da."
+msgid "Preferences will be updated in the next game."
+msgstr "Hobespenak hurrengo jokoan eguneratuko dira."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "Tali-ren hobespenak"
+msgid "Preferences"
+msgstr "Hobespenak"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Giza jokalariak"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "_Jokalari kopurua:"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Ordenagailu-aurkariak"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Jaurtialdien arteko atzerapena"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "_Aurkari kopurua:"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Zailtasuna:"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Erraza"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Tartekoa"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Zaila"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Joko mota"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Jokalarien izenak"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1ak [1ak, guztira]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2ak [2ak, guztira]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3ak [3ak, guztira]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4ak [4ak, guztira]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5ak [5ak, guztira]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6ak [6ak, guztira]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "Hirukotea [guztira]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "Pokerra [guztira]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Eskailera txikia [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Eskailera handia [40]"
 
@@ -586,7 +396,7 @@ msgstr "Eskailera handia [40]"
 msgid "5 of a Kind [50]"
 msgstr "Errepokerra [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Ausaz [guztira]"
 
@@ -609,27 +419,27 @@ msgid "Bonus if >62"
 msgstr "Gainordaina >62 bada"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "Kolore bereko bi bikote [guztira]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Full [15 + totala]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Kolore bereko full [20 + totala]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Eskailera (denak kolore berekoak) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "Pokerra [25 + totala]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "Errepokerra [50 + totala]"
 
@@ -637,9 +447,158 @@ msgstr "Errepokerra [50 + totala]"
 msgid "Choose a score slot."
 msgstr "Hautatu konbinazio bat."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 mota berdinekoak [guztira]"
+
+#~ msgid "View help for this game"
+#~ msgstr "Ikusi joko honen laguntza"
+
+#~ msgid "End the current game"
+#~ msgstr "Uneko jokoa amaitzen du"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Txandakatu pantaila osoaren modua"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Hurrengo mugimendua iradokitzen du"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Kendu pantaila osoko modua"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Hasi jokalari askorentzako joko berri bat sarean"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Amaitu uneko sareko jokoa eta itzuli sareko zerbitzarira"
+
+#~ msgid "Start a new game"
+#~ msgstr "Beste joko bat hasten du"
+
+#~ msgid "Pause the game"
+#~ msgstr "Jokoa pausarazten du"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Sareko jokoko jokalarien zerrenda erakusten du"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Desegindako mugimendua berregiten du"
+
+#~ msgid "Restart the game"
+#~ msgstr "Jokoa berrabiarazten du"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Pausarazitako jokoari berrekiten dio"
+
+#~ msgid "View the scores"
+#~ msgstr "Puntuazioak erakusten ditu"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Azken mugimendua desegiten du"
+
+#~ msgid "About this game"
+#~ msgstr "Joko honi buruz"
+
+#~ msgid "Close this window"
+#~ msgstr "Leiho hau ixten du"
+
+#~ msgid "Configure the game"
+#~ msgstr "Jokoa konfiguratzen du"
+
+#~ msgid "Quit this game"
+#~ msgstr "Jokotik irteten da"
+
+#~ msgid "_Contents"
+#~ msgstr "_Edukia"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Pantaila osoa"
+
+#~ msgid "_Hint"
+#~ msgstr "_Iradokizuna"
+
+#~ msgid "_New"
+#~ msgstr "_Berria"
+
+#~ msgid "_Redo Move"
+#~ msgstr "B_erregin mugimendua"
+
+#~ msgid "_Reset"
+#~ msgstr "_Berrezarri"
+
+#~ msgid "_Restart"
+#~ msgstr "_Hasi berriro"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Desegin mugimendua"
+
+#~ msgid "_Deal"
+#~ msgstr "_Banatu"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Kendu pantaila osoa"
+
+#~ msgid "Network _Game"
+#~ msgstr "Sareko _jokoa"
+
+#~ msgid "L_eave Game"
+#~ msgstr "_Bertan behera utzi jokoa"
+
+#~ msgid "Player _List"
+#~ msgstr "_Jokalari-zerrenda"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pausarazi"
+
+#~ msgid "Res_ume"
+#~ msgstr "_Berrekin"
+
+#~ msgid "_End Game"
+#~ msgstr "_Amaitu jokoa"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s software librea da; birbanatu eta/edo alda dezakezu Free Software "
+#~ "Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren %d. "
+#~ "bertsioan, edo (nahiago baduzu) bertsio berriago batean, jasotako "
+#~ "baldintzak betez gero."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "Baliagarria izateko asmoz banatzen da %s, baina INOLAKO BERMERIK GABE; "
+#~ "era berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo "
+#~ "HELBURU PARTIKULARRETARAKO ERABILTZEKO.  Argibide gehiago nahi izanez "
+#~ "gero, ikus GNU Lizentzia Publiko Orokorra."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin "
+#~ "batera; halakorik jaso ez baduzu, idatzi hona: Free Software Foundation, "
+#~ "Inc., 51 Franklin street, Fifth floor, Boston, MA 02110-1301 USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin "
+#~ "batera; halakorik jaso ez baduzu, ikusi <http://www.gnu.org/licenses/>."
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "Uneko jokoa jatorrizko jokalari-kopuruarekin amaituko da."
+
+#~ msgid "Tali Preferences"
+#~ msgstr "Tali-ren hobespenak"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
@@ -764,9 +723,6 @@ msgstr "5 mota berdinekoak [guztira]"
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Xake motor aurkariaren zailtasuna"
 
-#~ msgid "Preferences"
-#~ msgstr "Hobespenak"
-
 #~ msgid "Play as:"
 #~ msgstr "Jokatu honela:"
 
@@ -781,9 +737,6 @@ msgstr "5 mota berdinekoak [guztira]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Promozio mota:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Aldaketak hurrengo jokoan eragingo dute."
 
 #~ msgid "Game"
 #~ msgstr "Jokoa"
