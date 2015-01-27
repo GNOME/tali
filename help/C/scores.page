@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="scores">
 
@@ -8,7 +9,7 @@
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 
@@ -21,17 +22,24 @@
   <title>Scores</title>
 
   <p>You can check out your scores of the games played so far:</p>
-    <steps>
-      <item><p>Select <guiseq><gui style="menu">Tali</gui>
-      <gui style="menuitem">Scores</gui></guiseq>.</p></item>
-      <item><p>The <gui>Regular</gui> version is displayed by default, to view
-      scores obtained in <gui>Colors</gui>, select it from the drop down menu.
-      </p></item>
-    </steps>
 
-  <section id="score-slots">
+  <steps>
+    <item>
+      <p>Select <guiseq><gui style="menu">Tali</gui>
+      <gui style="menuitem">Scores</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>The <gui>Regular</gui> version is displayed by default, to view
+      scores obtained in <gui>Colors</gui>, select it from the drop down
+      menu.</p>
+    </item>
+  </steps>
+
+<section id="score-slots">
   <title>Score slots</title>
+
   <p>You can choose a score slot from the seven available score slots:</p>
+
   <terms>
     <item>
       <title><gui>3 of a Kind</gui></title>
@@ -68,7 +76,6 @@
       the score is 50 plus the total of all the dice.</p>
     </item>
   </terms>
-  </section>
+</section>
 
 </page>
-

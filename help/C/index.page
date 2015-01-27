@@ -1,36 +1,33 @@
 <page xmlns="http://projectmallard.org/1.0/"
-  xmlns:its="http://www.w3.org/2005/11/its"
-  id="index"
-  type="guide"
-  style="2column">
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="2column"
+      id="index">
 
   <info>
-    <title type="link" role="trail"><media type="image" its:translate="no"
-    src="media/logo.png"/></title>
+    <title type="link" role="trail"><media type="image" its:translate="no" src="media/logo.png"/></title>
     <title type="link">Tali</title>
     <title type="text">Tali</title>
-    <desc>Tali help.</desc>
     <revision pkgversion="3.14" date="2014-06-10" status="draft"/>
-  <section id="move-block">
-    <title>Move a block</title>
-    <p>Click and drag the desired block to a location of your choice on the
-    board.</p>
-  </section>
+
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
+    <desc>Tali help.</desc>
   </info>
 
-  <title><media type="image" its:translate="no" src="media/logo32.png">
-  Tali logo</media> Tali</title>
+  <title>
+    <media type="image" its:translate="no" src="media/logo32.png" />
+    Tali
+  </title>
+
   <p><app>Tali</app> is similar to poker with dice. You roll five dice three
   times and try to create the best hand.</p>
 
- <section id="play" style="2column">
+  <section id="play" style="2column">
     <title>Playing Tali</title>
   </section>
 
