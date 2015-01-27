@@ -1,10 +1,6 @@
 @YELP_HELP_RULES@
 HELP_ID = tali
 
-HELP_MEDIA = \
-	figures/logo32.png \
-	figures/logo.png
-
 HELP_FILES = \
 	game-settings.page \
 	index.page \
@@ -13,6 +9,10 @@ HELP_FILES = \
 	scores.page \
 	settings.page \
 	start-game.page
+
+HELP_MEDIA = \
+	media/logo32.png \
+	media/logo.png
 
 HELP_LINGUAS =
 

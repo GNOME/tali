@@ -6,7 +6,7 @@
 
   <info>
     <title type="link" role="trail"><media type="image" its:translate="no"
-    src="figures/logo.png"/></title>
+    src="media/logo.png"/></title>
     <title type="link">Tali</title>
     <title type="text">Tali</title>
     <desc>Tali help.</desc>
@@ -25,7 +25,7 @@
 
   </info>
 
-  <title><media type="image" its:translate="no" src="figures/logo32.png">
+  <title><media type="image" its:translate="no" src="media/logo32.png">
   Tali logo</media> Tali</title>
   <p><app>Tali</app> is similar to poker with dice. You roll five dice three
   times and try to create the best hand.</p>
