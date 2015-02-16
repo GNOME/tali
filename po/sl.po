@@ -5,15 +5,15 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2014.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007-2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-04-12 11:16+0000\n"
-"PO-Revision-Date: 2014-04-12 19:42+0100\n"
+"POT-Creation-Date: 2015-02-16 17:07+0000\n"
+"PO-Revision-Date: 2015-02-16 21:30+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -25,7 +25,8 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -70,7 +71,11 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Običajna'"
 
-#: ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Vrzi kocke in zbiraj točke"
+
+#: ../data/tali.appdata.xml.in.h:3
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -82,7 +87,7 @@ msgstr ""
 "meče pa tiste, ki ne omogočajo najboljšega rezultata. Igro je mogoče igrati "
 "tudi z barvnimi kockami."
 
-#: ../data/tali.appdata.xml.in.h:2
+#: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Igro je mogoče igrati od enega do petih nasprotnikov na treh različnih "
@@ -114,295 +119,100 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Rezultat"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nova igra"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Datum"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Poglejte pomoč za to igro"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Končaj trenutno igro"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Preklopi celozaslonski način"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Namig za vašo naslednjo potezo"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Zapusti celozaslonski način"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Začni novo omrežno igro"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Začni novo igro"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Premor igranja"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Pokaži seznam igralcev v omrežni igri"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Obnovi razveljavljeno potezo"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Znova začni igro"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Nadaljevanje prekinjene igre"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Pokaže rezultate"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Razveljavi zadnjo potezo"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "O tej igri"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Zapri trenutno okno"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Nastavi igro"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Končaj igro"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Vsebina"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Celozaslonski način"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Namig"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nova"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "_Nova Igra"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Obnovi potezo"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Ponastavi"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Ponoven zagon"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Razveljavi potezo"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "Razd_eli"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Zapusti celozaslonski način"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Omrežna igra"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Zapusti igro"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Seznam igralcev"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Premor"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Na_daljuj"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Točke"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Končaj igro"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s je prosta programska oprema; lahko jo razširjate in spreminjate pod "
-"pogoji GNU Splošne javne licence kot je to objavljeno preko Free Software "
-"Foundation; različice %d ali katerekoli kasnejše."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s se razširja v upanju, da bo uporaben, vendar BREZ VSAKRŠNEGA JAMSTVA; "
-"tudi brez posredne zagotovitve CENOVNE VREDNOSTI ali PRIMERNOSTI ZA DOLOČEN "
-"NAMEN.  Za podrobnosti glejte besedilo GNU General Public License."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Skupaj s tem programom %s bi morali prejeti izvod Splošnega javnega "
-"dovoljenja GNU (GNU General Public License); v primeru da ga niste, pišite "
-"na Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, "
-"MA  02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Skupaj s programom bi morali dobiti tudi kopijo GNU splošne javne licence. V "
-"primeru, da je niste, si oglejte <http://www.gnu.org/licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Zamik med računalnikovimi premiki"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Pokaži računalnikovo razmišljanje"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Število računalniških nasprotnikov"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "ŠTEVILKA"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Število človeških nasprotnikov"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Izbira igre: Običajno ali barvno"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "NIZ"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "računalniških nasprotnikov"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Število poskisov vsakega meta računalnika"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Običajno"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Barve"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Vrzi vse kocke! "
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr "Vrzi kocko! "
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Igra je neodločena!"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Rezultati Tali"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Čestitke!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Vaše rezultat je najboljši!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Vaš rezultat se uvršča med najboljših deset."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -411,55 +221,49 @@ msgstr[1] "%s je zmagal igro za %d točko"
 msgstr[2] "%s je zmagal igro za %d točki"
 msgstr[3] "%s je zmagal igro za %d točke"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Igra je končana!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Računalnik igra za %s"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Na vrsti ste."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Izberite kocko za met ali pa izberite režo s točkami."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Vrzi kocke! "
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Dovoljeni so le trije meti! Označite polje s točkami."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "Različica za GNOME (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Različica za konzolo (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Barve igre in večstopenjski AI (2006):"
 
-#: ../src/gyahtzee.c:605
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Različica igre poker s kocko in manj denarja.\n"
-"\n"
-"Igra Tali je del iger GNOME."
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "Različica igre poker s kocko in manj denarja."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -467,130 +271,138 @@ msgstr ""
 "Tadej Janež <tadej_janez@email.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/gyahtzee.c:744
+#: ../src/gyahtzee.c:751
+msgid "_New Game"
+msgstr "_Nova Igra"
+
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Možnosti"
 
-#: ../src/gyahtzee.c:748
+#: ../src/gyahtzee.c:753
+msgid "_Scores"
+msgstr "_Točke"
+
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "Pomo_č"
 
-#: ../src/gyahtzee.c:749
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_O Programu"
 
-#: ../src/gyahtzee.c:750
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "Razveljavi zadnjo potezo"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Človek"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Trenutna igra bo zapolnjena z izvornim številom igralcev."
+msgid "Preferences will be updated in the next game."
+msgstr "Spremembe bodo imele učinek pri vseh naslednjih igrah."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "Možnosti Tali"
+msgid "Preferences"
+msgstr "Možnosti"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Človeški igralci"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "Š_tevilo igralcev:"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Računalniški nasprotniki"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Zamik med meti"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "Š_tevilo nasprotnikov:"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Zahtevnost:"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Enostavno"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Srednja"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Zahtevno"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Vrsta igre"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Imena igralcev"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1s [celota od 1s]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2s [celota od 2s]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3s [celota od 3s]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4s [celota od 4s]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5s [celota od 5s]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6s [celota od 6s]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "3 karte v barvi [celota]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "4 karte v barvi [celota]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Full House [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Nizka vrsta v barvi [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Visoka vrsta v barvi [40]"
 
@@ -598,7 +410,7 @@ msgstr "Visoka vrsta v barvi [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 kart v barvi [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Možnost [celota]"
 
@@ -621,27 +433,27 @@ msgid "Bonus if >62"
 msgstr "Bonus za > 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 para kart v barvi [skupno]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Full House [15 + skupno]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Full House kart v barvi [20 + skupno]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Vse karte v isti barvi [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "4 karte v barvi [25 + skupno]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5 kart v barvi [50 + skupno]"
 
@@ -649,9 +461,158 @@ msgstr "5 kart v barvi [50 + skupno]"
 msgid "Choose a score slot."
 msgstr "Izbor polja točkovanja."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 kart v barvi [skupno]"
+
+#~ msgid "View help for this game"
+#~ msgstr "Poglejte pomoč za to igro"
+
+#~ msgid "End the current game"
+#~ msgstr "Končaj trenutno igro"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Preklopi celozaslonski način"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Namig za vašo naslednjo potezo"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Zapusti celozaslonski način"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Začni novo omrežno igro"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
+
+#~ msgid "Start a new game"
+#~ msgstr "Začni novo igro"
+
+#~ msgid "Pause the game"
+#~ msgstr "Premor igranja"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Pokaži seznam igralcev v omrežni igri"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Obnovi razveljavljeno potezo"
+
+#~ msgid "Restart the game"
+#~ msgstr "Znova začni igro"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Nadaljevanje prekinjene igre"
+
+#~ msgid "View the scores"
+#~ msgstr "Pokaže rezultate"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Razveljavi zadnjo potezo"
+
+#~ msgid "About this game"
+#~ msgstr "O tej igri"
+
+#~ msgid "Close this window"
+#~ msgstr "Zapri trenutno okno"
+
+#~ msgid "Configure the game"
+#~ msgstr "Nastavi igro"
+
+#~ msgid "Quit this game"
+#~ msgstr "Končaj igro"
+
+#~ msgid "_Contents"
+#~ msgstr "_Vsebina"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Celozaslonski način"
+
+#~ msgid "_Hint"
+#~ msgstr "_Namig"
+
+#~ msgid "_New"
+#~ msgstr "_Nova"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Obnovi potezo"
+
+#~ msgid "_Reset"
+#~ msgstr "_Ponastavi"
+
+#~ msgid "_Restart"
+#~ msgstr "_Ponoven zagon"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Razveljavi potezo"
+
+#~ msgid "_Deal"
+#~ msgstr "Razd_eli"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Zapusti celozaslonski način"
+
+#~ msgid "Network _Game"
+#~ msgstr "_Omrežna igra"
+
+#~ msgid "L_eave Game"
+#~ msgstr "_Zapusti igro"
+
+#~ msgid "Player _List"
+#~ msgstr "_Seznam igralcev"
+
+#~ msgid "_Pause"
+#~ msgstr "_Premor"
+
+#~ msgid "Res_ume"
+#~ msgstr "Na_daljuj"
+
+#~ msgid "_End Game"
+#~ msgstr "_Končaj igro"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s je prosta programska oprema; lahko jo razširjate in spreminjate pod "
+#~ "pogoji GNU Splošne javne licence kot je to objavljeno preko Free Software "
+#~ "Foundation; različice %d ali katerekoli kasnejše."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s se razširja v upanju, da bo uporaben, vendar BREZ VSAKRŠNEGA JAMSTVA; "
+#~ "tudi brez posredne zagotovitve CENOVNE VREDNOSTI ali PRIMERNOSTI ZA "
+#~ "DOLOČEN NAMEN.  Za podrobnosti glejte besedilo GNU General Public License."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Skupaj s tem programom %s bi morali prejeti izvod Splošnega javnega "
+#~ "dovoljenja GNU (GNU General Public License); v primeru da ga niste, "
+#~ "pišite na Free Software Foundation, Inc., 51 Franklin Street, Fifth "
+#~ "Floor, Boston, MA  02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Skupaj s programom bi morali dobiti tudi kopijo GNU splošne javne "
+#~ "licence. V primeru, da je niste, si oglejte <http://www.gnu.org/licenses/"
+#~ ">."
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "Trenutna igra bo zapolnjena z izvornim številom igralcev."
+
+#~ msgid "Tali Preferences"
+#~ msgstr "Možnosti Tali"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
@@ -776,9 +737,6 @@ msgstr "5 kart v barvi [skupno]"
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Težavnost šahovskega programnika nasprotnika"
 
-#~ msgid "Preferences"
-#~ msgstr "Možnosti"
-
 #~ msgid "Play as:"
 #~ msgstr "Igraj kot:"
 
@@ -793,9 +751,6 @@ msgstr "5 kart v barvi [skupno]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Vrsta povišanja:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Spremembe bodo imele učinek za naslednjo igro."
 
 #~ msgid "Game"
 #~ msgstr "Igra"
