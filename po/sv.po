@@ -1,19 +1,19 @@
 # Swedish messages for gnome-games.
-# Copyright © 1999-2014 Free Software Foundation, Inc.
+# Copyright © 1999-2015 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-23 10:35+0000\n"
-"PO-Revision-Date: 2014-07-23 23:11+0100\n"
+"POT-Creation-Date: 2015-01-26 23:48+0000\n"
+"PO-Revision-Date: 2015-01-27 20:35+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,9 +21,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
@@ -41,21 +42,19 @@ msgstr "Fördröjning mellan kast"
 
 #: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
+"Choose whether or not to insert a delay between the computer's dice rolls so the "
+"player can follow what it is doing."
 msgstr ""
-"Välj huruvida en fördröjning ska infogas mellan datorns tärningskast eller "
-"inte, så att spelaren kan följa vad den gör."
+"Välj huruvida en fördröjning ska infogas mellan datorns tärningskast eller inte, "
+"så att spelaren kan följa vad den gör."
 
 #: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Visa datorns tankar"
 
 #: ../data/org.gnome.tali.gschema.xml.h:4
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Om detta är sant kommer en dump av AI:ts arbete att visas på standard ut."
+msgid "If set to true, a dump of the AI's working will be done to standard output."
+msgstr "Om detta är sant kommer en dump av AI:ts arbete att visas på standard ut."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -67,19 +66,23 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Vanligt'"
 
-#: ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Rulla tärningar och få poäng"
+
+#: ../data/tali.appdata.xml.in.h:3
 msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
+"A variation on poker with dice and less money, this game is a family classic. "
+"Throw the dice three times in a row, holding back the ones you like, in order to "
+"make the best possible hand. You can also play a lesser-known variant with "
+"colored dice."
 msgstr ""
 "En variant av poker med tärning och mindre pengar, det här spelet är en "
-"familjeklassiker. Kasta tärningarna tre gånger, behåll de du vill ha kvar "
-"efter varje gång och skapa bästa möjliga hand. Du kan också spela en mindre "
-"känd variant med färgade tärningar."
+"familjeklassiker. Kasta tärningarna tre gånger, behåll de du vill ha kvar efter "
+"varje gång och skapa bästa möjliga hand. Du kan också spela en mindre känd "
+"variant med färgade tärningar."
 
-#: ../data/tali.appdata.xml.in.h:2
+#: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Spela mot en till fem motståndare på tre svårighetsnivåer."
 
@@ -109,19 +112,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Poäng"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nytt spel"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Datum"
 
@@ -176,7 +181,7 @@ msgstr "Färger"
 msgid "Roll all!"
 msgstr "Kasta alla!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr "Kasta!"
 
@@ -184,7 +189,7 @@ msgstr "Kasta!"
 msgid "The game is a draw!"
 msgstr "Spelet är oavgjort!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Poänglistan för Tali"
 
@@ -246,16 +251,10 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Färgspel och flernivåers-AI (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"En variant av poker med tärning och mindre pengar\n"
-"\n"
-"Tali är en del av GNOME Games."
+msgid "A variation on poker with dice and less money."
+msgstr "En variant av poker med tärning och mindre pengar."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -268,44 +267,43 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: ../src/gyahtzee.c:752
+#: ../src/gyahtzee.c:751
 msgid "_New Game"
 msgstr "_Nytt spel"
 
-#: ../src/gyahtzee.c:753
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Inställningar"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:753
 msgid "_Scores"
 msgstr "_Poänglista"
 
-#: ../src/gyahtzee.c:757
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "A_vsluta"
 
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "Ångra ditt senaste drag"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Mänsklig"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Nuvarande omgång avslutas med det ursprungliga antalet spelare."
+msgid "Preferences will be updated in the next game."
+msgstr "Inställningar kommer att uppdateras i nästa spel."
 
 #: ../src/setup.c:264
-#| msgid "_Preferences"
 msgid "Preferences"
 msgstr "Inställningar"
 
@@ -462,149 +460,3 @@ msgstr "Välj en poängruta."
 #: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "Femtal [totalt]"
-
-#~ msgid "View help for this game"
-#~ msgstr "Visa hjälp för detta spel"
-
-#~ msgid "End the current game"
-#~ msgstr "Avsluta det aktuella spelet"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "Växla helskärmsläge"
-
-#~ msgid "Get a hint for your next move"
-#~ msgstr "Få tips angående ditt nästa drag"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "Lämna helskärmsläge"
-
-#~ msgid "Start a new multiplayer network game"
-#~ msgstr "Starta ett nytt nätverksspel med flera spelare"
-
-#~ msgid "End the current network game and return to network server"
-#~ msgstr "Avsluta aktuellt nätverksspel och återvänd till nätverksservern"
-
-#~ msgid "Start a new game"
-#~ msgstr "Starta ett nytt spel"
-
-#~ msgid "Pause the game"
-#~ msgstr "Gör paus i spelet"
-
-#~ msgid "Show a list of players in the network game"
-#~ msgstr "Visa en lista på spelare i nätverksspelet"
-
-#~ msgid "Redo the undone move"
-#~ msgstr "Gör om det ångrade draget"
-
-#~ msgid "Restart the game"
-#~ msgstr "Starta om spelet"
-
-#~ msgid "Resume the paused game"
-#~ msgstr "Återuppta det pausade spelet"
-
-#~ msgid "View the scores"
-#~ msgstr "Visa poänglistan"
-
-#~ msgid "Undo the last move"
-#~ msgstr "Ångra det senaste draget"
-
-#~ msgid "About this game"
-#~ msgstr "Om detta spel"
-
-#~ msgid "Close this window"
-#~ msgstr "Stäng det här fönstret"
-
-#~ msgid "Configure the game"
-#~ msgstr "Konfigurera spelet"
-
-#~ msgid "Quit this game"
-#~ msgstr "Avsluta detta spel"
-
-#~ msgid "_Contents"
-#~ msgstr "_Innehåll"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Helskärm"
-
-#~ msgid "_Hint"
-#~ msgstr "_Tips"
-
-#~ msgid "_New"
-#~ msgstr "_Nytt"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Gör om drag"
-
-#~ msgid "_Reset"
-#~ msgstr "N_ollställ"
-
-#~ msgid "_Restart"
-#~ msgstr "Starta _om"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Ångra drag"
-
-#~ msgid "_Deal"
-#~ msgstr "_Ge"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Lämna helskärmsläge"
-
-#~ msgid "Network _Game"
-#~ msgstr "Nätver_ksspel"
-
-#~ msgid "L_eave Game"
-#~ msgstr "Läm_na spel"
-
-#~ msgid "Player _List"
-#~ msgstr "Spelar_lista"
-
-#~ msgid "_Pause"
-#~ msgstr "Gör _paus"
-
-#~ msgid "Res_ume"
-#~ msgstr "_Återuppta"
-
-#~ msgid "_End Game"
-#~ msgstr "_Avsluta spel"
-
-#~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
-#~ msgstr ""
-#~ "%s är fri programvara. Du kan distribuera det och/eller modifiera det "
-#~ "under villkoren i GNU General Public License, publicerad av Free Software "
-#~ "Foundation, antingen version %d av licensen eller (om du så vill) någon "
-#~ "senare version."
-
-#~ msgid ""
-#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
-#~ msgstr ""
-#~ "%s distribueras i hopp om att det ska vara användbart, men UTAN NÅGON SOM "
-#~ "HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller "
-#~ "LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för "
-#~ "ytterligare information."
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
-#~ msgstr ""
-#~ "Du bör ha fått en kopia av GNU General Public License tillsammans med %s. "
-#~ "Om inte, skriv till Free Software Foundation, Inc., 51 Franklin Street, "
-#~ "Fifth Floor, Boston, MA  02110-1301, USA"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-#~ msgstr ""
-#~ "Du bör ha fått en kopia av GNU General Public License tillsammans med "
-#~ "detta program. Om inte, se <http://www.gnu.org/licenses/>."
-
-#~ msgid "Tali Preferences"
-#~ msgstr "Inställningar för Tali"
