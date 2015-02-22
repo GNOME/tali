@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <!-- <gresource prefix="/org/gnome/tali/ui">
+    <file preprocess="xml-stripblanks" alias="tali.ui">../data/tali.ui</file>
+    <file alias="tali.css">../data/tali.css</file>
+  </gresource> -->
+  <gresource prefix="/org/gnome/tali/gtk">
+    <file preprocess="xml-stripblanks" alias="menus.ui">../data/tali-menus.ui</file>
+  </gresource>
+</gresources>

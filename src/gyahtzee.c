@@ -724,7 +724,6 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   GtkWidget *tmp;
   GtkWidget *dicebox;
   GtkWidget *undo_button;
-  GMenu *app_menu, *section;
   int i, j;
 
   window = gtk_application_window_new (application);
@@ -740,26 +739,11 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
   gtk_application_add_accelerator (application, "<Primary>z", "app.undo", NULL);
-  gtk_application_add_accelerator (application, "<Primary>q", "app.quit", NULL);
   gtk_application_add_accelerator (application, "<Primary>r", "app.roll", NULL);
-  gtk_application_add_accelerator (application, "F1", "app.help", NULL);
 
-  /*---- Menus ----*/
-  app_menu = g_menu_new ();
-  section = g_menu_new ();
-  g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
-  g_menu_append (section, _("_New Game"), "app.new-game");
-  g_menu_append (section, _("_Preferences"), "app.preferences");
-  g_menu_append (section, _("_Scores"), "app.scores");
-  section = g_menu_new ();
-  g_menu_append_section (app_menu, NULL, G_MENU_MODEL (section));
-  g_menu_append (section, _("_Help"), "app.help");
-  g_menu_append (section, _("_About"), "app.about");
-  g_menu_append (section, _("_Quit"), "app.quit");
   scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "scores");
   undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
   update_undo_sensitivity ();
-  gtk_application_set_app_menu (GTK_APPLICATION (application), G_MENU_MODEL (app_menu));
 
         /*--- Headerbar ---*/
   hbar = gtk_header_bar_new ();

@@ -1,5 +1,8 @@
 SUBDIRS = icons
 
+dist_noinst_DATA = \
+	tali-menus.ui
+
 pixmapdir = $(datadir)/tali
 pixmap_DATA = \
 	gnome-dice-1.svg \
