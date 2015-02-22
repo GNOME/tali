@@ -738,8 +738,10 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 		    G_CALLBACK (key_press), NULL);
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
-  gtk_application_add_accelerator (application, "<Primary>z", "app.undo", NULL);
-  gtk_application_add_accelerator (application, "<Primary>r", "app.roll", NULL);
+  const gchar *vaccels_undo[] = {"<Primary>z", NULL};
+  gtk_application_set_accels_for_action (application, "app.undo", vaccels_undo);
+  const gchar *vaccels_roll[] = {"<Primary>r", NULL};
+  gtk_application_set_accels_for_action (application, "app.roll", vaccels_roll);
 
   scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "scores");
   undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
