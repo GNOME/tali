@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-15 10:35+0000\n"
-"PO-Revision-Date: 2014-09-15 23:06+0100\n"
+"POT-Creation-Date: 2015-02-22 11:53+0000\n"
+"PO-Revision-Date: 2015-02-22 17:12+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.4\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1 ../src/gyahtzee.c:55
 msgid "Tali"
-msgstr "Kockopoker"
+msgstr "Tali"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -40,21 +40,19 @@ msgstr "Pauza medzi hodmi"
 
 #: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
+"Choose whether or not to insert a delay between the computer's dice rolls so the "
+"player can follow what it is doing."
 msgstr ""
-"Zvoľte si, či sa má alebo nemá vložiť prestávka medzi hody počítača, aby "
-"hráč mohol sledovať, čo počítač robí."
+"Zvoľte si, či sa má alebo nemá vložiť prestávka medzi hody počítača, aby hráč mohol "
+"sledovať, čo počítač robí."
 
 #: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Zobraziť myšlienky počítača"
 
 #: ../data/org.gnome.tali.gschema.xml.h:4
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Ak je nastavené na true, práca UI hráčov bude vypísaná na štandardný výstup."
+msgid "If set to true, a dump of the AI's working will be done to standard output."
+msgstr "Ak je nastavené na true, práca UI hráčov bude vypísaná na štandardný výstup."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -66,21 +64,23 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "Regulárna"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Druh pokru, ktorý sa hrá s kockami a bez peňazí. Ide o klasickú rodinnú hru. "
-"Hoďte kockou trikrát za sebou a vyberte si pokus s najlepšou hodnotou na "
-"ruke. Tiež si môžete zahrať menej známu variantu s farebnou kockou."
-
 #: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
+msgid "Roll dice and score points"
+msgstr "Hádžte kockami a zbierajte body"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family classic. Throw "
+"the dice three times in a row, holding back the ones you like, in order to make the "
+"best possible hand. You can also play a lesser-known variant with colored dice."
 msgstr ""
-"Hrajte proti jednému alebo až piatim protivníkom s troma úrovňami náročnosti."
+"Druh pokru, ktorý sa hrá s kockami a bez peňazí. Ide o klasickú rodinnú hru. Hoďte "
+"kockou trikrát za sebou a vyberte si pokus s najlepšou hodnotou na ruke. Tiež si "
+"môžete zahrať menej známu variantu s farebnou kockou."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Hrajte proti jednému alebo až piatim protivníkom s troma úrovňami náročnosti."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -108,19 +108,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nová hra"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Dátum"
 
@@ -175,7 +177,7 @@ msgstr "Farby"
 msgid "Roll all!"
 msgstr "Hodiť so všetkými!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
 msgstr "Hodiť!"
 
@@ -183,9 +185,9 @@ msgstr "Hodiť!"
 msgid "The game is a draw!"
 msgstr "Hra skončila remízou!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
-msgstr "Najlepší v hre Kockopoker"
+msgstr "Najlepší v hre Tali"
 
 #: ../src/gyahtzee.c:191
 msgid "Congratulations!"
@@ -224,8 +226,8 @@ msgstr "%s! – Ste na rade."
 #: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr ""
-"Vyberte kocky, ktoré chcete znovu hodiť, stlačte Hodiť!, alebo vyberte "
-"riadok, kam sa zapíšu body."
+"Vyberte kocky, ktoré chcete znovu hodiť, stlačte Hodiť!, alebo vyberte riadok, kam "
+"sa zapíšu body."
 
 #: ../src/gyahtzee.c:476
 msgid "Roll"
@@ -248,61 +250,55 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Hra s použitím farieb a viacúrovňovej UI (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Druh pokru, ktorý sa hrá s kockami a bez peňazí\n"
-"\n"
-"Hra Kockopoker je súčasťou Hier GNOME."
+msgid "A variation on poker with dice and less money."
+msgstr "Druh pokru, ktorý sa hrá s kockami a bez peňazí."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
 "Marcel Telka <marcel@telka.sk>\n"
 "Peter Mráz <etkinator@gmail.com>\n"
-"Ján Kyselica <kyselica.jan@gmail.com"
+"Ján Kyselica <kyselica.jan@gmail.com\n"
+"Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/gyahtzee.c:752
+#: ../src/gyahtzee.c:751
 msgid "_New Game"
 msgstr "_Nová hra"
 
-#: ../src/gyahtzee.c:753
+#: ../src/gyahtzee.c:752
 msgid "_Preferences"
 msgstr "_Nastavenia"
 
-#: ../src/gyahtzee.c:754
+#: ../src/gyahtzee.c:753
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: ../src/gyahtzee.c:757
+#: ../src/gyahtzee.c:756
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: ../src/gyahtzee.c:758
+#: ../src/gyahtzee.c:757
 msgid "_About"
 msgstr "_O tejto hre"
 
-#: ../src/gyahtzee.c:759
+#: ../src/gyahtzee.c:758
 msgid "_Quit"
 msgstr "_Ukončiť"
 
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:777
 msgid "Undo your most recent move"
 msgstr "Vrátiť posledný ťah"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Človek"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Aktuálna hra bude dokončená s pôvodným počtom hráčov."
+msgid "Preferences will be updated in the next game."
+msgstr "Nastavenia budú aktualizované v ďalšej hre."
 
 #: ../src/setup.c:264
-#| msgid "_Preferences"
 msgid "Preferences"
 msgstr "Nastavenia"
 
@@ -459,6 +455,9 @@ msgstr "Vyberte, kam sa majú zapísať body."
 #: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "Pätica [súčet]"
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "Aktuálna hra bude dokončená s pôvodným počtom hráčov."
 
 #~ msgid "View help for this game"
 #~ msgstr "Zobraziť pomocníka pre túto hru"
