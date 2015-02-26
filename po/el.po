@@ -35,21 +35,42 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-15 10:37+0000\n"
-"PO-Revision-Date: 2014-08-15 16:14+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"POT-Creation-Date: 2015-02-25 23:55+0000\n"
+"PO-Revision-Date: 2015-02-26 13:02+0200\n"
+"Last-Translator: Maria Mavridou <mavridou@gmail.com>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Τάλι"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Ρίξτε τα ζάρια και κερδίστε πόντους"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Μια παραλλαγή του πόκερ με ζάρια και λιγότερα χρήματα, αυτό το παιχνίδι "
+"είναι κλασικό οικογενειακό. Ρίξτε τη ζαριά τρεις φορές στη σειρά, κρατώντας "
+"αυτές που θέλετε, για να κάνετε τις καλύτερες δυνατές. Μπορείτε επίσης να "
+"παίξετε μια λιγότερο γνωστή παραλλαγή με χρωματιστά ζάρια."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -58,6 +79,30 @@ msgstr "Παίξτε ένα παιχνίδι με ζάρια, αντίστοιχ
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "Π_ροτιμήσεις"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Βαθμολογίες"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Περί"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "Έ_ξοδος"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -92,22 +137,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Κανονικό'"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Μια παραλλαγή σε πόκερ με ζάρια και λιγότερα χρήματα, αυτό το παιχνίδι είναι "
-"κλασικό οικογενειακό. Ρίξτε τη ζαριά τρεις φορές στη σειρά, κρατώντας αυτές "
-"που θέλετε, για να κάνετε τις καλύτερες δυνατές. Μπορείτε επίσης να παίξετε "
-"μια λιγότερο γνωστή παραλλαγή με χρωματιστά ζάρια."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "Χρησιμοποιείται ήδη! Πού θέλετε να το τοποθετήσετε;"
@@ -134,19 +163,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Βαθμολογία"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Νέο παιχνίδι"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Ημερομηνία"
 
@@ -201,7 +232,7 @@ msgstr "Χρώματα"
 msgid "Roll all!"
 msgstr "Ρίξτε τα ζάρια!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Ζαριά!"
 
@@ -209,7 +240,7 @@ msgstr "Ζαριά!"
 msgid "The game is a draw!"
 msgstr "Το παιχνίδι λήγει ισόπαλο!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Βαθμολογία Τάλι"
 
@@ -271,16 +302,14 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Παιχνίδι χρώματα και τεχνητή νοημοσύνη πολλαπλών επιπέδων (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Ένα είδος πόκερ, που παίζεται με ζάρια και λιγότερα χρήματα.\n"
-"\n"
-"Το Τάλι είναι μέρος των παιχνιδιών του GNOME."
+#| msgid ""
+#| "A variation on poker with dice and less money\n"
+#| "\n"
+#| "Tali is a part of GNOME Games."
+msgid "A variation on poker with dice and less money."
+msgstr "Μια παραλλαγή του πόκερ με ζάρια και λιγότερα χρήματα."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -293,41 +322,18 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/gyahtzee.c:752
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
-
-#: ../src/gyahtzee.c:753
-msgid "_Preferences"
-msgstr "Π_ροτιμήσεις"
-
-#: ../src/gyahtzee.c:754
-msgid "_Scores"
-msgstr "_Βαθμολογίες"
-
-#: ../src/gyahtzee.c:757
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: ../src/gyahtzee.c:758
-msgid "_About"
-msgstr "_Περί"
-
-#: ../src/gyahtzee.c:759
-msgid "_Quit"
-msgstr "Έ_ξοδος"
-
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Αναίρεση της πιο πρόσφατης κίνησής σας"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Άνθρωπος"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Το παιχνίδι που παίζατε θα ολοκληρωθεί με τον αρχικό αριθμό παικτών."
+#| msgid "Changes will take effect for the next game."
+msgid "Preferences will be updated in the next game."
+msgstr "Οι προτιμήσεις θα ενημερωθούν στο επόμενο παιχνίδι."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -492,6 +498,10 @@ msgstr "Επιλέξτε θέση βαθμολογίας."
 #: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "Πέντε όμοια [σύνολο]"
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr ""
+#~ "Το παιχνίδι που παίζατε θα ολοκληρωθεί με τον αρχικό αριθμό παικτών."
 
 #~ msgid "View help for this game"
 #~ msgstr "Προβολή βοήθειας για αυτό το παιχνίδι"
@@ -784,9 +794,6 @@ msgstr "Πέντε όμοια [σύνολο]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Τύπος προώθησης:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Οι αλλαγές θα εφαρμοστούν στο επόμενο παιχνίδι."
 
 #~ msgid "Game"
 #~ msgstr "Παιχνίδι"
