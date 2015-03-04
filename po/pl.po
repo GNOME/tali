@@ -15,14 +15,14 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2014.
-# Aviary.pl <gnomepl@aviary.pl>, 2007-2014.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2007-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-02 22:08+0200\n"
-"PO-Revision-Date: 2014-09-02 22:09+0200\n"
+"POT-Creation-Date: 2015-03-05 00:02+0100\n"
+"PO-Revision-Date: 2015-03-05 00:03+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -34,9 +34,31 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Kości"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Rzucanie kośćmi, aby zdobywać punkty"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Klasyczna gra rodzinna, rodzaj pokera z kośćmi i mniejszymi pieniędzmi. "
+"Należy rzucić kośćmi trzy razy z rzędu, zatrzymując wybrane rzuty, aby mieć "
+"jak najlepsze rozdanie. Można także zagrać w mniej znaną odmianę z "
+"kolorowymi kośćmi."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr ""
+"Można grać z od jednego do pięciu przeciwników na trzech poziomach trudności."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -45,6 +67,30 @@ msgstr "Gra w kości w stylu pokera"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Nowa gra"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Preferencje"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "Wy_niki"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "Pomo_c"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_O grze"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "Za_kończ"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -79,23 +125,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Zwykłe'"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Klasyczna gra rodzinna, rodzaj pokera z kośćmi i mniejszymi pieniędzmi. "
-"Należy rzucić kośćmi trzy razy z rzędu, zatrzymując wybrane rzuty, aby mieć "
-"jak najlepsze rozdanie. Można także zagrać w mniej znaną odmianę z "
-"kolorowymi kośćmi."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
-"Można grać z od jednego do pięciu przeciwników na trzech poziomach trudności."
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "Już wykorzystane! Gdzie wpisać punkty?"
@@ -122,19 +151,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Wynik"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nowa gra"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Data"
 
@@ -189,7 +220,7 @@ msgstr "Kolory"
 msgid "Roll all!"
 msgstr "Rzut wszystkimi!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Rzut!"
 
@@ -197,7 +228,7 @@ msgstr "Rzut!"
 msgid "The game is a draw!"
 msgstr "Remis!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Wyniki gry Kości"
 
@@ -260,16 +291,10 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Kolory w grze i ustawienia inteligencji przeciwników (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Rodzaj pokera z kośćmi i mniejszymi pieniędzmi.\n"
-"\n"
-"Gra Kości jest częścią gier GNOME."
+msgid "A variation on poker with dice and less money."
+msgstr "Rodzaj pokera z kośćmi i mniejszymi pieniędzmi."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -283,44 +308,20 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2014\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2007-2014"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2015\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2007-2015"
 
-#: ../src/gyahtzee.c:752
-msgid "_New Game"
-msgstr "_Nowa gra"
-
-#: ../src/gyahtzee.c:753
-msgid "_Preferences"
-msgstr "_Preferencje"
-
-#: ../src/gyahtzee.c:754
-msgid "_Scores"
-msgstr "Wy_niki"
-
-#: ../src/gyahtzee.c:757
-msgid "_Help"
-msgstr "Pomo_c"
-
-#: ../src/gyahtzee.c:758
-msgid "_About"
-msgstr "_O grze"
-
-#: ../src/gyahtzee.c:759
-msgid "_Quit"
-msgstr "Za_kończ"
-
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Cofa ostatni ruch"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Gracz"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Bieżąca gra zostanie zakończona z oryginalną liczbą graczy."
+msgid "Preferences will be updated in the next game."
+msgstr "Preferencje zostaną zaktualizowane w następnej grze."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -378,27 +379,27 @@ msgstr "Imiona graczy"
 
 #: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
-msgstr "jedynki [suma jedynek]"
+msgstr "Jedynki [suma jedynek]"
 
 #: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
-msgstr "dwójki [suma dwójek]"
+msgstr "Dwójki [suma dwójek]"
 
 #: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
-msgstr "trójki [suma trójek]"
+msgstr "Trójki [suma trójek]"
 
 #: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
-msgstr "czwórki [suma czwórek]"
+msgstr "Czwórki [suma czwórek]"
 
 #: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
-msgstr "piątki [suma piątek]"
+msgstr "Piątki [suma piątek]"
 
 #: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
-msgstr "szóstki [suma szóstek]"
+msgstr "Szóstki [suma szóstek]"
 
 #. End of upper panel
 #: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
