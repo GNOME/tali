@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2014.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-21 22:24+0000\n"
-"PO-Revision-Date: 2014-06-22 17:47+0300\n"
+"POT-Creation-Date: 2015-03-08 11:58+0000\n"
+"PO-Revision-Date: 2015-03-08 20:18+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
 "Language: lt\n"
@@ -27,9 +27,30 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Ridenkite kauliuką ir rinkite taškus"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Pokerio variantas su kauliukais ir mažiau pinigų, tai yra klasikinis šeimos "
+"žaidimas. Meskite kauliuką tris kartus iš eilės, pasilikdamas mėgiamus, "
+"siekiant pasidaryti geriausią įmanomą ranką. Taip pat galite žaisti mažiau "
+"žinomą spalvotų kauliukų žaidimą."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Žaiskite su nuo vieno iki penkių priešininkų trim skirtingais lygiais."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -38,6 +59,30 @@ msgstr "Žaiskite pokerio stiliaus kauliukų žaidimą"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Naujas žaidimas"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Nustatymai"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Taškai"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Žinynas"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Apie"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Išeiti"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -72,22 +117,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "„Įprastas“"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Pokerio variantas su kauliukais ir mažiau pinigų, tai yra klasikinis šeimos "
-"žaidimas. Meskite kauliuką tris kartus iš eilės, pasilikdamas mėgiamus, "
-"siekiant pasidaryti geriausią įmanomą ranką. Taip pat galite žaisti mažiau "
-"žinomą spalvotų kauliukų žaidimą."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Žaiskite su nuo vieno iki penkių priešininkų trim skirtingais lygiais."
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "Jau panaudota! Kur norėtumėt padėti šitai?"
@@ -114,295 +143,100 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Taškai"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Naujas žaidimas"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Data"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Rodyti šio žaidimo žinyną"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Pabaigti dabartinį žaidimą "
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Keisti viso ekrano veikseną"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Gauti kito ėjimo patarimą"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Išjungti viso ekrano veikseną"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Pradėti naują tinklinį keleto žaidėjų žaidimą"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Baigti einamąjį tinklo žaidimą ir grįžti prie tinklo serverio"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Pradėti naują žaidimą"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Sustabdyti žaidimą"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Parodyti tinklo žaidimo žaidėjų sąrašą"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Atšaukti paskutinį ėjimą"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Perkrauti žaidimą"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Tęsti sustabdytą žaidimą"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Rodyti taškus"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Atšaukti paskutinį ėjimą"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Apie šį žaidimą"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Užverti šį langą"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfigūruoti žaidimą"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Palikti šį žaidimą"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Turinys"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Visame ekrane"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Užuomina"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Naujas"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "_Naujas žaidimas"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "A_tstatyti ėjimą"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Atstatyti"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Perkrauti"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Atšaukti ėjimą"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Dalinti"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Palikti viso ekrano veikseną"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Tinklinis _žaidimas"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Pa_likti žaidimą"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Žaidėjų _sąrašas"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pauzė"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Ats_tatyti"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Taškai"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Pabaigti žaidimą"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s yra laisva programinė įranga; galite ją platinti ir/ar keisti ją pagal "
-"GNU General Public License sąlygas, išdėstytas Free Software Foundation; "
-"gali būti naudojama %d ar (pageidaujant) bet kuri vėlesnė licensijos versija."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s programa platinama tikintis, kad ji bus naudinga , bet BE JOKIŲ "
-"GARANTIJŲ; netgi be numanomos garantijos, kad JI TIKS NURODYTAM TIKSLUI. "
-"Daugiau detalių nurodyta GNU General Public License."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Turėjote gauti GNU General Public License (GNU Bendroji Viešoji Licensija) "
-"kopiją su %s; jei ne, parašykite Free Software Foundation, Inc., 51 Franklin "
-"Street, Fifth Floor, Boston, MA  02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Jūs turėjote kartu su šia programa gauti ir GNU Bendrosios Viešosios "
-"licencijos kopija; jei ne – jos ieškokite adresu <http://www.gnu.org/"
-"licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Uždelsti kompiuterio ėjimus"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Rodyti kompiuterio mintis"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Kompiuterinių varžovų kiekis"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "SKAIČIUS"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Žmogiškų varžovų kiekis"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Žaidimas: įprastas ar spalvotas"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "SEKÀ"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Kompiuterinių žaidimų skaičius"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Bandymų skaičius kiekvienam kompiuterio ridenimui "
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Įprastas"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:358
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Spalvos"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Ridenti visus!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Ridenti!"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Žaidimas baigėsi lygiosiomis!"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Tali taškai"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Sveikiname!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Jūsų rezultatas – geriausias!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Jūsų taškai pateko į top 10."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -410,190 +244,172 @@ msgstr[0] "%s laimi žaidimą su %d tašku"
 msgstr[1] "%s laimi žaidimą su %d taškais"
 msgstr[2] "%s laimi žaidimą su %d taškų"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Žaidimas baigtas!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Kompiuteris žaidžia už %s"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Jūsų eilė."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Pasirinkite ridentinus kauliukus arba pasirinkite rezultatų dėžutę."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Ridenti"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Jums leidžiama ridenti tik triskart. Pasirinkite rezultatų dėžutę."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME versija (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Konsolinė versija (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Žaidimo spalvų režimas ir daugialygė programos sąsaja  (2006):"
 
-#: ../src/gyahtzee.c:605
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Pokerio variacija su kauliukais ir mažesnėmis pinigų sumomis.\n"
-"\n"
-"Tali yra GNOME žaidimų dalis."
+#: ../src/gyahtzee.c:614
+#| msgid ""
+#| "A variation on poker with dice and less money\n"
+#| "\n"
+#| "Tali is a part of GNOME Games."
+msgid "A variation on poker with dice and less money."
+msgstr "Pokerio variacija su kauliukais ir mažesnėmis pinigų sumomis."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
-"Paskutinieji vertėjai:\n"
-"Žygimantas Beručka <zygis@gnome.org>,\n"
-"Justina Klingaitė <justina.klingaite@gmail.com>\n"
+"Paskutinis vertėjas:\n"
+"Aurimas Černius <aurisc4@gmail.com>\n"
 "\n"
 "Ankstesnieji vertėjai:\n"
+"Žygimantas Beručka <zygis@gnome.org>,\n"
+"Justina Klingaitė <justina.klingaite@gmail.com>,\n"
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
 
-#: ../src/gyahtzee.c:744
-msgid "_Preferences"
-msgstr "_Nustatymai"
-
-#: ../src/gyahtzee.c:748
-msgid "_Help"
-msgstr "_Žinynas"
-
-#: ../src/gyahtzee.c:749
-msgid "_About"
-msgstr "_Apie"
-
-#: ../src/gyahtzee.c:750
-msgid "_Quit"
-msgstr "_Išeiti"
-
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Atšaukti paskutinį ėjimą"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Žmogus"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Esamas žaidimas bus baigtas su originaliu žaidėjų skaičiumi."
+msgid "Preferences will be updated in the next game."
+msgstr "Nustatymai bus atnaujinti kitame žaidime."
 
 #: ../src/setup.c:264
-#| msgid "_Preferences"
 msgid "Preferences"
 msgstr "Nustatymai"
 
-#: ../src/setup.c:283
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Žaidėjai žmonės"
 
-#: ../src/setup.c:293
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "Ža_idėjų skaičius:"
 
-#: ../src/setup.c:307
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Kompiuteriniai varžovai"
 
 #. --- Button ---
-#: ../src/setup.c:314
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Delsa tarp metimų"
 
-#: ../src/setup.c:324
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "_Varžovų skaičius:"
 
-#: ../src/setup.c:338
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Sunkumas:"
 
-#: ../src/setup.c:341
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Lengvas"
 
-#: ../src/setup.c:342
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Vidutiniškas"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Sunkus"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:354
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Žaidimo tipas"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:366
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Žaidėjų Vardai"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1-tukai [1-tukų suma]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2-tukai [2-tukų suma]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3-tukai [3-tukų suma]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4-tukai [4-tukų suma]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5-tukai [5-tukų suma]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6-tukai [6-tukų suma]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "3 vienodi [suma]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "4 vienodi [suma]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Pilni namai [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Mažoji tiesė [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Didžioji tiesė [40]"
 
@@ -601,7 +417,7 @@ msgstr "Didžioji tiesė [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 vienodi [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Šansas [suma]"
 
@@ -624,27 +440,27 @@ msgid "Bonus if >62"
 msgstr "Premija, jei >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 tos pačios spalvos poros [suma]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Pilni namai [15 + suma]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Pilni tos pačios spalvos namai [20 + suma]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Flašas (visos vienos spalvos) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "4 vienodi [25 + suma]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5 vienodi [50 + suma]"
 
@@ -652,7 +468,152 @@ msgstr "5 vienodi [50 + suma]"
 msgid "Choose a score slot."
 msgstr "Pasirinkite rezultatų dėžutę."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 vienodi [suma]"
 
+#~ msgid "View help for this game"
+#~ msgstr "Rodyti šio žaidimo žinyną"
+
+#~ msgid "End the current game"
+#~ msgstr "Pabaigti dabartinį žaidimą "
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Keisti viso ekrano veikseną"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Gauti kito ėjimo patarimą"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Išjungti viso ekrano veikseną"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Pradėti naują tinklinį keleto žaidėjų žaidimą"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Baigti einamąjį tinklo žaidimą ir grįžti prie tinklo serverio"
+
+#~ msgid "Start a new game"
+#~ msgstr "Pradėti naują žaidimą"
+
+#~ msgid "Pause the game"
+#~ msgstr "Sustabdyti žaidimą"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Parodyti tinklo žaidimo žaidėjų sąrašą"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Atšaukti paskutinį ėjimą"
+
+#~ msgid "Restart the game"
+#~ msgstr "Perkrauti žaidimą"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Tęsti sustabdytą žaidimą"
+
+#~ msgid "View the scores"
+#~ msgstr "Rodyti taškus"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Atšaukti paskutinį ėjimą"
+
+#~ msgid "About this game"
+#~ msgstr "Apie šį žaidimą"
+
+#~ msgid "Close this window"
+#~ msgstr "Užverti šį langą"
+
+#~ msgid "Configure the game"
+#~ msgstr "Konfigūruoti žaidimą"
+
+#~ msgid "Quit this game"
+#~ msgstr "Palikti šį žaidimą"
+
+#~ msgid "_Contents"
+#~ msgstr "_Turinys"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Visame ekrane"
+
+#~ msgid "_Hint"
+#~ msgstr "_Užuomina"
+
+#~ msgid "_New"
+#~ msgstr "_Naujas"
+
+#~ msgid "_Redo Move"
+#~ msgstr "A_tstatyti ėjimą"
+
+#~ msgid "_Reset"
+#~ msgstr "_Atstatyti"
+
+#~ msgid "_Restart"
+#~ msgstr "_Perkrauti"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Atšaukti ėjimą"
+
+#~ msgid "_Deal"
+#~ msgstr "_Dalinti"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Palikti viso ekrano veikseną"
+
+#~ msgid "Network _Game"
+#~ msgstr "Tinklinis _žaidimas"
+
+#~ msgid "L_eave Game"
+#~ msgstr "Pa_likti žaidimą"
+
+#~ msgid "Player _List"
+#~ msgstr "Žaidėjų _sąrašas"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pauzė"
+
+#~ msgid "Res_ume"
+#~ msgstr "Ats_tatyti"
+
+#~ msgid "_End Game"
+#~ msgstr "_Pabaigti žaidimą"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s yra laisva programinė įranga; galite ją platinti ir/ar keisti ją pagal "
+#~ "GNU General Public License sąlygas, išdėstytas Free Software Foundation; "
+#~ "gali būti naudojama %d ar (pageidaujant) bet kuri vėlesnė licensijos "
+#~ "versija."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s programa platinama tikintis, kad ji bus naudinga , bet BE JOKIŲ "
+#~ "GARANTIJŲ; netgi be numanomos garantijos, kad JI TIKS NURODYTAM TIKSLUI. "
+#~ "Daugiau detalių nurodyta GNU General Public License."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Turėjote gauti GNU General Public License (GNU Bendroji Viešoji "
+#~ "Licensija) kopiją su %s; jei ne, parašykite Free Software Foundation, "
+#~ "Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Jūs turėjote kartu su šia programa gauti ir GNU Bendrosios Viešosios "
+#~ "licencijos kopija; jei ne – jos ieškokite adresu <http://www.gnu.org/"
+#~ "licenses/>."
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "Esamas žaidimas bus baigtas su originaliu žaidėjų skaičiumi."
