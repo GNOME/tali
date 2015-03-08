@@ -193,11 +193,11 @@ msgstr "Barevná"
 
 #: ../src/gyahtzee.c:139
 msgid "Roll all!"
-msgstr "Házet všemi!"
+msgstr "Hodit všemi!"
 
 #: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
 msgid "Roll!"
-msgstr "Házet!"
+msgstr "Hodit!"
 
 #: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
