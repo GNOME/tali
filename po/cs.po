@@ -243,7 +243,7 @@ msgstr "%s! – Jste na řadě."
 
 #: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
-msgstr "Vyberte kostku, kterou chcete házet, nebo vyberte místo s body."
+msgstr "Vyberte kostku, kterou chcete házet, nebo vyberte kolonku s body."
 
 #: ../src/gyahtzee.c:476
 msgid "Roll"
@@ -251,7 +251,7 @@ msgstr "Házet"
 
 #: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "Máte povoleny pouze tři hody. Vyberte oddíl s body."
+msgstr "Máte povoleny pouze tři hody. Vyberte kolonku s body."
 
 #: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
@@ -474,7 +474,7 @@ msgstr "Pětice [50 + celkem]"
 
 #: ../src/yahtzee.c:251
 msgid "Choose a score slot."
-msgstr "Zvolte místo s body."
+msgstr "Zvolte kolonku s body."
 
 #: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
