@@ -8,15 +8,15 @@
 # Sami Pesonen <sampeson@iki.fi>, 2002-2005.
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2014.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-22 19:52+0000\n"
-"PO-Revision-Date: 2014-09-12 22:18+0300\n"
+"POT-Creation-Date: 2015-03-09 12:00+0000\n"
+"PO-Revision-Date: 2015-03-09 17:28+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -28,9 +28,29 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Heitä noppaa ja ansaitse pisteitä"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Muunnelma pokerista nopilla ja vähemmällä rahalla. Heitä noppaa kolme kertaa "
+"putkeen, pidä haluamasi nopat, yritä tehdä paras mahdollinen käsi. Voit "
+"pelata myös vähemmän tunnettua muunnelmaa väritetyillä nopilla."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Pelaa yhdestä viiteen vastustajaa vastaan kolmella eri vaikeustasolla."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -39,6 +59,30 @@ msgstr "Voita todennäköisyydet pokeri-tyylisessä noppapelissä"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;jatsi;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Uusi peli"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Pisteet"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "O_hje"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Lopeta"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -69,26 +113,9 @@ msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr "[ 'Pelaaja', 'Irja', 'Juha', 'Eila', 'Nora', 'Jooa' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#| msgctxt "game type"
-#| msgid "Regular"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Tavallinen'"
-
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Muunnelma pokerista nopilla ja vähemmällä rahalla. Heitä noppaa kolme kertaa "
-"putkeen, pidä haluamasi nopat, yritä tehdä paras mahdollinen käsi. Voit "
-"pelata myös vähemmän tunnettua muunnelmaa väritetyillä nopilla."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Pelaa yhdestä viiteen vastustajaa vastaan kolmella eri vaikeustasolla."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -116,19 +143,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Pisteet"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%d min %d s"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Uusi peli"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Päiväys"
 
@@ -183,7 +212,7 @@ msgstr "Värit"
 msgid "Roll all!"
 msgstr "Heitä kaikki!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Heitä!"
 
@@ -191,7 +220,7 @@ msgstr "Heitä!"
 msgid "The game is a draw!"
 msgstr "Peli on tasapeli!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Pisteet"
 
@@ -225,7 +254,6 @@ msgstr "Tietokone pelaa pelaajaa %s"
 
 #: ../src/gyahtzee.c:255
 #, c-format
-#| msgid "%s! -- You're up."
 msgid "%s! – You’re up."
 msgstr "%s! – Sinun vuorosi."
 
@@ -255,22 +283,16 @@ msgstr "Väripeli ja monitasoinen tekoäly (2006):"
 
 #: ../src/gyahtzee.c:614
 #| msgid ""
-#| "A variation on poker with dice and less money.\n"
+#| "A variation on poker with dice and less money\n"
 #| "\n"
 #| "Tali is a part of GNOME Games."
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Muunnelma pokerista nopilla ja vähemmällä rahalla\n"
-"\n"
-"Tali on osa Gnomen pelejä."
+msgid "A variation on poker with dice and less money."
+msgstr "Muunnelma pokerista nopilla ja vähemmällä rahalla."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2014\n"
+"Jiri Grönroos, 2014-2015\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -288,41 +310,18 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/gyahtzee.c:752
-msgid "_New Game"
-msgstr "_Uusi peli"
-
-#: ../src/gyahtzee.c:753
-msgid "_Preferences"
-msgstr "_Asetukset"
-
-#: ../src/gyahtzee.c:754
-msgid "_Scores"
-msgstr "_Pisteet"
-
-#: ../src/gyahtzee.c:757
-msgid "_Help"
-msgstr "O_hje"
-
-#: ../src/gyahtzee.c:758
-msgid "_About"
-msgstr "_Tietoja"
-
-#: ../src/gyahtzee.c:759
-msgid "_Quit"
-msgstr "_Lopeta"
-
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Kumoa viimeisin siirtosi"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Ihminen"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Tämänhetkinen peli pelataan loppuun alkuperäisellä määrällä pelaajia."
+#| msgid "Changes will take effect for the next game."
+msgid "Preferences will be updated in the next game."
+msgstr "Muutokset tulevat voimaan seuraavassa pelissä."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -482,6 +481,10 @@ msgstr "Valitse pistelaatikko."
 msgid "5 of a Kind [total]"
 msgstr "Viisi samaa [yhteensä]"
 
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr ""
+#~ "Tämänhetkinen peli pelataan loppuun alkuperäisellä määrällä pelaajia."
+
 #~ msgid "Chess"
 #~ msgstr "Shakki"
 
@@ -610,9 +613,6 @@ msgstr "Viisi samaa [yhteensä]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Korotuksen tyyppi:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Muutokset tulevat voimaan seuraavassa pelissä."
 
 #~ msgid "Game"
 #~ msgstr "Peli"
