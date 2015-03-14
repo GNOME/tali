@@ -1,0 +1,457 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-27 00:01+0000\n"
+"PO-Revision-Date: 2015-02-27 09:52+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-17 06:21+0000\n"
+
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
+msgid "Tali"
+msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Zavrti kocku i ostvari poene"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Tip pokera sa kockicama i manje novca, ova igra je klasićna porodična. "
+"Bacate kockice tri puta zaredom, zardžavajući onu koja vam odgovara, u cilju "
+"da napravite najbolji mogući potez. Također možete igrati i manje poznatu "
+"varijantu sa obojenim kockicama."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Igrajte sa jednim ili pet protivnika sa tri težine."
+
+#: ../data/tali.desktop.in.h:2
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Iskušaj se u igri sa kockama nalik na poker"
+
+#: ../data/tali.desktop.in.h:3
+msgid "yahtzee;"
+msgstr "jamb;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Nova igra"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Postavke"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Rezultati"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_O programu"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Izlaz"
+
+#: ../data/org.gnome.tali.gschema.xml.h:1
+msgid "Delay between rolls"
+msgstr "Pauza između bacanja"
+
+#: ../data/org.gnome.tali.gschema.xml.h:2
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Izaberite da li se ili ne ubaci pauza između bacanja kockica računara kako "
+"bi igrač mogao da prati šta računar radi."
+
+#: ../data/org.gnome.tali.gschema.xml.h:3
+msgid "Display the computer's thoughts"
+msgstr "Prikaži računarove misli"
+
+#: ../data/org.gnome.tali.gschema.xml.h:4
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Ukoliko je postavljeno, prikaz kako radi AI će biti ispisan na standardni "
+"izlaz."
+
+#: ../data/org.gnome.tali.gschema.xml.h:5
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgstr "[ 'Čovjek', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+
+#: ../data/org.gnome.tali.gschema.xml.h:6
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Normalan'"
+
+#: ../src/clist.c:158
+msgid "Already used! Where do you want to put that?"
+msgstr "Već iskorišćeno! Gdje želite da postavite?"
+
+#: ../src/clist.c:414
+#, c-format
+msgid "Score: %d"
+msgstr "Rezultat: %d"
+
+#: ../src/clist.c:416
+#, c-format
+msgid "Field used"
+msgstr "Iskorišteno polje"
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Vrijeme"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "Rezultat"
+
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:386
+msgid "New Game"
+msgstr "Nova igra"
+
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
+msgid "Date"
+msgstr "Datum"
+
+#: ../src/gyahtzee.c:100
+msgid "Delay computer moves"
+msgstr "Pravi pauze između poteza računara"
+
+#: ../src/gyahtzee.c:102
+msgid "Display computer thoughts"
+msgstr "Prikaži računarove misli"
+
+#: ../src/gyahtzee.c:104
+msgid "Number of computer opponents"
+msgstr "Broj kompjuterskih protivnika"
+
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
+msgid "NUMBER"
+msgstr "BROJ"
+
+#: ../src/gyahtzee.c:106
+msgid "Number of human opponents"
+msgstr "Broj ljudskih protivnika"
+
+#: ../src/gyahtzee.c:108
+msgid "Game choice: Regular or Colors"
+msgstr "Izbor igre: Obično ili u boji"
+
+#: ../src/gyahtzee.c:108
+msgid "STRING"
+msgstr "STRING"
+
+#: ../src/gyahtzee.c:110
+msgid "Number of computer-only games to play"
+msgstr "Broj samo računarskih protivnika da igraju"
+
+#: ../src/gyahtzee.c:112
+msgid "Number of trials for each roll for the computer"
+msgstr "Broj proba za svako bacanje računara"
+
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
+msgctxt "game type"
+msgid "Regular"
+msgstr "Obično"
+
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
+msgctxt "game type"
+msgid "Colors"
+msgstr "Boje"
+
+#: ../src/gyahtzee.c:139
+msgid "Roll all!"
+msgstr "Bacaj sve!"
+
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+msgid "Roll!"
+msgstr "Bacaj!"
+
+#: ../src/gyahtzee.c:176
+msgid "The game is a draw!"
+msgstr "Igra je neriješena!"
+
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+msgid "Tali Scores"
+msgstr "Tali rezultati"
+
+#: ../src/gyahtzee.c:191
+msgid "Congratulations!"
+msgstr "Čestitamo!"
+
+#: ../src/gyahtzee.c:192
+msgid "Your score is the best!"
+msgstr "Vaš rezultat je najbolji!"
+
+#: ../src/gyahtzee.c:193
+msgid "Your score has made the top ten."
+msgstr "Vaš rezultat je ušao u najboljih 10."
+
+#: ../src/gyahtzee.c:205
+#, c-format
+msgid "%s wins the game with %d point"
+msgid_plural "%s wins the game with %d points"
+msgstr[0] "%s je pobijedio sa %d poenom"
+msgstr[1] "%s je pobijedio sa %d poena"
+msgstr[2] "%s je pobijedio sa %d poena"
+
+#: ../src/gyahtzee.c:209
+msgid "Game over!"
+msgstr "Kraj igre!"
+
+#: ../src/gyahtzee.c:253
+#, c-format
+msgid "Computer playing for %s"
+msgstr "Računar igra za %s"
+
+#: ../src/gyahtzee.c:255
+#, c-format
+msgid "%s! – You’re up."
+msgstr "%s! - Na vama je"
+
+#: ../src/gyahtzee.c:448
+msgid "Select dice to roll or choose a score slot."
+msgstr "Izaberite kockice koje hoćete bacati ili izaberite polje za rezultate."
+
+#: ../src/gyahtzee.c:476
+msgid "Roll"
+msgstr "Bacaj"
+
+#: ../src/gyahtzee.c:534
+msgid "You are only allowed three rolls. Choose a score slot."
+msgstr "Dozvoljena su vam samo tri bacanja. Izaberite polje za rezultate."
+
+#: ../src/gyahtzee.c:591
+msgid "GNOME version (1998):"
+msgstr "GNOME verzija (1998):"
+
+#: ../src/gyahtzee.c:594
+msgid "Console version (1992):"
+msgstr "Verzija konzole (1992):"
+
+#: ../src/gyahtzee.c:597
+msgid "Colors game and multi-level AI (2006):"
+msgstr "Igra u boji i više nivoa Al (2006):"
+
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "Varijanta pokera s kockom i manje novca"
+
+#: ../src/gyahtzee.c:618
+msgid "translator-credits"
+msgstr ""
+"  Mesud Klisura https://launchpad.net/~mklisura1\n"
+"  Samir Ribić https://launchpad.net/~megaribi"
+
+#: ../src/gyahtzee.c:763
+msgid "Undo your most recent move"
+msgstr "Poništi posljednji potez"
+
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+msgid "Human"
+msgstr "Čovjek"
+
+#: ../src/setup.c:122
+msgid "Preferences will be updated in the next game."
+msgstr "Preferencije će biti ažurirane u sljedećoj igri"
+
+#: ../src/setup.c:264
+msgid "Preferences"
+msgstr "Postavke"
+
+#: ../src/setup.c:282
+msgid "Human Players"
+msgstr "Ljudski igrači"
+
+#: ../src/setup.c:292
+msgid "_Number of players:"
+msgstr "_Broj igrača:"
+
+#: ../src/setup.c:306
+msgid "Computer Opponents"
+msgstr "Kompjuterski protivnici"
+
+#. --- Button ---
+#: ../src/setup.c:313
+msgid "_Delay between rolls"
+msgstr "_Pauza između bacanja"
+
+#: ../src/setup.c:323
+msgid "N_umber of opponents:"
+msgstr "B_roj protivnika:"
+
+#: ../src/setup.c:337
+msgid "_Difficulty:"
+msgstr "_Težina:"
+
+#: ../src/setup.c:340
+msgctxt "difficulty"
+msgid "Easy"
+msgstr "Lagano"
+
+#: ../src/setup.c:341
+msgctxt "difficulty"
+msgid "Medium"
+msgstr "Srednje"
+
+#: ../src/setup.c:342
+msgctxt "difficulty"
+msgid "Hard"
+msgstr "Teško"
+
+#. --- Combo (yahtzee or kismet style ----
+#: ../src/setup.c:353
+msgid "Game Type"
+msgstr "Tip igre"
+
+#. --- PLAYER NAMES FRAME ----
+#: ../src/setup.c:365
+msgid "Player Names"
+msgstr "Imena igrača"
+
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+msgid "1s [total of 1s]"
+msgstr "1-ce [ukupno 1-ca]"
+
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+msgid "2s [total of 2s]"
+msgstr "2-ke [ukupno 2-ki]"
+
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+msgid "3s [total of 3s]"
+msgstr "3-ce [ukupno 3-ca]"
+
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+msgid "4s [total of 4s]"
+msgstr "4-ke [ukupno 4-ki]"
+
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+msgid "5s [total of 5s]"
+msgstr "5-ce [ukupno 5-ca]"
+
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+msgid "6s [total of 6s]"
+msgstr "6-ce [ukupno 6-ca]"
+
+#. End of upper panel
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+msgid "3 of a Kind [total]"
+msgstr "Tri iste[ukupno]"
+
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+msgid "4 of a Kind [total]"
+msgstr "Poker(Četiri iste) [ukupno]"
+
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+msgid "Full House [25]"
+msgstr "Ful [25]"
+
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+msgid "Small Straight [30]"
+msgstr "Mala kenta [30]"
+
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+msgid "Large Straight [40]"
+msgstr "Velika kenta [40]"
+
+#: ../src/yahtzee.c:97
+msgid "5 of a Kind [50]"
+msgstr "Jamb [50]"
+
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+msgid "Chance [total]"
+msgstr "Šansa [ukupno]"
+
+#. End of lower panel
+#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+msgid "Lower Total"
+msgstr "Donji zbir"
+
+#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+msgid "Grand Total"
+msgstr "Ukupno"
+
+#. Need to squish between upper and lower pannel
+#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+msgid "Upper total"
+msgstr "Gornji zbir"
+
+#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+msgid "Bonus if >62"
+msgstr "Bonus ukoliko je >62"
+
+#. End of upper panel
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+msgid "2 pair Same Color [total]"
+msgstr "2 para iste boje [ukupno]"
+
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+msgid "Full House [15 + total]"
+msgstr "Ful [15+ukupno]"
+
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+msgid "Full House Same Color [20 + total]"
+msgstr "Ful sa istim bojama [20 + ukupno]"
+
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+msgid "Flush (all same color) [35]"
+msgstr "Ful(sve iste boje) [35]"
+
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+msgid "4 of a Kind [25 + total]"
+msgstr "Poker(Četiri iste) [25 + ukupno]"
+
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+msgid "5 of a Kind [50 + total]"
+msgstr "5 istih [50 + ukupno]"
+
+#: ../src/yahtzee.c:251
+msgid "Choose a score slot."
+msgstr "Izaberite mjesto za rezultate."
+
+#: ../src/yahtzee.c:525
+msgid "5 of a Kind [total]"
+msgstr "5 istih [ukupno]"
