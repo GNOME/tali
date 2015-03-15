@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2014 Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
@@ -7,35 +7,19 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2014.
-#
-# RETMIG: en eller anden med forstand på kabaler skal have oversat
-# navnene på spillene. Der er en kommentar til hver af dem der
-# foreløbigt vist nok kan gå.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015.
 #
 # Konventioner:
 #
-#   AisleRiot -> Kabale
-#   cave -> grotte
-#   hint -> fif
-#   GNOME Robots -> Robotter
-#   Same Gnome (parodi på Same Game i KDE) -> Samspil
-#   Gnibbles, Nibbles -> Orme
-#   score slot -> pointfelt
-#   tracker (gnome-sudoku) -> spor
 #   gtali/tali -> Yatzy
 #
-# Generelt er de fleste spilnavne oversat nådesløst til dansk.
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
-#
-# Der er en række strenge hvor der står f.eks. "glines|Medium". Så vidt jeg ved kommer der problemer når man oversætter teksten til venstre for |, så lad dette blive stående.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-19 22:55+0100\n"
-"PO-Revision-Date: 2014-03-18 22:59+0100\n"
+"POT-Creation-Date: 2015-03-15 16:22+0100\n"
+"PO-Revision-Date: 2015-03-15 15:56+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -44,9 +28,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Yatzy"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Kast terninger og vind points"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"En variant af poker med terninger og færre penge. Dette spil er en "
+"familieklassiker. Kast terningerne tre gange i træk, idet du holder dem "
+"tilbage du vil beholde, for at få den bedst mulige hånd. Du kan også spille "
+"en mindre kendt variant med farvede terninger."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Spil med fra en til fem modstandere på tre sværhedsgrader."
 
 # Nogen må lige finde på en god oversættelse hvis vi skal være "smarte"
 #: ../data/tali.desktop.in.h:2
@@ -56,6 +61,30 @@ msgstr "Spil et pokerlignende terningspil"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Nyt spil"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Indstillinger"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Resultater"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Om"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Afslut"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -92,22 +121,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Almindelig'"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"En variant af poker med terninger og færre penge. Dette spil er en "
-"familieklassiker. Kast terningerne tre gange i træk, idet du holder dem "
-"tilbage du vil beholde, for at få den bedst mulige hånd. Du kan også spille "
-"en mindre kendt variant med farvede terninger."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Spil med fra en til fem modstandere på tre sværhedsgrader."
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "Allerede brugt! Hvor ønsker du at lægge det?"
@@ -135,350 +148,149 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Resultat"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Nyt spil"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Dato"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Vis hjælp til dette spil"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Afslut det aktuelle spil"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Slå fuldskærmstilstand til/fra"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Få et fif til dit næste træk"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Afslut fuldskærm"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Start et nyt netværksspil med flere spillere"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Afslut det aktuelle netværksspil og vend tilbage til netværksserveren"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Start et nyt spil"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Sæt spillet på pause"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Vis en liste af spillere i netværkssspillet"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Omgør det fortrudte træk"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Genstart spillet"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Genoptag det aktuelle spil"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Vis resultaterne"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Fortryd sidste træk"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Om dette spil"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Luk dette vindue"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfigurér spillet"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Afslut dette spil"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Indhold"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Fuldskærm"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "F_if"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nyt"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "_Nyt spil"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Omgør træk"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Nulstil"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Genstart"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Fortryd træk"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Giv kort"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Afslut fuldskærm"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "N_etværksspil"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Forlad spillet"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Spiller_liste"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pause"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Start igen"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "_Resultater"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "A_fslut spil"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s er fri software; det kan distribueres og/eller modificeres som betinget "
-"af GNU General Public License, udarbejdet af Free Software Foundation; enten "
-"version %d af licensen eller, efter eget valg, enhver nyere version."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN GARANTI; "
-"selv uden de underforståede garantier SALGBARHED eller EGNETHED TIL ET "
-"BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
-"detaljer."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
-"dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 51 "
-"Franklin Street, Femte sal, Boston, MA  02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
-"dette ikke tilfældet, så se <http://www.gnu.org/licenses/>."
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Forsink computertræk"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Læs computerens tanker"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Antal computermodstandere"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "ANTAL"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Antal menneskemodstandere"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Spilvalg: Regulær eller farver"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "STRENG"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Antal computerstyrede spil som skal spilles"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Antallet af terningeslag for hver tur for computeren"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "Regulær"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "Farver"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Kast alle!"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Kast!"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Spillet blev uafgjort!"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Resultater for Yatzy"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Tillykke!"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Du har opnået det bedste resultat!"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Dit resultat kom på top ti."
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s vinder spillet med %d point"
 msgstr[1] "%s vinder spillet med %d point"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Spillet er slut!"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Computer spiller for %s"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – det er din tur."
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Vælg terninger som skal kastes eller vælg et pointfelt."
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Kast"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Du har kun tre kast! Vælg et pointfelt."
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME-udgave (1998):"
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Kommandolinje-udgave (1992):"
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Spillet Farver og flerniveau-AI (2006):"
 
-#: ../src/gyahtzee.c:605
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"En variant af poker med terninger og færre penge\n"
-"\n"
-"Tali er en del af GNOME Games."
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "En variant af poker med terninger og færre penge."
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -491,130 +303,114 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/gyahtzee.c:744
-msgid "_Preferences"
-msgstr "_Indstillinger"
-
-#: ../src/gyahtzee.c:748
-msgid "_Help"
-msgstr "_Hjælp"
-
-#: ../src/gyahtzee.c:749
-msgid "_About"
-msgstr "_Om"
-
-#: ../src/gyahtzee.c:750
-msgid "_Quit"
-msgstr "_Afslut"
-
-#: ../src/gyahtzee.c:769
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Fortryd dit seneste træk"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Menneske"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Nuværende spil vil fortsætte med det originale antal spillere."
+msgid "Preferences will be updated in the next game."
+msgstr "Indstillingerne opdateres til næste spil."
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "Indstillinger for Yatzy"
+msgid "Preferences"
+msgstr "Indstillinger"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "Menneskespillere"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "_Antal spillere:"
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "Computermodstandere"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "_Pause mellem kast"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "_Antal modstandere:"
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "_Sværhedsgrad:"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Let"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Mellem"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Svær"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "Spiltype"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "Spillernavne"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1'ere [alle 1'ere]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2'ere [alle 2'ere]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3'ere [alle 3'ere]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4'ere [alle 4'ere]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5'ere [alle 5'ere]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6'ere [alle 6'ere]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "3 af en slags [sum]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "4 af en slags [sum]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "Fuldt hus [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "Lille [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "Stor [40]"
 
@@ -622,7 +418,7 @@ msgstr "Stor [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 af en slags [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "Chance [sum]"
 
@@ -645,27 +441,27 @@ msgid "Bonus if >62"
 msgstr "Bonus hvis >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2 ensfarvede par [sum]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "Fuldt hus [15 + sum]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "Fuldt hus, samme farve [20 + sum]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "Flush (alle i samme farve) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "4 af en slags [25 + sum]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5 af en slags [50 + sum]"
 
@@ -673,9 +469,159 @@ msgstr "5 af en slags [50 + sum]"
 msgid "Choose a score slot."
 msgstr "Vælg et pointfelt."
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5 af en slags [sum]"
+
+#~ msgid "View help for this game"
+#~ msgstr "Vis hjælp til dette spil"
+
+#~ msgid "End the current game"
+#~ msgstr "Afslut det aktuelle spil"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Slå fuldskærmstilstand til/fra"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Få et fif til dit næste træk"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Afslut fuldskærm"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Start et nyt netværksspil med flere spillere"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr ""
+#~ "Afslut det aktuelle netværksspil og vend tilbage til netværksserveren"
+
+#~ msgid "Start a new game"
+#~ msgstr "Start et nyt spil"
+
+#~ msgid "Pause the game"
+#~ msgstr "Sæt spillet på pause"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Vis en liste af spillere i netværkssspillet"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Omgør det fortrudte træk"
+
+#~ msgid "Restart the game"
+#~ msgstr "Genstart spillet"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Genoptag det aktuelle spil"
+
+#~ msgid "View the scores"
+#~ msgstr "Vis resultaterne"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Fortryd sidste træk"
+
+#~ msgid "About this game"
+#~ msgstr "Om dette spil"
+
+#~ msgid "Close this window"
+#~ msgstr "Luk dette vindue"
+
+#~ msgid "Configure the game"
+#~ msgstr "Konfigurér spillet"
+
+#~ msgid "Quit this game"
+#~ msgstr "Afslut dette spil"
+
+#~ msgid "_Contents"
+#~ msgstr "_Indhold"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Fuldskærm"
+
+#~ msgid "_Hint"
+#~ msgstr "F_if"
+
+#~ msgid "_New"
+#~ msgstr "_Nyt"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Omgør træk"
+
+#~ msgid "_Reset"
+#~ msgstr "_Nulstil"
+
+#~ msgid "_Restart"
+#~ msgstr "_Genstart"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Fortryd træk"
+
+#~ msgid "_Deal"
+#~ msgstr "_Giv kort"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Afslut fuldskærm"
+
+#~ msgid "Network _Game"
+#~ msgstr "N_etværksspil"
+
+#~ msgid "L_eave Game"
+#~ msgstr "_Forlad spillet"
+
+#~ msgid "Player _List"
+#~ msgstr "Spiller_liste"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pause"
+
+#~ msgid "Res_ume"
+#~ msgstr "_Start igen"
+
+#~ msgid "_End Game"
+#~ msgstr "A_fslut spil"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s er fri software; det kan distribueres og/eller modificeres som "
+#~ "betinget af GNU General Public License, udarbejdet af Free Software "
+#~ "Foundation; enten version %d af licensen eller, efter eget valg, enhver "
+#~ "nyere version."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
+#~ "GARANTI; selv uden de underforståede garantier SALGBARHED eller EGNETHED "
+#~ "TIL ET BESTEMT FORMÅL, idet der henvises til GNU General Public License "
+#~ "for detaljer."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; "
+#~ "er dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 51 "
+#~ "Franklin Street, Femte sal, Boston, MA  02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; "
+#~ "er dette ikke tilfældet, så se <http://www.gnu.org/licenses/>."
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "Nuværende spil vil fortsætte med det originale antal spillere."
+
+#~ msgid "Tali Preferences"
+#~ msgstr "Indstillinger for Yatzy"
 
 #~ msgid "Chess"
 #~ msgstr "Skak"
@@ -794,9 +740,6 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Sværhedsgrad for modstanderens skakmaskine"
 
-#~ msgid "Preferences"
-#~ msgstr "Indstillinger"
-
 #~ msgid "Play as:"
 #~ msgstr "Spil som:"
 
@@ -812,9 +755,6 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "Forfremmelsestype:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Ændringer vil træde i kraft for næste spil."
 
 #~ msgid "Game"
 #~ msgstr "Spil"
@@ -7604,8 +7544,8 @@ msgstr "5 af en slags [sum]"
 #~ "%(move)s Black %(piece)s at %1$s takes the white %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s Sort %(piece)s på %1$s slår den hvide %(victim_piece)s på %(end)"
-#~ "s (%(result)s)"
+#~ "%(move)s Sort %(piece)s på %1$s slår den hvide %(victim_piece)s på "
+#~ "%(end)s (%(result)s)"
 
 #~ msgid "%(move)s White %(piece)s moves from %1$s to %2$s (%(result)s)"
 #~ msgstr "%(move)s Hvid %(piece)s flytter fra %1$s til %2$s (%(result)s)"
