@@ -1,0 +1,484 @@
+# Greek translation for tali.
+# Copyright (C) 2015 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
+# Tom Tryfonidis <tomtryf@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tali master\n"
+"POT-Creation-Date: 2015-03-15 15:20+0000\n"
+"PO-Revision-Date: 2015-03-15 20:23+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Language-Team: Greek <team@lists.gnome.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.4\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα GNOME <team@gnome.gr>, 2009-2015\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2014\n"
+" Τζένη Πετούμενου <epetoumenou@gmail.com>, 2009\n"
+" Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2015"
+
+#. (itstool) path: credit/name
+#: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
+#: C/scores.page:11 C/settings.page:11 C/start-game.page:15
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/game-settings.page:14 C/keyboard-shortcuts.page:13 C/scores.page:13
+#: C/settings.page:13 C/start-game.page:17
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: info/desc
+#: C/game-settings.page:19
+msgid "Switch to another game version."
+msgstr "Αλλάξτε σε άλλη έκδοση του παιχνιδιού"
+
+#. (itstool) path: page/title
+#: C/game-settings.page:23
+msgid "Game settings"
+msgstr "Ρυθμίσεις παιχνιδιού"
+
+#. (itstool) path: page/p
+#: C/game-settings.page:25
+msgid ""
+"The <gui>Regular</gui> version is the default game, to switch over to "
+"another game:"
+msgstr ""
+"Η <gui>Κλασική</gui> έκδοση είναι το προεπιλεγμένο παιχνίδι, για να αλλάξετε "
+"σε άλλο παιχνίδι:"
+
+#. (itstool) path: item/p
+#: C/game-settings.page:30 C/settings.page:29
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Preferences</gui></guiseq>."
+msgstr ""
+"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem"
+"\">Προτιμήσεις</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:34
+msgid "Select the desired version of the game from <gui>Game Type</gui>."
+msgstr ""
+"Επιλέξτε την επιθυμητή έκδοση του παιχνιδιού από τον <gui>Τύπο παιχνιδιού</"
+"gui>."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:37
+msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
+msgstr ""
+"Πλέον, μπορείτε να <link xref=\"start-game\">ξεκινήσετε ένα νέο παιχνίδι</"
+"link>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Tali"
+msgstr "Τάλι"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Tali"
+msgstr "Τάλι"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Tali help."
+msgstr "Βοήθεια Τάλι."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Tali"
+msgstr "<_:media-1/> Τάλι"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Tali</app> is similar to poker with dice. You roll five dice three "
+"times and try to create the best hand."
+msgstr ""
+"Το <app>Τάλι</app> είναι παρόμοιο με το πόκερ με ζάρια. Ρίχνετε πέντε ζάρια "
+"τρεις φορές και προσπαθείτε να δημιουργήσετε τον βέλτιστο συνδυασμό."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Playing Tali"
+msgstr "Παίζοντας Τάλι"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#. (itstool) path: section/title
+#: C/index.page:39
+msgid "Useful tips"
+msgstr "Χρήσιμες συμβουλές"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:18
+msgid "Play the game through keyboard."
+msgstr "Παίξτε το παιχνίδι χρησιμοποιώντας το πληκτρολόγιο."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:22
+msgid "Keyboard shortcuts"
+msgstr "Συντομεύσεις πληκτρολογίου"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:24
+msgid "You can play <app>tali</app> using the keyboard keys as well."
+msgstr ""
+"Μπορείτε να παίξετε το <app>Τάλι</app> χρησιμοποιώντας το πληκτρολόγιο."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:28
+msgid "Choose the dice to roll."
+msgstr "Επιλέξτε το ζάρι που θα ρίξετε."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:29
+msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
+msgstr ""
+"Χρησιμοποιήστε τα πλήκτρα από το 1 έως το 5, το πλήκτρο 1 αντιπροσωπεύει το "
+"πρώτο ζάρι και πάει λέγοντας."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:33
+msgid "Switch to the <gui>Roll!</gui> button."
+msgstr "Αλλάξτε στο κουμπί <gui>Ζαριά!</gui>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:34
+msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
+msgstr ""
+"Χρησιμοποιήστε το <key>Tab</key>, πατήστε <key>Enter</key> για να ρίξετε."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "Switch to the score slots."
+msgstr "Μεταβείτε στις γραμμές βαθμολογίας."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:38
+msgid "Use <key>Tab</key>."
+msgstr "Χρησιμοποιήστε το <key>Tab</key>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "Navigate among the score slots."
+msgstr "Περιηγηθείτε μεταξύ των γραμμών βαθμολογίας."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:42
+msgid "Use arrow keys."
+msgstr "Χρησιμοποιήστε τα βέλη."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:45
+msgid "Select the score slot."
+msgstr "Επιλέξτε γραμμή βαθμολογίας."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:46
+msgid "Press <key>Enter</key> or <key>spacebar</key>."
+msgstr "Πατήστε <key>Enter</key> ή το <key>πλήκτρο διαστήματος</key>."
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Άδεια Creative Commons Attribution-ShareAlike 3.0 Unported"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Αυτό το έργο έχει αδειοδοτηθεί υπό την <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/scores.page:18
+msgid "Check out your scores and know more about the score slots."
+msgstr ""
+"Ελέγξτε τις βαθμολογίες σας και μάθετε περισσότερα σχετικά με τις γραμμές "
+"βαθμολογίας."
+
+#. (itstool) path: page/title
+#: C/scores.page:22
+msgid "Scores"
+msgstr "Βαθμολογίες"
+
+#. (itstool) path: page/p
+#: C/scores.page:24
+msgid "You can check out your scores of the games played so far:"
+msgstr ""
+"Μπορείτε να ελέγξετε τις βαθμολογίες των παιχνιδιών σας που έχετε παίξει:"
+
+#. (itstool) path: item/p
+#: C/scores.page:28
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Scores</gui></guiseq>."
+msgstr ""
+"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem"
+"\">Βαθμολογίες</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/scores.page:32
+msgid ""
+"The <gui>Regular</gui> version is displayed by default, to view scores "
+"obtained in <gui>Colors</gui>, select it from the drop down menu."
+msgstr ""
+"Η προεπιλεγμένη προβολή είναι η <gui>Κανονική</gui> έκδοση, για να δείτε τις "
+"βαθμολογίες που περιέχονται στα <gui>Χρώματα</gui>, επιλέξτε το από το "
+"πτυσσόμενου μενού."
+
+#. (itstool) path: section/title
+#: C/scores.page:39
+msgid "Score slots"
+msgstr "Γραμμές βαθμολογίας"
+
+#. (itstool) path: section/p
+#: C/scores.page:41
+msgid "You can choose a score slot from the seven available score slots:"
+msgstr "Μπορείτε να επιλέξετε μια γραμμή βαθμολογίας από τις επτά διαθέσιμες:"
+
+#. (itstool) path: item/title
+#: C/scores.page:45
+msgid "<gui>3 of a Kind</gui>"
+msgstr "<gui>Τρία όμοια</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:46
+msgid ""
+"Three of the dice have the same number. The score is the total of all the "
+"dice. For example: 3, 4, 4, 4, 6."
+msgstr ""
+"Τρία ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο όλων "
+"των ζαριών. Για παράδειγμα: 3, 4, 4, 4, 6."
+
+#. (itstool) path: item/title
+#: C/scores.page:50
+msgid "<gui>4 of a Kind</gui>"
+msgstr "<gui>Καρέ</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:51
+msgid ""
+"Four of the dice have the same number. The score is the total of all the "
+"dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
+"the total of all the dice."
+msgstr ""
+"Τέσσερα ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο "
+"όλων των ζαριών. Για παράδειγμα: 2, 5, 5, 5, 5.  Όταν παίζετε Χρώματα, η "
+"βαθμολογία είναι 25 συν το σύνολο όλων των ζαριών."
+
+#. (itstool) path: item/title
+#: C/scores.page:56
+msgid "<gui>Full House</gui>"
+msgstr "<gui>Φουλ</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:57
+msgid ""
+"Five dice consisting of two groups: One group of three with the same numbers "
+"and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
+"In the Colors game, the score is 15 plus the total of all the dice."
+msgstr ""
+"Πέντε ζάρια σε δύο ομάδες: Μία ομάδα τριών ζαριών με τον ίδιο αριθμό και μία "
+"ομάδα δύο ζαριών με τον ίδιο αριθμό. Για παράδειγμα: 1, 1, 1, 4, 4. Όταν "
+"παίζετε Χρώματα, η βαθμολογία είναι 15 συν το σύνολο όλων των ζαριών."
+
+#. (itstool) path: item/title
+#: C/scores.page:63
+msgid "<gui>Small Straight</gui>"
+msgstr "<gui>Μικρή κέντα</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:64
+msgid ""
+"Four dice with consecutive numbers. The fifth die can be any number. For "
+"example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
+"score is 30 points."
+msgstr ""
+"Τέσσερα ζάρια με διαδοχικούς αριθμούς. Το πέμπτο ζάρι μπορεί να είναι "
+"οτιδήποτε. Για παράδειγμα: 2, 3, 4, 5, 5. Αυτή η κατηγορία χρησιμοποιείται "
+"μόνο στο κλασικό παιχνίδι. Βαθμολογείται με 30 βαθμούς."
+
+#. (itstool) path: item/title
+#: C/scores.page:69
+msgid "<gui>Large Straight</gui>"
+msgstr "<gui>Μεγάλη κέντα</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:70
+msgid ""
+"Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
+"40 points."
+msgstr ""
+"Πέντε ζάρια με διαδοχικούς αριθμούς. Για παράδειγμα 2, 3, 4, 5, 6. Αυτός ο "
+"συνδυασμός δίνει 40 βαθμούς."
+
+#. (itstool) path: item/title
+#: C/scores.page:74
+msgid "<gui>5 of a Kind</gui>"
+msgstr "<gui>Πέντε όμοια</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:75
+msgid ""
+"Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
+"score is 50 plus the total of all the dice."
+msgstr ""
+"Πέντε όμοια ζάρια. Για παράδειγμα: 3, 3, 3, 3, 3. Στα Χρώματα, η βαθμολογία "
+"είναι 50 συν το σύνολο όλων των ζαριών."
+
+#. (itstool) path: info/desc
+#: C/settings.page:18
+msgid "Set players preferences."
+msgstr "Ορίστε τις ρυθμίσεις των παιχτών"
+
+#. (itstool) path: page/title
+#: C/settings.page:22
+msgid "Players settings"
+msgstr "Ρυθμίσεις παικτών"
+
+#. (itstool) path: page/p
+#: C/settings.page:24
+msgid ""
+"You can change the number of <gui>Human Players</gui> and <gui>Computer "
+"Opponents</gui>."
+msgstr ""
+"Μπορείτε να αλλάξετε τον αριθμό των <gui>Ανθρώπινων παικτών</gui> και των "
+"<gui>Αντιπάλων υπολογιστή</gui>."
+
+#. (itstool) path: item/p
+#: C/settings.page:33
+msgid ""
+"You can increase or decrease the number of <gui>Human Players</gui> from "
+"<gui>Number of players</gui>. The maximum number of players can be six. You "
+"can change their names as well from <gui>Player Names</gui>."
+msgstr ""
+"Μπορείτε να αυξήσετε ή να μειώσετε τους <gui>Ανθρώπινους παίκτες</gui> από "
+"τον <gui>Αριθμό παικτών</gui>. Ο μέγιστος αριθμός παικτών μπορεί να είναι "
+"έξι. Επίσης μπορείτε να αλλάξετε τα ονόματα τους από το <gui>Ονόματα "
+"παικτών</gui>."
+
+#. (itstool) path: item/p
+#: C/settings.page:38
+msgid ""
+"You can change the number of <gui>Computer Opponents</gui> from <gui>Number "
+"of opponents</gui> and set the difficulty level of the opponent from the "
+"drop down menu next to <gui>Difficulty</gui>."
+msgstr ""
+"Μπορείτε να αλλάξετε τον αριθμό των <gui>Αντιπάλων υπολογιστή</gui> από το "
+"<gui>Αριθμός αντιπάλων</gui> και να ορίσετε το επίπεδο δυσκολίας του "
+"αντιπάλου από το πτυσσόμενο μενού δίπλα από τη <gui>Δυσκολία</gui>."
+
+#. (itstool) path: section/title
+#: C/settings.page:45
+msgid "Enable delay between the rolls"
+msgstr "Ενεργοποίηση καθυστέρησης μεταξύ των ζαριών"
+
+#. (itstool) path: section/p
+#: C/settings.page:47
+msgid ""
+"You can enable the delay between the rolls by checking the <gui style="
+"\"checkbox\">Delay between rolls</gui>."
+msgstr ""
+"Μπορείτε να ενεργοποιήσετε την καθυστέρηση μεταξύ των ρίψεων των ζαριών "
+"επιλέγοντας το <gui style=\"checkbox\">Καθυστέρηση μεταξύ των ζαριών</gui>."
+
+#. (itstool) path: info/desc
+#: C/start-game.page:22
+msgid "How to play?"
+msgstr "Πώς να παίξετε"
+
+#. (itstool) path: page/title
+#: C/start-game.page:26
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#. (itstool) path: page/p
+#: C/start-game.page:28
+msgid ""
+"You can start a new game anytime in between the game. To start a new game:"
+msgstr ""
+"Μπορείτε ανά πάση στιγμή να ξεκινήσετε ένα νέο παιχνίδι. Για να το κάνετε "
+"αυτό:"
+
+#. (itstool) path: item/p
+#: C/start-game.page:33
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
+"Game</gui></guiseq>."
+msgstr ""
+"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem\">Νέο "
+"παιχνίδι</gui></guiseq>."
+
+#. (itstool) path: section/title
+#: C/start-game.page:39
+msgid "Play <app>Tali</app>"
+msgstr "Παίξτε <app>Τάλι</app>"
+
+#. (itstool) path: section/p
+#: C/start-game.page:41
+msgid ""
+"You have to roll the five dice three times and try to create a best hand. "
+"When the game starts, you see the results of the first throw of the dice."
+msgstr ""
+"Πρέπει να ρίξετε τα πέντε ζάρια τρεις φορές προσπαθώντας να δημιουργήσετε "
+"τον καλύτερο συνδιασμό. Όταν ξεκινά το παιχνίδι, βλέπετε τα αποτελέσματα της "
+"πρώτης ρίψης των ζαριών."
+
+#. (itstool) path: item/p
+#: C/start-game.page:46
+msgid ""
+"Click on the dice you wish to roll. You can select all the dice to roll in "
+"the second or third roll by clicking <gui>Roll all!</gui>."
+msgstr ""
+"Κάντε κλικ στο ζάρι που θέλετε να ρίξετε. Μπορείτε να επιλέξετε όλα τα ζάρια "
+"να ριχθούν στη δεύτερη ή τρίτη ρίψη κάνοντας κλικ στο <gui>Ρίξτε τα ζάρια!</"
+"gui>."
+
+#. (itstool) path: item/p
+#: C/start-game.page:50
+msgid "Click on <gui>Roll!</gui> to roll the selected dice."
+msgstr "Κάντε κλικ στο <gui>Ζαριά!</gui> για να ρίξετε το επιλεγμένο ζάρι."
+
+#. (itstool) path: item/p
+#: C/start-game.page:53
+msgid ""
+"When you have a hand you like or have run out of chances to throw the dice, "
+"click on a row corresponding to what you think is your best scoring "
+"combination. It is possible to have a score of zero and if you click on the "
+"wrong row, you will be scored accordingly."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/start-game.page:61
+msgid ""
+"You can only use each combination once, if you have chosen a scoring "
+"combination once, you can not choose the same again. There is one exception "
+"to this rule, if you roll a <gui>5 of a Kind</gui> a second time, you can "
+"place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
+"keep doing this each time you get another <gui>5 of a Kind</gui>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/start-game.page:69
+msgid ""
+"There is a bonus of 35 points if you score a total of 63 points or more in "
+"the top six rows."
+msgstr ""
+"Υπάρχει ένα μπόνους 35 βαθμούς αν η συνολική σας βαθμολογία για τις έξι πάνω "
+"γραμμές είναι 63 ή παραπάνω."
