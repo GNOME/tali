@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-03-13 12:00+0000\n"
-"PO-Revision-Date: 2015-03-16 10:36+0100\n"
+"POT-Creation-Date: 2015-03-16 09:43+0000\n"
+"PO-Revision-Date: 2015-03-16 11:51+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -60,11 +60,13 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
 "\">Preferences</gui></guiseq>."
 msgstr ""
+"Seleccione <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Preferencias</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/game-settings.page:34
 msgid "Select the desired version of the game from <gui>Game Type</gui>."
-msgstr ""
+msgstr "Elija la versión del juego que prefiera en <gui>Tipo de juego</gui>."
 
 #. (itstool) path: item/p
 #: C/game-settings.page:37
@@ -100,7 +102,7 @@ msgid ""
 "times and try to create the best hand."
 msgstr ""
 "<app>Tali</app> es un juego similar al póquer con dados. Consiste en lanzar "
-"cinco dados tres veces seguidas para intentar conseguir la mejor mano."
+"cinco dados tres veces seguidas e intentar conseguir la mejor mano posible."
 
 #. (itstool) path: section/title
 #: C/index.page:31
@@ -177,7 +179,7 @@ msgstr "Use las teclas de flechas."
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:45
 msgid "Select the score slot."
-msgstr "Selecciona la casilla de puntuación."
+msgstr "Seleccione la casilla de puntuación."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:46
@@ -217,6 +219,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
 "\">Scores</gui></guiseq>."
 msgstr ""
+"Seleccione <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Puntuaciones</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/scores.page:32
@@ -241,7 +245,7 @@ msgstr "Puede elegir una casilla de puntuación de entre las siete disponibles:"
 #. (itstool) path: item/title
 #: C/scores.page:45
 msgid "<gui>3 of a Kind</gui>"
-msgstr "<gui>3 del mismo tipo</gui>"
+msgstr "<gui>Trío</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:46
@@ -255,7 +259,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/scores.page:50
 msgid "<gui>4 of a Kind</gui>"
-msgstr "<gui>4 del mismo tipo</gui>"
+msgstr "<gui>Póquer</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:51
@@ -271,7 +275,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/scores.page:56
 msgid "<gui>Full House</gui>"
-msgstr "<gui>Full House</gui>"
+msgstr "<gui>Full</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:57
@@ -287,7 +291,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/scores.page:63
 msgid "<gui>Small Straight</gui>"
-msgstr "<gui>Secuencia corta</gui>"
+msgstr "<gui>Escalera corta</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:64
@@ -303,7 +307,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/scores.page:69
 msgid "<gui>Large Straight</gui>"
-msgstr "<gui>Secuencia completa</gui>"
+msgstr "<gui>Escalera completa</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:70
@@ -317,7 +321,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/scores.page:74
 msgid "<gui>5 of a Kind</gui>"
-msgstr "<gui>5 del mismo tipo</gui>"
+msgstr "<gui>Repóquer</gui>"
 
 #. (itstool) path: item/p
 #: C/scores.page:75
@@ -344,6 +348,8 @@ msgid ""
 "You can change the number of <gui>Human Players</gui> and <gui>Computer "
 "Opponents</gui>."
 msgstr ""
+"Puede cambiar el número de <gui>Jugadores humanos</gui> y el de "
+"<gui>Oponentes manejados por la máquina</gui>."
 
 #. (itstool) path: item/p
 #: C/settings.page:33
@@ -352,6 +358,9 @@ msgid ""
 "<gui>Number of players</gui>. The maximum number of players can be six. You "
 "can change their names as well from <gui>Player Names</gui>."
 msgstr ""
+"Puede aumentar o disminuir el número de <gui>Jugadores humanos</gui> en "
+"<gui>Número de jugadores</gui>. El número máximo de jugadores es seis. "
+"También puede cambiar sus nombres en <gui>Nombres de los jugadores</gui>."
 
 #. (itstool) path: item/p
 #: C/settings.page:38
@@ -360,11 +369,14 @@ msgid ""
 "of opponents</gui> and set the difficulty level of the opponent from the "
 "drop down menu next to <gui>Difficulty</gui>."
 msgstr ""
+"Puede cambiar el número de <gui>Oponentes manejados por la máquina</gui> en "
+"<gui>Número de oponentes</gui> y establecer el nivel de dificultad de los "
+"oponentes en el menú desplegable junto a <gui>Dificultad</gui>."
 
 #. (itstool) path: section/title
 #: C/settings.page:45
 msgid "Enable delay between the rolls"
-msgstr ""
+msgstr "Activar retraso entre tiradas"
 
 #. (itstool) path: section/p
 #: C/settings.page:47
@@ -372,6 +384,8 @@ msgid ""
 "You can enable the delay between the rolls by checking the <gui style="
 "\"checkbox\">Delay between rolls</gui>."
 msgstr ""
+"Puede activar el retraso entre tiradas marcando la opción <gui style="
+"\"checkbox\">Retraso entre tiradas</gui>."
 
 #. (itstool) path: info/desc
 #: C/start-game.page:22
@@ -388,6 +402,8 @@ msgstr "Iniciar un juego nuevo"
 msgid ""
 "You can start a new game anytime in between the game. To start a new game:"
 msgstr ""
+"Puede empezar un juego nuevo en cualquier momento de la partida. Para "
+"empezar un juego nuevo:"
 
 #. (itstool) path: item/p
 #: C/start-game.page:33
@@ -395,6 +411,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
 "Game</gui></guiseq>."
 msgstr ""
+"Seleccione <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Juego nuevo</gui></guiseq>."
 
 #. (itstool) path: section/title
 #: C/start-game.page:39
@@ -407,6 +425,9 @@ msgid ""
 "You have to roll the five dice three times and try to create a best hand. "
 "When the game starts, you see the results of the first throw of the dice."
 msgstr ""
+"Debe lanzar los cinco dados tres veces e intentar conseguir la mejor mano. "
+"Cuando comience el juego, verá el resultado de tirar los dados por primera "
+"vez."
 
 #. (itstool) path: item/p
 #: C/start-game.page:46
@@ -414,11 +435,13 @@ msgid ""
 "Click on the dice you wish to roll. You can select all the dice to roll in "
 "the second or third roll by clicking <gui>Roll all!</gui>."
 msgstr ""
+"Pulse sobre los dados que quiera lanzar. Puede elegir lanzar todos los dados "
+"en la segunda o la tercera tirada pulsando <gui>Lanzar todos</gui>."
 
 #. (itstool) path: item/p
 #: C/start-game.page:50
 msgid "Click on <gui>Roll!</gui> to roll the selected dice."
-msgstr ""
+msgstr "Pulse <gui>Lanzar</gui> para lanzar los dados seleccionados."
 
 #. (itstool) path: item/p
 #: C/start-game.page:53
@@ -428,6 +451,10 @@ msgid ""
 "combination. It is possible to have a score of zero and if you click on the "
 "wrong row, you will be scored accordingly."
 msgstr ""
+"Cuando tenga una mano que le guste o bien ya no pueda lanzar los dados, "
+"pulse sobre la fila en la que piense que ha conseguido la mejor puntuación. "
+"Puede que tenga una puntuación de cero y, si se equivoca de fila, se le "
+"puntuará consecuentemente."
 
 #. (itstool) path: note/p
 #: C/start-game.page:61
@@ -438,6 +465,11 @@ msgid ""
 "place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
 "keep doing this each time you get another <gui>5 of a Kind</gui>."
 msgstr ""
+"Cada combinación de puntos puede usarse sólo una vez: si ya ha elegido una "
+"combinación de puntos una vez, no podrá volver a elegirla de nuevo. Sólo hay "
+"una excepción a esta regla: si consigue <gui>Repóquer</gui> una segunda vez, "
+"puede colocarla sobre la fila de <gui>Repóquer</gui> y conseguir 50 puntos. "
+"Puede hacer ésto cada vez que consiga otro <gui>Repóquer</gui>."
 
 #. (itstool) path: note/p
 #: C/start-game.page:69
