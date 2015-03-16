@@ -1,11 +1,12 @@
 #
+# Alex Puchades <alex94puchades@gmail.com>, 2015.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-12 11:48+0000\n"
-"PO-Revision-Date: 2015-02-12 19:21+0100\n"
+"POT-Creation-Date: 2015-03-13 12:00+0000\n"
+"PO-Revision-Date: 2015-03-16 10:36+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -18,7 +19,9 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2015"
+msgstr ""
+"Alex Puchades <alex94puchades@gmail.com>, 2015\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2015"
 
 #. (itstool) path: credit/name
 #: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
@@ -48,6 +51,8 @@ msgid ""
 "The <gui>Regular</gui> version is the default game, to switch over to "
 "another game:"
 msgstr ""
+"La versión <gui>Normal</gui> es el modo de juego predeterminado, para "
+"cambiar a otro juego:"
 
 #. (itstool) path: item/p
 #: C/game-settings.page:30 C/settings.page:29
@@ -64,7 +69,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/game-settings.page:37
 msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
-msgstr ""
+msgstr "Ahora puede <link xref=\"start-game\">Empezar un juego nuevo</link>."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -94,6 +99,8 @@ msgid ""
 "<app>Tali</app> is similar to poker with dice. You roll five dice three "
 "times and try to create the best hand."
 msgstr ""
+"<app>Tali</app> es un juego similar al póquer con dados. Consiste en lanzar "
+"cinco dados tres veces seguidas para intentar conseguir la mejor mano."
 
 #. (itstool) path: section/title
 #: C/index.page:31
@@ -123,32 +130,34 @@ msgstr "Atajos de teclado"
 #. (itstool) path: page/p
 #: C/keyboard-shortcuts.page:24
 msgid "You can play <app>tali</app> using the keyboard keys as well."
-msgstr ""
+msgstr "También puede jugar a <app>Tali</app> usando las teclas del teclado."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:28
 msgid "Choose the dice to roll."
-msgstr ""
+msgstr "Elija el dado que va a lanzar."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:29
 msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
 msgstr ""
+"Utilice las teclas del 1 al 5, la tecla 1 se corresponde con el primer dado "
+"y así sucesivamente."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:33
 msgid "Switch to the <gui>Roll!</gui> button."
-msgstr ""
+msgstr "Cambiar al botón <gui>Lanzar</gui>."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:34
 msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
-msgstr ""
+msgstr "Use la tecla <key>Tab</key>, pulse <key>Intro</key> para lanzar."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:37
 msgid "Switch to the score slots."
-msgstr ""
+msgstr "Cambiar a las casillas de puntuación."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:38
@@ -158,7 +167,7 @@ msgstr "Use la tecla <key>Tab</key>."
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:41
 msgid "Navigate among the score slots."
-msgstr ""
+msgstr "Navegar entre las casillas de puntuación."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:42
@@ -168,7 +177,7 @@ msgstr "Use las teclas de flechas."
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:45
 msgid "Select the score slot."
-msgstr ""
+msgstr "Selecciona la casilla de puntuación."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:46
@@ -189,6 +198,8 @@ msgstr "Este trabajo está licenciado bajo la <_:link-1/>."
 #: C/scores.page:18
 msgid "Check out your scores and know more about the score slots."
 msgstr ""
+"Eche un vistazo a sus puntuaciones y aprenda más acerca de las casillas de "
+"puntuación."
 
 #. (itstool) path: page/title
 #: C/scores.page:22
@@ -198,7 +209,7 @@ msgstr "Puntuación"
 #. (itstool) path: page/p
 #: C/scores.page:24
 msgid "You can check out your scores of the games played so far:"
-msgstr ""
+msgstr "Puede echar un vistazo a la puntuación de sus partidas anteriores:"
 
 #. (itstool) path: item/p
 #: C/scores.page:28
@@ -213,16 +224,19 @@ msgid ""
 "The <gui>Regular</gui> version is displayed by default, to view scores "
 "obtained in <gui>Colors</gui>, select it from the drop down menu."
 msgstr ""
+"La versión <gui>Normal</gui> se muestra de forma predeterminada, para ver "
+"las puntuaciones obtenidas en el juego de <gui>Colores</gui>, seleccione la "
+"opción correspondiente en el menú desplegable."
 
 #. (itstool) path: section/title
 #: C/scores.page:39
 msgid "Score slots"
-msgstr ""
+msgstr "Casillas de puntuación"
 
 #. (itstool) path: section/p
 #: C/scores.page:41
 msgid "You can choose a score slot from the seven available score slots:"
-msgstr ""
+msgstr "Puede elegir una casilla de puntuación de entre las siete disponibles:"
 
 #. (itstool) path: item/title
 #: C/scores.page:45
@@ -235,6 +249,8 @@ msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. For example: 3, 4, 4, 4, 6."
 msgstr ""
+"Tres de los dados tienen el mismo número. La puntuación es la suma de todos "
+"los dados. Por ejemplo: 3, 4, 4, 4, 6."
 
 #. (itstool) path: item/title
 #: C/scores.page:50
@@ -248,6 +264,9 @@ msgid ""
 "dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
 "the total of all the dice."
 msgstr ""
+"Cuatro de los dados tienen el mismo número. La puntuación es la suma de "
+"todos los dados. Por ejemplo: 2, 5, 5, 5, 5. En el juego de colores, la "
+"puntuación sería de 25 más la suma de todos los dados."
 
 #. (itstool) path: item/title
 #: C/scores.page:56
@@ -261,6 +280,9 @@ msgid ""
 "and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
 "In the Colors game, the score is 15 plus the total of all the dice."
 msgstr ""
+"Cinco dados divididos en dos grupos: un grupo de tres con el mismo número y "
+"otro grupo de dos con el mismo número. Por ejemplo: 1, 1, 1, 4, 4. En el "
+"juego de colores, la puntuación sería de 15 más la suma de todos los dados."
 
 #. (itstool) path: item/title
 #: C/scores.page:63
@@ -274,6 +296,9 @@ msgid ""
 "example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
 "score is 30 points."
 msgstr ""
+"Cuatro dados con números consecutivos. El quinto dado puede ser cualquier "
+"número. Por ejemplo: 2, 3, 4, 5, 5. Esta categoría sólo se usa en el juego "
+"normal. La puntuación es de 30 puntos."
 
 #. (itstool) path: item/title
 #: C/scores.page:69
@@ -286,6 +311,8 @@ msgid ""
 "Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
 "40 points."
 msgstr ""
+"Cinco dados con números consecutivos. Por ejemplo: 2, 3, 4, 5, 6. La "
+"puntuación es de 40 puntos."
 
 #. (itstool) path: item/title
 #: C/scores.page:74
@@ -298,16 +325,18 @@ msgid ""
 "Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
 "score is 50 plus the total of all the dice."
 msgstr ""
+"Cinco dados idénticos. Por ejemplo: 3, 3, 3, 3, 3. En el juego de colores, "
+"la puntuación sería de 50 más la suma de todos los dados."
 
 #. (itstool) path: info/desc
 #: C/settings.page:18
 msgid "Set players preferences."
-msgstr ""
+msgstr "Establecer preferencias de jugadores."
 
 #. (itstool) path: page/title
 #: C/settings.page:22
 msgid "Players settings"
-msgstr ""
+msgstr "Configuración de jugadores"
 
 #. (itstool) path: page/p
 #: C/settings.page:24
@@ -416,3 +445,5 @@ msgid ""
 "There is a bonus of 35 points if you score a total of 63 points or more in "
 "the top six rows."
 msgstr ""
+"Puede obtener una bonificación de 35 puntos si consigue un total de al menos "
+"63 puntos en las 6 filas superiores."
