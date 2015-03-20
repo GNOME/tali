@@ -1,0 +1,484 @@
+# Hungarian translation for tali.
+# Copyright (C) 2015 Free Software Foundation, Inc.
+# This file is distributed under the same license as the tali package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2015.
+# Gabor Kelemen <kelemeng at ubuntu dot com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: tali master\n"
+"POT-Creation-Date: 2015-03-14 23:56+0000\n"
+"PO-Revision-Date: 2015-03-20 18:00+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Úr Balázs <urbalazs@gmail.com>, 2015."
+
+#. (itstool) path: credit/name
+#: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
+#: C/scores.page:11 C/settings.page:11 C/start-game.page:15
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/game-settings.page:14 C/keyboard-shortcuts.page:13 C/scores.page:13
+#: C/settings.page:13 C/start-game.page:17
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: info/desc
+#: C/game-settings.page:19
+msgid "Switch to another game version."
+msgstr "Váltás egy másik játékverzióra."
+
+#. (itstool) path: page/title
+#: C/game-settings.page:23
+msgid "Game settings"
+msgstr "A játék beállításai"
+
+#. (itstool) path: page/p
+#: C/game-settings.page:25
+msgid ""
+"The <gui>Regular</gui> version is the default game, to switch over to "
+"another game:"
+msgstr ""
+"A <gui>Szabályos</gui> verzió az alapértelmezett játék, egy másik játékra "
+"való váltáshoz:"
+
+#. (itstool) path: item/p
+#: C/game-settings.page:30 C/settings.page:29
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Preferences</gui></guiseq>."
+msgstr ""
+"Válassza a <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Beállítások</gui></guiseq> menüpontot."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:34
+msgid "Select the desired version of the game from <gui>Game Type</gui>."
+msgstr "Válassza ki a kívánt játékverziót a <gui>Játéktípus</gui> listából."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:37
+msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
+msgstr "Most <link xref=\"start-game\">indíthat egy új játékot</link>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Tali help."
+msgstr "Tali súgó."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Tali"
+msgstr "<_:media-1/> Tali"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Tali</app> is similar to poker with dice. You roll five dice three "
+"times and try to create the best hand."
+msgstr ""
+"A <app>Tali</app> hasonló a kockapókerhez. Háromszor dobhat öt kockával, és "
+"próbálja meg létrehozni a legjobb kombinációt."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Playing Tali"
+msgstr "A Tali játékmenete"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Advanced"
+msgstr "Speciális"
+
+#. (itstool) path: section/title
+#: C/index.page:39
+msgid "Useful tips"
+msgstr "Hasznos tippek"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:18
+msgid "Play the game through keyboard."
+msgstr "Játék a billentyűzet használatával."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:22
+msgid "Keyboard shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:24
+msgid "You can play <app>tali</app> using the keyboard keys as well."
+msgstr ""
+"A <app>Tali</app> játékot a billentyűzet gombjai használatával is játszhatja."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:28
+msgid "Choose the dice to roll."
+msgstr "Kocka kiválasztása a dobáshoz."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:29
+msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
+msgstr ""
+"Használja a billentyűket 1-től 5-ig, az 1-es billentyű az első kockának "
+"felel meg, és így tovább."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:33
+msgid "Switch to the <gui>Roll!</gui> button."
+msgstr "Váltás a <gui>Dobás!</gui> gombra."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:34
+msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
+msgstr ""
+"Használja a <key>Tab</key> billentyűt, nyomja meg az <key>Entert</key> a "
+"dobáshoz."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "Switch to the score slots."
+msgstr "Váltás a pontszámtárolókra."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:38
+msgid "Use <key>Tab</key>."
+msgstr "Használja a <key>Tab</key> billentyűt."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "Navigate among the score slots."
+msgstr "Navigálás a pontszámtárolók között."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:42
+msgid "Use arrow keys."
+msgstr "Használja a nyíl billentyűket."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:45
+msgid "Select the score slot."
+msgstr "Pontszámtároló kiválasztása."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:46
+msgid "Press <key>Enter</key> or <key>spacebar</key>."
+msgstr "Nyomja meg az <key>Enter</key> vagy a <key>szóköz</key> billentyűt."
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Nevezd meg!-Így add tovább! 3.0 átíratlan licenc"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Ez a mű a <_:link-1/> feltételei szerint terjeszthető."
+
+#. (itstool) path: info/desc
+#: C/scores.page:18
+msgid "Check out your scores and know more about the score slots."
+msgstr "Nézze meg a pontszámát, és tudjon meg többet a pontszámtárolókról."
+
+#. (itstool) path: page/title
+#: C/scores.page:22
+msgid "Scores"
+msgstr "Pontszámok"
+
+#. (itstool) path: page/p
+#: C/scores.page:24
+msgid "You can check out your scores of the games played so far:"
+msgstr "Megnézheti az eddig játszott játékok pontszámait:"
+
+#. (itstool) path: item/p
+#: C/scores.page:28
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Scores</gui></guiseq>."
+msgstr ""
+"Válassza a <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Pontszámok</gui></guiseq> menüpontot."
+
+#. (itstool) path: item/p
+#: C/scores.page:32
+msgid ""
+"The <gui>Regular</gui> version is displayed by default, to view scores "
+"obtained in <gui>Colors</gui>, select it from the drop down menu."
+msgstr ""
+"A <gui>Szabályos</gui> verzió jelenik meg alapértelmezetten, a <gui>Színek</"
+"gui> verzióban megszerzett pontszámok megtekintéséhez válassza ki azt a "
+"lenyíló menüből."
+
+#. (itstool) path: section/title
+#: C/scores.page:39
+msgid "Score slots"
+msgstr "Pontszámtárolók"
+
+#. (itstool) path: section/p
+#: C/scores.page:41
+msgid "You can choose a score slot from the seven available score slots:"
+msgstr "Kiválaszthat egy pontszámtárolót a hét elérhető pontszámtároló közül:"
+
+#. (itstool) path: item/title
+#: C/scores.page:45
+msgid "<gui>3 of a Kind</gui>"
+msgstr "<gui>3 egyforma</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:46
+msgid ""
+"Three of the dice have the same number. The score is the total of all the "
+"dice. For example: 3, 4, 4, 4, 6."
+msgstr ""
+"Három kockán ugyanazok a számok vannak. A pontszám az összes kocka összege. "
+"Például: 3, 4, 4, 4, 6."
+
+#. (itstool) path: item/title
+#: C/scores.page:50
+msgid "<gui>4 of a Kind</gui>"
+msgstr "<gui>4 egyforma</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:51
+msgid ""
+"Four of the dice have the same number. The score is the total of all the "
+"dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
+"the total of all the dice."
+msgstr ""
+"Négy kockán ugyanazok a számok vannak. A pontszám az összes kocka összege. "
+"Például: 2, 5, 5, 5, 5. A Színek játékban a pontszám 25 plusz az összes "
+"kocka összege."
+
+#. (itstool) path: item/title
+#: C/scores.page:56
+msgid "<gui>Full House</gui>"
+msgstr "<gui>Full</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:57
+msgid ""
+"Five dice consisting of two groups: One group of three with the same numbers "
+"and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
+"In the Colors game, the score is 15 plus the total of all the dice."
+msgstr ""
+"Öt kocka két csoportból áll: egy háromtagú, egyforma számokból álló, és egy "
+"másik kéttagú, egyforma számokból álló csoportból. Például: 1, 1, 1, 4, 4. A "
+"Színek játékban a pontszám 15 plusz az összes kocka összege."
+
+#. (itstool) path: item/title
+#: C/scores.page:63
+msgid "<gui>Small Straight</gui>"
+msgstr "<gui>Kis sor</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:64
+msgid ""
+"Four dice with consecutive numbers. The fifth die can be any number. For "
+"example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
+"score is 30 points."
+msgstr ""
+"Négy kocka egymást követő számokkal. Az ötödik kocka bármilyen szám lehet. "
+"Például: 2, 3, 4, 5, 5. Ezt a kategóriát csak a szabályos játékban "
+"használják. A pontszám 30 pont."
+
+#. (itstool) path: item/title
+#: C/scores.page:69
+msgid "<gui>Large Straight</gui>"
+msgstr "<gui>Nagy sor</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:70
+msgid ""
+"Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
+"40 points."
+msgstr ""
+"Öt kocka egymást követő számokkal. Például: 2, 3, 4, 5, 6. A pontszám 40 "
+"pont."
+
+#. (itstool) path: item/title
+#: C/scores.page:74
+msgid "<gui>5 of a Kind</gui>"
+msgstr "<gui>5 egyforma</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:75
+msgid ""
+"Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
+"score is 50 plus the total of all the dice."
+msgstr ""
+"Öt egyforma kocka. Például: 3, 3, 3, 3, 3. A Színek játékban a pontszám 50 "
+"plusz az összes kocka összege."
+
+#. (itstool) path: info/desc
+#: C/settings.page:18
+msgid "Set players preferences."
+msgstr "Játékosok beállításainak megadása."
+
+#. (itstool) path: page/title
+#: C/settings.page:22
+msgid "Players settings"
+msgstr "Játékosok beállításai"
+
+#. (itstool) path: page/p
+#: C/settings.page:24
+msgid ""
+"You can change the number of <gui>Human Players</gui> and <gui>Computer "
+"Opponents</gui>."
+msgstr ""
+"Megváltoztathatja az <gui>Emberi játékosok</gui> és a <gui>Számítógépes "
+"ellenfelek</gui> számát."
+
+#. (itstool) path: item/p
+#: C/settings.page:33
+msgid ""
+"You can increase or decrease the number of <gui>Human Players</gui> from "
+"<gui>Number of players</gui>. The maximum number of players can be six. You "
+"can change their names as well from <gui>Player Names</gui>."
+msgstr ""
+"Növelheti vagy csökkentheti az <gui>Emberi játékosok</gui> számát a "
+"<gui>Játékosok száma</gui> menüpontból. A játékosok legnagyobb száma hat "
+"lehet. Megváltoztathatja a nevüket is a <gui>Játékosok nevei</gui> "
+"menüpontban."
+
+#. (itstool) path: item/p
+#: C/settings.page:38
+msgid ""
+"You can change the number of <gui>Computer Opponents</gui> from <gui>Number "
+"of opponents</gui> and set the difficulty level of the opponent from the "
+"drop down menu next to <gui>Difficulty</gui>."
+msgstr ""
+"Megváltoztathatja a <gui>Számítógépes ellenfelek</gui> számát az "
+"<gui>Ellenfelek száma</gui> menüpontban, és beállíthatja az ellenfél "
+"nehézségi szintjét a <gui>Nehézség</gui> mellett lévő legördülő menüben."
+
+#. (itstool) path: section/title
+#: C/settings.page:45
+msgid "Enable delay between the rolls"
+msgstr "Késleltetés engedélyezése a dobások közt"
+
+#. (itstool) path: section/p
+#: C/settings.page:47
+msgid ""
+"You can enable the delay between the rolls by checking the <gui style="
+"\"checkbox\">Delay between rolls</gui>."
+msgstr ""
+"Késleltetést engedélyezhet a dobások közt a <gui style=\"checkbox"
+"\">Késleltetés a dobások közt</gui> jelölőnégyzet kiválasztásával."
+
+#. (itstool) path: info/desc
+#: C/start-game.page:22
+msgid "How to play?"
+msgstr "Hogyan kell játszani?"
+
+#. (itstool) path: page/title
+#: C/start-game.page:26
+msgid "Start a new game"
+msgstr "Új játék indítása"
+
+#. (itstool) path: page/p
+#: C/start-game.page:28
+msgid ""
+"You can start a new game anytime in between the game. To start a new game:"
+msgstr "Bármikor új játékot kezdhet a játék közben. Egy új játék indításához:"
+
+#. (itstool) path: item/p
+#: C/start-game.page:33
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
+"Game</gui></guiseq>."
+msgstr ""
+"Válassza a <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">Új "
+"játék</gui></guiseq> menüpontot."
+
+#. (itstool) path: section/title
+#: C/start-game.page:39
+msgid "Play <app>Tali</app>"
+msgstr "A <app>Tali</app> játékmenete"
+
+#. (itstool) path: section/p
+#: C/start-game.page:41
+msgid ""
+"You have to roll the five dice three times and try to create a best hand. "
+"When the game starts, you see the results of the first throw of the dice."
+msgstr ""
+"Háromszor kell dobnia az öt kockával, és meg kell próbálnia a legjobb "
+"kombinációt létrehozni. Amikor a játék elindul, akkor az első kockadobás "
+"eredményét látja."
+
+#. (itstool) path: item/p
+#: C/start-game.page:46
+msgid ""
+"Click on the dice you wish to roll. You can select all the dice to roll in "
+"the second or third roll by clicking <gui>Roll all!</gui>."
+msgstr ""
+"Kattintson arra a kockára, amelyikkel dobni szeretne. Az összes kockát "
+"kiválaszthatja a dobáshoz a második vagy harmadik dobásnál a <gui>Dobás az "
+"összessel!</gui> gombra kattintva."
+
+#. (itstool) path: item/p
+#: C/start-game.page:50
+msgid "Click on <gui>Roll!</gui> to roll the selected dice."
+msgstr ""
+"Kattintson a <gui>Dobás!</gui> gombra a kiválasztott kockával való dobáshoz."
+
+#. (itstool) path: item/p
+#: C/start-game.page:53
+msgid ""
+"When you have a hand you like or have run out of chances to throw the dice, "
+"click on a row corresponding to what you think is your best scoring "
+"combination. It is possible to have a score of zero and if you click on the "
+"wrong row, you will be scored accordingly."
+msgstr ""
+"Ha sikerült a kívánt kombinációt összeállítani, vagy elfogyott a kockadobási "
+"lehetősége, akkor kattintson arra a sorra, amely megfelel az Ön által "
+"legjobbnak vélt pontozási kombinációnak. Lehetséges nulla pontot is "
+"szerezni, így ha egy rossz sorra kattint, akkor aszerint kapja a pontokat."
+
+#. (itstool) path: note/p
+#: C/start-game.page:61
+msgid ""
+"You can only use each combination once, if you have chosen a scoring "
+"combination once, you can not choose the same again. There is one exception "
+"to this rule, if you roll a <gui>5 of a Kind</gui> a second time, you can "
+"place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
+"keep doing this each time you get another <gui>5 of a Kind</gui>."
+msgstr ""
+"Minden kombinációt csak egyszer használhat, ha egyszer kiválasztott egy "
+"pontozási kombinációt, akkor azt nem választhatja újra. Egy kivétel van e "
+"szabály alól: ha másodjára dob <gui>5 egyformát</gui>, akkor ismét beteheti "
+"az <gui>5 egyforma</gui> sorba ötven pontért. Ezt bármikor újra megteheti, "
+"ha másik <gui>5 egyformát</gui> dob."
+
+#. (itstool) path: note/p
+#: C/start-game.page:69
+msgid ""
+"There is a bonus of 35 points if you score a total of 63 points or more in "
+"the top six rows."
+msgstr ""
+"35 bónuszpont jár, ha összesen 63 vagy több pontot ér el a legfelső hat "
+"sorban."
+
