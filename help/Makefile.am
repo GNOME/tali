@@ -19,6 +19,7 @@ HELP_LINGUAS = \
 	el \
 	es \
 	fr \
+	hu \
 	ru
 
 -include $(top_srcdir)/git.mk
