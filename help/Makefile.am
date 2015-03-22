@@ -16,6 +16,7 @@ HELP_MEDIA = \
 
 HELP_LINGUAS = \
 	cs \
+	de \
 	el \
 	es \
 	fr \
