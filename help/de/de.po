@@ -1,0 +1,478 @@
+# German translation for tali.
+# Copyright (C) 2015 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
+# Christian Kirbach <Christian.Kirbach@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tali master\n"
+"POT-Creation-Date: 2015-03-21 23:53+0000\n"
+"PO-Revision-Date: 2015-03-22 07:05+0100\n"
+"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Christian Kirbach <christian.kirbach@gmail.com>, 2015\n"
+"Benjamin Steinwender <b@stbe.at>, 2015"
+
+#. (itstool) path: credit/name
+#: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
+#: C/scores.page:11 C/settings.page:11 C/start-game.page:15
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/game-settings.page:14 C/keyboard-shortcuts.page:13 C/scores.page:13
+#: C/settings.page:13 C/start-game.page:17
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: info/desc
+#: C/game-settings.page:19
+msgid "Switch to another game version."
+msgstr "Auf eine andere Spielversion umschalten."
+
+#. (itstool) path: page/title
+#: C/game-settings.page:23
+msgid "Game settings"
+msgstr "Spieleinstellungen"
+
+#. (itstool) path: page/p
+#: C/game-settings.page:25
+msgid ""
+"The <gui>Regular</gui> version is the default game, to switch over to "
+"another game:"
+msgstr ""
+"Die <gui>reguläre</gui> Version ist das normale Spiel. So wechseln Sie zu "
+"einem anderen Spiel:"
+
+#. (itstool) path: item/p
+#: C/game-settings.page:30 C/settings.page:29
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Preferences</gui></guiseq>."
+msgstr ""
+"Wählen Sie <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Einstellungen</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:34
+msgid "Select the desired version of the game from <gui>Game Type</gui>."
+msgstr "Wählen Sie unter <gui>Spieltyp</gui> die gewünschte Variante."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:37
+msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
+msgstr ""
+"Sie können nun <link xref=\"start-game\">ein neues Spiel beginnen</link>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Tali help."
+msgstr "Hilfe für Tali."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Tali"
+msgstr "<_:media-1/> Tali"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Tali</app> is similar to poker with dice. You roll five dice three "
+"times and try to create the best hand."
+msgstr ""
+"<app>Tali</app> ist ähnlich wie Poker, aber mit Würfeln. Man würfelt fünf "
+"Würfel drei mal und versucht die beste Kombination zu erlangen."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Playing Tali"
+msgstr "Tali spielen"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Advanced"
+msgstr "Erweitert"
+
+#. (itstool) path: section/title
+#: C/index.page:39
+msgid "Useful tips"
+msgstr "Nützliche Tipps"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:18
+msgid "Play the game through keyboard."
+msgstr "Das Spiel mit Tastatur bedienen."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:22
+msgid "Keyboard shortcuts"
+msgstr "Tastenkombinationen"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:24
+msgid "You can play <app>tali</app> using the keyboard keys as well."
+msgstr "Sie können <app>tali</app> ebenfalls per Tastatur bedienen."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:28
+msgid "Choose the dice to roll."
+msgstr "Wählen Sie einen Würfel zum Würfeln."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:29
+msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
+msgstr ""
+"Verwenden Sie die Tasten 1 bis 5. Die Taste 1 entspricht dem ersten Würfel "
+"usw."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:33
+msgid "Switch to the <gui>Roll!</gui> button."
+msgstr "Wechseln Sie auf den Knopf <gui>Würfeln!</gui>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:34
+msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
+msgstr ""
+"Verwenden Sie die <key>Tabulatortaste</key>. Drücken Sie zum Würfeln die "
+"<key>Eingabetaste</key>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "Switch to the score slots."
+msgstr "Zur Wertungstabelle umschalten."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:38
+msgid "Use <key>Tab</key>."
+msgstr "Verwenden Sie die <key>Tabulatortaste</key>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "Navigate among the score slots."
+msgstr "Navigieren in der Wertungstabelle."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:42
+msgid "Use arrow keys."
+msgstr "Verwenden Sie die Pfeiltasten."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:45
+msgid "Select the score slot."
+msgstr "Wertungseintrag auswählen."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:46
+msgid "Press <key>Enter</key> or <key>spacebar</key>."
+msgstr "Drücken Sie die <key>Eingabetaste</key> oder die <key>Leertaste</key>."
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Dieses Werk wird unter einer <_:link-1/> verbreitet."
+
+#. (itstool) path: info/desc
+#: C/scores.page:18
+msgid "Check out your scores and know more about the score slots."
+msgstr ""
+"Prüfen Sie Ihre Wertung und erfahren Sie mehr über die Wertungstabelle."
+
+#. (itstool) path: page/title
+#: C/scores.page:22
+msgid "Scores"
+msgstr "Punkte"
+
+#. (itstool) path: page/p
+#: C/scores.page:24
+msgid "You can check out your scores of the games played so far:"
+msgstr ""
+"Sie können die erzielten Punkte Ihrer bisher gespielten Spiele nachschlagen:"
+
+#. (itstool) path: item/p
+#: C/scores.page:28
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Scores</gui></guiseq>."
+msgstr ""
+"Wählen Sie <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Punkte</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/scores.page:32
+msgid ""
+"The <gui>Regular</gui> version is displayed by default, to view scores "
+"obtained in <gui>Colors</gui>, select it from the drop down menu."
+msgstr ""
+"Die <gui>reguläre</gui> Version wird standardmäßig angezeigt. Wählen Sie das "
+"Spiel <gui>Farben</gui>, um darin erzielte Punkte einzusehen."
+
+#. (itstool) path: section/title
+#: C/scores.page:39
+msgid "Score slots"
+msgstr "Wertungstabelle"
+
+#. (itstool) path: section/p
+#: C/scores.page:41
+msgid "You can choose a score slot from the seven available score slots:"
+msgstr "Sie können eine aus sieben verfügbaren Wertungspositionen auswählen:"
+
+#. (itstool) path: item/title
+#: C/scores.page:45
+msgid "<gui>3 of a Kind</gui>"
+msgstr "<gui>Dreierpasch</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:46
+msgid ""
+"Three of the dice have the same number. The score is the total of all the "
+"dice. For example: 3, 4, 4, 4, 6."
+msgstr ""
+"Drei Würfel haben die gleiche Augenzahl. Die Punktzahl entspricht der Summe "
+"aller Augenzahlen. Beispielsweise: 3, 4, 4, 4, 6."
+
+#. (itstool) path: item/title
+#: C/scores.page:50
+msgid "<gui>4 of a Kind</gui>"
+msgstr "<gui>Viererpasch</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:51
+msgid ""
+"Four of the dice have the same number. The score is the total of all the "
+"dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
+"the total of all the dice."
+msgstr ""
+"Vier Würfel haben die gleiche Augenzahl. Die Punktzahl entspricht der Summe "
+"aller Augenzahlen. Beispielsweise: 2, 5, 5, 5, 5. Im Farbspiel werden 25 "
+"Punkte erzielt plus die Summe aller Augenzahlen."
+
+#. (itstool) path: item/title
+#: C/scores.page:56
+msgid "<gui>Full House</gui>"
+msgstr "<gui>Full House</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:57
+msgid ""
+"Five dice consisting of two groups: One group of three with the same numbers "
+"and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
+"In the Colors game, the score is 15 plus the total of all the dice."
+msgstr ""
+"Fünf Würfel in zwei Gruppen: Eine Gruppe besteht aus drei Würfeln mit den "
+"gleichen Augenzahlen und eine zweite Gruppe bestehend aus zwei Würfeln mit "
+"identischen Augenzahlen. Beispielsweise: 1, 1, 1, 5, 5. Im Farbspiel werden "
+"15 Punkte erzielt plus die Summe aller Augenzahlen."
+
+#. (itstool) path: item/title
+#: C/scores.page:63
+msgid "<gui>Small Straight</gui>"
+msgstr "<gui>Kleine Straße</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:64
+msgid ""
+"Four dice with consecutive numbers. The fifth die can be any number. For "
+"example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
+"score is 30 points."
+msgstr ""
+"Vier Würfel mit aufeinander folgenden Zahlen. Der fünfte Würfel darf eine "
+"beliebige Zahl zeigen. Beispielsweise: 2, 3, 4, 5, 5. Diese Kategorie wird "
+"nur im regulären Spiel verwendet. Es werden 30 Punkte erzielt."
+
+#. (itstool) path: item/title
+#: C/scores.page:69
+msgid "<gui>Large Straight</gui>"
+msgstr "<gui>Große Straße</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:70
+msgid ""
+"Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
+"40 points."
+msgstr ""
+"Fünf Würfel mit aufeinander folgenden Zahlen. Beispielsweise: 2, 3, 4, 5, 6. "
+"Es werden 40 Punkte erzielt."
+
+#. (itstool) path: item/title
+#: C/scores.page:74
+msgid "<gui>5 of a Kind</gui>"
+msgstr "<gui>Fünferpasch</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:75
+msgid ""
+"Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
+"score is 50 plus the total of all the dice."
+msgstr ""
+"Fünf identische Würfel, z.B.: 3, 3, 3, 3, 3. Im Spiel »Farben« ist die "
+"Punktzahl 50 plus die Summe aller Würfel."
+
+#. (itstool) path: info/desc
+#: C/settings.page:18
+msgid "Set players preferences."
+msgstr "Die Spielereinstellungen festlegen."
+
+#. (itstool) path: page/title
+#: C/settings.page:22
+msgid "Players settings"
+msgstr "Spielereinstellungen"
+
+#. (itstool) path: page/p
+#: C/settings.page:24
+msgid ""
+"You can change the number of <gui>Human Players</gui> and <gui>Computer "
+"Opponents</gui>."
+msgstr ""
+"Sie können die Anzahl der <gui>Mitspieler</gui> und <gui>Computer-Gegner</"
+"gui> ändern."
+
+#. (itstool) path: item/p
+#: C/settings.page:33
+msgid ""
+"You can increase or decrease the number of <gui>Human Players</gui> from "
+"<gui>Number of players</gui>. The maximum number of players can be six. You "
+"can change their names as well from <gui>Player Names</gui>."
+msgstr ""
+"Sie können die Anzahl der <gui>Mitspieler</gui> in <gui>Spieleranzahl</gui> "
+"erhöhen oder verringern. Die maximale Anzahl an Spielern ist sechs. Sie "
+"können in <gui>Spielernamen</gui> auch die Namen anpassen."
+
+#. (itstool) path: item/p
+#: C/settings.page:38
+msgid ""
+"You can change the number of <gui>Computer Opponents</gui> from <gui>Number "
+"of opponents</gui> and set the difficulty level of the opponent from the "
+"drop down menu next to <gui>Difficulty</gui>."
+msgstr ""
+"Sie können die Anzahl der <gui>Computer-Gegner</gui> in <gui>Anzahl der "
+"Gegner</gui> ändern und die Schwierigkeit der Gegner aus dem Auswahlmenü "
+"neben <gui>Schwierigkeit</gui> auswählen."
+
+#. (itstool) path: section/title
+#: C/settings.page:45
+msgid "Enable delay between the rolls"
+msgstr "Eine Verzögerung zwischen zwei Würfen einschalten"
+
+#. (itstool) path: section/p
+#: C/settings.page:47
+msgid ""
+"You can enable the delay between the rolls by checking the <gui style="
+"\"checkbox\">Delay between rolls</gui>."
+msgstr ""
+"Schalten Sie eine Verzögerung zwischen zwei Würfen ein, indem Sie <gui style="
+"\"checkbox\">Verzögerung zwischen Würfen</gui> anwählen."
+
+#. (itstool) path: info/desc
+#: C/start-game.page:22
+msgid "How to play?"
+msgstr "So spielen Sie."
+
+#. (itstool) path: page/title
+#: C/start-game.page:26
+msgid "Start a new game"
+msgstr "Ein neues Spiel starten"
+
+#. (itstool) path: page/p
+#: C/start-game.page:28
+msgid ""
+"You can start a new game anytime in between the game. To start a new game:"
+msgstr ""
+"Sie können jederzeit im Spiel ein neues Spiel beginnen. So starten Sie ein "
+"neues Spiel:"
+
+#. (itstool) path: item/p
+#: C/start-game.page:33
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
+"Game</gui></guiseq>."
+msgstr ""
+"Wählen Sie <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Neues Spiel</gui></guiseq>."
+
+#. (itstool) path: section/title
+#: C/start-game.page:39
+msgid "Play <app>Tali</app>"
+msgstr "Spielen Sie <app>Tali</app>"
+
+#. (itstool) path: section/p
+#: C/start-game.page:41
+msgid ""
+"You have to roll the five dice three times and try to create a best hand. "
+"When the game starts, you see the results of the first throw of the dice."
+msgstr ""
+"Sie müssen die fünf Würfel drei Mal würfeln, um das beste Ergebnis zu "
+"erreichen. Wenn das Spiel beginnt, sehen Sie die Ergebnisse des ersten "
+"Wurfes."
+
+#. (itstool) path: item/p
+#: C/start-game.page:46
+msgid ""
+"Click on the dice you wish to roll. You can select all the dice to roll in "
+"the second or third roll by clicking <gui>Roll all!</gui>."
+msgstr ""
+"Klicken Sie auf den Würfel, den Sie neu würfeln möchten. Sie können alle "
+"Würfel für den zweiten oder dritten Wurf wählen, in dem Sie auf <gui>Alle "
+"würfeln!</gui> klicken."
+
+#. (itstool) path: item/p
+#: C/start-game.page:50
+msgid "Click on <gui>Roll!</gui> to roll the selected dice."
+msgstr ""
+"Klicken Sie auf <gui>Würfeln!</gui>, um mit den gewählten Würfeln zu würfeln."
+
+#. (itstool) path: item/p
+#: C/start-game.page:53
+msgid ""
+"When you have a hand you like or have run out of chances to throw the dice, "
+"click on a row corresponding to what you think is your best scoring "
+"combination. It is possible to have a score of zero and if you click on the "
+"wrong row, you will be scored accordingly."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/start-game.page:61
+msgid ""
+"You can only use each combination once, if you have chosen a scoring "
+"combination once, you can not choose the same again. There is one exception "
+"to this rule, if you roll a <gui>5 of a Kind</gui> a second time, you can "
+"place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
+"keep doing this each time you get another <gui>5 of a Kind</gui>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/start-game.page:69
+msgid ""
+"There is a bonus of 35 points if you score a total of 63 points or more in "
+"the top six rows."
+msgstr ""
+"Es gibt einen Bonus von 35 Punkten, wenn Sie es schaffen, 63 oder mehr "
+"Punkte in den ersten 6 Reihen zu erreichen."
