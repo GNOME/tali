@@ -4,13 +4,7 @@ icon24dir=$(datadir)/icons/hicolor/24x24/apps
 icon32dir=$(datadir)/icons/hicolor/32x32/apps
 icon48dir=$(datadir)/icons/hicolor/48x48/apps
 iconscalabledir=$(datadir)/icons/hicolor/scalable/apps
-
-hc16dir=$(datadir)/icons/HighContrast/16x16/apps
-hc22dir=$(datadir)/icons/HighContrast/22x22/apps
-hc24dir=$(datadir)/icons/HighContrast/24x24/apps
-hc32dir=$(datadir)/icons/HighContrast/32x32/apps
-hc48dir=$(datadir)/icons/HighContrast/48x48/apps
-hc256dir=$(datadir)/icons/HighContrast/256x256/apps
+iconsymbolicdir=$(datadir)/icons/hicolor/symbolic/apps
 
 icon16_DATA = 16x16/tali.png
 icon22_DATA = 22x22/tali.png
@@ -18,13 +12,8 @@ icon24_DATA = 24x24/tali.png
 icon32_DATA = 32x32/tali.png
 icon48_DATA = 48x48/tali.png
 iconscalable_DATA = scalable/tali.svg
+iconsymbolic_DATA = symbolic/tali-symbolic.svg
 
-hc16_DATA = HighContrast/16x16/tali.png
-hc22_DATA = HighContrast/22x22/tali.png
-hc24_DATA = HighContrast/24x24/tali.png
-hc32_DATA = HighContrast/32x32/tali.png
-hc48_DATA = HighContrast/48x48/tali.png
-hc256_DATA = HighContrast/256x256/tali.png
 
 EXTRA_DIST = \
 	$(icon16_DATA) \
@@ -34,11 +23,6 @@ EXTRA_DIST = \
 	$(icon48_DATA) \
 	$(icon256_DATA) \
 	$(iconscalable_DATA) \
-	$(hc16_DATA) \
-	$(hc22_DATA) \
-	$(hc24_DATA) \
-	$(hc32_DATA) \
-	$(hc48_DATA) \
-	$(hc256_DATA)
+	$(iconsymbolic_DATA)
 
 -include $(top_srcdir)/git.mk
