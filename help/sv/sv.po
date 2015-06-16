@@ -1,0 +1,481 @@
+# Swedish translation for tali.
+# Copyright (C) 2015 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
+msgid ""
+msgstr ""
+"Project-Id-Version: tali gnome-3-16\n"
+"POT-Creation-Date: 2015-06-16 11:50+0000\n"
+"PO-Revision-Date: 2015-05-31 19:11+0100\n"
+"Last-Translator: Erik Sköldås <erik.skoldas@tele2.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Project-Style: gnome\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Erik Sköldås <erik.skoldas@tele2.se>, 2015\n"
+"\n"
+"Skicka synpunkter på översättningen till\n"
+"<tp-sv@listor.tp-sv.se>"
+
+#. (itstool) path: credit/name
+#: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
+#: C/scores.page:11 C/settings.page:11 C/start-game.page:15
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/game-settings.page:14 C/keyboard-shortcuts.page:13 C/scores.page:13
+#: C/settings.page:13 C/start-game.page:17
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: info/desc
+#: C/game-settings.page:19
+msgid "Switch to another game version."
+msgstr "Växla till en annan spelversion."
+
+#. (itstool) path: page/title
+#: C/game-settings.page:23
+msgid "Game settings"
+msgstr "Spelinställningar"
+
+#. (itstool) path: page/p
+#: C/game-settings.page:25
+msgid ""
+"The <gui>Regular</gui> version is the default game, to switch over to "
+"another game:"
+msgstr ""
+"Den <gui>Vanliga</gui> versionen är standardspelet, för att växla över till "
+"ett annat spel:"
+
+#. (itstool) path: item/p
+#: C/game-settings.page:30 C/settings.page:29
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Preferences</gui></guiseq>."
+msgstr ""
+"Välj <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Inställningar</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:34
+msgid "Select the desired version of the game from <gui>Game Type</gui>."
+msgstr "Välj den önskade versionen av spelet under <gui>Speltyp</gui>."
+
+#. (itstool) path: item/p
+#: C/game-settings.page:37
+msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
+msgstr "Nu kan du <link xref=\"start-game\">Starta ett nytt spel </link>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Tali"
+msgstr "Tali"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Tali help."
+msgstr "Hjälp för Tali."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Tali"
+msgstr "<_:media-1/> Tali"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Tali</app> is similar to poker with dice. You roll five dice three "
+"times and try to create the best hand."
+msgstr ""
+"<app>Tali</app> liknar poker med tärningar. Du slår fem tärningar tre gånger "
+"och försöker skapa den bästa handen."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Playing Tali"
+msgstr "Spela Tali"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Advanced"
+msgstr "Avancerat"
+
+#. (itstool) path: section/title
+#: C/index.page:39
+msgid "Useful tips"
+msgstr "Värdefulla tips"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:18
+msgid "Play the game through keyboard."
+msgstr "Spela med hjälp av tangentbordet."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:22
+msgid "Keyboard shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:24
+msgid "You can play <app>tali</app> using the keyboard keys as well."
+msgstr "Du kan även spela <app>tali</app> med tangentbordet."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:28
+msgid "Choose the dice to roll."
+msgstr "Välj tärning att kasta."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:29
+msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
+msgstr ""
+"Använd tangenterna 1 till 5, tangent 1 motsvarar den första tärningen och så "
+"vidare."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:33
+msgid "Switch to the <gui>Roll!</gui> button."
+msgstr "Växla till knappen <gui>Kasta!</gui>"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:34
+msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
+msgstr "Använd <key>Tab</key>, tryck <key>Enter</key> för att kasta."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "Switch to the score slots."
+msgstr "Växla till poängrutan."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:38
+msgid "Use <key>Tab</key>."
+msgstr "Använd <key>Tab</key>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "Navigate among the score slots."
+msgstr "Navigera i poängtabellen."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:42
+msgid "Use arrow keys."
+msgstr "Använd piltangenter."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:45
+msgid "Select the score slot."
+msgstr "Välj poängruta."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:46
+msgid "Press <key>Enter</key> or <key>spacebar</key>."
+msgstr "Tryck <key>Enter</key> eller <key>mellanslag</key>."
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Det här programmet är licensierat under <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/scores.page:18
+msgid "Check out your scores and know more about the score slots."
+msgstr "Kolla in dina poäng och lär dig mer om poängsättningen."
+
+#. (itstool) path: page/title
+#: C/scores.page:22
+msgid "Scores"
+msgstr "Poäng"
+
+#. (itstool) path: page/p
+#: C/scores.page:24
+msgid "You can check out your scores of the games played so far:"
+msgstr "Du kan kontrollera dina resultat i de tidigare spelen:"
+
+#. (itstool) path: item/p
+#: C/scores.page:28
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
+"\">Scores</gui></guiseq>."
+msgstr ""
+"Välj <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">Poäng</"
+"gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/scores.page:32
+msgid ""
+"The <gui>Regular</gui> version is displayed by default, to view scores "
+"obtained in <gui>Colors</gui>, select it from the drop down menu."
+msgstr ""
+"Som standard visas den <gui>Vanliga</gui> versionen, för att se poäng som "
+"erhållits i <gui>Färger</gui>, välj den i rullgardinsmenyn."
+
+#. (itstool) path: section/title
+#: C/scores.page:39
+msgid "Score slots"
+msgstr "Poängruta"
+
+#. (itstool) path: section/p
+#: C/scores.page:41
+msgid "You can choose a score slot from the seven available score slots:"
+msgstr "Du kan välja en poängruta från en av de sju tillgängliga poängrutorna:"
+
+#. (itstool) path: item/title
+#: C/scores.page:45
+msgid "<gui>3 of a Kind</gui>"
+msgstr "<gui>Tretal</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:46
+msgid ""
+"Three of the dice have the same number. The score is the total of all the "
+"dice. For example: 3, 4, 4, 4, 6."
+msgstr ""
+"Tre av tärningarna har samma nummer. Poängen är summan av alla tärningarna. "
+"Till exempel: 3, 4, 4, 4, 6."
+
+#. (itstool) path: item/title
+#: C/scores.page:50
+msgid "<gui>4 of a Kind</gui>"
+msgstr "<gui>Fyrtal</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:51
+msgid ""
+"Four of the dice have the same number. The score is the total of all the "
+"dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
+"the total of all the dice."
+msgstr ""
+"Fyra av tärningarna har samma nummer. Poängen är den totala summan av alla "
+"tärningarna. Till exempel: 2 5 5 5 5. I det färgade spelet är poängen 25 "
+"plus summan av alla tärningarna."
+
+#. (itstool) path: item/title
+#: C/scores.page:56
+msgid "<gui>Full House</gui>"
+msgstr "<gui>Kåk</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:57
+msgid ""
+"Five dice consisting of two groups: One group of three with the same numbers "
+"and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
+"In the Colors game, the score is 15 plus the total of all the dice."
+msgstr ""
+"Fem tärningar som består av två grupper: En grupp av tre med samma nummer "
+"och en annan grupp av två med samma nummer. Till exempel:1, 1, 1, 4, 4. I "
+"Färgspelet, är poängen 15 plus summan av alla tärningar."
+
+#. (itstool) path: item/title
+#: C/scores.page:63
+msgid "<gui>Small Straight</gui>"
+msgstr "<gui>Liten stege</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:64
+msgid ""
+"Four dice with consecutive numbers. The fifth die can be any number. For "
+"example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
+"score is 30 points."
+msgstr ""
+"Fyra tärningar med löpande numrering. Den femte tärningen kan vara valfri "
+"siffra. Till exempel: 2, 3, 4, 5, 5. Denna kategori används endast i det "
+"vanliga spelet. Poängen är 30 poäng."
+
+#. (itstool) path: item/title
+#: C/scores.page:69
+msgid "<gui>Large Straight</gui>"
+msgstr "<gui>Stor stege</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:70
+msgid ""
+"Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
+"40 points."
+msgstr ""
+"Fem tärningar med löpande numrering. Till exempel: 2, 3, 4, 5, 6. Poängen är "
+"40 poäng."
+
+#. (itstool) path: item/title
+#: C/scores.page:74
+msgid "<gui>5 of a Kind</gui>"
+msgstr "<gui>Femtal</gui>"
+
+#. (itstool) path: item/p
+#: C/scores.page:75
+msgid ""
+"Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
+"score is 50 plus the total of all the dice."
+msgstr ""
+"Fem identiska tärningar. Till exempel: 3, 3, 3, 3, 3. I det färgade spelet "
+"är poängen 50 plus summan av alla tärningarna"
+
+#. (itstool) path: info/desc
+#: C/settings.page:18
+msgid "Set players preferences."
+msgstr "Anpassa spelarinställningar."
+
+#. (itstool) path: page/title
+#: C/settings.page:22
+msgid "Players settings"
+msgstr "Spelarinställningar"
+
+#. (itstool) path: page/p
+#: C/settings.page:24
+msgid ""
+"You can change the number of <gui>Human Players</gui> and <gui>Computer "
+"Opponents</gui>."
+msgstr ""
+"Du kan ändra antalet <gui>Mänskliga spelare</gui> och <gui>Datormotståndare</"
+"gui>."
+
+#. (itstool) path: item/p
+#: C/settings.page:33
+msgid ""
+"You can increase or decrease the number of <gui>Human Players</gui> from "
+"<gui>Number of players</gui>. The maximum number of players can be six. You "
+"can change their names as well from <gui>Player Names</gui>."
+msgstr ""
+"Du kan öka eller minska antalet <gui>Mänskliga Spelare</gui> från <gui>Antal "
+"spelare</gui>. Det kan vara maximalt sex stycken spelare. Du kan ändra deras "
+"namn under <gui>Spelarnamn</gui>."
+
+#. (itstool) path: item/p
+#: C/settings.page:38
+msgid ""
+"You can change the number of <gui>Computer Opponents</gui> from <gui>Number "
+"of opponents</gui> and set the difficulty level of the opponent from the "
+"drop down menu next to <gui>Difficulty</gui>."
+msgstr ""
+"Du kan ändra antalet<gui>Datormotståndare</gui> under <gui>Antal "
+"motståndare</gui> och ställa in svårighetsnivån för motståndaren från "
+"rullgardinsmenyn bredvid <gui>Svårighetsgrad</gui>."
+
+#. (itstool) path: section/title
+#: C/settings.page:45
+msgid "Enable delay between the rolls"
+msgstr "Aktivera fördröjning mellan kasten"
+
+#. (itstool) path: section/p
+#: C/settings.page:47
+msgid ""
+"You can enable the delay between the rolls by checking the <gui style="
+"\"checkbox\">Delay between rolls</gui>."
+msgstr ""
+"Du kan aktivera fördröjningen mellan kasten genom att kryssa i <gui style="
+"\"checkbox\">Fördröjning mellan kast</gui>."
+
+#. (itstool) path: info/desc
+#: C/start-game.page:22
+msgid "How to play?"
+msgstr "Hur man spelar"
+
+#. (itstool) path: page/title
+#: C/start-game.page:26
+msgid "Start a new game"
+msgstr "Starta ett nytt spel"
+
+#. (itstool) path: page/p
+#: C/start-game.page:28
+msgid ""
+"You can start a new game anytime in between the game. To start a new game:"
+msgstr ""
+"Du kan starta ett nytt spel när som helst under spelet. För att starta ett "
+"nytt spel:"
+
+#. (itstool) path: item/p
+#: C/start-game.page:33
+msgid ""
+"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
+"Game</gui></guiseq>."
+msgstr ""
+"Välj <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">Nytt "
+"spel</gui></guiseq>."
+
+#. (itstool) path: section/title
+#: C/start-game.page:39
+msgid "Play <app>Tali</app>"
+msgstr "Spela <app>Tali</app>"
+
+#. (itstool) path: section/p
+#: C/start-game.page:41
+msgid ""
+"You have to roll the five dice three times and try to create a best hand. "
+"When the game starts, you see the results of the first throw of the dice."
+msgstr ""
+"Du kan kasta de fem tärningarna tre gånger och försöka skapa den bästa "
+"handen. När spelet börjar ser du resultatet av det första kastet av "
+"tärningarna."
+
+#. (itstool) path: item/p
+#: C/start-game.page:46
+msgid ""
+"Click on the dice you wish to roll. You can select all the dice to roll in "
+"the second or third roll by clicking <gui>Roll all!</gui>."
+msgstr ""
+"Klicka på tärningen som du vill kasta. Du kan välja att kasta alla "
+"tärningarna i det andra eller tredje försöket genom att klicka på <gui>Kasta "
+"alla!</gui>."
+
+#. (itstool) path: item/p
+#: C/start-game.page:50
+msgid "Click on <gui>Roll!</gui> to roll the selected dice."
+msgstr "Klicka på <gui>Kasta!</gui> för att kasta valda tärningar."
+
+#. (itstool) path: item/p
+#: C/start-game.page:53
+msgid ""
+"When you have a hand you like or have run out of chances to throw the dice, "
+"click on a row corresponding to what you think is your best scoring "
+"combination. It is possible to have a score of zero and if you click on the "
+"wrong row, you will be scored accordingly."
+msgstr ""
+"När du har en hand som du gillar eller har slut på chanser att kasta "
+"tärningarna, klicka på den raden som motsvarar vad du tror är din bästa "
+"poängkombination. Det är möjligt att få noll poäng och om du klickar på fel "
+"rad, kommer du att poängsättas i enlighet med detta."
+
+#. (itstool) path: note/p
+#: C/start-game.page:61
+msgid ""
+"You can only use each combination once, if you have chosen a scoring "
+"combination once, you can not choose the same again. There is one exception "
+"to this rule, if you roll a <gui>5 of a Kind</gui> a second time, you can "
+"place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
+"keep doing this each time you get another <gui>5 of a Kind</gui>."
+msgstr ""
+"Du kan bara använda varje kombination en gång, om du valt en "
+"poängkombination en gång, kan du inte välja samma igen. Det finns ett "
+"undantag från denna regel, om du kastar ett <gui>femtal</gui> en andra gång, "
+"kan du placera den i <gui>femtalsraden</gui> igen för femtio poäng. Du kan "
+"fortsätta att göra detta varje gång du får ett <gui>femtal</gui>."
+
+#. (itstool) path: note/p
+#: C/start-game.page:69
+msgid ""
+"There is a bonus of 35 points if you score a total of 63 points or more in "
+"the top six rows."
+msgstr ""
+"Det finns en bonus på 35 poäng om du får totalt 63 poäng eller mer i de "
+"översta sex raderna."
