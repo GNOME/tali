@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-05 00:02+0100\n"
-"PO-Revision-Date: 2015-03-05 00:03+0100\n"
+"POT-Creation-Date: 2015-08-25 14:44+0200\n"
+"PO-Revision-Date: 2015-08-25 14:45+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -127,7 +127,7 @@ msgstr "'Zwykłe'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
-msgstr "Już wykorzystane! Gdzie wpisać punkty?"
+msgstr "Już wykorzystane. Gdzie wpisać punkty?"
 
 #: ../src/clist.c:414
 #, c-format
@@ -157,7 +157,7 @@ msgstr "Wynik"
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+msgstr "%1$d m %2$d s"
 
 #: ../src/games-scores-dialog.c:386
 msgid "New Game"
