@@ -1,494 +1,883 @@
-# Greek translation for tali.
-# Copyright (C) 2015 tali's COPYRIGHT HOLDER
-# This file is distributed under the same license as the tali package.
-# Tom Tryfonidis <tomtryf@gmail.com>, 2015.
-#
+# Greek translation of gtali documentation
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
+# <>, 2009.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: tali master\n"
-"POT-Creation-Date: 2015-03-22 23:54+0000\n"
-"PO-Revision-Date: 2015-03-23 13:38+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Greek <team@lists.gnome.gr>\n"
+"Project-Id-Version: gtali.HEAD\n"
+"POT-Creation-Date: 2014-01-02 08:54+0000\n"
+"PO-Revision-Date: 2014-01-11 18:14+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Ελληνική μεταφραστική ομάδα GNOME <team@gnome.gr>, 2009-2015\n"
+"Ελληνική μεταφραστική ομάδα GNOME\n"
 " Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2014\n"
-" Τζένη Πετούμενου <epetoumenou@gmail.com>, 2009\n"
-" Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2015"
+" Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
+"\n"
+"Για περισσότερα δείτε http://www.gnome.gr/"
 
-#. (itstool) path: credit/name
-#: C/game-settings.page:12 C/index.page:13 C/keyboard-shortcuts.page:11
-#: C/scores.page:11 C/settings.page:11 C/start-game.page:15
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/game-settings.page:14 C/keyboard-shortcuts.page:13 C/scores.page:13
-#: C/settings.page:13 C/start-game.page:17
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: info/desc
-#: C/game-settings.page:19
-msgid "Switch to another game version."
-msgstr "Αλλάξτε σε άλλη έκδοση του παιχνιδιού"
-
-#. (itstool) path: page/title
-#: C/game-settings.page:23
-msgid "Game settings"
-msgstr "Ρυθμίσεις παιχνιδιού"
-
-#. (itstool) path: page/p
-#: C/game-settings.page:25
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:163
+msgctxt "_"
 msgid ""
-"The <gui>Regular</gui> version is the default game, to switch over to "
-"another game:"
+"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
 msgstr ""
-"Η <gui>Κλασική</gui> έκδοση είναι το προεπιλεγμένο παιχνίδι, για να αλλάξετε "
-"σε άλλο παιχνίδι:"
+"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
 
-#. (itstool) path: item/p
-#: C/game-settings.page:30 C/settings.page:29
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:240
+msgctxt "_"
 msgid ""
-"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
-"\">Preferences</gui></guiseq>."
+"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
 msgstr ""
-"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem"
-"\">Προτιμήσεις</gui></guiseq>."
+"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
 
-#. (itstool) path: item/p
-#: C/game-settings.page:34
-msgid "Select the desired version of the game from <gui>Game Type</gui>."
-msgstr ""
-"Επιλέξτε την επιθυμητή έκδοση του παιχνιδιού από τον <gui>Τύπο παιχνιδιού</"
-"gui>."
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:27
+msgid "<application>Tali</application> Manual"
+msgstr "Εγχειρίδιο του <application>Τάλι</application>"
 
-#. (itstool) path: item/p
-#: C/game-settings.page:37
-msgid "Now, you may <link xref=\"start-game\">Start a new game</link>."
-msgstr ""
-"Πλέον, μπορείτε να <link xref=\"start-game\">ξεκινήσετε ένα νέο παιχνίδι</"
-"link>."
-
-#. (itstool) path: info/title
-#: C/index.page:8
-msgctxt "link"
-msgid "Tali"
-msgstr "Τάλι"
-
-#. (itstool) path: info/title
-#: C/index.page:9
-msgctxt "text"
-msgid "Tali"
-msgstr "Τάλι"
-
-#. (itstool) path: info/desc
-#: C/index.page:19
-msgid "Tali help."
-msgstr "Βοήθεια Τάλι."
-
-#. (itstool) path: page/title
-#: C/index.page:22
-msgid "<_:media-1/> Tali"
-msgstr "<_:media-1/> Τάλι"
-
-#. (itstool) path: page/p
-#: C/index.page:27
+#. (itstool) path: abstract/para
+#: C/index.docbook:29
 msgid ""
-"<app>Tali</app> is similar to poker with dice. You roll five dice three "
-"times and try to create the best hand."
+"Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
+"dice to try to make the best possible combinations, like 4 of a kind, small "
+"straight, and full house. The player is allowed 3 rolls per turn and can "
+"hold certain dice with each roll."
 msgstr ""
-"Το <app>Τάλι</app> είναι παρόμοιο με το πόκερ με ζάρια. Ρίχνετε πέντε ζάρια "
-"τρεις φορές και προσπαθείτε να δημιουργήσετε τον βέλτιστο συνδυασμό."
+"Το Τάλι μοιάζει με το Yahtzee ή με πόκερ για ζάρια. Ο παίχτης ρίχνει τα "
+"ζάρια με στόχο να επιτύχει τον καλύτερο δυνατό συνδυασμό, π.χ. καρέ, μικρή "
+"κέντα, φουλ. Ο παίκτης δικαιούται τρεις ζαριές τη φορά. Για κάθε ζαριά "
+"μπορεί να αποφασίσει αν θα κρατήσει κάποια από τα ζάρια που έχει ή αν θα "
+"ξαναρίξει όλα τα ζάρια."
 
-#. (itstool) path: section/title
-#: C/index.page:31
-msgid "Playing Tali"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2001</year> <holder>Scott D. Heavner</holder>"
+msgstr "<year>2001</year> <holder>Scott D. Heavner</holder>"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:93
+msgid "GNOME Documentation Project"
+msgstr "Έργο Τεκμηρίωσης GNOME"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Δίνεται άδεια για αντιγραφή, διανομή και/ή τροποποίηση του εγγράφου υπό τους "
+"όρους της GNU Free Documentation License (GFDL), Έκδοση 1.1 ή μεταγενέστερη "
+"εκδιδόμενη από το Ίδρυμα Ελεύθερου Λογισμικού χωρίς Σταθερά Εδάφια, χωρίς "
+"Εξώφυλλα Κειμένου, και χωρίς Οπισθόφυλλα Κειμένου. Μπορείτε να βρείτε ένα "
+"αντίγραφο της GFDL σε αυτόν τον <ulink type=\"help\" url=\"help:fdl"
+"\">σύνδεσμο</ulink> ή στο αρχείο COPYING-DOCS που διανεμήθηκε με αυτόν τον "
+"οδηγό."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Αυτή η τεκμηρίωση είναι μέρος της συλλογής τεκμηρίωσης του GNOME όπως "
+"διανέμεται υπό τους όρους της GFDL. Εάν επιθυμείτε να διανείμετε αυτή την "
+"τεκμηρίωση ξεχωριστά από την συλλογή, μπορείτε να το κάνετε εάν η τεκμηρίωση "
+"συνοδεύεται από αντίγραφο της άδειας (GFDL) όπως περιγράφεται στον τομέα 6 "
+"της άδειας."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Πολλά από τα ονόματα που χρησιμοποιούνται από εταιρίες για να ξεχωρίσουν τα "
+"προϊόντα και τις υπηρεσίες είναι σήματα κατατεθέν. Όπου αυτά τα ονόματα "
+"εμφανίζονται στην τεκμηρίωση GNOME, και τα μέλη της ομάδας τεκμηρίωσης GNOME "
+"έχουν γνώση αυτών, τότε αυτά αναγράφονται με κεφαλαίους χαρακτήρες ή με "
+"αρχικούς κεφαλαίους χαρακτήρες."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"Η ΤΕΚΜΗΡΙΩΣΗ ΑΥΤΗ ΠΑΡΕΧΕΤΑΙ \"ΩΣ ΕΧΕΙ\", ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ ΟΤΙ ΜΠΟΡΕΙ ΝΑ "
+"ΕΞΥΠΗΡΕΤΗΣΕΙ ΚΑΠΟΙΟ ΣΚΟΠΟ Η ΟΤΙ ΕΙΝΑΙ ΧΩΡΙΣ ΣΦΑΛΜΑ. ΟΛΟΚΛΗΡΗ Η ΕΥΘΥΝΗ ΓΙΑ "
+"ΤΗΝ ΠΟΙΟΤΗΤΑ, ΑΚΡΙΒΕΙΑ ΚΑΙ ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ Ή ΠΑΡΑΛΛΑΓΩΝ "
+"ΑΥΤΗΣ ΑΝΗΚΕΙ ΣΕ ΕΣΑΣ. ΕΑΝ Η ΤΕΚΜΗΡΙΩΣΗ ΑΥΤΗ Ή ΠΑΡΑΛΛΑΓΗ ΑΥΤΗΣ ΕΙΝΑΙ ΛΑΘΟΣ "
+"ΚΑΤΑ ΚΑΠΟΙΟ ΤΡΟΠΟ ΕΣΕΙΣ ΑΝΑΛΑΜΒΑΝΕΤΕ ΤΗΝ ΕΥΘΥΝΗ ΤΗΣ ΔΙΟΡΘΩΣΗΣ. Η ΑΠΑΛΛΑΓΗ "
+"ΕΥΘΥΝΗΣ ΠΟΥ ΣΥΝΟΔΕΥΕΙ ΑΥΤΗ ΤΗΝ ΤΕΚΜΗΡΙΩΣΗ ΕΙΝΑΙ ΑΝΑΠΟΣΠΑΣΤΟ ΚΟΜΜΑΤΙ ΑΥΤΗΣ. "
+"ΚΑΜΙΑ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ Ή ΠΑΡΑΛΛΑΓΩΝ ΑΥΤΗΣ ΔΕΝ ΕΠΙΤΡΕΠΕΤΑΙ ΠΑΡΑ ΜΟΝΟ ΕΑΝ "
+"ΣΥΝΟΔΕΥΕΤΑΙ ΑΠΟ ΤΗΝ ΑΠΑΛΛΑΓΗ ΕΥΘΥΝΗΣ."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"ΣΕ ΚΑΜΙΑ ΠΕΡΙΠΤΩΣΗ ΚΑΙ ΥΠΟ ΚΑΜΙΑ ΝΟΜΙΚΗ ΣΥΝΘΗΚΗ, ΕΙΤΕ ΜΕΣΩ ΣΥΜΒΟΛΑΙΩΝ Ή "
+"ΑΛΛΙΩΣ, ΔΕΝ ΕΥΘΥΝΟΝΤΑΙ Ο ΣΥΓΓΡΑΦΕΑΣ, Ο ΔΙΑΝΟΜΕΑΣ, Η ΑΛΛΟΣ ΣΥΝΥΠΕΥΘΥΝΟΣ ΓΙΑ "
+"ΤΗΝ ΣΥΓΓΡΑΦΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ, ΓΙΑ ΕΜΜΕΣΕΣ Η ΑΜΕΣΕΣ, ΤΥΧΑΙΕΣ Ή ΜΗ ΖΗΜΙΕΣ "
+"ΠΑΝΤΩΣ ΦΥΣΕΩΣ ΠΟΥ ΠΡΟΕΡΧΟΝΤΑΙ ΑΠΟ ΤΗΝ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ/Ή ΠΑΡΑΛΛΑΓΩΝ "
+"ΑΥΤΗΣ ΑΚΟΜΑ ΚΑΙ ΕΑΝ ΕΧΕΙ ΥΠΑΡΞΕΙ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΓΙΑ ΤΗΝ ΠΙΘΑΝΟΤΗΤΑ ΥΠΑΡΞΗΣ "
+"ΤΕΤΟΙΩΝ ΖΗΜΙΩΝ."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"ΤΟ ΈΓΓΡΑΦΟ ΚΑΙ ΤΡΟΠΟΠΟΙΗΜΕΝΕΣ ΕΚΔΟΣΕΙΣ ΑΥΤΟΥ ΠΑΡΕΧΟΝΤΑΙ ΥΠΟ ΤΟΥΣ ΟΡΟΥΣ ΤΗΣ "
+"GNU FREE DOCUMENTATION LICENSE ΜΕ ΤΗΝ ΠΕΡΑΙΤΕΡΩ ΔΙΕΥΚΡΙΝΙΣΗ ΟΤΙ: <_:"
+"orderedlist-1/>"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:62
+msgid ""
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:90
+msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
+msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:86
+msgid ""
+"<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Εγχειρίδιο του Τάλι V2.8</revnumber> <date>Σεπτέμβριος 2004</"
+"date> <_:revdescription-1/>"
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:98
+msgid "This manual describes version 2.12 of Tali."
+msgstr "Αυτή η τεκμηρίωση καλύπτει την έκδοση 2.12 του Τάλι."
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:105
+msgid "Feedback"
+msgstr "Ανάδραση"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:106
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Tali</"
+"application> application or this manual, follow the directions in the <ulink "
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
+msgstr ""
+"Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με το "
+"<application>Τάλι</application> ή την τεκμηρίωση του, ακολουθήστε τις "
+"οδηγίες στη <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">σελίδα ανάδρασης GNOME</ulink>."
+
+#. (itstool) path: article/indexterm
+#: C/index.docbook:116
+msgid "<primary>GNOME Tali</primary>"
+msgstr "<primary>Τάλι</primary>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:123
+msgid "Introduction"
+msgstr "Εισαγωγή"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:125
+msgid ""
+"<application>GNOME Tali</application> is a sort of poker with dice and less "
+"money. You roll five dice three times and try to create the best "
+"<quote>hand</quote>. Your two rerolls may include any or all of your dice."
+msgstr ""
+"Το <application>Τάλι</application> είναι ένα είδος πόκερ για ζάρια και με "
+"λιγότερα λεφτά. Ρίχνετε τα ζάρια τρεις φορές προσπαθώντας να αποκτήσετε το "
+"καλύτερο δυνατό <quote>φύλλο</quote>. Σε κάθε νέα ζαριά μπορείτε να "
+"ξαναρίξετε όσα ζάρια θέλετε."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:131
+msgid ""
+"<application>GNOME Tali</application> is very similar to the dice game "
+"Yahtzee which is a trademark of Hasbro, Inc."
+msgstr ""
+"Το <application>Τάλι</application> μοιάζει πολύ με το παιχνίδι για ζάρια "
+"Yahtzee που αποτελεί σήμα κατατεθέν της Hasbro, Inc."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:136
+msgid ""
+"To run <application>GNOME Tali</application>, select <menuchoice> "
+"<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
+"menuchoice> from the <guimenu>Main Menu</guimenu>, or type <command>gtali</"
+"command> on the command line."
+msgstr ""
+"Για να παίξετε <application>Τάλι</application>, επιλέξτε "
+"<menuchoice><guisubmenu>Παιχνίδια</guisubmenu><guimenuitem>Τάλι</"
+"guimenuitem></menuchoice> από το <guimenu>Κύριο μενού</guimenu>, ή "
+"πληκτρολογήστε <command>gtali</command> στη γραμμή εντολών."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:146
+msgid ""
+"<application>GNOME Tali</application> is included in the <filename>gnome-"
+"games</filename> package, which is part of the GNOME desktop environment. "
+"This document describes version 2.8 of <application>GNOME Tali</application>."
+msgstr ""
+"Το <application>Τάλι</application> συμπεριλαμβάνεται στο πακέτο "
+"<filename>gnome-games</filename>, που αποτελεί τμήμα της επιφάνειας εργασίας "
+"του GNOME. Αυτή η τεκμηρίωση καλύπτει την έκδοση 2.12 του <application>Τάλι</"
+"application>/."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:155
+msgid "Playing GNOME Tali"
 msgstr "Παίζοντας Τάλι"
 
-#. (itstool) path: section/title
-#: C/index.page:35
-msgid "Advanced"
-msgstr "Για προχωρημένους"
+#. (itstool) path: figure/title
+#: C/index.docbook:158
+msgid "GNOME Tali in action"
+msgstr "Το Τάλι εν δράσει"
 
-#. (itstool) path: section/title
-#: C/index.page:39
-msgid "Useful tips"
-msgstr "Χρήσιμες συμβουλές"
-
-#. (itstool) path: info/desc
-#: C/keyboard-shortcuts.page:18
-msgid "Play the game through keyboard."
-msgstr "Παίξτε το παιχνίδι χρησιμοποιώντας το πληκτρολόγιο."
-
-#. (itstool) path: page/title
-#: C/keyboard-shortcuts.page:22
-msgid "Keyboard shortcuts"
-msgstr "Συντομεύσεις πληκτρολογίου"
-
-#. (itstool) path: page/p
-#: C/keyboard-shortcuts.page:24
-msgid "You can play <app>tali</app> using the keyboard keys as well."
-msgstr ""
-"Μπορείτε να παίξετε το <app>Τάλι</app> χρησιμοποιώντας το πληκτρολόγιο."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:28
-msgid "Choose the dice to roll."
-msgstr "Επιλέξτε το ζάρι που θα ρίξετε."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:29
-msgid "Use Keys 1 through 5, the key 1 corresponds to the first die and so on."
-msgstr ""
-"Χρησιμοποιήστε τα πλήκτρα από το 1 έως το 5, το πλήκτρο 1 αντιπροσωπεύει το "
-"πρώτο ζάρι και πάει λέγοντας."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:33
-msgid "Switch to the <gui>Roll!</gui> button."
-msgstr "Αλλάξτε στο κουμπί <gui>Ζαριά!</gui>."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:34
-msgid "Use <key>Tab</key>, press <key>Enter</key> to roll."
-msgstr ""
-"Χρησιμοποιήστε το <key>Tab</key>, πατήστε <key>Enter</key> για να ρίξετε."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:37
-msgid "Switch to the score slots."
-msgstr "Μεταβείτε στις γραμμές βαθμολογίας."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:38
-msgid "Use <key>Tab</key>."
-msgstr "Χρησιμοποιήστε το <key>Tab</key>."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:41
-msgid "Navigate among the score slots."
-msgstr "Περιηγηθείτε μεταξύ των γραμμών βαθμολογίας."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:42
-msgid "Use arrow keys."
-msgstr "Χρησιμοποιήστε τα βέλη."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:45
-msgid "Select the score slot."
-msgstr "Επιλέξτε γραμμή βαθμολογίας."
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:46
-msgid "Press <key>Enter</key> or <key>spacebar</key>."
-msgstr "Πατήστε <key>Enter</key> ή το <key>πλήκτρο διαστήματος</key>."
-
-#. (itstool) path: p/link
-#: C/legal.xml:5
-msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "Άδεια Creative Commons Attribution-ShareAlike 3.0 Unported"
-
-#. (itstool) path: license/p
-#: C/legal.xml:4
-msgid "This work is licensed under a <_:link-1/>."
-msgstr "Αυτό το έργο έχει αδειοδοτηθεί υπό την <_:link-1/>."
-
-#. (itstool) path: info/desc
-#: C/scores.page:18
-msgid "Check out your scores and know more about the score slots."
-msgstr ""
-"Ελέγξτε τις βαθμολογίες σας και μάθετε περισσότερα σχετικά με τις γραμμές "
-"βαθμολογίας."
-
-#. (itstool) path: page/title
-#: C/scores.page:22
-msgid "Scores"
-msgstr "Βαθμολογίες"
-
-#. (itstool) path: page/p
-#: C/scores.page:24
-msgid "You can check out your scores of the games played so far:"
-msgstr ""
-"Μπορείτε να ελέγξετε τις βαθμολογίες των παιχνιδιών σας που έχετε παίξει:"
-
-#. (itstool) path: item/p
-#: C/scores.page:28
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:160
 msgid ""
-"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem"
-"\">Scores</gui></guiseq>."
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"main window screenshot.</phrase> </textobject>"
 msgstr ""
-"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem"
-"\">Βαθμολογίες</gui></guiseq>."
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Κύριο "
+"παράθυρο του Τάλι</phrase> </textobject>"
 
-#. (itstool) path: item/p
-#: C/scores.page:32
+#. (itstool) path: sect1/para
+#: C/index.docbook:172
+msgid "When play starts, you see the results of your first throw of the dice."
+msgstr ""
+"Στο ξεκίνημα του παιχνιδιού βλέπετε τα αποτελέσματα της πρώτης σας ζαριάς."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:179
+msgid "Click on the dice you wish to roll again."
+msgstr "Κάντε κλικ πάνω στα ζάρια που θέλετε να ξαναρίξετε."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:183
 msgid ""
-"The <gui>Regular</gui> version is displayed by default, to view scores "
-"obtained in <gui>Colors</gui>, select it from the drop down menu."
+"When you have selected all the dice you wish to reroll, press the "
+"<guibutton>Roll!</guibutton> button."
 msgstr ""
-"Η προεπιλεγμένη προβολή είναι η <gui>Κανονική</gui> έκδοση, για να δείτε τις "
-"βαθμολογίες που περιέχονται στα <gui>Χρώματα</gui>, επιλέξτε το από το "
-"πτυσσόμενου μενού."
+"Αφού επιλέξετε τα ζάρια που επιθυμείτε να ξαναρίξετε, πατήστε το κουμπί "
+"<guibutton>Ρίξτε τα ζάρια!</guibutton>."
 
-#. (itstool) path: section/title
-#: C/scores.page:39
-msgid "Score slots"
-msgstr "Γραμμές βαθμολογίας"
-
-#. (itstool) path: section/p
-#: C/scores.page:41
-msgid "You can choose a score slot from the seven available score slots:"
-msgstr "Μπορείτε να επιλέξετε μια γραμμή βαθμολογίας από τις επτά διαθέσιμες:"
-
-#. (itstool) path: item/title
-#: C/scores.page:45
-msgid "<gui>3 of a Kind</gui>"
-msgstr "<gui>Τρία όμοια</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:46
-msgid ""
-"Three of the dice have the same number. The score is the total of all the "
-"dice. For example: 3, 4, 4, 4, 6."
-msgstr ""
-"Τρία ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο όλων "
-"των ζαριών. Για παράδειγμα: 3, 4, 4, 4, 6."
-
-#. (itstool) path: item/title
-#: C/scores.page:50
-msgid "<gui>4 of a Kind</gui>"
-msgstr "<gui>Καρέ</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:51
-msgid ""
-"Four of the dice have the same number. The score is the total of all the "
-"dice. For example: 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus "
-"the total of all the dice."
-msgstr ""
-"Τέσσερα ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο "
-"όλων των ζαριών. Για παράδειγμα: 2, 5, 5, 5, 5.  Όταν παίζετε Χρώματα, η "
-"βαθμολογία είναι 25 συν το σύνολο όλων των ζαριών."
-
-#. (itstool) path: item/title
-#: C/scores.page:56
-msgid "<gui>Full House</gui>"
-msgstr "<gui>Φουλ</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:57
-msgid ""
-"Five dice consisting of two groups: One group of three with the same numbers "
-"and another group of two with the same numbers. For example: 1, 1, 1, 4, 4. "
-"In the Colors game, the score is 15 plus the total of all the dice."
-msgstr ""
-"Πέντε ζάρια σε δύο ομάδες: Μία ομάδα τριών ζαριών με τον ίδιο αριθμό και μία "
-"ομάδα δύο ζαριών με τον ίδιο αριθμό. Για παράδειγμα: 1, 1, 1, 4, 4. Όταν "
-"παίζετε Χρώματα, η βαθμολογία είναι 15 συν το σύνολο όλων των ζαριών."
-
-#. (itstool) path: item/title
-#: C/scores.page:63
-msgid "<gui>Small Straight</gui>"
-msgstr "<gui>Μικρή κέντα</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:64
-msgid ""
-"Four dice with consecutive numbers. The fifth die can be any number. For "
-"example: 2, 3, 4, 5, 5. This category is only used in the regular game. The "
-"score is 30 points."
-msgstr ""
-"Τέσσερα ζάρια με διαδοχικούς αριθμούς. Το πέμπτο ζάρι μπορεί να είναι "
-"οτιδήποτε. Για παράδειγμα: 2, 3, 4, 5, 5. Αυτή η κατηγορία χρησιμοποιείται "
-"μόνο στο κλασικό παιχνίδι. Βαθμολογείται με 30 βαθμούς."
-
-#. (itstool) path: item/title
-#: C/scores.page:69
-msgid "<gui>Large Straight</gui>"
-msgstr "<gui>Μεγάλη κέντα</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:70
-msgid ""
-"Five dice with consecutive numbers. For example: 2, 3, 4, 5, 6. The score is "
-"40 points."
-msgstr ""
-"Πέντε ζάρια με διαδοχικούς αριθμούς. Για παράδειγμα 2, 3, 4, 5, 6. Αυτός ο "
-"συνδυασμός δίνει 40 βαθμούς."
-
-#. (itstool) path: item/title
-#: C/scores.page:74
-msgid "<gui>5 of a Kind</gui>"
-msgstr "<gui>Πέντε όμοια</gui>"
-
-#. (itstool) path: item/p
-#: C/scores.page:75
-msgid ""
-"Five identical dice. For example: 3, 3, 3, 3, 3. In the Colors game, the "
-"score is 50 plus the total of all the dice."
-msgstr ""
-"Πέντε όμοια ζάρια. Για παράδειγμα: 3, 3, 3, 3, 3. Στα Χρώματα, η βαθμολογία "
-"είναι 50 συν το σύνολο όλων των ζαριών."
-
-#. (itstool) path: info/desc
-#: C/settings.page:18
-msgid "Set players preferences."
-msgstr "Ορίστε τις ρυθμίσεις των παιχτών"
-
-#. (itstool) path: page/title
-#: C/settings.page:22
-msgid "Players settings"
-msgstr "Ρυθμίσεις παικτών"
-
-#. (itstool) path: page/p
-#: C/settings.page:24
-msgid ""
-"You can change the number of <gui>Human Players</gui> and <gui>Computer "
-"Opponents</gui>."
-msgstr ""
-"Μπορείτε να αλλάξετε τον αριθμό των <gui>Ανθρώπινων παικτών</gui> και των "
-"<gui>Αντιπάλων υπολογιστή</gui>."
-
-#. (itstool) path: item/p
-#: C/settings.page:33
-msgid ""
-"You can increase or decrease the number of <gui>Human Players</gui> from "
-"<gui>Number of players</gui>. The maximum number of players can be six. You "
-"can change their names as well from <gui>Player Names</gui>."
-msgstr ""
-"Μπορείτε να αυξήσετε ή να μειώσετε τους <gui>Ανθρώπινους παίκτες</gui> από "
-"τον <gui>Αριθμό παικτών</gui>. Ο μέγιστος αριθμός παικτών μπορεί να είναι "
-"έξι. Επίσης μπορείτε να αλλάξετε τα ονόματα τους από το <gui>Ονόματα "
-"παικτών</gui>."
-
-#. (itstool) path: item/p
-#: C/settings.page:38
-msgid ""
-"You can change the number of <gui>Computer Opponents</gui> from <gui>Number "
-"of opponents</gui> and set the difficulty level of the opponent from the "
-"drop down menu next to <gui>Difficulty</gui>."
-msgstr ""
-"Μπορείτε να αλλάξετε τον αριθμό των <gui>Αντιπάλων υπολογιστή</gui> από το "
-"<gui>Αριθμός αντιπάλων</gui> και να ορίσετε το επίπεδο δυσκολίας του "
-"αντιπάλου από το πτυσσόμενο μενού δίπλα από τη <gui>Δυσκολία</gui>."
-
-#. (itstool) path: section/title
-#: C/settings.page:45
-msgid "Enable delay between the rolls"
-msgstr "Ενεργοποίηση καθυστέρησης μεταξύ των ζαριών"
-
-#. (itstool) path: section/p
-#: C/settings.page:47
-msgid ""
-"You can enable the delay between the rolls by checking the <gui style="
-"\"checkbox\">Delay between rolls</gui>."
-msgstr ""
-"Μπορείτε να ενεργοποιήσετε την καθυστέρηση μεταξύ των ρίψεων των ζαριών "
-"επιλέγοντας το <gui style=\"checkbox\">Καθυστέρηση μεταξύ των ζαριών</gui>."
-
-#. (itstool) path: info/desc
-#: C/start-game.page:22
-msgid "How to play?"
-msgstr "Πώς να παίξετε"
-
-#. (itstool) path: page/title
-#: C/start-game.page:26
-msgid "Start a new game"
-msgstr "Εκκίνηση νέου παιχνιδιού"
-
-#. (itstool) path: page/p
-#: C/start-game.page:28
-msgid ""
-"You can start a new game anytime in between the game. To start a new game:"
-msgstr ""
-"Μπορείτε ανά πάση στιγμή να ξεκινήσετε ένα νέο παιχνίδι. Για να το κάνετε "
-"αυτό:"
-
-#. (itstool) path: item/p
-#: C/start-game.page:33
-msgid ""
-"Select <guiseq><gui style=\"menu\">Tali</gui> <gui style=\"menuitem\">New "
-"Game</gui></guiseq>."
-msgstr ""
-"Επιλέξτε <guiseq><gui style=\"menu\">Τάλι</gui> <gui style=\"menuitem\">Νέο "
-"παιχνίδι</gui></guiseq>."
-
-#. (itstool) path: section/title
-#: C/start-game.page:39
-msgid "Play <app>Tali</app>"
-msgstr "Παίξτε <app>Τάλι</app>"
-
-#. (itstool) path: section/p
-#: C/start-game.page:41
-msgid ""
-"You have to roll the five dice three times and try to create a best hand. "
-"When the game starts, you see the results of the first throw of the dice."
-msgstr ""
-"Πρέπει να ρίξετε τα πέντε ζάρια τρεις φορές προσπαθώντας να δημιουργήσετε "
-"τον καλύτερο συνδιασμό. Όταν ξεκινά το παιχνίδι, βλέπετε τα αποτελέσματα της "
-"πρώτης ρίψης των ζαριών."
-
-#. (itstool) path: item/p
-#: C/start-game.page:46
-msgid ""
-"Click on the dice you wish to roll. You can select all the dice to roll in "
-"the second or third roll by clicking <gui>Roll all!</gui>."
-msgstr ""
-"Κάντε κλικ στο ζάρι που θέλετε να ρίξετε. Μπορείτε να επιλέξετε όλα τα ζάρια "
-"να ριχθούν στη δεύτερη ή τρίτη ρίψη κάνοντας κλικ στο <gui>Ρίξτε τα ζάρια!</"
-"gui>."
-
-#. (itstool) path: item/p
-#: C/start-game.page:50
-msgid "Click on <gui>Roll!</gui> to roll the selected dice."
-msgstr "Κάντε κλικ στο <gui>Ζαριά!</gui> για να ρίξετε το επιλεγμένο ζάρι."
-
-#. (itstool) path: item/p
-#: C/start-game.page:53
+#. (itstool) path: listitem/para
+#: C/index.docbook:188
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
-"combination. It is possible to have a score of zero and if you click on the "
-"wrong row, you will be scored accordingly."
+"combination. It is very possible to have a score of zero and if you click on "
+"the wrong row, you will be scored accordingly. (Say for example, you get "
+"yahtzee -- 5 of a kind -- and click on the large straight row, you will "
+"receive a zero in your large straight score)."
 msgstr ""
-"Όταν έχετε ένα συνδιασμό που σας αρέσει ή δεν έχετε άλλες ευκαιρίες να "
-"ρίξετε το ζάρι, τότε κάντε κλικ στη σειρά όπου νομίζετε πως αντιπροσωπεύει "
-"τον καλύτερο βαθμολογικά συνδιασμό. Είναι πιθανό να έχετε μηδενική "
-"βαθμολογία και αν κάνετε κλικ σε μια λάθος σειρά, να βαθμολογηθείτε αναλόγως."
+"Αν αποκτήσετε έναν καλό συνδυασμό ή αν δε δικαιούστε άλλες ζαριές, κάντε "
+"κλικ στη γραμμή που θεωρείτε ότι αντιστοιχεί στο συνδυασμό που θα σας δώσει "
+"την καλύτερη βαθμολογία. Είναι δυνατό να λάβετε μηδενική βαθμολογία. Αν "
+"λοιπόν επιλέξετε κατά λάθος άλλη γραμμή, η βαθμολογία σας θα είναι μηδενική. "
+"(Αν για παράδειγμα έχετε yahtzee (πέντε όμοια) και κάνετε κλικ στη γραμμή "
+"της μεγάλης κέντας, θα λάβετε μηδέν βαθμούς στη γραμμή της μεγάλης κέντας)."
 
-#. (itstool) path: note/p
-#: C/start-game.page:61
+#. (itstool) path: sect1/para
+#: C/index.docbook:198
 msgid ""
-"You can only use each combination once, if you have chosen a scoring "
-"combination once, you can not choose the same again. There is one exception "
-"to this rule, if you roll a <gui>5 of a Kind</gui> a second time, you can "
-"place it in the <gui>5 of a Kind</gui> row again for fifty points. You can "
-"keep doing this each time you get another <gui>5 of a Kind</gui>."
+"You can only use each combination once, i.e. once you've entered something "
+"in a slot, you can't change the score later if you roll a better hand."
 msgstr ""
-"Μπορείτε να χρησιμοποιήσετε μόνο μια φορά κάθε συνδιασμό, αν έχετε επιλέξει "
-"μια φορά έναν συνδιασμό βαθμολογίας, τότε δεν θα μπορέσετε να τον επιλέξετε "
-"ξανά. Υπάρχει όμως μια εξαίρεση στον κανόνα, αν ρίξετε <gui>Πέντε όμοια</"
-"gui> για δεύτερη φορά, τότε μπορείτε να το τοποθετήσετε ξανά στη σειρά "
-"<gui>Πέντε όμοια</gui> για πενήντα πόντους. Μπορείτε να συνεχίσετε να το "
-"κάνετε αυτό κάθε φορά που έχετε <gui>Πέντε όμοια</gui>."
+"Κάθε συνδυασμός μπορεί να χρησιμοποιηθεί μόνο μία φορά. Άρα, αν έχετε ήδη "
+"βαθμολογία σε κάποια γραμμή, δεν μπορείτε να την αλλάξετε αργότερα, αν "
+"φέρετε καλύτερη ζαριά."
 
-#. (itstool) path: note/p
-#: C/start-game.page:69
+#. (itstool) path: sect1/para
+#: C/index.docbook:203
 msgid ""
-"There is a bonus of 35 points if you score a total of 63 points or more in "
-"the top six rows."
+"There is one exception to this rule, if you roll a yahtzee a second time you "
+"can put it in the yahtzee row again for an extra fifty points. You can keep "
+"doing this each time you get another yahtzee. At the end of the game you "
+"will be given extra rolls to fill in the other rows. Be warned that if you "
+"score zero in your yahtzee row (i.e. you filled that row with something that "
+"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
+"will score."
 msgstr ""
-"Υπάρχει ένα μπόνους 35 βαθμούς αν η συνολική σας βαθμολογία για τις έξι πάνω "
-"σειρές είναι 63 ή παραπάνω."
+"Υπάρχει μόνο μία εξαίρεση στον κανόνα: Όσες φορές και να φέρετε πέντε όμοια, "
+"μπορείτε να χρησιμοποιείτε τη γραμμή \"Πέντε όμοια\" και να παίρνετε άλλους "
+"πενήντα βαθμούς. Στο τέλος του παιχνιδιού θα δικαιούστε επιπλέον ζαριές "
+"μέχρι να γεμίσετε όλες τις γραμμές. Σας προειδοποιούμε όμως ότι αν εισάγετε "
+"μηδέν βαθμούς στη γραμμή \"Πέντε όμοια\" (γιατί την επιλέξατε παρόλο που δεν "
+"είχατε τον κατάλληλο συνδυασμό), τότε δεν θα μπορείτε να τη χρησιμοποιήσετε "
+"στη συνέχεια, ακόμη κι αν φέρετε πέντε όμοια. Άρα, η τελική σας βαθμολογία "
+"για τη γραμμή αυτή θα είναι μηδέν."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:213
+msgid ""
+"There is also a bonus of 35 points if you score a total of 63 points or more "
+"in the top six rows."
+msgstr ""
+"Επίσης, παίρνετε μπόνους 35 βαθμούς επιπλέον, αν η συνολική σας βαθμολογία "
+"για τις έξι πάνω γραμμές είναι 63 ή παραπάνω."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:218
+msgid "Using the keyboard"
+msgstr "Συντομεύσεις πληκτρολογίου"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:220
+msgid ""
+"As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
+"just as if you had clicked them. The key 1 corresponds to the first die and "
+"so on. Use the usual controls to roll the dice and select a row. i.e. use "
+"tab to switch between the roll button and the score area, use the arrow keys "
+"to navigate up and down the rows and use space to select."
+msgstr ""
+"Αντί να κάνετε κλικ με το ποντίκι μπορείτε να χρησιμοποιείτε τα πλήκτρα 1 "
+"έως 5 για να εναλλάσσετε την κατάσταση των ζαριών. Το πλήκτρο 1 αντιστοιχεί "
+"στο πρώτο ζάρι κ.ο.κ. Για να ρίξετε τα ζάρια και να επιλέξετε γραμμή "
+"μπορείτε να χρησιμοποιήσετε τις συνήθεις συντομεύσεις: το Tab για να "
+"μετακινείστε από το κουμπί \"Ρίξτε τα ζάρια!\" στον πίνακα με τις "
+"βαθμολογίες, τα βέλη για να μετακινείστε από τη μια γραμμή στην άλλη, και το "
+"διάστημα για να επιλέγετε."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:232
+msgid "Game Options"
+msgstr "Επιλογές παιχνιδιού"
+
+#. (itstool) path: figure/title
+#: C/index.docbook:235
+msgid "GNOME Tali preferences"
+msgstr "Προτιμήσεις του Τάλι"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:237
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"preferences dialog box.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Παράθυρο "
+"προτιμήσεων του Τάλι.</phrase> </textobject>"
+
+#. (itstool) path: variablelist/title
+#: C/index.docbook:248
+msgid "Human Players"
+msgstr "Άνθρωποι παίκτες"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:250
+msgid "<guimenuitem>Number of players</guimenuitem>"
+msgstr "<guimenuitem>Αριθμός παικτών</guimenuitem>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:252
+msgid ""
+"Selects the number of human players. As described above you are only allowed "
+"six total players."
+msgstr ""
+"Επιλογή του αριθμού ανθρώπων παικτών. Συνολικά επιτρέπονται μέχρι και έξι "
+"παίκτες."
+
+#. (itstool) path: variablelist/title
+#: C/index.docbook:260
+msgid "Computer Opponents"
+msgstr "Παίκτες υπολογιστή"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:262
+msgid "<guimenuitem>Delay between rolls</guimenuitem>"
+msgstr "<guimenuitem>Καθυστέρηση μεταξύ των ζαριών</guimenuitem>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
+msgid ""
+"Make the computer opponents pause between rolls of the dice so you can see "
+"what they are doing. Slows down game play some."
+msgstr ""
+"Αναγκάζει τους παίκτες του υπολογιστή να κάνουν μια μικρή παύση από ζαριά σε "
+"ζαριά, ώστε να μπορείτε να παρακολουθείτε τις κινήσεις τους. Επιβραδύνει "
+"λίγο το ρυθμό του παιχνιδιού."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:271
+msgid "<guimenuitem>Number of opponents</guimenuitem>"
+msgstr "<guimenuitem>Αριθμός αντιπάλων</guimenuitem>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
+msgid ""
+"Select the number of computer opponents. You are allowed a total of six "
+"human and computer players. If you attempt to increase this number near the "
+"limit, the number of human players will be decreased to maintain only six "
+"total players."
+msgstr ""
+"Επιλογή του αριθμού των παικτών του υπολογιστή. Συνολικά επιτρέπονται έξι "
+"παίκτες (άνθρωποι ή παίκτες υπολογιστή). Αν αυξήσετε υπερβολικά τον αριθμό "
+"των παικτών του υπολογιστή, ο αριθμός των ανθρώπων θα μειωθεί, προκειμένου "
+"οι συνολικοί παίκτες να μην υπερβούν τους έξι."
+
+#. (itstool) path: variablelist/title
+#: C/index.docbook:283
+msgid "Game Type"
+msgstr "Είδος παιχνιδιού"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:285
+msgid "<guimenuitem>Version of the game to play</guimenuitem>"
+msgstr "<guimenuitem>Χρησιμοποιούμενη εκδοχή του παιχνιδιού</guimenuitem>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:287
+msgid ""
+"Play either the regular version (similar to Yahtzee) or the version with "
+"colors (similar to Kismet). When you change game type, you must restart the "
+"game to see use the new game type."
+msgstr ""
+"Μπορείτε να παίξετε είτε την κλασική εκδοχή (που μοιάζει με το Yahtzee) ή "
+"την εκδοχή με τα χρώματα (που μοιάζει με το Kismet). Αν αλλάξετε είδος "
+"παιχνιδιού, θα πρέπει να ξεκινήσετε νέο παιχνίδι για να χρησιμοποιήσετε το "
+"νέο είδος."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:297
+msgid "<guimenuitem>Player Names</guimenuitem>"
+msgstr "<guimenuitem>Ονόματα παικτών</guimenuitem>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
+msgid "To change the names of the players just enter new names in the boxes."
+msgstr ""
+"Για να αλλάξετε τα ονόματα των παικτών, απλά εισάγετε νέα ονόματα στα "
+"κατάλληλα πεδία."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:308
+msgid "Game Strategy"
+msgstr "Στρατηγική του παιχνιδιού"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:309
+msgid ""
+"The 63 points needed for the bonus in the upper half corresponds to getting "
+"three of each die type in each row. If you score more than three dice in the "
+"fives and sixes rows then you can afford to place a bad roll in either the "
+"ones row or the twos row and still get the bonus. In the Colors version, you "
+"get a bonus of 55 if your upper half total is between 71 and 77, and a bonus "
+"of 75 if your upper half total is greater than 77."
+msgstr ""
+"Για να αποκτήσετε τους 63 βαθμούς που χρειάζονται για το μπόνους στον πάνω "
+"πίνακα θα πρέπει να έχετε τρία όμοια σε κάθε μία από τις πρώτες έξι γραμμές. "
+"Αν έχετε παραπάνω από τρία πεντάρια ή εξάρια, τότε μπορείτε να πάρετε το "
+"μπόνους ακόμη και αν φέρετε χαμηλότερη βαθμολογία στους άσσους και τα "
+"δυάρια. Όταν παίζετε \"Χρώματα\", το μπόνους είναι 55 βαθμοί αν η βαθμολογία "
+"στον πάνω πίνακα είναι μεταξύ 71 και 77, και 75 βαθμοί για βαθμολογίες πάνω "
+"από 77."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:318
+msgid ""
+"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
+"also put it in the yahtzee row for even more points. This only applies to "
+"the regular game."
+msgstr ""
+"Μην ξεχνάτε ότι δικαιούστε περισσότερα από ένα \"Πέντε όμοια\". Αν λοιπόν "
+"ξαναφέρετε πέντε όμοια, μπορείτε να επιλέξετε και πάλι την αντίστοιχη γραμμή "
+"και να αυξήσετε τη βαθμολογία σας. Αυτό ισχύει μόνο για το κλασικό παιχνίδι."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:332
+msgid "Known Bugs and Limitations"
+msgstr "Γνωστά σφάλματα και περιορισμοί"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:333
+msgid ""
+"When you switch game type, the game does not use the new dice images until "
+"you restart gtali. It should play correctly with the \"wrong\" dice."
+msgstr ""
+"Όταν αλλάζετε είδος παιχνιδιου, το παιχνίδι συνεχίζει να χρησιμοποιεί τα "
+"παλαιά εικονίδια για τα ζάρια μέχρι να επανεκκινήσετε το gtali. Θα παίζετε "
+"το νέο είδος παιχνιδιού, αλλά με τα \"λάθος\" ζάρια."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:341
+msgid "Glossary"
+msgstr "Γλωσσάρι"
+
+#. (itstool) path: note/para
+#: C/index.docbook:343
+msgid "Remember that the order of the dice is not important."
+msgstr "Θυμηθείτε ότι η σειρά των ζαριών δεν παίζει ρόλο."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:346
+msgid "3 of a Kind"
+msgstr "Τρία όμοια"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:347
+msgid ""
+"Three of the dice have the same number. The score is the total of all the "
+"dice. e.g. 1, 2, 2, 2, 5."
+msgstr ""
+"Τρία ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο όλων "
+"των ζαριών. Π.χ. 1+2+2+2+5=12"
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:352
+msgid "4 of a Kind"
+msgstr "Καρέ"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:353
+msgid ""
+"Four of the dice have the same number. The score is the total of all the "
+"dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
+"of all the dice."
+msgstr ""
+"Τέσσερα ζάρια έχουν τον ίδιο αριθμό. Η βαθμολογία προκύπτει από το σύνολο "
+"όλων των ζαριών. Π.χ. 2+5+5+5+5=22. Όταν παίζετε \"Χρώματα\", η βαθμολογία "
+"είναι 25 συν το  σύνολο όλων των ζαριών."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:359
+msgid "5 of a Kind"
+msgstr "Πέντε όμοια"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:360
+msgid ""
+"Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
+"plus the total of all the dice."
+msgstr ""
+"Πέντε όμοια ζάρια. Π.χ. 3,3,3,3,3. Στα \"Χρώματα\", η βαθμολογία είναι 50 "
+"συν το σύνολο όλων των ζαριών."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:365
+msgid "Full House"
+msgstr "Φουλ"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:366
+msgid ""
+"Five dice consisting of two groups: One group of three with the same numbers "
+"and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
+"Colors game, the score is 15 plus the total of all the dice."
+msgstr ""
+"Πέντε ζάρια σε δύο ομάδες: Μία ομάδα τριών ζαριών με τον ίδιο αριθμό και μία "
+"ομάδα δύο ζαριών με τον ίδιο αριθμό. Π.χ. 1,1,1,4,4. Στα \"Χρώματα\", η "
+"βαθμολογία είναι 15 συν το σύνολο όλων των ζαριών."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:373
+msgid "Full House Same Color"
+msgstr "Φουλ με Χρώμα"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:374
+msgid ""
+"This category is only used in the Colors game. Five dice consisting of two "
+"groups: One group of three with the same numbers and another group of two "
+"with the same numbers. The numbers must be all the same color. e.g. 3, 3, 3, "
+"4, 4. Two dice are the same color if their numbers total 7: 1 and 6 are "
+"black, 2 and 5 are red, and 3 and 4 are green. The score is 20 plus the "
+"total of all the dice."
+msgstr ""
+"Αυτή η κατηγορία χρησιμοποιείται μόνο στα \"Χρώματα\". Περιλαμβάνει πέντε "
+"ζάρια σε δύο ομάδες: Μία ομάδα τριών ζαριών με τον ίδιο αριθμό και μία ομάδα "
+"δύο ζαριών με τον ίδιο αριθμό. Όλοι οι αριθμοί πρέπει να έχουν το ίδιο "
+"χρώμα. Π.χ. 3,3,3,4,4. Δύο ζάρια έχουν τον ίδιο αριθμό αν το άθροισμά τους "
+"είναι 7: το 1 και το 6 είναι μαύρα, το 2 και το 5 κόκκινα, το 3 και το 4 "
+"πράσινα. Η βαθμολογία αυτού του συνδυασμού είναι 20 συν  σύνολο όλων των "
+"ζαριών."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:384
+msgid "Two Pair Same Color"
+msgstr "Δύο ζευγάρια ίδιου χρώματος"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:385
+msgid ""
+"This category is only used in the Colors game. Five dice consisting of two "
+"groups: One group of two with the same numbers and another group of two with "
+"the same numbers. The pairs must be all the same color. e.g. 3, 3, 4, 4. Two "
+"dice are the same color if their numbers total 7: 1 and 6 are black, 2 and 5 "
+"are red, and 3 and 4 are green. The fifth die can be any value. The score is "
+"the total of all the dice."
+msgstr ""
+"Αυτή η κατηγορία χρησιμοποιείται μόνο στα \"Χρώματα\". Περιλαμβάνει δύο "
+"ομάδες ζαριών: Μία ομάδα δύο ζαριών με τον ίδιο αριθμό και μία δεύτερη ομάδα "
+"δύο ζαριών με τον ίδιο αριθμό. Και τα τέσσερα ζάρια των ζευγαριών πρέπει να "
+"έχουν το ίδιο χρώμα. Π.χ. 3,3,4,4. Δύο ζάρια έχουν τον ίδιο αριθμό αν το "
+"άθροισμά τους είναι 7: το 1 και το 6 είναι μαύρα, το 2 και το 5 κόκκινα, το "
+"3 και το 4 πράσινα. Το πέμπτο ζάρι μπορεί να είναι οτιδήποτε. Η βαθμολογία "
+"προκύπτει από το σύνολο όλων των ζαριών."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:395
+msgid "Flush"
+msgstr "Χρώμα"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:396
+msgid ""
+"This category is only used in the Colors game. Five dice that are all the "
+"same \"color\": Two dice are the same color if their numbers total 7: 1 and "
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
+msgstr ""
+"Αυτή η κατηγορία χρησιμοποιείται μόνο στο παιχνίδι \"Χρώματα\". Περιλαμβάνει "
+"πέντε ζάρια του ίδιου χρώματος: Δύο ζάρια έχουν το ίδιο χρώμα αν το άθροισμά "
+"τους είναι 7: το 1 και το 6 είναι μαύρα, το 2 και το 5 κόκκινα, το 3 και το "
+"4 πράσινα. Αυτός ο συνδυασμός δίνει 35 βαθμούς."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:403
+msgid "Large Straight"
+msgstr "Μεγάλη κέντα"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:404
+msgid ""
+"Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
+"points."
+msgstr ""
+"Πέντε ζάρια με διαδοχικούς αριθμούς. Π.χ. 2,3,4,5,6. Αυτός ο συνδυασμός "
+"δίνει 40 βαθμούς."
+
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:409
+msgid "Small Straight"
+msgstr "Μικρή κέντα"
+
+#. (itstool) path: glossdef/para
+#: C/index.docbook:410
+msgid ""
+"Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
+"3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
+"points."
+msgstr ""
+"Τέσσερα ζάρια με διαδοχικούς αριθμούς. Το πέμπτο ζάρι μπορεί να είναι "
+"οτιδήποτε. Π.χ. 2,3,4,5,5. Αυτή η κατηγορία χρησιμοποιείται μόνο στο κλασικό "
+"παιχνίδι. Βαθμολογείται με 30 βαθμούς."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:424
+msgid "Authors"
+msgstr "Δημιουργοί"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:425
+msgid ""
+"<application>GNOME Tali</application> was written by Scott Heavner "
+"(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
+"written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra "
+"material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</"
+"email>). To report a bug or make a suggestion regarding this application or "
+"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">document</ulink>."
+msgstr ""
+"Το <application>Τάλι</application> γράφτηκε από το Scott Heavner "
+"(<email>sdh@po.cwru.edu</email>) και τον Orest Zborowski. Η τεκμηρίωση "
+"γράφτηκε από το Scott D Heavner (<email>sdh@po.cwru.edu</email>), με "
+"πρόσθετο υλικό από τον Callum McKenzie (<email>callum@physics.otago.ac.nz</"
+"email>). Για να αναφέρετε σφάλματα ή να κάνετε υποδείξεις για την εφαρμογή ή "
+"την τεκμηρίωσή της, ακολουθείστε τις οδηγίες σε αυτό το <ulink url=\"ghelp:"
+"user-guide?feedback-bugs\" type=\"help\">έγγραφο</ulink>."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:452
+msgid "License"
+msgstr "Άδεια χρήσης"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:453
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
+"General Public License</citetitle></ulink> as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
+msgstr ""
+"Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό. Μπορείτε να το αναδιανέμετε ή/"
+"και να το τροποποιείτε μέσω των όρων της <citetitle>GNU General Public "
+"License</citetitle> όπως αυτή δημοσιεύτηκε από το  Free Software Foundation, "
+"έκδοση 2, ή (προαιρετικά) οποιαδήποτε νεότερη έκδοση."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:461
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
+"License</citetitle> for more details."
+msgstr ""
+"Αυτό το πρόγραμμα διανέμεται με την ελπίδα οτι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ "
+"ΚΑΜΙΑ ΑΠΟΛΥΤΩΣ ΕΓΓΥΗΣΗ - χωρίς ακόμη και την έμμεση εγγύηση ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ "
+"ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε για περισσότερες λεπτομέρειες "
+"τη <citetitle>GNU General Public License</citetitle>."
+
+#. (itstool) path: para/address
+#: C/index.docbook:474
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Ίδρυμα Ελεύθερου Λογισμικού, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Βοστόνη</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>Η.Π.Α</country>\n"
+"   "
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:467
+msgid ""
+"A copy of the <citetitle>GNU General Public License</citetitle> is included "
+"as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
+"obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
+msgstr ""
+"Αντίγραφο της <citetitle>GNU General Public License</citetitle> "
+"συμπεριλαμβάνεται ως παράρτημα στο <citetitle>Εγχειρίδιο χρήσης του GNOME</"
+"citetitle>. Μπορείτε επίσης να αποκτήσετε ένα αντίγραφό της από το Ίδρυμα "
+"Ελεύθερου Λογισμικού (Free Software Foundation) επισκεπτόμενοι την <ulink "
+"type=\"http\" url=\"http://www.fsf.org\">ιστοσελίδα τους</ulink> ή γράφοντας "
+"στη διεύθυνση <_:address-1/>"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "σύνδεσμο"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Δίνεται άδεια για αντιγραφή, διανομή και/ή τροποποίηση του εγγράφου υπό τους "
+"όρους της GNU Free Documentation License (GFDL), Έκδοση 1.1 ή μεταγενέστερη "
+"εκδιδόμενη από το Ίδρυμα Ελεύθερου Λογισμικού χωρίς Σταθερά Εδάφια, χωρίς "
+"Εξώφυλλα Κειμένου, και χωρίς Οπισθόφυλλα Κειμένου. Μπορείτε να βρείτε ένα "
+"αντίγραφο της GFDL σε αυτόν τον <_:ulink-1/> ή στο αρχείο COPYING-DOCS που "
+"διανεμήθηκε με αυτόν τον οδηγό."
+
+#~ msgid "2001"
+#~ msgstr "2001"
+
+#~ msgid "Scott D. Heavner"
+#~ msgstr "Scott D. Heavner"
+
+#~ msgid "Scott D"
+#~ msgstr "Scott D"
+
+#~ msgid "Heavner"
+#~ msgstr "Heavner"
+
+#~ msgid "sdh@po.cwru.edu"
+#~ msgstr "sdh@po.cwru.edu"
+
+#~ msgid "Tali Manual V2.8"
+#~ msgstr "Τεκμηρίωση του Τάλι V2.8"
+
+#~ msgid "September 2004"
+#~ msgstr "Σεπτέμβριος 2004"
+
+#~ msgid "GNOME Tali"
+#~ msgstr "GNOME Tali"
+
+#~ msgid "GNOME Tali main window screenshot."
+#~ msgstr "Στιγμιότυπο του κύριου παραθύρου του Τάλι."
+
+#~ msgid "GNOME Tali preferences dialog box."
+#~ msgstr "Διάλογος προτιμήσεων του Τάλι."
+
+#~ msgid "Number of players"
+#~ msgstr "Αριθμός παικτών"
+
+#~ msgid "Delay between rolls"
+#~ msgstr "Καθυστέρηση μεταξύ ζαριών"
+
+#~ msgid "Number of opponents"
+#~ msgstr "Αριθμός αντιπάλων"
+
+#~ msgid "Player Names"
+#~ msgstr "Ονόματα παικτών"
