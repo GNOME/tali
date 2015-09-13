@@ -1,27 +1,14 @@
 @YELP_HELP_RULES@
 HELP_ID = tali
 
-HELP_FILES = \
-	game-settings.page \
-	index.page \
-	keyboard-shortcuts.page \
-	legal.xml \
-	scores.page \
-	settings.page \
-	start-game.page
-
 HELP_MEDIA = \
-	media/logo32.png \
-	media/logo.png
+	figures/mainwindow.png \
+	figures/preferences.png
 
-HELP_LINGUAS = \
-	cs \
-	de \
-	el \
-	es \
-	fr \
-	hu \
-	ru \
-	sv
+HELP_FILES = \
+	index.docbook \
+	legal.xml
+
+HELP_LINGUAS = ca cs da de el en_GB es eu fr gl it oc pt_BR ru sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk
