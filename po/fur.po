@@ -1,0 +1,451 @@
+# Friulian translation for tali.
+# Copyright (C) 2015 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
+# Fabio Tomat <f.t.public@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tali gnome-3-18\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-10-20 12:43+0000\n"
+"PO-Revision-Date: 2015-10-22 04:45+0200\n"
+"Language-Team: Friulian <fur@li.org>\n"
+"Language: fur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
+"X-Generator: Poedit 1.8.5\n"
+
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
+msgid "Tali"
+msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tire un dât e fâs ponts"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Une variant dal poker cun dâts e mancul bêçs, un classic zûc par fameis. "
+"Tire il dât par trê voltis e ten chei che ti plasin, in mût di vê la man "
+"miôr. Tu puedis ancje zuiâ a une variant mancul cognossude cun dâts colorâts."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Zuie cuintri un o cinc aversaris su trê diviers nivei di dificoltât."
+
+#: ../data/tali.desktop.in.h:2
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Bat i aversaris intun zûc cun dâts simil al poker"
+
+#: ../data/tali.desktop.in.h:3
+msgid "yahtzee;"
+msgstr "yahtzee;tali;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Gnove partide"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Preferencis"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Risultâts"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Jutori"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Informazions"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Jes"
+
+#: ../data/org.gnome.tali.gschema.xml.h:1
+msgid "Delay between rolls"
+msgstr "Ritart fra lis tiradis"
+
+#: ../data/org.gnome.tali.gschema.xml.h:2
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Sielç se inserî o no un ritart fra i tîrs dai dâts dal computer cussì il "
+"zuiadôr al pues stâ daûr a ce che al sucêt."
+
+#: ../data/org.gnome.tali.gschema.xml.h:3
+msgid "Display the computer's thoughts"
+msgstr "Mostre i pinsîrs dal computer"
+
+#: ../data/org.gnome.tali.gschema.xml.h:4
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Se impostât a VÊR al vegnarà fat un dump de elaborazion dal IA sul standard "
+"output."
+
+#: ../data/org.gnome.tali.gschema.xml.h:5
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgstr "[ 'Uman', 'Toni', 'Bepi', 'Marie', 'Tite', 'Gjelinde' ]"
+
+#: ../data/org.gnome.tali.gschema.xml.h:6
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Regolâr'"
+
+#: ../src/clist.c:158
+msgid "Already used! Where do you want to put that?"
+msgstr "Za doprât! Dulà vûstu metilu?"
+
+#: ../src/clist.c:414
+#, c-format
+msgid "Score: %d"
+msgstr "Ponts: %d"
+
+#: ../src/clist.c:416
+#, c-format
+msgid "Field used"
+msgstr "Cjamp doprât"
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Timp"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "Ponts"
+
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:386
+msgid "New Game"
+msgstr "Gnove partide"
+
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
+msgid "Date"
+msgstr "Date"
+
+#: ../src/gyahtzee.c:100
+msgid "Delay computer moves"
+msgstr "Ritarde lis mossis dal computer"
+
+#: ../src/gyahtzee.c:102
+msgid "Display computer thoughts"
+msgstr "Mostre i pinsîrs dal computer"
+
+#: ../src/gyahtzee.c:104
+msgid "Number of computer opponents"
+msgstr "Numar di aversaris computer"
+
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
+msgid "NUMBER"
+msgstr "NUMAR"
+
+#: ../src/gyahtzee.c:106
+msgid "Number of human opponents"
+msgstr "Numar di aversaris umans"
+
+#: ../src/gyahtzee.c:108
+msgid "Game choice: Regular or Colors"
+msgstr "Sielte zûc: Regolâr o Colôrs"
+
+#: ../src/gyahtzee.c:108
+msgid "STRING"
+msgstr "STRINGHE"
+
+#: ../src/gyahtzee.c:110
+msgid "Number of computer-only games to play"
+msgstr "Numar di partidis dome di computer di zuiâ"
+
+#: ../src/gyahtzee.c:112
+msgid "Number of trials for each roll for the computer"
+msgstr "Numar di tentatîfs par ogni zuiade dal computer"
+
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
+msgctxt "game type"
+msgid "Regular"
+msgstr "Regolâr"
+
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
+msgctxt "game type"
+msgid "Colors"
+msgstr "Colôrs"
+
+#: ../src/gyahtzee.c:139
+msgid "Roll all!"
+msgstr "Tire i dâts!"
+
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+msgid "Roll!"
+msgstr "Tire!"
+
+#: ../src/gyahtzee.c:176
+msgid "The game is a draw!"
+msgstr "Paritât!"
+
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+msgid "Tali Scores"
+msgstr "Risultâts Tali"
+
+#: ../src/gyahtzee.c:191
+msgid "Congratulations!"
+msgstr "Congratulazions!"
+
+#: ../src/gyahtzee.c:192
+msgid "Your score is the best!"
+msgstr "Il to risultât al è il miôr!"
+
+#: ../src/gyahtzee.c:193
+msgid "Your score has made the top ten."
+msgstr "Il to risultât al è tra i prins 10."
+
+#: ../src/gyahtzee.c:205
+#, c-format
+msgid "%s wins the game with %d point"
+msgid_plural "%s wins the game with %d points"
+msgstr[0] "%s al vinç la partide cun %d pont"
+msgstr[1] "%s al vinç la partide cun %d ponts"
+
+#: ../src/gyahtzee.c:209
+msgid "Game over!"
+msgstr "Partide finide!"
+
+#: ../src/gyahtzee.c:253
+#, c-format
+msgid "Computer playing for %s"
+msgstr "Il computer al zuie par %s"
+
+#: ../src/gyahtzee.c:255
+#, c-format
+msgid "%s! – You’re up."
+msgstr "%s! – Al tocje a te."
+
+#: ../src/gyahtzee.c:448
+msgid "Select dice to roll or choose a score slot."
+msgstr "Selezione i dâts di tirâ o sielç i ponts di totalizâ."
+
+#: ../src/gyahtzee.c:476
+msgid "Roll"
+msgstr "Tire"
+
+#: ../src/gyahtzee.c:534
+msgid "You are only allowed three rolls. Choose a score slot."
+msgstr "A son ametûts dome trê tîrs. Sielç i ponts obietîf."
+
+#: ../src/gyahtzee.c:591
+msgid "GNOME version (1998):"
+msgstr "Version di GNOME (1998):"
+
+#: ../src/gyahtzee.c:594
+msgid "Console version (1992):"
+msgstr "Version pe cosole (1992):"
+
+#: ../src/gyahtzee.c:597
+msgid "Colors game and multi-level AI (2006):"
+msgstr "Colôrs e IA multi-nivel (2006):"
+
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "Une variant dal poker cun dâts e mancul bêçs."
+
+#: ../src/gyahtzee.c:618
+msgid "translator-credits"
+msgstr "Fabio Tomat <f.t.public@gmail.com>"
+
+#: ../src/gyahtzee.c:763
+msgid "Undo your most recent move"
+msgstr "Anule le tô ultime mosse"
+
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+msgid "Human"
+msgstr "Uman"
+
+#: ../src/setup.c:122
+msgid "Preferences will be updated in the next game."
+msgstr "Lis preferencis a vegnaran inzornadis de prossime partide."
+
+#: ../src/setup.c:264
+msgid "Preferences"
+msgstr "Preferencis"
+
+#: ../src/setup.c:282
+msgid "Human Players"
+msgstr "Zuiadôrs umans"
+
+#: ../src/setup.c:292
+msgid "_Number of players:"
+msgstr "_Numar di zuiadôrs:"
+
+#: ../src/setup.c:306
+msgid "Computer Opponents"
+msgstr "Aversaris computer"
+
+#. --- Button ---
+#: ../src/setup.c:313
+msgid "_Delay between rolls"
+msgstr "_Ritart fra lis tiradis"
+
+#: ../src/setup.c:323
+msgid "N_umber of opponents:"
+msgstr "N_umar di aversaris:"
+
+#: ../src/setup.c:337
+msgid "_Difficulty:"
+msgstr "_Dificoltât:"
+
+#: ../src/setup.c:340
+msgctxt "difficulty"
+msgid "Easy"
+msgstr "Facile"
+
+#: ../src/setup.c:341
+msgctxt "difficulty"
+msgid "Medium"
+msgstr "Medie"
+
+#: ../src/setup.c:342
+msgctxt "difficulty"
+msgid "Hard"
+msgstr "Dificile"
+
+#. --- Combo (yahtzee or kismet style ----
+#: ../src/setup.c:353
+msgid "Game Type"
+msgstr "Gjenar di zûc"
+
+#. --- PLAYER NAMES FRAME ----
+#: ../src/setup.c:365
+msgid "Player Names"
+msgstr "Nons dai zuiadôrs"
+
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+msgid "1s [total of 1s]"
+msgstr "1 [totâl di 1]"
+
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+msgid "2s [total of 2s]"
+msgstr "2 [totâl di 2]"
+
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+msgid "3s [total of 3s]"
+msgstr "3 [totâl di 3]"
+
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+msgid "4s [total of 4s]"
+msgstr "4 [totâl di 4]"
+
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+msgid "5s [total of 5s]"
+msgstr "5 [totâl di 5]"
+
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+msgid "6s [total of 6s]"
+msgstr "6 [totâl di 6]"
+
+#. End of upper panel
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+msgid "3 of a Kind [total]"
+msgstr "Tris [totâl]"
+
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+msgid "4 of a Kind [total]"
+msgstr "Poker [totâl]"
+
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+msgid "Full House [25]"
+msgstr "Full [25]"
+
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+msgid "Small Straight [30]"
+msgstr "Scjale curte [30]"
+
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+msgid "Large Straight [40]"
+msgstr "Scjale lungje [40]"
+
+#: ../src/yahtzee.c:97
+msgid "5 of a Kind [50]"
+msgstr "5 di un gjenar [50]"
+
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+msgid "Chance [total]"
+msgstr "Sorte [totâl]"
+
+#. End of lower panel
+#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+msgid "Lower Total"
+msgstr "Totâl inferiôr"
+
+#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+msgid "Grand Total"
+msgstr "Totâl complessîf"
+
+#. Need to squish between upper and lower pannel
+#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+msgid "Upper total"
+msgstr "Totâl superiôr"
+
+#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+msgid "Bonus if >62"
+msgstr "Bonus se >62"
+
+#. End of upper panel
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+msgid "2 pair Same Color [total]"
+msgstr "Cubie di colôrs [totâl]"
+
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+msgid "Full House [15 + total]"
+msgstr "Full [15 + totâl]"
+
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+msgid "Full House Same Color [20 + total]"
+msgstr "Full  dal stes colôr [20 + totâl]"
+
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+msgid "Flush (all same color) [35]"
+msgstr "Colôr (ducj dal stes colôr) [35]"
+
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+msgid "4 of a Kind [25 + total]"
+msgstr "4 dal stes valôr [25 + totâl]"
+
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+msgid "5 of a Kind [50 + total]"
+msgstr "4 dal stes valôr [50 + totâl]"
+
+#: ../src/yahtzee.c:251
+msgid "Choose a score slot."
+msgstr "Sielç un interval di ponts."
+
+#: ../src/yahtzee.c:525
+msgid "5 of a Kind [total]"
+msgstr "5 di un gjenar [totâl]"
