@@ -2,17 +2,17 @@
 # Copyright (c) 2010 tali's COPYRIGHT HOLDER
 # This file is distributed under the same license as the tali package.
 #
-# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2014.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2014, 2015.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: tali master\n"
+"Project-Id-Version: tali gnome-3-16\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-01 22:34+0000\n"
-"PO-Revision-Date: 2014-09-05 10:21+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"POT-Creation-Date: 2015-11-29 02:35+0000\n"
+"PO-Revision-Date: 2015-11-29 19:10+0700\n"
+"Last-Translator: Andika Triwidada <atriwidada@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Lempar dadu dan dapatkan nilai"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Suatu variasi dari poker dengan dadu dan lebih sedikit uang, permainan ini "
+"adalah klasik untuk keluarga. Lempar dadu tiga kali berturut-turut, "
+"pertahankan yang Anda sukai, untuk membuat pegangan yang paling baik. Anda "
+"juga dapat memainkan varian yang kurang dikenal dengan dadu berwarna."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Bermainlah melawan satu sampai lima lawan pada tiga tingkat kesulitan."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -33,6 +54,30 @@ msgstr "Kalahkan lawan dalam permainan dadu bergaya poker"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "Mai_nkan Permainan Baru"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Preferensi"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Nilai"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "Tent_ang"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Keluar"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -67,22 +112,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Reguler'"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Suatu variasi dari poker dengan dadu dan lebih sedikit uang, permainan ini "
-"adalah klasik untuk keluarga. Lempar dadu tiga kali berturut-turut, "
-"pertahankan yang Anda sukai, untuk membuat pegangan yang paling baik. Anda "
-"juga dapat memainkan varian yang kurang dikenal dengan dadu berwarna."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Bermainlah melawan satu sampai lima lawan pada tiga tingkat kesulitan."
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "Sudah digunakan! Di mana anda ingin menaruh itu?"
@@ -109,19 +138,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Nilai"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Permainan Baru"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Tanggal"
 
@@ -176,7 +207,7 @@ msgstr "Warna"
 msgid "Roll all!"
 msgstr "Jalankan semua!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Jalankan!"
 
@@ -184,7 +215,7 @@ msgstr "Jalankan!"
 msgid "The game is a draw!"
 msgstr "Permainan seri!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Skor Tali"
 
@@ -245,59 +276,29 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Permainan warna dan AI bermacam tingkat (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Variasi poker dengan dadu dan lebih sedikit uang\n"
-"\n"
-"Tali merupakan bagian dari GNOME Permainan."
+msgid "A variation on poker with dice and less money."
+msgstr "Variasi poker dengan dadu dan lebih sedikit uang."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
-"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2014.\n"
+"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2014, 2015.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012."
 
-#: ../src/gyahtzee.c:752
-msgid "_New Game"
-msgstr "Mai_nkan Permainan Baru"
-
-#: ../src/gyahtzee.c:753
-msgid "_Preferences"
-msgstr "_Preferensi"
-
-#: ../src/gyahtzee.c:754
-msgid "_Scores"
-msgstr "_Nilai"
-
-#: ../src/gyahtzee.c:757
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: ../src/gyahtzee.c:758
-msgid "_About"
-msgstr "Tent_ang"
-
-#: ../src/gyahtzee.c:759
-msgid "_Quit"
-msgstr "_Keluar"
-
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Batalkan langkah terakhir Anda"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Manusia"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "Permainan ini akan lengkap dengan jumlah pemain orisinal."
+msgid "Preferences will be updated in the next game."
+msgstr "Preferensi akan dimutakhirkan pada permainan berikutnya."
 
 #: ../src/setup.c:264
 msgid "Preferences"
