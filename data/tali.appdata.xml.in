@@ -21,6 +21,13 @@
   <screenshot type="default" width="972" height="561">https://people.gnome.org/~mcatanzaro/tali.png</screenshot>
  </screenshots>
  <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
- <updatecontact>games_list_at_gnome.org</updatecontact>
+ <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
  <project_group>GNOME</project_group>
+ <kudos>
+  <kudo>AppMenu</kudo>
+  <kudo>HiDpiIcon</kudo>
+  <kudo>HighContrast</kudo>
+  <kudo>ModernToolkit</kudo>
+  <kudo>UserDocs</kudo>
+ </kudos>
 </application>
