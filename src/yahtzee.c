@@ -212,8 +212,7 @@ NewGame (void)
 int
 RollDie (void)
 {
-  double r = (double) rand () / RAND_MAX;
-  return (int) (r * 6.0) + 1;
+  return rand () % 6 + 1;
 }
 
 void
