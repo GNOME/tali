@@ -1,3 +1,10 @@
+Tali 3.19.90
+============
+
+* Translation Updates (Bulgarian, Indonesian, Lithuanian, Friulian, Norwegian bokmål, German, Turkish)
+* Stop using deprecated gnome-common (Sahil Sareen)
+* Fix RollDie() that could return 7 (Hadi Moshayedi)
+
 Tali 3.18.0
 ===========
 
