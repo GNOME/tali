@@ -10,28 +10,48 @@
 # Andras Timar <timar at gnome dot hu>, 2002, 2003.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2016.
 # Balázs Úr <urbalazs at gmail dot com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-02 11:39+0000\n"
-"PO-Revision-Date: 2014-12-02 18:39+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-03-04 14:50+0000\n"
+"PO-Revision-Date: 2016-03-05 17:21+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
-#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Dobjon a kockával és szerezzen pontokat"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"A póker kockákkal és kevesebb pénzzel játszható változata, igazi családi "
+"klasszikus. Dobjon kockával egymás után háromszor, és a legjobb leosztás "
+"eléréséhez tartsa vissza, amelyiket kedveli. Játszhat egy kevésbé ismert "
+"változatot is színes kockákkal."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Játsszon egy és öt közti számú ellenféllel, három nehézségi szinten."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -40,6 +60,30 @@ msgstr "Győzze le az esélyeket egy póker stílusú kockajátékban"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "kockapóker;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "Ú_j játék"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Pontszámok"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Kilépés"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -73,26 +117,6 @@ msgstr "[ 'Ember', 'Vilmos', 'Béla', 'Mónika', 'Károly', 'Zsanett' ]"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regular'"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr "Dobjon a kockával és szerezzen pontokat"
-
-#: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"A póker kockákkal és kevesebb pénzzel játszható változata, igazi családi "
-"klasszikus. Dobjon kockával egymás után háromszor, és a legjobb leosztás "
-"eléréséhez tartsa vissza, amelyiket kedveli. Játszhat egy kevésbé ismert "
-"változatot is színes kockákkal."
-
-#: ../data/tali.appdata.xml.in.h:4
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Játsszon egy és öt közti számú ellenféllel, három nehézségi szinten."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -189,7 +213,7 @@ msgstr "Színes"
 msgid "Roll all!"
 msgstr "Dobás minddel!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr " Dobás!"
 
@@ -259,10 +283,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Színes játék és többszintű mesterséges intelligencia (2006):"
 
 #: ../src/gyahtzee.c:614
-#| msgid ""
-#| "A variation on poker with dice and less money\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid "A variation on poker with dice and less money."
 msgstr "Egy pókerváltozat dobókockával és kevesebb pénzzel."
 
@@ -277,40 +297,15 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
-#: ../src/gyahtzee.c:751
-msgid "_New Game"
-msgstr "Ú_j játék"
-
-#: ../src/gyahtzee.c:752
-msgid "_Preferences"
-msgstr "_Beállítások"
-
-#: ../src/gyahtzee.c:753
-msgid "_Scores"
-msgstr "_Pontszámok"
-
-#: ../src/gyahtzee.c:756
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../src/gyahtzee.c:757
-msgid "_About"
-msgstr "_Névjegy"
-
-#: ../src/gyahtzee.c:758
-msgid "_Quit"
-msgstr "_Kilépés"
-
-#: ../src/gyahtzee.c:777
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "A legutóbbi lépés visszavonása"
 
-#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Ember"
 
 #: ../src/setup.c:122
-#| msgid "Changes will take effect for the next game."
 msgid "Preferences will be updated in the next game."
 msgstr "A beállítások a következő játékban lépnek életbe."
 
@@ -368,56 +363,56 @@ msgstr "Játéktípus"
 msgid "Player Names"
 msgstr "Játékosok neve"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
-msgstr "egyesek [összes egyes]"
+msgstr "Egyesek [összes egyes]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
-msgstr "kettesek [összes kettes]"
+msgstr "Kettesek [összes kettes]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
-msgstr "hármasok [összes hármas]"
+msgstr "Hármasok [összes hármas]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
-msgstr "négyesek [összes négyes]"
+msgstr "Négyesek [összes négyes]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
-msgstr "ötösök [összes ötös]"
+msgstr "Ötösök [összes ötös]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
-msgstr "hatosok [összes hatos]"
+msgstr "Hatosok [összes hatos]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
-msgstr "három egyforma [összes]"
+msgstr "Három egyforma [összes]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
-msgstr "négy egyforma [összes]"
+msgstr "Négy egyforma [összes]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
-msgstr "Full [25]"
+msgstr "Full house [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Kis sor [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Nagy sor [40]"
 
 #: ../src/yahtzee.c:97
 msgid "5 of a Kind [50]"
-msgstr "öt egyforma [ötven]"
+msgstr "Öt egyforma [ötven]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Esély [összes]"
 
@@ -440,37 +435,37 @@ msgid "Bonus if >62"
 msgstr "Bónusz, ha nagyobb, mint 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 pár azonos szín [összes]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full house [15 + összes]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Azonos színű full house [20 + összes]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Flush (mind azonos szín) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "Négy egyforma [25 + összes]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "Öt egyforma [50 + összes]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Válasszon egy pontszámmezőt."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
-msgstr "öt egyforma [összes]"
+msgstr "Öt egyforma [összes]"
 
 # aisleriot/menu.c:125
 #~ msgid "View help for this game"
