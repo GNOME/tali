@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tali gnome-3-18\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-20 12:43+0000\n"
-"PO-Revision-Date: 2015-10-22 04:45+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-04-05 02:13+0000\n"
+"PO-Revision-Date: 2016-04-05 13:22+0200\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "X-Generator: Poedit 1.8.5\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
@@ -29,15 +28,8 @@ msgid "Roll dice and score points"
 msgstr "Tire un dât e fâs ponts"
 
 #: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Une variant dal poker cun dâts e mancul bêçs, un classic zûc par fameis. "
-"Tire il dât par trê voltis e ten chei che ti plasin, in mût di vê la man "
-"miôr. Tu puedis ancje zuiâ a une variant mancul cognossude cun dâts colorâts."
+msgid "A variation on poker with dice and less money, this game is a family classic. Throw the dice three times in a row, holding back the ones you like, in order to make the best possible hand. You can also play a lesser-known variant with colored dice."
+msgstr "Une variant dal poker cun dâts e mancul bêçs, un classic zûc par fameis. Tire il dât par trê voltis e ten chei che ti plasin, in mût di vê la man miôr. Tu puedis ancje zuiâ a une variant mancul cognossude cun dâts colorâts."
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
@@ -80,23 +72,16 @@ msgid "Delay between rolls"
 msgstr "Ritart fra lis tiradis"
 
 #: ../data/org.gnome.tali.gschema.xml.h:2
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Sielç se inserî o no un ritart fra i tîrs dai dâts dal computer cussì il "
-"zuiadôr al pues stâ daûr a ce che al sucêt."
+msgid "Choose whether or not to insert a delay between the computer's dice rolls so the player can follow what it is doing."
+msgstr "Sielç se inserî o no un ritart fra i tîrs dai dâts dal computer cussì il zuiadôr al pues stâ daûr a ce che al sucêt."
 
 #: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
 msgstr "Mostre i pinsîrs dal computer"
 
 #: ../data/org.gnome.tali.gschema.xml.h:4
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Se impostât a VÊR al vegnarà fat un dump de elaborazion dal IA sul standard "
-"output."
+msgid "If set to true, a dump of the AI's working will be done to standard output."
+msgstr "Se impuestât a VÊR al vegnarà fat un dump de elaborazion dal IA sul standard output."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -346,48 +331,48 @@ msgstr "Gjenar di zûc"
 msgid "Player Names"
 msgstr "Nons dai zuiadôrs"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1 [totâl di 1]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2 [totâl di 2]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3 [totâl di 3]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4 [totâl di 4]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5 [totâl di 5]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6 [totâl di 6]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Tris [totâl]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Poker [totâl]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Scjale curte [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Scjale lungje [40]"
 
@@ -395,7 +380,7 @@ msgstr "Scjale lungje [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 di un gjenar [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Sorte [totâl]"
 
@@ -418,34 +403,35 @@ msgid "Bonus if >62"
 msgstr "Bonus se >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "Cubie di colôrs [totâl]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full [15 + totâl]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Full  dal stes colôr [20 + totâl]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Colôr (ducj dal stes colôr) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 dal stes valôr [25 + totâl]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "4 dal stes valôr [50 + totâl]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Sielç un interval di ponts."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 di un gjenar [totâl]"
+
