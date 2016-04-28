@@ -5,22 +5,23 @@
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 # 
 # Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
+# Sérgio Cardeira <cardeira.sergio@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-07 23:43+0000\n"
-"PO-Revision-Date: 2015-06-26 09:05+0100\n"
-"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
-"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
+"POT-Creation-Date: 2016-02-21 14:50+0000\n"
+"PO-Revision-Date: 2016-02-22 01:09-0100\n"
+"Last-Translator: Sérgio Cardeira <cardeira.sergio@gmail.com>\n"
+"Language-Team: Português <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
@@ -69,7 +70,7 @@ msgstr "_Pontuações"
 
 #: ../data/tali-menus.ui.h:4
 msgid "_Help"
-msgstr "A_Juda"
+msgstr "A_juda"
 
 #: ../data/tali-menus.ui.h:5
 msgid "_About"
@@ -277,10 +278,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Jogo de cores e IA multinível (2006):"
 
 #: ../src/gyahtzee.c:614
-#| msgid ""
-#| "A variation on poker with dice and less money\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid "A variation on poker with dice and less money."
 msgstr "Uma variante de poker com dados e menos dinheiro."
 
@@ -303,7 +300,6 @@ msgid "Preferences will be updated in the next game."
 msgstr "As preferências serão atualizadas no próximo jogo."
 
 #: ../src/setup.c:264
-#| msgid "_Preferences"
 msgid "Preferences"
 msgstr "_Preferências"
 
@@ -326,7 +322,7 @@ msgstr "_Pausa entre lançamentos"
 
 #: ../src/setup.c:323
 msgid "N_umber of opponents:"
-msgstr "Número de _Adversários:"
+msgstr "Número de _adversários:"
 
 #: ../src/setup.c:337
 msgid "_Difficulty:"
@@ -357,48 +353,48 @@ msgstr "Tipo de jogo"
 msgid "Player Names"
 msgstr "Nomes dos jogadores"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1s [total de 1s]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2s [total de 2s]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3s [total de 3s]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4s [total de 4s]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5s [total de 5s]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6s [total de 6s]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Trio [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Quatro iguais [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full House [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Sequência menor [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Sequência maior [40]"
 
@@ -406,7 +402,7 @@ msgstr "Sequência maior [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 iguais [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Sorte [total]"
 
@@ -429,35 +425,35 @@ msgid "Bonus if >62"
 msgstr "Bónus se >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 pares da mesma cor [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full House [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Full House da mesma cor [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Flush (todos da mesma cor) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 iguais [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "5 iguais [50 + total]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Selecione um local para a pontuação."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 iguais [total]"
 
