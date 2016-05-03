@@ -66,7 +66,7 @@ msgstr "[ 'Humà', 'Joan', 'Gil', 'Sílvia', 'Xavier', 'Diana' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "«Regular»"
+msgstr "'Regular'"
 
 #: ../data/tali.appdata.xml.in.h:1
 msgid ""

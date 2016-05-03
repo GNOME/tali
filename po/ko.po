@@ -116,7 +116,7 @@ msgstr "[ '휴먼', '윌버', '빌', '모니카', '케네스', '자넷' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "일반"
+msgstr "'일반'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"

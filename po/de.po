@@ -116,7 +116,7 @@ msgstr "Falls dieser Schlüssel wahr ist, wird ein Auszug aus der Arbeit der KI 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "['Mensch','Stefan','Maria','Anton','Lisa','Martin']"
+msgstr "[ 'Mensch', 'Stefan', 'Maria', 'Anton', 'Lisa', 'Martin' ]"
 
 # CHECK: Soll man das übersetzen?
 #: ../data/org.gnome.tali.gschema.xml.h:6

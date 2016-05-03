@@ -106,12 +106,12 @@ msgstr ""
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ „Čovek“, „Miljenko“, „Savudin“, „Marina“, „Vukašin“, „Jasna“ ]"
+msgstr "[ 'Čovek', 'Miljenko', 'Savudin', 'Marina', 'Vukašin', 'Jasna' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "„Obična“"
+msgstr "'Obična'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"

@@ -61,7 +61,7 @@ msgstr "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "「正規」"
+msgstr "'「正規」'"
 
 #: ../data/tali.appdata.xml.in.h:1
 msgid ""

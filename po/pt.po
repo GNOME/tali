@@ -106,12 +106,12 @@ msgstr ""
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgstr ""
-"[ \"Humano\", \"Duarte\", \"Tiago\", \"Sílvia\", \"Filipa\", \"Cláudia\" ]"
+"[ 'Humano', 'Duarte', 'Tiago', 'Sílvia', 'Filipa', 'Cláudia' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "\"Normal\""
+msgstr "'Normal'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"

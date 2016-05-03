@@ -115,7 +115,7 @@ msgstr "[ 'Žmogus', 'Vilius', 'Paulius', 'Monika', 'Karolis', 'Jurga' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "„Įprastas“"
+msgstr "'Įprastas'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
