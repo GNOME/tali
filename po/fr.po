@@ -82,7 +82,7 @@ msgstr "[ 'Humain', 'Lætitia', 'Mohammed', 'Émilie', 'Anaïs', 'François' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "Normal"
+msgstr "'Normal'"
 
 #: ../data/tali.appdata.xml.in.h:2
 msgid "Roll dice and score points"

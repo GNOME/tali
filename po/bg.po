@@ -110,7 +110,7 @@ msgstr "[ 'Човек', 'Иван', 'Петър', 'Георги', 'Елена', 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "Обикновена"
+msgstr "'Обикновена'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
