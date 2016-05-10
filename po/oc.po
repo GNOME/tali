@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=tali&ke"
 "ywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-25 11:09+0000\n"
-"PO-Revision-Date: 2016-03-04 13:18+0200\n"
+"POT-Creation-Date: 2016-04-29 14:28+0000\n"
+"PO-Revision-Date: 2016-05-08 18:54+0200\n"
 "Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -110,7 +110,7 @@ msgstr "[ 'Uman', 'Esclarmonda', 'Mohammed', 'Mirelha', 'Rosina', 'Pèire' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "'Normal'"
+msgstr "Normal"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -265,7 +265,7 @@ msgstr "Lançar"
 
 #: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "Avètz pas drech qu'a tres lançars de dats. Causissètz una combinason."
+msgstr "Avètz pas dreit qu'a tres lançars de dats. Causissètz una combinason."
 
 #: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
@@ -355,27 +355,27 @@ msgstr "Noms dels jogaires"
 
 #: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
-msgstr "1s [total of 1s]"
+msgstr "1s [total de 1s]"
 
 #: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
-msgstr "2s [total of 2s]"
+msgstr "2s [total de 2s]"
 
 #: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
-msgstr "3s [total of 3s]"
+msgstr "3s [total de 3s]"
 
 #: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
-msgstr "4s [total of 4s]"
+msgstr "4s [total de 4s]"
 
 #: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
-msgstr "5s [total of 5s]"
+msgstr "5s [total de 5s]"
 
 #: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
-msgstr "6s [total of 6s]"
+msgstr "6s [total de 6s]"
 
 #. End of upper panel
 #: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
@@ -470,7 +470,7 @@ msgstr "5 identics [total]"
 #~ msgstr "Bascula lo mòde ecran complet"
 
 #~ msgid "Get a hint for your next move"
-#~ msgstr "Aficha una astúcia per votre prochain coup"
+#~ msgstr "Aficha una astúcia per vòstre còp que ven"
 
 #~ msgid "Leave fullscreen mode"
 #~ msgstr "Quita lo mòde ecran complet"
@@ -488,10 +488,10 @@ msgstr "5 identics [total]"
 #~ msgstr "Suspend la partida"
 
 #~ msgid "Show a list of players in the network game"
-#~ msgstr "Aficha una liste de jogaires dins lo jòc en ret"
+#~ msgstr "Aficha una lista de jogaires dins lo jòc en ret"
 
 #~ msgid "Redo the undone move"
-#~ msgstr "Rétablit lo movement anullat"
+#~ msgstr "Restablís lo movement anullat"
 
 #~ msgid "Restart the game"
 #~ msgstr "Recomença la partida"
@@ -506,7 +506,7 @@ msgstr "5 identics [total]"
 #~ msgstr "Anulla lo darrièr movement"
 
 #~ msgid "About this game"
-#~ msgstr "A prepaus de aqueste jòc"
+#~ msgstr "A prepaus d'aqueste jòc"
 
 #~ msgid "Close this window"
 #~ msgstr "Tampa aquesta fenèstra"
@@ -554,7 +554,7 @@ msgstr "5 identics [total]"
 #~ msgstr "_Quitar la partida"
 
 #~ msgid "Player _List"
-#~ msgstr "_Liste des jogaires"
+#~ msgstr "_Lista dels jogaires"
 
 #~ msgid "_Pause"
 #~ msgstr "_Pausa"
