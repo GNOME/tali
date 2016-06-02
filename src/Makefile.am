@@ -22,8 +22,8 @@ tali_SOURCES =       \
 
 BUILT_SOURCES = tali-resources.c
 
-tali-resources.c: $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies tali.gresource.xml)
-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source tali.gresource.xml
+tali-resources.c: tali.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies tali.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $<
 
 tali_CPPFLAGS = \
 	-I$(top_srcdir) \
