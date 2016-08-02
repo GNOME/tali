@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-25 23:37+0000\n"
+"POT-Creation-Date: 2016-05-05 14:48+0000\n"
 "PO-Revision-Date: 2014-11-26 12:20+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
@@ -24,10 +24,30 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tirar el dado y acumular puntos"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Una variante del póker con dados y menos dinero, este juego es un clásico "
+"familia. Lance los dados tres veces y conserve los que quiere para conseguir "
+"la mejor mano posible. También puede jugar una variante menos conocida, con "
+"dados de colores."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Juegue contra 1-5 oponentes y en tres niveles de dificultad."
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -36,6 +56,30 @@ msgstr "Juegue con los dados al estilo del póquer"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "Juego _nuevo"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Puntuación"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Acerca de"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Salir"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -69,26 +113,6 @@ msgstr "[ 'Humano', 'Wilber', 'Bill', 'Mónica', 'Kenneth', 'Janet' ]"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regular'"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr "Tirar el dado y acumular puntos"
-
-#: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Una variante del póker con dados y menos dinero, este juego es un clásico "
-"familia. Lance los dados tres veces y conserve los que quiere para conseguir "
-"la mejor mano posible. También puede jugar una variante menos conocida, con "
-"dados de colores."
-
-#: ../data/tali.appdata.xml.in.h:4
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Juegue contra 1-5 oponentes y en tres niveles de dificultad"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -185,7 +209,7 @@ msgstr "Colores"
 msgid "Roll all!"
 msgstr "Lanzar todos"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Lanzar"
 
@@ -268,35 +292,11 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gyahtzee.c:751
-msgid "_New Game"
-msgstr "Juego _nuevo"
-
-#: ../src/gyahtzee.c:752
-msgid "_Preferences"
-msgstr "_Preferencias"
-
-#: ../src/gyahtzee.c:753
-msgid "_Scores"
-msgstr "_Puntuación"
-
-#: ../src/gyahtzee.c:756
-msgid "_Help"
-msgstr "Ay_uda"
-
-#: ../src/gyahtzee.c:757
-msgid "_About"
-msgstr "_Acerca de"
-
-#: ../src/gyahtzee.c:758
-msgid "_Quit"
-msgstr "_Salir"
-
-#: ../src/gyahtzee.c:777
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Deshacer el movimiento más reciente"
 
-#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humano"
 
@@ -358,48 +358,48 @@ msgstr "Tipo de juego"
 msgid "Player Names"
 msgstr "Nombres de los jugadores"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1 [total de 1s]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2 [total de 2s]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3 [total de 3s]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4 [total de 4s]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5 [total de 5s]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6 [total de 6s]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "3 del mismo tipo [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "4 del mismo tipo [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full House [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Secuencia corta [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Secuencia completa [40]"
 
@@ -407,7 +407,7 @@ msgstr "Secuencia completa [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 del mismo tipo [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Suerte [total]"
 
@@ -430,35 +430,35 @@ msgid "Bonus if >62"
 msgstr "Bonificación si > 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 parejas del mismo color [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full House [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Full House del mismo color [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Color (todos del mismo color) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 del mismo tipo [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "5 del mismo tipo [50 + total]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Seleccione una casilla de puntuación."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 del mismo tipo [total]"
 
