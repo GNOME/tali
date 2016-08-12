@@ -3,7 +3,7 @@
 <component type="desktop">
   <id>tali.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0+ and GFDL-1.1</project_license>
+  <project_license>GPL-2.0+</project_license>
   <_name>Tali</_name>
   <_summary>Roll dice and score points</_summary>
   <description>
@@ -26,8 +26,9 @@
   <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=tali</url>
   <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="translate">http://the-web-site-with-translation-instructions/</url>
   <url type="help">https://help.gnome.org/users/tali/stable/</url>
-  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <update_contact>mariowenzel_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
     <kudo>AppMenu</kudo>
