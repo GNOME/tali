@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([Tali], [3.21.4], [https://bugzilla.gnome.org/],
+AC_INIT([Tali], [3.21.90], [https://bugzilla.gnome.org/],
         [tali], [https://wiki.gnome.org/Apps/Tali])
 AC_CONFIG_MACRO_DIR([m4])
 
