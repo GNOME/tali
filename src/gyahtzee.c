@@ -169,7 +169,7 @@ CheerWinner (void)
   if (winner < 0) {
     for (i = 0; i < NumberOfPlayers; i++) {
       if (total_score (i) == -winner) {
-	ShowoffPlayer (ScoreList, i, 1);
+  ShowoffPlayer (ScoreList, i, 1);
       }
     }
 
@@ -188,7 +188,7 @@ CheerWinner (void)
       } else {
         dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
         message =
-  	  g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
+      g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
                            pos == 1 ? _("Your score is the best!") :
                            _("Your score has made the top ten."));
         games_scores_dialog_set_message (GAMES_SCORES_DIALOG (dialog), message);
@@ -203,8 +203,8 @@ CheerWinner (void)
 
   if (players[winner].name)
     say (ngettext ("%s wins the game with %d point",
-		   "%s wins the game with %d points", WinningScore),
-	 players[winner].name, WinningScore);
+       "%s wins the game with %d points", WinningScore),
+   players[winner].name, WinningScore);
   else
     say (_("Game over!"));
 
@@ -307,8 +307,8 @@ NextPlayer (void)
   if (players[CurrentPlayer].comp) {
     if (DoDelay) {
       if (!last_timeout)
-	last_timeout = g_timeout_add (DELAY_MS,
-				      (GSourceFunc) do_computer_turns, NULL);
+  last_timeout = g_timeout_add (DELAY_MS,
+              (GSourceFunc) do_computer_turns, NULL);
     } else {
       do_computer_turns ();
     }
@@ -377,12 +377,12 @@ ShowPlayer (int num, int field)
       line = i;
 
       if (i >= NUM_UPPER)
-	line += 3;
+  line += 3;
 
       if (players[num].used[i])
-	score = players[num].score[i];
+  score = players[num].score[i];
       else
-	score = -1;
+  score = -1;
 
       if (test_computer_play == 0) update_score_cell (ScoreList, line, num + 1, score);
     }
@@ -435,7 +435,7 @@ key_press (GtkWidget * widget, GdkEventKey * event, gpointer data)
   }
 
   gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[offset]),
-				     !DiceValues[offset].sel);
+             !DiceValues[offset].sel);
 
   return FALSE;
 }
@@ -513,7 +513,7 @@ DeselectAllDice (void)
   if (test_computer_play > 0) return;
   for (i = 0; i < NUMBER_OF_DICE; i++)
     gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON (diceBox[i]),
-				       FALSE);
+               FALSE);
 }
 
 /* Callback on dice press */
@@ -606,20 +606,20 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
   };
 
   gtk_show_about_dialog (GTK_WINDOW (window),
-			 "name", appName,
-			 "version", VERSION,
-			 "copyright", "Copyright © 1998–2008 "
-			 "Free Software Foundation, Inc.",
-			 "license-type", GTK_LICENSE_GPL_2_0,
-			 "comments", _("A variation on poker with "
-				       "dice and less money."),
-			 "authors", authors,
-			 "documenters", documenters,
-			 "translator-credits", _("translator-credits"),
-			 "logo-icon-name", "tali",
-			 "website",
-			 "https://wiki.gnome.org/Apps/Tali",
-			 NULL);
+       "name", appName,
+       "version", VERSION,
+       "copyright", "Copyright © 1998–2008 "
+       "Free Software Foundation, Inc.",
+       "license-type", GTK_LICENSE_GPL_2_0,
+       "comments", _("A variation on poker with "
+               "dice and less money."),
+       "authors", authors,
+       "documenters", documenters,
+       "translator-credits", _("translator-credits"),
+       "logo-icon-name", "tali",
+       "website",
+       "https://wiki.gnome.org/Apps/Tali",
+       NULL);
 }
 
 void
@@ -628,7 +628,7 @@ ShowHighScores (void)
   if (!dialog)
     dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
 
-  gtk_dialog_run (GTK_DIALOG (dialog));    
+  gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_hide (dialog);
 }
 
@@ -653,12 +653,12 @@ LoadDicePixmaps (void)
 
   for (i = 0; i < NUMBER_OF_PIXMAPS; i++) {
     /* This is not efficient, but it lets us load animated types,
-     * there is no way for us to copy a general GtkImage (the old 
+     * there is no way for us to copy a general GtkImage (the old
      * code had a way for static images). */
     path = g_build_filename (DATA_DIRECTORY, dicefiles[i], NULL);
     path_kismet = g_build_filename (DATA_DIRECTORY, kdicefiles[i], NULL);
 
-    if (g_file_test (path, G_FILE_TEST_EXISTS) && 
+    if (g_file_test (path, G_FILE_TEST_EXISTS) &&
           g_file_test (path_kismet, G_FILE_TEST_EXISTS)) {
 
       for (j = 0; j < NUMBER_OF_DICE; j++) {
@@ -735,7 +735,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
   g_signal_connect (GTK_WIDGET (window), "key_press_event",
-		    G_CALLBACK (key_press), NULL);
+        G_CALLBACK (key_press), NULL);
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
   const gchar *vaccels_undo[] = {"<Primary>z", NULL};
@@ -764,7 +764,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_widget_show (undo_button);
   gtk_header_bar_pack_start (GTK_HEADER_BAR (hbar), undo_button);
 
-	/*---- Content ----*/
+  /*---- Content ----*/
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
@@ -789,12 +789,12 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   mbutton = gtk_button_new_with_label (_("Roll!"));
   gtk_box_pack_end (GTK_BOX (dicebox), mbutton, FALSE, FALSE, 5);
   g_signal_connect (GTK_BUTTON (mbutton), "clicked",
-		    G_CALLBACK (roll_button_pressed_cb), NULL);
+        G_CALLBACK (roll_button_pressed_cb), NULL);
   gtk_widget_show (GTK_WIDGET (mbutton));
 
   toolbar = gtk_toolbar_new ();
   gtk_orientable_set_orientation (GTK_ORIENTABLE (toolbar),
-			       GTK_ORIENTATION_VERTICAL);
+             GTK_ORIENTATION_VERTICAL);
   gtk_toolbar_set_style (GTK_TOOLBAR (toolbar), GTK_TOOLBAR_ICONS);
   gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), FALSE);
   gtk_box_pack_end (GTK_BOX (dicebox), toolbar, TRUE, TRUE, 0);
@@ -810,10 +810,10 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
     diceBox[i] = gtk_toggle_tool_button_new ();
     gtk_tool_button_set_icon_widget (GTK_TOOL_BUTTON (diceBox[i]), tmp);
     g_signal_connect (GTK_TOOL_BUTTON (diceBox[i]), "clicked",
-		      G_CALLBACK (modify_dice), &DiceValues[i]);
+          G_CALLBACK (modify_dice), &DiceValues[i]);
 
     gtk_toolbar_insert (GTK_TOOLBAR (toolbar),
-			GTK_TOOL_ITEM (diceBox[i]), -1);
+      GTK_TOOL_ITEM (diceBox[i]), -1);
 
     gtk_widget_show (GTK_WIDGET (diceBox[i]));
     gtk_widget_show (tmp);
@@ -867,7 +867,7 @@ main (int argc, char *argv[])
   context = g_option_context_new (NULL);
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
   g_option_context_add_main_entries (context, yahtzee_options,
-				     GETTEXT_PACKAGE);
+             GETTEXT_PACKAGE);
   retval = g_option_context_parse (context, &argc, &argv, &error);
   g_option_context_free (context);
   if (!retval) {
@@ -927,10 +927,10 @@ main (int argc, char *argv[])
 
   gtk_window_set_default_icon_name ("tali");
 
-  if (NumberOfComputers == 0)	/* Not set on the command-line. */
+  if (NumberOfComputers == 0) /* Not set on the command-line. */
     NumberOfComputers = g_settings_get_int (settings, "number-of-computer-opponents");
 
-  if (NumberOfHumans == 0)	/* Not set on the command-line. */
+  if (NumberOfHumans == 0)  /* Not set on the command-line. */
     NumberOfHumans = g_settings_get_int (settings, "number-of-human-opponents");
 
   if (NumberOfHumans < 1)
@@ -957,11 +957,11 @@ main (int argc, char *argv[])
   if (NUM_TRIALS <= 0)
       NUM_TRIALS = g_settings_get_int (settings, "monte-carlo-trials");
 
-  if (DoDelay == 0)		/* Not set on the command-line */
+  if (DoDelay == 0)   /* Not set on the command-line */
     DoDelay = g_settings_get_boolean (settings, "delay-between-rolls");
-  if (DisplayComputerThoughts == 0)	/* Not set on the command-line */
+  if (DisplayComputerThoughts == 0) /* Not set on the command-line */
     DisplayComputerThoughts = g_settings_get_boolean (settings, "display-computer-thoughts");
-  
+
   /* Read in new player names */
   player_names = g_settings_get_strv (settings, "player-names");
   n_player_names = g_strv_length (player_names);
@@ -970,15 +970,15 @@ main (int argc, char *argv[])
 
     for (i = 0; i < n_player_names; ++i) {
       if (i == 0 && strcasecmp (player_names[i], _("Human")) == 0) {
-	const char *realname;
+  const char *realname;
 
-	realname = g_get_real_name ();
+  realname = g_get_real_name ();
         if (realname && realname[0] && strcmp (realname, "Unknown") != 0) {
           players[i].name = g_locale_to_utf8 (realname, -1, NULL, NULL, NULL);
         }
         if (!players[i].name) {
-	  players[i].name = g_strdup (player_names[i]);
-	}
+    players[i].name = g_strdup (player_names[i]);
+  }
       } else {
         players[i].name = g_strdup (player_names[i]);
       }
@@ -992,7 +992,7 @@ main (int argc, char *argv[])
   exit (0);
 }
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8

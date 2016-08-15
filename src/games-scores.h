@@ -14,7 +14,7 @@
  *
  * You should have received a copy of the GNU Library General Public License
  * along with this library; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. 
+ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  *
  */
 
@@ -35,9 +35,9 @@ G_BEGIN_DECLS
 #define GAMES_SCORES_SIGNIFICANT 10
 
 typedef struct {
-  gchar *key;			/* A unique identifier (warning: this is used to generate the
+  gchar *key;     /* A unique identifier (warning: this is used to generate the
                          * scores file name, so it should match the old domains) */
-  gchar *name;			/* A human-readable description. */
+  gchar *name;      /* A human-readable description. */
 } GamesScoresCategory;
 
 typedef void (*GamesScoresCategoryForeachFunc) (GamesScoresCategory * cat,
@@ -45,7 +45,7 @@ typedef void (*GamesScoresCategoryForeachFunc) (GamesScoresCategory * cat,
 
 #define GAMES_TYPE_SCORES (games_scores_get_type())
 #define GAMES_SCORES(obj) G_TYPE_CHECK_INSTANCE_CAST((obj), games_scores_get_type(), GamesScores)
-#define GAMES_SCORES_CONST(obj)	G_TYPE_CHECK_INSTANCE_CAST((obj), games_scores_get_type(), GamesScores const)
+#define GAMES_SCORES_CONST(obj) G_TYPE_CHECK_INSTANCE_CAST((obj), games_scores_get_type(), GamesScores const)
 #define GAMES_SCORES_CLASS(klass) G_TYPE_CHECK_CLASS_CAST((klass), games_scores_get_type(), GamesScoresClass)
 #define GAMES_IS_SCORES(obj) G_TYPE_CHECK_INSTANCE_TYPE((obj), games_scores_get_type ())
 #define GAMES_SCORES_GET_CLASS(obj) G_TYPE_INSTANCE_GET_CLASS((obj), games_scores_get_type(), GamesScoresClass)

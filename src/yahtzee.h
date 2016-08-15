@@ -14,7 +14,7 @@
 
 #include <glib/gi18n.h>
 
-#define COMPUTER_DELAY 1	/* sec */
+#define COMPUTER_DELAY 1  /* sec */
 
 #define NUM_ROLLS 3
 #define NUMBER_OF_DICE       5
@@ -148,7 +148,7 @@ extern GameType game_type;
 #endif /* _yahtzee_H_ */
 
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8

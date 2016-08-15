@@ -47,7 +47,7 @@ G_BEGIN_DECLS
 
 typedef enum {
   GAMES_SCORES_CLOSE_BUTTON = 1,
-  GAMES_SCORES_NEW_GAME_BUTTON = 2,	
+  GAMES_SCORES_NEW_GAME_BUTTON = 2,
   GAMES_SCORES_UNDO_BUTTON = 4,
   GAMES_SCORES_QUIT_BUTTON = 8,
 } GamesScoresButtons;
@@ -68,11 +68,11 @@ GType      games_scores_dialog_get_type                 (void);
 GtkWidget *games_scores_dialog_new                      (GtkWindow *parent_window,
                                                          GamesScores *scores,
                                                          const gchar *title);
-void       games_scores_dialog_set_category_description (GamesScoresDialog *self, 
+void       games_scores_dialog_set_category_description (GamesScoresDialog *self,
                                                          const gchar *description);
 void       games_scores_dialog_set_hilight              (GamesScoresDialog *self,
                                                          guint pos);
-void       games_scores_dialog_set_message              (GamesScoresDialog *self, 
+void       games_scores_dialog_set_message              (GamesScoresDialog *self,
                                                          const gchar *message);
 void       games_scores_dialog_set_buttons              (GamesScoresDialog *self,
                                                          guint buttons);

@@ -26,16 +26,16 @@ G_DEFINE_TYPE (GamesScore, games_score, G_TYPE_OBJECT)
 struct GamesScorePrivate {
   union {
     guint32 plain;
-    gdouble time_double;		/* minutes.seconds */
+    gdouble time_double;    /* minutes.seconds */
   } value;
   time_t time;
 };
 
 /**
  * games_score_new:
- * 
+ *
  * Creates a new score object.
- * 
+ *
  * Return value: the new #GamesScore
  **/
 GamesScore *
@@ -47,9 +47,9 @@ games_score_new ()
 /**
  * games_score_new_plain:
  * @value: The value of the score.
- * 
+ *
  * Creates a new score object.
- * 
+ *
  * Return value: the new #GamesScore
  **/
 GamesScore *
@@ -63,9 +63,9 @@ games_score_new_plain (guint32 value)
 /**
  * games_score_new_time:
  * @value: The timer value of the score.
- * 
+ *
  * Creates a new score object.
- * 
+ *
  * Return value: the new #GamesScore
  **/
 GamesScore *
@@ -85,7 +85,7 @@ games_score_get_time (GamesScore *score)
 void
 games_score_set_time (GamesScore *score, time_t time)
 {
-  score->priv->time = time;  
+  score->priv->time = time;
 }
 
 guint32

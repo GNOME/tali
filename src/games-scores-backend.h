@@ -1,4 +1,4 @@
- /* games-scores-backend.c 
+ /* games-scores-backend.c
   *
   * Copyright (C) 2005 Callum McKenzie
   *
