@@ -79,31 +79,31 @@ games_scores_dialog_class_init (GamesScoresDialogClass *klass)
  * @key: an identifier for the category. This should also be a valid
  * score category for the gnome_score system.
  * @name: the category name
- * 
+ *
  * Adds a new category to combo box selector.
  *
  **/
-static void games_scores_dialog_add_category (GamesScoresDialog *self, 
-				       const gchar *key, 
-				       const gchar *name)
+static void games_scores_dialog_add_category (GamesScoresDialog *self,
+                                       const gchar *key,
+                                       const gchar *name)
 {
   gchar *k;
 
   k = g_strdup (key);
 
-  g_hash_table_insert (self->priv->categories, k, 
-			 GINT_TO_POINTER (self->priv->catcounter));
-  g_hash_table_insert (self->priv->catindices, 
-			 GINT_TO_POINTER (self->priv->catcounter),
-			 k);
+  g_hash_table_insert (self->priv->categories, k,
+                         GINT_TO_POINTER (self->priv->catcounter));
+  g_hash_table_insert (self->priv->catindices,
+                         GINT_TO_POINTER (self->priv->catcounter),
+                         k);
   self->priv->catcounter++;
   gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (self->priv->combo), name);
 }
 
 /* This is a helper function for loading the initial list of categories
  * in a _foreach function. If only C had lambda... */
-static void games_scores_dialog_load_categories (GamesScoresCategory *cat, 
-						 GamesScoresDialog *self) 
+static void games_scores_dialog_load_categories (GamesScoresCategory *cat,
+                                                 GamesScoresDialog *self)
 {
     /* category->name is already translated here! */
     games_scores_dialog_add_category (self, cat->key, cat->name);
@@ -113,14 +113,14 @@ static void games_scores_dialog_load_categories (GamesScoresCategory *cat,
  * set_style:
  * @self: a pointer to a GamesScoresDialog
  * @style: the style to use
- * 
+ *
  * Sets the style of score displayed. e.g. GAMES_SCORES_STYLE_TIME
  * displays the scores as times. Note that the order of the scores
  * is determined at the gnome_score layer but their interpretation
  * is at this layer.
  *
  **/
-static void games_scores_dialog_set_style (GamesScoresDialog *self, GamesScoreStyle style) 
+static void games_scores_dialog_set_style (GamesScoresDialog *self, GamesScoreStyle style)
 {
   const gchar *header;
 
@@ -145,12 +145,12 @@ static void games_scores_dialog_set_style (GamesScoresDialog *self, GamesScoreSt
  * set_category:
  * @self: a pointer to a GamesScoresDialog
  * @key: the category to change to
- * 
+ *
  * Sets the category the scores dialog is displaying.
  *
  **/
-static void games_scores_dialog_set_category (GamesScoresDialog *self, 
-					      const gchar *key) 
+static void games_scores_dialog_set_category (GamesScoresDialog *self,
+                                              const gchar *key)
 {
   gpointer value;
   int idx;
@@ -166,8 +166,8 @@ static void games_scores_dialog_set_category (GamesScoresDialog *self,
  * new:
  * @domain: the scores domain to use, usually the application name
  * @title: the title for the dialog
- * 
- * Creates a new high scores dialog. Use gtk_dialog_run and 
+ *
+ * Creates a new high scores dialog. Use gtk_dialog_run and
  * gtk_widget_destroy to manage it.
  *
  * Returns: a new widget
@@ -184,7 +184,7 @@ GtkWidget * games_scores_dialog_new (GtkWindow *parent_window, GamesScores *scor
   gtk_window_set_title (GTK_WINDOW (dialog), title);
   gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (parent_window));
 
-  _games_scores_category_foreach (scores, 
+  _games_scores_category_foreach (scores,
                                   (GamesScoresCategoryForeachFunc) games_scores_dialog_load_categories,
                                   dialog);
 
@@ -222,10 +222,10 @@ static void games_scores_dialog_redraw (GamesScoresDialog *self) {
       dscore = games_score_get_value_as_time ((GamesScore *)scorelist->data);
       score = (int) (100.0 * dscore + 0.5);
       ss = g_strdup_printf (/* Score format for time based scores.
-			       %1$d is the time in minutes, %2$d is the time in seconds */
+                               %1$d is the time in minutes, %2$d is the time in seconds */
                             C_("score-dialog", "%1$dm %2$ds"),
                             score/100, score%100);
-      break; 
+      break;
     case GAMES_SCORES_STYLE_PLAIN_ASCENDING:
     case GAMES_SCORES_STYLE_PLAIN_DESCENDING:
     default:
@@ -243,20 +243,20 @@ static void games_scores_dialog_redraw (GamesScoresDialog *self) {
 /* Change the currently viewed score category. There is a little bit
  * of silly-buggers here to make sure the change is temporary and
  * we end up on the right page next time. */
-static void games_scores_dialog_change_category (GtkComboBox *widget, 
-						 GamesScoresDialog *self)
+static void games_scores_dialog_change_category (GtkComboBox *widget,
+                                                 GamesScoresDialog *self)
 {
   gchar *catcopy;
   gint idx;
   gchar *newcat;
-  
+
   /* This seems like a bit of a hack, but since we're trying to
    * temporarily change the category it sort of makes sense. */
 
   catcopy = g_strdup (games_scores_get_category (self->priv->scores));
   idx = gtk_combo_box_get_active (widget);
   newcat = g_hash_table_lookup (self->priv->catindices,
-				 GINT_TO_POINTER (idx));
+                                 GINT_TO_POINTER (idx));
 
   games_scores_set_category (self->priv->scores, newcat);
   if (self->priv->preservehilight) {
@@ -275,9 +275,9 @@ static void games_scores_dialog_change_category (GtkComboBox *widget,
 /* FIXME: We should monitor the high scores list (or get games-scores to
  * send us a signal. */
 static void games_scores_dialog_show (GamesScoresDialog *self)
-{ 
+{
   const gchar *cat;
-  
+
   cat = games_scores_get_category (self->priv->scores);
   if (cat)
     games_scores_dialog_set_category (self, cat);
@@ -293,14 +293,14 @@ static void games_scores_dialog_hide (GamesScoresDialog *self) {
 /**
  * set_category_description:
  * @self: a pointer to a GamesScoresDialog
- * @description: A description of the categories 
- * 
+ * @description: A description of the categories
+ *
  * Sets the category description label. i.e. the widget to the
- * left of the category combo box. 
+ * left of the category combo box.
  *
  **/
-void games_scores_dialog_set_category_description (GamesScoresDialog *self, 
-						   const gchar *description)
+void games_scores_dialog_set_category_description (GamesScoresDialog *self,
+                                                   const gchar *description)
 {
   gchar *lstr;
 
@@ -314,12 +314,12 @@ void games_scores_dialog_set_category_description (GamesScoresDialog *self,
  * set_message:
  * @self: a pointer to a GamesScoresDialog
  * @message: the message
- * 
+ *
  * Sets the message at the top of the dialog. Pango markup is understood.
  *
  **/
-void games_scores_dialog_set_message (GamesScoresDialog *self, 
-				      const gchar *message)
+void games_scores_dialog_set_message (GamesScoresDialog *self,
+                                      const gchar *message)
 {
   if ((message == NULL) || (*message == '\0')) {
     gtk_widget_hide (self->priv->message);
@@ -336,7 +336,7 @@ void games_scores_dialog_set_message (GamesScoresDialog *self,
  * @self: a pointer to a GamesScoresDialog
  * @pos: the position in the high score list to hilight. Should be in the
  * range 1 to 10.
- * 
+ *
  * Hilights an entry in the high score list. This is suitable for indicating
  * to the player where the game they just played is.
  *
@@ -353,7 +353,7 @@ void games_scores_dialog_set_hilight (GamesScoresDialog *self, guint pos)
  * set_buttons:
  * @self: a pointer to a GamesScoresDialog
  * @buttons: An or-ed list of GamesScoresButtons
- * 
+ *
  * Changes the button sets at the buttom of the dialog
  *
  **/
@@ -366,38 +366,38 @@ void games_scores_dialog_set_buttons (GamesScoresDialog *self, guint buttons)
   /* The default is a single close button, suitable for the scores
      menu item. */
   if (buttons == 0)
-	buttons = GAMES_SCORES_CLOSE_BUTTON;
+        buttons = GAMES_SCORES_CLOSE_BUTTON;
 
   if (buttons & GAMES_SCORES_QUIT_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_QUIT,
-	                       GTK_RESPONSE_REJECT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
-	       			         GTK_RESPONSE_REJECT);
+        gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_QUIT,
+                               GTK_RESPONSE_REJECT);
+      gtk_dialog_set_default_response (GTK_DIALOG (self),
+                                         GTK_RESPONSE_REJECT);
   }
 
   if (buttons & GAMES_SCORES_UNDO_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_UNDO,
-	                       GTK_RESPONSE_DELETE_EVENT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
-	       			         GTK_RESPONSE_DELETE_EVENT);
+        gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_UNDO,
+                               GTK_RESPONSE_DELETE_EVENT);
+      gtk_dialog_set_default_response (GTK_DIALOG (self),
+                                         GTK_RESPONSE_DELETE_EVENT);
   }
 
   if (buttons & GAMES_SCORES_NEW_GAME_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), _("New Game"),
-	                       GTK_RESPONSE_ACCEPT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
-	       			         GTK_RESPONSE_ACCEPT);
+        gtk_dialog_add_button (GTK_DIALOG (self), _("New Game"),
+                               GTK_RESPONSE_ACCEPT);
+      gtk_dialog_set_default_response (GTK_DIALOG (self),
+                                         GTK_RESPONSE_ACCEPT);
   }
 
   if (buttons & GAMES_SCORES_CLOSE_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_CLOSE,
-	                       GTK_RESPONSE_CLOSE);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
-	       			         GTK_RESPONSE_CLOSE);
+        gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_CLOSE,
+                               GTK_RESPONSE_CLOSE);
+      gtk_dialog_set_default_response (GTK_DIALOG (self),
+                                         GTK_RESPONSE_CLOSE);
   }
 }
 
-static void games_scores_dialog_init (GamesScoresDialog *self) 
+static void games_scores_dialog_init (GamesScoresDialog *self)
 {
   GtkWidget *vbox;
   GtkWidget *scroll;
@@ -411,23 +411,23 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
                                             GamesScoresDialogPrivate);
 
   self->priv->style = GAMES_SCORES_STYLE_PLAIN_DESCENDING;
-  /* These two hashes are the reverse of each other. As an optimisation 
+  /* These two hashes are the reverse of each other. As an optimisation
    * they share the same set of strings (as keys in the first case and
-   * as data in the second). The first hash is responsible for 
+   * as data in the second). The first hash is responsible for
    * deallocating the memory for the strings. These two are only
    * valid as a pair. */
   self->priv->categories = g_hash_table_new_full (g_str_hash, g_str_equal,
-						     g_free, NULL);
+                                                     g_free, NULL);
   self->priv->catindices = g_hash_table_new (g_direct_hash, g_direct_equal);
   self->priv->catcounter = 0;
   self->priv->hilight = 0;
   gtk_container_set_border_width (GTK_CONTAINER (self), 5);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (self))), 2);
 
-  g_signal_connect (G_OBJECT (self), "show", 
-		      G_CALLBACK (games_scores_dialog_show), NULL);
-  g_signal_connect (G_OBJECT (self), "hide", 
-		      G_CALLBACK (games_scores_dialog_hide), NULL);
+  g_signal_connect (G_OBJECT (self), "show",
+                      G_CALLBACK (games_scores_dialog_show), NULL);
+  g_signal_connect (G_OBJECT (self), "hide",
+                      G_CALLBACK (games_scores_dialog_hide), NULL);
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
@@ -436,17 +436,17 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
 
   scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll),
-				    GTK_POLICY_AUTOMATIC,
-				    GTK_POLICY_AUTOMATIC);
+                                    GTK_POLICY_AUTOMATIC,
+                                    GTK_POLICY_AUTOMATIC);
   gtk_widget_set_size_request (scroll, 200, 265);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll),
-					 GTK_SHADOW_ETCHED_IN);
+                                         GTK_SHADOW_ETCHED_IN);
   gtk_box_pack_end (GTK_BOX (vbox), scroll, TRUE, TRUE, 0);
-  
+
   self->priv->message = gtk_label_new ("");
   gtk_label_set_use_markup (GTK_LABEL (self->priv->message), TRUE);
-  gtk_label_set_justify (GTK_LABEL (self->priv->message), 
-	                   GTK_JUSTIFY_CENTER);    
+  gtk_label_set_justify (GTK_LABEL (self->priv->message),
+                           GTK_JUSTIFY_CENTER);
   gtk_box_pack_start (GTK_BOX (vbox), self->priv->message, FALSE, FALSE, 0);
 
   self->priv->hdiv = gtk_separator_new (GTK_ORIENTATION_HORIZONTAL);
@@ -458,16 +458,16 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   self->priv->label = gtk_label_new (NULL);
   gtk_label_set_use_markup (GTK_LABEL (self->priv->label), TRUE);
   gtk_box_pack_start (GTK_BOX (self->priv->catbar), self->priv->label,
-			FALSE, FALSE, 0);	
- 
+                        FALSE, FALSE, 0);
+
   self->priv->combo = gtk_combo_box_text_new ();
   gtk_combo_box_set_focus_on_click (GTK_COMBO_BOX (self->priv->combo), FALSE);
-  gtk_box_pack_start (GTK_BOX (self->priv->catbar), 
-			self->priv->combo, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (self->priv->catbar),
+                        self->priv->combo, TRUE, TRUE, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (self->priv->label), self->priv->combo);
 
-  g_signal_connect (G_OBJECT (self->priv->combo), "changed", 
-		      G_CALLBACK (games_scores_dialog_change_category), self);
+  g_signal_connect (G_OBJECT (self->priv->combo), "changed",
+                      G_CALLBACK (games_scores_dialog_change_category), self);
 
   self->priv->list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
 
@@ -476,7 +476,7 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
 
   timerenderer = gtk_cell_renderer_text_new ();
   timecolumn = gtk_tree_view_column_new_with_attributes (/* Score dialog column header for the date
-							    the score was recorded */
+                                                            the score was recorded */
                                                          _("Date"),
                                                          timerenderer,
                                                          "text", 0,
@@ -490,11 +490,11 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   column = gtk_tree_view_column_new_with_attributes ("", renderer, "text", 1, NULL);
   g_object_set (G_OBJECT (renderer), "xalign", 1.0, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
-				 GTK_TREE_VIEW_COLUMN (column));
+                                 GTK_TREE_VIEW_COLUMN (column));
   self->priv->column = column;
- 
+
   gtk_container_add (GTK_CONTAINER (scroll), listview);
-  
+
   games_scores_dialog_set_buttons (self, GAMES_SCORES_CLOSE_BUTTON);
 
   gtk_window_set_destroy_with_parent (GTK_WINDOW (self), TRUE);

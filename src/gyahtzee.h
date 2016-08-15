@@ -22,11 +22,11 @@
 extern GtkWidget *create_score_list (void);
 extern void setup_score_list (GtkWidget * scorelist);
 extern void update_score_cell (GtkWidget * scorelist, int row, int col,
-			       int val);
+                               int val);
 extern void ShowoffPlayerColumn (GtkWidget * scorelist, int player, int so);
 extern void ShowoffPlayer (GtkWidget * scorelist, int player, int so);
 extern void score_list_set_column_title (GtkWidget * scorelist, int column,
-					 const char *str);
+                                         const char *str);
 extern void update_score_tooltips (void);
 /* setup.c */
 extern void setup_game (void);
@@ -41,7 +41,7 @@ extern GtkWidget *ScoreList;
 extern void update_undo_sensitivity(void);
 #endif /* _Gyahtzee_H_ */
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8

@@ -116,7 +116,7 @@ static gint gtk_tree_path_to_row (GtkTreePath *path)
   gint  row;
   if (sscanf (path_str, "%i", &row) != 1) {
     g_warning ("%s: could not convert '%s' to integer\n",
-	       G_STRFUNC, path_str);
+               G_STRFUNC, path_str);
     g_free (path_str);
     return -1;
   }
@@ -145,7 +145,7 @@ static gint score_row (GtkTreePath *path)
 
 static void
 row_activated_cb (GtkTreeView * treeview, GtkTreePath * path,
-		  GtkTreeViewColumn * column, gpointer user_data)
+                  GtkTreeViewColumn * column, gpointer user_data)
 {
   int row = score_row (path);
 
@@ -184,7 +184,7 @@ activate_selected_row_idle_cb (gpointer data)
     gtk_tree_view_row_activated (tree, path, column);
   }
 
-  /* Quoted from docs: "The returned GtkTreePath must be freed 
+  /* Quoted from docs: "The returned GtkTreePath must be freed
    * with gtk_tree_path_free() when you are done with it." */
   gtk_tree_path_free (path);
 
@@ -194,7 +194,7 @@ activate_selected_row_idle_cb (gpointer data)
 /* Returns: FALSE to let the GtkTreeView focus the selected row */
 static gboolean
 tree_button_press_cb (GtkWidget * widget, GdkEventButton * event,
-		      gpointer data)
+                      gpointer data)
 {
   GtkTreeView *tree = GTK_TREE_VIEW (data);
 
@@ -205,7 +205,7 @@ tree_button_press_cb (GtkWidget * widget, GdkEventButton * event,
     return FALSE;
 
   g_idle_add_full (G_PRIORITY_HIGH, activate_selected_row_idle_cb,
-		   (gpointer) tree, NULL);
+                   (gpointer) tree, NULL);
 
   return FALSE;
 }
@@ -241,9 +241,9 @@ create_score_list (void)
   GtkListStore *store;
 
   store = gtk_list_store_new (MAX_NUMBER_OF_PLAYERS + 3,
-			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-			      G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
+                              G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+                              G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+                              G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
   tree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (store));
   gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (tree), TRUE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (tree), FALSE);
@@ -252,9 +252,9 @@ create_score_list (void)
   g_object_unref (store);
 
   g_signal_connect (G_OBJECT (tree), "row-activated",
-		    G_CALLBACK (row_activated_cb), NULL);
+                    G_CALLBACK (row_activated_cb), NULL);
   g_signal_connect (G_OBJECT (tree), "button-press-event",
-		    G_CALLBACK (tree_button_press_cb), (gpointer) tree);
+                    G_CALLBACK (tree_button_press_cb), (gpointer) tree);
   g_signal_connect (G_OBJECT (tree), "query-tooltip",
             G_CALLBACK (tree_query_tooltip_cb), (gpointer) tree);
 
@@ -273,9 +273,9 @@ add_columns (GtkTreeView * tree)
   /* Create columns */
   renderer = gtk_cell_renderer_text_new ();
   column = gtk_tree_view_column_new_with_attributes ("", renderer,
-						     "text", 0,
-						     "weight", LAST_COL,
-						     NULL);
+                                                     "text", 0,
+                                                     "weight", LAST_COL,
+                                                     NULL);
   g_object_set (renderer, "weight-set", TRUE, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
   for (i = 0; i < MAX_NUMBER_OF_PLAYERS; i++) {
@@ -291,8 +291,8 @@ add_columns (GtkTreeView * tree)
     column = gtk_tree_view_column_new ();
     gtk_tree_view_column_pack_start (column, renderer, TRUE);
     gtk_tree_view_column_set_attributes (column, renderer,
-					 "text", i + 1,
-					 "weight", LAST_COL, NULL);
+                                         "text", i + 1,
+                                         "weight", LAST_COL, NULL);
     gtk_tree_view_column_set_min_width (column, 95);
     gtk_tree_view_column_set_alignment (column, 1.0);
     label = gtk_label_new (players[i].name);
@@ -303,14 +303,14 @@ add_columns (GtkTreeView * tree)
   }
   renderer = gtk_cell_renderer_text_new ();
   column = gtk_tree_view_column_new_with_attributes ("", renderer, "text",
-						     MAX_NUMBER_OF_PLAYERS
-						     + 1, NULL);
+                                                     MAX_NUMBER_OF_PLAYERS
+                                                     + 1, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 }
 
 void
 score_list_set_column_title (GtkWidget * treeview, int column,
-			     const char *str)
+                             const char *str)
 {
   GtkTreeViewColumn *col;
   GtkWidget *label;
@@ -373,31 +373,31 @@ setup_score_list (GtkWidget * treeview)
   for (i = 0; i < NUM_UPPER; i++) {
     gtk_list_store_append (store, &iter);
     gtk_list_store_set (store, &iter, 0, _(FieldLabels[i]),
-			LAST_COL, PANGO_WEIGHT_NORMAL, -1);
+                        LAST_COL, PANGO_WEIGHT_NORMAL, -1);
   }
 
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_BONUS]),
-		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+                      LAST_COL, PANGO_WEIGHT_BOLD, -1);
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_UPPERT]),
-		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+                      LAST_COL, PANGO_WEIGHT_BOLD, -1);
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, "", -1);
 
   for (i = 0; i < NUM_LOWER; i++) {
     gtk_list_store_append (store, &iter);
     gtk_list_store_set (store, &iter,
-			0, _(FieldLabels[i + NUM_UPPER]),
-			LAST_COL, PANGO_WEIGHT_NORMAL, -1);
+                        0, _(FieldLabels[i + NUM_UPPER]),
+                        LAST_COL, PANGO_WEIGHT_NORMAL, -1);
   }
 
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_LOWERT]),
-		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+                      LAST_COL, PANGO_WEIGHT_BOLD, -1);
   gtk_list_store_append (store, &iter);
   gtk_list_store_set (store, &iter, 0, _(FieldLabels[F_GRANDT]),
-		      LAST_COL, PANGO_WEIGHT_BOLD, -1);
+                      LAST_COL, PANGO_WEIGHT_BOLD, -1);
 }
 
 void
@@ -417,7 +417,7 @@ update_score_tooltips (void)
     }
 }
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8

@@ -8,7 +8,7 @@
  *
  * Author: Scott Heavner
  *
- *   Contains parser for command line arguments and 
+ *   Contains parser for command line arguments and
  *   code for properties window.
  *
  *   Variables are exported in gyahtzee.h
@@ -117,10 +117,10 @@ WarnNumPlayersChanged (void)
   GtkWidget *mb;
 
   mb = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_DESTROY_WITH_PARENT,
-			       GTK_MESSAGE_INFO,
-			       GTK_BUTTONS_OK,
-			       _("Preferences will be updated"
-				 " in the next game."));
+                               GTK_MESSAGE_INFO,
+                               GTK_BUTTONS_OK,
+                               _("Preferences will be updated"
+                                 " in the next game."));
   gtk_window_set_position (GTK_WINDOW (mb), GTK_WIN_POS_MOUSE);
   gtk_dialog_run (GTK_DIALOG (mb));
   gtk_widget_destroy (mb);
@@ -139,7 +139,7 @@ do_setup (GtkWidget * widget, gpointer data)
     gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ComputerSpinner));
   NumberOfHumans =
     gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (HumanSpinner));
-    
+
   if (tmpDoDelay == -1)
     tmpDoDelay = DoDelay;
   else
@@ -182,7 +182,7 @@ do_setup (GtkWidget * widget, gpointer data)
   g_settings_set_int (settings, "monte-carlo-trials", NUM_TRIALS);
 
   if (((NumberOfComputers != OriginalNumberOfComputers)
-       || (NumberOfHumans != OriginalNumberOfHumans) 
+       || (NumberOfHumans != OriginalNumberOfHumans)
        || (NewGameType != game_type))
       && !GameIsOver ())
     WarnNumPlayersChanged ();
@@ -219,10 +219,10 @@ MaxPlayersCheck (GtkWidget * widget, gpointer * data)
   if ((numc + numh) > MAX_NUMBER_OF_PLAYERS) {
     if (GTK_ADJUSTMENT (data) == GTK_ADJUSTMENT (HumanAdj)) {
       gtk_adjustment_set_value (GTK_ADJUSTMENT (ComputerAdj),
-				(gfloat) (numc - 1));
+                                (gfloat) (numc - 1));
     } else {
       gtk_adjustment_set_value (GTK_ADJUSTMENT (HumanAdj),
-				(gfloat) (numh - 1));
+                                (gfloat) (numh - 1));
     }
 
   }
@@ -262,21 +262,21 @@ setup_game (void)
   }
 
   setupdialog = gtk_dialog_new_with_buttons (_("Preferences"),
-					     GTK_WINDOW (window),
-					     GTK_DIALOG_USE_HEADER_BAR, NULL);
+                                             GTK_WINDOW (window),
+                                             GTK_DIALOG_USE_HEADER_BAR, NULL);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
   g_signal_connect (G_OBJECT (setupdialog), "delete_event",
-		    G_CALLBACK (setupdialog_destroy), NULL);
+                    G_CALLBACK (setupdialog_destroy), NULL);
   g_signal_connect (G_OBJECT (setupdialog), "response",
-		    G_CALLBACK (do_setup), NULL);
+                    G_CALLBACK (do_setup), NULL);
 
   grid = gtk_grid_new ();
   gtk_container_set_border_width (GTK_CONTAINER (grid), 5);
   gtk_grid_set_row_spacing (GTK_GRID (grid), 18);
   gtk_grid_set_column_spacing (GTK_GRID (grid), 18);
 
-  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))),
                       grid, FALSE, FALSE, 0);
 
   frame = games_frame_new (_("Human Players"));
@@ -285,7 +285,7 @@ setup_game (void)
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
 
-	/*--- Spinner (number of humans) ---*/
+        /*--- Spinner (number of humans) ---*/
   OriginalNumberOfHumans = NumberOfHumans;
   box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
@@ -293,12 +293,12 @@ setup_game (void)
 
   gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
   HumanAdj = gtk_adjustment_new ((gfloat) NumberOfHumans, 1.0,
-				 6.0, 1.0, 6.0, 0.0);
+                                 6.0, 1.0, 6.0, 0.0);
   HumanSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (HumanAdj), 10, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), HumanSpinner);
 
   g_signal_connect (G_OBJECT (HumanAdj), "value_changed",
-		    G_CALLBACK (MaxPlayersCheck), HumanAdj);
+                    G_CALLBACK (MaxPlayersCheck), HumanAdj);
 
   gtk_box_pack_start (GTK_BOX (box2), HumanSpinner, TRUE, TRUE, 0);
 
@@ -309,14 +309,14 @@ setup_game (void)
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (frame), box);
 
-	/*--- Button ---*/
+        /*--- Button ---*/
   button = gtk_check_button_new_with_mnemonic (_("_Delay between rolls"));
   gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), DoDelay);
   g_signal_connect (G_OBJECT (button), "clicked",
-		    G_CALLBACK (set_as_int), &tmpDoDelay);
+                    G_CALLBACK (set_as_int), &tmpDoDelay);
 
-	/*--- Spinner (number of computers) ---*/
+        /*--- Spinner (number of computers) ---*/
   OriginalNumberOfComputers = NumberOfComputers;
   box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   gtk_box_pack_start (GTK_BOX (box), box2, FALSE, FALSE, 0);
@@ -324,12 +324,12 @@ setup_game (void)
   gtk_box_pack_start (GTK_BOX (box2), label, FALSE, FALSE, 0);
 
   ComputerAdj = gtk_adjustment_new ((gfloat) NumberOfComputers,
-				    0.0, 5.0, 1.0, 5.0, 0.0);
+                                    0.0, 5.0, 1.0, 5.0, 0.0);
   ComputerSpinner = gtk_spin_button_new (GTK_ADJUSTMENT (ComputerAdj), 10, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), ComputerSpinner);
 
   g_signal_connect (G_OBJECT (ComputerAdj), "value_changed",
-		    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
+                    G_CALLBACK (MaxPlayersCheck), ComputerAdj);
   gtk_box_pack_start (GTK_BOX (box2), ComputerSpinner, TRUE, TRUE, 0);
 
   box2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
@@ -361,7 +361,7 @@ setup_game (void)
                     combo);
   gtk_container_add (GTK_CONTAINER (frame), combo);
 
-	/*--- PLAYER NAMES FRAME ----*/
+        /*--- PLAYER NAMES FRAME ----*/
   frame = games_frame_new (_("Player Names"));
   gtk_grid_attach (GTK_GRID (grid), frame, 1, 0, 1, 3);
 

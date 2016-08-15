@@ -1,15 +1,15 @@
 bin_PROGRAMS = tali
 
-tali_SOURCES =       \
-	gyahtzee.c       \
-	gyahtzee.h       \
-	clist.c          \
-	yahtzee.h        \
-	yahtzee.c        \
-	computer.c       \
-	setup.c          \
-	games-frame.c    \
-	games-frame.h    \
+tali_SOURCES =	     \
+	gyahtzee.c	 \
+	gyahtzee.h	 \
+	clist.c 	 \
+	yahtzee.h	 \
+	yahtzee.c	 \
+	computer.c	 \
+	setup.c 	 \
+	games-frame.c	 \
+	games-frame.h	 \
 	games-score.h			\
 	games-score.c			\
 	games-scores.c			\
@@ -34,7 +34,7 @@ tali_CFLAGS = \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	$(TALI_CFLAGS)
-		
+
 tali_LDADD = \
 	$(TALI_LIBS)
 

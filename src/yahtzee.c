@@ -355,7 +355,7 @@ find_straight (int run, int notstart, int notrun)
 
     for (j = 0; j < run; ++j)
       if (!count (i + j))
-	break;
+        break;
 
     if (j == run)
       return (i);
@@ -509,7 +509,7 @@ score_kismet (int field) {
   return 0;
 }
 
-FieldInfo field_table[] = { 
+FieldInfo field_table[] = {
   { N_("1s [total of 1s]"),                   0,  0, score_basic },
   { N_("2s [total of 2s]"),                   1,  1, score_basic },
   { N_("3s [total of 3s]"),                   2,  2, score_basic },
@@ -754,7 +754,7 @@ FindWinner (void)
     }
   }
 
-  /* Detect a drawn game. Returning the negative of the score 
+  /* Detect a drawn game. Returning the negative of the score
    * is a bit of a hack, but it allows us to find out who the winners
    * were without having to pass around a list. */
   for (i = 0; i < NumberOfPlayers; ++i) {
@@ -786,7 +786,7 @@ RedoPossible (void)
   return RedoList != NULL;
 }
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8

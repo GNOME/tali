@@ -13,8 +13,8 @@
  *
  * You should have received a copy of the GNU Library General Public License
  * along with this library; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  
- * 
+ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ *
  */
 
 /* Authors:   Callum McKenzie <callum@physics.otago.ac.nz> */
@@ -115,7 +115,7 @@ G_DEFINE_TYPE (GamesScores, games_scores, G_TYPE_OBJECT);
  *   or %NULL to use the default domain
  * @default_category_index: (allow-none): the key of the default category, or %NULL
  * @style: the category style
- * 
+ *
  *
  * Returns: a new #GamesScores object
  */
@@ -134,7 +134,7 @@ games_scores_new (const char *app_name,
 
   /* FIXME: Input sanity checks. */
 
-  /* catsordered is a record of the ordering of the categories. 
+  /* catsordered is a record of the ordering of the categories.
    * Its data is shared with the hash table. */
   self->priv->catsordered = NULL;
 
@@ -224,7 +224,7 @@ games_scores_set_category (GamesScores * self, const gchar * category)
   g_free (priv->currentcat);
   priv->currentcat = g_strdup (category);
 
-  /* FIXME: Check validity of category (Null, the same as current, 
+  /* FIXME: Check validity of category (Null, the same as current,
    * is actually a category) then just set it in the structure. */
 }
 
@@ -266,7 +266,7 @@ games_scores_add_score (GamesScores * self, GamesScore *score)
     /* If beat someone in the list, add us there. */
     if (games_score_compare (priv->style, oldscore, score) < 0) {
       scores_list = g_list_insert_before (scores_list, s,
-					  g_object_ref (score));
+                                          g_object_ref (score));
       place = n;
       break;
     }
@@ -274,8 +274,8 @@ games_scores_add_score (GamesScores * self, GamesScore *score)
     s = g_list_next (s);
   }
 
-  /* If we haven't placed anywhere and the list still has 
-   * room to grow, put us on the end. 
+  /* If we haven't placed anywhere and the list still has
+   * room to grow, put us on the end.
    * This also handles the empty-file case. */
   if ((place == 0) && (n < GAMES_SCORES_SIGNIFICANT)) {
     place = n + 1;
@@ -440,7 +440,7 @@ games_scores_finalize (GObject * object)
 static void
 games_scores_class_init (GamesScoresClass * klass)
 {
-  GObjectClass *object_class = (GObjectClass *) klass;  
+  GObjectClass *object_class = (GObjectClass *) klass;
   object_class->finalize = games_scores_finalize;
   g_type_class_add_private (klass, sizeof (GamesScoresPrivate));
 }

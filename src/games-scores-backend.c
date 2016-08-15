@@ -1,4 +1,4 @@
-/* games-scores-backend.c 
+/* games-scores-backend.c
  *
  * Copyright (C) 2005 Callum McKenzie
  *
@@ -108,7 +108,7 @@ games_scores_backend_new (GamesScoreStyle style,
 }
 
 
-/* Get a lock on the scores file. Block until it is available. 
+/* Get a lock on the scores file. Block until it is available.
  * This also supplies the file descriptor we need. The return value
  * is whether we were succesful or not. */
 static gboolean
@@ -171,7 +171,7 @@ games_scores_backend_release_lock (GamesScoresBackend * self)
 /**
  * games_scores_backend_get_scores:
  * @self: the backend to get the scores from
- * 
+ *
  * You can alter the list returned by this function, but you must
  * make sure you set it again with the _set_scores method or discard it
  * with with the _discard_scores method. Otherwise deadlocks will ensue.
@@ -190,7 +190,7 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
   int error;
   ssize_t length, target;
   GList *t;
-  
+
   /* Check for a change in the scores file and update if necessary. */
   error = stat (self->priv->filename, &info);
 
@@ -238,7 +238,7 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
     /* FIXME: These details should be in a sub-class. */
 
     /* Parse the list. We start by breaking it into lines. */
-    /* Since the buffer is null-terminated 
+    /* Since the buffer is null-terminated
      * we can do the string stuff reasonably safely. */
     eol = strchr (buffer, '\n');
     scorestr = buffer;

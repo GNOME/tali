@@ -34,10 +34,10 @@
 
 
 /*
-**	questions are:
-**		0:	none
-**		1:	"what dice to roll again?"
-**		2:	"where do you want to put that?"
+**      questions are:
+**              0:      none
+**              1:      "what dice to roll again?"
+**              2:      "where do you want to put that?"
 */
 
 static int bc_table[MAX_FIELDS];
@@ -57,7 +57,7 @@ BuildTable (int player)
   }
 
 /*
-**	HANDLING UPPER SLOTS
+**      HANDLING UPPER SLOTS
 */
 
   for (i = 0; i < NUM_UPPER; ++i) {
@@ -65,18 +65,18 @@ BuildTable (int player)
       continue;
 
 /*
-**	ok. now we set a base value on the roll based on its count and
-**	how much it is worth to us.
+**      ok. now we set a base value on the roll based on its count and
+**      how much it is worth to us.
 */
     bc_table[i] = (count (i + 1) - 2) * (i + 1) * 4 - (i + 1);
   }
 
 /*
-**	HANDLING LOWER SLOTS
+**      HANDLING LOWER SLOTS
 */
 
 /*
-**	now we look hard at what we got
+**      now we look hard at what we got
 */
 
   /* Small straight */
@@ -133,7 +133,7 @@ BuildTable (int player)
       bc_table[H_YA] = -99;
   }
   else if (find_n_of_a_kind (5, 0)) {
-      bc_table[H_YA] = 150;	/* so he will use it! */
+      bc_table[H_YA] = 150;     /* so he will use it! */
   }
 
   if (DisplayComputerThoughts) {
@@ -144,11 +144,11 @@ BuildTable (int player)
 }
 
 /*
-**	The idea here is to use a Monte Carlo simulation.
-**	For each possible set of dice to roll, try NUM_TRIALS random rolls,
-**	and average the scores. The highest average score will be the set
-**	that we decide to roll.
-**	Currently, this ignores the number of rolls a player has left.
+**      The idea here is to use a Monte Carlo simulation.
+**      For each possible set of dice to roll, try NUM_TRIALS random rolls,
+**      and average the scores. The highest average score will be the set
+**      that we decide to roll.
+**      Currently, this ignores the number of rolls a player has left.
 **  We could try to do a second set of trials when there are two rolls
 **  left, but that would take a lot more CPU time.
 */
@@ -213,21 +213,21 @@ ComputerRolling (int player)
       if (die_comp[ii] & best) {
           DiceValues[ii].sel = 1;
           if (DisplayComputerThoughts)
-	      printf ("Reset to roll die %d value %d bit %d comp %d test %d\n", ii, DiceValues[ii].val, ii, best, ii & best);
+              printf ("Reset to roll die %d value %d bit %d comp %d test %d\n", ii, DiceValues[ii].val, ii, best, ii & best);
       }
       else {
           DiceValues[ii].sel = 0;
           if (DisplayComputerThoughts)
-	      printf ("Reset NOT to roll die %d value %d bit %d comp %d test %d\n",
-		      ii, DiceValues[ii].val, ii, best, ii & best);
+              printf ("Reset NOT to roll die %d value %d bit %d comp %d test %d\n",
+                      ii, DiceValues[ii].val, ii, best, ii & best);
       }
   }
 }
 
 /*
-**	what we do here is generate a table of all the choices then choose
-**	the highest value one.  in case of a tie, we go for the lower choice
-**	cause higher choices tend to be easier to better
+**      what we do here is generate a table of all the choices then choose
+**      the highest value one.  in case of a tie, we go for the lower choice
+**      cause higher choices tend to be easier to better
 */
 
 void
@@ -237,7 +237,7 @@ ComputerScoring (int player)
   int best;
   int bestv;
 
-  NumberOfRolls = 3;		/* in case skipped middle */
+  NumberOfRolls = 3;            /* in case skipped middle */
 
   BuildTable (player);
 
@@ -248,24 +248,24 @@ ComputerScoring (int player)
   for (i = NUM_FIELDS - 1; i >= 0; --i) {
     if (player % 2) {
       if (bc_table[i] > bestv) {
-	best = i;
+        best = i;
 
-	bestv = bc_table[i];
+        bestv = bc_table[i];
       }
     }
 
     else {
       if (bc_table[i] >= bestv) {
-	best = i;
+        best = i;
 
-	bestv = bc_table[i];
+        bestv = bc_table[i];
       }
     }
 
     if (DisplayComputerThoughts) {
       fprintf (stderr, "<<BEST>> %s : VALUE = %d\n",
-	       _(FieldLabels[best]),
-	       bc_table[best]);
+               _(FieldLabels[best]),
+               bc_table[best]);
     }
 
   }
@@ -278,7 +278,7 @@ ComputerScoring (int player)
 
 }
 
-/* Arrgh - lets all use the same tabs under emacs: 
+/* Arrgh - lets all use the same tabs under emacs:
 Local Variables:
 tab-width: 8
 c-basic-offset: 8
