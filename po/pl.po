@@ -1,9 +1,6 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aviary.pl
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
-# gnomepl@aviary.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Polish translation for tali.
+# Copyright © 1998-2016 the tali authors.
+# This file is distributed under the same license as the tali package.
 # Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002.
 # Marcin Gorycki <mgo@olicom.dk>, 1999.
 # Tomasz Kłoczko <kloczek@rudy.mif.pg.gda.pl>, 2000.
@@ -15,24 +12,23 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2015.
-# Aviary.pl <gnomepl@aviary.pl>, 2007-2015.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2016.
+# Aviary.pl <community-poland@mozilla.org>, 2007-2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-25 14:44+0200\n"
-"PO-Revision-Date: 2015-08-25 14:45+0200\n"
+"POT-Creation-Date: 2016-08-15 13:04+0200\n"
+"PO-Revision-Date: 2016-08-15 13:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Polish\n"
-"X-Poedit-Country: Poland\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
@@ -50,19 +46,23 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
-"Klasyczna gra rodzinna, rodzaj pokera z kośćmi i mniejszymi pieniędzmi. "
-"Należy rzucić kośćmi trzy razy z rzędu, zatrzymując wybrane rzuty, aby mieć "
-"jak najlepsze rozdanie. Można także zagrać w mniej znaną odmianę z "
-"kolorowymi kośćmi."
+"Klasyczna gra rodzinna, rodzaj pokera z kośćmi i mniejszymi pieniędzmi. "
+"Należy rzucić kośćmi trzy razy z rzędu, zatrzymując wybrane rzuty, aby mieć "
+"jak najlepsze rozdanie. Można także zagrać w mniej znaną odmianę "
+"z kolorowymi kośćmi."
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
-"Można grać z od jednego do pięciu przeciwników na trzech poziomach trudności."
+"Można grać z od jednego do pięciu przeciwników na trzech poziomach trudności."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
-msgstr "Gra w kości w stylu pokera"
+msgstr "Gra w kości w stylu pokera"
 
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
@@ -248,9 +248,9 @@ msgstr "Ten wynik kwalifikuje się do pierwszej dziesiątki."
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
-msgstr[0] "%s wygrał(a) grę z %d punktem"
-msgstr[1] "%s wygrał(a) grę z %d punktami"
-msgstr[2] "%s wygrał(a) grę z %d punktami"
+msgstr[0] "%s wygrał(a) grę z %d punktem"
+msgstr[1] "%s wygrał(a) grę z %d punktami"
+msgstr[2] "%s wygrał(a) grę z %d punktami"
 
 #: ../src/gyahtzee.c:209
 msgid "Game over!"
@@ -288,11 +288,11 @@ msgstr "Wersja dla konsoli (1992):"
 
 #: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
-msgstr "Kolory w grze i ustawienia inteligencji przeciwników (2006):"
+msgstr "Kolory w grze i ustawienia inteligencji przeciwników (2006):"
 
 #: ../src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
-msgstr "Rodzaj pokera z kośćmi i mniejszymi pieniędzmi."
+msgstr "Rodzaj pokera z kośćmi i mniejszymi pieniędzmi."
 
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
@@ -308,8 +308,8 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2015\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2007-2015"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2016\n"
+"Aviary.pl <community-poland@mozilla.org>, 2007-2016"
 
 #: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
@@ -321,7 +321,7 @@ msgstr "Gracz"
 
 #: ../src/setup.c:122
 msgid "Preferences will be updated in the next game."
-msgstr "Preferencje zostaną zaktualizowane w następnej grze."
+msgstr "Preferencje zostaną zaktualizowane w następnej grze."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -377,48 +377,48 @@ msgstr "Typ gry"
 msgid "Player Names"
 msgstr "Imiona graczy"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "Jedynki [suma jedynek]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "Dwójki [suma dwójek]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "Trójki [suma trójek]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "Czwórki [suma czwórek]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "Piątki [suma piątek]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "Szóstki [suma szóstek]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Trójka [suma trzech]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Kareta [suma czterech]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Mały strit [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Duży strit [40]"
 
@@ -426,7 +426,7 @@ msgstr "Duży strit [40]"
 msgid "5 of a Kind [50]"
 msgstr "Piątka [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Szansa [suma]"
 
@@ -449,34 +449,34 @@ msgid "Bonus if >62"
 msgstr "Premia, jeżeli >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 pary tego samego koloru [suma]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full [15 + suma]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Full tego samego koloru [20 + suma]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Kolor (wszystkie karty tego samego koloru) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "Kareta [25 + suma]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "Generał [50 + suma]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Proszę wybrać miejsce wpisu punktów."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "Piątka [suma]"
