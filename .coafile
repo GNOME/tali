@@ -1,0 +1,28 @@
+[Default]
+bears = coalaBear, InvalidLinkBear, FilenameBear, LineCountBear
+files = **.h, **.xml, **.ui, **.c, **.h
+max_lines_per_file = 1000
+
+[automake]
+files = **.am
+bears = SpaceConsistencyBear
+use_spaces = nope
+tab_width = 8
+
+default_actions = *: ApplyPatchAction
+
+[xml]
+bears = SpaceConsistencyBear
+files = **.xml, **.ui
+use_spaces = yeah
+tab_width = 8
+
+default_actions = *: ApplyPatchAction
+
+[c]
+bears = GNUIndentBear, CSecurityBear, ClangComplexityBear, SpaceConsistencyBear
+files = **.c, **.h
+use_spaces = yeah
+tab_width = 8
+
+default_actions = Space*: ApplyPatchAction
