@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-22 11:53+0000\n"
-"PO-Revision-Date: 2015-02-22 16:06+0100\n"
+"POT-Creation-Date: 2016-08-14 12:35+0000\n"
+"PO-Revision-Date: 2016-08-28 19:31+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -38,10 +38,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Lancez les dés et récoltez des points"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Un genre de poker avec des dés et moins d'argent, ce jeu est un classique "
+"familial. Lancez les dés trois fois d'affilée, en conservant ceux qui vous "
+"plaisent, pour constituer la meilleure main possible. Vous pouvez aussi "
+"jouer à une variante moins connue avec des dés colorés."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr ""
+"Vous pouvez jouer contre un à cinq adversaires, avec trois niveaux de "
+"difficulté."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Le projet GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -50,6 +76,30 @@ msgstr "Jeter des dés à la manière du poker"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Nouvelle partie"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Préférences"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Scores"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "Aid_e"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "À _propos"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Quitter"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -83,28 +133,6 @@ msgstr "[ 'Humain', 'Lætitia', 'Mohammed', 'Émilie', 'Anaïs', 'François' ]"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Normal'"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr "Lancez les dés et récoltez des points"
-
-#: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Un genre de poker avec des dés et moins d'argent, ce jeu est un classique "
-"familial. Lancez les dés trois fois d'affilée, en conservant ceux qui vous "
-"plaisent, pour constituer la meilleure main possible. Vous pouvez aussi "
-"jouer à une variante moins connue avec des dés colorés."
-
-#: ../data/tali.appdata.xml.in.h:4
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
-"Vous pouvez jouer contre un à cinq adversaires, avec trois niveaux de "
-"difficulté."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -201,7 +229,7 @@ msgstr "Couleurs"
 msgid "Roll all!"
 msgstr "Tout relancer !"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Lancer !"
 
@@ -292,35 +320,11 @@ msgstr ""
 "Didier Vidal <didier-devel@melix.net>\n"
 "Pierre Lemaire <pierre.lemaire@kamick.org>"
 
-#: ../src/gyahtzee.c:751
-msgid "_New Game"
-msgstr "_Nouvelle partie"
-
-#: ../src/gyahtzee.c:752
-msgid "_Preferences"
-msgstr "_Préférences"
-
-#: ../src/gyahtzee.c:753
-msgid "_Scores"
-msgstr "_Scores"
-
-#: ../src/gyahtzee.c:756
-msgid "_Help"
-msgstr "Aid_e"
-
-#: ../src/gyahtzee.c:757
-msgid "_About"
-msgstr "À _propos"
-
-#: ../src/gyahtzee.c:758
-msgid "_Quit"
-msgstr "_Quitter"
-
-#: ../src/gyahtzee.c:777
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Annule votre dernier coup"
 
-#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humain"
 
@@ -382,48 +386,48 @@ msgstr "Type de jeu"
 msgid "Player Names"
 msgstr "Noms des joueurs"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1 [total de 1]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2 [total de 2]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3 [total de 3]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4 [total de 4]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5 [total de 5]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6 [total de 6]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Brelan (3 id.) [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Carré (4 id.) [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Main pleine [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Petite suite [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Grande suite [40]"
 
@@ -431,7 +435,7 @@ msgstr "Grande suite [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 identiques [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Chance [total]"
 
@@ -454,35 +458,35 @@ msgid "Bonus if >62"
 msgstr "Bonus si > 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 paires de la même couleur [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Main pleine [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Main pleine de la même couleur [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Couleur [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "Carré [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "5 identiques [50 + total]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Choisissez une combinaison."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 identiques [total]"
 
