@@ -35,16 +35,16 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-25 23:55+0000\n"
-"PO-Revision-Date: 2015-02-26 13:02+0200\n"
-"Last-Translator: Maria Mavridou <mavridou@gmail.com>\n"
+"POT-Creation-Date: 2016-08-14 12:35+0000\n"
+"PO-Revision-Date: 2016-09-12 11:06+0300\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
@@ -71,6 +71,10 @@ msgstr ""
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Το έργο GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -302,10 +306,6 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Παιχνίδι χρώματα και τεχνητή νοημοσύνη πολλαπλών επιπέδων (2006):"
 
 #: ../src/gyahtzee.c:614
-#| msgid ""
-#| "A variation on poker with dice and less money\n"
-#| "\n"
-#| "Tali is a part of GNOME Games."
 msgid "A variation on poker with dice and less money."
 msgstr "Μια παραλλαγή του πόκερ με ζάρια και λιγότερα χρήματα."
 
@@ -331,7 +331,6 @@ msgid "Human"
 msgstr "Άνθρωπος"
 
 #: ../src/setup.c:122
-#| msgid "Changes will take effect for the next game."
 msgid "Preferences will be updated in the next game."
 msgstr "Οι προτιμήσεις θα ενημερωθούν στο επόμενο παιχνίδι."
 
@@ -389,51 +388,51 @@ msgstr "Είδος παιχνιδιού"
 msgid "Player Names"
 msgstr "Ονόματα παικτών"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "Άσσοι [σύνολο βαθμών από άσσους]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "Δυάρια [σύνολο βαθμών από δυάρια]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "Τριάρια [σύνολο βαθμών από τριάρια]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "Τεσσάρια [σύνολο βαθμών από τεσσάρια]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "Πεντάρια [σύνολο βαθμών από πεντάρια]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "Εξάρια [σύνολο βαθμών από εξάρια]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Τρία όμοια [σύνολο]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Καρέ [σύνολο]"
 
 # FIX (next 8 msgs)
 # Do not know the Greek equivalents for these...
 # Kanenas expert sto mparmpouti paidia ?? :-)
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Φουλ [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Μικρή κέντα [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Μεγάλη κέντα [40]"
 
@@ -441,7 +440,7 @@ msgstr "Μεγάλη κέντα [40]"
 msgid "5 of a Kind [50]"
 msgstr "Πέντε όμοια [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Τύχη [σύνολο]"
 
@@ -464,38 +463,38 @@ msgid "Bonus if >62"
 msgstr "Μπόνους αν >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "Δύο ζευγάρια ίδιου χρώματος [σύνολο]"
 
 # FIX (next 8 msgs)
 # Do not know the Greek equivalents for these...
 # Kanenas expert sto mparmpouti paidia ?? :-)
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Φουλ [15 + σύνολο]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Φουλ με χρώμα [20 + σύνολο]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Χρώμα (όλα ίδιο χρώμα) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 όμοια [25 + σύνολο]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "Πέντε όμοια [50+ σύνολο]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Επιλέξτε θέση βαθμολογίας."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "Πέντε όμοια [σύνολο]"
 
