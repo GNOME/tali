@@ -13,28 +13,52 @@
 # Nickolay V. Shmyrev <nshmyrev@yandex.ru>
 # Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2014.
 # Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
+# Stas Solovey <whats_up@tut.by>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-12 23:53+0000\n"
-"PO-Revision-Date: 2015-02-11 11:06+0300\n"
-"Last-Translator: Ivan Komaritsyn <vantu5z@mail.ru>\n"
-"Language-Team: русский <gnome-cyr@gnome.org>\n"
+"POT-Creation-Date: 2016-08-14 12:35+0000\n"
+"PO-Revision-Date: 2016-09-16 13:14+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
-#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Тали"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Бросайте кости и набирайте очки"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Вариация игры в покер с костями. Выкидываете кости три раз подряд, "
+"откладывая после броска выгодные цифры. Вы также можете сыграть в менее "
+"известный вариант с цветными костями."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Играйте с оппонентами (от одного до пяти) на трёх уровнях сложности."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -43,6 +67,30 @@ msgstr "Сыграйте в кости в стиле покера"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "яцзы;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Новая игра"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Параметры"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Результаты"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_О приложении"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Завершить"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -76,25 +124,6 @@ msgstr "[ 'Человек', 'Иван', 'Андрей', 'Василий', 'Ан�
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Обычная'"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr "Бросайте кости и набирайте очки"
-
-#: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Вариация игры в покер с костями. Выкидываете кости три раз подряд, "
-"откладывая после броска выгодные цифры. Вы также можете сыграть в менее "
-"известный вариант с цветными костями."
-
-#: ../data/tali.appdata.xml.in.h:4
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Играйте с оппонентами (от одного до пяти) на трёх уровнях сложности."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -191,7 +220,7 @@ msgstr "Цветная"
 msgid "Roll all!"
 msgstr "Бросить все!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Бросок!"
 
@@ -268,41 +297,14 @@ msgstr "Вариант игры в покер с костями и деньга�
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
-"Валек Филиппов aka frob\n"
-"Дмитрий Мастрюков\n"
-"Вячеслав Диконов\n"
-"Михаил Яхонтов\n"
-"Леонид Кантер"
+"Ivan Komaritsyn <vantu5z@mail.ru>, 2015.\n"
+"Yuri Myasoedov <ymyasoedov@yandex.ru>, 2014."
 
-#: ../src/gyahtzee.c:751
-msgid "_New Game"
-msgstr "_Новая игра"
-
-#: ../src/gyahtzee.c:752
-msgid "_Preferences"
-msgstr "_Параметры"
-
-#: ../src/gyahtzee.c:753
-msgid "_Scores"
-msgstr "_Результаты"
-
-#: ../src/gyahtzee.c:756
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../src/gyahtzee.c:757
-msgid "_About"
-msgstr "_О приложении"
-
-#: ../src/gyahtzee.c:758
-msgid "_Quit"
-msgstr "_Завершить"
-
-#: ../src/gyahtzee.c:777
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Отменить последний ход"
 
-#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Человек"
 
@@ -364,48 +366,48 @@ msgstr "Тип игры"
 msgid "Player Names"
 msgstr "Имена игроков"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1 [сумма 1й]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2 [сумма 2х]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3 [сумма 3х]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4 [сумма 4х]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5 [сумма 5х]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6 [сумма 6х]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "3 одинаковых [сумма]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "4 одинаковых [сумма]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Фулл [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Малый стрит [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Главный стрит [40]"
 
@@ -413,7 +415,7 @@ msgstr "Главный стрит [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 одинаковых [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Шанс [сумма]"
 
@@ -436,35 +438,35 @@ msgid "Bonus if >62"
 msgstr "Бонус, если >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 пары одного цвета [сумма]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Фулл [15 + сумма]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Фулл одного цвета [20 + сумма]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Флэш (все одного цвета) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 одинаковых [25 + сумма]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "5 одинаковых [50 + сумма]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Выберите клетку счёта."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 одинаковых [сумма]"
 
