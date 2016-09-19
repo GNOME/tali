@@ -2,28 +2,51 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 #
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-08 15:23+0100\n"
-"PO-Revision-Date: 2014-12-06 17:43+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=tali"
+"&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-08-14 12:35+0000\n"
+"PO-Revision-Date: 2016-09-20 12:18+0100\n"
+"Last-Translator: dooteo <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 
-#: ../data/tali.desktop.in.h:1 ../data/tali.appdata.xml.in.h:1
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tiratu dadoak eta lortu puntuak"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin. Jaurti dadoa hiru "
+"aldiz aldiko, nahi dituzunak gorde esku hobeagoa edukitzeko. Hain ezaguna ez "
+"den aldaera batera ere joka dezakezu: koloreztatutako dadoekin."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Jokatu aurkari bat edo bosten aurka zailtasuneko hiru mailatan."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME proiektua"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -32,6 +55,30 @@ msgstr "Jokatu pokerraren antzeko dado-jokoan"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "_Joko berria"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Hobespenak"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "_Puntuazioak"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "La_guntza"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "Honi _buruz"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "_Irten"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -65,25 +112,6 @@ msgstr "[ 'Gizakia', 'Izaro', 'Enbata', 'Gor', 'Eneritz', 'Urko' ]"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Arrunta'"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr "Tiratu dadoak eta lortu puntuak"
-
-#: ../data/tali.appdata.xml.in.h:3
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin. Jaurti dadoa hiru "
-"aldiz aldiko, nahi dituzunak gorde esku hobeagoa edukitzeko. Hain ezaguna ez "
-"den aldaera batera ere joka dezakezu: koloreztatutako dadoekin."
-
-#: ../data/tali.appdata.xml.in.h:4
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Jokatu aurkari bat edo bosten aurka zailtasuneko hiru mailatan."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -180,7 +208,7 @@ msgstr "Koloreak"
 msgid "Roll all!"
 msgstr "Jaurti denak!!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:803
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Jaurti!"
 
@@ -257,35 +285,11 @@ msgstr "Pokerraren aldaera bat, dadoekin eta diru gutxiagorekin."
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/gyahtzee.c:751
-msgid "_New Game"
-msgstr "_Joko berria"
-
-#: ../src/gyahtzee.c:752
-msgid "_Preferences"
-msgstr "_Hobespenak"
-
-#: ../src/gyahtzee.c:753
-msgid "_Scores"
-msgstr "_Puntuazioak"
-
-#: ../src/gyahtzee.c:756
-msgid "_Help"
-msgstr "La_guntza"
-
-#: ../src/gyahtzee.c:757
-msgid "_About"
-msgstr "Honi _buruz"
-
-#: ../src/gyahtzee.c:758
-msgid "_Quit"
-msgstr "_Irten"
-
-#: ../src/gyahtzee.c:777
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Desegin zure azken mugimendua"
 
-#: ../src/gyahtzee.c:986 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Gizakia"
 
@@ -347,48 +351,48 @@ msgstr "Joko mota"
 msgid "Player Names"
 msgstr "Jokalarien izenak"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1ak [1ak, guztira]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2ak [2ak, guztira]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3ak [3ak, guztira]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4ak [4ak, guztira]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5ak [5ak, guztira]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6ak [6ak, guztira]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "Hirukotea [guztira]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "Pokerra [guztira]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Eskailera txikia [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Eskailera handia [40]"
 
@@ -396,7 +400,7 @@ msgstr "Eskailera handia [40]"
 msgid "5 of a Kind [50]"
 msgstr "Errepokerra [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Ausaz [guztira]"
 
@@ -419,35 +423,35 @@ msgid "Bonus if >62"
 msgstr "Gainordaina >62 bada"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "Kolore bereko bi bikote [guztira]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full [15 + totala]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Kolore bereko full [20 + totala]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Eskailera (denak kolore berekoak) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "Pokerra [25 + totala]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "Errepokerra [50 + totala]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Hautatu konbinazio bat."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 mota berdinekoak [guztira]"
 
