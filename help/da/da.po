@@ -1,30 +1,95 @@
-# Danish translation for gnome-games.
-# Copyright (C) 2010 Joe Hansen.
+# Danish translation for tali-help.
 # This file is distributed under the same license as the gnome-games package.
 # Joe Hansen (joedalton2@yahoo.dk), 2009, 2010.
 #
-# Tali -> Yatzy
+# Copyright (C) 2010 Joe Hansen.
+# scootergrisen, 2015.
+# Gennemgået (delvist) Ask Hjorth Larsen <asklarsen@gmail.com>, 2016.
 #
+# Tali -> Yatzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2010-10-29 00:33+0200\n"
-"PO-Revision-Date: 2010-10-21 04:40+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Project-Id-Version: tali-help gnome-2-28\n"
+"POT-Creation-Date: 2016-03-18 14:51+0000\n"
+"PO-Revision-Date: 2016-10-02 15:48+0200\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../C/legal.xml:2(para) ../C/gtali.xml:2(para)
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Joe Hansen <joedalton2@yahoo.dk>, 2009\n"
+"scootergrisen, 2015\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
+
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:163
+msgctxt "_"
+msgid ""
+"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
+msgstr "[Strengen bruges ikke]"
+
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:240
+msgctxt "_"
+msgid ""
+"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+msgstr "[Strengen bruges ikke]"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:27
+msgid "<application>Tali</application> Manual"
+msgstr "Manual til <application>Yatzy</application>"
+
+#. (itstool) path: abstract/para
+#: C/index.docbook:29
+msgid ""
+"Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
+"dice to try to make the best possible combinations, like 4 of a kind, small "
+"straight, and full house. The player is allowed 3 rolls per turn and can "
+"hold certain dice with each roll."
+msgstr ""
+"Yatzy er som Yahtzee til GNOME eller som poker med terninger. Spilleren "
+"ruller terninger i et forsøg på at skabe de bedst mulige kombinationer, som "
+"4 ens, lille og fuldt hus. Spilleren har ret til 3 kast per runde og kan "
+"fastholde visse terninger ved hvert kast."
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2001</year> <holder>Scott D. Heavner</holder>"
+msgstr "<year>2001</year> <holder>Scott D. Heavner</holder>"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:93
+msgid "GNOME Documentation Project"
+msgstr "GNOME-dokumentationsprojekt"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Tilladelse er givet til at kopiere, distribuere og/eller ændre dette "
 "dokument under betingelserne i GNU Free Documentation License (GFDL), "
@@ -33,7 +98,8 @@ msgstr ""
 "kopi af GFDL her <ulink type=\"help\" url=\"help:fdl\">link</ulink> eller i "
 "filen COPYING-DOCS som distribueres sammen med denne manual."
 
-#: ../C/legal.xml:12(para) ../C/gtali.xml:12(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -45,7 +111,8 @@ msgstr ""
 "du gøre dette ved at tilføje en kopi af licensen til manualen, som beskrevet "
 "i afsnit 6 af licensen."
 
-#: ../C/legal.xml:19(para) ../C/gtali.xml:19(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -55,11 +122,12 @@ msgid ""
 msgstr ""
 "En stor del af de navne som anvendes af firmaer til at identificere deres "
 "produkter og tjenester hævdes som værende varemærker. Hvor disse navne "
-"fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af GNOME-"
-"dokumentationsprojeket er gjort opmærksom på disse varemærker, så er disse "
-"navne vist med store bogstaver eller stort begyndelsesbogstav."
+"fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af "
+"GNOME-dokumentationsprojeket er gjort opmærksom på disse varemærker, så er "
+"disse navne vist med store bogstaver eller stort begyndelsesbogstav."
 
-#: ../C/legal.xml:35(para) ../C/gtali.xml:35(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -87,7 +155,8 @@ msgstr ""
 "ÆNDRET VERSION AF DOKUMENTET ER AUTORISERET HERUNDER BORTSET FRA DENNE "
 "ANSVARSFRASKRIVELSE OG"
 
-#: ../C/legal.xml:55(para) ../C/gtali.xml:55(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -111,111 +180,74 @@ msgstr ""
 "BRUG AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER HERAF, SELV HVIS EN "
 "SÅDAN PART HAR VÆRET INFORMERET OM MULIGHEDEN FOR SÅDANNE SKADER."
 
-#: ../C/legal.xml:28(para) ../C/gtali.xml:28(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
 "DOKUMENTET OG ÆNDREDE VERSIONER AF DOKUMENTET STILLES TIL RÅDIGHED UNDER GNU "
-"FREE DOCOMENTATION LICENSE MED FØLGENDE BETINGELSER: <placeholder-1/>"
+"FREE DOCUMENTATION LICENSE MED FØLGENDE BETINGELSER: <_:orderedlist-1/>"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: ../C/gtali.xml:163(None)
-msgid "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-msgstr ""
-"@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: ../C/gtali.xml:240(None)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:62
 msgid ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
 msgstr ""
-"@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
+"<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
+"<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
 
-#: ../C/gtali.xml:27(title)
-msgid "<application>Tali</application> Manual"
-msgstr "Manual for <application>Yatzy</application>"
-
-#: ../C/gtali.xml:29(para)
-msgid ""
-"Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
-"dice to try to make the best possible combinations, like 4 of a kind, small "
-"straight, and full house. The player is allowed 3 rolls per turn and can "
-"hold certain dice with each roll."
-msgstr ""
-"Yatzy er som Yahtzee til GNOME eller som poker med terninger. Spilleren "
-"ruller terninger i et forsøg på at skabe de bedst mulige kombinationer, som "
-"4 ens, lille og fuldt hus. Spilleren har ret til 3 kast per runde og kan "
-"fastholde visse terninger ved hvert kast."
-
-#: ../C/gtali.xml:37(year)
-msgid "2001"
-msgstr "2001"
-
-#: ../C/gtali.xml:38(holder)
-msgid "Scott D. Heavner"
-msgstr "Scott D. Heavner"
-
-#: ../C/gtali.xml:53(publishername) ../C/gtali.xml:93(para)
-msgid "GNOME Documentation Project"
-msgstr "GNOME-dokumentationsprojekt"
-
-#: ../C/gtali.xml:63(firstname)
-msgid "Scott D"
-msgstr "Scott D"
-
-#: ../C/gtali.xml:64(surname)
-msgid "Heavner"
-msgstr "Heavner"
-
-#: ../C/gtali.xml:66(email)
-msgid "sdh@po.cwru.edu"
-msgstr "sdh@po.cwru.edu"
-
-#: ../C/gtali.xml:87(revnumber)
-msgid "Tali Manual V2.8"
-msgstr "Yatzymanual version 2.8"
-
-#: ../C/gtali.xml:88(date)
-msgid "September 2004"
-msgstr "September 2004"
-
-#: ../C/gtali.xml:90(para)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:90
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 
-#: ../C/gtali.xml:98(releaseinfo)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:86
+msgid ""
+"<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Yatzy manual V2.8</revnumber> <date>September 2004</date> "
+"<_:revdescription-1/>"
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:98
 msgid "This manual describes version 2.12 of Tali."
 msgstr "Denne manual beskriver version 2.12 af Yatzy."
 
-#: ../C/gtali.xml:105(title)
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:105
 msgid "Feedback"
 msgstr "Tilbagemeldinger"
 
-#: ../C/gtali.xml:106(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:106
 msgid ""
-"To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"To report a bug or make a suggestion regarding the "
+"<application>Tali</application> application or this manual, follow the "
+"directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">GNOME Feedback Page</ulink>."
 msgstr ""
 "Hvis du ønsker at indrapportere en fejl eller komme med et forslag "
 "vedrørende <application>Yatzy</application> eller denne manual så følg "
-"vejledningen på siden <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
-"\"help\">tilbagemeldinger omkring GNOME</ulink>."
+"vejledningen på siden <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">tilbagemeldinger omkring GNOME</ulink>."
 
-#: ../C/gtali.xml:117(primary)
-msgid "GNOME Tali"
-msgstr "GNOME Yatzy"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:116
+msgid "<primary>GNOME Tali</primary>"
+msgstr "<primary>GNOME Yatzy</primary>"
 
-#: ../C/gtali.xml:123(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:123
 msgid "Introduction"
 msgstr "Indledning"
 
-#: ../C/gtali.xml:125(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:125
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -226,7 +258,8 @@ msgstr ""
 "bedste <quote>hånd</quote>. Dit 2. og 3. kast kan inkludere alle eller "
 "udvalgte terninger."
 
-#: ../C/gtali.xml:131(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:131
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -234,51 +267,66 @@ msgstr ""
 "<application>GNOME Yatzy</application> er meget lig terningspillet Yahtzee "
 "som er et varemærke ejet af Hasbro, Inc."
 
-#: ../C/gtali.xml:136(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:136
 msgid ""
-"To run <application>GNOME Tali</application>, select "
-"<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
-"guimenuitem></menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
+"To run <application>GNOME Tali</application>, select <menuchoice> "
+"<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> "
+"</menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
 "<command>gtali</command> on the command line."
 msgstr ""
-"For at køre <application>GNOME Yatzy</application> vælges "
-"<menuchoice><guisubmenu>Spil</guisubmenu><guimenuitem>Yatzy</guimenuitem></"
-"menuchoice> fra <guimenu>Hovedmenuen</guimenu>, eller tast <command>gtali</"
-"command> fra kommandolinjen."
+"For at køre <application>GNOME Yatzy</application>, så vælg <menuchoice> "
+"<guisubmenu>Spil</guisubmenu> <guimenuitem>Yatzy</guimenuitem> </menuchoice> "
+"fra <guimenu>Hovedmenuen</guimenu>, eller tast <command>gtali</command> fra "
+"kommandolinjen."
 
-#: ../C/gtali.xml:146(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:146
 msgid ""
-"<application>GNOME Tali</application> is included in the <filename>gnome-"
-"games</filename> package, which is part of the GNOME desktop environment. "
-"This document describes version 2.8 of <application>GNOME Tali</application>."
+"<application>GNOME Tali</application> is included in the "
+"<filename>gnome-games</filename> package, which is part of the GNOME desktop "
+"environment. This document describes version 2.8 of <application>GNOME "
+"Tali</application>."
 msgstr ""
 "<application>GNOME Yatzy</application> er inkluderet i pakken "
 "<filename>gnome-games</filename>, som er en del af skrivebordsmiljøet GNOME. "
-"Dette dokument beskriver version 2.8 af <application>GNOME Yatzy</"
-"application>."
+"Dette dokument beskriver version 2.8 af <application>GNOME "
+"Yatzy</application>."
 
-#: ../C/gtali.xml:155(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:155
 msgid "Playing GNOME Tali"
 msgstr "Sådan spiller du GNOME Yatzy"
 
-#: ../C/gtali.xml:158(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:158
 msgid "GNOME Tali in action"
 msgstr "GNOME Yatzy i aktion"
 
-#: ../C/gtali.xml:166(phrase)
-msgid "GNOME Tali main window screenshot."
-msgstr "GNOME Yatzy - skærmbillede af hovedvinduet."
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:160
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"main window screenshot.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> "
+"<phrase>Skærmbillede af hovedvinduet i GNOME Yatzy.</phrase> </textobject>"
 
-#: ../C/gtali.xml:172(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:172
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr ""
 "Når spillet starter, ser du resultatet af dit første kast med terningerne."
 
-#: ../C/gtali.xml:179(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:179
 msgid "Click on the dice you wish to roll again."
 msgstr "Klik på de terninger, du ønsker at kaste igen."
 
-#: ../C/gtali.xml:183(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:183
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -286,7 +334,8 @@ msgstr ""
 "Når du har valgt alle terningerne, du ønsker at kaste igen, så tryk på "
 "knappen <guibutton>Kast!</guibutton>."
 
-#: ../C/gtali.xml:188(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:188
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -302,7 +351,8 @@ msgstr ""
 "for eksempel sige at du får yatzy - 5 ens - og klikker på Stor, så vil du få "
 "nul point for rækken stor)."
 
-#: ../C/gtali.xml:198(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:198
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -311,7 +361,8 @@ msgstr ""
 "indtastet noget på en plads, så kan du ikke ændre den pointgivning senere, "
 "hvis du kaster en bedre hånd."
 
-#: ../C/gtali.xml:203(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:203
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -329,7 +380,8 @@ msgstr ""
 "fyldte noget i den række, som ikke var en yahtzee) så kan du ikke "
 "efterfølgende placere en yatzy der, du vil kun få nul point for denne række."
 
-#: ../C/gtali.xml:213(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:213
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -337,11 +389,13 @@ msgstr ""
 "Der er også en bonus på 35 point hvis du opnår 63 point eller mere for de "
 "øverste seks rækker."
 
-#: ../C/gtali.xml:218(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:218
 msgid "Using the keyboard"
 msgstr "Brug af tastaturet"
 
-#: ../C/gtali.xml:220(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:220
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -356,27 +410,39 @@ msgstr ""
 "mellem kastknappen og pointområdet, brug piletasterne til at navigere op og "
 "ned mellem rækkerne og brug mellemrum for at vælge."
 
-#: ../C/gtali.xml:232(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:232
 msgid "Game Options"
 msgstr "Spilindstillinger"
 
-#: ../C/gtali.xml:235(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:235
 msgid "GNOME Tali preferences"
 msgstr "GNOME Yatzy-indstillinger"
 
-#: ../C/gtali.xml:243(phrase)
-msgid "GNOME Tali preferences dialog box."
-msgstr "GNOME Yatzy-indstillingsvinduesboks."
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:237
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
+"preferences dialog box.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
+"srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> "
+"<phrase>Dialogboksen for indstillinger i GNOME Yatzy.</phrase> </textobject>"
 
-#: ../C/gtali.xml:248(title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:248
 msgid "Human Players"
 msgstr "Fysiske spillere"
 
-#: ../C/gtali.xml:250(guimenuitem)
-msgid "Number of players"
-msgstr "Antal spillere"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:250
+msgid "<guimenuitem>Number of players</guimenuitem>"
+msgstr "<guimenuitem>Antal spillere</guimenuitem>"
 
-#: ../C/gtali.xml:252(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:252
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -384,15 +450,18 @@ msgstr ""
 "Vælg antallet af fysiske spillere. Som beskrevet ovenfor kan der kun være 6 "
 "spillere i alt."
 
-#: ../C/gtali.xml:260(title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:260
 msgid "Computer Opponents"
 msgstr "Computermodstandere"
 
-#: ../C/gtali.xml:262(guimenuitem)
-msgid "Delay between rolls"
-msgstr "Forsinkelse mellem kast"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:262
+msgid "<guimenuitem>Delay between rolls</guimenuitem>"
+msgstr "<guimenuitem>Ventetid mellem hvert kast</guimenuitem>"
 
-#: ../C/gtali.xml:264(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -400,11 +469,13 @@ msgstr ""
 "Gør at computermodstanderne holder pause mellem hvert kast af terningerne, "
 "så du kan se, hvad de foretager sig. Gør spillet lidt langsommere."
 
-#: ../C/gtali.xml:271(guimenuitem)
-msgid "Number of opponents"
-msgstr "Antal modstandere"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:271
+msgid "<guimenuitem>Number of opponents</guimenuitem>"
+msgstr "<guimenuitem>Antal spillere</guimenuitem>"
 
-#: ../C/gtali.xml:273(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -416,16 +487,19 @@ msgstr ""
 "grænsen, vil antallet af fysiske spillere blive mindsket for at bevare det "
 "samlede antal på kun seks spillere."
 
-#: ../C/gtali.xml:283(title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:283
 msgid "Game Type"
 msgstr "Spiltype"
 
-#: ../C/gtali.xml:285(guimenuitem)
-msgid "Version of the game to play"
-msgstr "Versioner af spillet"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:285
+msgid "<guimenuitem>Version of the game to play</guimenuitem>"
+msgstr "<guimenuitem>Versionen af spillet, der skal spilles</guimenuitem>"
 
 # engelsk fejl
-#: ../C/gtali.xml:287(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:287
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
@@ -435,19 +509,23 @@ msgstr ""
 "farver (der ligner Kismet). Når du ændrer spiltypen, skal du genstarte "
 "spillet for at bruge den nye spiltype."
 
-#: ../C/gtali.xml:297(guimenuitem)
-msgid "Player Names"
-msgstr "Spillernavne"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:297
+msgid "<guimenuitem>Player Names</guimenuitem>"
+msgstr "<guimenuitem>Spillernavne</guimenuitem>"
 
-#: ../C/gtali.xml:299(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "For at ændre navnene på spillerne taster du bare nye navne i boksene."
 
-#: ../C/gtali.xml:308(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:308
 msgid "Game Strategy"
 msgstr "Spilstrategi"
 
-#: ../C/gtali.xml:309(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:309
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -463,7 +541,8 @@ msgstr ""
 "bonus på 55 hvis din øverste halvdel er mellem 71 og 77, og en bonus på 75 "
 "hvis den øverste halvdel er større end 77."
 
-#: ../C/gtali.xml:318(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:318
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -473,11 +552,13 @@ msgstr ""
 "placere dem i yatzyrækken for endnu flere point. Dette gælder kun i det "
 "klassiske spil."
 
-#: ../C/gtali.xml:332(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:332
 msgid "Known Bugs and Limitations"
 msgstr "Kendte fejl og begrænsninger"
 
-#: ../C/gtali.xml:333(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:333
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -485,19 +566,23 @@ msgstr ""
 "Når du skifter spiltype, kender spillet ikke de nye terningebilleder før har "
 "genstartet Yatzy. Det bør fungere korrekt med de \"forkerte\" terninger."
 
-#: ../C/gtali.xml:341(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:341
 msgid "Glossary"
 msgstr "Ordliste"
 
-#: ../C/gtali.xml:343(para)
+#. (itstool) path: note/para
+#: C/index.docbook:343
 msgid "Remember that the order of the dice is not important."
 msgstr "Husk at rækkefølgen på terningerne ikke er vigtig."
 
-#: ../C/gtali.xml:346(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:346
 msgid "3 of a Kind"
 msgstr "3 ens"
 
-#: ../C/gtali.xml:347(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:347
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -505,11 +590,13 @@ msgstr ""
 "Tre af terningerne har det samme nummer. Pointene er summen af alle "
 "terningerne. For eksempel 1, 2, 2, 2, 5."
 
-#: ../C/gtali.xml:352(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:352
 msgid "4 of a Kind"
 msgstr "4 ens"
 
-#: ../C/gtali.xml:353(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:353
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -519,11 +606,13 @@ msgstr ""
 "terningerne. For eksempel 2, 5, 5, 5, 5. I farvespillet er pointsummen 25 "
 "plus summen af alle terningerne."
 
-#: ../C/gtali.xml:359(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:359
 msgid "5 of a Kind"
 msgstr "5 ens"
 
-#: ../C/gtali.xml:360(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:360
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -531,11 +620,13 @@ msgstr ""
 "Fem identiske terninger. For eksempel 3, 3, 3, 3, 3. I farvespillet er "
 "pointsummen 50 plus summen af alle terningerne."
 
-#: ../C/gtali.xml:365(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:365
 msgid "Full House"
 msgstr "Fuldt hus"
 
-#: ../C/gtali.xml:366(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:366
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -545,11 +636,13 @@ msgstr ""
 "og en anden gruppe på to med det samme nummer. For eksempel 1, 1, 1, 4, 4. I "
 "farvespillet, er pointsummen 15 plus summen af alle terningerne."
 
-#: ../C/gtali.xml:373(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:373
 msgid "Full House Same Color"
 msgstr "Fuldt hus - samme farve"
 
-#: ../C/gtali.xml:374(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:374
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -565,11 +658,13 @@ msgstr ""
 "5 er rød, og 3 og 4 er grøn. Pointsummen er 20 plus summen af alle "
 "terningerne."
 
-#: ../C/gtali.xml:384(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:384
 msgid "Two Pair Same Color"
 msgstr "To par - samme farve"
 
-#: ../C/gtali.xml:385(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:385
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -585,27 +680,29 @@ msgstr ""
 "rød, og 3 og 4 er grøn. Den femte terning kan være enhver værdi. Pointsummen "
 "er summen af alle terninger."
 
-#: ../C/gtali.xml:395(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:395
 msgid "Flush"
 msgstr "Flush"
 
-#: ../C/gtali.xml:396(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:396
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
-"6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be "
-"any value. The score is 35 points."
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
-"Denne kategori er kun brugt i farvespillet. Fem terninger som alle er af "
-"samme \"farve\": To terninger er den samme farve hvis deres sum er 7: 1 og 6 "
-"er sort, 2 og 5 er rød, og 3 og 4 er grøn. Den femte terning kan være enhver "
-"værdi. Pointsummen er 35 point."
+"Denne kategori bruges kun i farvespillet. Fem terninger, som alle er af "
+"samme \"farve\": To terninger er den samme farve, hvis deres sum er 7: 1 og "
+"6 er sort, 2 og 5 er rød, og 3 og 4 er grøn. Pointsummen er 35 point."
 
-#: ../C/gtali.xml:404(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:403
 msgid "Large Straight"
 msgstr "Stor"
 
-#: ../C/gtali.xml:405(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:404
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -613,11 +710,13 @@ msgstr ""
 "Fem terninger med fortløbende tal. For eksempel 2, 3, 4, 5, 6. Pointsummen "
 "er 40 point."
 
-#: ../C/gtali.xml:410(glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:409
 msgid "Small Straight"
 msgstr "Lille"
 
-#: ../C/gtali.xml:411(para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:410
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -627,46 +726,53 @@ msgstr ""
 "For eksempel 2, 3, 4, 5, 5. Denne kategori bruges kun i det regulære spil. "
 "Pointsummen er 30 point."
 
-#: ../C/gtali.xml:425(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:424
 msgid "Authors"
 msgstr "Forfattere"
 
-#: ../C/gtali.xml:426(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:425
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
 "written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra "
-"material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</"
-"email>). To report a bug or make a suggestion regarding this application or "
-"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
-"feedback-bugs\" type=\"help\">document</ulink>."
+"material added by Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). To report a bug or make a "
+"suggestion regarding this application or this manual, follow the directions "
+"in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">document</ulink>."
 msgstr ""
 "<application>GNOME Yatzy</application> blev skrevet af Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) og Orest Zborowski. Denne manual blev "
 "skrevet af Scott D Heavner (<email>sdh@po.cwru.edu</email>) med ekstra "
-"materiale tilføjet af Callum McKenzie (<email>callum@physics.otago.ac.nz</"
-"email>). For at indrapportere en fejl, eller komme med et forslag vedrørende "
-"dette program eller denne manual, så følg vejledningen i dette <ulink url="
-"\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokument</ulink>."
+"materiale tilføjet af Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). For at indrapportere en fejl, "
+"eller komme med et forslag vedrørende dette program eller denne manual, så "
+"følg vejledningen i dette <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">dokument</ulink>."
 
-#: ../C/gtali.xml:453(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:452
 msgid "License"
 msgstr "Licens"
 
-#: ../C/gtali.xml:454(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:453
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
-"under the terms of the <ulink type=\"help\" url=\"help:gpl"
-"\"><citetitle>GNU General Public License</citetitle></ulink> as published by "
-"the Free Software Foundation; either version 2 of the License, or (at your "
-"option) any later version."
+"under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
+"General Public License</citetitle></ulink> as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
 msgstr ""
-"Dette program er frit software: du kan distribuere den og/eller ændre den "
-"under betingelserne i <citetitle>GNU General Public License</citetitle> der "
-"udgives af Free Software Foundation; enten version 2 eller (ved dit valg) "
-"enhver senere version."
+"Dette program er fri software: du kan distribuere det og/eller ændre det "
+"under betingelserne i <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
+"General Public License</citetitle></ulink>, der udgives af Free Software "
+"Foundation; enten version 2 eller (ved dit valg) enhver senere version."
 
-#: ../C/gtali.xml:462(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:461
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -678,31 +784,60 @@ msgstr ""
 "omkring SALGBARHED eller EGNETHED TIL ET BESTEMT FORMÅL. Yderligere\n"
 "detaljer kan læses i <citetitle>GNU General Public License</citetitle>."
 
-#: ../C/gtali.xml:468(para)
+#. (itstool) path: para/address
+#: C/index.docbook:474
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:467
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
 "obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
-"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
-"www.fsf.org\">their Web site</ulink> or by writing to <address> Free "
-"Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"the Free Software Foundation by visiting <ulink type=\"http\" "
+"url=\"http://www.fsf.org\">their Web site</ulink> or by writing to "
+"<_:address-1/>"
 msgstr ""
 "En kopi af <citetitle>GNU General Public License</citetitle> er inkluderet "
 "som et tillæg til <citetitle>GNOME-brugervejledningen</citetitle>. Du kan "
 "også få en kopi af <citetitle>GNU General Public License</citetitle> fra "
-"Free Software Foundtation ved at besøge <ulink url=\"http://www.fsf.org\" "
-"type=\"http\">deres internetside</ulink> eller skrive til <address> Free "
-"Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"Free Software Foundtation ved at besøge <ulink type=\"http\" "
+"url=\"http://www.fsf.org\">deres websted</ulink> eller skrive til "
+"<_:address-1/>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: ../C/gtali.xml:0(None)
-msgid "translator-credits"
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "link"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
 msgstr ""
-"Joe Hansen <joedalton2@yahoo.dk>, 2009.\n"
-"\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Der gives tilladelse til at kopiere, distribuere og/eller ændre dette "
+"dokument under betingelserne i GNU Free Documentation License (GFDL) version "
+"1.1, eller enhver senere version udgivet af Free Software Foundation; uden "
+"invariante afsnit, forsidetekster, samt bagsidetekster. Du kan se en kopi af "
+"GFDL her <_:ulink-1/> eller i filen COPYING-DOCS, som distribueres sammen "
+"med denne manual."
+
