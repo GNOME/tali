@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: tali 3.19.x\n"
+"Project-Id-Version: tali 3.22.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-10 12:58+0100\n"
-"PO-Revision-Date: 2016-01-10 12:59+0100\n"
+"POT-Creation-Date: 2016-10-16 12:18+0200\n"
+"PO-Revision-Date: 2016-10-16 12:19+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -32,11 +32,19 @@ msgid ""
 "classic. Throw the dice three times in a row, holding back the ones you "
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
-msgstr "En variasjon av poker med terninger og mindre penger. Dette spillet er en familieklassiker. Kast terningene tre ganger på rad, og ta vare på de du ønsker å beholde for å få best mulig resultat. Du kan også spille en mindre kjent variant med farger på terningene."
+msgstr ""
+"En variasjon av poker med terninger og mindre penger. Dette spillet er en "
+"familieklassiker. Kast terningene tre ganger på rad, og ta vare på de du "
+"ønsker å beholde for å få best mulig resultat. Du kan også spille en mindre "
+"kjent variant med farger på terningene."
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Spill mot en til fem motstandere på tre vanskelighetsnivåer."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME prosjektet"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
