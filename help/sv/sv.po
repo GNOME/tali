@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali doc\n"
-"POT-Creation-Date: 2015-09-14 00:07+0000\n"
-"PO-Revision-Date: 2016-05-13 23:27+0200\n"
+"POT-Creation-Date: 2016-08-14 12:36+0000\n"
+"PO-Revision-Date: 2017-02-12 15:34+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -24,8 +24,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:163
-#| msgid ""
-#| "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
 msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
@@ -38,8 +36,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:240
-#| msgid ""
-#| "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
@@ -440,7 +436,7 @@ msgid ""
 "six total players."
 msgstr ""
 "Väljer antalet mänskliga spelare. Som beskrivet ovan tillåts totalt bara sex "
-"spelare"
+"spelare."
 
 #. (itstool) path: variablelist/title
 #: C/index.docbook:260
