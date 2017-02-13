@@ -8,19 +8,39 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-08 23:36+0000\n"
-"PO-Revision-Date: 2012-03-23 17:59+0800\n"
-"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
+"POT-Creation-Date: 2015-11-10 14:37+0000\n"
+"PO-Revision-Date: 2017-02-13 15:28+0800\n"
+"Last-Translator: liushuyu <liushuyu_011@126.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.6\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:56
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "掷骰子"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "掷骰子得分"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"一种用骰子和零钱玩的扑克游戏，家中常备。掷一行骰子三次，留下自己想要的点，使"
+"自己的花色尽量好。还可以玩一种不太常见的彩色骰子。"
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "和一到五个对手玩，有三种难度级别。"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -29,6 +49,30 @@ msgstr "一种类似扑克的的骰子游戏"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;骰子;快艇;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "新建游戏(_N)"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "首选项(_P)"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "得分(_S)"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "退出(_Q)"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -59,19 +103,6 @@ msgctxt "GameType"
 msgid "'Regular'"
 msgstr "常规"
 
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr "一种用骰子和零钱玩的扑克游戏，家中常备。掷一行骰子三次，留下自己想要的点，"
-"使自己的花色尽量好。还可以玩一种不太常见的彩色骰子。"
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "和一到五个对手玩，有三种难度级别。"
-
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
 msgstr "已经在用了！您要把它摆在哪里？"
@@ -98,478 +129,262 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "得分"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d分%2$d秒"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "新游戏"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "日期"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "查看此游戏的帮助"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "结束当前游戏"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "全屏模式切换"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "获取您的下一步的提示"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "离开全屏模式"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "开始多人网络游戏"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "结束当前网络游戏并回到服务器"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "开始新游戏"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "暂停游戏"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "显示网络游戏中的玩家列表"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "重做撤消的一着"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "重新开始游戏"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "恢复暂停的游戏"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "查看得分"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "撤消最后一着"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "关于此游戏"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "关闭此窗口"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "配置游戏"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "退出此游戏"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "目录(_C)"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "全屏(_F)"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "提示(_H)"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "新建(_N)"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253 ../src/gyahtzee.c:743
-msgid "_New Game"
-msgstr "新建游戏(_N)"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "重做移动(_R)"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "重置(_R)"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "重新开始(_R)"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "撤消移动(_U)"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "发牌(_D)"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "离开全屏(_L)"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "网络游戏(_G)"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "离开游戏(_E)"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "玩家列表(_L)"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "暂停(_P)"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "继续(_U)"
-
-#: ../src/games-stock.c:267 ../src/gyahtzee.c:745
-msgid "_Scores"
-msgstr "得分(_S)"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "结束游戏(_E)"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或修改"
-"它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用它所"
-"造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细节。"
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由"
-"软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
-"02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
-"<http://www.gnu.org/licenses/>。"
-
-#: ../src/gyahtzee.c:101
+#: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "延迟计算机的动作"
 
-#: ../src/gyahtzee.c:103
+#: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "显示计算机的思考过程"
 
-#: ../src/gyahtzee.c:105
+#: ../src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "计算机对手的数量"
 
-#: ../src/gyahtzee.c:105 ../src/gyahtzee.c:107 ../src/gyahtzee.c:111
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
+#: ../src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "数量"
 
-#: ../src/gyahtzee.c:107
+#: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "人类对手的数量"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "游戏选择：常规或多色"
 
-#: ../src/gyahtzee.c:109
+#: ../src/gyahtzee.c:108
 msgid "STRING"
 msgstr "字符串"
 
-#: ../src/gyahtzee.c:111
+#: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "只含计算机对手的游戏数量"
 
-#: ../src/gyahtzee.c:113
+#: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "电脑每掷可以尝试的次数"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:359
+#: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
 msgid "Regular"
 msgstr "常规"
 
-#: ../src/gyahtzee.c:119 ../src/setup.c:360
+#: ../src/gyahtzee.c:118 ../src/setup.c:357
 msgctxt "game type"
 msgid "Colors"
 msgstr "多色"
 
-#: ../src/gyahtzee.c:140
+#: ../src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "全部重掷！"
 
-#: ../src/gyahtzee.c:143 ../src/gyahtzee.c:795
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "掷！"
 
-#: ../src/gyahtzee.c:177
+#: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "平局！"
 
-#: ../src/gyahtzee.c:190 ../src/gyahtzee.c:621
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "掷骰子得分"
 
-#: ../src/gyahtzee.c:192
+#: ../src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "恭喜！"
 
-#: ../src/gyahtzee.c:193
+#: ../src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "您取得了最好成绩！"
 
-#: ../src/gyahtzee.c:194
+#: ../src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "您已经进入了前十名。"
 
-#: ../src/gyahtzee.c:206
+#: ../src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s 赢了，得到 %d 分"
 
-#: ../src/gyahtzee.c:210
+#: ../src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "游戏结束！"
 
-#: ../src/gyahtzee.c:254
+#: ../src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "计算机玩 %s"
 
-#: ../src/gyahtzee.c:256
+#: ../src/gyahtzee.c:255
 #, c-format
-#| msgid "%s! -- You're up."
 msgid "%s! – You’re up."
 msgstr "%s！－该您了。"
 
-#: ../src/gyahtzee.c:449
+#: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "选择掷骰子或者分数槽。"
 
-#: ../src/gyahtzee.c:477
+#: ../src/gyahtzee.c:476
 msgid "Roll"
 msgstr "掷"
 
-#: ../src/gyahtzee.c:535
+#: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "您只能掷三次。选择一个分数槽。"
 
-#: ../src/gyahtzee.c:582
+#: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME 版本(1998)："
 
-#: ../src/gyahtzee.c:585
+#: ../src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "控制台版本(1992)："
 
-#: ../src/gyahtzee.c:588
+#: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "多色游戏和多等级 AI(2006)："
 
-#: ../src/gyahtzee.c:605
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"扑克游戏的变种，改用骰子，而且不需要用钱\n"
-"\n"
-"掷骰子是 GNOME 游戏的一部分。"
+#: ../src/gyahtzee.c:614
+msgid "A variation on poker with dice and less money."
+msgstr "类似于扑克牌的游戏, 但是改用骰子, 并且不需要钱。"
 
-#: ../src/gyahtzee.c:610
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
 "Ping Z <zpsigma@gmail.com>, 2007\n"
 "Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
 
-#: ../src/gyahtzee.c:744
-msgid "_Preferences"
-msgstr "首选项(_P)"
-
-#: ../src/gyahtzee.c:748
-msgid "_Help"
-msgstr "帮助(_H)"
-
-#: ../src/gyahtzee.c:749
-msgid "_About"
-msgstr "关于(_A)"
-
-#: ../src/gyahtzee.c:750
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: ../src/gyahtzee.c:769
-#| msgid "The users's most recent level."
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "撤销上一步"
 
-#: ../src/gyahtzee.c:974 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "人"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "当前游戏将以原来的游戏人数完成。"
+msgid "Preferences will be updated in the next game."
+msgstr "首选项将在下一场比赛中更新。"
 
 #: ../src/setup.c:264
-msgid "Tali Preferences"
-msgstr "掷骰子首选项"
+msgid "Preferences"
+msgstr "首选项"
 
-#: ../src/setup.c:285
+#: ../src/setup.c:282
 msgid "Human Players"
 msgstr "人类玩家"
 
-#: ../src/setup.c:295
+#: ../src/setup.c:292
 msgid "_Number of players:"
 msgstr "玩家数量(_N)："
 
-#: ../src/setup.c:309
+#: ../src/setup.c:306
 msgid "Computer Opponents"
 msgstr "计算机对手"
 
 #. --- Button ---
-#: ../src/setup.c:316
+#: ../src/setup.c:313
 msgid "_Delay between rolls"
 msgstr "每次投掷之间的延迟(_D)"
 
-#: ../src/setup.c:326
+#: ../src/setup.c:323
 msgid "N_umber of opponents:"
 msgstr "对手数量(_U)："
 
-#: ../src/setup.c:340
+#: ../src/setup.c:337
 msgid "_Difficulty:"
 msgstr "难度(_D)"
 
-#: ../src/setup.c:343
+#: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "简单"
 
-#: ../src/setup.c:344
+#: ../src/setup.c:341
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "中等"
 
-#: ../src/setup.c:345
+#: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "困难"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:356
+#: ../src/setup.c:353
 msgid "Game Type"
 msgstr "游戏类型"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:368
+#: ../src/setup.c:365
 msgid "Player Names"
 msgstr "玩家姓名"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
 msgid "1s [total of 1s]"
 msgstr "1 的总数"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
 msgid "2s [total of 2s]"
 msgstr "2 的总数"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
 msgid "3s [total of 3s]"
 msgstr "3 的总数"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
 msgid "4s [total of 4s]"
 msgstr "4 的总数"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
 msgid "5s [total of 5s]"
 msgstr "5 的总数"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
 msgid "6s [total of 6s]"
 msgstr "6 的总数"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
 msgid "3 of a Kind [total]"
 msgstr "3个相同 [合计]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
 msgid "4 of a Kind [total]"
 msgstr "4个相同 [合计]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:525
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
 msgid "Full House [25]"
 msgstr "满堂红 [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
 msgid "Small Straight [30]"
 msgstr "小顺子 [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
 msgid "Large Straight [40]"
 msgstr "大顺子 [40]"
 
@@ -577,7 +392,7 @@ msgstr "大顺子 [40]"
 msgid "5 of a Kind [50]"
 msgstr "5个相同 [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
 msgid "Chance [total]"
 msgstr "机会 [合计]"
 
@@ -600,27 +415,27 @@ msgid "Bonus if >62"
 msgstr "奖励(合计＞62)"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
 msgid "2 pair Same Color [total]"
 msgstr "2对同色 [合计]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
 msgid "Full House [15 + total]"
 msgstr "满堂红 [15 + 合计]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
 msgid "Full House Same Color [20 + total]"
 msgstr "同色满堂红 [20 + 合计]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:533
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
 msgid "Flush (all same color) [35]"
 msgstr "同花(全部同色) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:534
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
 msgid "4 of a Kind [25 + total]"
 msgstr "4个相同 [合计 + 25]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:535
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
 msgid "5 of a Kind [50 + total]"
 msgstr "5个相同 [合计 + 50]"
 
@@ -628,9 +443,155 @@ msgstr "5个相同 [合计 + 50]"
 msgid "Choose a score slot."
 msgstr "选择一个分数槽。"
 
-#: ../src/yahtzee.c:528
+#: ../src/yahtzee.c:525
 msgid "5 of a Kind [total]"
 msgstr "5个相同 [合计]"
+
+#~ msgid "View help for this game"
+#~ msgstr "查看此游戏的帮助"
+
+#~ msgid "End the current game"
+#~ msgstr "结束当前游戏"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "全屏模式切换"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "获取您的下一步的提示"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "离开全屏模式"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "开始多人网络游戏"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "结束当前网络游戏并回到服务器"
+
+#~ msgid "Start a new game"
+#~ msgstr "开始新游戏"
+
+#~ msgid "Pause the game"
+#~ msgstr "暂停游戏"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "显示网络游戏中的玩家列表"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "重做撤消的一着"
+
+#~ msgid "Restart the game"
+#~ msgstr "重新开始游戏"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "恢复暂停的游戏"
+
+#~ msgid "View the scores"
+#~ msgstr "查看得分"
+
+#~ msgid "Undo the last move"
+#~ msgstr "撤消最后一着"
+
+#~ msgid "About this game"
+#~ msgstr "关于此游戏"
+
+#~ msgid "Close this window"
+#~ msgstr "关闭此窗口"
+
+#~ msgid "Configure the game"
+#~ msgstr "配置游戏"
+
+#~ msgid "Quit this game"
+#~ msgstr "退出此游戏"
+
+#~ msgid "_Contents"
+#~ msgstr "目录(_C)"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "全屏(_F)"
+
+#~ msgid "_Hint"
+#~ msgstr "提示(_H)"
+
+#~ msgid "_New"
+#~ msgstr "新建(_N)"
+
+#~ msgid "_Redo Move"
+#~ msgstr "重做移动(_R)"
+
+#~ msgid "_Reset"
+#~ msgstr "重置(_R)"
+
+#~ msgid "_Restart"
+#~ msgstr "重新开始(_R)"
+
+#~ msgid "_Undo Move"
+#~ msgstr "撤消移动(_U)"
+
+#~ msgid "_Deal"
+#~ msgstr "发牌(_D)"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "离开全屏(_L)"
+
+#~ msgid "Network _Game"
+#~ msgstr "网络游戏(_G)"
+
+#~ msgid "L_eave Game"
+#~ msgstr "离开游戏(_E)"
+
+#~ msgid "Player _List"
+#~ msgstr "玩家列表(_L)"
+
+#~ msgid "_Pause"
+#~ msgstr "暂停(_P)"
+
+#~ msgid "Res_ume"
+#~ msgstr "继续(_U)"
+
+#~ msgid "_End Game"
+#~ msgstr "结束游戏(_E)"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或"
+#~ "修改它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用"
+#~ "它所造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细"
+#~ "节。"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给"
+#~ "自由软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
+#~ "02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
+#~ "<http://www.gnu.org/licenses/>。"
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "当前游戏将以原来的游戏人数完成。"
+
+#~ msgid "Tali Preferences"
+#~ msgstr "掷骰子首选项"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
@@ -752,9 +713,6 @@ msgstr "5个相同 [合计]"
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "与之对战的国际象棋引擎的难度"
 
-#~ msgid "Preferences"
-#~ msgstr "首选项"
-
 #~ msgid "Play as:"
 #~ msgstr "玩家身份："
 
@@ -769,9 +727,6 @@ msgstr "5个相同 [合计]"
 
 #~ msgid "Promotion Type:"
 #~ msgstr "棋子升级："
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "改动将在下一盘游戏中生效。"
 
 #~ msgid "Game"
 #~ msgstr "游戏"
