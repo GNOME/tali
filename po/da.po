@@ -17,8 +17,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 02:13+0200\n"
+"Report-Msgid-Bugs-To: "
+"https://bugzilla.gnome.org/enter_bug.cgi?product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-28 11:40+0000\n"
 "PO-Revision-Date: 2015-03-15 15:56+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -41,8 +42,8 @@ msgstr "Kast terninger og vind points"
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
+"like, in order to make the best possible hand. You can also play a "
+"lesser-known variant with colored dice."
 msgstr ""
 "En variant af poker med terninger og færre penge. Dette spil er en "
 "familieklassiker. Kast terningerne tre gange i træk, idet du holder dem "
@@ -110,7 +111,7 @@ msgstr "Vis computerens tanker"
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
-"Hvis denne sættes til \"true\" vil et dump af de aktive computerspilleres "
+"Hvis denne sættes til “true” vil et dump af de aktive computerspilleres "
 "arbejde blive sendt til standard uddata."
 
 # afgjort med aktivitet på mailinglisten samt shuf(1)
@@ -496,8 +497,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Start et nyt netværksspil med flere spillere"
 
 #~ msgid "End the current network game and return to network server"
-#~ msgstr ""
-#~ "Afslut det aktuelle netværksspil og vend tilbage til netværksserveren"
+#~ msgstr "Afslut det aktuelle netværksspil og vend tilbage til netværksserveren"
 
 #~ msgid "Start a new game"
 #~ msgstr "Start et nyt spil"
@@ -586,13 +586,12 @@ msgstr "5 af en slags [sum]"
 #~ msgid ""
 #~ "%s is free software; you can redistribute it and/or modify it under the "
 #~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
+#~ "Foundation; either version %d of the License, or (at your option) any later "
+#~ "version."
 #~ msgstr ""
-#~ "%s er fri software; det kan distribueres og/eller modificeres som "
-#~ "betinget af GNU General Public License, udarbejdet af Free Software "
-#~ "Foundation; enten version %d af licensen eller, efter eget valg, enhver "
-#~ "nyere version."
+#~ "%s er fri software; det kan distribueres og/eller modificeres som betinget "
+#~ "af GNU General Public License, udarbejdet af Free Software Foundation; enten "
+#~ "version %d af licensen eller, efter eget valg, enhver nyere version."
 
 #~ msgid ""
 #~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
@@ -600,26 +599,26 @@ msgstr "5 af en slags [sum]"
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "%s distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
-#~ "GARANTI; selv uden de underforståede garantier SALGBARHED eller EGNETHED "
-#~ "TIL ET BESTEMT FORMÅL, idet der henvises til GNU General Public License "
-#~ "for detaljer."
+#~ "%s distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN GARANTI; "
+#~ "selv uden de underforståede garantier SALGBARHED eller EGNETHED TIL ET "
+#~ "BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
+#~ "detaljer."
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+#~ "Fifth Floor, Boston, MA  02110-1301  USA"
 #~ msgstr ""
-#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; "
-#~ "er dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 51 "
+#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
+#~ "dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 51 "
 #~ "Franklin Street, Femte sal, Boston, MA  02110-1301  USA"
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "this program.  If not, see <http://www.gnu.org/licenses/>."
 #~ msgstr ""
-#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; "
-#~ "er dette ikke tilfældet, så se <http://www.gnu.org/licenses/>."
+#~ "Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
+#~ "dette ikke tilfældet, så se <http://www.gnu.org/licenses/>."
 
 #~ msgid "Current game will complete with original number of players."
 #~ msgstr "Nuværende spil vil fortsætte med det originale antal spillere."
@@ -684,12 +683,12 @@ msgstr "5 af en slags [sum]"
 #~ msgid "The piece to promote pawns to"
 #~ msgstr "Brikken som bønder forfremmes til"
 
-# Når man taler om schema så handler det i reglen om GConf
+#~ # Når man taler om schema så handler det i reglen om GConf
 #~ msgid ""
 #~ "The piece to promote to when a human player moves a pawn to the far rank"
 #~ msgstr ""
-#~ "Brikken som der forfremmes til idet en menneskespiller flytter en bonde "
-#~ "til den modsatte række"
+#~ "Brikken som der forfremmes til idet en menneskespiller flytter en bonde til "
+#~ "den modsatte række"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "Et flag der aktiverer 3D-tilstand"
@@ -713,10 +712,10 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Et flag der aktiverer værktøjslinjen"
 
 #~ msgid "The directory to open the save game dialog in"
-#~ msgstr "Mappen hvori \"gem spil\"-vinduet åbnes"
+#~ msgstr "Mappen hvori “gem spil”-vinduet åbnes"
 
 #~ msgid "The directory to open the load game dialog in"
-#~ msgstr "Mappen hvori \"hent spil\"-vinduet åbnes"
+#~ msgstr "Mappen hvori “hent spil”-vinduet åbnes"
 
 #~ msgid "The format to display moves in"
 #~ msgstr "Formatet til visning af træk"
@@ -753,7 +752,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Difficulty:"
 #~ msgstr "Sværhedsgrad:"
 
-# Det er velsagtens vigtigt at der er det rigtige antal mellemrum bagefter, hvorved forstås at strengen nok skal have en ganske bestemt længde
+#~ # Det er velsagtens vigtigt at der er det rigtige antal mellemrum bagefter, hvorved forstås at strengen nok skal have en ganske bestemt længde
 #~ msgid "Game Duration:"
 #~ msgstr "Spillets varighed:"
 
@@ -801,7 +800,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Human"
 #~ msgstr "Menneske"
 
-# ligesom 7-kabale, men man kan se alle kortene fra starten
+#~ # ligesom 7-kabale, men man kan se alle kortene fra starten
 #~ msgctxt "chess-player"
 #~ msgid "White"
 #~ msgstr "Hvid"
@@ -862,8 +861,8 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Standard Algebraic"
 #~ msgstr "Standardalgebraisk"
 
-# Indtil nogen kan finde et accepteret dansk ord, må vi hellere benytte figurine som her:
-# http://da.wikipedia.org/wiki/Algebraisk_notation
+#~ # Indtil nogen kan finde et accepteret dansk ord, må vi hellere benytte figurine som her:
+#~ # http://da.wikipedia.org/wiki/Algebraisk_notation
 #~ msgctxt "chess-move-format"
 #~ msgid "Figurine"
 #~ msgstr "Figurine (symboler)"
@@ -1127,14 +1126,12 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid "No piece has been taken or pawn moved in the last fifty moves"
 #~ msgstr ""
-#~ "Ingen brik er blevet slået, og ingen bonde flyttet i de sidste halvtreds "
-#~ "træk"
+#~ "Ingen brik er blevet slået, og ingen bonde flyttet i de sidste halvtreds træk"
 
 #~ msgid "Opponent has run out of time"
 #~ msgstr "Modstanderen er løbet tør for tid"
 
-#~ msgid ""
-#~ "The same board state has occurred three times (three fold repetition)"
+#~ msgid "The same board state has occurred three times (three fold repetition)"
 #~ msgstr "Den samme brætstilling er forekommet tre gange (tre gentagelser)"
 
 #~ msgid "Neither player can cause checkmate (insufficient material)"
@@ -1149,7 +1146,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "The game has been abandoned"
 #~ msgstr "Spillet er blevet forladt"
 
-# Det er godtnok en ekstrem formulering indenfor skak
+#~ # Det er godtnok en ekstrem formulering indenfor skak
 #~ msgid "One of the players has died"
 #~ msgstr "En af spillerne er død"
 
@@ -1213,10 +1210,9 @@ msgstr "5 af en slags [sum]"
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FIL] - Spil Skak"
 
-#~ msgid ""
-#~ "Run '%s --help' to see a full list of available command line options."
+#~ msgid "Run '%s --help' to see a full list of available command line options."
 #~ msgstr ""
-#~ "Kør \"%s\" --help' for at se en fuldstændig liste over tilgængelige "
+#~ "Kør “%s” --help' for at se en fuldstændig liste over tilgængelige "
 #~ "kommandolinjetilvalg."
 
 #~ msgid "Five or More"
@@ -1274,11 +1270,9 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Banestørrelse"
 
 #~ msgid ""
-#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
-#~ "invalid."
+#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 #~ msgstr ""
-#~ "Banestørrelse. 1=Lille, 2=Mellemstor, 3=Stor. Alle andre værdier er "
-#~ "ugyldige."
+#~ "Banestørrelse. 1=Lille, 2=Mellemstor, 3=Stor. Alle andre værdier er ugyldige."
 
 #~ msgid "Ball style"
 #~ msgstr "Boldstil"
@@ -1350,7 +1344,7 @@ msgstr "5 af en slags [sum]"
 #~ "The default theme will be loaded instead."
 #~ msgstr ""
 #~ "Kunne ikke finde filen:\n"
-#~ " \"%s\"\n"
+#~ " “%s”\n"
 #~ "\n"
 #~ "I stedet vil standardtemaet blive indlæst."
 
@@ -1402,8 +1396,7 @@ msgstr "5 af en slags [sum]"
 #~ "Zero is human; one through three correspond to the level of the computer "
 #~ "player."
 #~ msgstr ""
-#~ "Nul er menneske; Et til tre svarer til sværhedsgraden for "
-#~ "computerspilleren."
+#~ "Nul er menneske; Et til tre svarer til sværhedsgraden for computerspilleren."
 
 #~ msgid "Level of Player Two"
 #~ msgstr "Niveau for spiller to"
@@ -1493,10 +1486,10 @@ msgstr "5 af en slags [sum]"
 #~ "\n"
 #~ "\"Four in a Row\" is a part of GNOME Games."
 #~ msgstr ""
-#~ "\"Fire på stribe\" til GNOME, med en computerspiller drevet af Giuliano "
+#~ "“Fire på stribe” til GNOME, med en computerspiller drevet af Giuliano "
 #~ "Bertolettis Velena-motor.\n"
 #~ "\n"
-#~ "\"Fire på stribe\" er en del af GNOME Games."
+#~ "“Fire på stribe” er en del af GNOME Games."
 
 #~ msgid "_View"
 #~ msgstr "_Vis"
@@ -1848,11 +1841,11 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Benyt supersikre træk"
 
 #~ msgid ""
-#~ "Use super safe moves. The player is alerted when there is no safe move "
-#~ "and the only option is to teleport out."
+#~ "Use super safe moves. The player is alerted when there is no safe move and "
+#~ "the only option is to teleport out."
 #~ msgstr ""
-#~ "Benyt supersikre træk. Spilleren blive advaret når der ikke er nogen "
-#~ "sikre træk og den eneste mulighed er at teleportere sig væk."
+#~ "Benyt supersikre træk. Spilleren blive advaret når der ikke er nogen sikre "
+#~ "træk og den eneste mulighed er at teleportere sig væk."
 
 #~ msgid "Enable game sounds"
 #~ msgstr "Aktivér spillyde"
@@ -2039,7 +2032,7 @@ msgstr "5 af en slags [sum]"
 #~ "Kontrollér at programmet er installeret korrekt."
 
 #~ msgid "Could not find '%s' pixmap file\n"
-#~ msgstr "Kunne ikke finde billedfilen \"%s\"\n"
+#~ msgstr "Kunne ikke finde billedfilen “%s”\n"
 
 #~ msgid "_Move"
 #~ msgstr "_Flyt"
@@ -2084,8 +2077,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "_Benyt sikre træk"
 
 #~ msgid "Prevent accidental moves that result in getting killed."
-#~ msgstr ""
-#~ "Forhindr træk som ved et uheld forårsager at man bliver slået ihjel."
+#~ msgstr "Forhindr træk som ved et uheld forårsager at man bliver slået ihjel."
 
 #~ msgid "U_se super safe moves"
 #~ msgstr "B_enyt supersikre træk"
@@ -2200,13 +2192,11 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Der er ikke flere mulige træk tilbage."
 
 #~ msgid ""
-#~ "Each puzzle has at least one solution.  You can undo your moves and try "
-#~ "and find the solution for a time penalty, restart this game or start an "
-#~ "new one."
+#~ "Each puzzle has at least one solution.  You can undo your moves and try and "
+#~ "find the solution for a time penalty, restart this game or start an new one."
 #~ msgstr ""
-#~ "Hver opgave har mindst én løsning.  Du kan fortryde dine træk og forsøge "
-#~ "at finde løsningen mod en tidsstraf, genstarte dette spil eller starte et "
-#~ "nyt."
+#~ "Hver opgave har mindst én løsning.  Du kan fortryde dine træk og forsøge at "
+#~ "finde løsningen mod en tidsstraf, genstarte dette spil eller starte et nyt."
 
 #~ msgid "_New game"
 #~ msgstr "_Nyt spil"
@@ -2253,7 +2243,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Print Games"
 #~ msgstr "Udskriv spil"
 
-# Det er vitterlig antallet af sudokuer der skal udskrives (strengen betyder jo egentlig "nummeret på det sudoku-spil der udskrives", hvilket ville være vigtigt hvis man f.eks. angav en random seed til generatoren og dermed havde nummererede spil)
+#~ # Det er vitterlig antallet af sudokuer der skal udskrives (strengen betyder jo egentlig "nummeret på det sudoku-spil der udskrives", hvilket ville være vigtigt hvis man f.eks. angav en random seed til generatoren og dermed havde nummererede spil)
 #~ msgid "_Number of sudoku to print: "
 #~ msgstr "_Antal sudokuer der skal udskrives: "
 
@@ -2280,8 +2270,7 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid "_Include games you've already played in list of games to print"
 #~ msgstr ""
-#~ "_Inkludér spil du allerede har spillet i listen over spil der skal "
-#~ "udskrives"
+#~ "_Inkludér spil du allerede har spillet i listen over spil der skal udskrives"
 
 #~ msgid "_Saved Games"
 #~ msgstr "_Gemte spil"
@@ -2305,13 +2294,13 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "GNOME Sudoku"
 
 #~ msgid ""
-#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a "
-#~ "Japanese logic puzzle.\n"
+#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a Japanese "
+#~ "logic puzzle.\n"
 #~ "\n"
 #~ "GNOME Sudoku is a part of GNOME Games."
 #~ msgstr ""
-#~ "GNOME Sudoku er en simpel Sudokugenerator og -spiller. Sudoku er et "
-#~ "japansk logisk spil.\n"
+#~ "GNOME Sudoku er en simpel Sudokugenerator og -spiller. Sudoku er et japansk "
+#~ "logisk spil.\n"
 #~ "\n"
 #~ "GNOME Sudoku er en del af GNOME Games."
 
@@ -2346,7 +2335,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Last played on %A at %I:%M %p"
 #~ msgstr "Sidst spillet %A klokken %H:%M"
 
-# f.eks. 17. september 2017
+#~ # f.eks. 17. september 2017
 #~ msgid "Last played on %B %e %Y"
 #~ msgstr "Sidst spillet %e. %B %Y"
 
@@ -2434,8 +2423,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_Track Additions"
 #~ msgstr "_Spor tilføjelser"
 
-#~ msgid ""
-#~ "Mark new additions in a separate color so you can keep track of them."
+#~ msgid "Mark new additions in a separate color so you can keep track of them."
 #~ msgstr ""
 #~ "Markér nye tilføjelser med separat farve, så du kan holde styr på dem."
 
@@ -2499,7 +2487,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Very Hard"
 #~ msgstr "Meget svær"
 
-# Evt. udelukkelse
+#~ # Evt. udelukkelse
 #~ msgid "Number of moves instantly fillable by elimination: "
 #~ msgstr "Antal træk der umiddelbart kan udfyldes ved udelukkelse: "
 
@@ -2579,25 +2567,25 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Benyt ukendt-flaget"
 
 #~ msgid "Set to true to be able to mark squares as unknown."
-#~ msgstr "Sæt til \"true\" for at kunne angive kvadrater som ukendte."
+#~ msgstr "Sæt til “true” for at kunne angive kvadrater som ukendte."
 
 #~ msgid "Warning about too many flags"
 #~ msgstr "Advarsel om for mange flag"
 
 #~ msgid "Set to true to enable warning icons when too many flags are placed."
 #~ msgstr ""
-#~ "Sæt til \"true\" for at aktivere advarselsikoner når der er placeret for "
-#~ "mange flag."
+#~ "Sæt til “true” for at aktivere advarselsikoner når der er placeret for mange "
+#~ "flag."
 
 #~ msgid "Enable automatic placing of flags"
 #~ msgstr "Aktivér automatisk placering af flag"
 
 #~ msgid ""
-#~ "Set to true to have gnomine automatically flag squares as mined when "
-#~ "enough squares are revealed"
+#~ "Set to true to have gnomine automatically flag squares as mined when enough "
+#~ "squares are revealed"
 #~ msgstr ""
-#~ "Sæt til \"true\" for at få gnomine til automatisk at sætte flag på "
-#~ "felter, når tilstrækkeligt mange felter er afsløret"
+#~ "Sæt til “true” for at få gnomine til automatisk at sætte flag på felter, når "
+#~ "tilstrækkeligt mange felter er afsløret"
 
 #~ msgid "Number of columns in a custom game"
 #~ msgstr "Antal kolonner i et brugertilpasset spil"
@@ -2618,7 +2606,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Custom"
 #~ msgstr "Selvvalgt"
 
-# ??
+#~ # ??
 #~ msgid "_Replay Size"
 #~ msgstr "Størrelse af _genafspilning"
 
@@ -2634,7 +2622,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_Number of mines:"
 #~ msgstr "_Antal miner:"
 
-# Dette må være ok for at undgå Spil spil
+#~ # Dette må være ok for at undgå Spil spil
 #~ msgid "_Play Game"
 #~ msgstr "Start _spil"
 
@@ -2676,10 +2664,10 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Graphics:"
 #~ msgstr "Grafiktema:"
 
-# Bemærk at hint betyder noget ganske andet i denne sammenhæng end andre steder i filen
+#~ # Bemærk at hint betyder noget ganske andet i denne sammenhæng end andre steder i filen
 #~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
+#~ "The popular logic puzzle minesweeper. Clear mines from a board using hints "
+#~ "from squares you have already uncovered.\n"
 #~ "\n"
 #~ "Mines is a part of GNOME Games."
 #~ msgstr ""
@@ -2692,7 +2680,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Indstillinger for Miner"
 
 #~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "_Benyt \"Jeg er ikke sikker\"-flag"
+#~ msgstr "_Benyt “Jeg er ikke sikker”-flag"
 
 #~ msgid "_Warn if too many flags have been placed"
 #~ msgstr "_Advar, hvis der er sat for mange flag"
@@ -2739,8 +2727,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "The size of the playing grid"
 #~ msgstr "Størrelsen af spillefeltet"
 
-#~ msgid ""
-#~ "The value of this key is used to decide the size of the playing grid."
+#~ msgid "The value of this key is used to decide the size of the playing grid."
 #~ msgstr ""
 #~ "Værdien af denne nøgle bruges til at bestemme spillets gitterstørrelse."
 
@@ -2771,17 +2758,17 @@ msgstr "5 af en slags [sum]"
 #~ "\n"
 #~ "Tetravex is a part of GNOME Games."
 #~ msgstr ""
-#~ "GNOME Tetravex er en simpel opgave hvor nogle brikker skal arrangeres så "
-#~ "de samme numre rører hinanden.\n"
+#~ "GNOME Tetravex er en simpel opgave hvor nogle brikker skal arrangeres så de "
+#~ "samme numre rører hinanden.\n"
 #~ "\n"
 #~ "Tetravex er en del af GNOME Games."
 
 #~ msgid "Klotski"
 #~ msgstr "Klotski"
 
-# (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdelige ordspil bliver brugt)
+#~ # (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdelige ordspil bliver brugt)
 #~ msgid "Slide blocks to solve the puzzle"
-#~ msgstr "\"Klodsede\" opgaver"
+#~ msgstr "“Klodsede” opgaver"
 
 #~ msgid "The puzzle in play"
 #~ msgstr "Det igangværende spil"
@@ -2795,7 +2782,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Daisy"
 #~ msgstr "Tusindfryd"
 
-# Da de fleste strenge her i området er navne på blomster, refereres der sikkert også til "viol" her fremfor violet
+#~ # Da de fleste strenge her i området er navne på blomster, refereres der sikkert også til "viol" her fremfor violet
 #~ msgid "Violet"
 #~ msgstr "Viol"
 
@@ -2805,7 +2792,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Pansy"
 #~ msgstr "Stedmoderblomst"
 
-# Blomsternavn jf. de andre strenge i området
+#~ # Blomsternavn jf. de andre strenge i området
 #~ msgid "Snowdrop"
 #~ msgstr "Vintergæk"
 
@@ -2942,7 +2929,7 @@ msgstr "5 af en slags [sum]"
 #~ "\n"
 #~ "Klotski is a part of GNOME Games."
 #~ msgstr ""
-#~ "\"Klodsede\" opgaver\n"
+#~ "“Klodsede” opgaver\n"
 #~ "\n"
 #~ "Klotski er en del af GNOME Games."
 
@@ -3082,15 +3069,14 @@ msgstr "5 af en slags [sum]"
 #~ "The number of rows that are filled with random blocks at the start of the "
 #~ "game."
 #~ msgstr ""
-#~ "Antallet af rækker der er fyldt med tilfældige blokke i starten af "
-#~ "spillet."
+#~ "Antallet af rækker der er fyldt med tilfældige blokke i starten af spillet."
 
 #~ msgid "The density of filled rows"
 #~ msgstr "Tæthed af fyldte rækker"
 
 #~ msgid ""
-#~ "The density of blocks in rows filled at the start of the game. The value "
-#~ "is between 0 (for no blocks) and 10 (for a completely filled row)."
+#~ "The density of blocks in rows filled at the start of the game. The value is "
+#~ "between 0 (for no blocks) and 10 (for a completely filled row)."
 #~ msgstr ""
 #~ "Tætheden af blokke i rækker der er fyldt i starten af spillet. Værdien er "
 #~ "mellem 0 (for ingen blokke) og 10 (for en helt fyldt række)."
@@ -3215,16 +3201,16 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Use more flashy, but slower, animations."
 #~ msgstr "Benyt mere iøjnefaldende, men langsommere, animationer."
 
-# Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
+#~ # Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
 #~ msgid "Swell Foop"
 #~ msgstr "Swell Foop"
 
 #~ msgid "_Number of colors:"
 #~ msgstr "_Antal farver:"
 
-# setup -> konfiguration :: preferences -> indstillinger :: settings -> opsætning
-#
-# Man kunne gøre dette anderledes, men med forskellige oversættelser undgås situationen med en menu kaldet indstillinger, indeholdende et menupunkt kaldet indstillinger
+#~ # setup -> konfiguration :: preferences -> indstillinger :: settings -> opsætning
+#~ #
+#~ # Man kunne gøre dette anderledes, men med forskellige oversættelser undgås situationen med en menu kaldet indstillinger, indeholdende et menupunkt kaldet indstillinger
 #~ msgid "Setup"
 #~ msgstr "Konfiguration"
 
@@ -3265,13 +3251,13 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Resultater for Swell Foop"
 
 #~ msgid ""
-#~ "I want to play that game! You know, they all light-up and you click on "
-#~ "them and they vanish!\n"
+#~ "I want to play that game! You know, they all light-up and you click on them "
+#~ "and they vanish!\n"
 #~ "\n"
 #~ "Swell Foop is a part of GNOME Games."
 #~ msgstr ""
-#~ "Jeg vil spille det spil! Du ved, de hvirvler rundt, du klikker på dem og "
-#~ "de forsvinder!\n"
+#~ "Jeg vil spille det spil! Du ved, de hvirvler rundt, du klikker på dem og de "
+#~ "forsvinder!\n"
 #~ "\n"
 #~ "Swell Foop er en del af GNOME Games."
 
@@ -3395,35 +3381,33 @@ msgstr "5 af en slags [sum]"
 #~ "The name of the key used to move north-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod nordøst. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod nordøst. Navnet er et standard "
+#~ "X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to move north-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod nordvest. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod nordvest. Navnet er et standard "
+#~ "X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to move north. The name is a standard X key name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod nord. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod nord. Navnet er et standard X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to move south-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod sydøst. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod sydøst. Navnet er et standard X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to move south-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod sydvest. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod sydvest. Navnet er et standard "
+#~ "X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to move south. The name is a standard X key name."
@@ -3433,15 +3417,14 @@ msgstr "5 af en slags [sum]"
 #~ msgid ""
 #~ "The name of the key used to move west. The name is a standard X key name."
 #~ msgstr ""
-#~ "Navnet på tasten til at flytte mod vest. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at flytte mod vest. Navnet er et standard X-tastenavn."
 
 #~ msgid ""
-#~ "The name of the key used to teleport randomly. The name is a standard X "
-#~ "key name."
+#~ "The name of the key used to teleport randomly. The name is a standard X key "
+#~ "name."
 #~ msgstr ""
-#~ "Navnet på tasten til at teleportere tilfældigt. Navnet er et standard X-"
-#~ "tastenavn."
+#~ "Navnet på tasten til at teleportere tilfældigt. Navnet er et standard "
+#~ "X-tastenavn."
 
 #~ msgid ""
 #~ "The name of the key used to teleport safely (if possible). The name is a "
@@ -3460,8 +3443,8 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Baggrundsfarven i et format som gdk_color_parse forstår."
 
 #~ msgid ""
-#~ "This selects whether or not to draw the background image over the "
-#~ "background color."
+#~ "This selects whether or not to draw the background image over the background "
+#~ "color."
 #~ msgstr ""
 #~ "Dette vælger om baggrundsbilledet tegnes over baggrundsfarven eller ej."
 
@@ -3524,7 +3507,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Advarsler"
 
 #~ msgid "_Use \"Too many flags\" warning"
-#~ msgstr "_Skriv \"For mange flag\"-advarsel"
+#~ msgstr "_Skriv “For mange flag”-advarsel"
 
 #~ msgid "Width of grid"
 #~ msgstr "Gitterbredde"
@@ -3647,8 +3630,7 @@ msgstr "5 af en slags [sum]"
 #~ "Select whether to drag the tiles or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "Vælg mellem træk og slip eller at klikke først på startpunkt så på "
-#~ "slutpunkt."
+#~ "Vælg mellem træk og slip eller at klikke først på startpunkt så på slutpunkt."
 
 #~ msgid "Welcome to Iagno!"
 #~ msgstr "Velkommen til Iagno!"
@@ -3675,7 +3657,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Filen er ikke en gyldig .desktop-fil"
 
 #~ msgid "Unrecognized desktop file Version '%s'"
-#~ msgstr "Ukendt version af skrivebordsfil \"%s\""
+#~ msgstr "Ukendt version af skrivebordsfil “%s”"
 
 #~ msgid "Starting %s"
 #~ msgstr "Starter %s"
@@ -3687,7 +3669,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Ukendt opstartstilvalg: %d"
 
 #~ msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-#~ msgstr "Kan ikke give dokument-URI'er til en \"Type=Link\"-skrivebordspost"
+#~ msgstr "Kan ikke give dokument-URI'er til en “Type=Link”-skrivebordspost"
 
 #~ msgid "Not a launchable item"
 #~ msgstr "Elementet kan ikke startes"
@@ -3714,18 +3696,18 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Vis indstillinger for sessionshåndtering"
 
 #~ msgid "Help file “%s.%s” not found"
-#~ msgstr "Hjælpefilen \"%s.%s\" ikke fundet"
+#~ msgstr "Hjælpefilen “%s.%s” ikke fundet"
 
 #~ msgid "Could not show help for “%s”"
 #~ msgstr "Kunne ikke vise hjælp til “%s”"
 
-# tile -> brikker vs felter.  I swell-foop er det brikker, men der er en fælles streng for de to programmer, hvori 'tiles' indgår, så vi har muligvis et problem.
+#~ # tile -> brikker vs felter.  I swell-foop er det brikker, men der er en fælles streng for de to programmer, hvori 'tiles' indgår, så vi har muligvis et problem.
 #~ msgid ""
-#~ "If enabled, the default background color from the user's default GNOME "
-#~ "theme is used to draw the tiles."
+#~ "If enabled, the default background color from the user's default GNOME theme "
+#~ "is used to draw the tiles."
 #~ msgstr ""
-#~ "Hvis aktiveret, vil standardbaggrundsfarven fra brugerens GNOME-tema "
-#~ "blive brugt til at tegne brikkerne med."
+#~ "Hvis aktiveret, vil standardbaggrundsfarven fra brugerens GNOME-tema blive "
+#~ "brugt til at tegne brikkerne med."
 
 #~ msgid "Whether or not to use the GNOME theme colors"
 #~ msgstr "Hvorvidt GNOMEs temafarver skal bruges"
@@ -3749,7 +3731,7 @@ msgstr "5 af en slags [sum]"
 #~ "Please check that Mahjongg is installed correctly."
 #~ msgstr ""
 #~ "Kunne ikke rendere filen:\n"
-#~ "\"%s\"\n"
+#~ "“%s”\n"
 #~ "\n"
 #~ "Kontrollér venligst at Mahjongg er korrekt installeret."
 
@@ -3777,23 +3759,22 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid ""
 #~ "Sudoku is not able to start because required application files are not "
-#~ "installed. If you are currently upgrading your system please wait until "
-#~ "the upgrade has completed."
+#~ "installed. If you are currently upgrading your system please wait until the "
+#~ "upgrade has completed."
 #~ msgstr ""
 #~ "Sudoku kan ikke starte fordi påkrævede applikationsfiler ikke er "
-#~ "installeret. Hvis du er ved at opgradere dit system, så vent venligst "
-#~ "indtil opgraderingen er overstået."
+#~ "installeret. Hvis du er ved at opgradere dit system, så vent venligst indtil "
+#~ "opgraderingen er overstået."
 
 #~ msgid ""
 #~ "%s is free software; you can redistribute it and/or modify it under the "
 #~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version 2 of the License, or (at your option) any "
-#~ "later version."
+#~ "Foundation; either version 2 of the License, or (at your option) any later "
+#~ "version."
 #~ msgstr ""
-#~ "%s er fri software; det kan distribueres og/eller modificeres som "
-#~ "betinget af GNU General Public License, udarbejdet af Free Software "
-#~ "Foundation; enten version 2 af licensen eller, efter eget valg, enhver "
-#~ "nyere version."
+#~ "%s er fri software; det kan distribueres og/eller modificeres som betinget "
+#~ "af GNU General Public License, udarbejdet af Free Software Foundation; enten "
+#~ "version 2 af licensen eller, efter eget valg, enhver nyere version."
 
 #~ msgid "Unable to make data directory %(dir)s: %(error)s"
 #~ msgstr "Kunne ikke oprette datakatalog %(dir)s: %(error)s"
@@ -3815,10 +3796,9 @@ msgstr "5 af en slags [sum]"
 #~ "games played, best time (in seconds) and worst time (also in seconds). "
 #~ "Unplayed games do not need to be represented."
 #~ msgstr ""
-#~ "En liste af strenge udformede som femtupler: navn, vundne, totalt "
-#~ "spillede spil, bedste tid (i sekunder) og dårligste tid (også i "
-#~ "sekunder). Spil der ikke er blevet prøvet, behøver ikke at blive "
-#~ "repræsenteret."
+#~ "En liste af strenge udformede som femtupler: navn, vundne, totalt spillede "
+#~ "spil, bedste tid (i sekunder) og dårligste tid (også i sekunder). Spil der "
+#~ "ikke er blevet prøvet, behøver ikke at blive repræsenteret."
 
 #~ msgid "Animations"
 #~ msgstr "Animationer"
@@ -3830,8 +3810,7 @@ msgstr "5 af en slags [sum]"
 #~ "Select whether to drag the cards or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "Vælg mellem træk og slip eller at klikke først på startpunkt så på "
-#~ "slutpunkt."
+#~ "Vælg mellem træk og slip eller at klikke først på startpunkt så på slutpunkt."
 
 #~ msgid "Statistics of games played"
 #~ msgstr "Statistik for spillede spil"
@@ -3863,7 +3842,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_Select"
 #~ msgstr "_Vælg"
 
-# o.k.
+#~ # o.k.
 #~ msgid "FreeCell Solitaire"
 #~ msgstr "Napoleon"
 
@@ -3874,8 +3853,8 @@ msgstr "5 af en slags [sum]"
 #~ "Aisleriot cannot load the file “%s”. Please check your Aisleriot "
 #~ "installation."
 #~ msgstr ""
-#~ "Kabale kan ikke indlæse filen “%s”. Kontrollér venligst din installation "
-#~ "af Kabale."
+#~ "Kabale kan ikke indlæse filen “%s”. Kontrollér venligst din installation af "
+#~ "Kabale."
 
 #~ msgctxt "slot type"
 #~ msgid "foundation"
@@ -3940,7 +3919,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "This game is unable to provide a hint."
 #~ msgstr "Dette spil kan ikke give fif."
 
-# Før stod der "Top" som oversættelse til Peek. Men da der ingen kommentar er tilknyttet antager jeg at det er en fejl (det engelske ord for top skulle have været Peak). Derfor rettet til Smugkig
+#~ # Før stod der "Top" som oversættelse til Peek. Men da der ingen kommentar er tilknyttet antager jeg at det er en fejl (det engelske ord for top skulle have været Peak). Derfor rettet til Smugkig
 #~ msgid "Peek"
 #~ msgstr "Smugkig"
 
@@ -3989,18 +3968,18 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Osmosis"
 #~ msgstr "Osmose"
 
-# Fra wikipedia: King's Audience (also known as Queen's Audience is a solitaire card game which uses a deck of 52 playing cards. It is so named because the King and Queen of each suit seem to watch the action.
+#~ # Fra wikipedia: King's Audience (also known as Queen's Audience is a solitaire card game which uses a deck of 52 playing cards. It is so named because the King and Queen of each suit seem to watch the action.
 #~ msgid "Kings Audience"
 #~ msgstr "Kongens tilhørere"
 
 #~ msgid "Glenwood"
 #~ msgstr "Glenwood"
 
-# det gælder om at 'parre' kortene to og to
+#~ # det gælder om at 'parre' kortene to og to
 #~ msgid "Gay Gordons"
 #~ msgstr "Muntre par"
 
-# o.k.  Dvs. der findes en kabale der tilsyneladende hedder Monta Carlo, men jeg tror det er en trykfejl - Monte Carlo virker mere realistisk
+#~ # o.k.  Dvs. der findes en kabale der tilsyneladende hedder Monta Carlo, men jeg tror det er en trykfejl - Monte Carlo virker mere realistisk
 #~ msgid "Monte Carlo"
 #~ msgstr "Monte Carlo"
 
@@ -4022,7 +4001,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Escalator"
 #~ msgstr "Rulletrappe"
 
-# UKENDTE KORTSPIL BEGYNDER HER
+#~ # UKENDTE KORTSPIL BEGYNDER HER
 #~ msgid "Agnes"
 #~ msgstr "Agnes"
 
@@ -4050,7 +4029,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Backbone"
 #~ msgstr "Knogle"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Yukon"
 #~ msgstr "Yukon"
 
@@ -4069,11 +4048,11 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Streets And Alleys"
 #~ msgstr "Gader og stræder"
 
-# ligner en labyrint
+#~ # ligner en labyrint
 #~ msgid "Maze"
 #~ msgstr "Labyrint"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Clock"
 #~ msgstr "Ur"
 
@@ -4083,7 +4062,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Canfield"
 #~ msgstr "Canfield"
 
-# Da der ingen kommentar er der retfærdiggør nuværende oversættelse af Thirteen til Fyrre, så ændrer jeg den til Tretten
+#~ # Da der ingen kommentar er der retfærdiggør nuværende oversættelse af Thirteen til Fyrre, så ændrer jeg den til Tretten
 #~ msgid "Thirteen"
 #~ msgstr "Tretten"
 
@@ -4114,7 +4093,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Yield"
 #~ msgstr "Udbytte"
 
-# Der er allerede en der hedder "labyrint", så vi har brug for et andet navn. Jeg ved dog ikke om held er det rigtige eftersom det blot stod der i forvejen
+#~ # Der er allerede en der hedder "labyrint", så vi har brug for et andet navn. Jeg ved dog ikke om held er det rigtige eftersom det blot stod der i forvejen
 #~ msgid "Labyrinth"
 #~ msgstr "Held"
 
@@ -4130,7 +4109,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Block Ten"
 #~ msgstr "Blok-ti"
 
-# Will-o-the-wisp er blot en lygtemand (og altså egentlig ikke noget med lygtemandens vilje)
+#~ # Will-o-the-wisp er blot en lygtemand (og altså egentlig ikke noget med lygtemandens vilje)
 #~ msgid "Will O The Wisp"
 #~ msgstr "Lygtemand"
 
@@ -4140,7 +4119,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Eagle Wing"
 #~ msgstr "Ørnevinge"
 
-# Treize er fransk for tretten (og altså ikke tredive som der pt. står i oversættelsen). Jeg retter den til Treize
+#~ # Treize er fransk for tretten (og altså ikke tredive som der pt. står i oversættelsen). Jeg retter den til Treize
 #~ msgid "Treize"
 #~ msgstr "Treize"
 
@@ -4168,11 +4147,11 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Bakers Dozen"
 #~ msgstr "Bagerdusin"
 
-# ligesom 7-kabale, men man kan se alle kortene fra starten
+#~ # ligesom 7-kabale, men man kan se alle kortene fra starten
 #~ msgid "Whitehead"
 #~ msgstr "Åben 7-kabale"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Freecell"
 #~ msgstr "Napoleon"
 
@@ -4200,7 +4179,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Thumb And Pouch"
 #~ msgstr "Tommel og taske"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Klondike"
 #~ msgstr "7-kabale"
 
@@ -4210,7 +4189,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Template"
 #~ msgstr "Skabelon"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Golf"
 #~ msgstr "Golf"
 
@@ -4528,8 +4507,7 @@ msgstr "5 af en slags [sum]"
 #~ "different games to be played.\n"
 #~ "AisleRiot is a part of GNOME Games."
 #~ msgstr ""
-#~ "Kabale indeholder en regelbaseret kabalemotor der giver mulighed for "
-#~ "mange\n"
+#~ "Kabale indeholder en regelbaseret kabalemotor der giver mulighed for mange\n"
 #~ "forskellige typer spil.\n"
 #~ "Kabale er en del af GNOME Games."
 
@@ -4558,7 +4536,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_Report"
 #~ msgstr "_Rapportér"
 
-# o.k.
+#~ # o.k.
 #~ msgid "Freecell Solitaire"
 #~ msgstr "Napoleon"
 
@@ -4940,16 +4918,15 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Hvis du nogensinde føler dig ensom i skoven, så omfavn et træ"
 
 #~ msgid ""
-#~ "Just because a crosswalk looks like a hopscotch board doesn't mean it is "
-#~ "one"
+#~ "Just because a crosswalk looks like a hopscotch board doesn't mean it is one"
 #~ msgstr ""
-#~ "Bare fordi en fodgængerovergang ligner en hinkestensplads betyder det "
-#~ "ikke at det er én"
+#~ "Bare fordi en fodgængerovergang ligner en hinkestensplads betyder det ikke "
+#~ "at det er én"
 
 #~ msgid "Look both ways before you cross the street"
 #~ msgstr "Se dig om til begge sider før du går over gaden"
 
-# den dobbelte tankestreg er amerikansk typografi
+#~ # den dobbelte tankestreg er amerikansk typografi
 #~ msgid "Monitors won't give you Vitamin D -- but sunlight will..."
 #~ msgstr "Skærme kan ikke give dig vitamin D - men sollys kan..."
 
@@ -5047,7 +5024,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Move ~a off the board"
 #~ msgstr "Flyt ~a væk fra bordet"
 
-# ?????
+#~ # ?????
 #~ msgid "Bug! make-hint called on false move."
 #~ msgstr "Fejl! make-hint blev kaldt på et ugyldigt træk."
 
@@ -5084,7 +5061,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Place a two in the leftmost slot of row ~a."
 #~ msgstr "Læg en toer på pladsen længst til venstre i række ~a."
 
-# Det ville være fristende at skrive ~a'eren, men det går ikke for billedkort
+#~ # Det ville være fristende at skrive ~a'eren, men det går ikke for billedkort
 #~ msgid "Place the ~a next to ~a."
 #~ msgstr "Læg ~a ved siden af ~a."
 
@@ -5260,7 +5237,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Match the top two cards of the waste."
 #~ msgstr "Match de to øverste kort fra affaldsbunken."
 
-# Fra manualen: multiplier scoring betyder at for hvert kort man "gør noget ved", så får man dobbelt antal points: 1 for det første, 2 for det næste, 4, 8, ...
+#~ # Fra manualen: multiplier scoring betyder at for hvert kort man "gør noget ved", så får man dobbelt antal points: 1 for det første, 2 for det næste, 4, 8, ...
 #~ msgid "Multiplier Scoring"
 #~ msgstr "Pointfordobling"
 
@@ -5331,22 +5308,22 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Om flytning af kort skal animeres"
 
 #~ msgid "%s: option `%s' is ambiguous\n"
-#~ msgstr "%s: tilvalget \"%s\" er flertydigt\n"
+#~ msgstr "%s: tilvalget “%s” er flertydigt\n"
 
 #~ msgid "%s: option `--%s' doesn't allow an argument\n"
-#~ msgstr "%s: tilvalget \"--%s\" tillader ikke et argument\n"
+#~ msgstr "%s: tilvalget “--%s” tillader ikke et argument\n"
 
 #~ msgid "%s: option `%c%s' doesn't allow an argument\n"
-#~ msgstr "%s: tilvalget \"%c%s\" tillader ikke et argument\n"
+#~ msgstr "%s: tilvalget “%c%s” tillader ikke et argument\n"
 
 #~ msgid "%s: option `%s' requires an argument\n"
-#~ msgstr "%s: tilvalget \"%s\" kræver et argument\n"
+#~ msgstr "%s: tilvalget “%s” kræver et argument\n"
 
 #~ msgid "%s: unrecognized option `--%s'\n"
-#~ msgstr "%s: ukendt tilvalg \"--%s\"\n"
+#~ msgstr "%s: ukendt tilvalg “--%s”\n"
 
 #~ msgid "%s: unrecognized option `%c%s'\n"
-#~ msgstr "%s: ukendt tilvalg \"%c%s\"\n"
+#~ msgstr "%s: ukendt tilvalg “%c%s”\n"
 
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s: ulovligt tilvalg -- %c\n"
@@ -5358,10 +5335,10 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "%s: tilvalget kræver et argument -- %c\n"
 
 #~ msgid "%s: option `-W %s' is ambiguous\n"
-#~ msgstr "%s: tilvalget \"-W %s\" er flertydigt\n"
+#~ msgstr "%s: tilvalget “-W %s” er flertydigt\n"
 
 #~ msgid "%s: option `-W %s' doesn't allow an argument\n"
-#~ msgstr "%s: tilvalget \"-W %s\" tillader ikke et argument\n"
+#~ msgstr "%s: tilvalget “-W %s” tillader ikke et argument\n"
 
 #~ msgid "A flag to allow remote players to watch new games"
 #~ msgstr "Et flag der tillader fjerne spillere at observere nye spil"
@@ -5394,23 +5371,23 @@ msgstr "5 af en slags [sum]"
 #~ "The format to display moves in, can be either 'human' (human readable), "
 #~ "'lan' (long algebraic notation) or 'san' (standard algebraic notation)"
 #~ msgstr ""
-#~ "Formatet som træk vises i - kan være enten \"human\" (menneske-læselig), "
-#~ "\"lan\" (lang algebraisk notation) eller \"san\" (algebraisk notation)"
+#~ "Formatet som træk vises i - kan være enten “human” (menneske-læselig), “lan” "
+#~ "(lang algebraisk notation) eller “san” (algebraisk notation)"
 
 #~ msgid "The piece style to use. Can be one of: 'simple' or 'fancy'"
 #~ msgstr ""
-#~ "Brikstilen der skal benyttes. Kan være en enten \"simple\" eller \"fancy\""
+#~ "Brikstilen der skal benyttes. Kan være en enten “simple” eller “fancy”"
 
 #~ msgid ""
 #~ "The side of the board that is in the foreground, either 'white', 'black', "
 #~ "'current' (the current player), 'human' (the side of the current human "
-#~ "player) or 'facetoface' (suitable for players on each side of screen, e."
-#~ "g. handhelds)"
+#~ "player) or 'facetoface' (suitable for players on each side of screen, e.g. "
+#~ "handhelds)"
 #~ msgstr ""
-#~ "Siden af brættet der er i forgrunden, enten \"white\", \"black\", "
-#~ "\"current\" (den nuværende spiller) eller \"human\" (den nuværende "
-#~ "menneskespillers side) eller \"facetoface\" (brugbar for spillere på hver "
-#~ "side af skærmen, f.eks. på håndholdte enheder)"
+#~ "Siden af brættet der er i forgrunden, enten “white”, “black”, “current” (den "
+#~ "nuværende spiller) eller “human” (den nuværende menneskespillers side) eller "
+#~ "“facetoface” (brugbar for spillere på hver side af skærmen, f.eks. på "
+#~ "håndholdte enheder)"
 
 #~ msgid "Logs"
 #~ msgstr "Log"
@@ -5424,7 +5401,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Communication:"
 #~ msgstr "Kommunikation:"
 
-# Dette kan jo hentyde til en fil, og så er oversættelsen ikke så god
+#~ # Dette kan jo hentyde til en fil, og så er oversættelsen ikke så god
 #~ msgid "Executable:"
 #~ msgstr "Eksekverbar:"
 
@@ -5488,7 +5465,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Move _Time:"
 #~ msgstr "_Tid til flytning:"
 
-# Mon ikke fields refererer til f.eks. hvorvidt sort og hvid styres af computer eller menneske, sværhedsgrad og den slags
+#~ # Mon ikke fields refererer til f.eks. hvorvidt sort og hvid styres af computer eller menneske, sværhedsgrad og den slags
 #~ msgid "Start the game. The game can be started once all fields are complete"
 #~ msgstr "Start spillet. Spillet kan startes så snart alle felter er udfyldt"
 
@@ -5520,8 +5497,8 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Blødgør kanter for 3D-elementer (anti-alias)"
 
 #~ msgid ""
-#~ "View the chess board by default in 2D mode, or optionally in 3D mode "
-#~ "using OpenGL."
+#~ "View the chess board by default in 2D mode, or optionally in 3D mode using "
+#~ "OpenGL."
 #~ msgstr ""
 #~ "Vis skakspillet i 2D pr. standard, eller ved tilvalg i 3D-tilstand med "
 #~ "OpenGL."
@@ -5531,8 +5508,8 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid ""
 #~ "Chess is not able to start because required application files are not "
-#~ "installed. If you are currently upgrading your system please wait until "
-#~ "the upgrade has completed."
+#~ "installed. If you are currently upgrading your system please wait until the "
+#~ "upgrade has completed."
 #~ msgstr ""
 #~ "Skak kan ikke starte, da påkrævede applikationsfiler ikke er installeret. "
 #~ "Hvis du er ved at opgradere dit system, så vent venligst indtil "
@@ -5595,10 +5572,9 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid ""
 #~ "You may claim a draw when:\n"
-#~ "a) The board has been in the same state three times (Three fold "
-#~ "repetition)\n"
-#~ "b) Fifty moves have occurred where no pawn has moved and no piece has "
-#~ "been captured (50 move rule)"
+#~ "a) The board has been in the same state three times (Three fold repetition)\n"
+#~ "b) Fifty moves have occurred where no pawn has moved and no piece has been "
+#~ "captured (50 move rule)"
 #~ msgstr ""
 #~ "Du kan erklære remis når:\n"
 #~ "a) Samme brætstilling er forekommet tre gange (tre gentagelser)\n"
@@ -5778,7 +5754,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "K"
 
 #~ msgid "'%(name)s' in '%(game)s'"
-#~ msgstr "\"%(name)s\" i \"%(game)s\""
+#~ msgstr "“%(name)s” i “%(game)s”"
 
 #~ msgid "Application Log"
 #~ msgstr "Programlog"
@@ -5793,11 +5769,11 @@ msgstr "5 af en slags [sum]"
 #~ "glChess has crashed. Please report this bug to http://bugzilla.gnome.org\n"
 #~ "Debug output:"
 #~ msgstr ""
-#~ "glChess er brudt ned. Rapportér venligst denne fejl til http://bugzilla."
-#~ "gnome.org\n"
+#~ "glChess er brudt ned. Rapportér venligst denne fejl til "
+#~ "http://bugzilla.gnome.org\n"
 #~ "Fejlsøgerdata:"
 
-# Hvis det er interessant at der står gl foran, så er det også interessant at endelsen er "chess" fremfor "skak", indtil andet er bevist
+#~ # Hvis det er interessant at der står gl foran, så er det også interessant at endelsen er "chess" fremfor "skak", indtil andet er bevist
 #~ msgid "glChess"
 #~ msgstr "glChess"
 
@@ -5905,7 +5881,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Criteria:"
 #~ msgstr "Kriterier:"
 
-# Man genererer næppe en *policy*, så det er nok generatoren der har en policy
+#~ # Man genererer næppe en *policy*, så det er nok generatoren der har en policy
 #~ msgid "Generate Policy"
 #~ msgstr "Generatorretningslinjer"
 
@@ -6060,8 +6036,8 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Vis sandsynligheder"
 
 #~ msgid ""
-#~ "Display the probabilities of each dealer hand outcome and the expected "
-#~ "value of your hand."
+#~ "Display the probabilities of each dealer hand outcome and the expected value "
+#~ "of your hand."
 #~ msgstr ""
 #~ "Vis sandsynlighederne for hver af kortgiverens udfald og den forventede "
 #~ "værdi af din hånd."
@@ -6157,10 +6133,9 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Ønsker du forsikring?"
 
 #~ msgid ""
-#~ "Insurance is a side wager of 50% of the original wager that the dealer "
-#~ "has a natural 21 (aka blackjack) that is offered when the dealer's face "
-#~ "up card is an ace. If the dealer has a natural 21 then the player is paid "
-#~ "double."
+#~ "Insurance is a side wager of 50% of the original wager that the dealer has a "
+#~ "natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+#~ "an ace. If the dealer has a natural 21 then the player is paid double."
 #~ msgstr ""
 #~ "Forsikring er en sideindsats på 50% af den originale indsats, på at "
 #~ "kortgiveren har en naturlig 21 (Blackjack). Muligheden for dette er til "
@@ -6259,19 +6234,19 @@ msgstr "5 af en slags [sum]"
 #~ "To stand means to stop adding cards to your hand.  Do this by clicking on "
 #~ "the dealer's cards or by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "At stå betyder et stop for tilføjelse af kort til din hånd. Gør dette ved "
-#~ "at klikke på kortgiverens kort eller ved at vælge valgmuligheden i "
+#~ "At stå betyder et stop for tilføjelse af kort til din hånd. Gør dette ved at "
+#~ "klikke på kortgiverens kort eller ved at vælge valgmuligheden i "
 #~ "kontrolmenuen."
 
 #~ msgid "The best option is to hit"
 #~ msgstr "Den bedste mulighed er at købe"
 
 #~ msgid ""
-#~ "To hit means to add another card to your hand.  Do this by clicking once "
-#~ "on your cards or by selecting the option from the Control menu."
+#~ "To hit means to add another card to your hand.  Do this by clicking once on "
+#~ "your cards or by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "At købe betyder at et nyt kort tilføjes din hånd. Gør dette ved at klikke "
-#~ "på dine kort eller ved at vælge valgmuligheden i kontrolmenuen."
+#~ "At købe betyder at et nyt kort tilføjes din hånd. Gør dette ved at klikke på "
+#~ "dine kort eller ved at vælge valgmuligheden i kontrolmenuen."
 
 #~ msgid "The best option is to double down"
 #~ msgstr "Den bedste mulighed er doble ned"
@@ -6281,17 +6256,16 @@ msgstr "5 af en slags [sum]"
 #~ "more card.  Do this by clicking once on the chips at the bottom of the "
 #~ "window or by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "At doble ned betyder at den oprindelige satsning fordobles og modtagelsen "
-#~ "af præcist ét kort mere. Gør dette ved at klikke en enkelt gang på "
-#~ "jetonerne i bunden af vinduet eller ved at vælge valgmuligheden i "
-#~ "kontrolmenuen."
+#~ "At doble ned betyder at den oprindelige satsning fordobles og modtagelsen af "
+#~ "præcist ét kort mere. Gør dette ved at klikke en enkelt gang på jetonerne i "
+#~ "bunden af vinduet eller ved at vælge valgmuligheden i kontrolmenuen."
 
 #~ msgid "The best option is to split"
 #~ msgstr "Den bedste mulighed er at splitte"
 
 #~ msgid ""
-#~ "To split means to divide your current hand into two separate hands.  Do "
-#~ "this by dragging one of your cards and dropping it off to the side or by "
+#~ "To split means to divide your current hand into two separate hands.  Do this "
+#~ "by dragging one of your cards and dropping it off to the side or by "
 #~ "selecting the option from the Control menu."
 #~ msgstr ""
 #~ "At splitte betyder at opdele din nuværende hånd i to separate hænder. Gør "
@@ -6302,12 +6276,11 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Den bedste mulighed er at give op"
 
 #~ msgid ""
-#~ "To surrender means to give up half your wager and not complete the hand.  "
-#~ "Do this by selecting the option from the Control menu."
+#~ "To surrender means to give up half your wager and not complete the hand.  Do "
+#~ "this by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "At give op betyder at du mister halvdelen af din satsning og ikke "
-#~ "færdiggøre hånden. Gør dette ved at vælge valgmuligheden fra "
-#~ "kontrolmenuen."
+#~ "At give op betyder at du mister halvdelen af din satsning og ikke færdiggøre "
+#~ "hånden. Gør dette ved at vælge valgmuligheden fra kontrolmenuen."
 
 #~ msgid ""
 #~ "Blackjack is a casino-style card game.\n"
@@ -6333,7 +6306,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Win"
 #~ msgstr "Vundet"
 
-# blackjack-terminologi
+#~ # blackjack-terminologi
 #~ msgid "Push"
 #~ msgstr "Uafgjort"
 
@@ -6374,7 +6347,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Nuværende rum: %s"
 
 #~ msgid "You've joined room \"%s\"."
-#~ msgstr "Du er nu i rummet \"%s\"."
+#~ msgstr "Du er nu i rummet “%s”."
 
 #~ msgid "Error joining room: %s"
 #~ msgstr "Fejl under forbindelse til rummet: %s"
@@ -6545,7 +6518,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Deity"
 #~ msgstr "Guddom"
 
-# Eller vagtpost. Men det lyder lidt kedeligt
+#~ # Eller vagtpost. Men det lyder lidt kedeligt
 #~ msgid "Sentinel"
 #~ msgstr "Vogter"
 
@@ -6555,8 +6528,8 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Knight"
 #~ msgstr "Ridder"
 
-# UKENDTE KORTSPIL BEGYNDER HER
-# Ovenstående passer da vist ikke helt længere, strengene synes at høre til et bestemt spil
+#~ # UKENDTE KORTSPIL BEGYNDER HER
+#~ # Ovenstående passer da vist ikke helt længere, strengene synes at høre til et bestemt spil
 #~ msgid "Angel"
 #~ msgstr "Engel"
 
@@ -6636,17 +6609,16 @@ msgstr "5 af en slags [sum]"
 #~ msgid "/kick <username> .......... Kick a player from the room"
 #~ msgstr "/kick <brugernavn> ........ Smid en spiller ud fra rummet"
 
-#~ msgid ""
-#~ "/gag <username> ........... Gag a player to prevent them from talking"
+#~ msgid "/gag <username> ........... Gag a player to prevent them from talking"
 #~ msgstr "/gag <brugernavn> ......... Forhindr en spiller i at tale"
 
 #~ msgid ""
-#~ "/ungag <username> ......... Reverse the gag operation to allow a player "
-#~ "to talk"
+#~ "/ungag <username> ......... Reverse the gag operation to allow a player to "
+#~ "talk"
 #~ msgstr ""
 #~ "/ungag <brugernavn> ....... Annullér gag-operationen så spilleren kan tale"
 
-# Det er måske ikke det friskeste, mest nutidige sprog, men computerkyndige vil nemmere kunne se forskel på kick/ban når der bruges glosen bandlys
+#~ # Det er måske ikke det friskeste, mest nutidige sprog, men computerkyndige vil nemmere kunne se forskel på kick/ban når der bruges glosen bandlys
 #~ msgid "/ban <username> ........... Ban a player from the server"
 #~ msgstr "/ban <brugernavn> ......... Bandlys en spiller fra serveren"
 
@@ -6674,7 +6646,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Chat Commands"
 #~ msgstr "Chatkommandoer"
 
-# Længden af denne streng er velsagtens bestemmende for antallet af prikker der bruges til udfyldning af linjerne der dokumenterer kommandoer
+#~ # Længden af denne streng er velsagtens bestemmende for antallet af prikker der bruges til udfyldning af linjerne der dokumenterer kommandoer
 #~ msgid "-------------"
 #~ msgstr "-------------"
 
@@ -6806,7 +6778,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Record:"
 #~ msgstr "Rekord:"
 
-# Evt. bedømmelse. Men i skakhenseende bruger man også ordet rating på dansk (i hvertfald den af mine venner der har forstand på det)
+#~ # Evt. bedømmelse. Men i skakhenseende bruger man også ordet rating på dansk (i hvertfald den af mine venner der har forstand på det)
 #~ msgid "Rating:"
 #~ msgstr "Rating:"
 
@@ -6843,11 +6815,11 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Ignore"
 #~ msgstr "Ignorér"
 
-# Tusind tak, programmører
+#~ # Tusind tak, programmører
 #~ msgid "#%d"
 #~ msgstr "#%d"
 
-# Hvad sker der for dem?
+#~ # Hvad sker der for dem?
 #~ msgid "L"
 #~ msgstr "L"
 
@@ -6896,7 +6868,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "You can't join a room; you're not logged in"
 #~ msgstr "Du kan ikke gå ind i et rum; du er ikke logget ind"
 
-# "in between" betyder jo også at man er udenfor det (in between jobs = arbejdsløs), men afhængigt af hvad de mener kan det oversættes forskelligt
+#~ # "in between" betyder jo også at man er udenfor det (in between jobs = arbejdsløs), men afhængigt af hvad de mener kan det oversættes forskelligt
 #~ msgid "You're already in between rooms"
 #~ msgstr "Du er allerede mellem forskellige rum"
 
@@ -6958,7 +6930,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Computer"
 #~ msgstr "Computer"
 
-# Vi gætter på at det er et verbum eftersom de ligger i noget der hedder launch.c
+#~ # Vi gætter på at det er et verbum eftersom de ligger i noget der hedder launch.c
 #~ msgid "Open"
 #~ msgstr "Åbn"
 
@@ -7071,7 +7043,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Player Stats"
 #~ msgstr "Spillerstatistik"
 
-# Jeg er ikke klar over om der findes en standardiseret dansk oversættelse
+#~ # Jeg er ikke klar over om der findes en standardiseret dansk oversættelse
 #~ msgid "MOTD"
 #~ msgstr "Dagens meddelelse"
 
@@ -7211,10 +7183,9 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Resultater for Gnometris"
 
 #~ msgid ""
-#~ "The GNOME version of Reversi. The goal is to control the most disks on "
-#~ "the board."
-#~ msgstr ""
-#~ "GNOME-udgaven af Reversi. Målet er at styre flest skiver på brættet."
+#~ "The GNOME version of Reversi. The goal is to control the most disks on the "
+#~ "board."
+#~ msgstr "GNOME-udgaven af Reversi. Målet er at styre flest skiver på brættet."
 
 #~ msgid "Player Chat"
 #~ msgstr "Spillerchat"
@@ -7231,7 +7202,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "-"
 #~ msgstr "-"
 
-# Nu må de lige spænde hjelmen
+#~ # Nu må de lige spænde hjelmen
 #~ msgid "#"
 #~ msgstr "#"
 
@@ -7275,8 +7246,8 @@ msgstr "5 af en slags [sum]"
 #~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A "
 #~ "setting of TRUE causes the pieces to fall quickly and jerkily."
 #~ msgstr ""
-#~ "Hvis dette sættes til \"FALSE\" falder delene langsomt, men graciøst. "
-#~ "Sættes dette til \"TRUE\" falder delene hurtigt og rykvis."
+#~ "Hvis dette sættes til “FALSE” falder delene langsomt, men graciøst. Sættes "
+#~ "dette til “TRUE” falder delene hurtigt og rykvis."
 
 #~ msgid "The board size"
 #~ msgstr "Brætstørrelsen"
@@ -7288,8 +7259,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Højen på det tilpassede bræt, 101 &gt; højde &gt; 3."
 
 #~ msgid ""
-#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = "
-#~ "Large."
+#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = Large."
 #~ msgstr ""
 #~ "Brætstørrelsen. 1 = Brugertilpasset, 2 = Lille, 3 = Mellemstor, 4 = Stor."
 
@@ -7324,7 +7294,7 @@ msgstr "5 af en slags [sum]"
 #~ "Det er umuligt at spille spillet. Kontrollér venligst at spillet er "
 #~ "installeret korrekt og prøv igen."
 
-# Bedste bud; nævnes ikke i manualen til same gnome
+#~ # Bedste bud; nævnes ikke i manualen til same gnome
 #~ msgid "Same GNOME (Clutter)"
 #~ msgstr "Samspil (rod)"
 
@@ -7416,7 +7386,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Aktivér splat"
 
 #~ msgid "Enable splats. Play a sound and show a \"Splat!\" on the screen."
-#~ msgstr "Aktivér splat. Afspil en lyd og vis et \"Splat!\" på skærmen."
+#~ msgstr "Aktivér splat. Afspil en lyd og vis et “Splat!” på skærmen."
 
 #~ msgid "E_nable splats"
 #~ msgstr "A_ktivér splat"
@@ -7447,18 +7417,18 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_Stop"
 #~ msgstr "_Stop"
 
-# Manual for strftime
-# http://manpages.courier-mta.org/htmlman3/strftime.3.html
-#
-# %p er AM/PM eller tilsvarende streng for det aktuelle locale (gad vide hvad det er)
-#
-# strftime virker som følger (i python):
-#
-# >>> import time
-# >>> time.strftime('hello world - %A %R %p')
-# 'hello world - Sunday 15:09 PM'
-#
-# Dermed behøver man ikke bevare antallet af %A, %p osv. som det ellers typisk er tilfældet med strengsubstitution
+#~ # Manual for strftime
+#~ # http://manpages.courier-mta.org/htmlman3/strftime.3.html
+#~ #
+#~ # %p er AM/PM eller tilsvarende streng for det aktuelle locale (gad vide hvad det er)
+#~ #
+#~ # strftime virker som følger (i python):
+#~ #
+#~ # >>> import time
+#~ # >>> time.strftime('hello world - %A %R %p')
+#~ # 'hello world - Sunday 15:09 PM'
+#~ #
+#~ # Dermed behøver man ikke bevare antallet af %A, %p osv. som det ellers typisk er tilfældet med strengsubstitution
 #~ msgid "Today %R %p"
 #~ msgstr "I dag %R"
 
@@ -7548,8 +7518,8 @@ msgstr "5 af en slags [sum]"
 #~ "%(move)s Black %(piece)s at %1$s takes the white %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s Sort %(piece)s på %1$s slår den hvide %(victim_piece)s på "
-#~ "%(end)s (%(result)s)"
+#~ "%(move)s Sort %(piece)s på %1$s slår den hvide %(victim_piece)s på %(end)s "
+#~ "(%(result)s)"
 
 #~ msgid "%(move)s White %(piece)s moves from %1$s to %2$s (%(result)s)"
 #~ msgstr "%(move)s Hvid %(piece)s flytter fra %1$s til %2$s (%(result)s)"
@@ -7563,7 +7533,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "You have been disconnected from the server"
 #~ msgstr "Du er blevet koblet af serveren"
 
-# ?????
+#~ # ?????
 #~ msgid "glines|Medium"
 #~ msgstr "Mellem"
 
@@ -7613,8 +7583,8 @@ msgstr "5 af en slags [sum]"
 #~ "Do you want to finish the current game or start playing with the new map "
 #~ "immediately?"
 #~ msgstr ""
-#~ "Vil du færdiggøre det nuværende spil eller med det samme starte et spil "
-#~ "med den nye bane?"
+#~ "Vil du færdiggøre det nuværende spil eller med det samme starte et spil med "
+#~ "den nye bane?"
 
 #~ msgid "_Finish"
 #~ msgstr "_Afslut"
@@ -7641,7 +7611,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr ""
 #~ "Dette navn er allerede registreret og kan derfor ikke bruges af en gæst"
 
-# Ville det være mere naturligt at skrive: "navnet blev ikke fundet"?
+#~ # Ville det være mere naturligt at skrive: "navnet blev ikke fundet"?
 #~ msgid "No such name was found"
 #~ msgstr "Intet sådant navn fundet"
 
@@ -7685,11 +7655,9 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Ny"
 
 #~ msgid ""
-#~ "<b><big>Some games have been changed. Save changes before closing?</big></"
-#~ "b>"
+#~ "<b><big>Some games have been changed. Save changes before closing?</big></b>"
 #~ msgstr ""
-#~ "<b><big>Nogle spil er blevet ændret. Gem ændringer for afslutning?</big></"
-#~ "b>"
+#~ "<b><big>Nogle spil er blevet ændret. Gem ændringer for afslutning?</big></b>"
 
 #~ msgid "<b><big>Unable to enable 3D mode</big></b>"
 #~ msgstr "<b><big>Kan ikke aktivere 3D-tilstand</big></b>"
@@ -7720,8 +7688,8 @@ msgstr "5 af en slags [sum]"
 #~ "You are still able to play chess in 2D without these packages."
 #~ msgstr ""
 #~ "Dit system har ikke det nødvendige programmel til at anvende 3D-tilstand. "
-#~ "Kontakt venligst din systemadministrator og bed om installation af "
-#~ "<i>OpenGL Python bindings</i> og <i>GtkGLExt Python bindings</i>.\n"
+#~ "Kontakt venligst din systemadministrator og bed om installation af <i>OpenGL "
+#~ "Python bindings</i> og <i>GtkGLExt Python bindings</i>.\n"
 #~ "\n"
 #~ "Du kan stadig spille skak i 2D uden disse pakker."
 
@@ -7767,7 +7735,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_AI Information"
 #~ msgstr "_AI information"
 
-# Nu må de lige tage sig sammen
+#~ # Nu må de lige tage sig sammen
 #~ msgid " - %(check_status)s"
 #~ msgstr " - %(check_status)s"
 
@@ -7876,8 +7844,8 @@ msgstr "5 af en slags [sum]"
 #~ "A comma seperated list of recently played games. The filenames are stored "
 #~ "here, not the actual game name."
 #~ msgstr ""
-#~ "En kommasepareret liste af de senest spillede spil. Filnavnene gemmes "
-#~ "her, ikke selve spilnavnet."
+#~ "En kommasepareret liste af de senest spillede spil. Filnavnene gemmes her, "
+#~ "ikke selve spilnavnet."
 
 #~ msgid "The height of the main window."
 #~ msgstr "Højden af hovedvinduet."
@@ -7996,8 +7964,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid ""
 #~ "Background of game is black; otherwise, the background will follow your "
 #~ "theme colors."
-#~ msgstr ""
-#~ "Spillets baggrund er sort; ellers vil baggrunden følge dit farvetema."
+#~ msgstr "Spillets baggrund er sort; ellers vil baggrunden følge dit farvetema."
 
 #~ msgid ""
 #~ "The height of the playing window in pixels. At minimum it should be 240."
@@ -8007,23 +7974,23 @@ msgstr "5 af en slags [sum]"
 #~ "The width of the playing window in pixels. At minimum it should be 320."
 #~ msgstr "Bredden af spilvinduet i punkter. Bør mindst være 320."
 
-# Jeg kan ikke finde nogen god oversættelse, så med mindre nogen har et bedre forslag bruger vi detteher gamle platte ordspil
+#~ # Jeg kan ikke finde nogen god oversættelse, så med mindre nogen har et bedre forslag bruger vi detteher gamle platte ordspil
 #~ msgid "Sliding Block Puzzles"
-#~ msgstr "\"Klodsede\" opgaver"
+#~ msgstr "“Klodsede” opgaver"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested height of the main window in pixels. If this isn't big enough "
+#~ "it will be ignored."
 #~ msgstr ""
 #~ "Den forespurgte højde af hovedvinduet i billedpunkter. Hvis dette ikke er "
 #~ "stort nok vil det blive ignoreret."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested width of the main window in pixels. If this isn't big enough "
+#~ "it will be ignored."
 #~ msgstr ""
-#~ "Den forespurgte bredde af hovedvinduet i billedpunkter. Hvis dette ikke "
-#~ "er stort nok vil det blive ignoreret."
+#~ "Den forespurgte bredde af hovedvinduet i billedpunkter. Hvis dette ikke er "
+#~ "stort nok vil det blive ignoreret."
 
 #~ msgid "There was an error accessing GConf: %s"
 #~ msgstr "Der opstod en fejl under tilgang til GConf: %s"
@@ -8048,7 +8015,7 @@ msgstr "5 af en slags [sum]"
 #~ "Please check that Mahjongg is installed correctly."
 #~ msgstr ""
 #~ "Kunne ikke finde filen:\n"
-#~ "\"%s\"\n"
+#~ "“%s”\n"
 #~ "\n"
 #~ "Kontrollér venligst at Mahjongg er korrekt installeret."
 
@@ -8059,23 +8026,23 @@ msgstr "5 af en slags [sum]"
 #~ "The default tile set will be loaded instead."
 #~ msgstr ""
 #~ "Kunne ikke finde filen:\n"
-#~ "\"%s\"\n"
+#~ "“%s”\n"
 #~ "\n"
 #~ "I stedet vil standardtemaet blive indlæst."
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 200 pixels high."
+#~ "The requested height of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 200 pixels high."
 #~ msgstr ""
-#~ "Den forespurgte højde af hovedvinduet i punkter. Bemærk at kontrollerne "
-#~ "som vinduet indeholder, er mindst 200 punkter høj."
+#~ "Den forespurgte højde af hovedvinduet i punkter. Bemærk at kontrollerne som "
+#~ "vinduet indeholder, er mindst 200 punkter høj."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 320 pixels wide."
+#~ "The requested width of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 320 pixels wide."
 #~ msgstr ""
-#~ "Den forespurgte bredde af hovedvinduet i punkter. Bemærk at kontrollerne "
-#~ "som vinduet indeholder, er mindst 320 punkter bred."
+#~ "Den forespurgte bredde af hovedvinduet i punkter. Bemærk at kontrollerne som "
+#~ "vinduet indeholder, er mindst 320 punkter bred."
 
 #~ msgid "The window height"
 #~ msgstr "Vindueshøjden"
@@ -8086,7 +8053,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Sorry!"
 #~ msgstr "Undskyld!"
 
-# Browser
+#~ # Browser
 #~ msgid "Galeon - New"
 #~ msgstr "Galeon - Ny"
 
@@ -8174,7 +8141,7 @@ msgstr "5 af en slags [sum]"
 #~ msgid "Bonus"
 #~ msgstr "Bonus"
 
-# det er til lydlisten
+#~ # det er til lydlisten
 #~ msgid "Bonus Appears"
 #~ msgstr "Bonus dukker op"
 
@@ -8231,8 +8198,7 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid ""
 #~ "The mode of network game to use. 1 = Server, 2 = LAN Host, 3 = LAN Client."
-#~ msgstr ""
-#~ "Tilstande for netværksspil. 1 = server, 2 = LAN-vært, 3 = LAN-klient."
+#~ msgstr "Tilstande for netværksspil. 1 = server, 2 = LAN-vært, 3 = LAN-klient."
 
 #~ msgid "The player's nickname"
 #~ msgstr "Spillerens kælenavn"
@@ -8241,15 +8207,15 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Spillerens kælenavn."
 
 #~ msgid ""
-#~ "This string identifies the default game to connect to or create "
-#~ "(depending on mode)."
+#~ "This string identifies the default game to connect to or create (depending "
+#~ "on mode)."
 #~ msgstr ""
-#~ "Denne streng identificerer standardspillet der skal oprettes eller "
-#~ "forbindes til (afhængig af tilstand)."
+#~ "Denne streng identificerer standardspillet der skal oprettes eller forbindes "
+#~ "til (afhængig af tilstand)."
 
 #~ msgid ""
-#~ "When using server mode, which game server to contact. This accepts the "
-#~ "usual hostname or dotted quad notation."
+#~ "When using server mode, which game server to contact. This accepts the usual "
+#~ "hostname or dotted quad notation."
 #~ msgstr ""
 #~ "Hvilken spil-server der skal kontaktes, når server-tilstanden er i brug. "
 #~ "Værtsnavn- eller IP-adresse-notation er tilladt."
@@ -8257,11 +8223,9 @@ msgstr "5 af en slags [sum]"
 #~ msgid "_High Scores"
 #~ msgstr "_High Scores"
 
-#~ msgid ""
-#~ "<span size=\"large\" style=\"italic\" weight=\"bold\">You win!</span>"
+#~ msgid "<span size=\"large\" style=\"italic\" weight=\"bold\">You win!</span>"
 #~ msgstr ""
-#~ "<span size=\"large\" style=\"italic\" weight=\"bold\">Du har vundet!</"
-#~ "span>"
+#~ "<span size=\"large\" style=\"italic\" weight=\"bold\">Du har vundet!</span>"
 
 #~ msgid "Congratulations."
 #~ msgstr "Tillykke."
@@ -8279,8 +8243,7 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Ataxx"
 
 #~ msgid "A disk-flipping game where you attempt to dominate the board."
-#~ msgstr ""
-#~ "Et spil hvor man forsøger at dominere brættet, ved at vende brikker."
+#~ msgstr "Et spil hvor man forsøger at dominere brættet, ved at vende brikker."
 
 #~ msgid "Compete to dominate the board in a Reversi-like game"
 #~ msgstr "Kæmp for at dominere brættet i et Othello-lignende spil"
@@ -8301,8 +8264,8 @@ msgstr "5 af en slags [sum]"
 #~ "Zero corresponds to no animations, one is partial animations, two is "
 #~ "complete animations."
 #~ msgstr ""
-#~ "0 svarer til ingen animeringer, 1 er delvise animeringer, 2 er "
-#~ "fuldstændige animeringer."
+#~ "0 svarer til ingen animeringer, 1 er delvise animeringer, 2 er fuldstændige "
+#~ "animeringer."
 
 #~ msgid "Ataxx Preferences"
 #~ msgstr "Indstillinger for Ataxx"
@@ -8320,11 +8283,11 @@ msgstr "5 af en slags [sum]"
 #~ msgstr "Brug visuelle effekter ved brikvending"
 
 #~ msgid ""
-#~ "Put all the white pieces at the bottom and all the black pieces on the "
-#~ "top of the board when a game is over"
+#~ "Put all the white pieces at the bottom and all the black pieces on the top "
+#~ "of the board when a game is over"
 #~ msgstr ""
-#~ "Læg alle hvide brikker i bunden og alle sorte brikker i toppen af "
-#~ "brættet, når spillet er forbi"
+#~ "Læg alle hvide brikker i bunden og alle sorte brikker i toppen af brættet, "
+#~ "når spillet er forbi"
 
 #~ msgid "The appearance of the pieces"
 #~ msgstr "Brikkernes udseende"
@@ -8334,3 +8297,5 @@ msgstr "5 af en slags [sum]"
 
 #~ msgid "Invalid game data"
 #~ msgstr "Ugyldige spildata"
+
+
