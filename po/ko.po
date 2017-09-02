@@ -8,7 +8,8 @@
 #
 # Updated for tali:
 #
-# Changwoo Ryu <cwryu@debian.org>, 2013-2015.
+# ChiHyeon Kim <pipi910327@gmail.com>, 2017
+# Changwoo Ryu <cwryu@debian.org>, 2013-2015, 2017.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -19,10 +20,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-07 11:58+0000\n"
-"PO-Revision-Date: 2015-03-08 05:03+0900\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-07-05 18:52+0000\n"
+"PO-Revision-Date: 2017-09-01 19:26+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -30,6 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
@@ -54,6 +55,10 @@ msgstr ""
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "세 가지 종류의 난이도로 하나에서 다섯을 상대로 플레이합니다."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -288,7 +293,9 @@ msgstr "포커의 일종, 주사위와 더 적은 돈 사용."
 
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
-msgstr "류창우 <cwryu@debian.org>"
+msgstr ""
+"류창우 <cwryu@debian.org>\n"
+"김치현 <pipi910327@gmail.com>"
 
 #: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
@@ -356,48 +363,48 @@ msgstr "게임 종류"
 msgid "Player Names"
 msgstr "플레이어 이름"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1 [1번 모두]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2 [2번 모두]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3 [3번 모두]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4 [4번 모두]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5 [5번 모두]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6 [6번 모두]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "같은 종류의 3 [모두]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "같은 종류의 4 [모두]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "풀하우스 [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "스몰 스트레이트 [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "라지 스트레이트 [40]"
 
@@ -405,7 +412,7 @@ msgstr "라지 스트레이트 [40]"
 msgid "5 of a Kind [50]"
 msgstr "같은 종류 5 [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "찬스 [합계]"
 
@@ -428,183 +435,34 @@ msgid "Bonus if >62"
 msgstr "62보다 크면 보너스"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "투페어 같은 색 [전체]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "풀하우스 [15 + 전체]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "풀하우스 같은 색 [20 + 전체]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "풀하우스(모두 같은 색) [20 + 전체]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "같은 종류의 4 [25 + 전체]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "같은 종류의 5 [50 + 전체]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "점수 슬롯을 선택하십시오."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "같은 종류의 5 [모두]"
-
-#~ msgid "Current game will complete with original number of players."
-#~ msgstr "현재 게임은 원래 플레이어의 수로 끝납니다."
-
-#~ msgid "View help for this game"
-#~ msgstr "이 게임의 도움말을 봅니다"
-
-#~ msgid "End the current game"
-#~ msgstr "현재 게임을 끝냅니다"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "f전체 화면 모드를 토글합니다"
-
-#~ msgid "Get a hint for your next move"
-#~ msgstr "다음 움직임에 대한 힌트를 얻습니다"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "전체 화면 모드를 나갑니다"
-
-#~ msgid "Start a new multiplayer network game"
-#~ msgstr "새 멀티플레이어 네트워크 게임을 시작합니다"
-
-#~ msgid "End the current network game and return to network server"
-#~ msgstr "현재 네트워크 게임을 끝내고 네트워크 서버로 돌아갑니다"
-
-#~ msgid "Start a new game"
-#~ msgstr "새 게임을 시작합니다"
-
-#~ msgid "Pause the game"
-#~ msgstr "게임을 일시 중지합니다"
-
-#~ msgid "Show a list of players in the network game"
-#~ msgstr "네트워크 게임의 플레이어 목록을 표시합니다"
-
-#~ msgid "Redo the undone move"
-#~ msgstr "마지막 움직임을 되돌립니다"
-
-#~ msgid "Restart the game"
-#~ msgstr "게임을 다시 시작합니다"
-
-#~ msgid "Resume the paused game"
-#~ msgstr "일시 중지한 게임을 다시 시작합니다"
-
-#~ msgid "View the scores"
-#~ msgstr "점수를 봅니다"
-
-#~ msgid "Undo the last move"
-#~ msgstr "마지막 움직임을 취소합니다"
-
-#~ msgid "About this game"
-#~ msgstr "이 게임 정보"
-
-#~ msgid "Close this window"
-#~ msgstr "이 창을 닫습니다"
-
-#~ msgid "Configure the game"
-#~ msgstr "게임을 설정합니다"
-
-#~ msgid "Quit this game"
-#~ msgstr "이 게임을 끝냅니다"
-
-#~ msgid "_Contents"
-#~ msgstr "차례(_C)"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "전체 화면(_F)"
-
-#~ msgid "_Hint"
-#~ msgstr "힌트(_H)"
-
-#~ msgid "_New"
-#~ msgstr "새 게임(_N)"
-
-#~ msgid "_Redo Move"
-#~ msgstr "다시 이동(_R)"
-
-#~ msgid "_Reset"
-#~ msgstr "리셋(_R)"
-
-#~ msgid "_Restart"
-#~ msgstr "게임 다시(_R)"
-
-#~ msgid "_Undo Move"
-#~ msgstr "이동 취소(_U)"
-
-#~ msgid "_Deal"
-#~ msgstr "패 돌리기(_D)"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "전체 화면 나가기(_L)"
-
-#~ msgid "Network _Game"
-#~ msgstr "네트워크 게임(_G)"
-
-#~ msgid "L_eave Game"
-#~ msgstr "게임 떠나기(_E)"
-
-#~ msgid "Player _List"
-#~ msgstr "플레이어 목록(_L)"
-
-#~ msgid "_Pause"
-#~ msgstr "일시 중지(_P)"
-
-#~ msgid "Res_ume"
-#~ msgstr "다시 시작(_U)"
-
-#~ msgid "_End Game"
-#~ msgstr "게임 끝내기(_E)"
-
-#~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
-#~ msgstr ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
-
-#~ msgid ""
-#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
-#~ msgstr ""
-#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
-#~ msgstr ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-#~ msgstr ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-
-#~ msgid "Tali Preferences"
-#~ msgstr "탈리 기본 설정"
