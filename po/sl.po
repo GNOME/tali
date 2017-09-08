@@ -4,16 +4,16 @@
 #
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
-# Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2016.
-#
+# Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007–2016.
+# Andrej Mernik <andrejm@ubuntu.si>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-18 22:29+0200\n"
-"PO-Revision-Date: 2016-08-18 22:29+0200\n"
+"POT-Creation-Date: 2017-02-28 11:40+0000\n"
+"PO-Revision-Date: 2017-09-08 11:10+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -41,7 +41,7 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
-"Igra tali je variacije pokra, ki se igra s kockami. Kocke se meče trikrat "
+"Igra Tali je različica pokra, ki se igra s kockami. Kocke se meče trikrat "
 "zapored, pri tem pa igralec ohrani tiste vrednosti, ki jih želi, ponovno "
 "meče pa tiste, ki ne omogočajo najboljšega rezultata. Igro je mogoče igrati "
 "tudi z barvnimi kockami."
@@ -49,8 +49,8 @@ msgstr ""
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
-"Igro je mogoče igrati od enega do petih nasprotnikov na treh različnih "
-"ravneh težavnosti."
+"Igro je mogoče igrati z do pet nasprotniki na treh različnih težavnostnih "
+"ravneh."
 
 #: ../data/tali.appdata.xml.in.h:5
 msgid "The GNOME Project"
@@ -58,7 +58,7 @@ msgstr "Projekt GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
-msgstr "Premagaj verjetnost v poker igri s kockami"
+msgstr "Premagaj verjetnost v igri s kockami v slogu pokra"
 
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
@@ -82,7 +82,7 @@ msgstr "Pomo_č"
 
 #: ../data/tali-menus.ui.h:5
 msgid "_About"
-msgstr "_O Programu"
+msgstr "_O programu"
 
 #: ../data/tali-menus.ui.h:6
 msgid "_Quit"
@@ -90,15 +90,15 @@ msgstr "_Končaj"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
-msgstr "Zamik med meti"
+msgstr "Zakasnitev med meti"
 
 #: ../data/org.gnome.tali.gschema.xml.h:2
 msgid ""
 "Choose whether or not to insert a delay between the computer's dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
-"Izbrana možnost omogoča, da se vstavi časovni zamik med meti kocke "
-"računalnika. Na ta način imajo ostali igralci možnost slediti dogajanju."
+"Izbrana možnost omogoča, da se vstavi časovna zakasnitev med računalnikovimi "
+"meti kocke. Na ta način imajo ostali igralci možnost slediti dogajanju."
 
 #: ../data/org.gnome.tali.gschema.xml.h:3
 msgid "Display the computer's thoughts"
@@ -108,8 +108,7 @@ msgstr "Pokaži računalnikovo razmišljanje"
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
-"Izbrana možnost omogoča, da se beleženje UI izpiše preko  standardnega "
-"odvoda."
+"Izbrana možnost omogoča, da se beleženje UI izpiše preko standardnega izhoda."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -123,7 +122,7 @@ msgstr "'Običajna'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
-msgstr "Že uporabljeno! Kje želite to postaviti?"
+msgstr "Že uporabljeno! Kam želite to postaviti?"
 
 #: ../src/clist.c:414
 #, c-format
@@ -167,7 +166,7 @@ msgstr "Datum"
 
 #: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
-msgstr "Zamik med računalnikovimi premiki"
+msgstr "Zakasni računalnikove poteze"
 
 #: ../src/gyahtzee.c:102
 msgid "Display computer thoughts"
@@ -188,7 +187,7 @@ msgstr "Število človeških nasprotnikov"
 
 #: ../src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
-msgstr "Izbira igre: Običajno ali barvno"
+msgstr "Izbira igre: običajno ali barvno"
 
 #: ../src/gyahtzee.c:108
 msgid "STRING"
@@ -200,7 +199,7 @@ msgstr "računalniških nasprotnikov"
 
 #: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
-msgstr "Število poskisov vsakega meta računalnika"
+msgstr "Število poskusov vsakega računalnikovega meta"
 
 #: ../src/gyahtzee.c:117 ../src/setup.c:356
 msgctxt "game type"
@@ -214,11 +213,11 @@ msgstr "Barve"
 
 #: ../src/gyahtzee.c:139
 msgid "Roll all!"
-msgstr "Vrzi vse kocke! "
+msgstr "Vrzi vse!"
 
 #: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
-msgstr "Vrzi kocko! "
+msgstr "Vrzi!"
 
 #: ../src/gyahtzee.c:176
 msgid "The game is a draw!"
@@ -244,14 +243,14 @@ msgstr "Vaš rezultat se uvršča med najboljših deset."
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
-msgstr[0] "%s je zmagal igro za %d točk"
-msgstr[1] "%s je zmagal igro za %d točko"
-msgstr[2] "%s je zmagal igro za %d točki"
-msgstr[3] "%s je zmagal igro za %d točke"
+msgstr[0] "%s je zmagal igro z zbranimi %d točkami"
+msgstr[1] "%s je zmagal igro z zbranimi %d točko"
+msgstr[2] "%s je zmagal igro z zbranimi %d točkama"
+msgstr[3] "%s je zmagal igro z zbranimi %d točkami"
 
 #: ../src/gyahtzee.c:209
 msgid "Game over!"
-msgstr "Igra je končana!"
+msgstr "Konec igre!"
 
 #: ../src/gyahtzee.c:253
 #, c-format
@@ -265,15 +264,15 @@ msgstr "%s! – Na vrsti ste."
 
 #: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
-msgstr "Izberite kocko za met ali pa izberite režo s točkami."
+msgstr "Izberite kocko za met ali pa izberite polje za točkovanje."
 
 #: ../src/gyahtzee.c:476
 msgid "Roll"
-msgstr "Vrzi kocke! "
+msgstr "Vrzi"
 
 #: ../src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "Dovoljeni so le trije meti! Označite polje s točkami."
+msgstr "Dovoljeni so le trije meti! Označite polje za točkovanje."
 
 #: ../src/gyahtzee.c:591
 msgid "GNOME version (1998):"
@@ -285,7 +284,7 @@ msgstr "Različica za konzolo (1992):"
 
 #: ../src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
-msgstr "Barve igre in večstopenjski AI (2006):"
+msgstr "Barve igre in večstopenjska UI (2006):"
 
 #: ../src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
@@ -294,10 +293,11 @@ msgstr "Različica igre poker s kocko in manj denarja."
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
-"Matic Žgur <mr.zgur@gmail.com>\n"
-"Matej Erman <matej.erman@guest.arnes.si>\n"
-"Tadej Janež <tadej_janez@email.si>\n"
-"Matej Urbančič <mateju@svn.gnome.org>"
+"Andrej Mernik <andrejm@ubuntu.si>\n"
+"Matej Urbančič\n"
+"Matic Žgur\n"
+"Matej Erman\n"
+"Tadej Janež"
 
 #: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
@@ -309,7 +309,7 @@ msgstr "Človek"
 
 #: ../src/setup.c:122
 msgid "Preferences will be updated in the next game."
-msgstr "Spremembe bodo imele učinek pri vseh naslednjih igrah."
+msgstr "Možnosti bodo posodobljene v naslednji igri."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -330,7 +330,7 @@ msgstr "Računalniški nasprotniki"
 #. --- Button ---
 #: ../src/setup.c:313
 msgid "_Delay between rolls"
-msgstr "_Zamik med meti"
+msgstr "_Zakasnitev med meti"
 
 #: ../src/setup.c:323
 msgid "N_umber of opponents:"
@@ -338,12 +338,12 @@ msgstr "Š_tevilo nasprotnikov:"
 
 #: ../src/setup.c:337
 msgid "_Difficulty:"
-msgstr "_Zahtevnost:"
+msgstr "_Težavnost:"
 
 #: ../src/setup.c:340
 msgctxt "difficulty"
 msgid "Easy"
-msgstr "Enostavno"
+msgstr "Lahka"
 
 #: ../src/setup.c:341
 msgctxt "difficulty"
@@ -353,7 +353,7 @@ msgstr "Srednja"
 #: ../src/setup.c:342
 msgctxt "difficulty"
 msgid "Hard"
-msgstr "Zahtevno"
+msgstr "Težka"
 
 #. --- Combo (yahtzee or kismet style ----
 #: ../src/setup.c:353
@@ -367,36 +367,36 @@ msgstr "Imena igralcev"
 
 #: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
-msgstr "1s [celota od 1s]"
+msgstr "Enke [seštevek enk]"
 
 #: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
-msgstr "2s [celota od 2s]"
+msgstr "Dvojke [seštevek dvojk]"
 
 #: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
-msgstr "3s [celota od 3s]"
+msgstr "Trojke [seštevek trojk]"
 
 #: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
-msgstr "4s [celota od 4s]"
+msgstr "Štirke [seštevek štirk]"
 
 #: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
-msgstr "5s [celota od 5s]"
+msgstr "Petke [seštevek štirk]"
 
 #: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
-msgstr "6s [celota od 6s]"
+msgstr "Šestke [seštevek šestk]"
 
 #. End of upper panel
 #: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
-msgstr "3 karte v barvi [celota]"
+msgstr "3 enake [seštevek]"
 
 #: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
-msgstr "4 karte v barvi [celota]"
+msgstr "4 enake [seštevek]"
 
 #: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
@@ -404,15 +404,15 @@ msgstr "Full House [25]"
 
 #: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
-msgstr "Nizka vrsta v barvi [30]"
+msgstr "Mala lestvica [30]"
 
 #: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
-msgstr "Visoka vrsta v barvi [40]"
+msgstr "Velika lestvica [40]"
 
 #: ../src/yahtzee.c:97
 msgid "5 of a Kind [50]"
-msgstr "5 kart v barvi [50]"
+msgstr "5 enakih [50]"
 
 #: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
@@ -421,53 +421,53 @@ msgstr "Možnost [celota]"
 #. End of lower panel
 #: ../src/yahtzee.c:100 ../src/yahtzee.c:126
 msgid "Lower Total"
-msgstr "Spodnja celota"
+msgstr "Spodnji seštevek"
 
 #: ../src/yahtzee.c:101 ../src/yahtzee.c:127
 msgid "Grand Total"
-msgstr "Velika celota"
+msgstr "Skupni seštevek"
 
 #. Need to squish between upper and lower pannel
 #: ../src/yahtzee.c:103 ../src/yahtzee.c:129
 msgid "Upper total"
-msgstr "Zgornja celota"
+msgstr "Zgornji seštevek"
 
 #: ../src/yahtzee.c:104 ../src/yahtzee.c:130
 msgid "Bonus if >62"
-msgstr "Bonus za > 62"
+msgstr "Dodatek za > 62"
 
 #. End of upper panel
 #: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
-msgstr "2 para kart v barvi [skupno]"
+msgstr "2 para v barvi [seštevek]"
 
 #: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
-msgstr "Full House [15 + skupno]"
+msgstr "Full House [15 + seštevek]"
 
 #: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
-msgstr "Full House kart v barvi [20 + skupno]"
+msgstr "Full House v barvi [20 + seštevek]"
 
 #: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
-msgstr "Vse karte v isti barvi [35]"
+msgstr "Vse v isti barvi [35]"
 
 #: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
-msgstr "4 karte v barvi [25 + skupno]"
+msgstr "4 enake [25 + seštevek]"
 
 #: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
-msgstr "5 kart v barvi [50 + skupno]"
+msgstr "5 enakih [50 + seštevek]"
 
 #: ../src/yahtzee.c:250
 msgid "Choose a score slot."
-msgstr "Izbor polja točkovanja."
+msgstr "Izberite polje za točkovanje."
 
 #: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
-msgstr "5 kart v barvi [skupno]"
+msgstr "5 enakih [seštevek]"
 
 #~ msgid "View help for this game"
 #~ msgstr "Poglejte pomoč za to igro"
