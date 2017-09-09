@@ -11,15 +11,16 @@
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
+# Çağatay Yiğit Şahin <cyigitsahin@outlook.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-12-31 14:47+0000\n"
-"PO-Revision-Date: 2015-12-31 22:24+0200\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2017-02-28 11:40+0000\n"
+"PO-Revision-Date: 2017-09-07 17:52+0300\n"
+"Last-Translator: Çağatay Yiğit Şahin <cyigitsahin@outlook.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +36,7 @@ msgstr "Tali"
 
 #: ../data/tali.appdata.xml.in.h:2
 msgid "Roll dice and score points"
-msgstr ""
+msgstr "Zar atın ve puan kazanın"
 
 #: ../data/tali.appdata.xml.in.h:3
 msgid ""
@@ -44,18 +45,25 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
+"Zar ve daha az parayla bir poker çeşidi, bu oyun bir aile klasiğidir. Zarı "
+"üç defa üst üste atın, mümkün olan en iyi eli yapmak için istediklerinizi "
+"tutun. Renkli zarlı daha az bilinen bir çeşidi de oynayabilirsiniz. "
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
+msgstr "Birle beş arasında rakiple üç zorluk seviyesinde oynayın."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME Projesi"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
-msgstr "Poker stili zar oyunu oyunu için tekleri yenin"
+msgstr "Poker stili bir zar oyununda olasılıkları yenin"
 
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
-msgstr ""
+msgstr "yahtzee;"
 
 #: ../data/tali-menus.ui.h:1
 msgid "_New Game"
@@ -276,16 +284,12 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Renkler oyunu ve çok düzeyli AI (2006):"
 
 #: ../src/gyahtzee.c:614
-#, fuzzy
 #| msgid ""
 #| "A variation on poker with dice and less money.\n"
 #| "\n"
 #| "Tali is a part of GNOME Games."
 msgid "A variation on poker with dice and less money."
-msgstr ""
-"Zar ve daha az para ile poker üzerine bir varyasyon.\n"
-"\n"
-"Tali GNOME Oyunları'nın bir parçasıdır."
+msgstr "Zar ve daha az parayla bir poker çeşidi."
 
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
@@ -294,7 +298,6 @@ msgstr ""
 "Muhammet Kara <muhammetk@gmail.com>"
 
 #: ../src/gyahtzee.c:763
-#| msgid "The users's most recent level."
 msgid "Undo your most recent move"
 msgstr "En son hamlenizi geri alın"
 
@@ -303,7 +306,6 @@ msgid "Human"
 msgstr "İnsan"
 
 #: ../src/setup.c:122
-#| msgid "Changes will take effect for the next game."
 msgid "Preferences will be updated in the next game."
 msgstr "Tercihler sonraki oyunda güncellenecek."
 
@@ -361,48 +363,48 @@ msgstr "Oyun Türü"
 msgid "Player Names"
 msgstr "Oyuncu İsimleri"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1'ler [1'lerin toplamı]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2'ler [2'lerin toplamı]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3'ler [3'lerin toplamı]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4'ler [4'lerin toplamı]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5'ler [5'lerin toplamı]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6'lar [6'ların toplamı]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "3 tane aynı [toplam]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "4 tane aynı [toplam]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Dolu Ev [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Küçük Düz [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Büyük Düz [40]"
 
@@ -410,7 +412,7 @@ msgstr "Büyük Düz [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 Tane Aynısından [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Şans [toplam]"
 
@@ -433,35 +435,35 @@ msgid "Bonus if >62"
 msgstr "62'den büyükse bonus"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 çift Aynı Renk [toplam]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Ful [15 + toplam]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Ful Aynı Renk [20 + toplam]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Floş (hepsi aynı renk) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "Kare [25 + toplam]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "Beşli [50 + toplam]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Bir puan yuvası seçin."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 Tane Aynısından [toplam]"
 
