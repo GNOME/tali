@@ -8,13 +8,14 @@
 # Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
 # Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012, 2014.
 # Carles Ferrando <carles.ferrando@gmail.com>, 2010.
-# Jordi Serratosa <jordis@softcatala.cat>, 2012.
+# Jordi Serratosa <jordis@softcatala.cat>, 2012, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-12 08:37+0100\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-03-12 07:38+0000\n"
 "PO-Revision-Date: 2017-03-12 08:37+0100\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -286,7 +287,7 @@ msgstr "Joc de colors i intel·ligència artificial de diversos nivells (2006):"
 
 #: ../src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
-msgstr "Una variant del pòquer amb daus i menys diners,"
+msgstr "Una variant del pòquer amb daus i menys diners."
 
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
