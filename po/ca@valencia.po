@@ -8,25 +8,52 @@
 # Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
 # Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012, 2014.
 # Carles Ferrando <carles.ferrando@gmail.com>, 2010.
-# Jordi Serratosa <jordis@softcatala.cat>, 2012.
+# Jordi Serratosa <jordis@softcatala.cat>, 2012, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-17 01:27+0200\n"
-"PO-Revision-Date: 2014-08-17 01:26+0200\n"
-"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=tali&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-09-21 08:45+0000\n"
+"PO-Revision-Date: 2017-03-12 08:37+0100\n"
+"Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: ca@valencia\n"
+"Language: ca-valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/tali.desktop.in.h:1 ../src/gyahtzee.c:55
+#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
+#: ../src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
+
+#: ../data/tali.appdata.xml.in.h:2
+msgid "Roll dice and score points"
+msgstr "Tireu els daus i aconseguiu punts"
+
+#: ../data/tali.appdata.xml.in.h:3
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Una variant del pòquer amb daus i menys diners, és un joc clàssic de "
+"família. Llenceu el dau tres vegades seguides, conservant els que vulgueu, "
+"per tal de fer la millor mà possible. També es pot jugar una variant menys "
+"coneguda amb daus de colors."
+
+#: ../data/tali.appdata.xml.in.h:4
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Jugueu entre un i cinc oponents amb tres nivells de dificultat."
+
+#: ../data/tali.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -35,6 +62,30 @@ msgstr "Jugueu a un joc de daus similar al pòquer"
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
 msgstr "yahtzee;"
+
+#: ../data/tali-menus.ui.h:1
+msgid "_New Game"
+msgstr "Partida _nova"
+
+#: ../data/tali-menus.ui.h:2
+msgid "_Preferences"
+msgstr "_Preferències"
+
+#: ../data/tali-menus.ui.h:3
+msgid "_Scores"
+msgstr "Puntuacion_s"
+
+#: ../data/tali-menus.ui.h:4
+msgid "_Help"
+msgstr "A_juda"
+
+#: ../data/tali-menus.ui.h:5
+msgid "_About"
+msgstr "_Quant a"
+
+#: ../data/tali-menus.ui.h:6
+msgid "_Quit"
+msgstr "S_urt"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -56,7 +107,8 @@ msgstr "Mostra els pensaments de l'ordinador"
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
-"Si és cert, s'escriurà per l'eixida estàndard les dades del treball de la IA."
+"Si és cert, s'escriurà per l'eixida estàndard les dades del treball de la "
+"IA."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -67,22 +119,6 @@ msgstr "[ 'Humà', 'Joan', 'Gil', 'Sílvia', 'Xavier', 'Diana' ]"
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regular'"
-
-#: ../data/tali.appdata.xml.in.h:1
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-"Una variant del pòquer amb daus i menys diners, és un joc clàssic de "
-"família. Llenceu el dau tres vegades seguides, conservant els que vulgueu, "
-"per tal de fer la millor mà possible. També es pot jugar una variant menys "
-"coneguda amb daus de colors."
-
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Jugueu entre un i cinc oponents amb tres nivells de dificultat."
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -110,19 +146,21 @@ msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuació"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#. Score format for time based scores.
+#. %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:226
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d m %2$d s"
 
-#: ../src/games-scores-dialog.c:385
+#: ../src/games-scores-dialog.c:386
 msgid "New Game"
 msgstr "Partida nova"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#. Score dialog column header for the date
+#. the score was recorded
+#: ../src/games-scores-dialog.c:480
 msgid "Date"
 msgstr "Data"
 
@@ -178,7 +216,7 @@ msgstr "Colors"
 msgid "Roll all!"
 msgstr "Tira-ho tot!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:804
+#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
 msgid "Roll!"
 msgstr "Tira!"
 
@@ -186,7 +224,7 @@ msgstr "Tira!"
 msgid "The game is a draw!"
 msgstr "El joc ha acabat en taules."
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:630
+#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Puntuacions del Tali"
 
@@ -248,16 +286,10 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Joc de colors i intel·ligència artificial de diversos nivells (2006):"
 
 #: ../src/gyahtzee.c:614
-msgid ""
-"A variation on poker with dice and less money\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"Una variant del pòquer amb daus i pocs diners\n"
-"\n"
-"El Tali forma part dels jocs del GNOME."
+msgid "A variation on poker with dice and less money."
+msgstr "Una variant del pòquer amb daus i menys diners."
 
-#: ../src/gyahtzee.c:619
+#: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -267,41 +299,17 @@ msgstr ""
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "David Planella <david.planella@gmail.com>"
 
-#: ../src/gyahtzee.c:752
-msgid "_New Game"
-msgstr "Partida _nova"
-
-#: ../src/gyahtzee.c:753
-msgid "_Preferences"
-msgstr "_Preferències"
-
-#: ../src/gyahtzee.c:754
-msgid "_Scores"
-msgstr "Puntuacion_s"
-
-#: ../src/gyahtzee.c:757
-msgid "_Help"
-msgstr "A_juda"
-
-#: ../src/gyahtzee.c:758
-msgid "_About"
-msgstr "_Quant a"
-
-#: ../src/gyahtzee.c:759
-msgid "_Quit"
-msgstr "S_urt"
-
-#: ../src/gyahtzee.c:778
+#: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
 msgstr "Desfés el moviment més recent"
 
-#: ../src/gyahtzee.c:981 ../src/yahtzee.c:69
+#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Humà"
 
 #: ../src/setup.c:122
-msgid "Current game will complete with original number of players."
-msgstr "El joc en curs s'ha d'acabar amb el nombre de jugadors original."
+msgid "Preferences will be updated in the next game."
+msgstr "Les preferències s'actualitzaran en la partida següent."
 
 #: ../src/setup.c:264
 msgid "Preferences"
@@ -357,48 +365,48 @@ msgstr "Tipus de joc"
 msgid "Player Names"
 msgstr "Noms dels jugadors"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:514
+#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
 msgid "1s [total of 1s]"
 msgstr "1s [1s totals]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:515
+#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
 msgid "2s [total of 2s]"
 msgstr "2s [2s totals]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:516
+#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
 msgid "3s [total of 3s]"
 msgstr "3s [3s totals]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:517
+#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
 msgid "4s [total of 4s]"
 msgstr "4s [4s totals]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:518
+#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
 msgid "5s [total of 5s]"
 msgstr "5s [5s totals]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:519
+#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
 msgid "6s [total of 6s]"
 msgstr "6s [6s totals]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:520
+#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
 msgid "3 of a Kind [total]"
 msgstr "3 d'iguals [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:521
+#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
 msgid "4 of a Kind [total]"
 msgstr "4 d'iguals [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:522
+#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
 msgid "Full House [25]"
 msgstr "Full [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:523
+#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
 msgid "Small Straight [30]"
 msgstr "Escala curta [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:524
+#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
 msgid "Large Straight [40]"
 msgstr "Escala llarga [40]"
 
@@ -406,7 +414,7 @@ msgstr "Escala llarga [40]"
 msgid "5 of a Kind [50]"
 msgstr "5 d'iguals [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:526
+#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
 msgid "Chance [total]"
 msgstr "Atzar [total]"
 
@@ -429,34 +437,37 @@ msgid "Bonus if >62"
 msgstr "Bonificació si >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:527
+#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
 msgid "2 pair Same Color [total]"
 msgstr "2 parelles del mateix color [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:528
+#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
 msgid "Full House [15 + total]"
 msgstr "Full [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:529
+#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
 msgid "Full House Same Color [20 + total]"
 msgstr "Full del mateix color [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:530
+#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
 msgid "Flush (all same color) [35]"
 msgstr "Flush (totes del mateix color) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:531
+#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
 msgid "4 of a Kind [25 + total]"
 msgstr "4 d'iguals [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:532
+#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
 msgid "5 of a Kind [50 + total]"
 msgstr "5 d'iguals [50 + total]"
 
-#: ../src/yahtzee.c:251
+#: ../src/yahtzee.c:250
 msgid "Choose a score slot."
 msgstr "Casella de puntuació."
 
-#: ../src/yahtzee.c:525
+#: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 d'iguals [total]"
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "El joc en curs s'ha d'acabar amb el nombre de jugadors original."
