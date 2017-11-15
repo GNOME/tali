@@ -1,0 +1,70 @@
+name: tali
+version: git
+summary: Roll dice and score points
+description: |
+  A variation on poker with dice and less money, this game is a family classic.
+  Throw the dice three times in a row, holding back the ones you like, in order
+  to make the best possible hand. You can also play a lesser-known variant with
+  colored dice.
+
+  Play between one and five opponents at three difficulty levels.     
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict
+
+plugs:
+  gnome-3-26-1604:
+    interface: content
+    target: $SNAP/gnome-platform
+    default-provider: gnome-3-26-1604
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+
+slots:
+  # for GtkApplication registration
+  tali:
+    interface: dbus
+    bus: session
+    name: org.gnome.tali
+
+apps:
+  tali:
+    command: desktop-launch tali
+    plugs:
+      - desktop
+      - desktop-legacy
+      - gsettings
+      - unity7
+      - wayland
+    desktop: usr/share/applications/tali.desktop
+
+parts:
+  tali:
+    build-attributes: [no-system-libraries]
+    after: [desktop-gnome-platform]
+    source: .
+    source-type: git
+    override-build: |
+      sed -i.bak -e 's|=tali$|=${SNAP}/meta/gui/tali.png|g' data/tali.desktop.in
+      snapcraftctl build
+      mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp ../src/data/icons/256x256/tali.png $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp data/tali.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
+    plugin: autotools
+    configflags: [--disable-maintainer-mode, --prefix=/snap/tali/current/usr]
+    organize:
+      snap/tali/current/usr: usr
+    build-packages:
+      - appstream-util
+      - gnome-pkg-tools
+      - intltool
+      - libglib2.0-dev
+      - libgtk-3-dev
+      - librsvg2-dev
+      - yelp-tools
