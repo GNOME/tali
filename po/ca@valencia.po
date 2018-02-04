@@ -107,8 +107,7 @@ msgstr "Mostra els pensaments de l'ordinador"
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
-"Si és cert, s'escriurà per l'eixida estàndard les dades del treball de la "
-"IA."
+"Si és cert, s'escriurà per l'eixida estàndard les dades del treball de la IA."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
@@ -468,6 +467,3 @@ msgstr "Casella de puntuació."
 #: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 d'iguals [total]"
-
-#~ msgid "Current game will complete with original number of players."
-#~ msgstr "El joc en curs s'ha d'acabar amb el nombre de jugadors original."

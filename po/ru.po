@@ -469,6 +469,3 @@ msgstr "Выберите клетку счёта."
 #: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "5 одинаковых [сумма]"
-
-#~ msgid "Current game will complete with original number of players."
-#~ msgstr "Текущая игра завершится с исходным количеством игроков."

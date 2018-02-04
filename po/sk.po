@@ -464,21 +464,3 @@ msgstr "Vyberte, kam sa majú zapísať body."
 #: ../src/yahtzee.c:524
 msgid "5 of a Kind [total]"
 msgstr "Pätica [súčet]"
-
-#~ msgid "Current game will complete with original number of players."
-#~ msgstr "Aktuálna hra bude dokončená s pôvodným počtom hráčov."
-
-#~ msgid "View help for this game"
-#~ msgstr "Zobraziť pomocníka pre túto hru"
-
-#~ msgid "End the current game"
-#~ msgstr "Ukončiť aktuálnu hru"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "Prepnúť celoobrazovkový režim"
-
-#~ msgid "Get a hint for your next move"
-#~ msgstr "Zobraziť radu pre ďalší ťah"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "Opustiť celoobrazovkový režim"
