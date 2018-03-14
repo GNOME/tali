@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=tali&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2018-02-04 06:25+0000\n"
-"PO-Revision-Date: 2018-03-14 02:06+0100\n"
+"PO-Revision-Date: 2018-03-14 14:38+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -36,14 +36,14 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
-"Varijanta pokera s kockama i manje novaca, ova igra je obiteljska klasika. "
-"Bacajte kocku tri puta za redom, zadržeći kocku koja vam najviše odgovara "
-"kako bi postigli najbolji mogući rezultat. Možete isto tako igrati i manje "
-"poznatu varijantu s obojenim kockama."
+"Varijanta pokera s kockama i manje novaca, ova igra je obiteljski klasik. "
+"Bacajte kocku tri puta za redom, zadržavajući kocku koja vam najviše "
+"odgovara kako bi postigli najbolji mogući rezultat. Možete isto tako igrati "
+"i manje poznatu varijantu s obojenim kockama."
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Igrajte sa između dva i pet protivnika na tri razine težine."
+msgstr "Igrajte protiv dva do pet protivnika na tri razine težine."
 
 #: ../data/tali.appdata.xml.in.h:5
 msgid "The GNOME Project"
@@ -171,7 +171,7 @@ msgstr "Broj računalnih protivnika"
 #: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
 #: ../src/gyahtzee.c:112
 msgid "NUMBER"
-msgstr "NUMBER"
+msgstr "BROJ"
 
 #: ../src/gyahtzee.c:106
 msgid "Number of human opponents"
@@ -187,7 +187,7 @@ msgstr "IZRAZ"
 
 #: ../src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
-msgstr "Brij samo računalnih igra za igranje"
+msgstr "Broj samo računalnih igra za igranje"
 
 #: ../src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
@@ -284,29 +284,8 @@ msgstr "Varijanta pokera s kockama i manje novaca."
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
-"lokalizacija@linux.hr\n"
-"  Antun Krasic <butch@gawab.com>\n"
-"  Automatski Prijevod <>\n"
-"  Danijel Studen <dstuden@vuka.hr>\n"
-"  Davorin Vlahovic <aburn@fly.srk.fer.hr>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Ivan Knežević <kn3z@lycos.com>\n"
-"  Mato Kutlić <mate@iskraemeco.hr>\n"
-"  Nikola Planinac <>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"  Sasa Poznanovic <sasa.poznanovic@vuka.hr>\n"
-"  Tomislav Cavrag <tcavrag@vuka.hr>\n"
-"  Vedran Vyroubal <vedran.vyroubal@inet.hr>\n"
-"\n"
 "Launchpad Contributions:\n"
-"  Ante Karamatić https://launchpad.net/~ivoks\n"
-"  Božidar Paun https://launchpad.net/~neuntoeter\n"
-"  Danijel Šnajder https://launchpad.net/~phantomlord\n"
-"  Edgar Buršić https://launchpad.net/~edgar\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
-"admins\n"
-"  Tomislav Medak https://launchpad.net/~to-me\n"
-"  majstor https://launchpad.net/~lcosic"
+"  gogo https://launchpad.net/~trebelnik-stefina"
 
 #: ../src/gyahtzee.c:763
 msgid "Undo your most recent move"
