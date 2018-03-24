@@ -7,22 +7,25 @@
 # Adi Roiban https://launchpad.net/~adiroiban, 2008, 2009
 # Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2009, 2010, 2011.
 # Ion Laurențiu Cristian <me_lawr@yahoo.com>, 2010, 2011.
+# Adelin <sadelin106@gmail.com>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 07:13+0100\n"
-"PO-Revision-Date: 2011-03-16 17:36+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
-"Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=tali&"
+"keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2018-02-04 06:25+0000\n"
+"PO-Revision-Date: 2018-03-24 23:40+0300\n"
+"Last-Translator: Adelin <sadelin106@gmail.com>\n"
+"Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
+"X-Project-Style: gnome\n"
 
 #: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
 #: ../src/gyahtzee.c:55
@@ -31,7 +34,7 @@ msgstr "Tali"
 
 #: ../data/tali.appdata.xml.in.h:2
 msgid "Roll dice and score points"
-msgstr ""
+msgstr "Aruncă zarurile și câștigă puncte"
 
 #: ../data/tali.appdata.xml.in.h:3
 msgid ""
@@ -40,14 +43,18 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
+"O versiune de poker cu zaruri și bani puțini, acest joc este clasic pentru "
+"familii. Aruncați zarurile de trei ori la rând, păstrând rezultatele care vă "
+"plac, pentru a avea cel mai bun rezultat. Puteți juca, de asemenea, o "
+"variantă mai puțin cunoscută cu zaruri colorate."
 
 #: ../data/tali.appdata.xml.in.h:4
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
+msgstr "Joacă cu între unul și cinci adversari la trei nivele de dificultate."
 
 #: ../data/tali.appdata.xml.in.h:5
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Proiectul GNOME"
 
 #: ../data/tali.desktop.in.h:2
 msgid "Beat the odds in a poker-style dice game"
@@ -55,16 +62,15 @@ msgstr "Încearcă-ți șansele într-un joc de zaruri de tip poker"
 
 #: ../data/tali.desktop.in.h:3
 msgid "yahtzee;"
-msgstr ""
+msgstr "Yahtzee;"
 
 #: ../data/tali-menus.ui.h:1
 msgid "_New Game"
 msgstr "Joc _nou"
 
 #: ../data/tali-menus.ui.h:2
-#, fuzzy
 msgid "_Preferences"
-msgstr "Preferințe"
+msgstr "_Preferințe"
 
 #: ../data/tali-menus.ui.h:3
 msgid "_Scores"
@@ -79,9 +85,8 @@ msgid "_About"
 msgstr "_Despre"
 
 #: ../data/tali-menus.ui.h:6
-#, fuzzy
 msgid "_Quit"
-msgstr "Ieșire"
+msgstr "_Ieșire"
 
 #: ../data/org.gnome.tali.gschema.xml.h:1
 msgid "Delay between rolls"
@@ -108,16 +113,14 @@ msgstr ""
 "standard."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
-#, fuzzy
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[Om,Wilber,Bill,Monica,Kenneth,Janet]"
+msgstr "[ 'Om', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
-#, fuzzy
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "Normal"
+msgstr "'Normal'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
@@ -135,14 +138,12 @@ msgstr "Câmp folosit"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
-#, fuzzy
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Timp"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
 #: ../src/games-scores-dialog.c:138
-#, fuzzy
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Scor"
@@ -150,10 +151,10 @@ msgstr "Scor"
 #. Score format for time based scores.
 #. %1$d is the time in minutes, %2$d is the time in seconds
 #: ../src/games-scores-dialog.c:226
-#, fuzzy, c-format
+#, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%dm %ds"
+msgstr "%1$dm %2$ds"
 
 #: ../src/games-scores-dialog.c:386
 msgid "New Game"
@@ -163,7 +164,7 @@ msgstr "Joc nou"
 #. the score was recorded
 #: ../src/games-scores-dialog.c:480
 msgid "Date"
-msgstr ""
+msgstr "Dată"
 
 #: ../src/gyahtzee.c:100
 msgid "Delay computer moves"
@@ -259,9 +260,9 @@ msgid "Computer playing for %s"
 msgstr "Calculatorul joacă pentru %s"
 
 #: ../src/gyahtzee.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "%s! – You’re up."
-msgstr "%s ! -- E rândul tău."
+msgstr "%s! - E rândul tău."
 
 #: ../src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
@@ -288,12 +289,8 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "Joc culori și inteligență artificială multi-nivel (2006):"
 
 #: ../src/gyahtzee.c:614
-#, fuzzy
 msgid "A variation on poker with dice and less money."
-msgstr ""
-"O versiune de poker cu zaruri și bani puțini.\n"
-"\n"
-"Tali este parte a secțiunii Jocuri din GNOME."
+msgstr "O versiune de poker cu zaruri și bani puțini."
 
 #: ../src/gyahtzee.c:618
 msgid "translator-credits"
@@ -318,18 +315,16 @@ msgstr ""
 "  leandrud https://launchpad.net/~leandrud"
 
 #: ../src/gyahtzee.c:763
-#, fuzzy
 msgid "Undo your most recent move"
-msgstr "Scorul recent al utilizatorului."
+msgstr "Anulează cea mai recentă mutare."
 
 #: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
 msgid "Human"
 msgstr "Om"
 
 #: ../src/setup.c:122
-#, fuzzy
 msgid "Preferences will be updated in the next game."
-msgstr "Modificările vor avea efect în jocul următor."
+msgstr "Modificările vor apărea în jocul următor."
 
 #: ../src/setup.c:264
 msgid "Preferences"
