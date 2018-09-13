@@ -1,19 +1,19 @@
 # Hungarian translation for tali.
-# Copyright (C) 2017 Free Software Foundation, Inc.
+# Copyright (C) 2017, 2018 Free Software Foundation, Inc.
 # This file is distributed under the same license as the tali package.
 #
-# Balázs Úr <urbalazs@gmail.com>, 2017.
+# Balázs Úr <urbalazs@gmail.com>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"POT-Creation-Date: 2017-03-20 11:49+0000\n"
-"PO-Revision-Date: 2017-09-10 19:30+0200\n"
+"POT-Creation-Date: 2018-09-01 21:25+0000\n"
+"PO-Revision-Date: 2018-09-13 23:18+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
@@ -36,10 +36,10 @@ msgid ""
 "hold certain dice with each roll."
 msgstr ""
 "A Tali a GNOME-hoz készült Yahtzee programhoz hasonlít, illetve olyan mint a "
-"póker kockákkal. A játékos dob a kockákkal, hogy megpróbálja a lehető legjobb "
-"kombinációt kidobni, mint például 4 egyforma, kis sor és full. A játékosnak "
-"lehetősége van körönként 3-szor dobni, és megtarthat bizonyos kockákat minden "
-"egyes dobásnál."
+"póker kockákkal. A játékos dob a kockákkal, hogy megpróbálja a lehető "
+"legjobb kombinációt kidobni, mint például 4 egyforma, kis sor és full. A "
+"játékosnak lehetősége van körönként 3-szor dobni, és megtarthat bizonyos "
+"kockákat minden egyes dobásnál."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:36
@@ -247,9 +247,9 @@ msgid ""
 "command> on the command line."
 msgstr ""
 "A <application>GNOME Tali</application> futtatásához válassza a <menuchoice> "
-"<guisubmenu>Játékok</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> <"
-"/menuchoice> menüpontot a <guimenu>Főmenüből</guimenu>, vagy gépelje be a <"
-"command>gtali</command> parancsot a parancssorba."
+"<guisubmenu>Játékok</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
+"menuchoice> menüpontot a <guimenu>Főmenüből</guimenu>, vagy gépelje be a "
+"<command>gtali</command> parancsot a parancssorba."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:146
@@ -259,8 +259,8 @@ msgid ""
 "This document describes version 2.8 of <application>GNOME Tali</application>."
 msgstr ""
 "A <application>GNOME Tali</application> a <filename>gnome-games</filename> "
-"csomagban van, amely a GNOME asztali környezet része. Ez a dokumentum a <"
-"application>GNOME Tali</application> 2.8-as verziójához készült."
+"csomagban van, amely a GNOME asztali környezet része. Ez a dokumentum a "
+"<application>GNOME Tali</application> 2.8-as verziójához készült."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:155
@@ -280,9 +280,9 @@ msgstr "A GNOME Tali játék közben"
 #: C/index.docbook:163
 msgctxt "_"
 msgid ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
+"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
+"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:160
@@ -293,8 +293,7 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>A GNOME "
-"Tali "
-"főablakának képernyőképe.</phrase> </textobject>"
+"Tali főablakának képernyőképe.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:172
@@ -353,13 +352,13 @@ msgid ""
 "wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
 "will score."
 msgstr ""
-"Egyetlen kivétel van a szabály alól: ha egy yahtzee-t dob második alkalommal, "
-"akkor ismét beteheti a yahtzee sorba további ötven pontért. Ezt folyamatosan "
-"csinálhatja minden alkalommal, amikor egy másik yahtzee-t dob. A játék végén "
-"további dobásokat fog kapni, hogy a többi sort is feltölthesse. "
-"Figyelmeztetjük, hogy ha nulla pontot szerez a yahtzee sorban (azaz olyannal "
-"tölti fel a sort, ami nem yahtzee volt), akkor azután már nem tud yahtzee-t "
-"betenni, összesen nulla pontot fog szerezni."
+"Egyetlen kivétel van a szabály alól: ha egy yahtzee-t dob második "
+"alkalommal, akkor ismét beteheti a yahtzee sorba további ötven pontért. Ezt "
+"folyamatosan csinálhatja minden alkalommal, amikor egy másik yahtzee-t dob. "
+"A játék végén további dobásokat fog kapni, hogy a többi sort is "
+"feltölthesse. Figyelmeztetjük, hogy ha nulla pontot szerez a yahtzee sorban "
+"(azaz olyannal tölti fel a sort, ami nem yahtzee volt), akkor azután már nem "
+"tud yahtzee-t betenni, összesen nulla pontot fog szerezni."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:213
@@ -389,8 +388,8 @@ msgstr ""
 "felel meg az első kockának, és így tovább. Használja a szokásos vezérlőket a "
 "kockadobáshoz és egy sor kiválasztásához, azaz használja a tab billentyűt a "
 "dobás gomb és a pontozási terület közti váltáshoz, használja a nyíl "
-"billentyűket a sorokban való fel és le navigáláshoz, és használja a szóközt a "
-"kiválasztáshoz."
+"billentyűket a sorokban való fel és le navigáláshoz, és használja a szóközt "
+"a kiválasztáshoz."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:232
@@ -410,9 +409,9 @@ msgstr "A GNOME Tali beállításai"
 #: C/index.docbook:240
 msgctxt "_"
 msgid ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
 msgstr ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:237
@@ -423,8 +422,7 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>A GNOME "
-"Tali "
-"beállításainak párbeszédablaka.</phrase> </textobject>"
+"Tali beállításainak párbeszédablaka.</phrase> </textobject>"
 
 #. (itstool) path: variablelist/title
 #: C/index.docbook:248
@@ -534,10 +532,10 @@ msgstr ""
 "63 pont szükséges a felső félben lévő bónuszhoz, amely megfelel annak, ha "
 "minden egyes sorban három egyforma kockával szerez pontot. Ha háromnál több "
 "kockával szerez pontot az ötösök vagy hatosok sorában, akkor megengedheti "
-"magának, hogy egy rossz dobást is elhelyezzen vagy az egyesek sorában, vagy a "
-"kettesek sorában, és továbbra is megkapja a bónuszt. A színes verzióban akkor "
-"kap 55 pontos bónuszt, ha a felső félben összesen 71 és 77 között van, és 75 "
-"pontos bónusz kap, ha a felső félben összesen több mint 77 pontja van."
+"magának, hogy egy rossz dobást is elhelyezzen vagy az egyesek sorában, vagy "
+"a kettesek sorában, és továbbra is megkapja a bónuszt. A színes verzióban "
+"akkor kap 55 pontos bónuszt, ha a felső félben összesen 71 és 77 között van, "
+"és 75 pontos bónusz kap, ha a felső félben összesen több mint 77 pontja van."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:318
@@ -561,9 +559,9 @@ msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
 msgstr ""
-"Amikor játéktípust vált, akkor a játék nem használja az új kockaképeket, amíg "
-"újra nem indítja a Tali játékot. Rendesen lehet játszani a „rossz” kockákkal "
-"is."
+"Amikor játéktípust vált, akkor a játék nem használja az új kockaképeket, "
+"amíg újra nem indítja a Tali játékot. Rendesen lehet játszani a „rossz” "
+"kockákkal is."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:341
@@ -602,8 +600,8 @@ msgid ""
 "of all the dice."
 msgstr ""
 "Négy kockán ugyanazok a számok vannak. A pontszám az összes kocka összege. "
-"Például: 2, 5, 5, 5, 5. A színes játékban a pontszám 25 plusz az összes kocka "
-"összege."
+"Például: 2, 5, 5, 5, 5. A színes játékban a pontszám 25 plusz az összes "
+"kocka összege."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:359
@@ -653,8 +651,8 @@ msgstr ""
 "Ez a kategória csak a színes játékban használható. Öt kocka két csoportból "
 "áll: egy háromtagú, egyforma számokból álló, és egy másik kéttagú, egyforma "
 "számokból álló csoportból. A számoknak ugyanolyan színűeknek kell lenniük. "
-"Például: 3, 3, 3, 4, 4. Két kocka ugyanolyan színű, ha a számaik összesen "
-"7-et adnak: 1 és 6 fekete, 2 és 5 piros, 3 és 4 zöld. A pontszám 20 plusz az "
+"Például: 3, 3, 3, 4, 4. Két kocka ugyanolyan színű, ha a számaik összesen 7-"
+"et adnak: 1 és 6 fekete, 2 és 5 piros, 3 és 4 zöld. A pontszám 20 plusz az "
 "összes kocka összege."
 
 #. (itstool) path: glossentry/glossterm
@@ -706,7 +704,8 @@ msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
-"Öt kocka egymást követő számokkal. Például: 2, 3, 4, 5, 6. A pontszám 40 pont."
+"Öt kocka egymást követő számokkal. Például: 2, 3, 4, 5, 6. A pontszám 40 "
+"pont."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:409
@@ -721,8 +720,8 @@ msgid ""
 "points."
 msgstr ""
 "Négy kocka egymást követő számokkal. Az ötödik kocka bármilyen szám lehet. "
-"Például: 2, 3, 4, 5, 5. Ez a kategória csak a szabályos játékban használható. "
-"A pontszám 30 pont."
+"Például: 2, 3, 4, 5, 5. Ez a kategória csak a szabályos játékban "
+"használható. A pontszám 30 pont."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:424
@@ -742,12 +741,12 @@ msgid ""
 msgstr ""
 "A <application>GNOME Tali</application> játékot Scott Heavner (<email>sdh@po."
 "cwru.edu</email>) és Orest Zborowski írta. Ezt a kézikönyvet Scott D Heavner "
-"(<email>sdh@po.cwru.edu</email>) írta a Callum McKenzie (<email>"
-"callum@physics.otago.ac.nz</email>) által hozzáadott további anyagokkal. Egy "
-"hiba jelentéséhez vagy az alkalmazással, illetve a kézikönyvvel kapcsolatos "
-"javaslat tételéhez kövesse az ebben a <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentumban</ulink> "
-"lévő utasításokat."
+"(<email>sdh@po.cwru.edu</email>) írta a Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>) által hozzáadott további "
+"anyagokkal. Egy hiba jelentéséhez vagy az alkalmazással, illetve a "
+"kézikönyvvel kapcsolatos javaslat tételéhez kövesse az ebben a <ulink url="
+"\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentumban</ulink> lévő "
+"utasításokat."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:452
@@ -764,8 +763,8 @@ msgid ""
 "version."
 msgstr ""
 "Ez a program szabad szoftver, terjesztheti és/vagy módosíthatja a Free "
-"Software Foundation által kiadott <ulink type=\"help\" url=\"help:gpl\"> <"
-"citetitle>GNU General Public License</citetitle></ulink> második (vagy "
+"Software Foundation által kiadott <ulink type=\"help\" url=\"help:gpl\"> "
+"<citetitle>GNU General Public License</citetitle></ulink> második (vagy "
 "bármely későbbi) változatában foglaltak alapján."
 
 #. (itstool) path: sect1/para
@@ -809,11 +808,11 @@ msgid ""
 "www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "A <citetitle>GNU General Public License</citetitle> egy példányát "
-"függelékként tartalmazza a <citetitle>GNOME felhasználói kézikönyv</citetitle>"
-". Beszerezheti a <citetitle>GNU General Public License</citetitle> egy "
-"példányát a Free Software Foundation <ulink type=\"http\" url=\"http://www."
-"fsf.org\">weboldalának</ulink> meglátogatásával, vagy írjon egy levelet az "
-"alábbi címre: <_:address-1/>"
+"függelékként tartalmazza a <citetitle>GNOME felhasználói kézikönyv</"
+"citetitle>. Beszerezheti a <citetitle>GNU General Public License</citetitle> "
+"egy példányát a Free Software Foundation <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">weboldalának</ulink> meglátogatásával, vagy írjon egy levelet "
+"az alábbi címre: <_:address-1/>"
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -836,4 +835,3 @@ msgstr ""
 "szakaszok”, „Címlapszövegek” és a „Hátlapszövegek” kivételével. A GFDL "
 "leírása ezen a <_:ulink-1/> érhető el, vagy a jelen dokumentációban "
 "található COPYING-DOCS fájlban."
-
