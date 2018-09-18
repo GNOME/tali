@@ -126,7 +126,7 @@ msgstr "Os yn wir, gollyngir gweithio'r AI i'r allbwn safonol."
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[Dynol,Dafydd,Gareth,Chris,Mabli,Bronwen]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

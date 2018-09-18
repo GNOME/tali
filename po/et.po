@@ -106,7 +106,7 @@ msgstr "Kui märgitud, siis AI töö käik väljastatakse standardväljundisse."
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[Inimene,Siil,Rästik,Karu,Jänes,Hunt]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

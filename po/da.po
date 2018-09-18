@@ -117,8 +117,8 @@ msgstr ""
 # afgjort med aktivitet på mailinglisten samt shuf(1)
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Menneske', 'Joe', 'Martin', 'Aputsiaq', 'Kenneth', 'Ask' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Menneske', 'Joe', 'Martin', 'Aputsiaq', 'Dave', 'Ask' ]"
 
 # er der mon noget mekanisk med '?  Beholder uændret
 #: ../data/org.gnome.tali.gschema.xml.h:6

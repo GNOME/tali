@@ -113,7 +113,7 @@ msgstr "यदि सत्य नियत किया जाता है, �
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[मानव,राहुल,विजय,प्रिया,श्रेया,जूही]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

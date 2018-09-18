@@ -103,8 +103,8 @@ msgstr "如果設定為 true，會在標準輸出顯示電腦 AI 的運算結果
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"

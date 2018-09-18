@@ -104,7 +104,7 @@ msgstr "Indien as waar gestel sal 'n klomp van die kunsmatige intelligensie op"
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[Mens,Willie,Ben,Susan,Karel,Yvette]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

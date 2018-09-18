@@ -122,7 +122,7 @@ msgstr "જો ખરા તરીકે દોઠવાયેલું હશ�
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[મનુષ્ય,વિલ્બર,બિલ,માનિકા,કૅનીથ,જૅનૅટ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

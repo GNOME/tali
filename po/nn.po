@@ -108,7 +108,7 @@ msgstr "Dersom sann, vil det AI-en tenkjer verta dumpa til standard utdata."
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[Menneske,Olav,Petronius,Josefine,Kjartan,Gunnlaug]"
 
 #

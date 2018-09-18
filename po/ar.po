@@ -108,7 +108,7 @@ msgstr "إذا ضبط ل‍ true، سيقع إسقاط لتخمين الحاسو
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[إنسان,أحمد,مصطفى,شروق,صالح,منى]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

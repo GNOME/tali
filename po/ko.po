@@ -116,7 +116,7 @@ msgstr "참이면, AI의 내용이 표준 출력으로 출력됩니다."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ '휴먼', '윌버', '빌', '모니카', '케네스', '자넷' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

@@ -119,8 +119,8 @@ msgstr "నిజమునకు అమర్చితే, AI's పనిచే�
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[Human,Wilber,Bill,Monica,Kenneth,Janet]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 #, fuzzy

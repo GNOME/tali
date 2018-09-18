@@ -99,7 +99,7 @@ msgstr "如果设为真，AI的思考将被输出到标准输出。"
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ '自己', '张三', '李四', '小明', '小强', '小花' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

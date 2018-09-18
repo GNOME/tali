@@ -104,7 +104,7 @@ msgstr ""
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ 'Uman', 'Toni', 'Bepi', 'Marie', 'Tite', 'Gjelinde' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

@@ -112,7 +112,7 @@ msgstr "Gushyiraho Kuri NIBYO a Bya Byakozwe Kuri Bisanzwe Ibisohoka"
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr ""
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

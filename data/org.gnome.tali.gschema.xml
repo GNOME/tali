@@ -17,7 +17,7 @@
       <description>If set to true, a dump of the AI's working will be done to standard output.</description>
     </key>
     <key name="player-names" type="as">
-      <default l10n="messages" context="PlayerNames">[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]</default>
+      <default l10n="messages" context="PlayerNames">[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]</default>
     </key>
     <key name="game-type" type="s">
       <default l10n="messages" context="GameType">'Regular'</default>

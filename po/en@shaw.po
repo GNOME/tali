@@ -100,7 +100,7 @@ msgstr "𐑦𐑓 𐑕𐑧𐑑 𐑑 𐑑𐑮𐑵, 𐑩 𐑛𐑳𐑥𐑐 𐑝 𐑞
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[𐑣𐑿𐑥𐑩𐑯,·𐑢𐑦𐑤𐑚𐑻,·𐑚𐑦𐑤,·𐑥𐑪𐑯𐑦𐑒𐑩,·𐑒𐑧𐑯𐑩𐑔,𐑡𐑨𐑯𐑩𐑑]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

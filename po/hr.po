@@ -104,7 +104,7 @@ msgstr "Ako je odabrano, ispis UI bit će na standardnom izlazu."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ 'Čovjek', 'Goran', 'Nada', 'Siniša', 'Zlatko', 'Tanja' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

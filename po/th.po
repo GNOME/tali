@@ -99,8 +99,8 @@ msgstr "ถ้ากำหนดเป็นค่าจริง จะแส�
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[มนุษย์,Wilber,Bill,Monica,Kenneth,Janet]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[มนุษย์,Alice,Bob,Carol,Dave,Eve]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 #, fuzzy

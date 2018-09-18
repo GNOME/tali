@@ -103,7 +103,7 @@ msgstr "ਜੇ ਠੀਕ ਠਹਿਰਾਇਆ ਹੈ, ਵਧੀਆ ਦਰਜੇ
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ਇਨਸਾਨ,ਐਰੀ,ਜੈਸੀ,ਹੈਰੀ,ਕੈਰੀ,ਰੂਪ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

@@ -125,8 +125,8 @@ msgstr "Se verdadeiro, o trabalho da IA será despejado na saída padrão."
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Humano', 'José', 'Guilherme', 'Mônica', 'Roberto', 'Janete' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Humano', 'José', 'Guilherme', 'Carol', 'Roberto', 'Janete' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"

@@ -102,7 +102,7 @@ msgstr "जर खरे निवडले असता, प्रमाणि�
 #: ../data/org.gnome.tali.gschema.xml.h:5
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[मानव,समीर,मिलींद,उदय,पुर्वा,रसिका]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6

@@ -108,8 +108,8 @@ msgstr ""
 
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Mänsklig', 'Göran', 'Bengt', 'Monica', 'Kenneth', 'Jeanette' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Mänsklig', 'Göran', 'Bengt', 'Carol', 'Dave', 'Jeanette' ]"
 
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"

@@ -67,11 +67,11 @@ int NUM_FIELDS = NUM_FIELDS_YAHTZEE;
 int NUM_LOWER = NUM_LOWER_YAHTZEE;
 
 char *DefaultPlayerNames[MAX_NUMBER_OF_PLAYERS] = { N_("Human"),
-  "Wilber",
-  "Bill",
-  "Monica",
-  "Kenneth",
-  "Janet"
+  "Alice",
+  "Bob",
+  "Carol",
+  "Dave",
+  "Eve"
 };
 
 typedef struct field_info_t {
