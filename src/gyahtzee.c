@@ -724,6 +724,10 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   GtkWidget *tmp;
   GtkWidget *dicebox;
   GtkWidget *undo_button;
+  GtkWidget *menu_button;
+  GtkWidget *icon;
+  GtkBuilder *builder;
+  GMenuModel *appmenu;
   int i, j;
 
   window = gtk_application_window_new (application);
@@ -763,6 +767,16 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_widget_set_tooltip_text (undo_button, _("Undo your most recent move"));
   gtk_widget_show (undo_button);
   gtk_header_bar_pack_start (GTK_HEADER_BAR (hbar), undo_button);
+
+  builder = gtk_builder_new_from_resource("/org/gnome/tali/ui/menus.ui");
+  appmenu = (GMenuModel *) gtk_builder_get_object(builder, "app-menu");
+
+  menu_button = gtk_menu_button_new();
+  icon = gtk_image_new_from_icon_name("open-menu-symbolic", GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image(GTK_BUTTON(menu_button), icon);
+  gtk_menu_button_set_menu_model(GTK_MENU_BUTTON(menu_button), appmenu);
+  gtk_widget_show (GTK_WIDGET (menu_button));
+  gtk_header_bar_pack_end (GTK_HEADER_BAR (hbar), menu_button);
 
 	/*---- Content ----*/
 
