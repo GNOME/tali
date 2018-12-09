@@ -1,8 +1,13 @@
 [Desktop Entry]
-_Name=Tali
-_Comment=Beat the odds in a poker-style dice game
-_Keywords=yahtzee;
+Name=Tali
+Comment=Beat the odds in a poker-style dice game
+# TRANSLATORS: Do NOT translate or localize the semicolons!
+#              The list MUST also end with a semicolon!
+#              Search terms to find this application.
+Keywords=yahtzee;
 Exec=tali
+# TRANSLATORS: Do NOT translate or transliterate this text!
+#              This is an icon file name.
 Icon=tali
 Terminal=false
 Type=Application

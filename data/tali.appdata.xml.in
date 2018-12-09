@@ -4,23 +4,23 @@
   <id>tali.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <_name>Tali</_name>
-  <_summary>Roll dice and score points</_summary>
+  <name>Tali</name>
+  <summary>Roll dice and score points</summary>
   <description>
-    <_p>
+    <p>
       A variation on poker with dice and less money, this game is a family classic.
       Throw the dice three times in a row, holding back the ones you like, in order
       to make the best possible hand. You can also play a lesser-known variant with
       colored dice.
-    </_p>
-    <_p>
+    </p>
+    <p>
       Play between one and five opponents at three difficulty levels.
-    </_p>
+    </p>
   </description>
   <screenshots>
     <screenshot type="default" width="972" height="561">
       <image>https://people.gnome.org/~mcatanzaro/tali.png</image>
-      <_caption><!-- Describe this screenshot in less than ~10 words --></_caption>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
@@ -30,7 +30,7 @@
   <url type="help">https://help.gnome.org/users/tali/stable/</url>
   <update_contact>mariowenzel_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
-  <_developer_name>The GNOME Project</_developer_name>
+  <developer_name>The GNOME Project</developer_name>
   <kudos>
     <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
