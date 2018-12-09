@@ -34,7 +34,6 @@
 #include <time.h>
 #include <glib.h>
 
-#include <config.h>
 #include "yahtzee.h"
 
 char *ProgramHeader = "Yahtzee Version 2.00 (c)1998 SDH, (c)1992 by zorst";

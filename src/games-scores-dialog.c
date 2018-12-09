@@ -19,8 +19,6 @@
 
 /* Authors:   Callum McKenzie <callum@physics.otago.ac.nz> */
 
-#include <config.h>
-
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 

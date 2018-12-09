@@ -21,8 +21,6 @@
 
 /* FIXME: Document */
 
-#include <config.h>
-
 #include <fcntl.h>
 #include <unistd.h>
 
