@@ -1,3 +1,15 @@
+Tali 3.31.3
+===========
+* Development release
+* Switch from autotools to meson (Jeremy)
+* Stop using intltool (Jeremy)
+* Follow GNOME 3.32 app menu recommendations (Jeremy)
+* Update default AI names (Josh)
+* Add Keyboard Shortcuts overlay (Jeremy)
+
+Contributors:
+ Jeremy Bicha, Josh Triplett
+
 Tali 3.22.0
 ===========
 
