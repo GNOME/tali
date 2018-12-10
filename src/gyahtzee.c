@@ -742,10 +742,15 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 		    G_CALLBACK (key_press), NULL);
 
   g_action_map_add_action_entries (G_ACTION_MAP (application), app_entries, G_N_ELEMENTS (app_entries), application);
-  const gchar *vaccels_undo[] = {"<Primary>z", NULL};
-  gtk_application_set_accels_for_action (application, "app.undo", vaccels_undo);
+  const gchar *vaccels_help[] = {"F1", NULL};
+  const gchar *vaccels_new[] = {"<Primary>n", NULL};
   const gchar *vaccels_roll[] = {"<Primary>r", NULL};
+  const gchar *vaccels_undo[] = {"<Primary>z", NULL};
+
+  gtk_application_set_accels_for_action (application, "app.help", vaccels_help);
+  gtk_application_set_accels_for_action (application, "app.new-game", vaccels_new);
   gtk_application_set_accels_for_action (application, "app.roll", vaccels_roll);
+  gtk_application_set_accels_for_action (application, "app.undo", vaccels_undo);
 
   scores_action = g_action_map_lookup_action (G_ACTION_MAP (application), "scores");
   undo_action   = g_action_map_lookup_action (G_ACTION_MAP (application), "undo");
