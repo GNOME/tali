@@ -1,5 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
+data/help-overlay.ui
 data/tali.appdata.xml.in
 data/tali.desktop.in
 data/tali-menus.ui

@@ -7,4 +7,7 @@
   <gresource prefix="/org/gnome/tali/ui">
     <file preprocess="xml-stripblanks" alias="menus.ui">../data/tali-menus.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/tali/gtk">
+    <file preprocess="xml-stripblanks" alias="help-overlay.ui">../data/help-overlay.ui</file>
+  </gresource>
 </gresources>
