@@ -33,30 +33,83 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-14 12:35+0000\n"
-"PO-Revision-Date: 2016-09-12 11:06+0300\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2018-12-10 19:49+0000\n"
+"PO-Revision-Date: 2018-12-25 12:24+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.7\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Ρίξτε τα ζάρια"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Εναλλαγή του πρώτου ζαριού"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Εναλλαγή του δεύτερου ζαριού"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Εναλλαγή του τρίτου ζαριού"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Εναλλαγή του τέταρτου ζαριού"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Εναλλαγή του πέμπτου ζαριού"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Αναίρεση μετακίνησης"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Εμφάνιση βοήθειας"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
+
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: data/tali.appdata.xml.in:7 data/tali.desktop.in:3 src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Τάλι"
 
-#: ../data/tali.appdata.xml.in.h:2
+#: data/tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Ρίξτε τα ζάρια και κερδίστε πόντους"
 
-#: ../data/tali.appdata.xml.in.h:3
+#: data/tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -68,51 +121,60 @@ msgstr ""
 "αυτές που θέλετε, για να κάνετε τις καλύτερες δυνατές. Μπορείτε επίσης να "
 "παίξετε μια λιγότερο γνωστή παραλλαγή με χρωματιστά ζάρια."
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
-#: ../data/tali.desktop.in.h:2
+#: data/tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Παίξτε ένα παιχνίδι με ζάρια, αντίστοιχο του πόκερ"
 
-#: ../data/tali.desktop.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
-#: ../data/tali-menus.ui.h:1
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name.
+#: data/tali.desktop.in:12
+msgid "tali"
+msgstr "tali"
+
+#: data/tali-menus.ui:7
 msgid "_New Game"
 msgstr "_Νέο παιχνίδι"
 
-#: ../data/tali-menus.ui.h:2
-msgid "_Preferences"
-msgstr "Π_ροτιμήσεις"
-
-#: ../data/tali-menus.ui.h:3
+#: data/tali-menus.ui:11
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
-#: ../data/tali-menus.ui.h:4
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "Π_ροτιμήσεις"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "Συντομεύσεις _πληκτρολογίου"
+
+#: data/tali-menus.ui:25
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr "_Περί"
+#: data/tali-menus.ui:29
+msgid "_About Tali"
+msgstr "_Περί του Τάλι"
 
-#: ../data/tali-menus.ui.h:6
-msgid "_Quit"
-msgstr "Έ_ξοδος"
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
+#: data/org.gnome.tali.gschema.xml:11
 msgid "Delay between rolls"
 msgstr "Καθυστέρηση μεταξύ ζαριών"
 
-#: ../data/org.gnome.tali.gschema.xml.h:2
+#: data/org.gnome.tali.gschema.xml:12
 msgid ""
 "Choose whether or not to insert a delay between the computer's dice rolls so "
 "the player can follow what it is doing."
@@ -120,196 +182,195 @@ msgstr ""
 "Επιλέξτε αν επιθυμείτε να υπάρχει καθυστέρηση μεταξύ των ζαριών του "
 "υπολογιστή, ώστε ο παίκτης να παρακολουθεί τις κινήσεις του υπολογιστή."
 
-#: ../data/org.gnome.tali.gschema.xml.h:3
+#: data/org.gnome.tali.gschema.xml:16
 msgid "Display the computer's thoughts"
 msgstr "Προβολή των σκέψεων του υπολογιστή"
 
-#: ../data/org.gnome.tali.gschema.xml.h:4
+#: data/org.gnome.tali.gschema.xml:17
 msgid ""
 "If set to true, a dump of the AI's working will be done to standard output."
 msgstr ""
 "Αν έχει οριστεί ως αληθής, θα καταγραφούν οι ενέργειες της τεχνητής "
 "νοημοσύνης στη συνήθη μορφή."
 
-#: ../data/org.gnome.tali.gschema.xml.h:5
+#: data/org.gnome.tali.gschema.xml:20
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 
-#: ../data/org.gnome.tali.gschema.xml.h:6
+#: data/org.gnome.tali.gschema.xml:23
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Κανονικό'"
 
-#: ../src/clist.c:158
+#: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
 msgstr "Χρησιμοποιείται ήδη! Πού θέλετε να το τοποθετήσετε;"
 
-#: ../src/clist.c:414
+#: src/clist.c:412
 #, c-format
 msgid "Score: %d"
 msgstr "Βαθμολογία: %d"
 
-#: ../src/clist.c:416
+#: src/clist.c:414
 #, c-format
 msgid "Field used"
 msgstr "Πεδίο σε χρήση"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: src/games-scores-dialog.c:130
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Χρόνος"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: src/games-scores-dialog.c:136
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Βαθμολογία"
 
 #. Score format for time based scores.
 #. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
+#: src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:386
+#: src/games-scores-dialog.c:384
 msgid "New Game"
 msgstr "Νέο παιχνίδι"
 
 #. Score dialog column header for the date
 #. the score was recorded
-#: ../src/games-scores-dialog.c:480
+#: src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: ../src/gyahtzee.c:100
+#: src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Καθυστέρηση κινήσεων υπολογιστή"
 
-#: ../src/gyahtzee.c:102
+#: src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Προβολή σκέψεων υπολογιστή"
 
-#: ../src/gyahtzee.c:104
+#: src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Αριθμός αντιπάλων που χειρίζεται ο υπολογιστής"
 
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "ΑΡΙΘΜΟΣ"
 
-#: ../src/gyahtzee.c:106
+#: src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Αριθμός ζωντανών αντιπάλων"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Επιλογή παιχνιδιού: Κλασικό ή χρώματα"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "STRING"
 msgstr "ΣΥΜΒΟΛΟΣΕΙΡΑ"
 
-#: ../src/gyahtzee.c:110
+#: src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Αριθμός παιχνιδιών που θα παιχθούν αποκλειστικά από τον υπολογιστή"
 
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Αριθμός προσπαθειών για κάθε ζαριά του υπολογιστή"
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#: src/gyahtzee.c:117 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Κλασικό"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: src/gyahtzee.c:118 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Ρίξτε τα ζάρια!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:142 src/gyahtzee.c:808
 msgid "Roll!"
 msgstr "Ζαριά!"
 
-#: ../src/gyahtzee.c:176
+#: src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Το παιχνίδι λήγει ισόπαλο!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+#: src/gyahtzee.c:189 src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Βαθμολογία Τάλι"
 
-#: ../src/gyahtzee.c:191
+#: src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Συγχαρητήρια!"
 
-#: ../src/gyahtzee.c:192
+#: src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Είστε ο καλύτερος!"
 
-#: ../src/gyahtzee.c:193
+#: src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Είστε στην πρώτη δεκάδα."
 
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "Ο %s κερδίζει το παιχνίδι με %d πόντο"
 msgstr[1] "Ο %s κερδίζει το παιχνίδι με %d πόντους"
 
-#: ../src/gyahtzee.c:209
+#: src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Τέλος παιχνιδιού!"
 
-#: ../src/gyahtzee.c:253
+#: src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Ο υπολογιστής παίζει για τον παίκτη %s"
 
-#: ../src/gyahtzee.c:255
+#: src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! -- Σειρά σου."
 
-#: ../src/gyahtzee.c:448
+#: src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "Επιλέξτε ζαριά για να ρίξετε ή μια γραμμή βαθμολογίας."
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Ζαριά"
 
-#: ../src/gyahtzee.c:534
+#: src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Επιτρέπονται μόνο τρεις ζαριές. Επιλέξτε γραμμή βαθμολογίας."
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "Έκδοση GNOME (1998):"
 
-#: ../src/gyahtzee.c:594
+#: src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Έκδοση κονσόλας (1992):"
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Παιχνίδι χρώματα και τεχνητή νοημοσύνη πολλαπλών επιπέδων (2006):"
 
-#: ../src/gyahtzee.c:614
+#: src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
 msgstr "Μια παραλλαγή του πόκερ με ζάρια και λιγότερα χρήματα."
 
-#: ../src/gyahtzee.c:618
+#: src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -318,182 +379,183 @@ msgstr ""
 "Συμεών (Σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
 "Κώστας Παπαδήμας <pkst@gmx.net>\n"
 "Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
+"Ευστάθιος Ιωσηφίδης <iosifidis@opensuse.org>\n"
 "\n"
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/gyahtzee.c:763
+#: src/gyahtzee.c:772
 msgid "Undo your most recent move"
 msgstr "Αναίρεση της πιο πρόσφατης κίνησής σας"
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+#: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
 msgstr "Άνθρωπος"
 
-#: ../src/setup.c:122
+#: src/setup.c:120
 msgid "Preferences will be updated in the next game."
 msgstr "Οι προτιμήσεις θα ενημερωθούν στο επόμενο παιχνίδι."
 
-#: ../src/setup.c:264
+#: src/setup.c:262
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "Άνθρωποι παίκτες"
 
-#: ../src/setup.c:292
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "_Αριθμός παικτών:"
 
-#: ../src/setup.c:306
+#: src/setup.c:304
 msgid "Computer Opponents"
 msgstr "Αντίπαλοι υπολογιστή"
 
 #. --- Button ---
-#: ../src/setup.c:313
+#: src/setup.c:311
 msgid "_Delay between rolls"
 msgstr "_Καθυστέρηση μεταξύ των ζαριών"
 
-#: ../src/setup.c:323
+#: src/setup.c:321
 msgid "N_umber of opponents:"
 msgstr "Αρι_θμός αντιπάλων:"
 
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
 msgstr "_Δυσκολία παιχνιδιού:"
 
-#: ../src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Εύκολο"
 
-#: ../src/setup.c:341
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Μεσαίο"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Δύσκολο"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "Είδος παιχνιδιού"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "Ονόματα παικτών"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
 msgstr "Άσσοι [σύνολο βαθμών από άσσους]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
 msgstr "Δυάρια [σύνολο βαθμών από δυάρια]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
 msgstr "Τριάρια [σύνολο βαθμών από τριάρια]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
 msgstr "Τεσσάρια [σύνολο βαθμών από τεσσάρια]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
 msgstr "Πεντάρια [σύνολο βαθμών από πεντάρια]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
 msgstr "Εξάρια [σύνολο βαθμών από εξάρια]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
 msgstr "Τρία όμοια [σύνολο]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
 msgstr "Καρέ [σύνολο]"
 
 # FIX (next 8 msgs)
 # Do not know the Greek equivalents for these...
 # Kanenas expert sto mparmpouti paidia ?? :-)
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
 msgstr "Φουλ [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
 msgstr "Μικρή κέντα [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
 msgstr "Μεγάλη κέντα [40]"
 
-#: ../src/yahtzee.c:97
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
 msgstr "Πέντε όμοια [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr "Τύχη [σύνολο]"
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
 msgstr "Κάτω σύνολο"
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
 msgstr "Τελικό σύνολο"
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr "Πάνω σύνολο"
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
 msgstr "Μπόνους αν >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
 msgstr "Δύο ζευγάρια ίδιου χρώματος [σύνολο]"
 
 # FIX (next 8 msgs)
 # Do not know the Greek equivalents for these...
 # Kanenas expert sto mparmpouti paidia ?? :-)
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
 msgstr "Φουλ [15 + σύνολο]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
 msgstr "Φουλ με χρώμα [20 + σύνολο]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
 msgstr "Χρώμα (όλα ίδιο χρώμα) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
 msgstr "4 όμοια [25 + σύνολο]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
 msgstr "Πέντε όμοια [50+ σύνολο]"
 
-#: ../src/yahtzee.c:250
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
 msgstr "Επιλέξτε θέση βαθμολογίας."
 
-#: ../src/yahtzee.c:524
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Πέντε όμοια [σύνολο]"
