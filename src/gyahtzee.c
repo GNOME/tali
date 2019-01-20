@@ -616,7 +616,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 			 "authors", authors,
 			 "documenters", documenters,
 			 "translator-credits", _("translator-credits"),
-			 "logo-icon-name", "tali",
+			 "logo-icon-name", "org.gnome.Tali",
 			 "website",
 			 "https://wiki.gnome.org/Apps/Tali",
 			 NULL);
@@ -734,7 +734,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_window_set_application (GTK_WINDOW (window), application);
   gtk_window_set_title (GTK_WINDOW (window), _(appName));
   gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), FALSE);
-  gtk_window_set_icon_name (GTK_WINDOW (window), "tali");
+  gtk_window_set_icon_name (GTK_WINDOW (window), "org.gnome.Tali");
 
   //games_conf_add_window (GTK_WINDOW (window), NULL);
 
@@ -773,7 +773,7 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
   gtk_widget_show (undo_button);
   gtk_header_bar_pack_start (GTK_HEADER_BAR (hbar), undo_button);
 
-  builder = gtk_builder_new_from_resource ("/org/gnome/tali/ui/menus.ui");
+  builder = gtk_builder_new_from_resource ("/org/gnome/Tali/ui/menus.ui");
   appmenu = (GMenuModel *) gtk_builder_get_object (builder, "app-menu");
 
   menu_button = gtk_menu_button_new();
@@ -874,7 +874,7 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  application = gtk_application_new ("org.gnome.tali", 0);
+  application = gtk_application_new ("org.gnome.Tali", 0);
   g_signal_connect (application, "startup", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
   g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeActivateGame), NULL);
 
@@ -895,7 +895,7 @@ main (int argc, char *argv[])
     exit (1);
   }
 
-  settings = g_settings_new ("org.gnome.tali");
+  settings = g_settings_new ("org.gnome.Tali");
 
   g_set_application_name (_(appName));
 
@@ -944,7 +944,7 @@ main (int argc, char *argv[])
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
-  gtk_window_set_default_icon_name ("tali");
+  gtk_window_set_default_icon_name ("org.gnome.Tali");
 
   if (NumberOfComputers == 0)	/* Not set on the command-line. */
     NumberOfComputers = g_settings_get_int (settings, "number-of-computer-opponents");

@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.tali" path="/org/gnome/tali/" gettext-domain="tali">
+  <schema id="org.gnome.Tali" path="/org/gnome/tali/" gettext-domain="tali">
     <key name="number-of-computer-opponents" type="i">
       <default>3</default>
     </key>
