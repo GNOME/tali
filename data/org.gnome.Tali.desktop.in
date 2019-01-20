@@ -8,7 +8,7 @@ Keywords=yahtzee;
 Exec=tali
 # TRANSLATORS: Do NOT translate or transliterate this text!
 #              This is an icon file name.
-Icon=tali
+Icon=org.gnome.Tali
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Game;CardGame;

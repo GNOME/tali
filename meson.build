@@ -7,6 +7,8 @@ project ('tali', ['c'],
          ],
          meson_version: '>= 0.37.1')
 
+project_id = 'org.gnome.Tali'
+
 gnome = import ('gnome')
 i18n = import ('i18n')
 

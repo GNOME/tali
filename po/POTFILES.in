@@ -1,10 +1,10 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
 data/help-overlay.ui
-data/tali.appdata.xml.in
-data/tali.desktop.in
+data/org.gnome.Tali.appdata.xml.in
+data/org.gnome.Tali.desktop.in
+data/org.gnome.Tali.gschema.xml
 data/tali-menus.ui
-data/org.gnome.tali.gschema.xml
 src/clist.c
 src/games-scores-dialog.c
 src/gyahtzee.c

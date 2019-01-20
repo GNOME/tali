@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<component type="desktop">
-  <id>tali.desktop</id>
+<component type="desktop-application">
+  <id>org.gnome.Tali</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Tali</name>
@@ -20,9 +20,9 @@
   <screenshots>
     <screenshot type="default" width="972" height="561">
       <image>https://people.gnome.org/~mcatanzaro/tali.png</image>
-      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">org.gnome.Tali.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/tali/issues</url>
   <url type="donation">https://www.gnome.org/friends/</url>
@@ -31,8 +31,10 @@
   <update_contact>mariowenzel_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <developer_name>The GNOME Project</developer_name>
+  <provides>
+    <id>tali.desktop</id>
+  </provides>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>

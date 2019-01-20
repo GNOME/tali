@@ -4,10 +4,10 @@
     <file preprocess="xml-stripblanks" alias="tali.ui">../data/tali.ui</file>
     <file alias="tali.css">../data/tali.css</file>
   </gresource> -->
-  <gresource prefix="/org/gnome/tali/ui">
+  <gresource prefix="/org/gnome/Tali/ui">
     <file preprocess="xml-stripblanks" alias="menus.ui">../data/tali-menus.ui</file>
   </gresource>
-  <gresource prefix="/org/gnome/tali/gtk">
+  <gresource prefix="/org/gnome/Tali/gtk">
     <file preprocess="xml-stripblanks" alias="help-overlay.ui">../data/help-overlay.ui</file>
   </gresource>
 </gresources>
