@@ -23,7 +23,6 @@ install_data ([ 'gnome-dice-1.svg',
 
 install_data (project_id + '.gschema.xml',
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
-meson.add_install_script ('meson_compile_gschema.py')
 
 i18n.merge_file ('desktop-file',
                  input: project_id + '.desktop.in',
