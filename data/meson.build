@@ -33,6 +33,7 @@ desktop_file = i18n.merge_file ('desktop-file',
                  po_dir: '../po',
                  type: 'desktop')
 
+desktop_file_validate = find_program('desktop-file-validate', required: false)
 if desktop_file_validate.found()
   test(
     'validate-desktop',
