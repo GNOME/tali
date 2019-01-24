@@ -34,8 +34,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2018-12-10 19:49+0000\n"
-"PO-Revision-Date: 2018-12-25 12:24+0200\n"
+"POT-Creation-Date: 2019-01-20 22:49+0000\n"
+"PO-Revision-Date: 2019-01-24 03:01+0200\n"
 "Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
@@ -43,7 +43,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Project-Style: gnome\n"
 
 #: data/help-overlay.ui:16
@@ -101,15 +101,16 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: data/tali.appdata.xml.in:7 data/tali.desktop.in:3 src/gyahtzee.c:55
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Τάλι"
 
-#: data/tali.appdata.xml.in:8
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Ρίξτε τα ζάρια και κερδίστε πόντους"
 
-#: data/tali.appdata.xml.in:10
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -121,30 +122,63 @@ msgstr ""
 "αυτές που θέλετε, για να κάνετε τις καλύτερες δυνατές. Μπορείτε επίσης να "
 "παίξετε μια λιγότερο γνωστή παραλλαγή με χρωματιστά ζάρια."
 
-#: data/tali.appdata.xml.in:16
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Παίξτε μεταξύ ενός και πέντε αντιπάλων σε τρία επίπεδα δυσκολίας."
 
-#: data/tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
-#: data/tali.desktop.in:4
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Παίξτε ένα παιχνίδι με ζάρια, αντίστοιχο του πόκερ"
 
 #. TRANSLATORS: Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. Search terms to find this application.
-#: data/tali.desktop.in:8
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name.
-#: data/tali.desktop.in:12
-msgid "tali"
-msgstr "tali"
+#: data/org.gnome.Tali.desktop.in:12
+msgid "org.gnome.Tali"
+msgstr "org.gnome.Tali"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Καθυστέρηση μεταξύ ζαριών"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Επιλέξτε αν επιθυμείτε να υπάρχει καθυστέρηση μεταξύ των ζαριών του "
+"υπολογιστή, ώστε ο παίκτης να παρακολουθεί τις κινήσεις του υπολογιστή."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer's thoughts"
+msgstr "Προβολή των σκέψεων του υπολογιστή"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Αν έχει οριστεί ως αληθής, θα καταγραφούν οι ενέργειες της τεχνητής "
+"νοημοσύνης στη συνήθη μορφή."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Κανονικό'"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -169,39 +203,6 @@ msgstr "_Βοήθεια"
 #: data/tali-menus.ui:29
 msgid "_About Tali"
 msgstr "_Περί του Τάλι"
-
-#: data/org.gnome.tali.gschema.xml:11
-msgid "Delay between rolls"
-msgstr "Καθυστέρηση μεταξύ ζαριών"
-
-#: data/org.gnome.tali.gschema.xml:12
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Επιλέξτε αν επιθυμείτε να υπάρχει καθυστέρηση μεταξύ των ζαριών του "
-"υπολογιστή, ώστε ο παίκτης να παρακολουθεί τις κινήσεις του υπολογιστή."
-
-#: data/org.gnome.tali.gschema.xml:16
-msgid "Display the computer's thoughts"
-msgstr "Προβολή των σκέψεων του υπολογιστή"
-
-#: data/org.gnome.tali.gschema.xml:17
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Αν έχει οριστεί ως αληθής, θα καταγραφούν οι ενέργειες της τεχνητής "
-"νοημοσύνης στη συνήθη μορφή."
-
-#: data/org.gnome.tali.gschema.xml:20
-msgctxt "PlayerNames"
-msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-
-#: data/org.gnome.tali.gschema.xml:23
-msgctxt "GameType"
-msgid "'Regular'"
-msgstr "'Κανονικό'"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
@@ -559,3 +560,6 @@ msgstr "Επιλέξτε θέση βαθμολογίας."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Πέντε όμοια [σύνολο]"
+
+#~ msgid "tali"
+#~ msgstr "tali"
