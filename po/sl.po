@@ -6,15 +6,15 @@
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
 # Andrej Mernik <andrejm@ubuntu.si>, 2017.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007–2018.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007–2019.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2018-12-09 18:00+0000\n"
-"PO-Revision-Date: 2018-12-09 21:44+0100\n"
+"POT-Creation-Date: 2019-01-25 13:26+0000\n"
+"PO-Revision-Date: 2019-01-25 21:17+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -24,17 +24,73 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
-#: data/tali.appdata.xml.in:7 data/tali.desktop.in:3 src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Začni novo igro"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Vrzi kocko"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Preklopi prvo življenje"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Preklopi drugo življenje"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Preklopi tretje življenje"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Preklopi četrto življenje"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Preklopi peto življenje"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Razveljavi potezo"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Pokaži pomoč"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Pokaži tipkovne bližnjice"
+
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Končaj"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: data/tali.appdata.xml.in:8
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Vrzi kocke in zbiraj točke"
 
-#: data/tali.appdata.xml.in:10
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -46,36 +102,68 @@ msgstr ""
 "meče pa tiste, ki ne omogočajo najboljšega rezultata. Igro je mogoče igrati "
 "tudi z barvnimi kockami."
 
-#: data/tali.appdata.xml.in:16
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Igro je mogoče igrati z do pet nasprotniki na treh različnih ravneh "
 "težavnosti."
 
-#: data/tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/tali.desktop.in:4
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Premagaj verjetnost v igri s kockami v slogu pokra"
 
 #. TRANSLATORS: Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. Search terms to find this application.
-#: data/tali.desktop.in:8
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "jamb;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name.
-#: data/tali.desktop.in:12
-msgid "tali"
-msgstr "tali"
+#: data/org.gnome.Tali.desktop.in:12
+msgid "org.gnome.Tali"
+msgstr "org.gnome.Tali"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Zakasnitev med meti"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Izbrana možnost omogoča, da se vstavi časovna zakasnitev med računalnikovimi "
+"meti kocke. Na ta način imajo ostali igralci možnost slediti dogajanju."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer's thoughts"
+msgstr "Pokaži računalnikovo razmišljanje"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Izbrana možnost omogoča, da se beleženje UI izpiše preko standardnega izhoda."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Jaz', 'Ana', 'Bojan', 'Cvetka', 'Jana', 'Polona' ]"
+
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Običajna'"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
-msgstr "_Nova Igra"
+msgstr "_Nova igra"
 
 #: data/tali-menus.ui:11
 msgid "_Scores"
@@ -86,44 +174,16 @@ msgid "_Preferences"
 msgstr "_Možnosti"
 
 #: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "_Tipkovne bližnjice"
+
+#: data/tali-menus.ui:25
 msgid "_Help"
 msgstr "Pomo_č"
 
-#: data/tali-menus.ui:26
+#: data/tali-menus.ui:29
 msgid "_About Tali"
 msgstr "_O igri"
-
-#: data/org.gnome.tali.gschema.xml:11
-msgid "Delay between rolls"
-msgstr "Zakasnitev med meti"
-
-#: data/org.gnome.tali.gschema.xml:12
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Izbrana možnost omogoča, da se vstavi časovna zakasnitev med računalnikovimi "
-"meti kocke. Na ta način imajo ostali igralci možnost slediti dogajanju."
-
-#: data/org.gnome.tali.gschema.xml:16
-msgid "Display the computer's thoughts"
-msgstr "Pokaži računalnikovo razmišljanje"
-
-#: data/org.gnome.tali.gschema.xml:17
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Izbrana možnost omogoča, da se beleženje UI izpiše preko standardnega izhoda."
-
-#: data/org.gnome.tali.gschema.xml:20
-msgctxt "PlayerNames"
-msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'Človek', 'Ana', 'Bojan', 'Cvetka', 'Jana', 'Polona' ]"
-
-#: data/org.gnome.tali.gschema.xml:23
-msgctxt "GameType"
-msgid "'Regular'"
-msgstr "'Običajna'"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
@@ -199,7 +259,7 @@ msgstr "NIZ"
 
 #: src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
-msgstr "računalniških nasprotnikov"
+msgstr "Število računalniških iger za igranje"
 
 #: src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
@@ -219,7 +279,7 @@ msgstr "Barve"
 msgid "Roll all!"
 msgstr "Vrzi vse!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:803
+#: src/gyahtzee.c:142 src/gyahtzee.c:808
 msgid "Roll!"
 msgstr "Vrzi!"
 
@@ -268,7 +328,7 @@ msgstr "%s! – Na vrsti ste."
 
 #: src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
-msgstr "Izberite kocko za met ali pa izberite polje za točkovanje."
+msgstr "Izberite kocko za met, ali pa izberite polje za točkovanje."
 
 #: src/gyahtzee.c:476
 msgid "Roll"
@@ -303,13 +363,13 @@ msgstr ""
 "Matej Erman\n"
 "Tadej Janež"
 
-#: src/gyahtzee.c:767
+#: src/gyahtzee.c:772
 msgid "Undo your most recent move"
 msgstr "Razveljavi zadnjo potezo"
 
-#: src/gyahtzee.c:986 src/yahtzee.c:68
+#: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
-msgstr "Človek"
+msgstr "Jaz"
 
 #: src/setup.c:120
 msgid "Preferences will be updated in the next game."
@@ -321,7 +381,7 @@ msgstr "Možnosti"
 
 #: src/setup.c:280
 msgid "Human Players"
-msgstr "Človeški igralci"
+msgstr "Igralci"
 
 #: src/setup.c:290
 msgid "_Number of players:"
@@ -329,12 +389,12 @@ msgstr "Š_tevilo igralcev:"
 
 #: src/setup.c:304
 msgid "Computer Opponents"
-msgstr "Računalniški nasprotniki"
+msgstr "Računalnik"
 
 #. --- Button ---
 #: src/setup.c:311
 msgid "_Delay between rolls"
-msgstr "_Zakasnitev med meti"
+msgstr "_Zamik med meti"
 
 #: src/setup.c:321
 msgid "N_umber of opponents:"
@@ -473,17 +533,14 @@ msgstr "Izberite polje za točkovanje."
 msgid "5 of a Kind [total]"
 msgstr "5 enakih [seštevek]"
 
-#~ msgid "_Quit"
-#~ msgstr "_Končaj"
+#~ msgid "tali"
+#~ msgstr "tali"
 
 #~ msgid "View help for this game"
 #~ msgstr "Poglejte pomoč za to igro"
 
 #~ msgid "End the current game"
 #~ msgstr "Končaj trenutno igro"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "Preklopi celozaslonski način"
 
 #~ msgid "Get a hint for your next move"
 #~ msgstr "Namig za vašo naslednjo potezo"
@@ -496,9 +553,6 @@ msgstr "5 enakih [seštevek]"
 
 #~ msgid "End the current network game and return to network server"
 #~ msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
-
-#~ msgid "Start a new game"
-#~ msgstr "Začni novo igro"
 
 #~ msgid "Pause the game"
 #~ msgstr "Premor igranja"
@@ -649,9 +703,6 @@ msgstr "5 enakih [seštevek]"
 
 #~ msgid "_Settings"
 #~ msgstr "_Nastavitve"
-
-#~ msgid "Undo Move"
-#~ msgstr "Razveljavi potezo"
 
 #~ msgid "Resign"
 #~ msgstr "Odstopi"
@@ -1534,9 +1585,6 @@ msgstr "5 enakih [seštevek]"
 
 #~ msgid "E_nable sounds"
 #~ msgstr "Omogoči _zvoke"
-
-#~ msgid "Keyboard Controls"
-#~ msgstr "Tipkovne bližnjice"
 
 #~ msgid "Classic"
 #~ msgstr "Običajno"
