@@ -1,18 +1,18 @@
 # Swedish messages for tali.
-# Copyright © 1999-2018 Free Software Foundation, Inc.
+# Copyright © 1999-2019 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2018-12-10 19:49+0000\n"
-"PO-Revision-Date: 2018-12-28 19:12+0100\n"
+"POT-Creation-Date: 2019-01-20 22:49+0000\n"
+"PO-Revision-Date: 2019-01-25 14:25+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -77,15 +77,16 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
 
-#: data/tali.appdata.xml.in:7 data/tali.desktop.in:3 src/gyahtzee.c:55
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: data/tali.appdata.xml.in:8
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Rulla tärningar och få poäng"
 
-#: data/tali.appdata.xml.in:10
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -97,30 +98,62 @@ msgstr ""
 "efter varje gång och skapa bästa möjliga hand. Du kan också spela en mindre "
 "känd variant med färgade tärningar."
 
-#: data/tali.appdata.xml.in:16
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Spela mot en till fem motståndare på tre svårighetsnivåer."
 
-#: data/tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: data/tali.desktop.in:4
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Spela ett pokerliknande tärningsspel"
 
 #. TRANSLATORS: Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. Search terms to find this application.
-#: data/tali.desktop.in:8
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yatzy;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name.
-#: data/tali.desktop.in:12
-msgid "tali"
-msgstr "tali"
+#: data/org.gnome.Tali.desktop.in:12
+msgid "org.gnome.Tali"
+msgstr "org.gnome.Tali"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Fördröjning mellan kast"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Välj huruvida en fördröjning ska infogas mellan datorns tärningskast eller "
+"inte, så att spelaren kan följa vad den gör."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer's thoughts"
+msgstr "Visa datorns tankar"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Om detta är sant kommer en dump av AI:ts arbete att visas på standard ut."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Mänsklig', 'Anna', 'Bengt', 'Cecilia', 'David', 'Eva' ]"
+
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Vanligt'"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -145,38 +178,6 @@ msgstr "_Hjälp"
 #: data/tali-menus.ui:29
 msgid "_About Tali"
 msgstr "_Om Tali"
-
-#: data/org.gnome.tali.gschema.xml:11
-msgid "Delay between rolls"
-msgstr "Fördröjning mellan kast"
-
-#: data/org.gnome.tali.gschema.xml:12
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Välj huruvida en fördröjning ska infogas mellan datorns tärningskast eller "
-"inte, så att spelaren kan följa vad den gör."
-
-#: data/org.gnome.tali.gschema.xml:16
-msgid "Display the computer's thoughts"
-msgstr "Visa datorns tankar"
-
-#: data/org.gnome.tali.gschema.xml:17
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Om detta är sant kommer en dump av AI:ts arbete att visas på standard ut."
-
-#: data/org.gnome.tali.gschema.xml:20
-msgctxt "PlayerNames"
-msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'Mänsklig', 'Anna', 'Bengt', 'Cecilia', 'David', 'Eva' ]"
-
-#: data/org.gnome.tali.gschema.xml:23
-msgctxt "GameType"
-msgid "'Regular'"
-msgstr "'Vanligt'"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
@@ -527,3 +528,6 @@ msgstr "Välj en poängruta."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Femtal [totalt]"
+
+#~ msgid "tali"
+#~ msgstr "tali"
