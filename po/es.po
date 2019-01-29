@@ -5,14 +5,14 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2018, 2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2018-12-10 19:49+0000\n"
-"PO-Revision-Date: 2019-01-08 15:46+0100\n"
+"POT-Creation-Date: 2019-01-20 22:49+0000\n"
+"PO-Revision-Date: 2019-01-29 15:50+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.31.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/help-overlay.ui:16
@@ -74,20 +74,20 @@ msgid "Show Keyboard Shortcuts"
 msgstr "Mostrar los atajos del teclado"
 
 #: data/help-overlay.ui:86
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
 
-#: data/tali.appdata.xml.in:7 data/tali.desktop.in:3 src/gyahtzee.c:55
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: data/tali.appdata.xml.in:8
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Tirar el dado y acumular puntos"
 
-#: data/tali.appdata.xml.in:10
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -99,30 +99,63 @@ msgstr ""
 "la mejor mano posible. También puede jugar una variante menos conocida, con "
 "dados de colores."
 
-#: data/tali.appdata.xml.in:16
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Juegue contra 1-5 oponentes y en tres niveles de dificultad."
 
-#: data/tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
-#: data/tali.desktop.in:4
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Juegue con los dados al estilo del póquer"
 
 #. TRANSLATORS: Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. Search terms to find this application.
-#: data/tali.desktop.in:8
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name.
-#: data/tali.desktop.in:12
-msgid "tali"
-msgstr "tali"
+#: data/org.gnome.Tali.desktop.in:12
+msgid "org.gnome.Tali"
+msgstr "org.gnome.Tali"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Demora entre lanzamientos"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer's dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Elija si debe o no introducir un retraso entre las tiradas de dados del "
+"equipo para que el jugador pueda seguir lo que está haciendo."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer's thoughts"
+msgstr "Mostrar el razonamiento del equipo"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI's working will be done to standard output."
+msgstr ""
+"Si se establece a verdadero, se hará un volcado del funcionamiento de la IA "
+"en la salida estándar."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Humano', 'Alicia', 'Juan', 'Carolina', 'David', 'Eva' ]"
+
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Regular'"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -145,42 +178,8 @@ msgid "_Help"
 msgstr "Ay_uda"
 
 #: data/tali-menus.ui:29
-#| msgid "_About"
 msgid "_About Tali"
 msgstr "_Acerca de Tali"
-
-#: data/org.gnome.tali.gschema.xml:11
-msgid "Delay between rolls"
-msgstr "Demora entre lanzamientos"
-
-#: data/org.gnome.tali.gschema.xml:12
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Elija si debe o no introducir un retraso entre las tiradas de dados del "
-"equipo para que el jugador pueda seguir lo que está haciendo."
-
-#: data/org.gnome.tali.gschema.xml:16
-msgid "Display the computer's thoughts"
-msgstr "Mostrar el razonamiento del equipo"
-
-#: data/org.gnome.tali.gschema.xml:17
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr ""
-"Si se establece a verdadero, se hará un volcado del funcionamiento de la IA "
-"en la salida estándar."
-
-#: data/org.gnome.tali.gschema.xml:20
-msgctxt "PlayerNames"
-msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'Humano', 'Alicia', 'Juan', 'Carolina', 'David', 'Eva' ]"
-
-#: data/org.gnome.tali.gschema.xml:23
-msgctxt "GameType"
-msgid "'Regular'"
-msgstr "'Regular'"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
@@ -528,3 +527,6 @@ msgstr "Seleccione una casilla de puntuación."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 del mismo tipo [total]"
+
+#~ msgid "tali"
+#~ msgstr "tali"
