@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-01-20 22:49+0000\n"
-"PO-Revision-Date: 2019-02-03 19:21+0100\n"
+"POT-Creation-Date: 2019-02-06 19:39+0000\n"
+"PO-Revision-Date: 2019-02-06 22:12+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -138,19 +138,19 @@ msgstr "Opóźnienie pomiędzy rzutami"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Określa, czy wstawiać przerwę pomiędzy kolejnymi rzutami kostek komputera, "
 "tak aby gracz mógł się zorientować co się dzieje."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Wyświetlanie zamiarów komputera"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "Jeżeli ustawione, na standardowe wyjście będzie przekazywany zrzut "
 "pracującej sztucznej inteligencji."
