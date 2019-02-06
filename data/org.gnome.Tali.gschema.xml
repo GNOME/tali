@@ -9,12 +9,12 @@
     <key name="delay-between-rolls" type="b">
       <default>false</default>
       <summary>Delay between rolls</summary>
-      <description>Choose whether or not to insert a delay between the computer's dice rolls so the player can follow what it is doing.</description>
+      <description>Choose whether or not to insert a delay between the computer’s dice rolls so the player can follow what it is doing.</description>
     </key>
     <key name="display-computer-thoughts" type="b">
       <default>false</default>
-      <summary>Display the computer's thoughts</summary>
-      <description>If set to true, a dump of the AI's working will be done to standard output.</description>
+      <summary>Display the computer’s thoughts</summary>
+      <description>If set to true, a dump of the AI’s working will be done to standard output.</description>
     </key>
     <key name="player-names" type="as">
       <default l10n="messages" context="PlayerNames">[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]</default>
