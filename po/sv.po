@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-01-20 22:49+0000\n"
-"PO-Revision-Date: 2019-01-25 14:25+0100\n"
+"POT-Creation-Date: 2019-02-06 19:39+0000\n"
+"PO-Revision-Date: 2019-02-07 21:19+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -129,21 +129,22 @@ msgstr "Fördröjning mellan kast"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Välj huruvida en fördröjning ska infogas mellan datorns tärningskast eller "
 "inte, så att spelaren kan följa vad den gör."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Visa datorns tankar"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Om detta är sant kommer en dump av AI:ts arbete att visas på standard ut."
+"Om detta är true (sant) kommer en dump av AI:ts arbete att visas på standard "
+"ut."
 
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
@@ -169,7 +170,7 @@ msgstr "_Inställningar"
 
 #: data/tali-menus.ui:21
 msgid "_Keyboard Shortcuts"
-msgstr "_Tangenbordsgenvägar"
+msgstr "_Tangentbordsgenvägar"
 
 #: data/tali-menus.ui:25
 msgid "_Help"
