@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-01-20 22:49+0000\n"
-"PO-Revision-Date: 2019-01-26 21:33+0700\n"
+"POT-Creation-Date: 2019-02-06 19:39+0000\n"
+"PO-Revision-Date: 2019-02-08 23:06+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
@@ -128,21 +128,21 @@ msgstr "Jeda antara pelemparan"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Pilih apakah menggunakan jeda antara giliran pelemparan dadu komputer "
 "sehingga pemain dapat mengikuti yang dilakukan komputer."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Tampilkan pikiran komputer"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Jika diatur ke benar, semua pekerjaan komputer akan dikeluarkan ke keluaran "
+"Jika diatur ke true, semua pekerjaan komputer akan dikeluarkan ke keluaran "
 "standar."
 
 #: data/org.gnome.Tali.gschema.xml:20
