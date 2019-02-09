@@ -10,13 +10,13 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-05 00:13+0200\n"
-"PO-Revision-Date: 2016-09-05 00:13+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2019-02-06 19:39+0000\n"
+"PO-Revision-Date: 2019-02-09 13:14+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician\n"
 "Language: gl\n"
@@ -27,16 +27,72 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Comezar unha nova partida"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Tirar o dado"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Cambiar o primeiro dado"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Cambiar o segundo dado"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Cambiar o terceiro dado"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Cambiar o cuarto dado"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Cambiar o quinto dado"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Desfacer movemento"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Mostrar axuda"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostrar atallos de teclado"
+
+#: data/help-overlay.ui:86
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Saír"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/tali.appdata.xml.in.h:2
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
-msgstr "Tira o dado e acumula puntos"
+msgstr "Tirar o dado e acumular puntos"
 
-#: ../data/tali.appdata.xml.in.h:3
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -48,250 +104,268 @@ msgstr ""
 "mellor man posíbel. Tamén pode xogar unha variante menos coñecida con un "
 "dado de cores."
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Xogar entre un ou máis opoñentes en tres niveis de dificultade."
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr "O Proxecto GNOME"
 
-#: ../data/tali.desktop.in.h:2
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Venza as probabilidades nun xogo de dados do estilo de póker"
 
-#: ../data/tali.desktop.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
-#: ../data/tali-menus.ui.h:1
-msgid "_New Game"
-msgstr "Xogo _novo"
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name.
+#: data/org.gnome.Tali.desktop.in:12
+msgid "org.gnome.Tali"
+msgstr "org.gnome.Tali"
 
-#: ../data/tali-menus.ui.h:2
-msgid "_Preferences"
-msgstr "_Preferencias"
-
-#: ../data/tali-menus.ui.h:3
-msgid "_Scores"
-msgstr "_Puntuacións"
-
-#: ../data/tali-menus.ui.h:4
-msgid "_Help"
-msgstr "_Axuda"
-
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr "So_bre"
-
-#: ../data/tali-menus.ui.h:6
-msgid "_Quit"
-msgstr "_Saír"
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
+#: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
 msgstr "Atraso entre os lanzamentos"
 
-#: ../data/org.gnome.tali.gschema.xml.h:2
+#: data/org.gnome.Tali.gschema.xml:12
+#| msgid ""
+#| "Choose whether or not to insert a delay between the computer's dice rolls "
+#| "so the player can follow what it is doing."
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Escolla se quere inserir un atraso entre os lanzamentos de dados do "
 "computador para que o xogador poida seguir o que se está a facer."
 
-#: ../data/org.gnome.tali.gschema.xml.h:3
-msgid "Display the computer's thoughts"
+#: data/org.gnome.Tali.gschema.xml:16
+#| msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Mostrar os pensamentos do computador"
 
-#: ../data/org.gnome.tali.gschema.xml.h:4
+#: data/org.gnome.Tali.gschema.xml:17
+#| msgid ""
+#| "If set to true, a dump of the AI's working will be done to standard "
+#| "output."
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "Se se define como verdadeiro, farase unha descarga do funcionamento da IA na "
 "saída estándar."
 
-#: ../data/org.gnome.tali.gschema.xml.h:5
+#: data/org.gnome.Tali.gschema.xml:20
+#| msgctxt "PlayerNames"
+#| msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ 'Humano', 'Fran', 'Manolo', 'Antía', 'Alba', 'Mariña' ]"
 
-#: ../data/org.gnome.tali.gschema.xml.h:6
+#: data/org.gnome.Tali.gschema.xml:23
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Normal'"
 
-#: ../src/clist.c:158
+#: data/tali-menus.ui:7
+msgid "_New Game"
+msgstr "Xogo _novo"
+
+#: data/tali-menus.ui:11
+msgid "_Scores"
+msgstr "_Puntuacións"
+
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "_Atallos de teclado"
+
+#: data/tali-menus.ui:25
+msgid "_Help"
+msgstr "_Axuda"
+
+#: data/tali-menus.ui:29
+#| msgid "_About"
+msgid "_About Tali"
+msgstr "_Sobre Tali"
+
+#: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
 msgstr "Xa se usou! Onde quere poñer iso?"
 
-#: ../src/clist.c:414
+#: src/clist.c:412
 #, c-format
 msgid "Score: %d"
 msgstr "Puntuación: %d"
 
-#: ../src/clist.c:416
+#: src/clist.c:414
 #, c-format
 msgid "Field used"
 msgstr "Campo usado"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: src/games-scores-dialog.c:130
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tempo"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: src/games-scores-dialog.c:136
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuación"
 
 #. Score format for time based scores.
 #. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
+#: src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:386
+#: src/games-scores-dialog.c:384
 msgid "New Game"
 msgstr "Xogo novo"
 
 #. Score dialog column header for the date
 #. the score was recorded
-#: ../src/games-scores-dialog.c:480
+#: src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
-#: ../src/gyahtzee.c:100
+#: src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Atrasar os movementos do computador"
 
-#: ../src/gyahtzee.c:102
+#: src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Mostrar os pensamentos do computador"
 
-#: ../src/gyahtzee.c:104
+#: src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Número de opoñentes manexados polo computador"
 
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "NÚMERO"
 
-#: ../src/gyahtzee.c:106
+#: src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Número de opoñentes humanos"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Selección do xogo: normal ou con cores"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "STRING"
 msgstr "CADEA"
 
-#: ../src/gyahtzee.c:110
+#: src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Número de partidas xogadas polo computador que se realizarán"
 
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Número de intentos para cada tirada feita polo computador"
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#: src/gyahtzee.c:117 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Normal"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: src/gyahtzee.c:118 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Lanzar!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:142 src/gyahtzee.c:808
 msgid "Roll!"
 msgstr "Lanza!"
 
-#: ../src/gyahtzee.c:176
+#: src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "A partida rematou en empate!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+#: src/gyahtzee.c:189 src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Puntuacións do Tali"
 
-#: ../src/gyahtzee.c:191
+#: src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Parabéns!"
 
-#: ../src/gyahtzee.c:192
+#: src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "A súa puntuación é a mellor!"
 
-#: ../src/gyahtzee.c:193
+#: src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "A súa puntuación está nas dez mellores."
 
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s gaña a partida con %d punto"
 msgstr[1] "%s gaña a partida con %d puntos"
 
-#: ../src/gyahtzee.c:209
+#: src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Fin da partida!"
 
-#: ../src/gyahtzee.c:253
+#: src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "O computador xoga por %s"
 
-#: ../src/gyahtzee.c:255
+#: src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – É a súa vez."
 
-#: ../src/gyahtzee.c:448
+#: src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr ""
 "Seleccione os dados para lanzar ou seleccione un espazo para a puntuación."
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Lanzar"
 
-#: ../src/gyahtzee.c:534
+#: src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr ""
 "Só se permite lanzar tres veces. Seleccione un espazo para a puntuación."
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "Versión do GNOME (1998):"
 
-#: ../src/gyahtzee.c:594
+#: src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Versión da consola (1992):"
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Xogo de cores e IA multinivel (2006):"
 
-#: ../src/gyahtzee.c:614
+#: src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
 msgstr "Unha variante do póker con dados e menos diñeiro."
 
-#: ../src/gyahtzee.c:618
+#: src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
@@ -307,172 +381,172 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/gyahtzee.c:763
+#: src/gyahtzee.c:772
 msgid "Undo your most recent move"
 msgstr "Desfacer o movemento máis recente"
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+#: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
 msgstr "Humano"
 
-#: ../src/setup.c:122
+#: src/setup.c:120
 msgid "Preferences will be updated in the next game."
 msgstr "As preferencias actualizaranse no seguinte xogo."
 
-#: ../src/setup.c:264
+#: src/setup.c:262
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "Xogadores humanos"
 
-#: ../src/setup.c:292
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "_Número de xogadores:"
 
-#: ../src/setup.c:306
+#: src/setup.c:304
 msgid "Computer Opponents"
 msgstr "Opoñentes electrónicos"
 
 #. --- Button ---
-#: ../src/setup.c:313
+#: src/setup.c:311
 msgid "_Delay between rolls"
 msgstr "_Atraso entre lanzamentos"
 
-#: ../src/setup.c:323
+#: src/setup.c:321
 msgid "N_umber of opponents:"
 msgstr "Nú_mero de opoñentes:"
 
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
 msgstr "_Dificultade:"
 
-#: ../src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Fácil"
 
-#: ../src/setup.c:341
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Medio"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Difícil"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "Tipo de xogo"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "Nomes dos xogadores"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
 msgstr "1s [total de 1s]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
 msgstr "2s [total de 2s]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
 msgstr "3s [total de 3s]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
 msgstr "4s [total de 4s]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
 msgstr "5s [total de 5s]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
 msgstr "6s [total de 6s]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
 msgstr "3 do mesmo tipo [total]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
 msgstr "4 do mesmo tipo [total]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
 msgstr "Casa chea [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
 msgstr "Secuencia curta [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
 msgstr "Secuencia longa [40]"
 
-#: ../src/yahtzee.c:97
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
 msgstr "5 do mesmo tipo [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr "Sorte [total]"
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
 msgstr "Total inferior"
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
 msgstr "Total global"
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr "Total superior"
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
 msgstr "Bonificación se > 62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
 msgstr "2 pares da mesma cor [total]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
 msgstr "Casa chea [15 + total]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
 msgstr "Casa chea da mesma cor [20 + total]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
 msgstr "Descartar (todas da mesma cor) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
 msgstr "4 do mesmo tipo [25 + total]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
 msgstr "5 do mesmo tipo [50 + total]"
 
-#: ../src/yahtzee.c:250
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
 msgstr "Seleccione un lugar para a puntuación."
 
-#: ../src/yahtzee.c:524
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 do mesmo tipo [total]"
