@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-01-25 13:26+0000\n"
-"PO-Revision-Date: 2019-01-25 21:17+0100\n"
+"POT-Creation-Date: 2019-02-09 12:15+0000\n"
+"PO-Revision-Date: 2019-02-09 20:49+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -135,21 +135,22 @@ msgstr "Zakasnitev med meti"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Izbrana možnost omogoča, da se vstavi časovna zakasnitev med računalnikovimi "
 "meti kocke. Na ta način imajo ostali igralci možnost slediti dogajanju."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Pokaži računalnikovo razmišljanje"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Izbrana možnost omogoča, da se beleženje UI izpiše preko standardnega izhoda."
+"Izbrana možnost določa, da se dejavnosti AI izpišejo prek standardnega "
+"izhoda."
 
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
