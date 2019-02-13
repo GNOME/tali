@@ -144,13 +144,13 @@ msgstr ""
 #: ../data/org.gnome.tali.gschema.xml.h:5
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ ‘Mens’, ‘Henk’, ‘René’, ‘Hannie’, ‘Nathan’, ‘Justin’ ]"
+msgstr "[ 'Mens', 'Henk', 'René', 'Hannie', 'Nathan', 'Justin' ]"
 
 # regulier/gewoon/standaard/normaal
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "‘Standaard’"
+msgstr "'Standaard'"
 
 # ingevuld?/neergezet
 #: ../src/clist.c:158

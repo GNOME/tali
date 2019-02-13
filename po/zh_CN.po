@@ -105,7 +105,7 @@ msgstr "[ '自己', '张三', '李四', '小明', '小强', '小花' ]"
 #: ../data/org.gnome.tali.gschema.xml.h:6
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "常规"
+msgstr "'常规'"
 
 #: ../src/clist.c:158
 msgid "Already used! Where do you want to put that?"
