@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-01-20 22:49+0000\n"
-"PO-Revision-Date: 2019-02-05 22:40+0200\n"
+"POT-Creation-Date: 2019-02-10 17:48+0000\n"
+"PO-Revision-Date: 2019-02-25 20:40+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -40,27 +40,27 @@ msgstr "Pyöritä noppaa"
 #: data/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Toggle the first die"
-msgstr ""
+msgstr "Valitse ensimmäinen noppa tai poista siltä valinta"
 
 #: data/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle the second die"
-msgstr ""
+msgstr "Valitse toinen noppa tai poista siltä valinta"
 
 #: data/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Toggle the third die"
-msgstr ""
+msgstr "Valitse kolmas noppa tai poista siltä valinta"
 
 #: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Toggle the fourth die"
-msgstr ""
+msgstr "Valitse neljäs noppa tai poista siltä valinta"
 
 #: data/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Toggle the fifth die"
-msgstr ""
+msgstr "Valitse viides noppa tai poista siltä valinta"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
@@ -133,22 +133,21 @@ msgstr "Viive heittojen välillä"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Valitse halutaanko lisätä viive tietokoneen noppien heiton väliin, jotta "
-"pelaaja voi paremmin seurata mitä tietokone tekee."
+"pelaaja voi seurata mitä tietokone tekee."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
-msgstr "Näytä koneen ajatukset"
+msgid "Display the computer’s thoughts"
+msgstr "Näytä tietokoneen ajatukset"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Jos asetetaan kyllä-asentoon, tekoälyn toiminta tulostetaan "
-"vakiotulosteeseen."
+"Jos asetetaan todeksi, tekoälyn toiminta tulostetaan vakiotulosteeseen."
 
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
