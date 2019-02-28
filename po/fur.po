@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali gnome-3-18\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-01 20:42+0000\n"
-"PO-Revision-Date: 2019-02-04 14:59+0100\n"
+"POT-Creation-Date: 2019-02-10 17:48+0000\n"
+"PO-Revision-Date: 2019-02-27 21:00+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -124,21 +124,21 @@ msgstr "Ritart fra lis tiradis"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
-"Sielç se inserî o no un ritart fra i tîrs dai dâts dal computer cussì il "
-"zuiadôr al pues stâ daûr a ce che al sucêt."
+"Sielç se inserî o no un ritart fra i tîrs dai dâts dal computer cussì che il "
+"zuiadôr al podedi stâ daûr a ce che al sucêt."
 
 #: data/org.gnome.Tali.gschema.xml:16
-msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "Mostre i pinsîrs dal computer"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Se impuestât a VÊR al vegnarà fat un dump de elaborazion dal IA sul standard "
+"Se metût a VÊR al vignarà fat un dump de elaborazion de IA sul standard "
 "output."
 
 #: data/org.gnome.Tali.gschema.xml:20
