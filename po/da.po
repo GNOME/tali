@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-06 19:39+0000\n"
+"POT-Creation-Date: 2019-03-26 18:41+0000\n"
 "PO-Revision-Date: 2019-02-21 12:09+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -96,8 +96,8 @@ msgstr "Kast terninger og vind points"
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
+"like, in order to make the best possible hand. You can also play a "
+"lesser-known variant with colored dice."
 msgstr ""
 "En variant af poker med terninger og færre penge. Dette spil er en "
 "familieklassiker. Kast terningerne tre gange i træk, idet du holder dem "
@@ -124,12 +124,6 @@ msgstr "Spil et pokerlignende terningspil"
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
-
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
 msgstr "Pause mellem kast"
@@ -138,7 +132,9 @@ msgstr "Pause mellem kast"
 msgid ""
 "Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
-msgstr "Vælg om der skal indsættes en pause mellem computerens terningkast, så spilleren kan følge hvad der sker."
+msgstr ""
+"Vælg om der skal indsættes en pause mellem computerens terningkast, så "
+"spilleren kan følge hvad der sker."
 
 #: data/org.gnome.Tali.gschema.xml:16
 msgid "Display the computer’s thoughts"
@@ -147,7 +143,9 @@ msgstr "Vis computerens tanker"
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
-msgstr "Hvis denne sættes til “true” vil et dump af de aktive computerspilleres arbejde blive sendt til standarduddata."
+msgstr ""
+"Hvis denne sættes til “true” vil et dump af de aktive computerspilleres "
+"arbejde blive sendt til standarduddata."
 
 # afgjort med aktivitet på mailinglisten samt shuf(1)
 #: data/org.gnome.Tali.gschema.xml:20
@@ -363,8 +361,9 @@ msgstr ""
 "Ole Laursen\n"
 "Ask Hjorth Larsen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/gyahtzee.c:772
 msgid "Undo your most recent move"
@@ -535,3 +534,7 @@ msgstr "Vælg et pointfelt."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 af en slags [sum]"
+
+#~ msgid "org.gnome.Tali"
+#~ msgstr "org.gnome.Tali"
+
