@@ -3,19 +3,21 @@
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
-# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2009.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2012.
+# sicklylife <translation@sicklylife.jp>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
 "POT-Creation-Date: 2019-03-26 18:41+0000\n"
-"PO-Revision-Date: 2012-09-24 13:07+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"PO-Revision-Date: 2019-09-08 18:00+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -26,59 +28,57 @@ msgstr ""
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr ""
+msgstr "新しいゲームを開始する"
 
 #: data/help-overlay.ui:23
 msgctxt "shortcut window"
 msgid "Roll the dice"
-msgstr ""
+msgstr "サイをふる"
 
 #: data/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Toggle the first die"
-msgstr ""
+msgstr "1つめのサイを切り替える"
 
 #: data/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle the second die"
-msgstr ""
+msgstr "2つめのサイを切り替える"
 
 #: data/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Toggle the third die"
-msgstr ""
+msgstr "3つめのサイを切り替える"
 
 #: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Toggle the fourth die"
-msgstr ""
+msgstr "4つめのサイを切り替える"
 
 #: data/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Toggle the fifth die"
-msgstr ""
+msgstr "5つめのサイを切り替える"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Undo move"
-msgstr ""
+msgstr "操作を元に戻す"
 
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr ""
+msgstr "ヘルプを表示する"
 
 #: data/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカットを表示する"
 
 #: data/help-overlay.ui:86
-#, fuzzy
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "終了(_Q)"
+msgstr "終了する"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
 #: src/gyahtzee.c:55
@@ -103,7 +103,7 @@ msgstr ""
 
 #: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
-msgstr ""
+msgstr "The GNOME Project"
 
 #: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
@@ -121,10 +121,6 @@ msgid "Delay between rolls"
 msgstr "ゆっくり実行する"
 
 #: data/org.gnome.Tali.gschema.xml:12
-#, fuzzy
-#| msgid ""
-#| "Choose whether or not to insert a delay between the computer's dice rolls "
-#| "so the player can follow what it is doing."
 msgid ""
 "Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
@@ -133,32 +129,24 @@ msgstr ""
 "プレイヤーは何の目になったか知ることができます。"
 
 #: data/org.gnome.Tali.gschema.xml:16
-#, fuzzy
-#| msgid "Display the computer's thoughts"
 msgid "Display the computer’s thoughts"
 msgstr "コンピューターの思考を出力する"
 
 #: data/org.gnome.Tali.gschema.xml:17
-#, fuzzy
-#| msgid ""
-#| "If set to true, a dump of the AI's working will be done to standard "
-#| "output."
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "TRUE にした場合、コンピューターの AI 思考情報が標準出力に出力されます。"
 
 #: data/org.gnome.Tali.gschema.xml:20
-#, fuzzy
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[人間,ウィルバー,ビル,モニカー,ケニス,ジャネット]"
+msgstr ""
 
 #: data/org.gnome.Tali.gschema.xml:23
-#, fuzzy
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "標準"
+msgstr ""
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -174,17 +162,15 @@ msgstr "設定(_P)"
 
 #: data/tali-menus.ui:21
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #: data/tali-menus.ui:25
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
 #: data/tali-menus.ui:29
-#, fuzzy
-#| msgid "_About"
 msgid "_About Tali"
-msgstr "このアプリケーションについて(_A)"
+msgstr "Tali について(_A)"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
@@ -320,7 +306,7 @@ msgid "Computer playing for %s"
 msgstr "%s (コンピューター)の番です"
 
 #: src/gyahtzee.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "%s! – You’re up."
 msgstr "%s! -- あなたの番です"
 
@@ -349,38 +335,36 @@ msgid "Colors game and multi-level AI (2006):"
 msgstr "色つきでマルチレベルな AI (2006):"
 
 #: src/gyahtzee.c:614
-#, fuzzy
 msgid "A variation on poker with dice and less money."
 msgstr ""
-"サイコロと少ないお金を使ったポーカーの一種です。\n"
-"\n"
-"gtali は GNOME ゲーム集の一部です。"
+"サイコロと少ないお金を使ったポーカーの一種です。"
 
 #: src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
-"佐藤 暁 <ss@gnome.gr.jp>\n"
-"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
-"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"日本 GNOME ユーザー会 <http://www.gnome.gr.jp>\n"
+"松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Shushi KUROSE <md81bird@hitaki.net>\n"
+"sicklylife <translation@sicklylife.jp>\n"
 "Yukihiro Nakai <Nakai@technologist.com>\n"
-"日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
+"Yuusuke Tahara <tahara@gnome.gr.jp>"
 
 #: src/gyahtzee.c:772
-#, fuzzy
 msgid "Undo your most recent move"
-msgstr "ユーザーの最近のレベルです。"
+msgstr "直近の操作を元に戻す"
 
 #: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
 msgstr "人間"
 
 #: src/setup.c:120
-#, fuzzy
 msgid "Preferences will be updated in the next game."
-msgstr "変更点は次のゲームで有効になります。"
+msgstr "設定は次のゲームから有効になります。"
 
 #: src/setup.c:262
 msgid "Preferences"
