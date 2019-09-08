@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 07:11+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2019-03-26 18:41+0000\n"
 "PO-Revision-Date: 2012-09-24 13:07+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -23,16 +23,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr ""
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr ""
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr ""
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr ""
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr ""
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr ""
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr ""
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr ""
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr ""
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr ""
+
+#: data/help-overlay.ui:86
+#, fuzzy
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "終了(_Q)"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/tali.appdata.xml.in.h:2
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:3
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -40,244 +97,258 @@ msgid ""
 "known variant with colored dice."
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/org.gnome.Tali.appdata.xml.in:33
 msgid "The GNOME Project"
 msgstr ""
 
-#: ../data/tali.desktop.in.h:2
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "ポーカースタイルのダイスゲームを楽しんでください"
 
-#: ../data/tali.desktop.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "ヤッツィー;"
 
-#: ../data/tali-menus.ui.h:1
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: ../data/tali-menus.ui.h:2
-msgid "_Preferences"
-msgstr "設定(_P)"
-
-#: ../data/tali-menus.ui.h:3
-msgid "_Scores"
-msgstr "得点(_S)"
-
-#: ../data/tali-menus.ui.h:4
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr "このアプリケーションについて(_A)"
-
-#: ../data/tali-menus.ui.h:6
-msgid "_Quit"
-msgstr "終了(_Q)"
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
+#: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
 msgstr "ゆっくり実行する"
 
-#: ../data/org.gnome.tali.gschema.xml.h:2
+#: data/org.gnome.Tali.gschema.xml:12
+#, fuzzy
+#| msgid ""
+#| "Choose whether or not to insert a delay between the computer's dice rolls "
+#| "so the player can follow what it is doing."
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "コンピューターがサイコロを振る際に遅延時間を入れるかどうか選択してください。"
 "プレイヤーは何の目になったか知ることができます。"
 
-#: ../data/org.gnome.tali.gschema.xml.h:3
-msgid "Display the computer's thoughts"
+#: data/org.gnome.Tali.gschema.xml:16
+#, fuzzy
+#| msgid "Display the computer's thoughts"
+msgid "Display the computer’s thoughts"
 msgstr "コンピューターの思考を出力する"
 
-#: ../data/org.gnome.tali.gschema.xml.h:4
+#: data/org.gnome.Tali.gschema.xml:17
+#, fuzzy
+#| msgid ""
+#| "If set to true, a dump of the AI's working will be done to standard "
+#| "output."
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "TRUE にした場合、コンピューターの AI 思考情報が標準出力に出力されます。"
 
-#: ../data/org.gnome.tali.gschema.xml.h:5
+#: data/org.gnome.Tali.gschema.xml:20
 #, fuzzy
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[人間,ウィルバー,ビル,モニカー,ケニス,ジャネット]"
 
-#: ../data/org.gnome.tali.gschema.xml.h:6
+#: data/org.gnome.Tali.gschema.xml:23
 #, fuzzy
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "標準"
 
-#: ../src/clist.c:158
+#: data/tali-menus.ui:7
+msgid "_New Game"
+msgstr "新しいゲーム(_N)"
+
+#: data/tali-menus.ui:11
+msgid "_Scores"
+msgstr "得点(_S)"
+
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "設定(_P)"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/tali-menus.ui:25
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: data/tali-menus.ui:29
+#, fuzzy
+#| msgid "_About"
+msgid "_About Tali"
+msgstr "このアプリケーションについて(_A)"
+
+#: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
 msgstr "その役は既に使用済です! どの役を適用しますか?"
 
-#: ../src/clist.c:414
+#: src/clist.c:412
 #, c-format
 msgid "Score: %d"
 msgstr "得点: %d"
 
-#: ../src/clist.c:416
+#: src/clist.c:414
 #, c-format
 msgid "Field used"
 msgstr "使用したフィールド"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: src/games-scores-dialog.c:130
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "タイム"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: src/games-scores-dialog.c:136
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "得点"
 
 #. Score format for time based scores.
 #. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
+#: src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d分 %2$d秒"
 
-#: ../src/games-scores-dialog.c:386
+#: src/games-scores-dialog.c:384
 msgid "New Game"
 msgstr "新しいゲーム"
 
 #. Score dialog column header for the date
 #. the score was recorded
-#: ../src/games-scores-dialog.c:480
+#: src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "日付"
 
-#: ../src/gyahtzee.c:100
+#: src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "コンピューターのプレイを遅くする"
 
-#: ../src/gyahtzee.c:102
+#: src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "コンピューターの思考を表示する"
 
-#: ../src/gyahtzee.c:104
+#: src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "コンピューターの対戦相手の人数を指定する"
 
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "NUMBER"
 
-#: ../src/gyahtzee.c:106
+#: src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "人間の対戦相手の人数を指定する"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "ゲームを選択する (RegularまたはColors)"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "STRING"
 msgstr "STRING"
 
-#: ../src/gyahtzee.c:110
+#: src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "プレイするコンピューター同士のゲーム数を指定する"
 
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "コンピューターが試行する回数を指定する"
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#: src/gyahtzee.c:117 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "標準"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: src/gyahtzee.c:118 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "色付き"
 
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "すべてのサイを振る!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:142 src/gyahtzee.c:808
 msgid "Roll!"
 msgstr "サイを振る!"
 
-#: ../src/gyahtzee.c:176
+#: src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "引き分けです!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+#: src/gyahtzee.c:189 src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Tali の得点"
 
-#: ../src/gyahtzee.c:191
+#: src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "おめでとうございます!"
 
-#: ../src/gyahtzee.c:192
+#: src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "あなたがトップです!"
 
-#: ../src/gyahtzee.c:193
+#: src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "トップ 10 に入りました。"
 
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s さんが %d点で勝利しました"
 
-#: ../src/gyahtzee.c:209
+#: src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "ゲームオーバー!"
 
-#: ../src/gyahtzee.c:253
+#: src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "%s (コンピューター)の番です"
 
-#: ../src/gyahtzee.c:255
+#: src/gyahtzee.c:255
 #, fuzzy, c-format
 msgid "%s! – You’re up."
 msgstr "%s! -- あなたの番です"
 
-#: ../src/gyahtzee.c:448
+#: src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr "振り直すサイを選ぶか、または得点スロットを選択してください"
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:476
 msgid "Roll"
 msgstr "振り"
 
-#: ../src/gyahtzee.c:534
+#: src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "3回までしかサイを振れません!: 得点スロットを選択してください"
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME バージョン (1998):"
 
-#: ../src/gyahtzee.c:594
+#: src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "端末バージョン (1992):"
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "色つきでマルチレベルな AI (2006):"
 
-#: ../src/gyahtzee.c:614
+#: src/gyahtzee.c:614
 #, fuzzy
 msgid "A variation on poker with dice and less money."
 msgstr ""
@@ -285,7 +356,7 @@ msgstr ""
 "\n"
 "gtali は GNOME ゲーム集の一部です。"
 
-#: ../src/gyahtzee.c:618
+#: src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -297,174 +368,174 @@ msgstr ""
 "Yukihiro Nakai <Nakai@technologist.com>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
-#: ../src/gyahtzee.c:763
+#: src/gyahtzee.c:772
 #, fuzzy
 msgid "Undo your most recent move"
 msgstr "ユーザーの最近のレベルです。"
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+#: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
 msgstr "人間"
 
-#: ../src/setup.c:122
+#: src/setup.c:120
 #, fuzzy
 msgid "Preferences will be updated in the next game."
 msgstr "変更点は次のゲームで有効になります。"
 
-#: ../src/setup.c:264
+#: src/setup.c:262
 msgid "Preferences"
 msgstr "設定"
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "人間のプレイヤー"
 
-#: ../src/setup.c:292
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "プレイヤーの人数(_N):"
 
-#: ../src/setup.c:306
+#: src/setup.c:304
 msgid "Computer Opponents"
 msgstr "コンピューターの対戦相手"
 
 #. --- Button ---
-#: ../src/setup.c:313
+#: src/setup.c:311
 msgid "_Delay between rolls"
 msgstr "ゆっくり実行する(_D)"
 
-#: ../src/setup.c:323
+#: src/setup.c:321
 msgid "N_umber of opponents:"
 msgstr "対戦相手の人数(_U):"
 
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
 msgstr "難易度(_D):"
 
-#: ../src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "初級"
 
-#: ../src/setup.c:341
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "中級"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "上級"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "ゲームの種類"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "プレイヤーの名前"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
 msgstr "1 [1の目の合計]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
 msgstr "2 [2の目の合計]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
 msgstr "3 [3の目の合計]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
 msgstr "4 [4の目の合計]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
 msgstr "5 [5の目の合計]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
 msgstr "6 [6の目の合計]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
 msgstr "同種が3つ [合計]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
 msgstr "同種が4つ [合計]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
 msgstr "フルハウス   [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
 msgstr "小ストレート [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
 msgstr "大ストレート [40]"
 
-#: ../src/yahtzee.c:97
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
 msgstr "同種が5つ [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr "チャンス   [合計]"
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
 msgstr "下半分の合計"
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
 msgstr "すべての合計"
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr "上半分の合計"
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
 msgstr ">62 の場合はボーナス"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
 msgstr "2ペアで同じ色 [合計]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
 msgstr "フルハウス [15 + 合計]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
 msgstr "フルハウスで同じ色 [20 + 合計]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
 msgstr "フラッシュ (すべて同じ色) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
 msgstr "一種の4 [25 + 合計]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
 msgstr "一種の5 [50 + 合計]"
 
-#: ../src/yahtzee.c:250
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
 msgstr "得点スロットを選択してください"
 
-#: ../src/yahtzee.c:524
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "一種の5 [合計]"
