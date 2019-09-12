@@ -22,6 +22,9 @@
       <image>https://people.gnome.org/~mcatanzaro/tali.png</image>
     </screenshot>
   </screenshots>
+  <releases>
+    <release version="3.32.1" date="2019-08-08" />
+  </releases>
   <launchable type="desktop-id">org.gnome.Tali.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Tali</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/tali/issues</url>
@@ -34,6 +37,7 @@
   <provides>
     <id>tali.desktop</id>
   </provides>
+  <content_rating type="oars-1.1" />
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>HighContrast</kudo>
