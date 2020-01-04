@@ -23,6 +23,19 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.35.3" date="2020-01-04" type="development">
+      <description>
+        <p>
+          This is an unstable release in the 3.35 development series,
+          with the following improvements:
+        </p>
+        <ul>
+          <li>Fix Ctrl+Q keyboard shortcut for Quit</li>
+          <li>Help updates</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.32.1" date="2019-08-08" />
   </releases>
   <launchable type="desktop-id">org.gnome.Tali.desktop</launchable>

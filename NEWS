@@ -1,3 +1,9 @@
+Tali 3.35.3
+===========
+* Fix Ctrl+Q keyboard shortcut for Quit (Mart Raudsepp, #12)
+* Help updates (Andre Klapper)
+* Translation updates
+
 Tali 3.32.0
 ===========
 * Translation updates
