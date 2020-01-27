@@ -9,10 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=tali&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-12 15:09+0000\n"
-"PO-Revision-Date: 2016-08-12 18:02+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2019-09-29 13:19+0000\n"
+"PO-Revision-Date: 2020-01-27 13:49+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,18 +19,73 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.2.4\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Spustenie novej hry"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Hod kockou"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Prepnutie prvej kocky"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Prepnutie druhej kocky"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Prepnutie tretej kocky"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Prepnutie štvrtej kocky"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Prepnutie piatej kocky"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Vrátenie ťahu"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Zobrazenie pomocníka"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Zobrazenie klávesových skratiek"
+
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ukončenie"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:55
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/tali.appdata.xml.in.h:2
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr "Hádžte kockami a zbierajte body"
 
-#: ../data/tali.appdata.xml.in.h:3
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -42,199 +96,201 @@ msgstr ""
 "Hoďte kockou trikrát za sebou a vyberte si pokus s najlepšou hodnotou na "
 "ruke. Tiež si môžete zahrať menej známu variantu s farebnou kockou."
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Hrajte proti jednému alebo až piatim protivníkom s troma úrovňami náročnosti."
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/org.gnome.Tali.appdata.xml.in:36
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: ../data/tali.desktop.in.h:2
+#: data/org.gnome.Tali.desktop.in:4
 msgid "Beat the odds in a poker-style dice game"
 msgstr "Pokúšajte šťastie v pokrovej hre s kockami"
 
-#: ../data/tali.desktop.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
 
-#: ../data/tali-menus.ui.h:1
-msgid "_New Game"
-msgstr "_Nová hra"
-
-#: ../data/tali-menus.ui.h:2
-msgid "_Preferences"
-msgstr "_Nastavenia"
-
-#: ../data/tali-menus.ui.h:3
-msgid "_Scores"
-msgstr "_Skóre"
-
-#: ../data/tali-menus.ui.h:4
-msgid "_Help"
-msgstr "_Pomocník"
-
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr "_O tejto hre"
-
-#: ../data/tali-menus.ui.h:6
-msgid "_Quit"
-msgstr "_Ukončiť"
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
+#: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
 msgstr "Pauza medzi hodmi"
 
-#: ../data/org.gnome.tali.gschema.xml.h:2
+#: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
 msgstr ""
 "Zvoľte si, či sa má alebo nemá vložiť prestávka medzi hody počítača, aby "
 "hráč mohol sledovať, čo počítač robí."
 
-#: ../data/org.gnome.tali.gschema.xml.h:3
-msgid "Display the computer's thoughts"
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer’s thoughts"
 msgstr "Zobraziť myšlienky počítača"
 
-#: ../data/org.gnome.tali.gschema.xml.h:4
+#: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
+"If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "Ak je nastavené na true, práca UI hráčov bude vypísaná na štandardný výstup."
 
-#: ../data/org.gnome.tali.gschema.xml.h:5
+#: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ 'Hráč', 'Michal', 'Juraj', 'Monika', 'Karol', 'Jana' ]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Hráč', 'Alica', 'Juraj', 'Monika', 'Karol', 'Eva' ]"
 
-#: ../data/org.gnome.tali.gschema.xml.h:6
+#: data/org.gnome.Tali.gschema.xml:23
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Regulárna'"
 
-#: ../src/clist.c:158
+#: data/tali-menus.ui:7
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: data/tali-menus.ui:11
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "_Nastavenia"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "Klávesové _skratky"
+
+#: data/tali-menus.ui:25
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: data/tali-menus.ui:29
+msgid "_About Tali"
+msgstr "_O aplikácii Tali"
+
+#: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
 msgstr "Už použité! Kam to chcete uložiť?"
 
-#: ../src/clist.c:414
+#: src/clist.c:412
 #, c-format
 msgid "Score: %d"
 msgstr "Skóre: %d"
 
-#: ../src/clist.c:416
+#: src/clist.c:414
 #, c-format
 msgid "Field used"
 msgstr "Použité pole"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: src/games-scores-dialog.c:130
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: src/games-scores-dialog.c:136
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
 #. Score format for time based scores.
 #. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
+#: src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:386
+#: src/games-scores-dialog.c:384
 msgid "New Game"
 msgstr "Nová hra"
 
 #. Score dialog column header for the date
 #. the score was recorded
-#: ../src/games-scores-dialog.c:480
+#: src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Dátum"
 
-#: ../src/gyahtzee.c:100
+#: src/gyahtzee.c:100
 msgid "Delay computer moves"
 msgstr "Prestávka pri ťahoch počítača"
 
-#: ../src/gyahtzee.c:102
+#: src/gyahtzee.c:102
 msgid "Display computer thoughts"
 msgstr "Zobraziť myšlienky počítača"
 
-#: ../src/gyahtzee.c:104
+#: src/gyahtzee.c:104
 msgid "Number of computer opponents"
 msgstr "Počet počítačových protivníkov"
 
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
 msgid "NUMBER"
 msgstr "POČET"
 
-#: ../src/gyahtzee.c:106
+#: src/gyahtzee.c:106
 msgid "Number of human opponents"
 msgstr "Počet ľudských protivníkov"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "Game choice: Regular or Colors"
 msgstr "Výber hry: Regulárna alebo s farbami"
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:108
 msgid "STRING"
 msgstr "REŤAZEC"
 
-#: ../src/gyahtzee.c:110
+#: src/gyahtzee.c:110
 msgid "Number of computer-only games to play"
 msgstr "Počet hier, ktoré majú hrať len počítače"
 
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:112
 msgid "Number of trials for each roll for the computer"
 msgstr "Počet pokusov pre každý hod počítača"
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#: src/gyahtzee.c:117 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Regulárna"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: src/gyahtzee.c:118 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Farby"
 
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:139
 msgid "Roll all!"
 msgstr "Hodiť so všetkými!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:142 src/gyahtzee.c:808
 msgid "Roll!"
 msgstr "Hodiť!"
 
-#: ../src/gyahtzee.c:176
+#: src/gyahtzee.c:176
 msgid "The game is a draw!"
 msgstr "Hra skončila remízou!"
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
+#: src/gyahtzee.c:189 src/gyahtzee.c:629
 msgid "Tali Scores"
 msgstr "Najlepší v hre Tali"
 
-#: ../src/gyahtzee.c:191
+#: src/gyahtzee.c:191
 msgid "Congratulations!"
 msgstr "Gratulujem!"
 
-#: ../src/gyahtzee.c:192
+#: src/gyahtzee.c:192
 msgid "Your score is the best!"
 msgstr "Vaše skóre je najlepšie!"
 
-#: ../src/gyahtzee.c:193
+#: src/gyahtzee.c:193
 msgid "Your score has made the top ten."
 msgstr "Vaše skóre sa nachádza v prvej desiatke."
 
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:205
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -242,51 +298,51 @@ msgstr[0] "Hráč %s vyhral hru s %d bodmi"
 msgstr[1] "Hráč %s vyhral hru s %d bodom"
 msgstr[2] "Hráč %s vyhral hru s %d bodmi"
 
-#: ../src/gyahtzee.c:209
+#: src/gyahtzee.c:209
 msgid "Game over!"
 msgstr "Koniec hry!"
 
-#: ../src/gyahtzee.c:253
+#: src/gyahtzee.c:253
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Počítač hrá za hráča %s"
 
-#: ../src/gyahtzee.c:255
+#: src/gyahtzee.c:255
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Ste na rade."
 
-#: ../src/gyahtzee.c:448
+#: src/gyahtzee.c:448
 msgid "Select dice to roll or choose a score slot."
 msgstr ""
 "Vyberte kocky, ktoré chcete znovu hodiť, stlačte Hodiť!, alebo vyberte "
 "riadok, kam sa zapíšu body."
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:476
 msgid "Roll"
 msgstr "Hod"
 
-#: ../src/gyahtzee.c:534
+#: src/gyahtzee.c:534
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Môžete hádzať iba trikrát. Vyberte si riadok, kam sa zapíšu body."
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:591
 msgid "GNOME version (1998):"
 msgstr "GNOME verzia (1998):"
 
-#: ../src/gyahtzee.c:594
+#: src/gyahtzee.c:594
 msgid "Console version (1992):"
 msgstr "Konzolová verzia (1992):"
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:597
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Hra s použitím farieb a viacúrovňovej UI (2006):"
 
-#: ../src/gyahtzee.c:614
+#: src/gyahtzee.c:614
 msgid "A variation on poker with dice and less money."
 msgstr "Druh pokru, ktorý sa hrá s kockami a bez peňazí."
 
-#: ../src/gyahtzee.c:618
+#: src/gyahtzee.c:618
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -295,172 +351,172 @@ msgstr ""
 "Ján Kyselica <kyselica.jan@gmail.com\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/gyahtzee.c:763
+#: src/gyahtzee.c:772
 msgid "Undo your most recent move"
 msgstr "Vrátiť posledný ťah"
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+#: src/gyahtzee.c:991 src/yahtzee.c:68
 msgid "Human"
 msgstr "Človek"
 
-#: ../src/setup.c:122
+#: src/setup.c:120
 msgid "Preferences will be updated in the next game."
 msgstr "Nastavenia budú aktualizované v ďalšej hre."
 
-#: ../src/setup.c:264
+#: src/setup.c:262
 msgid "Preferences"
 msgstr "Nastavenia"
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "Ľudskí hráči"
 
-#: ../src/setup.c:292
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "Počet _hráčov:"
 
-#: ../src/setup.c:306
+#: src/setup.c:304
 msgid "Computer Opponents"
 msgstr "Počítačoví protivníci"
 
 #. --- Button ---
-#: ../src/setup.c:313
+#: src/setup.c:311
 msgid "_Delay between rolls"
 msgstr "_Pauza medzi hodmi"
 
-#: ../src/setup.c:323
+#: src/setup.c:321
 msgid "N_umber of opponents:"
 msgstr "Počet p_rotivníkov:"
 
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
-msgstr "_Obtiažnosť"
+msgstr "_Obtiažnosť:"
 
-#: ../src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Ľahká"
 
-#: ../src/setup.c:341
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Stredná"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Ťažká"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "Typ hry"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "Mená hráčov"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
 msgstr "Jednotky [súčet jednotiek]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
 msgstr "Dvojky [súčet dvojok]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
 msgstr "Trojky [súčet trojok]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
 msgstr "Štvorky [súčet štvoriek]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
 msgstr "Päťky [súčet pätiek]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
 msgstr "Šestky [súčet šestiek]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
 msgstr "Trojica [súčet]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
 msgstr "Štvorica [súčet]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
 msgstr "Full House [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
 msgstr "Malá postupka [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
 msgstr "Veľká postupka [40]"
 
-#: ../src/yahtzee.c:97
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
 msgstr "Pätica [súčet]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr "Šanca [súčet]"
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
 msgstr "Dolný súčet"
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
 msgstr "Celkový súčet"
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr "Horný súčet"
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
 msgstr "Bonus ak >62"
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
 msgstr "Dva páry rovnakej farby [súčet]"
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
 msgstr "Full House [15 + súčet]"
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
 msgstr "Full House v jednej farbe [20 + súčet]"
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
 msgstr "Flush (rovnaké farby) [35]"
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
 msgstr "Štvorica [25 + súčet]"
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
 msgstr "Pätica [50 + súčet]"
 
-#: ../src/yahtzee.c:250
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
 msgstr "Vyberte, kam sa majú zapísať body."
 
-#: ../src/yahtzee.c:524
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Pätica [súčet]"
