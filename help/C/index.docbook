@@ -104,7 +104,7 @@
     <legalnotice> 
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or this manual, visit
-      the <ulink url="https://gitlab.gnome.org/GNOME/rhythmbox/issues/">GNOME Issue Tracker</ulink>. 
+      the <ulink url="https://gitlab.gnome.org/GNOME/tali/issues/">GNOME Issue Tracker</ulink>.
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice>
