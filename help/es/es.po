@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali.HEAD\n"
-"POT-Creation-Date: 2020-01-12 04:48+0000\n"
-"PO-Revision-Date: 2020-01-13 09:45+0100\n"
+"POT-Creation-Date: 2020-02-01 21:41+0000\n"
+"PO-Revision-Date: 2020-02-06 11:26+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2007-2012\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2007-2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
 #. (itstool) path: articleinfo/title
@@ -202,17 +202,16 @@ msgstr "Comentarios"
 #: C/index.docbook:106
 #| msgid ""
 #| "To report a bug or make a suggestion regarding the <application>Tali</"
-#| "application> application or this manual, follow the directions in the "
-#| "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME "
-#| "Feedback Page</ulink>."
+#| "application> application or this manual, visit the <ulink url=\"https://"
+#| "gitlab.gnome.org/GNOME/rhythmbox/issues/\">GNOME Issue Tracker</ulink>."
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
 "application> application or this manual, visit the <ulink url=\"https://"
-"gitlab.gnome.org/GNOME/rhythmbox/issues/\">GNOME Issue Tracker</ulink>."
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
 "Para informar de un fallo o hacer alguna sugerencia sobre la aplicación "
 "<application>Tali</application> o sobre este manual, siga las indicaciones "
-"en <ulink url=\"https://gitlab.gnome.org/GNOME/rhythmbox/issues/\">gestor de "
+"en <ulink url=\"https://gitlab.gnome.org/GNOME/tali/issues/\">gestor de "
 "incidencias de GNOME</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -286,10 +285,6 @@ msgstr "Tali en acción"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:161
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/mainwindow.png' "
-#| "md5='749f38e8b5cf656fb4a4493549f51d47'"
 msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
@@ -420,10 +415,6 @@ msgstr "Preferencias de Tali"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:238
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/preferences.png' "
-#| "md5='4b2013efa8c9106df25d7bbb77973aef'"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
