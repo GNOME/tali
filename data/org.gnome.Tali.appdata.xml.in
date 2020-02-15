@@ -23,6 +23,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.35.91" date="2020-02-15" type="development">
+      <description>
+        <p>
+          This is an unstable release in the 3.35 development series,
+          with the following improvements:
+        </p>
+        <ul>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.35.90" date="2020-02-01" type="development">
       <description>
         <p>
