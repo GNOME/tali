@@ -1,5 +1,5 @@
 project ('tali', ['c'],
-         version: '3.35.91',
+         version: '3.36.0',
          license: 'GPLv2+',
          default_options: [
              'warning_level=1',
