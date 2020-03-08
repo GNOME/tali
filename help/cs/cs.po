@@ -1,13 +1,13 @@
 # Czech translation of gtali help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gtali help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2018.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2018, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-26\n"
-"POT-Creation-Date: 2018-09-01 21:25+0000\n"
-"PO-Revision-Date: 2018-09-05 09:48+0200\n"
+"POT-Creation-Date: 2020-02-01 21:41+0000\n"
+"PO-Revision-Date: 2020-03-08 08:55+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -196,27 +196,26 @@ msgstr "Ohlasy"
 #: C/index.docbook:106
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
 "Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci "
-"<application>Tali</application> nebo této příručce, postupujte dle instrukcí "
-"na stránce <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
-"\">Stránka s ohlasy na GNOME</ulink>."
+"<application>Tali</application> nebo této příručce, navštivte <ulink url="
+"\"https://gitlab.gnome.org/GNOME/tali/issues/\">Systém pro sledování problémů "
+"GNOME</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:116
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>GNOME Tali</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:123
+#: C/index.docbook:121
 msgid "Introduction"
 msgstr "Úvod"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:125
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -228,7 +227,7 @@ msgstr ""
 "jen některé kostky."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:131
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -237,7 +236,7 @@ msgstr ""
 "Yahtzee, což je ochranná známka firmy Hasbro, Inc."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:136
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -250,7 +249,7 @@ msgstr ""
 "<command>gtali</command> v příkazové řádce."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:146
+#: C/index.docbook:144
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -261,12 +260,12 @@ msgstr ""
 "popisuje verzi 2.8 aplikace <application>GNOME Tali</application>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:155
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
 msgstr "Jak hrát GNOME Tali"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:158
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "GNOME Tali v akci"
 
@@ -275,15 +274,15 @@ msgstr "GNOME Tali v akci"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163
+#: C/index.docbook:161
 msgctxt "_"
 msgid ""
-"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:160
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -294,17 +293,17 @@ msgstr ""
 "obrazovky s hlavním oknem GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:172
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr "Po započetí hry uvidíte výsledky svého prvního vrhu kostkami."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:179
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
 msgstr "Klikněte na kostky, kterými chcete házet znovu."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -313,7 +312,7 @@ msgstr ""
 "tlačítko <guibutton>Házet!</guibutton>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:188
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -330,7 +329,7 @@ msgstr ""
 "obdržíte k svému výslednému hodnocení nulu)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:198
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -340,7 +339,7 @@ msgstr ""
 "když vám padne něco lepšího."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:203
+#: C/index.docbook:201
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -359,7 +358,7 @@ msgstr ""
 "přidávat, a hodnocení už zůstane nula."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:213
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -368,12 +367,12 @@ msgstr ""
 "řádcích je 63 bodů a více."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:218
+#: C/index.docbook:216
 msgid "Using the keyboard"
 msgstr "Používání klávesnice"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:220
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -388,12 +387,12 @@ msgstr ""
 "v tabulce hodnocení a mezerníkem provádíte volbu."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:232
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "Předvolby hry"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:235
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
 msgstr "Předvolby GNOME Tali"
 
@@ -402,15 +401,15 @@ msgstr "Předvolby GNOME Tali"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240
+#: C/index.docbook:238
 msgctxt "_"
 msgid ""
-"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 msgstr ""
-"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:237
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -421,17 +420,17 @@ msgstr ""
 "okno s předvolbami GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:248
+#: C/index.docbook:246
 msgid "Human Players"
 msgstr "Lidští hráči"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Počet hráčů</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -440,17 +439,17 @@ msgstr ""
 "hráčů je maximálně šest."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:260
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "Počítačoví protivníci"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:262
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>Prodleva mezi hody</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:264
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -459,12 +458,12 @@ msgstr ""
 "sledovat co se děje. Tím se ale hra celkově zpomaluje."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:271
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>Počet protivníků</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:273
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -477,17 +476,17 @@ msgstr ""
 "hráčů tak, aby byl součet šest."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:283
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "Typ hry"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:285
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Verze hry, kterou chcete hrát</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:287
+#: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
@@ -498,22 +497,22 @@ msgstr ""
 "nově zvolený typ viděli."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:297
+#: C/index.docbook:295
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Jména hráčů</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:299
+#: C/index.docbook:297
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "Jména hráčů změníte zadáním nových jmen do příslušných textových polí."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:308
+#: C/index.docbook:306
 msgid "Game Strategy"
 msgstr "Strategie hry"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:309
+#: C/index.docbook:307
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -530,7 +529,7 @@ msgstr ""
 "75 pokud je celkový součet v horní polovině větší než 77."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:318
+#: C/index.docbook:316
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -541,12 +540,12 @@ msgstr ""
 "ale jen v běžné hře."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:330
 msgid "Known Bugs and Limitations"
 msgstr "Známé chyby a omezení"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:333
+#: C/index.docbook:331
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -556,22 +555,22 @@ msgstr ""
 "kostkami."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:339
 msgid "Glossary"
 msgstr "Rejstřík"
 
 #. (itstool) path: note/para
-#: C/index.docbook:343
+#: C/index.docbook:341
 msgid "Remember that the order of the dice is not important."
 msgstr "Pamatujte, že pořadí kostek nemá význam."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:346
+#: C/index.docbook:344
 msgid "3 of a Kind"
 msgstr "Trojice"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:347
+#: C/index.docbook:345
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -580,12 +579,12 @@ msgstr ""
 "např. 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:352
+#: C/index.docbook:350
 msgid "4 of a Kind"
 msgstr "Čtveřice"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:353
+#: C/index.docbook:351
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -596,12 +595,12 @@ msgstr ""
 "kostek."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:359
+#: C/index.docbook:357
 msgid "5 of a Kind"
 msgstr "Pětice"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:360
+#: C/index.docbook:358
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -610,12 +609,12 @@ msgstr ""
 "50 plus součet všech kostek."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:365
+#: C/index.docbook:363
 msgid "Full House"
 msgstr "Full house"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:366
+#: C/index.docbook:364
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -626,12 +625,12 @@ msgstr ""
 "bodové hodnocení 15 plus celkový součet všech kostek."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:373
+#: C/index.docbook:371
 msgid "Full House Same Color"
 msgstr "Full house stejné barvy"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:374
+#: C/index.docbook:372
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -648,12 +647,12 @@ msgstr ""
 "celkový součet kostek."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:384
+#: C/index.docbook:382
 msgid "Two Pair Same Color"
 msgstr "Dva páry stejné barvy"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:385
+#: C/index.docbook:383
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -670,12 +669,12 @@ msgstr ""
 "je celkový součet všech kostek."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:395
+#: C/index.docbook:393
 msgid "Flush"
 msgstr "Flush"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:396
+#: C/index.docbook:394
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -687,12 +686,12 @@ msgstr ""
 "body."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:403
+#: C/index.docbook:401
 msgid "Large Straight"
 msgstr "Velká postupka"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:404
+#: C/index.docbook:402
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -700,12 +699,12 @@ msgstr ""
 "Pět kostek s po sobě jdoucími čísly, např. 2, 3, 4, 5, 6. Hodnoceno 40 body."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:409
+#: C/index.docbook:407
 msgid "Small Straight"
 msgstr "Malá postupka"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:410
+#: C/index.docbook:408
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -716,12 +715,12 @@ msgstr ""
 "Hodnoceno 30 body."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:424
+#: C/index.docbook:422
 msgid "Authors"
 msgstr "Autoři"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:423
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -740,12 +739,12 @@ msgstr ""
 "\">dokumentu</ulink>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:452
+#: C/index.docbook:450
 msgid "License"
 msgstr "Licence"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:453
+#: C/index.docbook:451
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -759,7 +758,7 @@ msgstr ""
 "Foundation ve verzi 2 nebo (dle vaší volby) novější."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:461
+#: C/index.docbook:459
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -772,7 +771,7 @@ msgstr ""
 "Public License</citetitle>."
 
 #. (itstool) path: para/address
-#: C/index.docbook:474
+#: C/index.docbook:472
 #, no-wrap
 msgid ""
 "\n"
@@ -790,7 +789,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:467
+#: C/index.docbook:465
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
