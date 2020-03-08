@@ -1,15 +1,18 @@
+# Daniel Nylander <po@danielnylander.se>, 2007, 2009.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2020.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gtali doc\n"
-"POT-Creation-Date: 2018-09-01 21:25+0000\n"
-"PO-Revision-Date: 2018-09-03 17:36+0800\n"
-"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
+"Project-Id-Version: tali doc\n"
+"POT-Creation-Date: 2020-02-01 21:41+0000\n"
+"PO-Revision-Date: 2020-03-08 21:20+0100\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -196,27 +199,26 @@ msgstr "Återkoppling"
 #: C/index.docbook:106
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
-"För att rapportera ett fel eller komma med ett förslag angående spelet "
-"<application>Tali</application> eller denna handbok, följ anvisningarna på "
-"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME:s "
-"återkopplingssida</ulink>."
+"För att rapportera ett fel eller komma med ett förslag angående programmet "
+"<application>Tali</application> eller denna handbok, besök <ulink url="
+"\"https://gitlab.gnome.org/GNOME/tali/issues/\">GNOME:s "
+"ärendehanteringssystem</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:116
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>GNOME Tali</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:123
+#: C/index.docbook:121
 msgid "Introduction"
 msgstr "Introduktion"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:125
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -228,7 +230,7 @@ msgstr ""
 "av dina tärningar."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:131
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -237,7 +239,7 @@ msgstr ""
 "som är ett varumärke som tillhör Hasbro, Inc."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:136
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -250,7 +252,7 @@ msgstr ""
 "command> på kommandoraden."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:146
+#: C/index.docbook:144
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -262,12 +264,12 @@ msgstr ""
 "application>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:155
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
 msgstr "Spela GNOME Tali"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:158
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "GNOME Tali i arbete"
 
@@ -276,19 +278,19 @@ msgstr "GNOME Tali i arbete"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163
+#: C/index.docbook:161
 #| msgctxt "_"
 #| msgid ""
 #| "external ref='figures/mainwindow.png' "
-#| "md5='adbcf6421391e5e51c091e13672d3b7e'"
+#| "md5='749f38e8b5cf656fb4a4493549f51d47'"
 msgctxt "_"
 msgid ""
-"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:160
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -299,17 +301,17 @@ msgstr ""
 "över huvudfönstret för GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:172
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr "När spelet börjar ser du resultatet av ditt första tärningskast."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:179
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
 msgstr "Klicka på tärningar som du vill kasta igen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -318,7 +320,7 @@ msgstr ""
 "som du vill kasta om."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:188
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -334,7 +336,7 @@ msgstr ""
 "för stor stege, så kommer du att få en nolla i ditt poäng för stor stege.)"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:198
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -343,7 +345,7 @@ msgstr ""
 "något i en rad så kan du inte ändra poängen senare om du får en bättre hand."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:203
+#: C/index.docbook:201
 msgid ""
 "There is one exception to this rule, if you roll a yahtzee a second time you "
 "can put it in the yahtzee row again for an extra fifty points. You can keep "
@@ -361,7 +363,7 @@ msgstr ""
 "du inte lägga i en yatzy sedan, du kommer sluta på noll."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:213
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -370,12 +372,12 @@ msgstr ""
 "översta sex raderna."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:218
+#: C/index.docbook:216
 msgid "Using the keyboard"
 msgstr "Använda tangentbordet"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:220
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -391,12 +393,12 @@ msgstr ""
 "och ner för raderna och använd mellanslag för att välja."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:232
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "Spelalternativ"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:235
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
 msgstr "Inställningar för GNOME Tali"
 
@@ -405,19 +407,19 @@ msgstr "Inställningar för GNOME Tali"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240
+#: C/index.docbook:238
 #| msgctxt "_"
 #| msgid ""
 #| "external ref='figures/preferences.png' "
-#| "md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+#| "md5='4b2013efa8c9106df25d7bbb77973aef'"
 msgctxt "_"
 msgid ""
-"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 msgstr ""
-"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:237
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -428,17 +430,17 @@ msgstr ""
 "för inställningar för GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:248
+#: C/index.docbook:246
 msgid "Human Players"
 msgstr "Mänskliga spelare"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Antal spelare</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -447,17 +449,17 @@ msgstr ""
 "spelare."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:260
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "Datormotståndare"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:262
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>Fördröjning mellan kast</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:264
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -466,12 +468,12 @@ msgstr ""
 "gör. Detta saktar ner spelet något."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:271
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>Antal motståndare</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:273
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -483,17 +485,17 @@ msgstr ""
 "mänskliga spelare minskas så att det bara finns sex spelare totalt."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:283
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "Speltyp"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:285
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Spelversion att spela</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:287
+#: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet). When you change game type, you must restart the "
@@ -504,22 +506,22 @@ msgstr ""
 "att se den nya speltypen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:297
+#: C/index.docbook:295
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Spelarnamn</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:299
+#: C/index.docbook:297
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "Skriv bara in nya namn i rutorna för att byta namn på spelarna."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:308
+#: C/index.docbook:306
 msgid "Game Strategy"
 msgstr "Spelstrategi"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:309
+#: C/index.docbook:307
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -536,7 +538,7 @@ msgstr ""
 "på 75 om din total i den övre halvan är större än 77."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:318
+#: C/index.docbook:316
 msgid ""
 "Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
 "also put it in the yahtzee row for even more points. This only applies to "
@@ -546,12 +548,12 @@ msgstr ""
 "yatzyraden för ännu fler poäng. Detta gäller endast för det vanliga spelet."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:330
 msgid "Known Bugs and Limitations"
 msgstr "Kända fel och begränsningar"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:333
+#: C/index.docbook:331
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -560,22 +562,22 @@ msgstr ""
 "startar om gtali. Det bör fungera korrekt med ”fel” tärningar."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:339
 msgid "Glossary"
 msgstr "Ordlista"
 
 #. (itstool) path: note/para
-#: C/index.docbook:343
+#: C/index.docbook:341
 msgid "Remember that the order of the dice is not important."
 msgstr "Kom ihåg att tärningarnas ordning är oviktig."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:346
+#: C/index.docbook:344
 msgid "3 of a Kind"
 msgstr "Tretal"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:347
+#: C/index.docbook:345
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -584,12 +586,12 @@ msgstr ""
 "t.ex. 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:352
+#: C/index.docbook:350
 msgid "4 of a Kind"
 msgstr "Fyrtal"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:353
+#: C/index.docbook:351
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -600,12 +602,12 @@ msgstr ""
 "tärningarna."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:359
+#: C/index.docbook:357
 msgid "5 of a Kind"
 msgstr "Femtal"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:360
+#: C/index.docbook:358
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -614,12 +616,12 @@ msgstr ""
 "plus summan av alla tärningarna."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:365
+#: C/index.docbook:363
 msgid "Full House"
 msgstr "Kåk"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:366
+#: C/index.docbook:364
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -630,12 +632,12 @@ msgstr ""
 "Färgspelet är poängen 15 plus summan av alla tärningar."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:373
+#: C/index.docbook:371
 msgid "Full House Same Color"
 msgstr "Färg"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:374
+#: C/index.docbook:372
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -652,12 +654,12 @@ msgstr ""
 "alla tärningarna."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:384
+#: C/index.docbook:382
 msgid "Two Pair Same Color"
 msgstr "Tvåpar i samma färg"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:385
+#: C/index.docbook:383
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -674,12 +676,12 @@ msgstr ""
 "vilket värde som helst. Poängen är totalen av alla tärningarna."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:395
+#: C/index.docbook:393
 msgid "Flush"
 msgstr "Stege"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:396
+#: C/index.docbook:394
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -690,12 +692,12 @@ msgstr ""
 "är svarta, 2 och 5 är röda, och 3 och 4 är gröna. Poängen är 35 poäng."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:403
+#: C/index.docbook:401
 msgid "Large Straight"
 msgstr "Stor stege"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:404
+#: C/index.docbook:402
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -704,12 +706,12 @@ msgstr ""
 "40 poäng."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:409
+#: C/index.docbook:407
 msgid "Small Straight"
 msgstr "Liten stege"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:410
+#: C/index.docbook:408
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -720,12 +722,12 @@ msgstr ""
 "vanliga spelet. Poängen är 30 poäng."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:424
+#: C/index.docbook:422
 msgid "Authors"
 msgstr "Upphovsmän"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:423
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -744,12 +746,12 @@ msgstr ""
 "feedback-bugs\" type=\"help\">dokumentet</ulink>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:452
+#: C/index.docbook:450
 msgid "License"
 msgstr "Licens"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:453
+#: C/index.docbook:451
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -763,7 +765,7 @@ msgstr ""
 "Foundation, antingen version 2 eller (om du så vill) någon senare version."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:461
+#: C/index.docbook:459
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -776,7 +778,7 @@ msgstr ""
 "mer information."
 
 #. (itstool) path: para/address
-#: C/index.docbook:474
+#: C/index.docbook:472
 #, no-wrap
 msgid ""
 "\n"
@@ -794,7 +796,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:467
+#: C/index.docbook:465
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
