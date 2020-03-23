@@ -21,6 +21,7 @@ pkgdatadir = join_paths (datadir, 'tali')
 
 # Dependencies
 gtk_dep = dependency ('gtk+-3.0', version: '>= 3.16')
+gnome_games_dep = dependency('libgnome-games-support-1')
 
 # Configuration
 conf = configuration_data()

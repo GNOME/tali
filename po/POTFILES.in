@@ -6,7 +6,6 @@ data/org.gnome.Tali.desktop.in
 data/org.gnome.Tali.gschema.xml
 data/tali-menus.ui
 src/clist.c
-src/games-scores-dialog.c
 src/gyahtzee.c
 src/setup.c
 src/yahtzee.c

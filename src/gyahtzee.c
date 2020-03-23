@@ -44,11 +44,10 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
+#include <libgnome-games-support.h>
 
 #include "yahtzee.h"
 #include "gyahtzee.h"
-#include "games-scores.h"
-#include "games-scores-dialog.h"
 
 #define DELAY_MS 600
 
@@ -113,14 +112,40 @@ static const GOptionEntry yahtzee_options[] = {
   {NULL}
 };
 
-static const GamesScoresCategory category_array[] = {
-  {"Regular", NC_("game type", "Regular") },
+typedef struct
+{
+  gchar *key;
+  gchar *name;
+} key_value;
+
+static const key_value category_array[] = {
+  /* Order must match GameType enum order */
+  {"Regular", NC_("game type", "Regular")},
   {"Colors",  NC_("game type", "Colors")}
 };
 
-GamesScores *highscores;
+const gchar *
+category_name_from_key (const gchar *key)
+{
+  int i;
+  for (i = 0; i < G_N_ELEMENTS (category_array); ++i) {
+    if (g_strcmp0 (category_array[i].key, key) == 0)
+      return g_dpgettext2(NULL, "game type", category_array[i].name);
+  }
+  return NULL;
+}
 
-static GtkWidget *dialog = NULL;
+static GamesScoresCategory *
+create_category_from_key (const gchar *key,
+                          gpointer     user_data)
+{
+  const gchar *name = category_name_from_key (key);
+  if (name == NULL)
+    return NULL;
+  return games_scores_category_new (key, name);
+}
+
+GamesScoresContext *highscores;
 
 static void modify_dice (GtkToolButton * widget, gpointer data);
 static void UpdateRollLabel (void);
@@ -154,12 +179,25 @@ update_roll_button_sensitivity (void)
 }
 
 static void
+add_score_cb (GObject      *source_object,
+              GAsyncResult *res,
+              gpointer      user_data)
+{
+  GamesScoresContext *context = GAMES_SCORES_CONTEXT (source_object);
+  GError *error = NULL;
+
+  games_scores_context_add_score_finish (context, res, &error);
+  if (error != NULL) {
+    g_warning ("Failed to add score: %s", error->message);
+    g_error_free (error);
+  }
+}
+
+static void
 CheerWinner (void)
 {
   int winner;
   int i;
-  gint pos;
-  gchar *message;
 
   ShowoffPlayer (ScoreList, CurrentPlayer, 0);
 
@@ -180,25 +218,11 @@ CheerWinner (void)
   ShowoffPlayer (ScoreList, winner, 1);
 
   if (winner < NumberOfHumans) {
-    pos = games_scores_add_plain_score (highscores, (guint32) WinningScore);
-
-    if (pos > 0) {
-      if (dialog) {
-        gtk_window_present (GTK_WINDOW (dialog));
-      } else {
-        dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
-        message =
-  	  g_strdup_printf ("<b>%s</b>\n\n%s", _("Congratulations!"),
-                           pos == 1 ? _("Your score is the best!") :
-                           _("Your score has made the top ten."));
-        games_scores_dialog_set_message (GAMES_SCORES_DIALOG (dialog), message);
-        g_free (message);
-      }
-      games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), pos);
-
-      gtk_dialog_run (GTK_DIALOG (dialog));
-      gtk_widget_hide (dialog);
-    }
+    GamesScoresCategory *category;
+    category = create_category_from_key (category_array[game_type].key, NULL);
+    games_scores_context_add_score (highscores, (guint32) WinningScore,
+                                    category, NULL,
+                                    add_score_cb, NULL);
   }
 
   if (players[winner].name)
@@ -207,8 +231,8 @@ CheerWinner (void)
 	 players[winner].name, WinningScore);
   else
     say (_("Game over!"));
-
 }
+
 static gboolean
 do_computer_turns (void)
 {
@@ -448,7 +472,6 @@ GyahtzeeNewGame (void)
   say (_("Select dice to roll or choose a score slot."));
 
   game_type = get_new_game_type ();
-  games_scores_set_category (highscores, SCORES_CATEGORY);
   NewGame ();
   setup_score_list (ScoreList);
   UpdateRollLabel ();
@@ -625,11 +648,7 @@ about_cb (GSimpleAction * action, GVariant * parameter, gpointer data)
 void
 ShowHighScores (void)
 {
-  if (!dialog)
-    dialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Tali Scores"));
-
-  gtk_dialog_run (GTK_DIALOG (dialog));    
-  gtk_widget_hide (dialog);
+  games_scores_context_run_dialog (highscores);
 }
 
 static void
@@ -855,6 +874,17 @@ GyahtzeeCreateMainWindow (GApplication *app, gpointer user_data)
 static void
 GyahtzeeActivateGame (GApplication *app, gpointer user_data)
 {
+  GamesScoresImporter *importer;
+
+  importer = GAMES_SCORES_IMPORTER (games_scores_directory_importer_new ());
+  highscores = games_scores_context_new_with_importer ("tali",
+                                                       _("Game Type:"),
+                                                       GTK_WINDOW (window),
+                                                       create_category_from_key, NULL,
+                                                       GAMES_SCORES_STYLE_POINTS_GREATER_IS_BETTER,
+                                                       importer);
+  g_object_unref (importer);
+
   if (!gtk_widget_is_visible (window)) {
     gtk_widget_show (window);
     GyahtzeeNewGame ();
@@ -879,8 +909,6 @@ main (int argc, char *argv[])
   application = gtk_application_new ("org.gnome.Tali", 0);
   g_signal_connect (application, "startup", G_CALLBACK (GyahtzeeCreateMainWindow), NULL);
   g_signal_connect (application, "activate", G_CALLBACK (GyahtzeeActivateGame), NULL);
-
-  games_scores_startup ();
 
   /* Reset all yahtzee variables before parsing args */
   YahtzeeInit ();
@@ -939,12 +967,6 @@ main (int argc, char *argv[])
       printf ("Computer average: %.2f for %d trials\n", sum_scores / test_computer_play, NUM_TRIALS);
       exit (0);
   }
-
-  highscores = games_scores_new ("tali",
-                                 category_array, G_N_ELEMENTS (category_array),
-                                 "game type", NULL,
-                                 0 /* default category */,
-                                 GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
   gtk_window_set_default_icon_name ("org.gnome.Tali");
 
