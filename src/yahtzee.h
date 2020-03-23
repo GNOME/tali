@@ -146,12 +146,3 @@ typedef  enum { GAME_YAHTZEE = 0, GAME_KISMET } GameType;
 extern GameType game_type;
 
 #endif /* _yahtzee_H_ */
-
-
-/* Arrgh - lets all use the same tabs under emacs: 
-Local Variables:
-tab-width: 8
-c-basic-offset: 8
-indent-tabs-mode: nil
-End:
-*/

@@ -1,5 +1,3 @@
-/* -*- mode:C; indent-tabs-mode:nil; tab-width:8; c-basic-offset:8 -*- */
-
 /*
  * Gyatzee: Gnomified Yahtzee game.
  * (C) 1998 the Free Software Foundation

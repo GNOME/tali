@@ -784,10 +784,3 @@ RedoPossible (void)
 {
   return RedoList != NULL;
 }
-
-/* Arrgh - lets all use the same tabs under emacs: 
-Local Variables:
-tab-width: 8
-c-basic-offset: 8
-indent-tabs-mode: nil
-*/
