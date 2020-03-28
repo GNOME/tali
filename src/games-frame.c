@@ -27,6 +27,7 @@ enum {
 };
 
 struct _GamesFrame {
+  GtkBox     parent;
   GtkWidget *label;
   GtkWidget *alignment;
 };
