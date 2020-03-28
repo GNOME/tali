@@ -25,23 +25,8 @@
 G_BEGIN_DECLS
 
 #define GAMES_TYPE_FRAME            (games_frame_get_type ())
-#define GAMES_FRAME(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GAMES_TYPE_FRAME, GamesFrame))
-#define GAMES_FRAME_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GAMES_TYPE_FRAME, GamesFrameClass))
-#define GAMES_IS_FRAME(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GAMES_TYPE_FRAME))
-#define GAMES_IS_FRAME_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GAMES_TYPE_FRAME))
-#define GAMES_FRAME_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GAMES_TYPE_FRAME, GamesFrameClass))
+G_DECLARE_FINAL_TYPE (GamesFrame, games_frame, GAMES, FRAME, GtkBox);
 
-typedef struct GamesFramePrivate GamesFramePrivate;
-
-typedef struct {
-  GtkBox parent_instance;
-} GamesFrame;
-
-typedef struct {
-  GtkBoxClass parent_class;
-} GamesFrameClass;
-
-GType      games_frame_get_type  (void);
 GtkWidget *games_frame_new       (const char *label);
 void       games_frame_set_label (GamesFrame *frame,
                                   const char *label);
