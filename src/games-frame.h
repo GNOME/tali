@@ -36,8 +36,6 @@ typedef struct GamesFramePrivate GamesFramePrivate;
 
 typedef struct {
   GtkBox parent_instance;
-  /*< private >*/
-  GamesFramePrivate *priv;
 } GamesFrame;
 
 typedef struct {
