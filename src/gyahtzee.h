@@ -1,5 +1,4 @@
-#ifndef _Gyahtzee_H_
-#define _Gyahtzee_H_
+#pragma once
 /*
  * Gyatzee: Gnomified Yahtzee game.
  * (C) 1998 the Free Software Foundation
@@ -39,4 +38,3 @@ extern void set_new_game_type(GameType type);
 extern int GyahtzeeAbort;
 extern GtkWidget *ScoreList;
 extern void update_undo_sensitivity(void);
-#endif /* _Gyahtzee_H_ */

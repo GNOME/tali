@@ -18,8 +18,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef GAMES_FRAME_H
-#define GAMES_FRAME_H
+#pragma once
 
 #include <gtk/gtk.h>
 
@@ -48,5 +47,3 @@ void       games_frame_set_label (GamesFrame *frame,
                                   const char *label);
 
 G_END_DECLS
-
-#endif /* !GAMES_FRAME_H */

@@ -1,5 +1,4 @@
-#ifndef _yahtzee_H_
-#define _yahtzee_H_
+#pragma once
 /*
  * Gyatzee: Gnomified Yahtzee game.
  * (C) 1998 the Free Software Foundation
@@ -144,5 +143,3 @@ enum { SCORE_OK = 0, SLOT_USED, PLAYER_DONE, YAHTZEE_NEWGAME };
 
 typedef  enum { GAME_YAHTZEE = 0, GAME_KISMET } GameType;
 extern GameType game_type;
-
-#endif /* _yahtzee_H_ */
