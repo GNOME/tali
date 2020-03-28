@@ -258,8 +258,10 @@ setup_game (void)
   }
 
   setupdialog = gtk_dialog_new_with_buttons (_("Preferences"),
-					     GTK_WINDOW (window),
-					     GTK_DIALOG_USE_HEADER_BAR, NULL);
+                                             GTK_WINDOW (window),
+                                             GTK_DIALOG_USE_HEADER_BAR,
+                                             NULL,
+                                             NULL);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (setupdialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (setupdialog), FALSE);
   g_signal_connect (G_OBJECT (setupdialog), "delete_event",
