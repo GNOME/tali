@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-01-27 12:51+0000\n"
-"PO-Revision-Date: 2020-03-16 19:13+0200\n"
+"POT-Creation-Date: 2020-03-28 11:23+0000\n"
+"PO-Revision-Date: 2020-04-25 11:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
 "=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 20.07.70\n"
 "X-Project-Style: gnome\n"
 
 #: data/help-overlay.ui:16
@@ -74,13 +74,12 @@ msgid "Show Keyboard Shortcuts"
 msgstr "Показати клавіатурні скорочення"
 
 #: data/help-overlay.ui:86
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Вийти"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Кістяний покер"
 
@@ -104,7 +103,7 @@ msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Грайте проти від одного до п'яти суперників, у три різні рівні складності."
 
-#: data/org.gnome.Tali.appdata.xml.in:49
+#: data/org.gnome.Tali.appdata.xml.in:85
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
@@ -124,9 +123,6 @@ msgid "Delay between rolls"
 msgstr "Затримка між киданнями"
 
 #: data/org.gnome.Tali.gschema.xml:12
-#| msgid ""
-#| "Choose whether or not to insert a delay between the computer's dice rolls "
-#| "so the player can follow what it is doing."
 msgid ""
 "Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
@@ -135,14 +131,10 @@ msgstr ""
 "щоб гравець міг бачити, що діється."
 
 #: data/org.gnome.Tali.gschema.xml:16
-#| msgid "Display the computer's thoughts"
 msgid "Display the computer’s thoughts"
 msgstr "Показувати хід думок комп'ютера"
 
 #: data/org.gnome.Tali.gschema.xml:17
-#| msgid ""
-#| "If set to true, a dump of the AI's working will be done to standard "
-#| "output."
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
@@ -150,8 +142,6 @@ msgstr ""
 "інтелекту."
 
 #: data/org.gnome.Tali.gschema.xml:20
-#| msgctxt "PlayerNames"
-#| msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ 'Людина', 'Олена', 'Микола', 'Соломія', 'Сергій', 'Йосип' ]"
@@ -182,7 +172,6 @@ msgid "_Help"
 msgstr "_Довідка"
 
 #: data/tali-menus.ui:29
-#| msgid "_About"
 msgid "_About Tali"
 msgstr "_Про «Кістяний покер»"
 
@@ -200,111 +189,66 @@ msgstr "Результат: %d"
 msgid "Field used"
 msgstr "Зайняте поле"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Час"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Рахунок"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dхв %2$dс"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "Нова гра"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Дата"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "Сповільнити дії комп'ютера"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "Показувати хід думок комп'ютера"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "Кількість комп'ютерних суперників"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "Кількість"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "Кількість суперників - людей"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "Вибір гри: звичайна чи кольорова"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "РЯДОК"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "Кількість ігор лише для комп'ютерів"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "Кількість спроб для кожного кидка комп'ютера"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:352
 msgctxt "game type"
 msgid "Regular"
 msgstr "Звичайна"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:353
 msgctxt "game type"
 msgid "Colors"
 msgstr "Кольори"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Кинути усі!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:810
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Кинути!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Нічия."
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Результати Талі"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Вітаємо!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "Ваш результат найкращий!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Ваш результат попав у десятку найкращих."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -312,49 +256,49 @@ msgstr[0] "Гравець %s виграв гру набравши %d очко"
 msgstr[1] "Гравець %s виграв гру набравши %d очка"
 msgstr[2] "Гравець %s виграв гру набравши %d очок"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "Гру закінчено!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Комп'ютер грає за %s"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! — ваш хід."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "Виберіть кості для повторного кидка або виберіть клітину відліку."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "Кидати"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Можна зробити лише три кидка. Виберіть клітину."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "Версія для GNOME (1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Консольна версія (1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Кольори гри та рівень штучного інтелекту (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "Варіанти гри в покер з костями та грошами."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -362,69 +306,74 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 ">Daniel Korostil <ted.korostiled@gmail.com>"
 
-#: src/gyahtzee.c:774
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "Повернути останній хід"
 
-#: src/gyahtzee.c:993 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+#| msgid "Game Type"
+msgid "Game Type:"
+msgstr "Тип гри:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "Людина"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "Параметри буде оновлено в наступній грі."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "Параметри"
 
-#: src/setup.c:280
+#: src/setup.c:278
 msgid "Human Players"
 msgstr "Гравців-людей"
 
-#: src/setup.c:290
+#: src/setup.c:288
 msgid "_Number of players:"
 msgstr "_Кількість гравців:"
 
-#: src/setup.c:304
+#: src/setup.c:302
 msgid "Computer Opponents"
 msgstr "Комп'ютерних суперників"
 
 #. --- Button ---
-#: src/setup.c:311
+#: src/setup.c:309
 msgid "_Delay between rolls"
 msgstr "_Затримка між киданнями"
 
-#: src/setup.c:321
+#: src/setup.c:319
 msgid "N_umber of opponents:"
 msgstr "К_ількість опонентів:"
 
-#: src/setup.c:335
+#: src/setup.c:333
 msgid "_Difficulty:"
 msgstr "Ск_ладність"
 
-#: src/setup.c:338
+#: src/setup.c:336
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Легко"
 
-#: src/setup.c:339
+#: src/setup.c:337
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Середньо"
 
-#: src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Складно"
 
 #. --- Combo (yahtzee or kismet style ----
-#: src/setup.c:351
+#: src/setup.c:349
 msgid "Game Type"
 msgstr "Тип гри"
 
 #. --- PLAYER NAMES FRAME ----
-#: src/setup.c:363
+#: src/setup.c:361
 msgid "Player Names"
 msgstr "Імена гравців"
 
@@ -531,3 +480,33 @@ msgstr "Виберіть клітину відліку."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 однакових [разом]"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Час"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Рахунок"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dхв %2$dс"
+
+#~ msgid "New Game"
+#~ msgstr "Нова гра"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Tali Scores"
+#~ msgstr "Результати Талі"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Вітаємо!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "Ваш результат найкращий!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Ваш результат попав у десятку найкращих."
