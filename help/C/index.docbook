@@ -283,8 +283,7 @@
         <term><guimenuitem>Version of the game to play</guimenuitem></term>
 	<listitem>
 	  <para>Play either the regular version (similar to Yahtzee) or the
-	    version with colors (similar to Kismet). When you change game type,
-        you must restart the game to see use the new game type.
+	    version with colors (similar to Kismet).
           </para>
         </listitem>
 	</varlistentry>
