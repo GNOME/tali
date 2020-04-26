@@ -198,14 +198,14 @@
       better hand.
     </para>
 
-    <para>There is one exception to this rule, if you roll a yahtzee a
-     second time you can put it in the yahtzee row again for an extra
+    <para>There is one exception to this rule, if you roll 5 of a kind a
+     second time you can put it in the 5 of a kind row again for an extra
      fifty points. You can keep doing this each time you get another
-     yahtzee. At the end of the game you will be given extra rolls to
+     5 of a kind. At the end of the game you will be given extra rolls to
      fill in the other rows. Be warned that if you score zero in your
-     yahtzee row (i.e. you filled that row with something that wasn't
-     a yahtzee) then you can't put a yahtzee in afterward, zero is all
-     you will score.
+     5 of a kind row (i.e. you filled that row with something that wasn't
+     a 5 of a kind) then you can't put a 5 of a kind in afterward, zero is
+     all you will score.
     </para>
 
     <para>There is also a bonus of 35 points if you score a total of
@@ -312,9 +312,9 @@
       is between 71 and 77, and a bonus of 75 if your upper half total is
       greater than 77.
       </para>
-      <para>Don't forget about multiple yahtzees, if you roll a second
-       yahtzee you can also put it in the yahtzee row for even more points.
-       This only applies to the regular game.
+      <para>Don't forget about multiple 5 of a kinds, if you roll a second
+       5 of a kind you can also put it in the 5 of a kind row for even more
+       points. This only applies to the regular game.
       </para>
     </sect1>	
  <!-- ============= Bugs ================================== -->
