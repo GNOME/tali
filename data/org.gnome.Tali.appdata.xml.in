@@ -23,6 +23,21 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.37.1" date="2020-04-26" type="development">
+      <description>
+        <p>
+          This is an unstable release in the 3.37 development series,
+          with the following improvements:
+        </p>
+        <ul>
+          <li>Scores support changed to use libgnome-games-support</li>
+          <li>Various code modernization</li>
+          <li>Snap package updated to use gnome-3-34 extension </li>
+          <li>Help updates</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.36.1" date="2020-03-28" type="stable">
       <description>
         <p>

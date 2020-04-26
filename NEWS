@@ -1,3 +1,12 @@
+Tali 3.37.1
+===========
+* Development release
+* New dependency on libgnome-games-support (Mart)
+* Various code modernization (Mart)
+* Snap package updated to use gnome-3-34 extension (Heather Ellsworth)
+* Help updates (Mart)
+* Translation updates
+
 Tali 3.36.1
 ===========
 * Translation updates
