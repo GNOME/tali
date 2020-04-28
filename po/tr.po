@@ -12,14 +12,14 @@
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
 # Çağatay Yiğit Şahin <cyigitsahin@outlook.com>, 2017.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2019.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2019, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-09 12:15+0000\n"
-"PO-Revision-Date: 2019-02-10 20:47+0300\n"
+"POT-Creation-Date: 2020-03-28 11:23+0000\n"
+"PO-Revision-Date: 2020-04-28 16:42+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 3.30.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -85,7 +85,7 @@ msgid "Quit"
 msgstr "Çıkış"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Tali"
 
@@ -106,9 +106,9 @@ msgstr ""
 
 #: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr "Birle beş arasında rakiple üç zorluk seviyesinde oynayın."
+msgstr "Birle beş arasında rakiple üç zorluk düzeyinde oynayın."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:85
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -122,12 +122,6 @@ msgstr "Poker stili bir zar oyununda olasılıkları yenin"
 #: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
@@ -149,13 +143,13 @@ msgstr "Bilgisayarın düşüncelerini görüntüle"
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
-"Doğru olarak ayarlanırsa, YZʼnin çalışmasının dökümü standart çıktıya "
+"Doğru olarak ayarlanırsa, YZ’nin çalışmasının dökümü standart çıktıya "
 "aktarılacak."
 
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'İnsan', 'Onur', 'Tarık', 'Bengü', 'Barış', 'Işıl' ]"
+msgstr "[ 'İnsan', 'Tayfun', 'Tarık', 'Nazlı', 'Barış', 'Işıl' ]"
 
 #: data/org.gnome.Tali.gschema.xml:23
 msgctxt "GameType"
@@ -200,253 +194,212 @@ msgstr "Puan: %d"
 msgid "Field used"
 msgstr "Kullanılan alan"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Zaman"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Puan"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$ddk %2$dsn"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "Yeni Oyun"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Tarih"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "Bilgisayar hamlelerini geciktir"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "Bilgisayar düşüncelerini göster"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "Bilgisayar rakiplerin sayısı"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "SAYI"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "İnsan rakiplerin sayısı"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "Oyun tercihi: Sıradan veya Renkli"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "DİZGİ"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "Yalnızca bilgisayarla oynanabilen oyunların sayısı"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "Bilgisayar için her zar atmadaki denemelerin sayısı"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:352
 msgctxt "game type"
 msgid "Regular"
 msgstr "Sıradan"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:353
 msgctxt "game type"
 msgid "Colors"
 msgstr "Renkler"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Tümünü salla!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Salla!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Oyun berabere bitti!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Tali Puanları"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Tebrikler!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "En iyi skor sizinki!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Puanınız en iyi on listesine girdi."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s oyunu %d puanla kazandı"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "Oyun bitti!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Bilgisayar %s için oynuyor"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Sıra sende."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "Yeniden atmak için zarı seç ya da bir puan yuvası seç."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "Salla"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Yalnızca üç kez zar atma hakkınız var. Bir puan yuvası seçin."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "GNOME sürümü (1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Konsol sürümü (1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Renkler oyunu ve çok düzeyli YZ (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "Zar ve daha az parayla bir poker çeşidi."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
 "Muhammet Kara <muhammetk@gmail.com>"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "En son hamlenizi geri alın"
 
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "Oyun Türü:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "İnsan"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "Tercihler sonraki oyunda güncellenecek."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/setup.c:280
+#: src/setup.c:278
 msgid "Human Players"
 msgstr "İnsan Oyuncular"
 
-#: src/setup.c:290
+#: src/setup.c:288
 msgid "_Number of players:"
 msgstr "_Oyuncu sayısı:"
 
-#: src/setup.c:304
+#: src/setup.c:302
 msgid "Computer Opponents"
 msgstr "Bilgisayar Rakipler"
 
 #. --- Button ---
-#: src/setup.c:311
+#: src/setup.c:309
 msgid "_Delay between rolls"
 msgstr "_Atışlar arası süre"
 
-#: src/setup.c:321
+#: src/setup.c:319
 msgid "N_umber of opponents:"
 msgstr "_Rakip sayısı:"
 
-#: src/setup.c:335
+#: src/setup.c:333
 msgid "_Difficulty:"
 msgstr "_Zorluk derecesi:"
 
-#: src/setup.c:338
+#: src/setup.c:336
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Kolay"
 
-#: src/setup.c:339
+#: src/setup.c:337
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Zor"
 
 #. --- Combo (yahtzee or kismet style ----
-#: src/setup.c:351
+#: src/setup.c:349
 msgid "Game Type"
 msgstr "Oyun Türü"
 
 #. --- PLAYER NAMES FRAME ----
-#: src/setup.c:363
+#: src/setup.c:361
 msgid "Player Names"
 msgstr "Oyuncu Adları"
 
 #: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
-msgstr "1'ler [1'lerin toplamı]"
+msgstr "1’ler [1’lerin toplamı]"
 
 #: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
-msgstr "2'ler [2'lerin toplamı]"
+msgstr "2’ler [2’lerin toplamı]"
 
 #: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
-msgstr "3'ler [3'lerin toplamı]"
+msgstr "3’ler [3’lerin toplamı]"
 
 #: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
-msgstr "4'ler [4'lerin toplamı]"
+msgstr "4’ler [4’lerin toplamı]"
 
 #: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
-msgstr "5'ler [5'lerin toplamı]"
+msgstr "5’ler [5’lerin toplamı]"
 
 #: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
-msgstr "6'lar [6'ların toplamı]"
+msgstr "6’lar [6’ların toplamı]"
 
 #. End of upper panel
 #: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
@@ -493,7 +446,7 @@ msgstr "Yukarı Toplam"
 
 #: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
-msgstr "62'den büyükse bonus"
+msgstr "62’den büyükse bonus"
 
 #. End of upper panel
 #: src/yahtzee.c:115 src/yahtzee.c:525
@@ -527,6 +480,39 @@ msgstr "Bir puan yuvası seçin."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 Tane Aynısından [toplam]"
+
+#~ msgid "org.gnome.Tali"
+#~ msgstr "org.gnome.Tali"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Zaman"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Puan"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$ddk %2$dsn"
+
+#~ msgid "New Game"
+#~ msgstr "Yeni Oyun"
+
+#~ msgid "Date"
+#~ msgstr "Tarih"
+
+#~ msgid "Tali Scores"
+#~ msgstr "Tali Puanları"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Tebrikler!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "En iyi skor sizinki!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Puanınız en iyi on listesine girdi."
 
 #~ msgid "tali"
 #~ msgstr "tali"
