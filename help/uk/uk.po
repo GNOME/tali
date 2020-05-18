@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
 "POT-Creation-Date: 2020-04-28 15:53+0000\n"
-"PO-Revision-Date: 2020-05-17 19:55+0300\n"
+"PO-Revision-Date: 2020-05-18 15:04+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,10 @@ msgid ""
 "straight, and full house. The player is allowed 3 rolls per turn and can "
 "hold certain dice with each roll."
 msgstr ""
+"«Кістяний покер» (кодова назва «Tali») — гра Yahtzee для GNOME. Кравець кидає"
+" набір кісток, намагаючись отримати найкращу комбінацію, зокрема 4 однакових"
+" значення, малий стріт або фул хаус. Протягом раунду гравець може виконати 3"
+" кидання, лишаючи незмінними частину зі своїх кісток."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:36
@@ -219,6 +223,10 @@ msgid ""
 "money. You roll five dice three times and try to create the best "
 "<quote>hand</quote>. Your two rerolls may include any or all of your dice."
 msgstr ""
+"<application>Кістяний покер GNOME</application> — тип покера з кістками і"
+" меншими витратами. Ви кидаєте до п'яти кісток три рази у спробах отримати"
+" найкращу <quote>комбінацію</quote>. Повторні кидання можуть включати усі або"
+" частину вашого набору кісток."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:129
@@ -226,6 +234,8 @@ msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
 msgstr ""
+"<application>Кістяний покер GNOME</application> є дуже подібним до гри"
+" Yahtzee, права на яку належать Hasbro, Inc."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:134
@@ -235,6 +245,11 @@ msgid ""
 "menuchoice> from the <guimenu>Main Menu</guimenu>, or type <command>gtali</"
 "command> on the command line."
 msgstr ""
+"Щоб запустити <application>Кістяний покер GNOME</application>, виберіть пункт"
+" <menuchoice> <guisubmenu>Ігри</guisubmenu> <guimenuitem>Кістяний покер"
+" GNOME</guimenuitem> </"
+"menuchoice> у <guimenu>Головному меню</guimenu> або введіть команду <command"
+">gtali</command> у командному рядку."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:144
@@ -243,6 +258,10 @@ msgid ""
 "games</filename> package, which is part of the GNOME desktop environment. "
 "This document describes version 2.8 of <application>GNOME Tali</application>."
 msgstr ""
+"<application>Кістяний покер GNOME</application> включено до пакунка <filename"
+">gnome-games</filename>, який є частиною стільничного середовища GNOME. У"
+" цьому випуску описано версію 2.8 <application>Кістяного покера GNOME<"
+"/application>."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:153
@@ -280,12 +299,12 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
-msgstr ""
+msgstr "Після запуску гри ви побачите результат першого кидка кісток."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
-msgstr ""
+msgstr "Клацніть на кістках, які ви хочете кинути повторно."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:181
@@ -293,6 +312,8 @@ msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
 msgstr ""
+"Коли ви виберете усі кістки, які хочете кинути повторно, натисніть кнопку <"
+"guibutton>Кинути!</guibutton>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:186
@@ -304,6 +325,13 @@ msgid ""
 "yahtzee -- 5 of a kind -- and click on the large straight row, you will "
 "receive a zero in your large straight score)."
 msgstr ""
+"Коли у вас буде бажана комбінація або буде вичерпано можливі повторні"
+" кидання, клацніть на рядку, який відповідає тій комбінації, яку ви вважаєте"
+" найкращою. Дуже може бути, що ваш результат буде нульовим, якщо ви натиснете"
+" помилковий рядок — програма просто обчислить вартість відповідної"
+" комбінації. Наприклад, якщо у вас «яцзи» — 5 однакових значень на кістках —"
+" а ви натиснете рядок великого стріта, ви отримаєте нуль очок, оскільки у вас"
+" немає великого стріта."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:196
@@ -311,6 +339,8 @@ msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
 msgstr ""
+"Комбінацію можна вибирати лише один раз — вибравши щось, ви вже не зможете"
+" пізніше змінити результат, якщо викинете кращу комбінацію."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:201
@@ -323,6 +353,13 @@ msgid ""
 "something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
 "afterward, zero is all you will score."
 msgstr ""
+"З цього правила є одне виключення — якщо ви викинете 5 однакових чисел"
+" вдруге, ви можете знову позначити рядок «5 однакових» ще раз, щоб отримати"
+" ще п'ятдесят очок. Ви можете робити це кожного разу, коли знову викидатимете"
+" 5 однакових. Наприкінці гри вам буде додано додаткові кидки для заповнення"
+" інших рядків. Зауважте, що якщо ваш результат у рядку «5 однакових» є"
+" нульовим (тобто ви заповнили цей рядок чимось, що не є 5 однаковими"
+" числами), якщо ви пізніше виберете 5 однакових, вашим результатом буде нуль."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:211
@@ -330,6 +367,8 @@ msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
 msgstr ""
+"Крім того, якщо ваш загальний результат дорівнює 63 очка або більше, вам"
+" надається бонус у 35 очок."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:216
@@ -345,6 +384,13 @@ msgid ""
 "tab to switch between the roll button and the score area, use the arrow keys "
 "to navigate up and down the rows and use space to select."
 msgstr ""
+"Альтернативою використанню миші є клавіші від 1 до 5 для перемикання кісток,"
+" подібно до клацання на них. Клавіша «1» відповідає першій кістці, тощо."
+" Скористайтеся звичайними клавішами керування для кидання кісток або вибору"
+" рядка. Тобто, клавішею Tab можна скористатися для перемикання між клавішею"
+" кидання і областю результатів, клавішами зі стрілочками можна скористатися"
+" для навігації вгору і вниз між рядками. Клавішею «Пробіл» можна скористатися"
+" для позначення пунктів."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:230
@@ -395,6 +441,8 @@ msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
 msgstr ""
+"Визначає кількість гравців-людей. Як ми вже згадували вище, у гру можуть"
+" грати до шести гравців."
 
 #. (itstool) path: variablelist/title
 #: C/index.docbook:258
@@ -412,6 +460,8 @@ msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
 msgstr ""
+"Додати паузу між кидками комп'ютерних суперників, щоб ви могли спостерігати"
+" за подіями. Це дещо уповільнює гру."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:269
@@ -426,6 +476,10 @@ msgid ""
 "limit, the number of human players will be decreased to maintain only six "
 "total players."
 msgstr ""
+"Визначає кількість комп'ютерних суперників. Разом гравців-людей і"
+" комп'ютерних гравців може бути не більше шести. Якщо ви збільшите кількість"
+" одного з типів гравців так, що сума перевищить шість, кількість гравців"
+" іншого типу буде зменшено так, щоб загальна кількість не перевищувала шести."
 
 #. (itstool) path: variablelist/title
 #: C/index.docbook:281
@@ -443,6 +497,8 @@ msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet)."
 msgstr ""
+"Ви можете грати або у звичайну версію (подібну до Yahtzee) або у версію з"
+" кольорами (подібну до Kismet)."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:294
@@ -452,7 +508,7 @@ msgstr "<guimenuitem>Імена гравців</guimenuitem>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
-msgstr ""
+msgstr "Щоб змінити імена гравців, просто введіть нові імена у поля імен."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:305
@@ -469,6 +525,13 @@ msgid ""
 "get a bonus of 55 if your upper half total is between 71 and 77, and a bonus "
 "of 75 if your upper half total is greater than 77."
 msgstr ""
+"Для отримання бонуса слід набрати 63 очки у верхній частині списку. Це"
+" відповідає отриманню трьох типів для кожної кістки у кожному рядку. Якщо у"
+" вас буде результат у понад три кістки у рядках для п'яти і шести, ви можете"
+" скинути невдалі кидання у рядки для одиниць і двійок і отримати бонус. У"
+" версії з кольорами ви можете отримати бонус у 55 очок, якщо загальна сума у"
+" верхній частині перебуває між 71 і 77, і бонус у 75 очок, якщо загальна сума"
+" у верхній половині списку результатів перевищує 77."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:315
@@ -477,6 +540,9 @@ msgid ""
 "you can also put it in the 5 of a kind row for even more points. This only "
 "applies to the regular game."
 msgstr ""
+"Не забувайте про декілька результатів «5 однакових» — якщо ви викинете ще раз"
+" «5 однакових», ви також можете вставити його до рядка «5 однакових», щоб"
+" отримати додаткові очки. Це стосується лише звичайної гри."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:329
@@ -489,6 +555,9 @@ msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
 msgstr ""
+"Якщо ви перемкнули тип гри, гра не використовуватиме нові зображення кісток,"
+" аж доки ви не перезапустите gtali. Гра має продовжуватися належним чином із"
+" «помилковими» кістками."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:338
@@ -498,7 +567,7 @@ msgstr "Глосарій"
 #. (itstool) path: note/para
 #: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
-msgstr ""
+msgstr "Слід зважати на те, що порядок кісток не має значення."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:343
@@ -511,6 +580,8 @@ msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
 msgstr ""
+"Три кістки із однаковими числами. Результат обчислюється як сума чисел на"
+" усіх кістках. Приклад: 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:349
@@ -524,6 +595,9 @@ msgid ""
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
 "of all the dice."
 msgstr ""
+"Чотири кістки із однаковими числами. Результат обчислюється як сума чисел на"
+" усіх кістках. Приклад: 2, 5, 5, 5, 5. У грі з кольорами результат"
+" обчислюється як 25 плюс загальна сума чисел на кістках."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:356
@@ -536,6 +610,8 @@ msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
 msgstr ""
+"П'ять однакових чисел на кістках. Приклад: 3, 3, 3, 3, 3. У грі з кольорами,"
+" результат обчислюється як сума 50 і загальної суми чисел на усіх кістках."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:362
@@ -549,6 +625,10 @@ msgid ""
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
 "Colors game, the score is 15 plus the total of all the dice."
 msgstr ""
+"П'ять кісток із двох груп: одна група із трьох однакових чисел і інша група з"
+" двох кісток із однаковими числами. Приклад: 1, 1, 1, 4, 4. У грі з"
+" кольорами, результат обчислюється як сума 15 і загальної суми чисел на усіх"
+" кістках."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:370
@@ -565,6 +645,12 @@ msgid ""
 "black, 2 and 5 are red, and 3 and 4 are green. The score is 20 plus the "
 "total of all the dice."
 msgstr ""
+"Ця категорія використовується лише у грі з кольорами. П'ять кісток діляться"
+" на дві групи: одна з груп складається із трьох однакових чисел, а інша група"
+" — з двох однакових чисел. Числа мають бути одного кольору. Приклад: 3, 3, 3,"
+" 4, 4. Дві кістки вважаються кістками одного кольору, якщо сума чисел на них"
+" дорівнює 7: 1 і 6 — чорні, 2 і 5 — червоні, а 3 і 4 — зелені. Результат"
+" обчислюється як 20 плюс загальна сума на усіх кістках."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:381
@@ -581,6 +667,12 @@ msgid ""
 "are red, and 3 and 4 are green. The fifth die can be any value. The score is "
 "the total of all the dice."
 msgstr ""
+"Ця категорія використовується лише у грі з кольорами. П'ять кісток діляться"
+" на дві групи: одна з груп складається із двох однакових чисел, а інша група"
+" — з двох однакових чисел. Пари мають бути одного кольору. Приклад: 3, 3, 4,"
+" 4. Дві кістки вважаються кістками одного кольору, якщо сума чисел на них"
+" дорівнює 7: 1 і 6 — чорні, 2 і 5 — червоні, а 3 і 4 — зелені. П'ята кістка"
+" може бути будь-якою. Результат обчислюється як загальна сума на усіх кістках."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:392
@@ -594,6 +686,10 @@ msgid ""
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
 "6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
+"Ця категорія використовується лише у грі з кольорами. П'ять кісток повинні"
+" бути одного кольору. Дві кістки вважаються кістками одного кольору, якщо"
+" сума чисел на них дорівнює 7: 1 і 6 — чорні, 2 і 5 — червоні, а 3 і 4 —"
+" зелені. Результат — 35 очок."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:400
@@ -606,6 +702,8 @@ msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
+"П'ять кісток із послідовними числами. Приклад: 2, 3, 4, 5, 6. Оцінюється у 40"
+" очок."
 
 #. (itstool) path: glossentry/glossterm
 #: C/index.docbook:406
@@ -619,6 +717,9 @@ msgid ""
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
 "points."
 msgstr ""
+"Чотири кістки із послідовними числами. На п'ятій кістці може бути будь-яке"
+" число. Приклад: 2, 3, 4, 5, 5. Цією категорією можна скористатися лише у"
+" звичайній грі. Оцінюється у 30 очок."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:421
@@ -636,6 +737,14 @@ msgid ""
 "this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
 "feedback-bugs\" type=\"help\">document</ulink>."
 msgstr ""
+"Авторами <application>Кістяного покера GNOME</application> є Скот Гевнер"
+" (Scott Heavner <email>sdh@po.cwru.edu</email>) та Орест Зборовський (Orest"
+" Zborowski). Цей підручник було написано Скотом Гевнером (Scott D Heavner <"
+"email>sdh@po.cwru.edu</email>), додаткові відомості було додано Калумом"
+" Маккензі (Callum McKenzie <email>callum@physics.otago.ac.nz</"
+"email>). Щоб повідомити про ваду або пропозицію щодо цієї програми або цього"
+" підручника, скористайтеся настановами з <ulink"
+" url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">цього документа</ulink>."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:449
