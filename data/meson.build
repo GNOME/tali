@@ -1,7 +1,5 @@
-foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256', '512x512']
-    install_data (join_paths ('icons', size, project_id + '.png'),
-                  install_dir: join_paths (datadir, 'icons', 'hicolor', size, 'apps'))
-endforeach
+install_data (join_paths ('icons', 'scalable', project_id + '.svg'),
+              install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
 install_data (join_paths ('icons', 'symbolic', project_id + '-symbolic.svg'),
               install_dir: join_paths (datadir, 'icons', 'hicolor', 'symbolic', 'apps'))
 
