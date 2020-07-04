@@ -23,6 +23,18 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.37.3" date="2020-07-04" type="development">
+      <description>
+        <p>
+          This is an unstable release in the 3.37 development series,
+          with the following improvements:
+        </p>
+        <ul>
+          <li>New application icon</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.37.1" date="2020-04-26" type="development">
       <description>
         <p>
