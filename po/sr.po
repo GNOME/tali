@@ -6,22 +6,24 @@
 # Бранко Кокановић <branko.kokanovic@gmail.com>, 2010.
 # Милош Поповић <gpopac@gmai, 2010.
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2016.
+# Марко М. Костић <marko.m.kostic@gmail.com>, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Гномове игре\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-06 19:39+0000\n"
-"PO-Revision-Date: 2019-02-28 20:18+0100\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2020-08-19 07:39+0200\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
-"Language-Team: српски <gnome-sr@googlegroups.org>\n"
+"Language-Team: Serbian <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Gtranslator 3.36.0\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -79,7 +81,7 @@ msgid "Quit"
 msgstr "Излаз"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Јамб"
 
@@ -103,7 +105,7 @@ msgstr ""
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Играјте између једног и пет противника на три нивоа тежине."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:110
 msgid "The GNOME Project"
 msgstr "Гномов пројекат"
 
@@ -117,12 +119,6 @@ msgstr "Победи противнике у игри са коцкицама н
 #: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "јамб;yahtzee;"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
@@ -195,111 +191,66 @@ msgstr "Разултат: %d"
 msgid "Field used"
 msgstr "Искоришћена поља"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Време"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Резултат"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%dм %dс"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "Нова игра"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Датум"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "Прави паузе између потеза рачунара"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "Приказује размишљања рачунара"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "Број рачунарских противника"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "БРОЈ"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "Број људских противника"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "Избор игре: Обично или у боји"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "НИСКА"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "Број само рачунарских противника за игру"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "Број проба за свако бацање компијутера"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Обична"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Боје"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Бацај све!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Бацај!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Игра је нерешена!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Јамб резултати"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Честитамо!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "Ваш резултат је најбољи!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Ваш резултат је ушао у најбољих 10."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -308,49 +259,49 @@ msgstr[1] "%s је победио са %d поена"
 msgstr[2] "%s је победио са %d поена"
 msgstr[3] "%s је победио са једним поеном"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "Игра је завршена!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Рачунар игра као %s"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! — Ви сте на реду."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "Изаберите коцкице за бацање или изаберите поље за упис."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "Бацај"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Само су три бацања дозвољена! Изаберите поље за упис."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "Издање Гнома (1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Конзолно издање (1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Игра са бојама и вештачка интелигенција са више нивоа (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "Врста покера са коцкицом и мање новца."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
@@ -361,19 +312,24 @@ msgstr ""
 "\n"
 "http://prevod.org — превод на српски језик"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "Поништите ваш најновији ниво"
 
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+#| msgid "Game Type"
+msgid "Game Type:"
+msgstr "Врста игре:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "Човек"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "Измене ће ступити на снагу у следећој игри."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "Поставке"
 
@@ -530,3 +486,36 @@ msgstr "Изаберите место за резултат."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Пет исте [укупно]"
+
+#~ msgid "org.gnome.Tali"
+#~ msgstr "org.gnome.Tali"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Време"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Резултат"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%dм %dс"
+
+#~ msgid "New Game"
+#~ msgstr "Нова игра"
+
+#~ msgid "Date"
+#~ msgstr "Датум"
+
+#~ msgid "Tali Scores"
+#~ msgstr "Јамб резултати"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Честитамо!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "Ваш резултат је најбољи!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Ваш резултат је ушао у најбољих 10."
