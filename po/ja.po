@@ -1,5 +1,5 @@
 # gnome-games ja.po.
-# Copyright (C) 1998-2019 Free Software Foundation, Inc.
+# Copyright (C) 1998-2010, 2012, 2019-2020 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -9,14 +9,14 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2012.
-# sicklylife <translation@sicklylife.jp>, 2019.
+# sicklylife <translation@sicklylife.jp>, 2019-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
 "POT-Creation-Date: 2020-05-31 06:30+0000\n"
-"PO-Revision-Date: 2019-09-09 18:00+0900\n"
+"PO-Revision-Date: 2020-08-23 00:16+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -38,27 +38,27 @@ msgstr "サイをふる"
 #: data/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Toggle the first die"
-msgstr "1つめのサイを切り替える"
+msgstr "1 つめのサイを切り替える"
 
 #: data/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle the second die"
-msgstr "2つめのサイを切り替える"
+msgstr "2 つめのサイを切り替える"
 
 #: data/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Toggle the third die"
-msgstr "3つめのサイを切り替える"
+msgstr "3 つめのサイを切り替える"
 
 #: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Toggle the fourth die"
-msgstr "4つめのサイを切り替える"
+msgstr "4 つめのサイを切り替える"
 
 #: data/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Toggle the fifth die"
-msgstr "5つめのサイを切り替える"
+msgstr "5 つめのサイを切り替える"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
@@ -126,7 +126,7 @@ msgid ""
 "the player can follow what it is doing."
 msgstr ""
 "コンピューターがサイコロを振る際に遅延時間を入れるかどうか選択してください。"
-"プレイヤーは何の目になったか知ることができます。"
+"プレーヤーは何の目になったか知ることができます。"
 
 #: data/org.gnome.Tali.gschema.xml:16
 msgid "Display the computer’s thoughts"
@@ -174,7 +174,7 @@ msgstr "Tali について(_A)"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
-msgstr "その役は既に使用済です! どの役を適用しますか?"
+msgstr "その役はすでに使用済みです! どの役を適用しますか?"
 
 #: src/clist.c:412
 #, c-format
@@ -208,7 +208,7 @@ msgstr "人間の対戦相手の人数を指定する"
 
 #: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
-msgstr "ゲームを選択する (RegularまたはColors)"
+msgstr "ゲームを選択する (標準または色付き)"
 
 #: src/gyahtzee.c:105
 msgid "STRING"
@@ -249,7 +249,7 @@ msgstr "引き分けです!"
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
-msgstr[0] "%s さんが %d点で勝利しました"
+msgstr[0] "%s さんが %d 点で勝利しました"
 
 #: src/gyahtzee.c:231
 msgid "Game over!"
@@ -258,7 +258,7 @@ msgstr "ゲームオーバー!"
 #: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
-msgstr "%s (コンピューター)の番です"
+msgstr "%s (コンピューター) の番です"
 
 #: src/gyahtzee.c:277
 #, c-format
@@ -275,7 +275,7 @@ msgstr "振り"
 
 #: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "3回までしかサイを振れません!: 得点スロットを選択してください"
+msgstr "3 回までしかサイを振れません!: 得点スロットを選択してください"
 
 #: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
@@ -313,10 +313,8 @@ msgid "Undo your most recent move"
 msgstr "直近の操作を元に戻す"
 
 #: src/gyahtzee.c:879
-#, fuzzy
-#| msgid "Game Type"
 msgid "Game Type:"
-msgstr "ゲームの種類"
+msgstr "ゲームの種類:"
 
 #: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
@@ -332,11 +330,11 @@ msgstr "設定"
 
 #: src/setup.c:280
 msgid "Human Players"
-msgstr "人間のプレイヤー"
+msgstr "人間のプレーヤー"
 
 #: src/setup.c:290
 msgid "_Number of players:"
-msgstr "プレイヤーの人数(_N):"
+msgstr "プレーヤーの人数(_N):"
 
 #: src/setup.c:304
 msgid "Computer Opponents"
@@ -378,7 +376,7 @@ msgstr "ゲームの種類"
 #. --- PLAYER NAMES FRAME ----
 #: src/setup.c:363
 msgid "Player Names"
-msgstr "プレイヤーの名前"
+msgstr "プレーヤーの名前"
 
 #: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
