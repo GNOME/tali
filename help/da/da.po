@@ -1,17 +1,14 @@
-# Danish translation for tali-help.
-# This file is distributed under the same license as the gnome-games package.
-# Joe Hansen (joedalton2@yahoo.dk), 2009, 2010.
-#
-# Copyright (C) 2010 Joe Hansen.
-# scootergrisen, 2015.
+# Danish translation for tali.
+# This file is distributed under the same license as the tali package.
+# Joe Hansen <joedalton2@yahoo.dk>, 2009, 2010.
+# scootergrisen, 2015, 2020.
 # Gennemgået (delvist) Ask Hjorth Larsen <asklarsen@gmail.com>, 2016.
 #
-# Tali -> Yatzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tali-help gnome-2-28\n"
-"POT-Creation-Date: 2016-03-18 14:51+0000\n"
-"PO-Revision-Date: 2016-10-02 15:48+0200\n"
+"Project-Id-Version: tali master\n"
+"POT-Creation-Date: 2020-06-20 09:57+0000\n"
+"PO-Revision-Date: 2020-03-05 07:53+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -25,32 +22,11 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Joe Hansen <joedalton2@yahoo.dk>, 2009\n"
-"scootergrisen, 2015\n"
+"scootergrisen <>, 2015, 2020\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163
-msgctxt "_"
-msgid ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
-msgstr "[Strengen bruges ikke]"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240
-msgctxt "_"
-msgid ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
-msgstr "[Strengen bruges ikke]"
+"Dansk-gruppen\n"
+"Websted http://dansk-gruppen.dk\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:27
@@ -66,9 +42,9 @@ msgid ""
 "hold certain dice with each roll."
 msgstr ""
 "Yatzy er som Yahtzee til GNOME eller som poker med terninger. Spilleren "
-"ruller terninger i et forsøg på at skabe de bedst mulige kombinationer, som "
-"4 ens, lille og fuldt hus. Spilleren har ret til 3 kast per runde og kan "
-"fastholde visse terninger ved hvert kast."
+"kaster terninger i et forsøg på at skabe de bedst mulige kombinationer, som "
+"4 ens, lille og fuldt hus. Spilleren må kaste 3 gange pr. tur og kan "
+"fastholde nogle af terningerne ved hvert kast."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:36
@@ -79,7 +55,7 @@ msgstr "<year>2001</year> <holder>Scott D. Heavner</holder>"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:53 C/index.docbook:93
 msgid "GNOME Documentation Project"
-msgstr "GNOME-dokumentationsprojekt"
+msgstr "GNOME-dokumentationsprojektet"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:2
@@ -122,9 +98,9 @@ msgid ""
 msgstr ""
 "En stor del af de navne som anvendes af firmaer til at identificere deres "
 "produkter og tjenester hævdes som værende varemærker. Hvor disse navne "
-"fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af "
-"GNOME-dokumentationsprojeket er gjort opmærksom på disse varemærker, så er "
-"disse navne vist med store bogstaver eller stort begyndelsesbogstav."
+"fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af GNOME-"
+"dokumentationsprojektet er gjort opmærksom på disse varemærker, så er disse "
+"navne vist med store bogstaver eller stort begyndelsesbogstav."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:35 C/legal.xml:35
@@ -207,47 +183,45 @@ msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:86
 msgid ""
-"<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> "
-"<_:revdescription-1/>"
+"<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> <_:"
+"revdescription-1/>"
 msgstr ""
-"<revnumber>Yatzy manual V2.8</revnumber> <date>September 2004</date> "
-"<_:revdescription-1/>"
+"<revnumber>Manual til Yatzy V2.8</revnumber> <date>september 2004</date> <_:"
+"revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:98
 msgid "This manual describes version 2.12 of Tali."
-msgstr "Denne manual beskriver version 2.12 af Yatzy."
+msgstr "Manualen beskriver version 2.12 af Yatzy."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:105
 msgid "Feedback"
-msgstr "Tilbagemeldinger"
+msgstr "Feedback"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:106
 msgid ""
-"To report a bug or make a suggestion regarding the "
-"<application>Tali</application> application or this manual, follow the "
-"directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">GNOME Feedback Page</ulink>."
+"To report a bug or make a suggestion regarding the <application>Tali</"
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
-"Hvis du ønsker at indrapportere en fejl eller komme med et forslag "
-"vedrørende <application>Yatzy</application> eller denne manual så følg "
-"vejledningen på siden <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">tilbagemeldinger omkring GNOME</ulink>."
+"Rapportér en fejl eller foreslå en forbedring til programmet "
+"<application>Yatzy</application> eller manualen ved at besøge <ulink url="
+"\"https://gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:116
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>GNOME Yatzy</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:123
+#: C/index.docbook:121
 msgid "Introduction"
-msgstr "Indledning"
+msgstr "Introduktion"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:125
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -255,56 +229,65 @@ msgid ""
 msgstr ""
 "<application>GNOME Yatzy</application> er en slags poker med terninger og "
 "færre penge. Du kaster fem terninger tre gange og forsøger at skabe den "
-"bedste <quote>hånd</quote>. Dit 2. og 3. kast kan inkludere alle eller "
-"udvalgte terninger."
+"bedste <quote>hånd</quote>. Dit 2. og 3. kast kan inkludere nogle af eller "
+"alle dine terninger."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:131
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
 msgstr ""
-"<application>GNOME Yatzy</application> er meget lig terningspillet Yahtzee "
-"som er et varemærke ejet af Hasbro, Inc."
+"<application>GNOME Yatzy</application> minder meget om terningspillet "
+"Yahtzee som er et varemærke der ejes af Hasbro, Inc."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:136
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
-"<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> "
-"</menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
-"<command>gtali</command> on the command line."
+"<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
+"menuchoice> from the <guimenu>Main Menu</guimenu>, or type <command>gtali</"
+"command> on the command line."
 msgstr ""
-"For at køre <application>GNOME Yatzy</application>, så vælg <menuchoice> "
-"<guisubmenu>Spil</guisubmenu> <guimenuitem>Yatzy</guimenuitem> </menuchoice> "
-"fra <guimenu>Hovedmenuen</guimenu>, eller tast <command>gtali</command> fra "
-"kommandolinjen."
+"For at køre <application>GNOME Yatzy</application> vælges <menuchoice> "
+"<guisubmenu>Spil</guisubmenu> <guimenuitem>GNOME Yatzy</guimenuitem> </"
+"menuchoice> fra <guimenu>Hovedmenuen</guimenu>, eller der skrives "
+"<command>gtali</command> i kommandolinjen."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:146
+#: C/index.docbook:144
 msgid ""
-"<application>GNOME Tali</application> is included in the "
-"<filename>gnome-games</filename> package, which is part of the GNOME desktop "
-"environment. This document describes version 2.8 of <application>GNOME "
-"Tali</application>."
+"<application>GNOME Tali</application> is included in the <filename>gnome-"
+"games</filename> package, which is part of the GNOME desktop environment. "
+"This document describes version 2.8 of <application>GNOME Tali</application>."
 msgstr ""
 "<application>GNOME Yatzy</application> er inkluderet i pakken "
 "<filename>gnome-games</filename>, som er en del af skrivebordsmiljøet GNOME. "
-"Dette dokument beskriver version 2.8 af <application>GNOME "
-"Yatzy</application>."
+"Dokumentet beskriver version 2.8 af <application>GNOME Yatzy</application>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:155
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
-msgstr "Sådan spiller du GNOME Yatzy"
+msgstr "Sådan spilles GNOME Yatzy"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:158
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "GNOME Yatzy i aktion"
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:161
+msgctxt "_"
+msgid ""
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
+msgstr "[billedet er indsendt]"
+
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:160
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -315,27 +298,27 @@ msgstr ""
 "<phrase>Skærmbillede af hovedvinduet i GNOME Yatzy.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:172
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr ""
 "Når spillet starter, ser du resultatet af dit første kast med terningerne."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:179
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
-msgstr "Klik på de terninger, du ønsker at kaste igen."
+msgstr "Klik på de terninger, du vil kaste igen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
 msgstr ""
-"Når du har valgt alle terningerne, du ønsker at kaste igen, så tryk på "
-"knappen <guibutton>Kast!</guibutton>."
+"Når du har valgt alle de terninger, du vil kaste igen, så tryk på knappen "
+"<guibutton>Kast!</guibutton>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:188
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -344,58 +327,57 @@ msgid ""
 "yahtzee -- 5 of a kind -- and click on the large straight row, you will "
 "receive a zero in your large straight score)."
 msgstr ""
-"Når du har en hånd du er glad for, eller er løbet tør for muligheden for at "
-"kaste igen, så klik på en række som svarer til, hvad du forventer er den "
-"bedste kombination. Det er muligt at have et resultat på nul og hvis du "
-"klikker på den forkerte række, så vil du få point der svarer dertil. (Lad os "
-"for eksempel sige at du får yatzy - 5 ens - og klikker på Stor, så vil du få "
-"nul point for rækken stor)."
+"Når du har en hånd du er tilfreds med, eller er løbet tør for terningkast, "
+"så klik på en række som du mener er den bedste kombination. Det er muligt at "
+"have et resultat på 0 og hvis du klikker på den forkerte række, bliver "
+"resultatet herefter. (hvis du f.eks. får yatzy - 5 ens - og klikker på "
+"rækken Stor, så får du 0 point i rækken Stor)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:198
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
 msgstr ""
-"Du kan kun bruge hver kombination en gang, det vil sige, at når du først har "
-"indtastet noget på en plads, så kan du ikke ændre den pointgivning senere, "
-"hvis du kaster en bedre hånd."
+"Du kan kun bruge hver kombination én gang, dvs. at når først du har indsat "
+"noget på en plads, så kan du ikke ændre det senere, hvis du kaster en bedre "
+"hånd."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:203
+#: C/index.docbook:201
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"Der er en undtagelse til denne regel, hvis du kaster en yatzy endnu en gang, "
-"så kan du placere den i rækken yatzy en ekstra gang og opnå 50 ekstra point. "
-"Du kan fortsætte med at gøre dette, hver gang du kaster en yatzy. Til slut i "
-"spillet vil du få ekstra kast til at fylde de resterende rækker ud. Vær "
-"opmærksom på, at hvis du får nul point i din yatzyrække (det vil sige, at du "
-"fyldte noget i den række, som ikke var en yahtzee) så kan du ikke "
-"efterfølgende placere en yatzy der, du vil kun få nul point for denne række."
+"Der er én undtagelse til denne regel, det er hvis du kaster 5 ens for "
+"anden gang, så kan du igen placere den i rækken 5 ens for at få 50 ekstra "
+"point. Det kan du fortsætte med at gøre, hver gang du får 5 ens. I "
+"slutningen af spillet får du ekstra kast til at udfylde de andre rækker. Vær "
+"opmærksom på, at hvis du får 0 point i din række med 5 ens (dvs., at du udfyldte "
+"noget i rækken, som ikke var 5 ens), så kan du ikke efterfølgende placere "
+"en 5 ens der, du får kun 0 point."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:213
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
 msgstr ""
-"Der er også en bonus på 35 point hvis du opnår 63 point eller mere for de "
+"Der er også en bonus på 35 point hvis du får 63 point eller mere i de "
 "øverste seks rækker."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:218
+#: C/index.docbook:216
 msgid "Using the keyboard"
-msgstr "Brug af tastaturet"
+msgstr "Med tastaturet"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:220
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -403,25 +385,36 @@ msgid ""
 "tab to switch between the roll button and the score area, use the arrow keys "
 "to navigate up and down the rows and use space to select."
 msgstr ""
-"Som et alternativ til at bruge musen, så skifter tast 1 til 5 mellem "
-"terningerne, på samme måde som hvis du havde klikket på dem. Tasten 1 svarer "
-"til den første terning og så fremdeles. Brug de sædvanlige styretaster til "
-"at kaste terningen og vælg en række. Det vil sige brug tab til at skifte "
-"mellem kastknappen og pointområdet, brug piletasterne til at navigere op og "
-"ned mellem rækkerne og brug mellemrum for at vælge."
+"Som et alternativ til at bruge musen, så slår tasterne 1 til 5 terningerne "
+"til/fra, på samme måde som hvis du havde klikket på dem. Tasten 1 er den "
+"første terning osv. Brug de sædvanlige styringer til at kaste terningen og "
+"vælge en række. Dvs. brug tabulator til at skifte mellem kast-knappen og "
+"pointområdet, brug piletasterne til at navigere op og ned i rækkerne og brug "
+"mellemrum til at vælge."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:232
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "Spilindstillinger"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:235
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
-msgstr "GNOME Yatzy-indstillinger"
+msgstr "Indstillinger for GNOME Yatzy"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:238
+msgctxt "_"
+msgid ""
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
+msgstr "[billedet er indsendt]"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:237
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -429,103 +422,103 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> "
-"<phrase>Dialogboksen for indstillinger i GNOME Yatzy.</phrase> </textobject>"
+"<phrase>Dialogboksen med indstillinger for GNOME Yatzy.</phrase> </"
+"textobject>"
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:248
+#: C/index.docbook:246
 msgid "Human Players"
-msgstr "Fysiske spillere"
+msgstr "Menneskespillere"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Antal spillere</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
 msgstr ""
-"Vælg antallet af fysiske spillere. Som beskrevet ovenfor kan der kun være 6 "
+"Vælg antallet af menneskespillere. Som beskrevet ovenfor må du højst have 6 "
 "spillere i alt."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:260
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "Computermodstandere"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:262
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
-msgstr "<guimenuitem>Ventetid mellem hvert kast</guimenuitem>"
+msgstr "<guimenuitem>Forsinkelse mellem hvert kast</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:264
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
 msgstr ""
-"Gør at computermodstanderne holder pause mellem hvert kast af terningerne, "
-"så du kan se, hvad de foretager sig. Gør spillet lidt langsommere."
+"Få computermodstanderne til at holde pause mellem hvert kast med "
+"terningerne, så du kan se, hvad de foretager sig. Gør spillet lidt "
+"langsommere."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:271
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
-msgstr "<guimenuitem>Antal spillere</guimenuitem>"
+msgstr "<guimenuitem>Antal modstandere</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:273
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
 "limit, the number of human players will be decreased to maintain only six "
 "total players."
 msgstr ""
-"Vælg antallet af computermodstandere. Du kan have et samlet antal på seks "
-"enten fysiske eller computerspillere. Hvis du forsøger at øge antallet nær "
-"grænsen, vil antallet af fysiske spillere blive mindsket for at bevare det "
-"samlede antal på kun seks spillere."
+"Vælg antallet af computermodstandere. Du må højst have 6 menneske- og "
+"computerspillere i alt. Hvis du forsøger at øge antallet over grænsen, så "
+"vil antallet af menneskespillere blive reduceret så der fortsat er 6 "
+"spillere i alt."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:283
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "Spiltype"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:285
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Versionen af spillet, der skal spilles</guimenuitem>"
 
-# engelsk fejl
 #. (itstool) path: listitem/para
-#: C/index.docbook:287
+#: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
-"Spil enten den klassiske version (der ligner Yahtzee) eller versionen med "
-"farver (der ligner Kismet). Når du ændrer spiltypen, skal du genstarte "
-"spillet for at bruge den nye spiltype."
+"Spil enten den almindelige version (der minder om Yahtzee) eller den version "
+"med farver (der minder om Kismet)."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:297
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Spillernavne</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:299
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
-msgstr "For at ændre navnene på spillerne taster du bare nye navne i boksene."
+msgstr ""
+"For at ændre spillernes navne skal du blot indtaste de nye navne i boksene."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:308
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Spilstrategi"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:309
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -534,115 +527,115 @@ msgid ""
 "get a bonus of 55 if your upper half total is between 71 and 77, and a bonus "
 "of 75 if your upper half total is greater than 77."
 msgstr ""
-"De 63 point der skal opnås for at få bonus i den øverste halvdel svarer til "
-"at få tre af hver terningtype i hver række. Hvis du opnår mere end tre "
-"terninger i fem- og seksrækkerne så kan du tåle at placere et dårligt kast i "
-"enten rækken 1'ere eller 2'ere og stadig få bonus. I farveversionen får du "
-"bonus på 55 hvis din øverste halvdel er mellem 71 og 77, og en bonus på 75 "
-"hvis den øverste halvdel er større end 77."
+"De 63 point der kræves for at få bonussen i den øverste halvdel svarer til "
+"at få tre af hver terningtype i hver række. Hvis du får flere end tre "
+"terninger i rækkerne 5'ere og 6'ere, så kan du tåle at placere et dårligt "
+"kast enten i rækken 1'ere eller rækken 2'ere og stadigvæk få bonussen. I "
+"farveversionen får du en bonus på 55 hvis summen i din øverste halvdel er "
+"mellem 71 og 77, og en bonus på 75 hvis summen i din øverste halvdel er "
+"større end 77."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:318
+#: C/index.docbook:315
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"Glem ikke flerdobbelte yatzyer, hvis du slå mere end en yatzy, kan du også "
-"placere dem i yatzyrækken for endnu flere point. Dette gælder kun i det "
-"klassiske spil."
+"Glem ikke flerdobbelte 5 ens, hvis du kaster 5 ens for anden gang, så "
+"kan du også placere den i rækken med 5 ens for at få endnu flere point. Det "
+"gælder kun i det almindelige spil."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Kendte fejl og begrænsninger"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:333
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
 msgstr ""
-"Når du skifter spiltype, kender spillet ikke de nye terningebilleder før har "
-"genstartet Yatzy. Det bør fungere korrekt med de \"forkerte\" terninger."
+"Når du skifter spiltype, så bruger spillet ikke de nye terningbilleder før "
+"du har genstartet Yatzy. Det bør fungere korrekt med de “forkerte” terninger."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Ordliste"
 
 #. (itstool) path: note/para
-#: C/index.docbook:343
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
-msgstr "Husk at rækkefølgen på terningerne ikke er vigtig."
+msgstr "Husk på at rækkefølgen på terningerne ikke er vigtig."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:346
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "3 ens"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:347
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
 msgstr ""
-"Tre af terningerne har det samme nummer. Pointene er summen af alle "
-"terningerne. For eksempel 1, 2, 2, 2, 5."
+"Tre af terningerne har det samme tal. Giver summen af alle terningerne. F."
+"eks. 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:352
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "4 ens"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:353
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
 "of all the dice."
 msgstr ""
-"Fire af terningerne har det samme nummer. Pointene er summen af alle "
-"terningerne. For eksempel 2, 5, 5, 5, 5. I farvespillet er pointsummen 25 "
-"plus summen af alle terningerne."
+"Fire af terningerne har det samme tal. Giver summen af alle terningerne. F."
+"eks. 2, 5, 5, 5, 5. I farvespillet, gives 25 plus summen af alle terningerne."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:359
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5 ens"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:360
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
 msgstr ""
-"Fem identiske terninger. For eksempel 3, 3, 3, 3, 3. I farvespillet er "
-"pointsummen 50 plus summen af alle terningerne."
+"Fem identiske terninger. F.eks. 3, 3, 3, 3, 3. I farvespillet, gives 50 plus "
+"summen af alle terningerne."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:365
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Fuldt hus"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:366
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
 "Colors game, the score is 15 plus the total of all the dice."
 msgstr ""
-"Fem terninger bestående af to grupper: En gruppe på tre med det samme nummer "
-"og en anden gruppe på to med det samme nummer. For eksempel 1, 1, 1, 4, 4. I "
-"farvespillet, er pointsummen 15 plus summen af alle terningerne."
+"Fem terninger bestående af to grupper: En gruppe på tre med det samme tal og "
+"en anden gruppe på to med det samme tal. F.eks. 1, 1, 1, 4, 4. I "
+"farvespillet, gives 15 plus summen af alle terningerne."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:373
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Fuldt hus - samme farve"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:374
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -651,20 +644,19 @@ msgid ""
 "black, 2 and 5 are red, and 3 and 4 are green. The score is 20 plus the "
 "total of all the dice."
 msgstr ""
-"Denne kategori bruges kun i farvespillet. Fem terninger bestående af to "
-"grupper: En gruppe på tre med de samme tal og en anden gruppe på to med de "
-"samme tal. Tallene skal alle være af samme farve. For eksempel 3, 3, 3, 4, "
-"4. To terninger er den samme farve hvis deres sum er 7: 1 og 6 er sort, 2 og "
-"5 er rød, og 3 og 4 er grøn. Pointsummen er 20 plus summen af alle "
-"terningerne."
+"Kategorien bruges kun i farvespillet. Fem terninger bestående af to grupper: "
+"En gruppe på tre med de samme tal og en anden gruppe på to med de samme tal. "
+"Tallene skal have samme farve. F.eks. 3, 3, 3, 4, 4. To terninger har den "
+"samme farve, hvis deres sum er 7: 1 og 6 er sort, 2 og 5 er rød, og 3 og 4 "
+"er grøn. Giver 20 plus summen af alle terningerne."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:384
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "To par - samme farve"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:385
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -673,92 +665,89 @@ msgid ""
 "are red, and 3 and 4 are green. The fifth die can be any value. The score is "
 "the total of all the dice."
 msgstr ""
-"Denne kategori bruges kun i farvespillet. Fem terninger bestående af to "
-"grupper: En gruppe på to med de samme tal og en anden gruppe på to med de "
-"samme tal. Parrene skal være af samme farve. For eksempel 3, 3, 4, 4. To "
-"terninger er den samme farve hvis deres sum er 7: 1 og 6 er sort, 2 og 5 er "
-"rød, og 3 og 4 er grøn. Den femte terning kan være enhver værdi. Pointsummen "
-"er summen af alle terninger."
+"Kategorien bruges kun i farvespillet. Fem terninger bestående af to grupper: "
+"En gruppe på to med de samme tal og en anden gruppe på to med de samme tal. "
+"Parrene skal have samme farve. F.eks. 3, 3, 4, 4. To terninger har den samme "
+"farve, hvis deres sum er 7: 1 og 6 er sort, 2 og 5 er rød, og 3 og 4 er "
+"grøn. Den femte terning kan være enhver værdi. Giver summen af alle "
+"terningerne."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:395
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Flush"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:396
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
 "6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
-"Denne kategori bruges kun i farvespillet. Fem terninger, som alle er af "
-"samme \"farve\": To terninger er den samme farve, hvis deres sum er 7: 1 og "
-"6 er sort, 2 og 5 er rød, og 3 og 4 er grøn. Pointsummen er 35 point."
+"Kategorien bruges kun i farvespillet. Fem terninger, som alle har den samme "
+"“farve”: To terninger har den samme farve, hvis deres sum er 7: 1 og 6 er "
+"sort, 2 og 5 er rød, og 3 og 4 er grøn. Giver 35 point."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:403
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Stor"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:404
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr ""
-"Fem terninger med fortløbende tal. For eksempel 2, 3, 4, 5, 6. Pointsummen "
-"er 40 point."
+"Fem terninger med fortløbende tal. F.eks. 2, 3, 4, 5, 6. Giver 40 point."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:409
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Lille"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:410
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
 "points."
 msgstr ""
 "Fire terninger med fortløbende tal. Den femte terning kan være ethvert tal. "
-"For eksempel 2, 3, 4, 5, 5. Denne kategori bruges kun i det regulære spil. "
-"Pointsummen er 30 point."
+"F.eks. 2, 3, 4, 5, 5. Kategorien bruges kun i det almindelige spil. Giver 30 "
+"point."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:424
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Forfattere"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
 "written by Scott D Heavner (<email>sdh@po.cwru.edu</email>) with extra "
-"material added by Callum McKenzie "
-"(<email>callum@physics.otago.ac.nz</email>). To report a bug or make a "
-"suggestion regarding this application or this manual, follow the directions "
-"in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">document</ulink>."
+"material added by Callum McKenzie (<email>callum@physics.otago.ac.nz</"
+"email>). To report a bug or make a suggestion regarding this application or "
+"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">document</ulink>."
 msgstr ""
 "<application>GNOME Yatzy</application> blev skrevet af Scott Heavner "
-"(<email>sdh@po.cwru.edu</email>) og Orest Zborowski. Denne manual blev "
-"skrevet af Scott D Heavner (<email>sdh@po.cwru.edu</email>) med ekstra "
-"materiale tilføjet af Callum McKenzie "
-"(<email>callum@physics.otago.ac.nz</email>). For at indrapportere en fejl, "
-"eller komme med et forslag vedrørende dette program eller denne manual, så "
-"følg vejledningen i dette <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">dokument</ulink>."
+"(<email>sdh@po.cwru.edu</email>) og Orest Zborowski. Manualen blev skrevet "
+"af Scott D Heavner (<email>sdh@po.cwru.edu</email>) med ekstra materiale "
+"tilføjet af Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). "
+"Rapportér en fejl eller kom med et forslag til programmet eller manualen ved "
+"at følge instruktionerne i <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">dette dokument</ulink>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:452
+#: C/index.docbook:449
 msgid "License"
 msgstr "Licens"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:453
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -772,20 +761,20 @@ msgstr ""
 "Foundation; enten version 2 eller (ved dit valg) enhver senere version."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:461
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
 "License</citetitle> for more details."
 msgstr ""
-"Dette program distribueres i håb om, at det vil vise sig nyttigt, men\n"
-"UDEN NOGEN FORM FOR GARANTI, uden selv de underforståede garantier\n"
-"omkring SALGBARHED eller EGNETHED TIL ET BESTEMT FORMÅL. Yderligere\n"
-"detaljer kan læses i <citetitle>GNU General Public License</citetitle>."
+"Dette program distribueres i håb om, at det vil vise sig nyttigt, men UDEN "
+"NOGEN FORM FOR GARANTI, uden selv de underforståede garantier omkring "
+"SALGBARHED eller EGNETHED TIL ET BESTEMT FORMÅL. Yderligere detaljer kan "
+"læses i <citetitle>GNU General Public License</citetitle>."
 
 #. (itstool) path: para/address
-#: C/index.docbook:474
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -803,21 +792,19 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:467
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
 "obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
-"the Free Software Foundation by visiting <ulink type=\"http\" "
-"url=\"http://www.fsf.org\">their Web site</ulink> or by writing to "
-"<_:address-1/>"
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "En kopi af <citetitle>GNU General Public License</citetitle> er inkluderet "
 "som et tillæg til <citetitle>GNOME-brugervejledningen</citetitle>. Du kan "
 "også få en kopi af <citetitle>GNU General Public License</citetitle> fra "
-"Free Software Foundtation ved at besøge <ulink type=\"http\" "
-"url=\"http://www.fsf.org\">deres websted</ulink> eller skrive til "
-"<_:address-1/>"
+"Free Software Foundtation ved at besøge <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">deres websted</ulink> eller skrive til <_:address-1/>"
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -835,9 +822,8 @@ msgid ""
 "with this manual."
 msgstr ""
 "Der gives tilladelse til at kopiere, distribuere og/eller ændre dette "
-"dokument under betingelserne i GNU Free Documentation License (GFDL) version "
-"1.1, eller enhver senere version udgivet af Free Software Foundation; uden "
-"invariante afsnit, forsidetekster, samt bagsidetekster. Du kan se en kopi af "
-"GFDL her <_:ulink-1/> eller i filen COPYING-DOCS, som distribueres sammen "
-"med denne manual."
-
+"dokument under betingelserne i GNU Free Documentation License (GFDL), "
+"version 1.1 eller enhver senere version udgivet af Free Software Foundation; "
+"uden invariante afsnit, forsidetekster, samt bagsidetekster. Du kan se en "
+"kopi af GFDL her <_:ulink-1/> eller i filen COPYING-DOCS, som distribueres "
+"sammen med denne manual."
