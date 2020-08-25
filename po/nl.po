@@ -37,14 +37,14 @@
 # Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
 # Wouter Bolsterlee <wbolster@gnome.org>, 2008.
 # Redmar <redmar@ubuntu-nl.org>, 2011.
-# Nathan Follens <nthn@unseen.is>, 2015, 2017, 2019.
+# Nathan Follens <nthn@unseen.is>, 2015, 2017, 2019-2020.
 # Justin van Steijn <jvs@fsfe.org>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-13 12:32+0000\n"
-"PO-Revision-Date: 2019-02-24 16:09+0100\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2020-08-25 14:33+0200\n"
 "Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
@@ -53,7 +53,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2011-09-18 07:04+0000\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -111,7 +111,7 @@ msgid "Quit"
 msgstr "Afsluiten"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Tali"
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Speel tegen een tot vijf tegenstanders op drie moeilijkheidsniveaus."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:110
 msgid "The GNOME Project"
 msgstr "Het Gnome-project"
 
@@ -150,12 +150,6 @@ msgstr "Probeer je geluk in een dobbelspel in pokerstijl"
 #: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
@@ -230,116 +224,70 @@ msgstr "Score: %d"
 msgid "Field used"
 msgstr "Veldgrootte"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tijd"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Score"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
-
-# eigenlijk partij bij schaak, maar spel bij andere games
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "Nieuw spel"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Datum"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "Vertraag zetten van de computer"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "Toon gedachten van de computer"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "Aantal computerspelers"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "NUMMER"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "Aantal menselijke spelers"
 
 # kleuren/in kleur
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "Spelkeuze: standaard of kleuren"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "TEKENREEKS"
 
 # maximum aantal?
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "Aantal spellen dat alleen door de computer gespeeld wordt"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "Aantal probeerrondes voor elke gooi van de computer"
 
 # regulier/gewoon/standaard/normaal
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Standaard"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Kleuren"
 
 # alle stenen gooien
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Alles gooien!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Gooien!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Het is gelijkspel!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Tali-scores"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Gefeliciteerd!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "U heeft de beste score!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Uw score zit bij de top tien."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -347,50 +295,50 @@ msgstr[0] "%s wint het spel met %d punt"
 msgstr[1] "%s wint het spel met %d punten"
 
 # voorbij/afgelopen
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "Spel afgelopen!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Computer speelt voor %s"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – Uw beurt."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr ""
 "Selecteer de dobbelstenen die u wilt gooien, of selecteer een scoreplaats."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "Gooien"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Er mag maar drie keer worden gegooid. Selecteer een scoreplaats."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "Gnome-versie (1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Curses-versie (1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Kleurenspel en mulit-level AI (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "Een soort poker met dobbelstenen en minder geld."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
@@ -422,21 +370,25 @@ msgstr ""
 "  Wouter Bolsterlee (uws) https://launchpad.net/~uws\n"
 "  kerplunk https://launchpad.net/~schorpioen"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "Uw laatste zet ongedaan maken"
 
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "Speltype:"
+
 # BUG:
 # ugh... Dit wordt dus bij schaken voor "move format" gebruikt...
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "Mens"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "Voorkeuren zullen bij het volgende spel bijgewerkt worden."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "Voorkeuren"
 
@@ -599,3 +551,37 @@ msgstr "Kies een scoreplaats."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "Vijf dezelfde [totaal]"
+
+#~ msgid "org.gnome.Tali"
+#~ msgstr "org.gnome.Tali"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Tijd"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Score"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dm %2$ds"
+
+# eigenlijk partij bij schaak, maar spel bij andere games
+#~ msgid "New Game"
+#~ msgstr "Nieuw spel"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Tali Scores"
+#~ msgstr "Tali-scores"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Gefeliciteerd!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "U heeft de beste score!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Uw score zit bij de top tien."
