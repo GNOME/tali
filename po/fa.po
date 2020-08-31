@@ -5,15 +5,15 @@
 # Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
-# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014, 2015, 2016, 2017, 2018, 2019.
+# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014-2020.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-03-26 18:41+0000\n"
-"PO-Revision-Date: 2019-09-29 13:16+0000\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2020-08-31 06:27+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -80,7 +80,7 @@ msgid "Quit"
 msgstr "خروج"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "تالی"
 
@@ -104,7 +104,7 @@ msgstr ""
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "بین یک تا پنج حریف و در سه سطح مختلف بازی کنید."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:110
 msgid "The GNOME Project"
 msgstr "پروژهٔ گنوم"
 
@@ -190,178 +190,137 @@ msgstr "امتیاز: %Id"
 msgid "Field used"
 msgstr "اندازهٔ زمین"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "زمان"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "امتیاز"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d دقیقه %2$d ثانیه"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "بازی جدید"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "تاریخ"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "تأخیر در حرکت‌های رایانه"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "نمایش افکار رایانه"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "تعداد حریف‌های رایانه‌ای"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "NUMBER"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "تعداد حریف‌های انسان"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "انتخاب بازی: با قاعده یا رنگ"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "STRING"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "تعداد بازی‌های فقط رایانه‌ای"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "تعداد تلاش‌ها در هر دست برای رایانه"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "معمولی"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "رنگ‌ها"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "ریختن همه!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "ریختن!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "بازی مساوی است!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "امتیازات تالی"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "تبریک!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "امتیاز شما بهترین است!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "امتیاز شما جزء ده تای اول شد."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s بازی را با %Id امتیاز برد"
 msgstr[1] "%s بازی را با %Id امتیاز برد"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "بازی تمام شد!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "رایانه جای %s بازی می‌کند"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! -- نوبت شماست."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "تاس را برای دوباره ریختن انتخاب کنید، یا خانهٔ امتیاز را انتخاب کنید."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "ریختن"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "شما تنها سه بار مجاز به ریختن هستید. خانهٔ امتیاز را انتخاب کنید."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "نگارش گنوم (۱۹۹۸):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "نگارش کنسول (۱۹۹۲):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "بازی رنگ‌ها و هوش مصنوعی چند سطحی (۲۰۰۶):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "گونه‌ای از پوکر با تاس و با پول کمتر."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "برگردان آخرین حرکتان"
 
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "گونهٔ بازی:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "آدم"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "ترجیحات در بازی بعدی به‌روز خواهند شد."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "ترجیحات"
 
@@ -518,3 +477,33 @@ msgstr "اسلات امتیازی را برگزینید."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "۵ تا از یک خال [مجموع]"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "زمان"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "امتیاز"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d دقیقه %2$d ثانیه"
+
+#~ msgid "New Game"
+#~ msgstr "بازی جدید"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
+
+#~ msgid "Tali Scores"
+#~ msgstr "امتیازات تالی"
+
+#~ msgid "Congratulations!"
+#~ msgstr "تبریک!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "امتیاز شما بهترین است!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "امتیاز شما جزء ده تای اول شد."
