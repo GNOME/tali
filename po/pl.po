@@ -1,5 +1,5 @@
 # Polish translation for tali.
-# Copyright © 1998-2019 the tali authors.
+# Copyright © 1998-2020 the tali authors.
 # This file is distributed under the same license as the tali package.
 # Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002.
 # Marcin Gorycki <mgo@olicom.dk>, 1999.
@@ -12,15 +12,15 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2019.
-# Aviary.pl <community-poland@mozilla.org>, 2007-2019.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2020.
+# Aviary.pl <community-poland@mozilla.org>, 2007-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-06 19:39+0000\n"
-"PO-Revision-Date: 2019-02-06 22:12+0100\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2020-09-08 16:52+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -86,7 +86,7 @@ msgid "Quit"
 msgstr "Zakończenie działania"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Kości"
 
@@ -111,7 +111,7 @@ msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Można grać z od jednego do pięciu przeciwników na trzech poziomach trudności."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:110
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -125,12 +125,6 @@ msgstr "Gra w kości w stylu pokera"
 #: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
@@ -203,111 +197,66 @@ msgstr "Punkty: %d"
 msgid "Field used"
 msgstr "Już wykorzystane"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Czas"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Wynik"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d min %2$d s"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "Nowa gra"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Data"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "Opóźnianie ruchów komputera"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "Wyświetlanie myśli komputera"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "Liczba graczy sterowanych przez komputer"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "NUMER"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "Liczba graczy sterowanych przez człowieka"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "Wybór kości do gry: zwykłe lub kolorowe"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "CIĄG"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "Liczba graczy komputerowych"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "Liczba prób dla każdego rzutu dla graczy komputerowych"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Zwykłe"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Kolory"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Rzut wszystkimi!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Rzut!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Remis!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Wyniki gry Kości"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Gratulacje!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "Najlepszy wynik!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Ten wynik kwalifikuje się do pierwszej dziesiątki."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
@@ -315,49 +264,49 @@ msgstr[0] "%s wygrywa z %d punktem"
 msgstr[1] "%s wygrywa z %d punktami"
 msgstr[2] "%s wygrywa z %d punktami"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "Koniec gry!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Komputer gra za gracza %s"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – proszę wykonać ruch."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "Należy wybrać kość do ponownego rzutu lub miejsce wpisu punktów."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "Rzut"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "Można wykonać tylko trzy rzuty. Należy wybrać miejsce zapisu punktów."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "Wersja dla GNOME (1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Wersja dla konsoli (1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "Kolory w grze i ustawienia inteligencji przeciwników (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "Rodzaj pokera z kośćmi i mniejszymi pieniędzmi."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -371,22 +320,26 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2019\n"
-"Aviary.pl <community-poland@mozilla.org>, 2007-2019"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2020\n"
+"Aviary.pl <community-poland@mozilla.org>, 2007-2020"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "Cofa ostatni ruch"
 
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "Typ gry:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "Gracz"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "Preferencje zostaną zaktualizowane w następnej grze."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "Preferencje"
 
@@ -467,11 +420,11 @@ msgstr "Szóstki [suma szóstek]"
 #. End of upper panel
 #: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
-msgstr "Trójka [suma trzech]"
+msgstr "Trójka [suma]"
 
 #: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
-msgstr "Kareta [suma czterech]"
+msgstr "Kareta [suma]"
 
 #: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
@@ -534,7 +487,7 @@ msgstr "Kareta [25 + suma]"
 
 #: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
-msgstr "Generał [50 + suma]"
+msgstr "Piątka [50 + suma]"
 
 #: src/yahtzee.c:249
 msgid "Choose a score slot."
