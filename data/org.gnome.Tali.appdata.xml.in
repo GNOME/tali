@@ -23,6 +23,20 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.38.0" date="2020-09-14" type="stable">
+      <description>
+        <p>
+          This is a stable release, with the following notable improvements
+          since 3.36:
+        </p>
+        <ul>
+          <li>Scores support changed to use libgnome-games-support</li>
+          <li>New application icon</li>
+          <li>Help updates</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.37.92" date="2020-09-06" type="development">
       <description>
         <p>
