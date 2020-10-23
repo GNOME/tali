@@ -63,7 +63,7 @@ msgstr "Canvia el cinquè dau"
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Undo move"
-msgstr "Desfès el moviment"
+msgstr "Desfés el moviment"
 
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
