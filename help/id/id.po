@@ -6,20 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"POT-Creation-Date: 2018-09-01 21:25+0000\n"
-"PO-Revision-Date: 2017-05-19 09:55+0700\n"
+"POT-Creation-Date: 2020-09-25 15:08+0000\n"
+"PO-Revision-Date: 2020-11-08 16:03+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+msgstr ""
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:27
@@ -64,8 +66,9 @@ msgstr ""
 "dibawah syarat-syarat GNU Free Documentation License (GFDL), Versi 1.1 atau "
 "versi yang lebih baru yang diterbitkan oleh Free Software Foundation tanpa "
 "Invariant Sections, tanpa Teks Sampul-Depan, dan tanpa Teks Sampul-Belakang. "
-"Anda dapat menemukan salinan GFDL ini pada <ulink type=\"help\" url=\"help:fdl\">link</ulink> atau dalam berkas "
-"COPYING-DOCS yang didistribusikan dengan panduan ini."
+"Anda dapat menemukan salinan GFDL ini pada <ulink type=\"help\" url=\"help:"
+"fdl\">link</ulink> atau dalam berkas COPYING-DOCS yang didistribusikan "
+"dengan panduan ini."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
@@ -110,6 +113,17 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"DOKUMEN DISEDIAKAN BERDASARKAN \"APA ADANYA\", TANPA JAMINAN DALAM BENTUK "
+"APA PUN, BAIK TEREKSPRESIKAN ATAU TERSIRAT, TERMASUK, TANPA BATASAN, "
+"MENJAMIN BAHWA DOKUMEN ATAU VERSI DOKUMEN YANG DIMODIFIKASI BEBAS DARI CACAT "
+"YANG DAPAT DIPERDAGANGKAN, COCOK UNTUK TUJUAN TERTENTU ATAU TIDAK MELANGGAR. "
+"SELURUH RISIKO TERHADAP KUALITAS, AKURASI, DAN KINERJA DOKUMEN ATAU VERSI "
+"DOKUMEN YANG DIMODIFIKASI ADALAH MILIK ANDA. JIKA DOKUMEN ATAU VERSI YANG "
+"DIMODIFIKASI TERBUKTI CACAT DALAM HAL APA PUN, ANDA (BUKAN PENULIS AWAL, "
+"PENULIS, ATAU KONTRIBUTOR APA PUN) MENANGGUNG BIAYA LAYANAN, PERBAIKAN, ATAU "
+"KOREKSI YANG DIPERLUKAN. SANGGAHAN GARANSI INI MERUPAKAN BAGIAN PENTING DARI "
+"LISENSI INI. TIDAK ADA PENGGUNAAN DOKUMEN ATAU VERSI DOKUMEN YANG "
+"DIMODIFIKASI YANG DIOTORISASI DI BAWAH INI KECUALI DI BAWAH PENAFIAN INI; DAN"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:55 C/legal.xml:55
@@ -125,6 +139,17 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"DALAM KEADAAN APA PUN DAN TANPA TEORI HUKUM, BAIK DALAM KESALAHAN (TERMASUK "
+"KELALAIAN), KONTRAK, ATAU SEBALIKNYA, AKAN PENULIS, PENULIS AWAL, "
+"KONTRIBUTOR APA PUN, ATAU DISTRIBUTOR DOKUMEN ATAU VERSI DOKUMEN YANG "
+"DIMODIFIKASI, ATAU PEMASOK APA PUN DARI PIHAK TERSEBUT, AKAN BERTANGGUNG "
+"JAWAB KEPADA SETIAP ORANG ATAS KERUSAKAN LANGSUNG, TIDAK LANGSUNG, KHUSUS, "
+"INSIDENTAL, ATAU KONSEKUENSIAL DARI KARAKTER APA PUN TERMASUK , TANPA "
+"BATASAN, KERUSAKAN KARENA KEHILANGAN NIAT BAIK, PENGHENTIAN KERJA, KEGAGALAN "
+"KOMPUTER ATAU KERUSAKAN, ATAU SETIAP DAN SEMUA KERUSAKAN ATAU KERUGIAN LAIN "
+"YANG TIMBUL DARI ATAU BERKAITAN DENGAN PENGGUNAAN DOKUMEN DAN VERSI DOKUMEN "
+"YANG DIMODIFIKASI, BAHKAN JIKA PIHAK TERSEBUT HARUS DIBERITAHU TENTANG "
+"KEMUNGKINAN KERUSAKAN TERSEBUT."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:28 C/legal.xml:28
@@ -133,6 +158,9 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"DOKUMEN DAN VERSI MODIFIKASI DOKUMEN YANG DISEDIAKAN MENURUT KETENTUAN DARI "
+"LISENSI GNU FREE DOCUMENTATION DENGAN MEMAHAMI LEBIH LANJUT BAHWA: <_:"
+"orderedlist-1/>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:62
@@ -171,26 +199,25 @@ msgstr "Umpan balik"
 #: C/index.docbook:106
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
 "Untuk melaporkan bug atau membuat saran mengenai aplikasi <application>Tali</"
-"application> atau panduan ini, ikuti petunjuk di <ulink url=\"ghelp:user-"
-"guide?feedback-bugs\" type=\"help\">Halaman Umpan Balik GNOME</ulink>."
+"application> atau panduan ini, kunjungi <ulink url=\"https://gitlab.gnome."
+"org/GNOME/tali/issues/\">Pelacak Masalah GNOME</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:116
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>GNOME Tali</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:123
+#: C/index.docbook:121
 msgid "Introduction"
 msgstr "Pengenalan"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:125
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -202,7 +229,7 @@ msgstr ""
 "termasuk salah satu atau semua dadu Anda."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:131
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -211,7 +238,7 @@ msgstr ""
 "Yahtzee yang merupakan merek dagang dari Hasbro, Inc."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:136
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -224,7 +251,7 @@ msgstr ""
 "command> pada baris perintah."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:146
+#: C/index.docbook:144
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -235,12 +262,12 @@ msgstr ""
 "Dokumen ini menjelaskan versi 2.8 dari <application>GNOME Tali</application>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:155
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
 msgstr "Bermain GNOME Tali"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:158
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "GNOME Tali dalam aksi"
 
@@ -249,20 +276,19 @@ msgstr "GNOME Tali dalam aksi"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163
-#, fuzzy
+#: C/index.docbook:161
 #| msgctxt "_"
 #| msgid ""
 #| "external ref='figures/mainwindow.png' "
 #| "md5='adbcf6421391e5e51c091e13672d3b7e'"
 msgctxt "_"
 msgid ""
-"external ref='figures/mainwindow.png' md5='749f38e8b5cf656fb4a4493549f51d47'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:160
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -273,18 +299,18 @@ msgstr ""
 "layar jendela utama GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:172
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr ""
 "Ketika permainan dimulai, Anda melihat hasil lemparan pertama dari dadu."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:179
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
 msgstr "Klik pada dadu yang Anda ingin lempar lagi."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -293,7 +319,7 @@ msgstr ""
 "tombol <guibutton>Roll!</guibutton>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:188
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -311,7 +337,7 @@ msgstr ""
 "lurus besar Anda)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:198
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -321,27 +347,27 @@ msgstr ""
 "melempar dengan lebih baik."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:203
+#: C/index.docbook:201
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"Ada satu pengecualian untuk aturan ini, jika Anda melempar yahtzee untuk "
-"kedua kalinya Anda bisa menempatkannya di barisan yahtzee lagi untuk "
+"Ada satu pengecualian untuk aturan ini, jika Anda melempar 5 sejenis untuk "
+"kedua kalinya Anda bisa menempatkannya di barisan 5 sejenis lagi untuk "
 "tambahan lima puluh poin. Anda dapat terus melakukan hal ini setiap kali "
-"Anda mendapatkan yahtzee lain. Pada akhir permainan Anda akan diberikan "
+"Anda mendapatkan 5 sejenis lain. Pada akhir permainan Anda akan diberikan "
 "lemparan ekstra untuk mengisi baris lain. Berhati-hatilah jika Anda mencetak "
-"nol berturut-turut pada baris yahtzee Anda (yaitu Anda penuhi baris dengan "
-"sesuatu yang bukan yahtzee) maka Anda tidak dapat menempatkan yahtzee "
+"nol berturut-turut pada baris 5 sejenis Anda (yaitu Anda penuhi baris dengan "
+"sesuatu yang bukan 5 sejenis) maka Anda tidak dapat menempatkan 5 sejenis "
 "sesudahnya, nol adalah semua nilai yang Anda dapatkan."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:213
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -350,12 +376,12 @@ msgstr ""
 "enam baris atas."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:218
+#: C/index.docbook:216
 msgid "Using the keyboard"
 msgstr "Menggunakan papan tik"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:220
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -371,12 +397,12 @@ msgstr ""
 "ruang untuk memilih."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:232
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "Opsi Permainan"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:235
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
 msgstr "Preferensi GNOME Tali"
 
@@ -385,20 +411,19 @@ msgstr "Preferensi GNOME Tali"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240
-#, fuzzy
+#: C/index.docbook:238
 #| msgctxt "_"
 #| msgid ""
 #| "external ref='figures/preferences.png' "
 #| "md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
 msgctxt "_"
 msgid ""
-"external ref='figures/preferences.png' md5='4b2013efa8c9106df25d7bbb77973aef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 msgstr ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:237
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -409,17 +434,17 @@ msgstr ""
 "dialog preferensi GNOME Tali.</phrase> </textobject>"
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:248
+#: C/index.docbook:246
 msgid "Human Players"
 msgstr "Pemain Manusia"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Jumlah pemain</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -428,17 +453,17 @@ msgstr ""
 "diperbolehkan total enam pemain."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:260
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "Lawan Komputer"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:262
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>Tunda antar lemparan</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:264
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -447,12 +472,12 @@ msgstr ""
 "apa yang mereka lakukan. Memperlambat permainan."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:271
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>Jumlah lawan</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:273
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -465,43 +490,41 @@ msgstr ""
 "pemain."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:283
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "Tipe Permainan"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:285
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Versi permainan untuk bermain</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:287
+#: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
 "Bermain baik versi biasa (mirip dengan Yahtzee) atau versi dengan warna "
-"(mirip dengan Kismet). Bila Anda mengubah jenis permainan, Anda harus memula "
-"ulang permainan untuk melihat penggunaan jenis permainan baru."
+"(mirip dengan Kismet)."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:297
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Nama Pemain</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:299
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "Untuk mengubah nama pemain cukup masukkan nama baru di kotak."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:308
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Strategi Permainan"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:309
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -519,23 +542,23 @@ msgstr ""
 "Anda lebih besar dari 77."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:318
+#: C/index.docbook:315
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"Jangan lupa tentang beberapa yahtzee, jika Anda melempar yahtzee kedua Anda "
-"juga bisa menempatkannya pada barisan yahtzee untuk mendapat lebih banyak "
-"poin. Ini hanya berlaku untuk pertandingan reguler."
+"Jangan lupa tentang 5 sejenis, jika Anda melempar 5 sejenis kedua Anda juga "
+"bisa menempatkannya pada barisan 5 sejenis untuk mendapat lebih banyak poin. "
+"Ini hanya berlaku untuk permainan reguler."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Kutu yang Dikenal dan Keterbatasan"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:333
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -545,22 +568,22 @@ msgstr ""
 "dadu yang \"salah\"."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Glosarium"
 
 #. (itstool) path: note/para
-#: C/index.docbook:343
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "Ingat bahwa urutan dadu tidak penting."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:346
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "3 dari sejenis"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:347
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -569,12 +592,12 @@ msgstr ""
 "dadu. misalnya 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:352
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "4 dari sejenis"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:353
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -585,12 +608,12 @@ msgstr ""
 "ditambah total dari semua dadu."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:359
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5 dari sejenis"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:360
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -599,12 +622,12 @@ msgstr ""
 "50 ditambah total dari semua dadu."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:365
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Full House"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:366
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -615,12 +638,12 @@ msgstr ""
 "4. Pada permainan Warna, skor adalah 15 ditambah total dari semua dadu."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:373
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Full House Warna Sama"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:374
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -637,12 +660,12 @@ msgstr ""
 "adalah 20 ditambah total dari semua dadu."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:384
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "Dua Pasangan Warna Sama"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:385
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -659,12 +682,12 @@ msgstr ""
 "apapun. Skor tersebut adalah total dari semua dadu."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:395
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Flush"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:396
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -676,12 +699,12 @@ msgstr ""
 "poin."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:403
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Large Straight"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:404
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -690,12 +713,12 @@ msgstr ""
 "40 poin."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:409
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Small Straight"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:410
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -706,12 +729,12 @@ msgstr ""
 "biasa. skor adalah 30 poin."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:424
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Penulis"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -730,12 +753,12 @@ msgstr ""
 "\" type=\"help\">dokumen</ulink> ini."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:452
+#: C/index.docbook:449
 msgid "License"
 msgstr "Lisensi"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:453
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -750,16 +773,20 @@ msgstr ""
 "versi 2 dari Lisensi, atau (dengan pilihan Anda) versi yang lebih baru."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:461
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
 "License</citetitle> for more details."
 msgstr ""
+"Program ini didistribusikan dengan harapan akan bermanfaat, namun TANPA "
+"ADANYA JAMINAN; bahkan tanpa jaminan tersirat dari KETERDAGANGAN atau "
+"KECOCOKAN BAGI TUJUAN TERTENTU. Lihat Lisensi <citetitle>GNU General Public "
+"License</citetitle> untuk detail selengkapnya."
 
 #. (itstool) path: para/address
-#: C/index.docbook:474
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -777,7 +804,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:467
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
