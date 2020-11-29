@@ -279,7 +279,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
+"external ref='figures/mainwindow.png' md5='8fd8adac7084825adb7894d22b5f278f'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:158
@@ -406,7 +406,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 msgstr ""
-"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
+"external ref='figures/preferences.png' md5='6397c23aca142dd770eeeab1eed929e5'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:235
