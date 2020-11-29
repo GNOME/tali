@@ -279,7 +279,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
-"external ref='figures/mainwindow.png' md5='8fd8adac7084825adb7894d22b5f278f'"
+"external ref='figures/mainwindow.png' md5='0986dc1046e0cfd96283f6b2cdb57913'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:158
