@@ -222,7 +222,7 @@ msgstr "CADENA"
 # FIXME
 #: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
-msgstr "Nombre de partides de només ordinador als que jugar"
+msgstr "Nombre de partides amb només ordinador a les quals jugar"
 
 #: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
@@ -274,7 +274,7 @@ msgstr "%s! – Estigueu atent."
 
 #: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
-msgstr "Seleccioneu el dau per tirar o seleccioneu una casella de puntuació."
+msgstr "Seleccioneu el dau per a tirar o seleccioneu una casella de puntuació."
 
 #: src/gyahtzee.c:497
 msgid "Roll"
