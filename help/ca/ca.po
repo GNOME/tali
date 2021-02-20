@@ -688,7 +688,7 @@ msgid ""
 "6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Aquesta categoria només s’utilitza al joc Colors. Cinc daus que són tots el "
-"mateix \"color\": dos daus són del mateix color si els seus nombres són 7: 1 "
+"mateix «color»: dos daus són del mateix color si els seus nombres són 7: 1 "
 "i 6 són negres, 2 i 5 són vermells i 3 i 4 són verds. La puntuació és de 35 "
 "punts."
 
