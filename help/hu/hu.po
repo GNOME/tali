@@ -1,26 +1,26 @@
 # Hungarian translation for tali.
-# Copyright (C) 2017, 2018, 2020 Free Software Foundation, Inc.
+# Copyright (C) 2017, 2018, 2020, 2021 Free Software Foundation, Inc.
 # This file is distributed under the same license as the tali package.
 #
-# Balázs Úr <ur.balazs at fsf dot hu>, 2017, 2018, 2020.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2017, 2018, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"POT-Creation-Date: 2020-02-01 21:41+0000\n"
-"PO-Revision-Date: 2020-03-07 22:41+0100\n"
-"Last-Translator: Balázs Úr <ur.balazs@fsf.hu>\n"
+"POT-Creation-Date: 2020-09-25 15:08+0000\n"
+"PO-Revision-Date: 2021-03-02 00:28+0100\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <ur.balazs at fsf dot hu>, 2017, 2018, 2020."
+msgstr "Úr Balázs <ur.balazs at fsf dot hu>, 2017, 2018, 2020, 2021."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:27
@@ -197,20 +197,14 @@ msgstr "Visszajelzés"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:106
-#| msgid ""
-#| "To report a bug or make a suggestion regarding the <application>Tali</"
-#| "application> application or this manual, follow the directions in the "
-#| "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME "
-#| "Feedback Page</ulink>."
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
 "application> application or this manual, visit the <ulink url=\"https://"
 "gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
-"A <application>Tali</application> alkalmazás vagy dokumentáció hibáiról"
-" bejelentést, illetve javaslatokat a <ulink"
-" url=\"https://gitlab.gnome.org/GNOME/tali/issues/\">GNOME visszajelzés"
-" oldal</ulink> leírása alapján tehet."
+"A <application>Tali</application> alkalmazás vagy dokumentáció hibáiról "
+"bejelentést, illetve javaslatokat a <ulink url=\"https://gitlab.gnome.org/"
+"GNOME/tali/issues/\">GNOME visszajelzés oldal</ulink> leírása alapján tehet."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:114
@@ -283,10 +277,6 @@ msgstr "A GNOME Tali játék közben"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:161
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/mainwindow.png' "
-#| "md5='749f38e8b5cf656fb4a4493549f51d47'"
 msgctxt "_"
 msgid ""
 "external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
@@ -352,22 +342,30 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:201
+#| msgid ""
+#| "There is one exception to this rule, if you roll a yahtzee a second time "
+#| "you can put it in the yahtzee row again for an extra fifty points. You "
+#| "can keep doing this each time you get another yahtzee. At the end of the "
+#| "game you will be given extra rolls to fill in the other rows. Be warned "
+#| "that if you score zero in your yahtzee row (i.e. you filled that row with "
+#| "something that wasn't a yahtzee) then you can't put a yahtzee in "
+#| "afterward, zero is all you will score."
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"Egyetlen kivétel van a szabály alól: ha egy yahtzee-t dob második "
-"alkalommal, akkor ismét beteheti a yahtzee sorba további ötven pontért. Ezt "
-"folyamatosan csinálhatja minden alkalommal, amikor egy másik yahtzee-t dob. "
-"A játék végén további dobásokat fog kapni, hogy a többi sort is "
-"feltölthesse. Figyelmeztetjük, hogy ha nulla pontot szerez a yahtzee sorban "
-"(azaz olyannal tölti fel a sort, ami nem yahtzee volt), akkor azután már nem "
-"tud yahtzee-t betenni, összesen nulla pontot fog szerezni."
+"Egyetlen kivétel van a szabály alól: ha 5 egyformát dob második alkalommal,"
+" akkor ismét beteheti az 5 egyforma sorba további ötven pontért. Ezt"
+" folyamatosan csinálhatja minden alkalommal, amikor egy másik 5 egyformát"
+" dob. A játék végén további dobásokat fog kapni, hogy a többi sort is"
+" feltölthesse. Figyelmeztetjük, hogy ha nulla pontot szerez az 5 egyforma"
+" sorban (azaz olyannal tölti fel a sort, ami nem 5 egyforma volt), akkor"
+" azután már nem tud 5 egyformát betenni, összesen nulla pontot fog szerezni."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:211
@@ -416,10 +414,6 @@ msgstr "A GNOME Tali beállításai"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:238
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/preferences.png' "
-#| "md5='4b2013efa8c9106df25d7bbb77973aef'"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
@@ -505,35 +499,36 @@ msgstr "<guimenuitem>Az indítandó játék verziója</guimenuitem>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:285
+#| msgid ""
+#| "Play either the regular version (similar to Yahtzee) or the version with "
+#| "colors (similar to Kismet). When you change game type, you must restart "
+#| "the game to see use the new game type."
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
 "Vagy a szabályos verzióval (a Yahtzee programhoz hasonlóval), vagy a színes "
-"verzióval (a Kismet programhoz hasonlóval) játszhat. Amikor megváltoztatja a "
-"játék típusát, akkor újra kell indítani a játékot az új játéktípus "
-"használatához."
+"verzióval (a Kismet programhoz hasonlóval) játszhat."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:295
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Játékosnevek</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:297
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr ""
 "A játékosok neveinek megváltoztatásához egyszerűen írja be az új neveket a "
 "dobozokba."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:306
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Játékstratégia"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:307
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -551,23 +546,27 @@ msgstr ""
 "és 75 pontos bónusz kap, ha a felső félben összesen több mint 77 pontja van."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:316
+#: C/index.docbook:315
+#| msgid ""
+#| "Don't forget about multiple yahtzees, if you roll a second yahtzee you "
+#| "can also put it in the yahtzee row for even more points. This only "
+#| "applies to the regular game."
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"Ne feledkezzen meg a yahtzee többszörözésről. Ha egy második yahtzee-t dob, "
-"akkor azt is beteheti a yahtzee sorba még több pontért. Ezt csak a szabályos "
-"játékban lehet alkalmazni."
+"Ne feledkezzen meg az 5 egyforma többszörözésről. Ha egy második 5 egyformát"
+" dob, akkor azt is beteheti az 5 egyforma sorba még több pontért. Ezt csak a"
+" szabályos játékban lehet alkalmazni."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:330
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Ismert hibák és korlátozások"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:331
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -577,22 +576,22 @@ msgstr ""
 "kockákkal is."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Szójegyzék"
 
 #. (itstool) path: note/para
-#: C/index.docbook:341
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "Ne feledje, hogy a kockák sorrendje nem fontos."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:344
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "3 egyforma"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:345
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -601,12 +600,12 @@ msgstr ""
 "Például. 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:350
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "4 egyforma"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:351
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -617,12 +616,12 @@ msgstr ""
 "kocka összege."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:357
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5 egyforma"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:358
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -631,12 +630,12 @@ msgstr ""
 "plusz az összes kocka összege."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:363
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Full"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:364
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -647,12 +646,12 @@ msgstr ""
 "színes játékban a pontszám 15 plusz az összes kocka összege."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:371
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Azonos színű full"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:372
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -669,12 +668,12 @@ msgstr ""
 "összes kocka összege."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:382
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "Két azonos színű pár"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -691,12 +690,12 @@ msgstr ""
 "értékű lehet. A pontszám az összes kocka összege."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:393
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Színsor"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -707,12 +706,12 @@ msgstr ""
 "adnak: 1 és 6 fekete, 2 és 5 piros, 3 és 4 zöld. A pontszám 35 pont."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:401
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Nagy sor"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:402
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -721,12 +720,12 @@ msgstr ""
 "pont."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:407
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Kis sor"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:408
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -737,12 +736,12 @@ msgstr ""
 "használható. A pontszám 30 pont."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:422
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Szerzők"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:423
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -762,12 +761,12 @@ msgstr ""
 "utasításokat."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:450
+#: C/index.docbook:449
 msgid "License"
 msgstr "Licenc"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:451
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -781,7 +780,7 @@ msgstr ""
 "bármely későbbi) változatában foglaltak alapján."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:459
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -794,7 +793,7 @@ msgstr ""
 "részletekért tanulmányozza a <citetitle>GNU GPL licencet</citetitle>."
 
 #. (itstool) path: para/address
-#: C/index.docbook:472
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -812,7 +811,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:465
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
