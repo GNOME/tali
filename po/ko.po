@@ -10,7 +10,7 @@
 #
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017
 # Changwoo Ryu <cwryu@debian.org>, 2013-2015, 2017.
-# Seong-ho Cho <shcho@gnome.org>, 2019.
+# Seong-ho Cho <shcho@gnome.org>, 2019, 2021.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2019-02-06 19:39+0000\n"
-"PO-Revision-Date: 2019-03-06 19:58+0900\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2021-03-12 09:53+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -89,7 +89,7 @@ msgid "Quit"
 msgstr "끝내기"
 
 #: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
-#: src/gyahtzee.c:55
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "탈리"
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "세 가지 종류의 난이도로 하나에서 다섯을 상대로 플레이합니다."
 
-#: data/org.gnome.Tali.appdata.xml.in:33
+#: data/org.gnome.Tali.appdata.xml.in:110
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
@@ -126,12 +126,6 @@ msgstr "포커 방식의 주사위 게임에서 상대방을 물리치십시오"
 #: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr "yahtzee;야치;"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name.
-#: data/org.gnome.Tali.desktop.in:12
-msgid "org.gnome.Tali"
-msgstr "org.gnome.Tali"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
@@ -202,179 +196,138 @@ msgstr "점수: %d"
 msgid "Field used"
 msgstr "필드 사용"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:130
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "시간"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "점수"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d분 %2$d초"
-
-#: src/games-scores-dialog.c:384
-msgid "New Game"
-msgstr "새 게임"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "시각"
-
-#: src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
 msgstr "컴퓨터 움직임 지연시간"
 
-#: src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
 msgstr "컴퓨터의 생각을 보여주기"
 
-#: src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
 msgstr "컴퓨터 상대의 수"
 
-#: src/gyahtzee.c:104 src/gyahtzee.c:106 src/gyahtzee.c:110 src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "<숫자>"
 
-#: src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
 msgstr "사람 상대의 수"
 
 # Regular, Color는 option argument
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr "게임 선택: Regular 혹은 Colors"
 
-#: src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "<문자열>"
 
-#: src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
 msgstr "플레이할 컴퓨터 전용 게임의 수"
 
-#: src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr "컴퓨터가 매번 시도하는 회수"
 
-#: src/gyahtzee.c:117 src/setup.c:354
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "일반"
 
-#: src/gyahtzee.c:118 src/setup.c:355
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "색"
 
-#: src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "전부 굴리기!"
 
-#: src/gyahtzee.c:142 src/gyahtzee.c:808
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "굴리기!"
 
-#: src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "게임이 무승부입니다!"
 
-#: src/gyahtzee.c:189 src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "탈리 점수"
-
-#: src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "축하합니다!"
-
-#: src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "최고 점수입니다!"
-
-#: src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "점수가 10위 안에 들었습니다."
-
-#: src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s이(가) %d점 차이로 게임에 이겼습니다"
 
-#: src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
 msgstr "게임 끝!"
 
-#: src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "%s의 컴퓨터 플레이"
 
-#: src/gyahtzee.c:255
+#: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
 msgstr "%s! – 당신이 이겼습니다."
 
-#: src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
 msgstr "다시 굴리려면, 주사위를 선택하고, 아니면 점수 슬롯을 선택하십시오."
 
-#: src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr "굴리기"
 
-#: src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
 msgstr "세번만 굴릴 수 있습니다! 점수 슬롯을 선택하십시오."
 
-#: src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "그놈 버전(1998):"
 
-#: src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "콘솔 버전(1992):"
 
-#: src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr "컬러 게임 및 다단계 AI (2006):"
 
-#: src/gyahtzee.c:614
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
 msgstr "포커의 일종, 주사위와 더 적은 돈 사용."
 
-#: src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "류창우 <cwryu@debian.org>\n"
 "김치현 <pipi910327@gmail.com>\n"
 "조성호 <shcho@gnome.org>"
 
-#: src/gyahtzee.c:772
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr "최근 움직임 실행 취소"
 
-#: src/gyahtzee.c:991 src/yahtzee.c:68
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "게임 종류:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "사람"
 
-#: src/setup.c:120
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr "기본 설정은 다음 게임에서 적용됩니다."
 
-#: src/setup.c:262
+#: src/setup.c:260
 msgid "Preferences"
 msgstr "기본 설정"
 
@@ -531,3 +484,36 @@ msgstr "점수 슬롯을 선택하십시오."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "같은 종류의 5 [모두]"
+
+#~ msgid "org.gnome.Tali"
+#~ msgstr "org.gnome.Tali"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "시간"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "점수"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d분 %2$d초"
+
+#~ msgid "New Game"
+#~ msgstr "새 게임"
+
+#~ msgid "Date"
+#~ msgstr "시각"
+
+#~ msgid "Tali Scores"
+#~ msgstr "탈리 점수"
+
+#~ msgid "Congratulations!"
+#~ msgstr "축하합니다!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "최고 점수입니다!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "점수가 10위 안에 들었습니다."
