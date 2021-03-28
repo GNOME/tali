@@ -4,14 +4,14 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2016-2020.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2016-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-09-25 15:08+0000\n"
-"PO-Revision-Date: 2020-09-29 23:08+0300\n"
+"POT-Creation-Date: 2020-11-07 21:16+0000\n"
+"PO-Revision-Date: 2021-03-29 02:43+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -31,32 +31,32 @@ msgstr "התחלת משחק חדש"
 #: data/help-overlay.ui:23
 msgctxt "shortcut window"
 msgid "Roll the dice"
-msgstr ""
+msgstr "זריקת קובייה"
 
 #: data/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Toggle the first die"
-msgstr ""
+msgstr "הצגה/הסתרת הקובייה הראשונה"
 
 #: data/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle the second die"
-msgstr ""
+msgstr "הצגה/הסתרת הקובייה השנייה"
 
 #: data/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Toggle the third die"
-msgstr ""
+msgstr "הצגה/הסתרת הקובייה השלישית"
 
 #: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Toggle the fourth die"
-msgstr ""
+msgstr "הצגה/הסתרת הקובייה הרביעית"
 
 #: data/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Toggle the fifth die"
-msgstr ""
+msgstr "הצגה/הסתרת הקובייה החמישית"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
@@ -74,7 +74,6 @@ msgid "Show Keyboard Shortcuts"
 msgstr "הצגת צירופי מקשים"
 
 #: data/help-overlay.ui:86
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "יציאה"
@@ -120,9 +119,6 @@ msgid "Delay between rolls"
 msgstr "Delay between rolls"
 
 #: data/org.gnome.Tali.gschema.xml:12
-#| msgid ""
-#| "Choose whether or not to insert a delay between the computer's dice rolls "
-#| "so the player can follow what it is doing."
 msgid ""
 "Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
@@ -131,22 +127,16 @@ msgstr ""
 "the player can follow what it is doing."
 
 #: data/org.gnome.Tali.gschema.xml:16
-#| msgid "Display the computer's thoughts"
 msgid "Display the computer’s thoughts"
 msgstr "Display the computer’s thoughts"
 
 #: data/org.gnome.Tali.gschema.xml:17
-#| msgid ""
-#| "If set to true, a dump of the AI's working will be done to standard "
-#| "output."
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 
 #: data/org.gnome.Tali.gschema.xml:20
-#| msgctxt "PlayerNames"
-#| msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
 msgstr "[ 'נועם', 'אורי', 'איתי', 'נועה', 'תמר', 'טליה' ]"
@@ -177,7 +167,6 @@ msgid "_Help"
 msgstr "ע_זרה"
 
 #: data/tali-menus.ui:29
-#| msgid "_About"
 msgid "_About Tali"
 msgstr "על _אודות טאלי"
 
@@ -322,7 +311,6 @@ msgid "Undo your most recent move"
 msgstr "ביטול המהלך האחרון שלך"
 
 #: src/gyahtzee.c:879
-#| msgid "Game Type"
 msgid "Game Type:"
 msgstr "סוג משחק:"
 
