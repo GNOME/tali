@@ -2,23 +2,24 @@
 # Copyright (C) 2007-2020 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gtali documentation package.
 #
-# Claude Paroz <claude@2xlibre.net>, 2007-2008, 2020.
 # Luc Pionchon <pionchon.luc@gmail.com>, 2012
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
-# Charles Monzat <charles.monzat@numericable.fr>, 2018.
+# Claude Paroz <claude@2xlibre.net>, 2007-2021.
+# Charles Monzat <charles.monzat@free.fr>, 2018-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali doc fr\n"
-"POT-Creation-Date: 2020-02-01 21:41+0000\n"
-"PO-Revision-Date: 2020-02-15 10:26+0100\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2020-09-25 15:08+0000\n"
+"PO-Revision-Date: 2021-01-12 15:45+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -212,8 +213,9 @@ msgid ""
 "gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
 "Pour rapporter une anomalie ou émettre une suggestion concernant "
-"<application>Tali</application> ou ce manuel, visitez le <ulink url=\"https://"
-"gitlab.gnome.org/GNOME/tali/issues/\">suivi des anomalies de GNOME</ulink>."
+"<application>Tali</application> ou ce manuel, visitez le <ulink url="
+"\"https://gitlab.gnome.org/GNOME/tali/issues/\">suivi des anomalies de "
+"GNOME</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:114
@@ -355,14 +357,22 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:201
+#| msgid ""
+#| "There is one exception to this rule, if you roll a yahtzee a second time "
+#| "you can put it in the yahtzee row again for an extra fifty points. You "
+#| "can keep doing this each time you get another yahtzee. At the end of the "
+#| "game you will be given extra rolls to fill in the other rows. Be warned "
+#| "that if you score zero in your yahtzee row (i.e. you filled that row with "
+#| "something that wasn't a yahtzee) then you can't put a yahtzee in "
+#| "afterward, zero is all you will score."
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
 "Il y a une exception à cette règle. Si vous obtenez une deuxième fois cinq "
 "dés identiques, vous pouvez cliquer une nouvelle fois sur la ligne « 5 "
@@ -508,34 +518,36 @@ msgstr "<guimenuitem>Version du jeu souhaitée</guimenuitem>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:285
+#| msgid ""
+#| "Play either the regular version (similar to Yahtzee) or the version with "
+#| "colors (similar to Kismet). When you change game type, you must restart "
+#| "the game to see use the new game type."
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
 "Jouez soit à la version traditionnelle (semblable à Yahtzee), soit à la "
-"version en couleurs (semblable à Kismet). Lorsque vous changez de type de "
-"jeu, vous devez redémarrer le jeu pour que le nouveau type soit utilisé."
+"version en couleurs (semblable à Kismet)."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:295
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Noms des joueurs</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:297
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr ""
 "Pour modifier les noms des joueurs, il suffit de saisir les nouveaux noms "
 "dans les zones de texte."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:306
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Stratégie de jeu"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:307
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -553,23 +565,27 @@ msgstr ""
 "un bonus de 75 si la partie supérieure totalise plus de 77 points."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:316
+#: C/index.docbook:315
+#| msgid ""
+#| "Don't forget about multiple yahtzees, if you roll a second yahtzee you "
+#| "can also put it in the yahtzee row for even more points. This only "
+#| "applies to the regular game."
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
 "N’oubliez pas que vous pouvez obtenir plusieurs fois cinq dés identiques, et "
 "les placer sur la ligne « 5 identiques » pour obtenir encore plus de points. "
 "Cela ne s’applique qu’au jeu traditionnel."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:330
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Anomalies connues et limites"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:331
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -579,22 +595,22 @@ msgstr ""
 "règles s’appliquent correctement, même avec les mauvaises images."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Glossaire"
 
 #. (itstool) path: note/para
-#: C/index.docbook:341
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "Rappelez-vous que l’ordre des dés n’est pas important."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:344
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "Brelan (3 id.)"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:345
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -603,12 +619,12 @@ msgstr ""
 "(ex. : 1, 2, 2, 2, 5)."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:350
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "Carré (4 id.)"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:351
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -619,12 +635,12 @@ msgstr ""
 "du total de tous les dés."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:357
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5 identiques"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:358
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -633,12 +649,12 @@ msgstr ""
 "est de 50 en plus du total de tous les dés."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:363
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Main pleine"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:364
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -650,12 +666,12 @@ msgstr ""
 "les dés."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:371
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Main pleine de la même couleur"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:372
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -672,12 +688,12 @@ msgstr ""
 "tous les dés."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:382
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "2 paires de la même couleur"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -695,7 +711,7 @@ msgstr ""
 "composé du total de tous les dés."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:393
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Couleur"
 
@@ -703,7 +719,7 @@ msgstr "Couleur"
 #      https://bugzilla.gnome.org/show_bug.cgi?id=671794
 #
 #. (itstool) path: glossdef/para
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -715,12 +731,12 @@ msgstr ""
 "points."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:401
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Grande suite"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:402
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -729,12 +745,12 @@ msgstr ""
 "est de 40 points."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:407
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Petite suite"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:408
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -745,12 +761,12 @@ msgstr ""
 "uniquement employée dans le jeu normal. Le score est de 30 points."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:422
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Auteurs"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:423
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -769,12 +785,12 @@ msgstr ""
 "\" type=\"help\">ce document</ulink>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:450
+#: C/index.docbook:449
 msgid "License"
 msgstr "Licence"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:451
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -789,7 +805,7 @@ msgstr ""
 "votre choix) toute version ultérieure."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:459
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -802,7 +818,7 @@ msgstr ""
 "<citetitle>Licence générale publique GNU</citetitle> pour plus de détails."
 
 #. (itstool) path: para/address
-#: C/index.docbook:472
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -820,7 +836,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:465
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
