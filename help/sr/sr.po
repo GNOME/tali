@@ -2,24 +2,23 @@
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2009.
 # This file is distributed under the same license as the gnome-games package.
 # Translated on 2009-10-25 by Бранко Кокановић <branko.kokanovic@gmail.com>
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012–2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-03-23 10:31+0200\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2021-05-13 00:33+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
@@ -27,48 +26,13 @@ msgstr ""
 "\n"
 "Prevod.org — превод на српски језик"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gtali.xml:163(imagedata)
-#| msgid ""
-#| "@@image: 'figures/mainwindow.png'; md5=adbcf6421391e5e51c091e13672d3b7e"
-msgctxt "_"
-msgid ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
-msgstr ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gtali.xml:240(imagedata)
-#| msgid ""
-#| "@@image: 'figures/preferences.png'; md5=163633a4c9c3d3fe96e7b4a15f2e3eef"
-msgctxt "_"
-msgid ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
-msgstr ""
-"external ref='figures/preferences.png' "
-"md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
-
-#: C/gtali.xml:27(articleinfo/title)
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:27
 msgid "<application>Tali</application> Manual"
 msgstr "Упутство за <application>Јамб</application>"
 
-#: C/gtali.xml:29(abstract/para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:29
 msgid ""
 "Tali is like Yahtzee for GNOME or like poker with dice. The player rolls "
 "dice to try to make the best possible combinations, like 4 of a kind, small "
@@ -80,22 +44,26 @@ msgstr ""
 "кента или фул. Играчима су дозвољена 3 бацања по кругу, као и задржавање "
 "жељених коцкица после сваког бацања."
 
-#: C/gtali.xml:36(articleinfo/copyright)
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
 msgid "<year>2001</year> <holder>Scott D. Heavner</holder>"
 msgstr "<year>2001</year> <holder>Скот Д. Хивнер</holder>"
 
-#: C/gtali.xml:53(publisher/publishername) C/gtali.xml:93(revdescription/para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:93
 msgid "GNOME Documentation Project"
 msgstr "Пројекат Гномове документације"
 
-#: C/gtali.xml:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Дозвољено умножавање, ширење, вршење измена овог документа под условима Гну-"
 "ове Слободне Документационе Дозволе (ГСДД), верзије 1.1 или било које "
@@ -104,7 +72,8 @@ msgstr ""
 "можете пронаћи на овој <ulink type=\"help\" url=\"help:fdl\">адреси</ulink> "
 "или у датотеци COPYING-DOCS која је приложена уз ово упутство."
 
-#: C/gtali.xml:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -116,7 +85,8 @@ msgstr ""
 "додавањем примерка лиценце документу, како је описано у одељку 6 саме "
 "лиценце."
 
-#: C/gtali.xml:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -125,12 +95,13 @@ msgid ""
 "capital letters."
 msgstr ""
 "Многи називи које компаније користе у циљу препознатљивости својих производа "
-"и услуга представљају робне марке. Када (уколико) се такви називи појављују"
-"(спомињу) у било којем Гномовом документу, а чланови Гномовог "
+"и услуга представљају робне марке. Када (уколико) се такви називи "
+"појављују(спомињу) у било којем Гномовом документу, а чланови Гномовог "
 "документационог пројекта имају сазнања о томе, тада су називи исписани "
 "великим словима или са великим почетним словима."
 
-#: C/gtali.xml:35(listitem/para) C/legal.xml:35(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -157,7 +128,8 @@ msgstr ""
 "ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ НИЈЕ ДОЗВОЉЕНА ОСИМ ПОД УСЛОВИМА ОВОГ ОГРАНИЧЕЊА "
 "ЈАМСТВА."
 
-#: C/gtali.xml:55(listitem/para) C/legal.xml:55(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -180,11 +152,8 @@ msgstr ""
 "ГУБИТКЕ НАСТАЛЕ УСЛЕД КОРИШЋЕЊА ДОКУМЕНТА И ЊЕГОВИХ ИЗМЕЊЕНИХ ВЕРЗИЈА ЧАК И "
 "АКО ЈЕ ОШТЕЋЕНА СТРАНА БИЛА ОБАВЕШТЕНА О МОГУЋНОСТИ НАСТАНКА ТЕ ШТЕТЕ."
 
-#: C/gtali.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
-#| msgid ""
-#| "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
-#| "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
-#| "UNDERSTANDING THAT: <placeholder-1/>"
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -193,7 +162,8 @@ msgstr ""
 "ОВАЈ ДОКУМЕНТ И ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ СУ ДОСТУПНЕ ПОД УСЛОВИМА ГНУ-ОВЕ "
 "СЛОБОДНЕ ДОКУМЕНТАЦИОНЕ ДОЗВОЛЕ УЗ ДОДАТНУ САГЛАСНОСТ ДА: <_:orderedlist-1/>"
 
-#: C/gtali.xml:62(authorgroup/author)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:62
 msgid ""
 "<firstname>Scott D</firstname> <surname>Heavner</surname> <affiliation> "
 "<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
@@ -201,47 +171,59 @@ msgstr ""
 "<firstname>Скот Д</firstname> <surname>Хивнер</surname> <affiliation> "
 "<address> <email>sdh@po.cwru.edu</email> </address> </affiliation>"
 
-#: C/gtali.xml:90(revdescription/para)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:90
 msgid "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 msgstr "Scott D Heavner <email>sdh@po.cwru.edu</email>"
 
-#: C/gtali.xml:86(revhistory/revision)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:86
 msgid ""
 "<revnumber>Tali Manual V2.8</revnumber> <date>September 2004</date> <_:"
 "revdescription-1/>"
 msgstr ""
-"<revnumber>Упутство за Јамб в2.8</revnumber> <date>Септембар 2004</date> "
-"<_:revdescription-1/>"
+"<revnumber>Упутство за Јамб в2.8</revnumber> <date>Септембар 2004</date> <_:"
+"revdescription-1/>"
 
-#: C/gtali.xml:98(articleinfo/releaseinfo)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:98
 msgid "This manual describes version 2.12 of Tali."
 msgstr "Ово упуство је написано за Јамб 2.12."
 
-#: C/gtali.xml:105(legalnotice/title)
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:105
 msgid "Feedback"
 msgstr "Примедбе"
 
-#: C/gtali.xml:106(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:106
+#| msgid ""
+#| "To report a bug or make a suggestion regarding the <application>Tali</"
+#| "application> application or this manual, follow the directions in the "
+#| "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME "
+#| "Feedback Page</ulink>."
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
-"Да бисте пријавили грешку или дали предлог у вези програма "
-"<application>Јамб</application> или његовог упутства, пратите смернице на "
-"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Гномовој страни "
-"за примедбе</ulink>."
+"Да пријавите грешку или дате предлог у вези програма "
+"<application>Јамб</application> или овог упутства, посетите <ulink url=\""
+"https://gitlab.gnome.org/GNOME/tali/issues/\">Гномовог пратиоца "
+"грешака</ulink>."
 
-#: C/gtali.xml:116(article/indexterm)
+#. (itstool) path: article/indexterm
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>Гномов Јамб</primary>"
 
-#: C/gtali.xml:123(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:121
 msgid "Introduction"
 msgstr "Увод"
 
-#: C/gtali.xml:125(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -252,7 +234,8 @@ msgstr ""
 "извучете најбољу <quote>руку</quote>. Два додатна бацања могу да буду или "
 "само са неким или са свим коцкицама."
 
-#: C/gtali.xml:131(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -260,12 +243,8 @@ msgstr ""
 "<application>Јамб</application> је јако сличан класичној игри „Yahtzee“ који "
 "је робна марка компаније Hasbro, Inc."
 
-#: C/gtali.xml:136(sect1/para)
-#| msgid ""
-#| "To run <application>GNOME Tali</application>, select "
-#| "<menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>GNOME Tali</"
-#| "guimenuitem></menuchoice> from the <guimenu>Main Menu</guimenu>, or type "
-#| "<command>gtali</command> on the command line."
+#. (itstool) path: sect1/para
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -274,10 +253,11 @@ msgid ""
 msgstr ""
 "Да покренете <application>Јамб</application>, изаберите <menuchoice> "
 "<guisubmenu>Игре</guisubmenu><guimenuitem>Јамб</guimenuitem> </menuchoice> "
-"из <guimenu>Главног изборника</guimenu>, или откуцајте "
-"<command>gtali</command> у командној линији."
+"из <guimenu>Главног изборника</guimenu>, или откуцајте <command>gtali</"
+"command> у командној линији."
 
-#: C/gtali.xml:146(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:144
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -287,15 +267,34 @@ msgstr ""
 "filename> пакет, који је део Гномовог радног окружења. Овај документ је "
 "написан за <application>Јамб</application> 2.8."
 
-#: C/gtali.xml:155(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
 msgstr "Играње Јамба"
 
-#: C/gtali.xml:158(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "Јамб у акцији"
 
-#: C/gtali.xml:160(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:161
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/mainwindow.png' "
+#| "md5='adbcf6421391e5e51c091e13672d3b7e'"
+msgctxt "_"
+msgid ""
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
+msgstr ""
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -305,15 +304,18 @@ msgstr ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Снимак "
 "екрана главног прозора Гномовог Јамба.</phrase> </textobject>"
 
-#: C/gtali.xml:172(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr "Када игра крене, показаће вам се резултат првог бацања ваших коцкица."
 
-#: C/gtali.xml:179(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
 msgstr "Кликните на коцкице које желите поново да бацате."
 
-#: C/gtali.xml:183(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -321,7 +323,8 @@ msgstr ""
 "Када сте одабрали све коцкице које желите поново да бацате, кликните дугме "
 "<guibutton>Бацај!</guibutton>."
 
-#: C/gtali.xml:188(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -337,7 +340,8 @@ msgstr ""
 "добијете јамб (5 истих коцкица) и кликнете на велику кенту, добићете нула "
 "поена за велику кенту)."
 
-#: C/gtali.xml:198(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -345,25 +349,34 @@ msgstr ""
 "Сваку комбинацију можете искористити само једном, тј. једном када одиграте "
 "неки ред и не можете поправити резултат касније ако добијете бољу руку."
 
-#: C/gtali.xml:203(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:201
+#| msgid ""
+#| "There is one exception to this rule, if you roll a yahtzee a second time "
+#| "you can put it in the yahtzee row again for an extra fifty points. You "
+#| "can keep doing this each time you get another yahtzee. At the end of the "
+#| "game you will be given extra rolls to fill in the other rows. Be warned "
+#| "that if you score zero in your yahtzee row (i.e. you filled that row with "
+#| "something that wasn't a yahtzee) then you can't put a yahtzee in "
+#| "afterward, zero is all you will score."
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"Има само један изузетак од овог правила. Ако добијете јамб по други пут, "
-"можете га поново ставити у ред за јамб за додатних педесет поена. Ово можете "
-"да радите док год добијате јамб. На крају игре ћете имати додатна бацања да "
-"попуните преостале редове. Запамтите само да, ако упишете нулу у ред за јамб "
-"(тј. попуните тај ред са нечим што није био јамб), онда не можете ставити "
-"јамб ако га касније добијете, нула је све што можете да имате на крају у том "
-"реду."
+"Има само један изузетак од овог правила. Ако добијете 5 по други пут, можете "
+"га поново ставити у ред за 5 за додатних педесет поена. Ово можете да радите "
+"док год добијате 5. На крају игре ћете имати додатна бацања да попуните "
+"преостале редове. Запамтите само да, ако упишете нулу у ред за 5 (тј. "
+"попуните тај ред са нечим што није био 5), онда не можете ставити 5 ако га "
+"касније добијете, нула је све што можете да имате на крају у том реду."
 
-#: C/gtali.xml:213(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
@@ -371,11 +384,13 @@ msgstr ""
 "Такође имате и бонус од 35 поена ако у првих шест редова имате збир од 63 "
 "или више поена."
 
-#: C/gtali.xml:218(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:216
 msgid "Using the keyboard"
 msgstr "Коришћење тастатуре"
 
-#: C/gtali.xml:220(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -390,15 +405,34 @@ msgstr ""
 "бацање и простора са поенима, користите тастере са стрелицама за кретање "
 "горе и доле кроз редове и тастер „Space“ за означавање реда."
 
-#: C/gtali.xml:232(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "Опције игре"
 
-#: C/gtali.xml:235(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
 msgstr "Поставке за јамб"
 
-#: C/gtali.xml:237(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:238
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/preferences.png' "
+#| "md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+msgctxt "_"
+msgid ""
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
+msgstr ""
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -408,15 +442,18 @@ msgstr ""
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>Прозорче "
 "поставки Гномовог Јамба.</phrase> </textobject>"
 
-#: C/gtali.xml:248(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:246
 msgid "Human Players"
 msgstr "Људски играчи"
 
-#: C/gtali.xml:250(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>Број играча</guimenuitem>"
 
-#: C/gtali.xml:252(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -424,15 +461,18 @@ msgstr ""
 "Овде бирате број људских играча. Као што је описано изнад, можете имати "
 "највише шест играча."
 
-#: C/gtali.xml:260(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "Рачунарски противници"
 
-#: C/gtali.xml:262(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>Застој између бацања</guimenuitem>"
 
-#: C/gtali.xml:264(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -440,11 +480,13 @@ msgstr ""
 "Рачунарски противници праве паузу између бацања, да бисте могли да видите "
 "шта тачно раде. Овим се игра донекле успорава."
 
-#: C/gtali.xml:271(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>Број противника</guimenuitem>"
 
-#: C/gtali.xml:273(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -456,38 +498,46 @@ msgstr ""
 "рачунарских противника преко ове границе, број људских играча ће се смањити "
 "да се одржи број од највише шест играча."
 
-#: C/gtali.xml:283(variablelist/title)
+#. (itstool) path: variablelist/title
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "Тип игре"
 
-#: C/gtali.xml:285(varlistentry/term)
-#| msgid "Version of the game to play"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>Издање игре</guimenuitem>"
 
-#: C/gtali.xml:287(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:285
+#| msgid ""
+#| "Play either the regular version (similar to Yahtzee) or the version with "
+#| "colors (similar to Kismet). When you change game type, you must restart "
+#| "the game to see use the new game type."
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
-"Играјте или обичан тип игре (сличан класичном јамбу) или тип игре са бојама "
-"(слично игри „Kismet“). Када промените тип игре, морате поново покренути "
-"игру да видите нови тип игре."
+"Играјте или обичну игру (сличну класичном јамбу) или игру са бојама (сличну "
+"игри „Kismet“)."
 
-#: C/gtali.xml:297(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Имена играча</guimenuitem>"
 
-#: C/gtali.xml:299(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "Да бисте променили имена играча, само унесите нова имена у кућице."
 
-#: C/gtali.xml:308(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Стратегија игре"
 
-#: C/gtali.xml:309(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -503,20 +553,27 @@ msgstr ""
 "добијате бонус од 55 поена ако у горњој половини имате између 71 и 77 поена, "
 "и бонус од 75 поена ако имате преко 77 поена."
 
-#: C/gtali.xml:318(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:315
+#| msgid ""
+#| "Don't forget about multiple yahtzees, if you roll a second yahtzee you "
+#| "can also put it in the yahtzee row for even more points. This only "
+#| "applies to the regular game."
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"Не заборавите вишеструке јамбове. Ако баците други јамб, опет га можете "
-"унети у ред за јамб за још више поена. Ово важи само за обични тип игре."
+"Не заборавите вишеструке 5. Ако баците другу 5, опет је можете унети у ред "
+"за 5 за још више поена. Ово важи само за обични тип игре."
 
-#: C/gtali.xml:332(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Познате грешке и ограничења"
 
-#: C/gtali.xml:333(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -525,19 +582,23 @@ msgstr ""
 "игра поново не покрене. Требало би да можете да играте и са „погрешним“ "
 "коцкицама."
 
-#: C/gtali.xml:341(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Речник појмова"
 
-#: C/gtali.xml:343(note/para)
+#. (itstool) path: note/para
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "Запамтите да је редослед коцкица битан."
 
-#: C/gtali.xml:346(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "Три исте"
 
-#: C/gtali.xml:347(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -545,11 +606,13 @@ msgstr ""
 "Три коцкице имају исти број. Резултат је збир свих коцкица, нпр. 1, 2, 2, 2, "
 "5."
 
-#: C/gtali.xml:352(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "Покер"
 
-#: C/gtali.xml:353(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -558,11 +621,13 @@ msgstr ""
 "Четири коцкице имају исти број. Резултат је збир свих коцкица, нпр. 2, 5, 5, "
 "5, 5. У типу игре са бојама, резултат је 25 плус збир свих коцкица."
 
-#: C/gtali.xml:359(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "Јамб"
 
-#: C/gtali.xml:360(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -570,11 +635,13 @@ msgstr ""
 "Пет истих коцкица, нпр. 3, 3, 3, 3, 3. У типу игре са бојама, резултат је 50 "
 "плус збир свих коцкица."
 
-#: C/gtali.xml:365(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Фул"
 
-#: C/gtali.xml:366(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -584,11 +651,13 @@ msgstr ""
 "бројевима и друга група од две коцкице са истим бројевима, нпр. 1, 1, 1, 4, "
 "4. У типу игре са бојама, резултат је 15 плус збир свих коцкица."
 
-#: C/gtali.xml:373(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Фул исте боје"
 
-#: C/gtali.xml:374(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -603,11 +672,13 @@ msgstr ""
 "3, 3, 4, 4. Две коцкице имају исту боју ако им је збир 7: 1 и 6 су црне, 2 и "
 "5 су црвене, а 3 и 4 су зелене. Резултат је 20 плус збир свих коцкица."
 
-#: C/gtali.xml:384(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "Два пара исте боје"
 
-#: C/gtali.xml:385(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -623,27 +694,34 @@ msgstr ""
 "5 су црвене, а 3 и 4 су зелене. Пета коцкица може бити било шта, Резултат је "
 "збир свих коцкица."
 
-#: C/gtali.xml:395(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Све исте боје"
 
-#: C/gtali.xml:396(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:393
+#| msgid ""
+#| "This category is only used in the Colors game. Five dice that are all the "
+#| "same \"color\": Two dice are the same color if their numbers total 7: 1 "
+#| "and 6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die "
+#| "can be any value. The score is 35 points."
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
-"6 are black, 2 and 5 are red, and 3 and 4 are green. The fifth die can be "
-"any value. The score is 35 points."
+"6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Ова категорија се користи само у типу игре са бојама. Пет коцкица које су "
 "све исте боје. Две коцкице имају исту боју ако им је збир 7: 1 и 6 су црне, "
-"2 и 5 су црвене, а 3 и 4 су зелене. Пета коцкица може бити било шта, "
-"Резултат је 35 поена."
+"2 и 5 су црвене, а 3 и 4 су зелене. Резултат је 35 поена."
 
-#: C/gtali.xml:404(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Велика кента"
 
-#: C/gtali.xml:405(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -651,11 +729,13 @@ msgstr ""
 "Пет коцкица са узастопним бројевима, нпр. 2, 3, 4, 5, 6. Резултат је 40 "
 "поена."
 
-#: C/gtali.xml:410(glossentry/glossterm)
+#. (itstool) path: glossentry/glossterm
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Мала кента"
 
-#: C/gtali.xml:411(glossdef/para)
+#. (itstool) path: glossdef/para
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -665,11 +745,13 @@ msgstr ""
 "нпр. 2, 3, 4, 5, 5. Ова категорија се користи само у обичном типу игре. "
 "Резултат је 30 поена."
 
-#: C/gtali.xml:425(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Аутори"
 
-#: C/gtali.xml:426(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -679,31 +761,27 @@ msgid ""
 "this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
 "feedback-bugs\" type=\"help\">document</ulink>."
 msgstr ""
-"<application>Јамб</application> су написали Scott Heavner "
-"(<email>sdh@po.cwru.edu</email>) и Orest Zborowski. Ово упутство је написао "
-"Scott D Heavner (<email>sdh@po.cwru.edu</email>) а додатни материјал је "
-"приложио Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Да "
-"бисте пријавили грешке или дали предлог у вези овог програма или његовог "
-"упутства, пратите смернице из <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">документа</ulink>."
+"<application>Јамб</application> су написали Scott Heavner (<email>sdh@po."
+"cwru.edu</email>) и Orest Zborowski. Ово упутство је написао Scott D Heavner "
+"(<email>sdh@po.cwru.edu</email>) а додатни материјал је приложио Callum "
+"McKenzie (<email>callum@physics.otago.ac.nz</email>). Да бисте пријавили "
+"грешке или дали предлог у вези овог програма или његовог упутства, пратите "
+"смернице из <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">документа</ulink>."
 
-#: C/gtali.xml:453(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:449
 msgid "License"
 msgstr "Лиценца"
 
-#: C/gtali.xml:454(sect1/para)
-#| msgid ""
-#| "This program is free software; you can redistribute it and/or modify it "
-#| "under the terms of the <ulink type=\"help\" url=\"help:gpl"
-#| "\"><citetitle>GNU General Public License</citetitle></ulink> as published "
-#| "by the Free Software Foundation; either version 2 of the License, or (at "
-#| "your option) any later version."
+#. (itstool) path: sect1/para
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
-"under the terms of the <ulink type=\"help\" url=\"help:gpl\"> "
-"<citetitle>GNU General Public License</citetitle></ulink> as published by "
-"the Free Software Foundation; either version 2 of the License, or (at your "
-"option) any later version."
+"under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
+"General Public License</citetitle></ulink> as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
 msgstr ""
 "Овај програм је слободан софтвер; можете га расподељивати и/или га мењати "
 "под условима <ulink type=\"help\" url=\"help:gpl\"> <citetitle>ГНУ Опште "
@@ -711,7 +789,8 @@ msgstr ""
 "Софтвера; било верзије 2 те Лиценце, било (по вашем нахођењу) било које "
 "новије верзије."
 
-#: C/gtali.xml:462(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -723,7 +802,8 @@ msgstr ""
 "ОДРЕЂЕНОЈ НАМЕНИ.  Видите <citetitle>ГНУ Општу Јавну Лиценцу</citetitle> за "
 "више детаља."
 
-#: C/gtali.xml:475(para/address)
+#. (itstool) path: para/address
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -740,16 +820,8 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/gtali.xml:468(sect1/para)
-#| msgid ""
-#| "A copy of the <citetitle>GNU General Public License</citetitle> is "
-#| "included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. "
-#| "You may also obtain a copy of the <citetitle>GNU General Public License</"
-#| "citetitle> from the Free Software Foundation by visiting <ulink type="
-#| "\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing "
-#| "to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-#| "street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-#| "1307</postcode><country>USA</country></address>"
+#. (itstool) path: sect1/para
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -760,21 +832,16 @@ msgstr ""
 "Примерак <citetitle>ГНУ Опште Јавне Лиценце</citetitle> је укључен у додатку "
 "<citetitle>Гномовог корисничког водича</citetitle>. Такође можете набавити "
 "примерак <citetitle>ГНУ Опште Јавне Лиценце</citetitle> од Задужбине "
-"Слободног Софтвера посетивши <ulink url=\"http://www.fsf.org\" "
-"type=\"http\">њихов веб сајт</ulink> или пишући на <_:address-1/>"
+"Слободног Софтвера посетивши <ulink url=\"http://www.fsf.org\" type=\"http"
+"\">њихов веб сајт</ulink> или пишући на <_:address-1/>"
 
-#: C/legal.xml:9(para/ulink)
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
 msgid "link"
 msgstr "вези"
 
-#: C/legal.xml:2(legalnotice/para)
-#| msgid ""
-#| "Permission is granted to copy, distribute and/or modify this document "
-#| "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
-#| "or any later version published by the Free Software Foundation with no "
-#| "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#| "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
-#| "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
