@@ -1,26 +1,26 @@
 # Korean translation for tali.
 # Copyright (C) 2018 tali's COPYRIGHT HOLDER
 # This file is distributed under the same license as the tali package.
-# Seong-ho Cho <shcho@gnome.org>, 2018.
+# Seong-ho Cho <shcho@gnome.org>, 2018, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tali master\n"
-"POT-Creation-Date: 2018-06-10 15:07+0000\n"
-"PO-Revision-Date: 2018-08-26 16:08+0900\n"
-"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
+"POT-Creation-Date: 2020-05-31 06:30+0000\n"
+"PO-Revision-Date: 2021-09-09 12:27+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "조성호 <shcho@gnome.org>, 2018."
+msgstr "조성호 <shcho@gnome.org>, 2018, 2021."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:27
@@ -61,11 +61,10 @@ msgid ""
 "of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
 "the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"전면 표지와 후면 표지, 그리고 바뀌지 않는 섹션을 제외한 이 문서의 복제, 배"
-"포, 수정은 자유 소프트웨어 재단이 발표한 1.1 버전 이후의 GNU 자유 문서 라이선"
-"스(GFDL) 조항에 따라 허용합니다. GFDL의 사본은 이 <ulink type=\"help\" url="
-"\"ghelp:fdl\">링크</ulink>, 또는 설명서와 배포하는 COPYING-DOCS 파일에서 찾"
-"을 수 있습니다."
+"전면 표지와 후면 표지, 그리고 섹션을 제외한 이 문서의 복제, 배포, 수정은 자"
+"유 소프트웨어 재단이 발표한 1.1 버전 이후의 GNU 자유 문서 라이선스(GFDL) 조항"
+"에 따라 허용합니다. GFDL의 사본은 이 <ulink type=\"help\" url=\"ghelp:fdl\">"
+"링크</ulink>, 또는 설명서와 배포하는 COPYING-DOCS 파일에서 찾을 수 있습니다."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
@@ -192,26 +191,25 @@ msgstr "피드백"
 #: C/index.docbook:106
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Tali</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
-"ulink>."
+"application> application or this manual, visit the <ulink url=\"https://"
+"gitlab.gnome.org/GNOME/tali/issues/\">GNOME Issue Tracker</ulink>."
 msgstr ""
 "<application>탈리</application>게임 프로그램과 이 설명서에 대한 버그 보고, 제"
-"안이 있다면, <ulink type=\"help\" url=\"ghelp:user-guide?feedback-bugs"
-"\">GNOME 피드백 페이지</ulink>를 참고하십시오."
+"안이 있다면, <ulink url=\"https://gitlab.gnome.org/GNOME/tali/issues/"
+"\">GNOME 문제 추적 페이지</ulink>를 방문하십시오."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:116
+#: C/index.docbook:114
 msgid "<primary>GNOME Tali</primary>"
 msgstr "<primary>그놈 탈리</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:123
+#: C/index.docbook:121
 msgid "Introduction"
 msgstr "도입부"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:125
+#: C/index.docbook:123
 msgid ""
 "<application>GNOME Tali</application> is a sort of poker with dice and less "
 "money. You roll five dice three times and try to create the best "
@@ -222,7 +220,7 @@ msgstr ""
 "부 또는 주사위 모두를 두 번 다시 굴릴 수 있습니다."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:131
+#: C/index.docbook:129
 msgid ""
 "<application>GNOME Tali</application> is very similar to the dice game "
 "Yahtzee which is a trademark of Hasbro, Inc."
@@ -231,7 +229,7 @@ msgstr ""
 "사합니다."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:136
+#: C/index.docbook:134
 msgid ""
 "To run <application>GNOME Tali</application>, select <menuchoice> "
 "<guisubmenu>Games</guisubmenu> <guimenuitem>GNOME Tali</guimenuitem> </"
@@ -244,7 +242,7 @@ msgstr ""
 "를 입력하십시오."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:146
+#: C/index.docbook:144
 msgid ""
 "<application>GNOME Tali</application> is included in the <filename>gnome-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -255,12 +253,12 @@ msgstr ""
 "<application>그놈 탈리</application> 버전 2.8을 설명합니다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:155
+#: C/index.docbook:153
 msgid "Playing GNOME Tali"
 msgstr "그놈 탈리 플레이"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:158
+#: C/index.docbook:156
 msgid "GNOME Tali in action"
 msgstr "그놈 탈리 플레이해보기"
 
@@ -269,14 +267,15 @@ msgstr "그놈 탈리 플레이해보기"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:163
+#: C/index.docbook:161
 msgctxt "_"
 msgid ""
-"external ref='figures/mainwindow.png' md5='adbcf6421391e5e51c091e13672d3b7e'"
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 msgstr ""
+"external ref='figures/mainwindow.png' md5='9a87d53a333dd6a2c04c0fcd563c92b3'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:160
+#: C/index.docbook:158
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mainwindow.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -287,17 +286,17 @@ msgstr ""
 "주 화면.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:172
+#: C/index.docbook:170
 msgid "When play starts, you see the results of your first throw of the dice."
 msgstr "게임을 시작하면 주사위를 처음 던진 결과를 봅니다."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:179
+#: C/index.docbook:177
 msgid "Click on the dice you wish to roll again."
 msgstr "다시 굴릴 주사위를 누르십시오."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:183
+#: C/index.docbook:181
 msgid ""
 "When you have selected all the dice you wish to reroll, press the "
 "<guibutton>Roll!</guibutton> button."
@@ -306,7 +305,7 @@ msgstr ""
 "시오."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:188
+#: C/index.docbook:186
 msgid ""
 "When you have a hand you like or have run out of chances to throw the dice, "
 "click on a row corresponding to what you think is your best scoring "
@@ -321,7 +320,7 @@ msgstr ""
 "다면 큰 수 스트레이트에 해당하는 0점을 받습니다)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:198
+#: C/index.docbook:196
 msgid ""
 "You can only use each combination once, i.e. once you've entered something "
 "in a slot, you can't change the score later if you roll a better hand."
@@ -330,36 +329,36 @@ msgstr ""
 "위를 굴렸을 때 점수가 더 좋게 나왔을 경우 선택할 수 없습니다."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:203
+#: C/index.docbook:201
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"이 규칙엔 예외가 있는데, 야치가 두 번 나왔을 경우 50점을 따내려 야치를 한번 "
-"더 낼 수 있습니다. 매번 주사위를 던져 계속 야치를 낼 수 있습니다. 게임이 끝"
-"날 때 주사위를 한번 더 던져 다른 수열을 낼 수 있습니다. 야치가 나왔는데 0점이"
-"라면(야치가 계속 안나오는 경우), 그 다음에 야치가 나와도 무효이며, 최종적인 "
-"점수는 0점임을 유념하십시오."
+"이 규칙엔 예외가 있는데, 같은 숫자 5개가 두 번 나왔을 경우 50점을 따내려 야치"
+"를 한번 더 낼 수 있습니다. 매번 주사위를 던져 같은 숫자 5개를 낼 수 있습니"
+"다. 게임이 끝날 때 주사위를 한번 더 던져 다른 수열을 낼 수 있습니다. 같은 숫"
+"자 5개를 냈는데 0점이라면(같은 숫자 5개가 계속 안나오는 경우), 그 다음에 같"
+"은 숫자 5개가 나와도 무효이며, 최종 점수는 0점임을 유념하십시오."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:213
+#: C/index.docbook:211
 msgid ""
 "There is also a bonus of 35 points if you score a total of 63 points or more "
 "in the top six rows."
 msgstr "6번 던졌을때 총 점수가 63점 이상이면 35점을 추가로 받습니다."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:218
+#: C/index.docbook:216
 msgid "Using the keyboard"
 msgstr "키보드 사용"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:220
+#: C/index.docbook:218
 msgid ""
 "As an alternative to using the mouse, the keys 1 through 5 toggle the dice "
 "just as if you had clicked them. The key 1 corresponds to the first die and "
@@ -372,12 +371,12 @@ msgstr ""
 "다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:232
+#: C/index.docbook:230
 msgid "Game Options"
 msgstr "게임 옵션"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:235
+#: C/index.docbook:233
 msgid "GNOME Tali preferences"
 msgstr "그놈 탈리 기본 설정"
 
@@ -386,14 +385,15 @@ msgstr "그놈 탈리 기본 설정"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:240
+#: C/index.docbook:238
 msgctxt "_"
 msgid ""
-"external ref='figures/preferences.png' md5='163633a4c9c3d3fe96e7b4a15f2e3eef'"
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 msgstr ""
+"external ref='figures/preferences.png' md5='14a3256dbbc79255ffcca94291ce1068'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:237
+#: C/index.docbook:235
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/preferences.png\" format=\"PNG\" "
 "srccredit=\"Trevor Curtis\"/> </imageobject> <textobject> <phrase>GNOME Tali "
@@ -404,17 +404,17 @@ msgstr ""
 "기본 설정 대화상자.</phrase> </textobject>"
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:248
+#: C/index.docbook:246
 msgid "Human Players"
 msgstr "사람 플레이어"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:248
 msgid "<guimenuitem>Number of players</guimenuitem>"
 msgstr "<guimenuitem>플레이어의 숫자</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:250
 msgid ""
 "Selects the number of human players. As described above you are only allowed "
 "six total players."
@@ -423,17 +423,17 @@ msgstr ""
 "용합니다."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:260
+#: C/index.docbook:258
 msgid "Computer Opponents"
 msgstr "컴퓨터 상대"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:262
+#: C/index.docbook:260
 msgid "<guimenuitem>Delay between rolls</guimenuitem>"
 msgstr "<guimenuitem>굴리는 사이에 지연</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:264
+#: C/index.docbook:262
 msgid ""
 "Make the computer opponents pause between rolls of the dice so you can see "
 "what they are doing. Slows down game play some."
@@ -442,12 +442,12 @@ msgstr ""
 "게 진행합니다."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:271
+#: C/index.docbook:269
 msgid "<guimenuitem>Number of opponents</guimenuitem>"
 msgstr "<guimenuitem>상대의 숫자</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:273
+#: C/index.docbook:271
 msgid ""
 "Select the number of computer opponents. You are allowed a total of six "
 "human and computer players. If you attempt to increase this number near the "
@@ -458,43 +458,40 @@ msgstr ""
 "다. 한계치에 도달하려고 하면 6명 범위 내에서 사람 플레이어 수가 줄어듭니다."
 
 #. (itstool) path: variablelist/title
-#: C/index.docbook:283
+#: C/index.docbook:281
 msgid "Game Type"
 msgstr "게임 형식"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:285
+#: C/index.docbook:283
 msgid "<guimenuitem>Version of the game to play</guimenuitem>"
 msgstr "<guimenuitem>플레이 게임 버전</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:287
+#: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
-"일반 버전(야치와 유사) 또는 컬러 버전(키스멧과 유사) 중 하나를 플레이합니다. "
-"게임 형식을 바꾸었을 경우 해당 게임 형식대로 즐기려면 게임을 다시 시작해야합"
-"니다."
+"일반 버전(야치와 유사) 또는 컬러 버전(키스멧과 유사) 중 하나를 플레이합니다."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:297
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>플레이어 이름</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:299
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr "플레이어 이름을 바꾸려면 해당 칸에 새 이름을 넣으면 됩니다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:308
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "게임 전략"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:309
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -510,22 +507,23 @@ msgstr ""
 "넘을 넘겨 받으면 75점을 추가로 받습니다."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:318
+#: C/index.docbook:315
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"두번째에 주사위를 던져서 야치가 두번 나왔을 때 계속 주사위를 던져서 야치를 내"
-"면 점수를 더 딸 수 있음을 잊지 마십시오. 일반 게임에만 해당합니다."
+"두번째에 주사위를 던져서 같은 숫자가 다섯번 나오면 계속 주사위를 던져서 같은 "
+"숫자를 다섯번 내어 점수를 더 딸 수 있음을 잊지 마십시오. 일반 게임에만 해당합"
+"니다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "알려진 버그와 한계"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:333
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -534,22 +532,22 @@ msgstr ""
 "지 않습니다. \"잘못된\" 주사위 그림으로 플레이하게됩니다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "용어"
 
 #. (itstool) path: note/para
-#: C/index.docbook:343
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "주사위 순서는 중요하지 않음을 기억하십시오."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:346
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "3번"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:347
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -558,12 +556,12 @@ msgstr ""
 "위 수의 합이 점수입니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:352
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "4번"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:353
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -574,12 +572,12 @@ msgstr ""
 "합니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:359
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5번"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:360
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -588,12 +586,12 @@ msgstr ""
 "든 주사위의 수의 합에 50점을 추가합니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:365
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "풀 하우스"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:366
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
@@ -604,12 +602,12 @@ msgstr ""
 "수의 합에 15점을 추가합니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:373
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "풀 하우스 세임 컬러"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:374
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -625,12 +623,12 @@ msgstr ""
 "합에 20점을 추가합니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:384
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "투 페어 세임 컬러"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:385
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -646,12 +644,12 @@ msgstr ""
 "든 가능합니다. 점수는 모든 주사위 수의 합입니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:395
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "플러시"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:396
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
@@ -662,24 +660,24 @@ msgstr ""
 "는 녹색입니다. 점수는 35점입니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:403
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "큰 수 스트레이트"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:404
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
 msgstr "다섯개의 주사위에서 2, 3, 4, 5, 6과 같이 나와야합니다. 40점 입니다."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:409
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "작은 수 스트레이트"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:410
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -690,12 +688,12 @@ msgstr ""
 "점 입니다."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:424
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "작성자"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -713,12 +711,12 @@ msgstr ""
 "feedback-bugs\" type=\"help\">문서</ulink>의 지시를 따라주십시오."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:452
+#: C/index.docbook:449
 msgid "License"
 msgstr "라이선스"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:453
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -732,7 +730,7 @@ msgstr ""
 "포, 수정할 수 있습니다."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:461
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -744,7 +742,7 @@ msgstr ""
 "<citetitle>GNU 일반 공중 사용허가서</citetitle>를 참고하십시오."
 
 #. (itstool) path: para/address
-#: C/index.docbook:474
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -762,7 +760,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:467
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
