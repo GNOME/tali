@@ -10,18 +10,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-11-07 21:16+0000\n"
-"PO-Revision-Date: 2021-03-29 02:43+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2021-04-08 08:59+0000\n"
+"PO-Revision-Date: 2021-09-27 11:32+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
-"X-Poedit-Language: Hebrew\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -85,7 +85,7 @@ msgstr "טאלי"
 
 #: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
-msgstr ""
+msgstr "מטילים קוביות וזוכים בנקודות"
 
 #: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
@@ -94,12 +94,15 @@ msgid ""
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
+"עיבוד מחודש על פוקר עם קוביות ועם פחות כסף, המשחק הזה הוא קלסיקה משפחתית. "
+"עליך להטיל את הקוביות שלוש פעמים ברצף ולשמור את ההטלות המועדפות עליך כדי "
+"לייצור את היד הטובה ביותר. ניתן לשחק בגרסה הפחות מוכרת עם קוביות בצבעים."
 
 #: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
+msgstr "אפשר לשחק משחקן בודד ועד חמישה בשלוש דרגות קושי."
 
-#: data/org.gnome.Tali.appdata.xml.in:169
+#: data/org.gnome.Tali.appdata.xml.in:200
 msgid "The GNOME Project"
 msgstr "מיזם GNOME"
 
@@ -116,7 +119,7 @@ msgstr "יאצי;"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
-msgstr "Delay between rolls"
+msgstr "השהיה בין הטלות"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
@@ -128,7 +131,7 @@ msgstr ""
 
 #: data/org.gnome.Tali.gschema.xml:16
 msgid "Display the computer’s thoughts"
-msgstr "Display the computer’s thoughts"
+msgstr "הצגת הלך החשיבה של המחשב"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
@@ -139,12 +142,12 @@ msgstr ""
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
 msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
-msgstr "[ 'נועם', 'אורי', 'איתי', 'נועה', 'תמר', 'טליה' ]"
+msgstr "[ ‚נועם’, ‚אורי’, ‚איתי’, ‚נועה’, ‚תמר’, ‚טליה’ ]"
 
 #: data/org.gnome.Tali.gschema.xml:23
 msgctxt "GameType"
 msgid "'Regular'"
-msgstr "'רגיל'"
+msgstr "‚רגיל’"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -172,7 +175,7 @@ msgstr "על _אודות טאלי"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
-msgstr "כבר היה בשימוש! איפה ברצונך לשים זאת?"
+msgstr "כבר היה בשימוש! איפה לשים את זה?"
 
 #: src/clist.c:412
 #, c-format
@@ -233,11 +236,11 @@ msgstr "צבעים"
 
 #: src/gyahtzee.c:162
 msgid "Roll all!"
-msgstr "גלגול הכול!"
+msgstr "להטיל הכול!"
 
 #: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
-msgstr "גלגול!"
+msgstr "להטיל!"
 
 #: src/gyahtzee.c:212
 msgid "The game is a draw!"
@@ -247,8 +250,10 @@ msgstr "המשחק הסתיים בתיקו!"
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
-msgstr[0] "%s זוכה במשחק עם נקודה אחת"
-msgstr[1] "%s זוכה במשחק עם %d נקודות"
+msgstr[0] "‫%s זוכה במשחק עם נקודה אחת"
+msgstr[1] "‫%s זוכה במשחק עם %d נקודות"
+msgstr[2] "‫%s זוכה במשחק עם %d נקודות"
+msgstr[3] "‫%s זוכה במשחק עם %d נקודות"
 
 #: src/gyahtzee.c:231
 msgid "Game over!"
@@ -266,15 +271,15 @@ msgstr "%s! -- תורך."
 
 #: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
-msgstr "יש לבחור קוביות לגלגול מחדש או לבחור בתיבת ניקוד."
+msgstr "יש לבחור קוביות להטלה מחדש או לבחור בתיבת ניקוד."
 
 #: src/gyahtzee.c:497
 msgid "Roll"
-msgstr "גלגול"
+msgstr "הטלה"
 
 #: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "ניצלת את שלושת הגלגולים המותרים. בחר תיבת ניקוד."
+msgstr "ניצלת את שלושת ההטלות המותרות. נא לבחור תיבת ניקוד."
 
 #: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
@@ -341,7 +346,7 @@ msgstr "מתחרים ממוחשבים"
 #. --- Button ---
 #: src/setup.c:311
 msgid "_Delay between rolls"
-msgstr "ה_שהיה בין גלגולים"
+msgstr "ה_שהיה בין הטלות"
 
 #: src/setup.c:321
 msgid "N_umber of opponents:"
@@ -403,11 +408,11 @@ msgstr "6ים [סכום ה־6ים]"
 #. End of upper panel
 #: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
-msgstr "3 מאותו סוג [סך-הכל]"
+msgstr "3 מאותו סוג [סה״כ]"
 
 #: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
-msgstr "4 מאותו סוג [סך-הכל]"
+msgstr "4 מאותו סוג [סה״כ]"
 
 #: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
@@ -427,7 +432,7 @@ msgstr "5 מאותו סוג [50]"
 
 #: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
-msgstr "הכול הולך [סך-הכול]"
+msgstr "הכול הולך [סה״כ]"
 
 #. End of lower panel
 #: src/yahtzee.c:99 src/yahtzee.c:125
@@ -450,15 +455,15 @@ msgstr "בונוס אם > 62"
 #. End of upper panel
 #: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
-msgstr "2 זוגות בצבע אחיד [סכום]"
+msgstr "2 זוגות בצבע אחיד [סה״כ]"
 
 #: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
-msgstr "בית מלא [15 + סכום]"
+msgstr "בית מלא [15 + סה״כ]"
 
 #: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
-msgstr "בית מלא בצבע אחיד [20 + סכום]"
+msgstr "בית מלא בצבע אחיד [20 + סה״כ]"
 
 #: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
@@ -466,19 +471,19 @@ msgstr "פלאש (כולם באותו צבע) [35]"
 
 #: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
-msgstr "4 מאותו סוג [25 + הסכום]"
+msgstr "4 מאותו סוג [25 + סה״כ]"
 
 #: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
-msgstr "5 מאותו סוג [50 + הסכום]"
+msgstr "5 מאותו סוג [50 + סה״כ]"
 
 #: src/yahtzee.c:249
 msgid "Choose a score slot."
-msgstr "בחר תיבת ניקוד."
+msgstr "נא לבחור תיבת ניקוד."
 
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
-msgstr "5 מאותו סוג [סך הכול]"
+msgstr "5 מאותו סוג [סה״כ]"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Time"
