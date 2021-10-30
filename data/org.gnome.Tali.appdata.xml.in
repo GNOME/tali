@@ -23,6 +23,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="40.4" date="2021-10-30" type="stable">
+      <description>
+        <p>
+          This is a stable release, with the following improvements since 40.3:
+        </p>
+        <ul>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="40.3" date="2021-09-18" type="stable">
       <description>
         <p>
