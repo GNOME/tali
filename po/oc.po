@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-05-31 06:30+0000\n"
-"PO-Revision-Date: 2021-10-03 19:12+0200\n"
+"POT-Creation-Date: 2021-10-03 17:13+0000\n"
+"PO-Revision-Date: 2021-11-07 20:58+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -33,27 +33,27 @@ msgstr "Getatz los dats"
 #: data/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Toggle the first die"
-msgstr ""
+msgstr "Bascular lo primièr dat"
 
 #: data/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle the second die"
-msgstr ""
+msgstr "Bascular lo segond dat"
 
 #: data/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Toggle the third die"
-msgstr ""
+msgstr "Bascular lo tresen dat"
 
 #: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Toggle the fourth die"
-msgstr ""
+msgstr "Bascular lo quatren dat"
 
 #: data/help-overlay.ui:58
 msgctxt "shortcut window"
 msgid "Toggle the fifth die"
-msgstr ""
+msgstr "Bascular lo cinquen dat"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
@@ -101,7 +101,7 @@ msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 "Podètz jogar contra un a cinc adversaris, amb tres nivèls de dificultat."
 
-#: data/org.gnome.Tali.appdata.xml.in:110
+#: data/org.gnome.Tali.appdata.xml.in:230
 msgid "The GNOME Project"
 msgstr "Lo projècte GNOME"
 
@@ -151,7 +151,7 @@ msgstr "'Normal'"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
-msgstr "Partida _novèla "
+msgstr "Partida _novèla"
 
 #: data/tali-menus.ui:11
 msgid "_Scores"
