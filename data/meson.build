@@ -22,7 +22,7 @@ install_data ([ 'gnome-dice-1.svg',
 install_data (project_id + '.gschema.xml',
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
 
-desktop_file = i18n.merge_file ('desktop-file',
+desktop_file = i18n.merge_file (
                  input: project_id + '.desktop.in',
                  output: project_id + '.desktop',
                  install: true,
@@ -41,7 +41,7 @@ if desktop_file_validate.found()
   )
 endif
 
-appdata_file = i18n.merge_file ('appdata-file',
+appdata_file = i18n.merge_file (
                  input: project_id + '.appdata.xml.in',
                  output: project_id + '.appdata.xml',
                  install: true,
