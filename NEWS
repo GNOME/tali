@@ -1,3 +1,8 @@
+Tali 40.5
+=========
+* Fix build with meson-0.61 (!14, rvalue)
+* Translation updates
+
 Tali 40.4
 =========
 * Translation updates
