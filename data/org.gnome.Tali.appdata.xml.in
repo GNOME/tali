@@ -246,7 +246,6 @@
   <url type="donation">https://www.gnome.org/friends/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
   <url type="help">https://help.gnome.org/users/tali/stable/</url>
-  <update_contact>mariowenzel_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <developer_name>The GNOME Project</developer_name>
   <provides>
