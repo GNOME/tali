@@ -23,6 +23,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="40.6" date="2022-03-19" type="stable">
+      <description>
+        <p>
+          This is a stable release, with the following improvements since 40.5:
+        </p>
+        <ul>
+          <li>Update screenshot hosting</li>
+        </ul>
+      </description>
+    </release>
     <release version="40.5" date="2022-01-30" type="stable">
       <description>
         <p>

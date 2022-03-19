@@ -1,3 +1,8 @@
+Tali 40.6
+=========
+* Update appdata screenshot hosting (Michael Catanzaro)
+* Fix flatpak build (Mart)
+
 Tali 40.5
 =========
 * Fix build with meson-0.61 (!14, rvalue)
