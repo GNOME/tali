@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali\n"
-"POT-Creation-Date: 2020-02-15 20:04+0000\n"
+"POT-Creation-Date: 2021-04-08 08:59+0000\n"
 "PO-Revision-Date: 2020-03-02 10:58+0100\n"
 "Last-Translator: Francesc Famadas <kiski97@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -343,21 +343,21 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:201
 msgid ""
-"There is one exception to this rule, if you roll a yahtzee a second time you "
-"can put it in the yahtzee row again for an extra fifty points. You can keep "
-"doing this each time you get another yahtzee. At the end of the game you "
-"will be given extra rolls to fill in the other rows. Be warned that if you "
-"score zero in your yahtzee row (i.e. you filled that row with something that "
-"wasn't a yahtzee) then you can't put a yahtzee in afterward, zero is all you "
-"will score."
+"There is one exception to this rule, if you roll 5 of a kind a second time "
+"you can put it in the 5 of a kind row again for an extra fifty points. You "
+"can keep doing this each time you get another 5 of a kind. At the end of the "
+"game you will be given extra rolls to fill in the other rows. Be warned that "
+"if you score zero in your 5 of a kind row (i.e. you filled that row with "
+"something that wasn't a 5 of a kind) then you can't put a 5 of a kind in "
+"afterward, zero is all you will score."
 msgstr ""
-"Només hi ha una excepció d'aquesta regla. Si tireu un yahtzee per segon cop, "
-"podreu posar-lo en la fila de yahtzee i obtenir cinquanta punts extres. "
-"Podreu seguir fent-ho cada cop que aconseguiu un altre yahtzee. Al final de "
+"Només hi ha una excepció d'aquesta regla. Si tireu un cinc per segon cop, "
+"podreu posar-lo en la fila del cinc i obtenir cinquanta punts extres. "
+"Podreu seguir fent-ho cada cop que aconseguiu un altre cinc. Al final de "
 "la partida aconseguireu tirades extres per a omplir les files restants. "
-"Vigileu que si teniu zero punts en la fila del yahtzee (p. ex. heu emplenat "
+"Vigileu que si teniu zero punts en la fila del cinc (p. ex. heu emplenat "
 "la fila amb alguna cosa que no era un yahtzee) llavors no podreu posar-hi "
-"cap yahtzee després, i la puntuació serà zero."
+"cap cinc després, i la puntuació serà zero."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:211
@@ -493,32 +493,30 @@ msgstr "<guimenuitem>Versió del joc a jugar</guimenuitem>"
 #: C/index.docbook:285
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
-"colors (similar to Kismet). When you change game type, you must restart the "
-"game to see use the new game type."
+"colors (similar to Kismet)."
 msgstr ""
 "Podeu jugar a la versió regular (semblant al Yahtzee) o a la versió amb "
-"colors (semblant al Kismet). Quan canvieu el tipus de joc, haureu de "
-"reiniciar la partida per a utilitzar el tipus de joc nou."
+"colors (semblant al Kismet)."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:295
+#: C/index.docbook:294
 msgid "<guimenuitem>Player Names</guimenuitem>"
 msgstr "<guimenuitem>Noms dels jugadors</guimenuitem>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:297
+#: C/index.docbook:296
 msgid "To change the names of the players just enter new names in the boxes."
 msgstr ""
 "Per a canviar els noms dels jugadors simplement introduïu els noms nous en "
 "els quadres."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:306
+#: C/index.docbook:305
 msgid "Game Strategy"
 msgstr "Estratègia del joc"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:307
+#: C/index.docbook:306
 msgid ""
 "The 63 points needed for the bonus in the upper half corresponds to getting "
 "three of each die type in each row. If you score more than three dice in the "
@@ -536,23 +534,23 @@ msgstr ""
 "superior és superior a 77 punts."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:316
+#: C/index.docbook:315
 msgid ""
-"Don't forget about multiple yahtzees, if you roll a second yahtzee you can "
-"also put it in the yahtzee row for even more points. This only applies to "
-"the regular game."
+"Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
+"you can also put it in the 5 of a kind row for even more points. This only "
+"applies to the regular game."
 msgstr ""
-"No oblideu els yahtzees múltiples, si tireu un segon yahtzee podeu posar-lo "
-"en la fila de yahtzee per a obtenir més punts. Només és vàlid per al joc "
+"No oblideu els cinc múltiples, si tireu un segon cinc podeu posar-lo "
+"en la fila del cinc per a obtenir més punts. Només és vàlid per al joc "
 "regular."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:330
+#: C/index.docbook:329
 msgid "Known Bugs and Limitations"
 msgstr "Errors i limitacions conegudes"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:331
+#: C/index.docbook:330
 msgid ""
 "When you switch game type, the game does not use the new dice images until "
 "you restart gtali. It should play correctly with the \"wrong\" dice."
@@ -562,22 +560,22 @@ msgstr ""
 "«incorrectes»."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid "Glossary"
 msgstr "Glossari"
 
 #. (itstool) path: note/para
-#: C/index.docbook:341
+#: C/index.docbook:340
 msgid "Remember that the order of the dice is not important."
 msgstr "Recordeu que l'ordre dels daus no és important."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:344
+#: C/index.docbook:343
 msgid "3 of a Kind"
 msgstr "3 d'iguals"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:345
+#: C/index.docbook:344
 msgid ""
 "Three of the dice have the same number. The score is the total of all the "
 "dice. e.g. 1, 2, 2, 2, 5."
@@ -586,12 +584,12 @@ msgstr ""
 "daus. P. ex. 1, 2, 2, 2, 5."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:350
+#: C/index.docbook:349
 msgid "4 of a Kind"
 msgstr "4 d'iguals"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:351
+#: C/index.docbook:350
 msgid ""
 "Four of the dice have the same number. The score is the total of all the "
 "dice. e.g. 2, 5, 5, 5, 5. In the Colors game, the score is 25 plus the total "
@@ -602,12 +600,12 @@ msgstr ""
 "el total de tots els daus."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:357
+#: C/index.docbook:356
 msgid "5 of a Kind"
 msgstr "5 d'iguals"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:358
+#: C/index.docbook:357
 msgid ""
 "Five identical dice. e.g. 3, 3, 3, 3, 3. In the Colors game, the score is 50 "
 "plus the total of all the dice."
@@ -616,28 +614,28 @@ msgstr ""
 "50 més el total de tots els daus."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:363
+#: C/index.docbook:362
 msgid "Full House"
 msgstr "Full"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:364
+#: C/index.docbook:363
 msgid ""
 "Five dice consisting of two groups: One group of three with the same numbers "
 "and another group of two with the same numbers. e.g. 1, 1, 1, 4, 4. In the "
 "Colors game, the score is 15 plus the total of all the dice."
 msgstr ""
 "Cinc daus dividits en dos grups: Un grup de tres amb els mateixos números i "
-"un altre grup de dos amb els mateixos números. P. ex. 1, 1, 1, 4, 4. En el joc "
-"de colors, la puntuació és 15 més el total de tots els daus."
+"un altre grup de dos amb els mateixos números. P. ex. 1, 1, 1, 4, 4. En el "
+"joc de colors, la puntuació és 15 més el total de tots els daus."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:371
+#: C/index.docbook:370
 msgid "Full House Same Color"
 msgstr "Full del mateix color"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:372
+#: C/index.docbook:371
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of three with the same numbers and another group of two "
@@ -654,12 +652,12 @@ msgstr ""
 "més el total de tots els daus."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:382
+#: C/index.docbook:381
 msgid "Two Pair Same Color"
 msgstr "Dues parelles del mateix color"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid ""
 "This category is only used in the Colors game. Five dice consisting of two "
 "groups: One group of two with the same numbers and another group of two with "
@@ -676,29 +674,29 @@ msgstr ""
 "qualsevol valor. La puntuació és el total de tots els daus."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:393
+#: C/index.docbook:392
 msgid "Flush"
 msgstr "Flush"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid ""
 "This category is only used in the Colors game. Five dice that are all the "
 "same \"color\": Two dice are the same color if their numbers total 7: 1 and "
 "6 are black, 2 and 5 are red, and 3 and 4 are green. The score is 35 points."
 msgstr ""
 "Aquesta categoria només s’utilitza al joc Colors. Cinc daus que són tots el "
-"mateix «color»: dos daus són del mateix color si els seus nombres són 7: 1 "
-"i 6 són negres, 2 i 5 són vermells i 3 i 4 són verds. La puntuació és de 35 "
+"mateix «color»: dos daus són del mateix color si els seus nombres són 7: 1 i "
+"6 són negres, 2 i 5 són vermells i 3 i 4 són verds. La puntuació és de 35 "
 "punts."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:401
+#: C/index.docbook:400
 msgid "Large Straight"
 msgstr "Escala llarga"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:402
+#: C/index.docbook:401
 msgid ""
 "Five dice with consecutive numbers. e.g. 2, 3, 4, 5, 6. The score is 40 "
 "points."
@@ -707,12 +705,12 @@ msgstr ""
 "punts."
 
 #. (itstool) path: glossentry/glossterm
-#: C/index.docbook:407
+#: C/index.docbook:406
 msgid "Small Straight"
 msgstr "Escala curta"
 
 #. (itstool) path: glossdef/para
-#: C/index.docbook:408
+#: C/index.docbook:407
 msgid ""
 "Four dice with consecutive numbers. The fifth die can be any number. e.g. 2, "
 "3, 4, 5, 5. This category is only used in the regular game. The score is 30 "
@@ -723,12 +721,12 @@ msgstr ""
 "La puntuació és 30 punts."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:422
+#: C/index.docbook:421
 msgid "Authors"
 msgstr "Autors"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:423
+#: C/index.docbook:422
 msgid ""
 "<application>GNOME Tali</application> was written by Scott Heavner "
 "(<email>sdh@po.cwru.edu</email>) and Orest Zborowski. This manual was "
@@ -747,12 +745,12 @@ msgstr ""
 "\" type=\"help\">document</ulink>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:450
+#: C/index.docbook:449
 msgid "License"
 msgstr "Llicència"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:451
+#: C/index.docbook:450
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"help:gpl\"> <citetitle>GNU "
@@ -767,7 +765,7 @@ msgstr ""
 "(a la vostra opció) una versió posterior."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:459
+#: C/index.docbook:458
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -780,7 +778,7 @@ msgstr ""
 "pública general de GNU</citetitle>."
 
 #. (itstool) path: para/address
-#: C/index.docbook:472
+#: C/index.docbook:471
 #, no-wrap
 msgid ""
 "\n"
@@ -798,7 +796,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:465
+#: C/index.docbook:464
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
