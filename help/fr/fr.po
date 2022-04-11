@@ -5,13 +5,13 @@
 # Luc Pionchon <pionchon.luc@gmail.com>, 2012
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
 # Claude Paroz <claude@2xlibre.net>, 2007-2021.
-# Charles Monzat <charles.monzat@free.fr>, 2018-2021.
+# Charles Monzat <charles.monzat@free.fr>, 2018-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtali doc fr\n"
-"POT-Creation-Date: 2020-09-25 15:08+0000\n"
-"PO-Revision-Date: 2021-01-12 15:45+0100\n"
+"POT-Creation-Date: 2021-04-08 08:59+0000\n"
+"PO-Revision-Date: 2022-04-10 23:43+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -357,14 +357,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:201
-#| msgid ""
-#| "There is one exception to this rule, if you roll a yahtzee a second time "
-#| "you can put it in the yahtzee row again for an extra fifty points. You "
-#| "can keep doing this each time you get another yahtzee. At the end of the "
-#| "game you will be given extra rolls to fill in the other rows. Be warned "
-#| "that if you score zero in your yahtzee row (i.e. you filled that row with "
-#| "something that wasn't a yahtzee) then you can't put a yahtzee in "
-#| "afterward, zero is all you will score."
 msgid ""
 "There is one exception to this rule, if you roll 5 of a kind a second time "
 "you can put it in the 5 of a kind row again for an extra fifty points. You "
@@ -518,10 +510,6 @@ msgstr "<guimenuitem>Version du jeu souhaitée</guimenuitem>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:285
-#| msgid ""
-#| "Play either the regular version (similar to Yahtzee) or the version with "
-#| "colors (similar to Kismet). When you change game type, you must restart "
-#| "the game to see use the new game type."
 msgid ""
 "Play either the regular version (similar to Yahtzee) or the version with "
 "colors (similar to Kismet)."
@@ -566,10 +554,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:315
-#| msgid ""
-#| "Don't forget about multiple yahtzees, if you roll a second yahtzee you "
-#| "can also put it in the yahtzee row for even more points. This only "
-#| "applies to the regular game."
 msgid ""
 "Don't forget about multiple 5 of a kinds, if you roll a second 5 of a kind "
 "you can also put it in the 5 of a kind row for even more points. This only "
@@ -849,7 +833,7 @@ msgstr ""
 "GNOME</citetitle>. Vous pouvez également obtenir une copie de la "
 "<citetitle>GNU General Public License</citetitle> à la Free Software "
 "Foundation en visitant <ulink type=\"http\" url=\"http://www.fsf.org\">leur "
-"site Web</ulink> ou en écrivant à  <_:address-1/>"
+"site web</ulink> ou en écrivant à <_:address-1/>"
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
