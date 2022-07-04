@@ -1,0 +1,470 @@
+# Abkhazian translation for tali.
+# Copyright (C) 2022 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
+# Naala Nanba <naala-nanba@rambler.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tali master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2022-04-23 20:30+0000\n"
+"PO-Revision-Date: 2022-07-04 21:26+0300\n"
+"Last-Translator: \n"
+"Language-Team: Abkhazian <ab@li.org>\n"
+"Language: ab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Ахәмарра ҿыц алагара"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Акамаҭелқәа рыршәра"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Раԥхьатәи акамаҭел алхра"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Аҩбатәи акамаҭел алхра"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Ахԥатәи акамаҭел алхра"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Аԥшьбатәи акамаҭел алхра"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Ахәбатәи акамаҭел алхра"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Аныҟәара аԥыхра"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Аилыркаа арбара"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Арыдқәа реилаҵа арбара"
+
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ахырқәшара"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:52
+msgid "Tali"
+msgstr "Тали"
+
+#: data/org.gnome.Tali.appdata.xml.in:8
+msgid "Roll dice and score points"
+msgstr "Акамаҭелқәа шәыршәла акәаталақәа еизыжәгала"
+
+#: data/org.gnome.Tali.appdata.xml.in:10
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Апокер ахәмарра акамаҭелқәа рыла.Акамаҭелқәа шәыршәоит хынтә еишьҭаргыланы? "
+"аршәра аамышьҭахь иманшәалоу ааԥхьаӡацқәа хазы ишьҭаҵауа.Шәара ишәылшоит "
+"еиҳа имаҷны идыр,аԥштәы змоу ахкы шәыхәмарыр."
+
+#: data/org.gnome.Tali.appdata.xml.in:16
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Шәыхәмарла (акы инаркны хәба рҟынӡа)х-ҩаӡарак змоу ауадаҩраҟны."
+
+#: data/org.gnome.Tali.appdata.xml.in:270
+msgid "The GNOME Project"
+msgstr "Апроект  GNOME"
+
+#: data/org.gnome.Tali.desktop.in:4
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Шәрылыхәмар апокер астиль змоу акамаҭелқәа"
+
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:8
+msgid "yahtzee;"
+msgstr "иацзы;"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Аршәрақәа рабжьара ааҭгыларақәа"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Иалышәха, хәмарҩы иҟалаз ибаразы акомпиутер акамаҭелқәа анаршәо  ааҭгылара  "
+"бжьаргылара аҭаху аҭахыму ."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer’s thoughts"
+msgstr "Акомпиутер  азхәыцрақәа рырбара"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI’s working will be done to standard output."
+msgstr ""
+"Иалхзар ,   иԥсабаратәым аинтеллект аусура алҵшәа  истандарту алкаа ахь "
+"иалгахоит."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "['Ауаҩԥсы' ,  'Алиас', 'Инал', 'Саид', 'Наала', 'Милана' ]"
+
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Иаабац'"
+
+#: data/tali-menus.ui:7
+msgid "_New Game"
+msgstr "_Ахәмарра ҿыц"
+
+#: data/tali-menus.ui:11
+msgid "_Scores"
+msgstr "_Алҵшәақәа"
+
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "_Ахышәарақәа"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "_Арыдқәа реилаҵа"
+
+#: data/tali-menus.ui:25
+msgid "_Help"
+msgstr "_Аилыркаа"
+
+#: data/tali-menus.ui:29
+msgid "_About Tali"
+msgstr "_Аԥшьы иазкны"
+
+#: src/clist.c:156
+msgid "Already used! Where do you want to put that?"
+msgstr "Аҭыԥ куп! Ири абашьҭаҵатәу?"
+
+#: src/clist.c:412
+#, c-format
+msgid "Score: %d"
+msgstr "Аихшьала:%d"
+
+#: src/clist.c:414
+#, c-format
+msgid "Field used"
+msgstr "Ахархәара змоу адәы"
+
+#: src/gyahtzee.c:97
+msgid "Delay computer moves"
+msgstr "Акомпиутер аныҟәарақәа раанкылара"
+
+#: src/gyahtzee.c:99
+msgid "Display computer thoughts"
+msgstr "Акомпиутер  ахәыцрақәа рырбара"
+
+#: src/gyahtzee.c:101
+msgid "Number of computer opponents"
+msgstr "Аиндаҭлаҩцәа рхыԥхьаӡара"
+
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
+msgid "NUMBER"
+msgstr "Ахыԥхьаӡара"
+
+#: src/gyahtzee.c:103
+msgid "Number of human opponents"
+msgstr "Аиндаҭлаҩцәа -ауаа рхыԥхьаӡара"
+
+#: src/gyahtzee.c:105
+msgid "Game choice: Regular or Colors"
+msgstr "Ахәмарра алхра: иаабац мамзар аԥштәы змоу"
+
+#: src/gyahtzee.c:105
+msgid "STRING"
+msgstr "Ацәаҳәа"
+
+#: src/gyahtzee.c:107
+msgid "Number of computer-only games to play"
+msgstr "Акомпиутерқәа рымацара рзы ахәмаррақәа рхыԥхьаӡара"
+
+#: src/gyahtzee.c:109
+msgid "Number of trials for each roll for the computer"
+msgstr "Акомпиутер иҟанаҵо аршәрақәа рзы аҽазышәарақәа рхыԥхьаӡара"
+
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
+msgctxt "game type"
+msgid "Regular"
+msgstr "Иаабац"
+
+#: src/gyahtzee.c:122 src/setup.c:355
+msgctxt "game type"
+msgid "Colors"
+msgstr "Аԥштәы змоу"
+
+#: src/gyahtzee.c:162
+msgid "Roll all!"
+msgstr "Зегьы рыршәра!"
+
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
+msgid "Roll!"
+msgstr "Аршәра!"
+
+#: src/gyahtzee.c:212
+msgid "The game is a draw!"
+msgstr "Ахәмарра еиҭахарала ихырқәшоуп !"
+
+#: src/gyahtzee.c:227
+#, c-format
+msgid "%s wins the game with %d point"
+msgid_plural "%s wins the game with %d points"
+msgstr[0] "%s ахәмарраҟны даиааит %d  кәаталак  ала"
+msgstr[1] "%s ахәмарраҟны даиааит %d  кәаталак  рыла"
+
+#: src/gyahtzee.c:231
+msgid "Game over!"
+msgstr "Ахәмарра хырқәшоуп!"
+
+#: src/gyahtzee.c:275
+#, c-format
+msgid "Computer playing for %s"
+msgstr "Акомпиутер хәмароит %s изы"
+
+#: src/gyahtzee.c:277
+#, c-format
+msgid "%s! – You’re up."
+msgstr "%s! -шәаамҭа ааит."
+
+#: src/gyahtzee.c:470
+msgid "Select dice to roll or choose a score slot."
+msgstr "Иалшәх акамаҭелқәа аршәразы мамзар иалшәха аԥхьаӡара аԥыркы. "
+
+#: src/gyahtzee.c:497
+msgid "Roll"
+msgstr "Аршәра"
+
+#: src/gyahtzee.c:555
+msgid "You are only allowed three rolls. Choose a score slot."
+msgstr "Хынтә заҵәык ауп ишәыршәыр иҟало.Иалышәх аԥыркы."
+
+#: src/gyahtzee.c:612
+msgid "GNOME version (1998):"
+msgstr "GNOME аверсиа (1998)"
+
+#: src/gyahtzee.c:615
+msgid "Console version (1992):"
+msgstr "Атексттә версиа (1992)"
+
+#: src/gyahtzee.c:618
+msgid "Colors game and multi-level AI (2006):"
+msgstr "Аԥштәы змоу ахәмарра арежим  аҩаӡарарацәала еиҿартәоу ИИ(2006)"
+
+#: src/gyahtzee.c:635
+msgid "A variation on poker with dice and less money."
+msgstr "Покер ахәмарра ахкқәа руак, акамаҭелқәеи аԥарақәеи рыла."
+
+#: src/gyahtzee.c:639
+msgid "translator-credits"
+msgstr "Нанба Наала <naala-nanba@rambler.ru>, 2022"
+
+#: src/gyahtzee.c:791
+msgid "Undo your most recent move"
+msgstr "Аҵыхәтәантәи ахәмарра аԥыхра"
+
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "_Ахәмарҩцәа рхыԥхьаӡара:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
+msgid "Human"
+msgstr "Ауаҩы"
+
+#: src/setup.c:118
+msgid "Preferences will be updated in the next game."
+msgstr "Ахышәарақәа ахархәара роуоит анаҩстәи ахәмарра аҟны."
+
+#: src/setup.c:260
+msgid "Preferences"
+msgstr "Ахышәарақәа"
+
+#: src/setup.c:280
+msgid "Human Players"
+msgstr "Ахәмарҩцәа -ауаа"
+
+#: src/setup.c:290
+msgid "_Number of players:"
+msgstr "_Ахәмарҩцәа рхыԥхьаӡара:"
+
+#: src/setup.c:304
+msgid "Computer Opponents"
+msgstr "Акомпиутертә еиндаҭлаҩцәа"
+
+#. --- Button ---
+#: src/setup.c:311
+msgid "_Delay between rolls"
+msgstr "_Аршәрақәа рыбжьара аанкылара"
+
+#: src/setup.c:321
+msgid "N_umber of opponents:"
+msgstr "Аиндаҭлаҩцәа _рхыԥхьаӡара."
+
+#: src/setup.c:335
+msgid "_Difficulty:"
+msgstr "_Иуадаҩра:"
+
+#: src/setup.c:338
+msgctxt "difficulty"
+msgid "Easy"
+msgstr "Имариоу"
+
+#: src/setup.c:339
+msgctxt "difficulty"
+msgid "Medium"
+msgstr "Абжьаратәи"
+
+#: src/setup.c:340
+msgctxt "difficulty"
+msgid "Hard"
+msgstr "Иуадаҩу"
+
+#. --- Combo (yahtzee or kismet style ----
+#: src/setup.c:351
+msgid "Game Type"
+msgstr "Ахәмарра ахкы"
+
+#. --- PLAYER NAMES FRAME ----
+#: src/setup.c:363
+msgid "Player Names"
+msgstr "Ахәмарҩцәа рыхьӡқәа"
+
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
+msgid "1s [total of 1s]"
+msgstr "1 [акака реицҵа]"
+
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
+msgid "2s [total of 2s]"
+msgstr "[ҩба реицҵа реицҵа]"
+
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
+msgid "3s [total of 3s]"
+msgstr "3[хԥа реицҵа]"
+
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
+msgid "4s [total of 4s]"
+msgstr "4[ԥшьба реицҵа]"
+
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
+msgid "5s [total of 5s]"
+msgstr "5[хәба реицҵа]"
+
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
+msgid "6s [total of 6s]"
+msgstr "6[фба реицҵа]"
+
+#. End of upper panel
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
+msgid "3 of a Kind [total]"
+msgstr "3 еиԥшу [аицҵа]"
+
+#: src/yahtzee.c:92 src/yahtzee.c:519
+msgid "4 of a Kind [total]"
+msgstr "4 еиԥшу [аицҵа]"
+
+#: src/yahtzee.c:93 src/yahtzee.c:520
+msgid "Full House [25]"
+msgstr "Фулл хаус"
+
+#: src/yahtzee.c:94 src/yahtzee.c:521
+msgid "Small Straight [30]"
+msgstr "Идуум стрит"
+
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
+msgid "Large Straight [40]"
+msgstr "Ихадоу стрит"
+
+#: src/yahtzee.c:96
+msgid "5 of a Kind [50]"
+msgstr "5 еиԥшу"
+
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
+msgid "Chance [total]"
+msgstr "Амариа [аицҵа]"
+
+#. End of lower panel
+#: src/yahtzee.c:99 src/yahtzee.c:125
+msgid "Lower Total"
+msgstr "Аицҵа маҷ"
+
+#: src/yahtzee.c:100 src/yahtzee.c:126
+msgid "Grand Total"
+msgstr "Ихадоу аицҵа"
+
+#. Need to squish between upper and lower pannel
+#: src/yahtzee.c:102 src/yahtzee.c:128
+msgid "Upper total"
+msgstr "Хыхьтәи аицҵа"
+
+#: src/yahtzee.c:103 src/yahtzee.c:129
+msgid "Bonus if >62"
+msgstr "Абонус, >62 акәзар"
+
+#. End of upper panel
+#: src/yahtzee.c:115 src/yahtzee.c:525
+msgid "2 pair Same Color [total]"
+msgstr "2 еихацалак ԥштәык змоу[аицҵа]"
+
+#: src/yahtzee.c:117 src/yahtzee.c:526
+msgid "Full House [15 + total]"
+msgstr "Фулл -хаус [15+ аицҵа]"
+
+#: src/yahtzee.c:118 src/yahtzee.c:527
+msgid "Full House Same Color [20 + total]"
+msgstr "Фулл -хаус ԥштәык змоу [20+ аицҵа]"
+
+#: src/yahtzee.c:119 src/yahtzee.c:528
+msgid "Flush (all same color) [35]"
+msgstr "Флеш (зегьы ԥштәык рымоуп)[35]"
+
+#: src/yahtzee.c:121 src/yahtzee.c:529
+msgid "4 of a Kind [25 + total]"
+msgstr "4 еиԥшу  [25+ аицҵа]"
+
+#: src/yahtzee.c:122 src/yahtzee.c:530
+msgid "5 of a Kind [50 + total]"
+msgstr "5 еиԥшу [50+ аицҵа]"
+
+#: src/yahtzee.c:249
+msgid "Choose a score slot."
+msgstr "Аԥыркы аԥхьаӡара алышәх."
+
+#: src/yahtzee.c:523
+msgid "5 of a Kind [total]"
+msgstr "5 еиԥшу Фулл [аицҵа]"
