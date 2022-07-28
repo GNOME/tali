@@ -1,35 +1,88 @@
-# translation of gnome-games.po to Georgian
-# Georgian translation for gnome-games
-# Copyright (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
-# This file is distributed under the same license as the gnome-games package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#
-#
-# Alexander Didebulidze <didebuli@in.tum.de> ,2005 ,2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 07:11+0100\n"
-"PO-Revision-Date: 2006-04-10 12:30+0200\n"
-"Last-Translator: Alexander Didebulidze <didebuli@in.tum.de>\n"
-"Language-Team: Georgian <gnome@inet.ge>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
+"POT-Creation-Date: 2022-07-04 18:27+0000\n"
+"PO-Revision-Date: 2022-07-28 21:46+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: \n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "დაიწყეთ ახალი თამაში"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr ""
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr ""
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr ""
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr ""
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr ""
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr ""
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr ""
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr ""
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობების ჩვენება"
+
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "დატოვება"
+
+#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:2
+#: data/org.gnome.Tali.appdata.xml.in:8
 msgid "Roll dice and score points"
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:3
+#: data/org.gnome.Tali.appdata.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
@@ -37,465 +90,374 @@ msgid ""
 "known variant with colored dice."
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/org.gnome.Tali.appdata.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr ""
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/org.gnome.Tali.appdata.xml.in:270
 msgid "The GNOME Project"
+msgstr "პროექტი \"GNOME\""
+
+#: data/org.gnome.Tali.desktop.in:4
+msgid "Beat the odds in a poker-style dice game"
 msgstr ""
 
-#: ../data/tali.desktop.in.h:2
-#, fuzzy
-msgid "Beat the odds in a poker-style dice game"
-msgstr "დაკვრა a"
-
-#: ../data/tali.desktop.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:8
 msgid "yahtzee;"
 msgstr ""
 
-#: ../data/tali-menus.ui.h:1
-msgid "_New Game"
-msgstr "_ახალი თამაში"
-
-#: ../data/tali-menus.ui.h:2
-#, fuzzy
-msgid "_Preferences"
-msgstr "პარამეტრები"
-
-#: ../data/tali-menus.ui.h:3
-msgid "_Scores"
-msgstr ""
-
-#: ../data/tali-menus.ui.h:4
-msgid "_Help"
-msgstr "_დახმარება"
-
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr ""
-
-#: ../data/tali-menus.ui.h:6
-msgid "_Quit"
-msgstr ""
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
-#, fuzzy
+#: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
-msgstr "დაყოვნება"
+msgstr ""
 
-#: ../data/org.gnome.tali.gschema.xml.h:2
-#, fuzzy
+#: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
 "the player can follow what it is doing."
-msgstr "არჩევა -სკენ a მიყევი."
+msgstr ""
 
-#: ../data/org.gnome.tali.gschema.xml.h:3
-#, fuzzy
-msgid "Display the computer's thoughts"
-msgstr "დისპლეი"
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer’s thoughts"
+msgstr ""
 
-#: ../data/org.gnome.tali.gschema.xml.h:4
-#, fuzzy
+#: data/org.gnome.Tali.gschema.xml:17
 msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr "-სკენ ჭეშმარიტია a ის -სკენ."
+"If set to true, a dump of the AI’s working will be done to standard output."
+msgstr ""
 
-#: ../data/org.gnome.tali.gschema.xml.h:5
-#, fuzzy
+#: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[ადამიანი,შაქრო,ზაქრო,თამრი,ქეთი,ჟანი]"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr ""
 
-#: ../data/org.gnome.tali.gschema.xml.h:6
+#: data/org.gnome.Tali.gschema.xml:23
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr ""
 
-#: ../src/clist.c:158
-#, fuzzy
-msgid "Already used! Where do you want to put that?"
-msgstr "-სკენ?"
-
-#: ../src/clist.c:414
-#, c-format
-msgid "Score: %d"
-msgstr ""
-
-#: ../src/clist.c:416
-#, fuzzy, c-format
-msgid "Field used"
-msgstr "ზომა"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "დრო"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "მაღალი კონტრასტი"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr ""
-
-#: ../src/games-scores-dialog.c:386
-msgid "New Game"
+#: data/tali-menus.ui:7
+msgid "_New Game"
 msgstr "ახალი თამაში"
 
-#. Score dialog column header for the date
-#. the score was recorded
-#: ../src/games-scores-dialog.c:480
-msgid "Date"
+#: data/tali-menus.ui:11
+msgid "_Scores"
+msgstr "_ქულები"
+
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "გამართვა"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "_კლავიატურის მალსახმობები"
+
+#: data/tali-menus.ui:25
+msgid "_Help"
+msgstr "დახმარება"
+
+#: data/tali-menus.ui:29
+msgid "_About Tali"
 msgstr ""
 
-#: ../src/gyahtzee.c:100
-#, fuzzy
+#: src/clist.c:156
+msgid "Already used! Where do you want to put that?"
+msgstr ""
+
+#: src/clist.c:412
+#, c-format
+msgid "Score: %d"
+msgstr "ქულები: %d"
+
+#: src/clist.c:414
+#, c-format
+msgid "Field used"
+msgstr ""
+
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
-msgstr "დაყოვნება"
-
-#: ../src/gyahtzee.c:102
-#, fuzzy
-msgid "Display computer thoughts"
-msgstr "დისპლეი"
-
-#: ../src/gyahtzee.c:104
-#, fuzzy
-msgid "Number of computer opponents"
-msgstr "ის"
-
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
-msgid "NUMBER"
 msgstr ""
 
-#: ../src/gyahtzee.c:106
-#, fuzzy
-msgid "Number of human opponents"
-msgstr "ის"
+#: src/gyahtzee.c:99
+msgid "Display computer thoughts"
+msgstr ""
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:101
+msgid "Number of computer opponents"
+msgstr ""
+
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
+msgid "NUMBER"
+msgstr "ნომერი"
+
+#: src/gyahtzee.c:103
+msgid "Number of human opponents"
+msgstr ""
+
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
 msgstr ""
 
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
+msgstr "სტრიქონი"
+
+#: src/gyahtzee.c:107
+msgid "Number of computer-only games to play"
 msgstr ""
 
-#: ../src/gyahtzee.c:110
-#, fuzzy
-msgid "Number of computer-only games to play"
-msgstr "ის"
-
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
 msgstr ""
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
-msgstr ""
+msgstr "ჩვეულებრივი"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
-#, fuzzy
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "ფერები"
 
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr ""
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr ""
 
-#: ../src/gyahtzee.c:176
-#, fuzzy
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
-msgstr "a!"
+msgstr ""
 
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
-#, fuzzy
-msgid "Tali Scores"
-msgstr "მაღალი კონტრასტი"
-
-#: ../src/gyahtzee.c:191
-#, fuzzy
-msgid "Congratulations!"
-msgstr "გილოცავთ!"
-
-#: ../src/gyahtzee.c:192
-#, fuzzy
-msgid "Your score is the best!"
-msgstr "ზემოთ."
-
-#: ../src/gyahtzee.c:193
-#, fuzzy
-msgid "Your score has made the top ten."
-msgstr "ზემოთ."
-
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/gyahtzee.c:209
-#, fuzzy
+#: src/gyahtzee.c:231
 msgid "Game over!"
-msgstr "თამაში!"
+msgstr ""
 
-#: ../src/gyahtzee.c:253
-#, fuzzy, c-format
+#: src/gyahtzee.c:275
+#, c-format
 msgid "Computer playing for %s"
-msgstr "კომპიუტერი"
+msgstr ""
 
-#: ../src/gyahtzee.c:255
-#, fuzzy, c-format
+#: src/gyahtzee.c:277
+#, c-format
 msgid "%s! – You’re up."
-msgstr "თქვენ."
+msgstr ""
 
-#: ../src/gyahtzee.c:448
-#, fuzzy
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
-msgstr "-სკენ a."
+msgstr ""
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
 msgstr ""
 
-#: ../src/gyahtzee.c:534
-#, fuzzy
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "თქვენ არჩევა a."
+msgstr ""
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
-msgstr "GNOME ვერსია (1998):"
+msgstr ""
 
-#: ../src/gyahtzee.c:594
-#, fuzzy
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
-msgstr "კონსოლი ვერსია:"
+msgstr ""
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
 msgstr ""
 
-#: ../src/gyahtzee.c:614
-#, fuzzy
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
-msgstr "A და."
+msgstr ""
 
-#: ../src/gyahtzee.c:618
-#, fuzzy
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr "თარგმანი-შესრულებულია"
 
-#: ../src/gyahtzee.c:763
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
 msgstr ""
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
-msgid "Human"
-msgstr ""
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "თამაშის ტიპი:"
 
-#: ../src/setup.c:122
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
+msgid "Human"
+msgstr "ადამიანი"
+
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
 msgstr ""
 
-#: ../src/setup.c:264
+#: src/setup.c:260
 msgid "Preferences"
-msgstr "პარამეტრები"
+msgstr ""
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr ""
 
-#: ../src/setup.c:292
-#, fuzzy
+#: src/setup.c:290
 msgid "_Number of players:"
-msgstr "ის:"
+msgstr ""
 
-#: ../src/setup.c:306
-#, fuzzy
+#: src/setup.c:304
 msgid "Computer Opponents"
-msgstr "კომპიუტერი"
+msgstr ""
 
 #. --- Button ---
-#: ../src/setup.c:313
-#, fuzzy
+#: src/setup.c:311
 msgid "_Delay between rolls"
-msgstr "დაყოვნება"
+msgstr ""
 
-#: ../src/setup.c:323
-#, fuzzy
+#: src/setup.c:321
 msgid "N_umber of opponents:"
-msgstr "N ის:"
+msgstr ""
 
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
 msgstr ""
 
-#: ../src/setup.c:340
-#, fuzzy
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
-msgstr "მარტივი"
+msgstr "ადვილი"
 
-#: ../src/setup.c:341
-#, fuzzy
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "საშუალო"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
-msgstr ""
+msgstr "მაგარი"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "თამაშის ტიპი"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
-#, fuzzy
+#: src/setup.c:363
 msgid "Player Names"
-msgstr "მოთამაშე"
+msgstr ""
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
-#, fuzzy
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
-msgstr "ის"
+msgstr ""
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
-#, fuzzy
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
-msgstr "ის"
+msgstr ""
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
-#, fuzzy
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
-msgstr "ის"
+msgstr ""
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
-#, fuzzy
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
-msgstr "ის"
+msgstr ""
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
-#, fuzzy
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
-msgstr "ის"
+msgstr ""
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
-#, fuzzy
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
-msgstr "ის"
+msgstr ""
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
-#, fuzzy
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
-msgstr "ის a"
+msgstr ""
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
-#, fuzzy
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
-msgstr "ის a"
+msgstr ""
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
-#, fuzzy
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
-msgstr "სრული"
+msgstr ""
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
-#, fuzzy
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
-msgstr "პატარა პირდაპირი"
+msgstr ""
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
-#, fuzzy
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
-msgstr "დიდი პირდაპირი"
+msgstr ""
 
-#: ../src/yahtzee.c:97
-#, fuzzy
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
-msgstr "ის a"
+msgstr ""
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr ""
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
-#, fuzzy
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
-msgstr "უფრო დაბლა სულ"
+msgstr ""
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
-#, fuzzy
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
-msgstr "სულ"
+msgstr ""
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr ""
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
 msgstr ""
 
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
 msgstr ""
 
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
-#, fuzzy
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
-msgstr "სრული"
+msgstr ""
 
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
 msgstr ""
 
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
 msgstr ""
 
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
-#, fuzzy
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
-msgstr "ის a"
+msgstr ""
 
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
-#, fuzzy
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
-msgstr "ის a"
+msgstr ""
 
-#: ../src/yahtzee.c:250
-#, fuzzy
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
-msgstr "არჩევა a."
+msgstr ""
 
-#: ../src/yahtzee.c:524
-#, fuzzy
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
-msgstr "ის a"
+msgstr ""
