@@ -23,6 +23,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="40.8" date="2022-08-06" type="stable">
+      <description>
+        <p>
+          This is a stable release, with the following improvements since 40.7:
+        </p>
+        <ul>
+          <li>Abkhazian translation added</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="40.7" date="2022-04-23" type="stable">
       <description>
         <p>
