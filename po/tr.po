@@ -1,11 +1,8 @@
-# Turkish translation of gnome-games.
+# Turkish translation of tali.
 # Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2009-2022 tali's COPYRIGHT HOLDER
+# This file is distributed under the same license as the tali package.
 #
-# foundation: sıralama
-# Tableau: orta sıra
-# reserve: yedek
-# waste: kullanılamayan
-# stock : eldeki kartlar
 # Onur Kucuk, <okucuk@yahoo.com>, 2000.
 # Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
@@ -16,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: tali\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-03-28 11:23+0000\n"
+"POT-Creation-Date: 2022-07-28 06:51+0000\n"
 "PO-Revision-Date: 2020-04-28 16:44+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -108,7 +105,7 @@ msgstr ""
 msgid "Play between one and five opponents at three difficulty levels."
 msgstr "Birle beş arasında rakiple üç zorluk düzeyinde oynayın."
 
-#: data/org.gnome.Tali.appdata.xml.in:85
+#: data/org.gnome.Tali.appdata.xml.in:270
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -231,12 +228,12 @@ msgid "Number of trials for each roll for the computer"
 msgstr "Bilgisayar için her zar atmadaki denemelerin sayısı"
 
 #. Order must match GameType enum order
-#: src/gyahtzee.c:121 src/setup.c:352
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Sıradan"
 
-#: src/gyahtzee.c:122 src/setup.c:353
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Renkler"
@@ -327,53 +324,53 @@ msgstr "Tercihler sonraki oyunda güncellenecek."
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/setup.c:278
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "İnsan Oyuncular"
 
-#: src/setup.c:288
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "_Oyuncu sayısı:"
 
-#: src/setup.c:302
+#: src/setup.c:304
 msgid "Computer Opponents"
 msgstr "Bilgisayar Rakipler"
 
 #. --- Button ---
-#: src/setup.c:309
+#: src/setup.c:311
 msgid "_Delay between rolls"
 msgstr "_Atışlar arası süre"
 
-#: src/setup.c:319
+#: src/setup.c:321
 msgid "N_umber of opponents:"
 msgstr "_Rakip sayısı:"
 
-#: src/setup.c:333
+#: src/setup.c:335
 msgid "_Difficulty:"
 msgstr "_Zorluk derecesi:"
 
-#: src/setup.c:336
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Kolay"
 
-#: src/setup.c:337
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/setup.c:338
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Zor"
 
 #. --- Combo (yahtzee or kismet style ----
-#: src/setup.c:349
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "Oyun Türü"
 
 #. --- PLAYER NAMES FRAME ----
-#: src/setup.c:361
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "Oyuncu Adları"
 
@@ -480,39 +477,3 @@ msgstr "Bir puan yuvası seçin."
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 Tane Aynısından [toplam]"
-
-#~ msgid "org.gnome.Tali"
-#~ msgstr "org.gnome.Tali"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Zaman"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Puan"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$ddk %2$dsn"
-
-#~ msgid "New Game"
-#~ msgstr "Yeni Oyun"
-
-#~ msgid "Date"
-#~ msgstr "Tarih"
-
-#~ msgid "Tali Scores"
-#~ msgstr "Tali Puanları"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Tebrikler!"
-
-#~ msgid "Your score is the best!"
-#~ msgstr "En iyi skor sizinki!"
-
-#~ msgid "Your score has made the top ten."
-#~ msgstr "Puanınız en iyi on listesine girdi."
-
-#~ msgid "tali"
-#~ msgstr "tali"
