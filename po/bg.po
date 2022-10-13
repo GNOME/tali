@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: tali master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
 "POT-Creation-Date: 2022-09-18 07:51+0000\n"
-"PO-Revision-Date: 2022-10-08 20:55+0200\n"
+"PO-Revision-Date: 2022-10-13 10:20+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr "Начало на игра"
+msgstr "Започване на нова игра"
 
 #: data/help-overlay.ui:23
 msgctxt "shortcut window"
@@ -66,7 +66,7 @@ msgstr "Отмяна на хода"
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr "Помощ"
+msgstr "Извеждане на помощта"
 
 #: data/help-overlay.ui:79
 msgctxt "shortcut window"
@@ -320,7 +320,7 @@ msgstr ""
 
 #: src/gyahtzee.c:791
 msgid "Undo your most recent move"
-msgstr "Отмяна на последния ход."
+msgstr "Отмяна на последния ход"
 
 #: src/gyahtzee.c:879
 msgid "Game Type:"
