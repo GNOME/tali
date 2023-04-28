@@ -8,7 +8,7 @@
   <shortdesc xml:lang="en">Beat the odds in a poker-style dice game</shortdesc>
   <description xml:lang="en">Beat the odds in a poker-style dice game</description>
   <homepage rdf:resource="https://wiki.gnome.org/Apps/Tali" />
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/games-list" />
+  <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/tali/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/tali/issues/" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
