@@ -41,9 +41,9 @@ if desktop_file_validate.found()
   )
 endif
 
-appdata_file = i18n.merge_file (
-                 input: project_id + '.appdata.xml.in',
-                 output: project_id + '.appdata.xml',
+metainfo_file = i18n.merge_file (
+                 input: project_id + '.metainfo.xml.in',
+                 output: project_id + '.metainfo.xml',
                  install: true,
                  install_dir: join_paths (datadir, 'metainfo'),
                  po_dir: '../po')
@@ -51,9 +51,9 @@ appdata_file = i18n.merge_file (
 appstream_util = find_program('appstream-util', required: false)
 if appstream_util.found()
   test(
-    'validate-appdata', appstream_util,
+    'validate-metainfo', appstream_util,
     args: [
-      'validate-relax', '--nonet', appdata_file.full_path()
+      'validate-relax', '--nonet', metainfo_file.full_path()
     ]
   )
 endif
