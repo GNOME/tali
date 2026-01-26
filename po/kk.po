@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues\n"
-"POT-Creation-Date: 2020-09-14 02:54+0000\n"
-"PO-Revision-Date: 2021-08-30 22:27+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues/\n"
+"POT-Creation-Date: 2025-07-14 15:06+0000\n"
+"PO-Revision-Date: 2026-01-26 20:30+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/help-overlay.ui:16
 msgctxt "shortcut window"
@@ -73,60 +73,44 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Шығу"
 
-#: data/org.gnome.Tali.appdata.xml.in:7 data/org.gnome.Tali.desktop.in:3
+#: data/org.gnome.Tali.desktop.in:2 data/org.gnome.Tali.metainfo.xml.in:7
 #: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Тали"
 
-#: data/org.gnome.Tali.appdata.xml.in:8
-msgid "Roll dice and score points"
-msgstr "Ойын тасын домалату және ұпай жинау"
-
-#: data/org.gnome.Tali.appdata.xml.in:10
-msgid ""
-"A variation on poker with dice and less money, this game is a family "
-"classic. Throw the dice three times in a row, holding back the ones you "
-"like, in order to make the best possible hand. You can also play a lesser-"
-"known variant with colored dice."
-msgstr ""
-
-#: data/org.gnome.Tali.appdata.xml.in:16
-msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
-
-#: data/org.gnome.Tali.appdata.xml.in:155
-msgid "The GNOME Project"
-msgstr "GNOME жобасы"
-
-#: data/org.gnome.Tali.desktop.in:4
+#: data/org.gnome.Tali.desktop.in:3
 msgid "Beat the odds in a poker-style dice game"
-msgstr ""
+msgstr "Покер стиліндегі сүйек ойынында бағыңызды сынап көріңіз"
 
 #. TRANSLATORS: Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. Search terms to find this application.
-#: data/org.gnome.Tali.desktop.in:8
+#: data/org.gnome.Tali.desktop.in:7
 msgid "yahtzee;"
 msgstr "yahtzee;яцзы;"
 
 #: data/org.gnome.Tali.gschema.xml:11
 msgid "Delay between rolls"
-msgstr ""
+msgstr "Тастаулар арасындағы кідіріс"
 
 #: data/org.gnome.Tali.gschema.xml:12
 msgid ""
-"Choose whether or not to insert a delay between the computer’s dice rolls so "
-"the player can follow what it is doing."
+"Choose whether or not to insert a delay between the computer’s dice rolls "
+"so the player can follow what it is doing."
 msgstr ""
+"Ойыншы компьютердің не істеп жатқанын бақылай алуы үшін компьютердің "
+"сүйектерді тастауы арасына кідіріс қосу-қоспауды таңдаңыз."
 
 #: data/org.gnome.Tali.gschema.xml:16
 msgid "Display the computer’s thoughts"
-msgstr ""
+msgstr "Компьютердің ойларын көрсету"
 
 #: data/org.gnome.Tali.gschema.xml:17
 msgid ""
 "If set to true, a dump of the AI’s working will be done to standard output."
 msgstr ""
+"Егер ақиқат деп орнатылса, жасанды интеллекттің жұмыс барысы стандартты "
+"шығысқа жіберіледі."
 
 #: data/org.gnome.Tali.gschema.xml:20
 msgctxt "PlayerNames"
@@ -137,6 +121,30 @@ msgstr "[ 'Адам', 'Айгүл', 'Берік', 'Қайрат', 'Думан', 
 msgctxt "GameType"
 msgid "'Regular'"
 msgstr "'Қалыпты'"
+
+#: data/org.gnome.Tali.metainfo.xml.in:8
+msgid "Roll dice and score points"
+msgstr "Ойын тасын домалату және ұпай жинау"
+
+#: data/org.gnome.Tali.metainfo.xml.in:10
+msgid ""
+"A variation on poker with dice and less money, this game is a family "
+"classic. Throw the dice three times in a row, holding back the ones you "
+"like, in order to make the best possible hand. You can also play a lesser-"
+"known variant with colored dice."
+msgstr ""
+"Ақшасы азырақ, сүйектермен ойналатын покердің бір түрі, бұл ойын — "
+"отбасылық классика. Ең жақсы комбинацияны жинау үшін сүйектерді қатарынан "
+"үш рет тастап, өзіңізге ұнағандарын қалдырып отырыңыз. Сондай-ақ түрлі-"
+"түсті сүйектері бар, аз танымал нұсқасын да ойнауға болады."
+
+#: data/org.gnome.Tali.metainfo.xml.in:16
+msgid "Play between one and five opponents at three difficulty levels."
+msgstr "Бірден беске дейінгі қарсыласпен үш қиындық деңгейінде ойнаңыз."
+
+#: data/org.gnome.Tali.metainfo.xml.in:171
+msgid "The GNOME Project"
+msgstr "GNOME жобасы"
 
 #: data/tali-menus.ui:7
 msgid "_New Game"
@@ -164,7 +172,7 @@ msgstr "Tali тур_алы"
 
 #: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
-msgstr ""
+msgstr "Қолданылып қойған! Мұны қайда қойғыңыз келеді?"
 
 #: src/clist.c:412
 #, c-format
@@ -174,7 +182,7 @@ msgstr "Нәтиже: %d"
 #: src/clist.c:414
 #, c-format
 msgid "Field used"
-msgstr ""
+msgstr "Өріс қолданылған"
 
 #: src/gyahtzee.c:97
 msgid "Delay computer moves"
@@ -206,11 +214,11 @@ msgstr "STRING"
 
 #: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
-msgstr ""
+msgstr "Тек компьютер ойнайтын ойындар саны"
 
 #: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
-msgstr ""
+msgstr "Компьютердің әр тастауы үшін сынақтар саны"
 
 #. Order must match GameType enum order
 #: src/gyahtzee.c:121 src/setup.c:354
@@ -233,13 +241,13 @@ msgstr "Домалату!"
 
 #: src/gyahtzee.c:212
 msgid "The game is a draw!"
-msgstr ""
+msgstr "Ойын тең аяқталды!"
 
 #: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
-msgstr[0] ""
+msgstr[0] "%s ойынды %d ұпаймен жеңді"
 
 #: src/gyahtzee.c:231
 msgid "Game over!"
@@ -248,16 +256,16 @@ msgstr "Ойын аяқталды!"
 #: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
-msgstr ""
+msgstr "Компьютер %s үшін ойнап жатыр"
 
 #: src/gyahtzee.c:277
 #, c-format
 msgid "%s! – You’re up."
-msgstr ""
+msgstr "%s! – Сіздің кезегіңіз."
 
 #: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
-msgstr ""
+msgstr "Тастайтын сүйектерді немесе ұпай ұяшығын таңдаңыз."
 
 #: src/gyahtzee.c:497
 msgid "Roll"
@@ -265,7 +273,7 @@ msgstr "Домалату"
 
 #: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr ""
+msgstr "Сізге тек үш рет тастауға рұқсат берілген. Ұпай ұяшығын таңдаңыз."
 
 #: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
@@ -281,7 +289,7 @@ msgstr "Түрлі-түсті ойын және көп деңгейлі AI (2006
 
 #: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
-msgstr ""
+msgstr "Сүйектермен ойналатын және ақшасы азырақ покердің бір түрі."
 
 #: src/gyahtzee.c:639
 msgid "translator-credits"
@@ -301,7 +309,7 @@ msgstr "Адам"
 
 #: src/setup.c:118
 msgid "Preferences will be updated in the next game."
-msgstr ""
+msgstr "Қалаулар келесі ойында жаңартылады."
 
 #: src/setup.c:260
 msgid "Preferences"
@@ -322,11 +330,11 @@ msgstr "Компьютер қарсыластары"
 #. --- Button ---
 #: src/setup.c:311
 msgid "_Delay between rolls"
-msgstr ""
+msgstr "_Тастаулар арасындағы кідіріс"
 
 #: src/setup.c:321
 msgid "N_umber of opponents:"
-msgstr ""
+msgstr "Қарсыластар с_аны:"
 
 #: src/setup.c:335
 msgid "_Difficulty:"
@@ -359,107 +367,107 @@ msgstr "Ойыншы аттары"
 
 #: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
-msgstr ""
+msgstr "1-лер [1-лердің қосындысы]"
 
 #: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
-msgstr ""
+msgstr "2-лер [2-лердің қосындысы]"
 
 #: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
-msgstr ""
+msgstr "3-тер [3-тердің қосындысы]"
 
 #: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
-msgstr ""
+msgstr "4-тер [4-тердің қосындысы]"
 
 #: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
-msgstr ""
+msgstr "5-тер [5-тердің қосындысы]"
 
 #: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
-msgstr ""
+msgstr "6-лар [6-лардің қосындысы]"
 
 #. End of upper panel
 #: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
-msgstr ""
+msgstr "Бірдей үштік [қосындысы]"
 
 #: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
-msgstr ""
+msgstr "Бірдей төрттік [қосындысы]"
 
 #: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
-msgstr ""
+msgstr "Фулл-хаус [25]"
 
 #: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
-msgstr ""
+msgstr "Кіші стрит [30]"
 
 #: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
-msgstr ""
+msgstr "Үлкен стрит [40]"
 
 #: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
-msgstr ""
+msgstr "Бірдей бестік [50]"
 
 #: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
-msgstr ""
+msgstr "Шанс [қосындысы]"
 
 #. End of lower panel
 #: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
-msgstr ""
+msgstr "Төменгі қосынды"
 
 #: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
-msgstr ""
+msgstr "Жалпы қосынды"
 
 #. Need to squish between upper and lower pannel
 #: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
-msgstr ""
+msgstr "Жоғарғы қосынды"
 
 #: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
-msgstr ""
+msgstr "Егер >62 болса, бонус"
 
 #. End of upper panel
 #: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
-msgstr ""
+msgstr "Түсі бірдей 2 жұп [қосындысы]"
 
 #: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
-msgstr ""
+msgstr "Фуул-хаус [15 + қосындысы]"
 
 #: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
-msgstr ""
+msgstr "Түсі бірдей фуул-хаус [20 + қосындысы]"
 
 #: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
-msgstr ""
+msgstr "Флеш (барлығы бір түсті) [35]"
 
 #: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
-msgstr ""
+msgstr "Бірдей төрттік [25 + қосындысы]"
 
 #: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
-msgstr ""
+msgstr "Бірдей бестік [50 + қосындысы]"
 
 #: src/yahtzee.c:249
 msgid "Choose a score slot."
-msgstr ""
+msgstr "Ұпай ұяшығын таңдаңыз."
 
 #: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
-msgstr ""
+msgstr "Бірдей бестік [қосындысы]"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Time"
