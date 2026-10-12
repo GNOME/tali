@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 07:14+0100\n"
-"PO-Revision-Date: 2010-02-24 15:40+0000\n"
-"Last-Translator: Torstein Adolf Winterseth <kvikende@yahoo.no>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/tali/issues/\n"
+"POT-Creation-Date: 2025-07-14 15:06+0000\n"
+"PO-Revision-Date: 2026-10-11 12:00+0200\n"
+"Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -21,481 +21,526 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../data/tali.appdata.xml.in.h:1 ../data/tali.desktop.in.h:1
-#: ../src/gyahtzee.c:55
+#: data/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Start eit nytt spel"
+
+#: data/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Roll the dice"
+msgstr "Kast terningane"
+
+#: data/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Toggle the first die"
+msgstr "Vel eller fjern den første terningen"
+
+#: data/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Toggle the second die"
+msgstr "Vel eller fjern den andre terningen"
+
+#: data/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Toggle the third die"
+msgstr "Vel eller fjern den tredje terningen"
+
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Toggle the fourth die"
+msgstr "Vel eller fjern den fjerde terningen"
+
+#: data/help-overlay.ui:58
+msgctxt "shortcut window"
+msgid "Toggle the fifth die"
+msgstr "Vel eller fjern den femte terningen"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Undo move"
+msgstr "Angre trekket"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Vis hjelp"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Vis tastatursnarvegar"
+
+#
+#: data/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avslutt"
+
+#: data/org.gnome.Tali.desktop.in:2 data/org.gnome.Tali.metainfo.xml.in:7
+#: src/gyahtzee.c:52
 msgid "Tali"
 msgstr "Tali"
 
-#: ../data/tali.appdata.xml.in.h:2
-msgid "Roll dice and score points"
-msgstr ""
+#
+#: data/org.gnome.Tali.desktop.in:3
+msgid "Beat the odds in a poker-style dice game"
+msgstr "Spel mot oddsen i eit terningspel i pokerstil"
 
-#: ../data/tali.appdata.xml.in.h:3
+#. TRANSLATORS: Do NOT translate or localize the semicolons!
+#. The list MUST also end with a semicolon!
+#. Search terms to find this application.
+#: data/org.gnome.Tali.desktop.in:7
+msgid "yahtzee;"
+msgstr "yahtzee;yatzy;terningar;"
+
+#: data/org.gnome.Tali.gschema.xml:11
+msgid "Delay between rolls"
+msgstr "Pause mellom kast"
+
+#: data/org.gnome.Tali.gschema.xml:12
+msgid ""
+"Choose whether or not to insert a delay between the computer’s dice rolls so "
+"the player can follow what it is doing."
+msgstr ""
+"Vel om det skal setjast inn ei forseinking mellom terningkasta til "
+"datamaskina, slik at spelaren kan følgje med på kva datamaskina gjer."
+
+#: data/org.gnome.Tali.gschema.xml:16
+msgid "Display the computer’s thoughts"
+msgstr "Vis tankane til datamaskina"
+
+#: data/org.gnome.Tali.gschema.xml:17
+msgid ""
+"If set to true, a dump of the AI’s working will be done to standard output."
+msgstr ""
+"Viss verdien er true, vert ei utskrift av arbeidet til AI-en skriven til "
+"standard utdata."
+
+#: data/org.gnome.Tali.gschema.xml:20
+msgctxt "PlayerNames"
+msgid "[ 'Human', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+msgstr "[ 'Menneske', 'Alice', 'Bob', 'Carol', 'Dave', 'Eve' ]"
+
+#
+#: data/org.gnome.Tali.gschema.xml:23
+msgctxt "GameType"
+msgid "'Regular'"
+msgstr "'Regular'"
+
+#: data/org.gnome.Tali.metainfo.xml.in:8
+msgid "Roll dice and score points"
+msgstr "Kast terningar og få poeng"
+
+#: data/org.gnome.Tali.metainfo.xml.in:10
 msgid ""
 "A variation on poker with dice and less money, this game is a family "
 "classic. Throw the dice three times in a row, holding back the ones you "
 "like, in order to make the best possible hand. You can also play a lesser-"
 "known variant with colored dice."
 msgstr ""
+"Ein variant av poker med terningar og mindre pengar, og ein "
+"familieklassikar. Kast terningane tre gonger på rad, og hald att dei du "
+"likar, for å få best mogleg hand. Du kan òg spele ein mindre kjend variant "
+"med terningar i ulike fargar."
 
-#: ../data/tali.appdata.xml.in.h:4
+#: data/org.gnome.Tali.metainfo.xml.in:16
 msgid "Play between one and five opponents at three difficulty levels."
-msgstr ""
+msgstr "Spel mot éin til fem motspelarar på tre vanskegrader."
 
-#: ../data/tali.appdata.xml.in.h:5
+#: data/org.gnome.Tali.metainfo.xml.in:171
 msgid "The GNOME Project"
-msgstr ""
+msgstr "GNOME-prosjektet"
 
-#
-#: ../data/tali.desktop.in.h:2
-msgid "Beat the odds in a poker-style dice game"
-msgstr "Spel mot oddsen i eit pokerliknande terningspel"
-
-#: ../data/tali.desktop.in.h:3
-msgid "yahtzee;"
-msgstr ""
-
-#: ../data/tali-menus.ui.h:1
+#: data/tali-menus.ui:7
 msgid "_New Game"
 msgstr "_Nytt spel"
 
-#: ../data/tali-menus.ui.h:2
-#, fuzzy
-msgid "_Preferences"
-msgstr "Oppsett"
-
 #
-#: ../data/tali-menus.ui.h:3
+#: data/tali-menus.ui:11
 msgid "_Scores"
 msgstr "_Poeng"
 
-#: ../data/tali-menus.ui.h:4
+#: data/tali-menus.ui:17
+msgid "_Preferences"
+msgstr "_Innstillingar"
+
+#: data/tali-menus.ui:21
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatursnarvegar"
+
+#: data/tali-menus.ui:25
 msgid "_Help"
 msgstr "_Hjelp"
 
 #
-#: ../data/tali-menus.ui.h:5
-msgid "_About"
-msgstr "_Om"
+#: data/tali-menus.ui:29
+msgid "_About Tali"
+msgstr "_Om Tali"
 
-#
-#: ../data/tali-menus.ui.h:6
-#, fuzzy
-msgid "_Quit"
-msgstr "Avslutt"
-
-#: ../data/org.gnome.tali.gschema.xml.h:1
-msgid "Delay between rolls"
-msgstr "Pause mellom kast"
-
-#: ../data/org.gnome.tali.gschema.xml.h:2
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr ""
-"Vel om det skal vera ein pause mellom datamaskina sine terningkast slik at "
-"spelaren kan følgja med."
-
-#: ../data/org.gnome.tali.gschema.xml.h:3
-msgid "Display the computer's thoughts"
-msgstr "Vis kva maskina tenkjer"
-
-#: ../data/org.gnome.tali.gschema.xml.h:4
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr "Dersom sann, vil det AI-en tenkjer verta dumpa til standard utdata."
-
-#: ../data/org.gnome.tali.gschema.xml.h:5
-#, fuzzy
-msgctxt "PlayerNames"
-msgid "[ 'Human', 'Wilber', 'Bill', 'Monica', 'Kenneth', 'Janet' ]"
-msgstr "[Menneske,Olav,Petronius,Josefine,Kjartan,Gunnlaug]"
-
-#
-#: ../data/org.gnome.tali.gschema.xml.h:6
-#, fuzzy
-msgctxt "GameType"
-msgid "'Regular'"
-msgstr "Vanleg"
-
-#: ../src/clist.c:158
+#: src/clist.c:156
 msgid "Already used! Where do you want to put that?"
-msgstr "Alt brukt! Kor vil du leggja det?"
+msgstr "Allereie brukt! Kvar vil du plassere det?"
 
-#: ../src/clist.c:414
+#: src/clist.c:412
 #, c-format
 msgid "Score: %d"
 msgstr "Poeng: %d"
 
-#: ../src/clist.c:416
+#: src/clist.c:414
 #, c-format
 msgid "Field used"
-msgstr "Felt brukt"
+msgstr "Felt i bruk"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tid"
-
-#
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Poeng"
-
-#. Score format for time based scores.
-#. %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:226
-#, fuzzy, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%d:%02d"
-
-#: ../src/games-scores-dialog.c:386
-msgid "New Game"
-msgstr "Nytt spel"
-
-#. Score dialog column header for the date
-#. the score was recorded
-#: ../src/games-scores-dialog.c:480
-#, fuzzy
-msgid "Date"
-msgstr "Roter"
-
-#: ../src/gyahtzee.c:100
+#: src/gyahtzee.c:97
 msgid "Delay computer moves"
-msgstr "Seinka datamaskintrekk"
+msgstr "Forseink trekka til datamaskina"
 
-#: ../src/gyahtzee.c:102
+#: src/gyahtzee.c:99
 msgid "Display computer thoughts"
-msgstr "Vis datamaskintankar"
+msgstr "Vis tankane til datamaskina"
 
-#: ../src/gyahtzee.c:104
+#: src/gyahtzee.c:101
 msgid "Number of computer opponents"
-msgstr "Tal på datamaskinspelarar"
+msgstr "Tal på motspelarar som er datamaskinar"
 
-#: ../src/gyahtzee.c:104 ../src/gyahtzee.c:106 ../src/gyahtzee.c:110
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:101 src/gyahtzee.c:103 src/gyahtzee.c:107 src/gyahtzee.c:109
 msgid "NUMBER"
 msgstr "TAL"
 
-#: ../src/gyahtzee.c:106
+#: src/gyahtzee.c:103
 msgid "Number of human opponents"
-msgstr "Tal på menneskelege spelarar"
+msgstr "Tal på menneskelege motspelarar"
 
 #
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "Game choice: Regular or Colors"
-msgstr "Val for spel: Vanleg eller fargar"
+msgstr "Val av spel: Regular eller Colors"
 
 #
-#: ../src/gyahtzee.c:108
+#: src/gyahtzee.c:105
 msgid "STRING"
 msgstr "STRENG"
 
 #
-#: ../src/gyahtzee.c:110
+#: src/gyahtzee.c:107
 msgid "Number of computer-only games to play"
-msgstr "Tal på spel datamaskina skal spela"
+msgstr "Tal på spel som berre datamaskina skal spele"
 
 #
-#: ../src/gyahtzee.c:112
+#: src/gyahtzee.c:109
 msgid "Number of trials for each roll for the computer"
-msgstr "Tal på forsøk for kvart kast for datamaskinen"
+msgstr "Tal på forsøk for kvart kast for datamaskina"
 
-#: ../src/gyahtzee.c:117 ../src/setup.c:356
+#. Order must match GameType enum order
+#: src/gyahtzee.c:121 src/setup.c:354
 msgctxt "game type"
 msgid "Regular"
 msgstr "Vanleg"
 
-#: ../src/gyahtzee.c:118 ../src/setup.c:357
+#: src/gyahtzee.c:122 src/setup.c:355
 msgctxt "game type"
 msgid "Colors"
 msgstr "Fargar"
 
 #
-#: ../src/gyahtzee.c:139
+#: src/gyahtzee.c:162
 msgid "Roll all!"
 msgstr "Kast alle!"
 
-#: ../src/gyahtzee.c:142 ../src/gyahtzee.c:789
+#: src/gyahtzee.c:165 src/gyahtzee.c:827
 msgid "Roll!"
 msgstr "Kast!"
 
 #
-#: ../src/gyahtzee.c:176
+#: src/gyahtzee.c:212
 msgid "The game is a draw!"
 msgstr "Spelet er uavgjort!"
 
-#
-#: ../src/gyahtzee.c:189 ../src/gyahtzee.c:629
-msgid "Tali Scores"
-msgstr "Poeng for Tali"
-
-#
-#: ../src/gyahtzee.c:191
-msgid "Congratulations!"
-msgstr "Gratulerer!"
-
-#: ../src/gyahtzee.c:192
-msgid "Your score is the best!"
-msgstr "Din poengsum er den beste!"
-
-#
-#: ../src/gyahtzee.c:193
-msgid "Your score has made the top ten."
-msgstr "Din poengsum er blant dei ti beste."
-
-#: ../src/gyahtzee.c:205
+#: src/gyahtzee.c:227
 #, c-format
 msgid "%s wins the game with %d point"
 msgid_plural "%s wins the game with %d points"
 msgstr[0] "%s vinn spelet med %d poeng"
 msgstr[1] "%s vinn spelet med %d poeng"
 
-#: ../src/gyahtzee.c:209
+#: src/gyahtzee.c:231
 msgid "Game over!"
-msgstr "Spelet er slutt!"
+msgstr "Spelet er over!"
 
-#: ../src/gyahtzee.c:253
+#: src/gyahtzee.c:275
 #, c-format
 msgid "Computer playing for %s"
 msgstr "Datamaskina spelar for %s"
 
-#: ../src/gyahtzee.c:255
-#, fuzzy, c-format
+#: src/gyahtzee.c:277
+#, c-format
 msgid "%s! – You’re up."
-msgstr "%s! Din tur."
+msgstr "%s! – Det er di tur."
 
 #
-#: ../src/gyahtzee.c:448
+#: src/gyahtzee.c:470
 msgid "Select dice to roll or choose a score slot."
-msgstr "Vel terning som skal kastes eller vel ein poengplass."
+msgstr "Vel terningar som skal kastast, eller vel eit poengfelt."
 
-#: ../src/gyahtzee.c:476
+#: src/gyahtzee.c:497
 msgid "Roll"
-msgstr "Trill"
+msgstr "Kast"
 
 #
-#: ../src/gyahtzee.c:534
+#: src/gyahtzee.c:555
 msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "Du får berre tre kast. Vel ein poengplass."
+msgstr "Du får berre tre kast. Vel eit poengfelt."
 
-#: ../src/gyahtzee.c:591
+#: src/gyahtzee.c:612
 msgid "GNOME version (1998):"
 msgstr "GNOME-versjon (1998):"
 
 #
-#: ../src/gyahtzee.c:594
+#: src/gyahtzee.c:615
 msgid "Console version (1992):"
 msgstr "Konsollversjon (1992):"
 
-#: ../src/gyahtzee.c:597
+#: src/gyahtzee.c:618
 msgid "Colors game and multi-level AI (2006):"
-msgstr ""
+msgstr "Fargespel og AI med fleire nivå (2006):"
 
 #
-#: ../src/gyahtzee.c:614
-#, fuzzy
+#: src/gyahtzee.c:635
 msgid "A variation on poker with dice and less money."
-msgstr ""
-"Ein variasjon av poker med terningar og mindre penger.\n"
-"\n"
-"Tali er ein del av GNOMEs spelpakke."
+msgstr "Ein variant av poker med terningar og mindre pengar."
 
-#: ../src/gyahtzee.c:618
+#: src/gyahtzee.c:639
 msgid "translator-credits"
 msgstr ""
 "Åsmund Skjæveland <aasmunds@fys.uio.no>\n"
 "Gaute Hvoslef Kvalnes <gaute@verdsveven.com>\n"
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Eskild Hustvedt <eskildh@gnome.org>\n"
-"Torstein Adolf Winterseth <kvikende@fsfe.org>"
+"Torstein Adolf Winterseth <kvikende@fsfe.org>\n"
+"Roy-Magne Mo <rmo@sunnmore.net>"
 
-#: ../src/gyahtzee.c:763
-#, fuzzy
+#: src/gyahtzee.c:791
 msgid "Undo your most recent move"
-msgstr "Seinaste poengsum til brukaren."
+msgstr "Angre det siste trekket"
 
-#: ../src/gyahtzee.c:972 ../src/yahtzee.c:69
+#: src/gyahtzee.c:879
+msgid "Game Type:"
+msgstr "Speltype:"
+
+#: src/gyahtzee.c:1013 src/yahtzee.c:68
 msgid "Human"
 msgstr "Menneske"
 
-#: ../src/setup.c:122
+#: src/setup.c:118
 msgid "Preferences will be updated in the next game."
-msgstr ""
+msgstr "Innstillingane vert oppdaterte i neste spel."
 
-#: ../src/setup.c:264
+#: src/setup.c:260
 msgid "Preferences"
-msgstr "Oppsett"
+msgstr "Innstillingar"
 
-#: ../src/setup.c:282
+#: src/setup.c:280
 msgid "Human Players"
 msgstr "Menneskelege spelarar"
 
 #
-#: ../src/setup.c:292
+#: src/setup.c:290
 msgid "_Number of players:"
 msgstr "_Talet på spelarar:"
 
-#: ../src/setup.c:306
+#: src/setup.c:304
 msgid "Computer Opponents"
-msgstr "Datamaskinmotstandarar"
+msgstr "Motstandarar som er datamaskinar"
 
 #
 #. --- Button ---
-#: ../src/setup.c:313
+#: src/setup.c:311
 msgid "_Delay between rolls"
-msgstr "_Pause mellom omganger"
+msgstr "_Pause mellom kast"
 
 #
-#: ../src/setup.c:323
+#: src/setup.c:321
 msgid "N_umber of opponents:"
-msgstr "_Tal på motstandere:"
+msgstr "_Tal på motstandarar:"
 
 #
-#: ../src/setup.c:337
+#: src/setup.c:335
 msgid "_Difficulty:"
-msgstr "_Vanskeleghetsgrad:"
+msgstr "_Vanskegrad:"
 
-#: ../src/setup.c:340
+#: src/setup.c:338
 msgctxt "difficulty"
 msgid "Easy"
 msgstr "Lett"
 
-#: ../src/setup.c:341
+#: src/setup.c:339
 msgctxt "difficulty"
 msgid "Medium"
 msgstr "Middels"
 
-#: ../src/setup.c:342
+#: src/setup.c:340
 msgctxt "difficulty"
 msgid "Hard"
 msgstr "Vanskeleg"
 
 #. --- Combo (yahtzee or kismet style ----
-#: ../src/setup.c:353
+#: src/setup.c:351
 msgid "Game Type"
 msgstr "Speltype"
 
 #. --- PLAYER NAMES FRAME ----
-#: ../src/setup.c:365
+#: src/setup.c:363
 msgid "Player Names"
 msgstr "Spelarnamn"
 
-#: ../src/yahtzee.c:85 ../src/yahtzee.c:109 ../src/yahtzee.c:513
+#: src/yahtzee.c:84 src/yahtzee.c:108 src/yahtzee.c:512
 msgid "1s [total of 1s]"
 msgstr "Einarar [samanlagt]"
 
-#: ../src/yahtzee.c:86 ../src/yahtzee.c:110 ../src/yahtzee.c:514
+#: src/yahtzee.c:85 src/yahtzee.c:109 src/yahtzee.c:513
 msgid "2s [total of 2s]"
 msgstr "Toarar [samanlagt]"
 
-#: ../src/yahtzee.c:87 ../src/yahtzee.c:111 ../src/yahtzee.c:515
+#: src/yahtzee.c:86 src/yahtzee.c:110 src/yahtzee.c:514
 msgid "3s [total of 3s]"
 msgstr "Trearar [samanlagt]"
 
-#: ../src/yahtzee.c:88 ../src/yahtzee.c:112 ../src/yahtzee.c:516
+#: src/yahtzee.c:87 src/yahtzee.c:111 src/yahtzee.c:515
 msgid "4s [total of 4s]"
 msgstr "Firarar [samanlagt]"
 
-#: ../src/yahtzee.c:89 ../src/yahtzee.c:113 ../src/yahtzee.c:517
+#: src/yahtzee.c:88 src/yahtzee.c:112 src/yahtzee.c:516
 msgid "5s [total of 5s]"
 msgstr "Femmarar [samanlagt]"
 
-#: ../src/yahtzee.c:90 ../src/yahtzee.c:114 ../src/yahtzee.c:518
+#: src/yahtzee.c:89 src/yahtzee.c:113 src/yahtzee.c:517
 msgid "6s [total of 6s]"
 msgstr "Seksarar [samanlagt]"
 
 #. End of upper panel
-#: ../src/yahtzee.c:92 ../src/yahtzee.c:117 ../src/yahtzee.c:519
+#: src/yahtzee.c:91 src/yahtzee.c:116 src/yahtzee.c:518
 msgid "3 of a Kind [total]"
 msgstr "Tre like [samanlagt]"
 
-#: ../src/yahtzee.c:93 ../src/yahtzee.c:520
+#: src/yahtzee.c:92 src/yahtzee.c:519
 msgid "4 of a Kind [total]"
 msgstr "Fire like [samanlagt]"
 
-#: ../src/yahtzee.c:94 ../src/yahtzee.c:521
+#: src/yahtzee.c:93 src/yahtzee.c:520
 msgid "Full House [25]"
-msgstr "Hus [25]"
+msgstr "Fullt hus [25]"
 
-#: ../src/yahtzee.c:95 ../src/yahtzee.c:522
+#: src/yahtzee.c:94 src/yahtzee.c:521
 msgid "Small Straight [30]"
 msgstr "Liten straight [30]"
 
-#: ../src/yahtzee.c:96 ../src/yahtzee.c:121 ../src/yahtzee.c:523
+#: src/yahtzee.c:95 src/yahtzee.c:120 src/yahtzee.c:522
 msgid "Large Straight [40]"
-msgstr "Stor straight [30]"
+msgstr "Stor straight [40]"
 
 #
-#: ../src/yahtzee.c:97
+#: src/yahtzee.c:96
 msgid "5 of a Kind [50]"
 msgstr "5 like [50]"
 
-#: ../src/yahtzee.c:98 ../src/yahtzee.c:124 ../src/yahtzee.c:525
+#: src/yahtzee.c:97 src/yahtzee.c:123 src/yahtzee.c:524
 msgid "Chance [total]"
 msgstr "Sjanse [samanlagt]"
 
 #. End of lower panel
-#: ../src/yahtzee.c:100 ../src/yahtzee.c:126
+#: src/yahtzee.c:99 src/yahtzee.c:125
 msgid "Lower Total"
 msgstr "Nedre sum"
 
-#: ../src/yahtzee.c:101 ../src/yahtzee.c:127
+#: src/yahtzee.c:100 src/yahtzee.c:126
 msgid "Grand Total"
 msgstr "Samanlagt"
 
 #. Need to squish between upper and lower pannel
-#: ../src/yahtzee.c:103 ../src/yahtzee.c:129
+#: src/yahtzee.c:102 src/yahtzee.c:128
 msgid "Upper total"
 msgstr "Øvre sum"
 
-#: ../src/yahtzee.c:104 ../src/yahtzee.c:130
+#: src/yahtzee.c:103 src/yahtzee.c:129
 msgid "Bonus if >62"
-msgstr "Bonus dersom meir enn 62"
+msgstr "Bonus viss over 62"
 
 #
 #. End of upper panel
-#: ../src/yahtzee.c:116 ../src/yahtzee.c:526
+#: src/yahtzee.c:115 src/yahtzee.c:525
 msgid "2 pair Same Color [total]"
-msgstr "2 par - same farge [total]"
+msgstr "2 par i same farge [total]"
 
 #
-#: ../src/yahtzee.c:118 ../src/yahtzee.c:527
+#: src/yahtzee.c:117 src/yahtzee.c:526
 msgid "Full House [15 + total]"
 msgstr "Fullt hus [15 + total]"
 
 #
-#: ../src/yahtzee.c:119 ../src/yahtzee.c:528
+#: src/yahtzee.c:118 src/yahtzee.c:527
 msgid "Full House Same Color [20 + total]"
-msgstr "Fullt hus - same farge [20 + total]"
+msgstr "Fullt hus i same farge [20 + total]"
 
 #
-#: ../src/yahtzee.c:120 ../src/yahtzee.c:529
+#: src/yahtzee.c:119 src/yahtzee.c:528
 msgid "Flush (all same color) [35]"
-msgstr "Flush (alle same farge) [35]"
+msgstr "Flush (alle i same farge) [35]"
 
 #
-#: ../src/yahtzee.c:122 ../src/yahtzee.c:530
+#: src/yahtzee.c:121 src/yahtzee.c:529
 msgid "4 of a Kind [25 + total]"
 msgstr "4 like [25 + total]"
 
 #
-#: ../src/yahtzee.c:123 ../src/yahtzee.c:531
+#: src/yahtzee.c:122 src/yahtzee.c:530
 msgid "5 of a Kind [50 + total]"
 msgstr "5 like [50 + total]"
 
 #
-#: ../src/yahtzee.c:250
+#: src/yahtzee.c:249
 msgid "Choose a score slot."
-msgstr "Vel ein poengplass."
+msgstr "Vel eit poengfelt."
 
 #
-#: ../src/yahtzee.c:524
+#: src/yahtzee.c:523
 msgid "5 of a Kind [total]"
 msgstr "5 like [total]"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Tid"
+
+#
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Poeng"
+
+#, fuzzy, c-format
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%d:%02d"
+
+#~ msgid "New Game"
+#~ msgstr "Nytt spel"
+
+#, fuzzy
+#~ msgid "Date"
+#~ msgstr "Roter"
+
+#
+#~ msgid "Tali Scores"
+#~ msgstr "Poeng for Tali"
+
+#
+#~ msgid "Congratulations!"
+#~ msgstr "Gratulerer!"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "Din poengsum er den beste!"
+
+#
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Din poengsum er blant dei ti beste."
